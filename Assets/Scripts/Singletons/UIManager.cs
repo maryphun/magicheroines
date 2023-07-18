@@ -16,14 +16,14 @@ public struct Dialogue
     {
         fromDir = dir;
         text = txt;
-        name = "";
+        name = string.Empty;
     }
 
     public Dialogue(string txt)
     {
         fromDir = DialogueDir.None;
         text = txt;
-        name = "";
+        name = string.Empty;
     }
 
     public Dialogue(string txt, string _name)
@@ -77,6 +77,7 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
         }
 
         dialogue.StartDialogueBox();
+        isDialogueStarted = true;
     }
 
     public void StopDialogueBox()
@@ -91,5 +92,7 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
         {
             dialogue.StopDialogueBox();
         }
+
+        isDialogueStarted = false;
     }
 }

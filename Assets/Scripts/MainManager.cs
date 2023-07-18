@@ -11,6 +11,7 @@ public class MainManager : MonoBehaviour
     void Start()
     {
         UIManager.Instance.Initialize();
+        InputManager.Instance.Initialize();
     }
 
     private void Update()
