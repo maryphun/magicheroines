@@ -19,6 +19,9 @@ public class DialogueBox : MonoBehaviour
     List<Dialogue> registeredDialogue = new List<Dialogue>();
     int dialogueCnt = 0;
 
+    //設定
+    private float tintedCharacterColor = 0.5f;
+
     public void Awake()
     {
         dialogueText.text = ""; // clear
@@ -32,6 +35,8 @@ public class DialogueBox : MonoBehaviour
         registeredDialogue.Add(new Dialogue(DialogueDir.Left, "こんにちは！"));
         registeredDialogue.Add(new Dialogue(DialogueDir.Right, "テストテストテスト！　テスト！　てすと"));
         registeredDialogue.Add(new Dialogue(DialogueDir.Left, "漢字ひらがなカタナカROMAJIromaji。；："));
+        registeredDialogue.Add(new Dialogue(DialogueDir.Left, "キャラ A", "名前表示する"));
+        registeredDialogue.Add(new Dialogue("キャラクターなし"));
         dialogueCnt = 0;
 
         StartCoroutine(StartDialogueBoxAnim());
@@ -48,9 +53,9 @@ public class DialogueBox : MonoBehaviour
     {
         boxHolder.DOLocalMoveY(0.0f, 0.8f, false);
         characterLeft.DOLocalMoveX(-888.0f, 0.8f, false);
-        characterLeft.GetComponent<Image>().DOColor(new Color(0.75f, 0.75f, 0.75f, 1.0f), 0.0f);
+        characterLeft.GetComponent<Image>().DOColor(new Color(tintedCharacterColor, tintedCharacterColor, tintedCharacterColor, 1.0f), 0.0f);
         characterRight.DOLocalMoveX(888.0f, 0.8f, false);
-        characterRight.GetComponent<Image>().DOColor(new Color(0.75f, 0.75f, 0.75f, 1.0f), 0.0f);
+        characterRight.GetComponent<Image>().DOColor(new Color(tintedCharacterColor, tintedCharacterColor, tintedCharacterColor, 1.0f), 0.0f);
 
         yield return new WaitForSeconds(0.8f);
 
@@ -64,19 +69,19 @@ public class DialogueBox : MonoBehaviour
                     characterLeft.DOLocalMoveX(-800.0f, 0.8f, false); 
                     characterRight.DOLocalMoveX(888.0f, 0.8f, false);
                     characterLeft.GetComponent<Image>().DOColor(new Color(1f, 1f, 1f, 1.0f), 0.0f);
-                    characterRight.GetComponent<Image>().DOColor(new Color(0.75f, 0.75f, 0.75f, 1.0f), 0.0f);
+                    characterRight.GetComponent<Image>().DOColor(new Color(tintedCharacterColor, tintedCharacterColor, tintedCharacterColor, 1.0f), 0.0f);
                     break;
                 case DialogueDir.Right:
                     characterLeft.DOLocalMoveX(-888.0f, 0.8f, false);
                     characterRight.DOLocalMoveX(800.0f, 0.8f, false);
-                    characterLeft.GetComponent<Image>().DOColor(new Color(0.75f, 0.75f, 0.75f, 1.0f), 0.0f);
+                    characterLeft.GetComponent<Image>().DOColor(new Color(tintedCharacterColor, tintedCharacterColor, tintedCharacterColor, 1.0f), 0.0f);
                     characterRight.GetComponent<Image>().DOColor(new Color(1f, 1f, 1f, 1.0f), 0.0f);
                     break;
                 case DialogueDir.None:
                     characterLeft.DOLocalMoveX(-888.0f, 0.8f, false);
-                    characterLeft.GetComponent<Image>().DOColor(new Color(0.75f, 0.75f, 0.75f, 1.0f), 0.0f);
+                    characterLeft.GetComponent<Image>().DOColor(new Color(tintedCharacterColor, tintedCharacterColor, tintedCharacterColor, 1.0f), 0.0f);
                     characterRight.DOLocalMoveX(888.0f, 0.8f, false);
-                    characterRight.GetComponent<Image>().DOColor(new Color(0.75f, 0.75f, 0.75f, 1.0f), 0.0f);
+                    characterRight.GetComponent<Image>().DOColor(new Color(tintedCharacterColor, tintedCharacterColor, tintedCharacterColor, 1.0f), 0.0f);
                     break;
             }
 

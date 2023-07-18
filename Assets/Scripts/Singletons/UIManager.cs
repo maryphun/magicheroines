@@ -16,10 +16,33 @@ public struct Dialogue
     {
         fromDir = dir;
         text = txt;
+        name = "";
+    }
+
+    public Dialogue(string txt)
+    {
+        fromDir = DialogueDir.None;
+        text = txt;
+        name = "";
+    }
+
+    public Dialogue(string txt, string _name)
+    {
+        fromDir = DialogueDir.None;
+        text = txt;
+        name = _name;
+    }
+
+    public Dialogue(DialogueDir dir, string _name, string txt)
+    {
+        fromDir = dir;
+        text = txt;
+        name = _name;
     }
 
     public DialogueDir fromDir;
     public string text;
+    public string name;
 }
 
 public class UIManager : SingletonMonoBehaviour<UIManager>
@@ -30,6 +53,7 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
     DialogueBox dialogue;
 
     bool isDialogueBoxSpawned = false;
+    bool isDialogueStarted = false;
 
     public void Initialize()
     {
@@ -39,9 +63,17 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
 
     public void StartDialogueBox(Canvas canvas)
     {
+        if (isDialogueStarted)
+        {
+            Debug.Log("ダイアログは既に表示中です。");
+            return;
+        }
+
         if (!isDialogueBoxSpawned)
         {
+            isDialogueBoxSpawned = true;
             dialogue = Instantiate(prefabOrigin, canvas.transform);
+            Object.DontDestroyOnLoad(dialogue);
         }
 
         dialogue.StartDialogueBox();
@@ -49,6 +81,15 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
 
     public void StopDialogueBox()
     {
-        dialogue.StopDialogueBox();
+        if (!isDialogueStarted || !isDialogueBoxSpawned)
+        {
+            Debug.Log("ダイアログは存在していません。");
+            return;
+        }
+
+        if (!Object.ReferenceEquals(dialogue, null) && !(dialogue is null))
+        {
+            dialogue.StopDialogueBox();
+        }
     }
 }
