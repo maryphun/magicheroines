@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2540522579
+    locked: 0
+  - name: FadeAlpha
+    uniqueID: 1867686769
+    locked: 0
   - name: DialogueBox
     uniqueID: 1446284647
     locked: 0
