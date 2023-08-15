@@ -12,15 +12,12 @@ public class Battle : MonoBehaviour
 
     [Header("References")]
     GameObject battlerPrefab;
-    Image alpha;
 
     private void Awake()
     {
         battlerPrefab = Resources.Load<GameObject>("Prefabs/Battler");
-        alpha = GameObject.Find("FadeAlpha").GetComponent<Image>();
 
-        alpha.enabled = true;
-        alpha.color = new Color(0, 0, 0, 1);
+        AlphaFadeManager.Instance.FadeIn(5.0f);
     }
 
     // Start is called before the first frame update

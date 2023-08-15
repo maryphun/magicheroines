@@ -35,7 +35,7 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 
     // シーン切り替えで死なないフラグ
     [SerializeField]
-    public bool _DontDestroyOnLoad = false;
+    public bool _DontDestroyOnLoad = true;
 
     protected virtual void Awake()
     {
