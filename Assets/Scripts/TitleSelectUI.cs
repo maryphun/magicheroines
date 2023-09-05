@@ -1,0 +1,209 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using Assets.SimpleLocalization.Scripts;
+using DG.Tweening;
+
+public class TitleSelectUI : MonoBehaviour
+{
+    enum TitleSelection
+    {
+        NewGame,
+        Load,
+        Gallery,
+        Option,
+        Credit,
+        Exit,
+    };
+
+    Dictionary<TitleSelection, string> titleSelectionText = new Dictionary<TitleSelection, string>
+    {
+        [TitleSelection.NewGame] = "System.NewGame",
+        [TitleSelection.Load] = "System.Load",
+        [TitleSelection.Gallery] = "System.Gallery",
+        [TitleSelection.Option] = "System.Option",
+        [TitleSelection.Credit] = "System.Credit",
+        [TitleSelection.Exit] = "System.Exit",
+    };
+
+    const int SelectionCount = 3; //< 表示する選択肢の数 
+
+    [Header("Setting")]
+    [SerializeField] private TitleSelection defaultSelection = TitleSelection.NewGame;
+    [SerializeField] private float animationTime = 0.15f;
+
+    [Header("References")]
+    [SerializeField] private TMP_Text[] selection = new TMP_Text[SelectionCount];
+    [SerializeField] private TMP_Text dummyText;
+
+    [Header("Debug")]
+    [SerializeField] private TitleSelection currentSelection;
+    [SerializeField] private bool animationPlaying;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        // フラグを初期化
+        animationPlaying = false;
+        // 選択肢を初期化
+        currentSelection = defaultSelection;
+        UpdateSelectionText();
+    }
+
+    private void UpdateSelectionText()
+    {
+        selection[0].text = LocalizationManager.Localize(titleSelectionText[GetPreviousSelection(currentSelection)]);
+        selection[1].text = LocalizationManager.Localize(titleSelectionText[GetCurrentSelection()]);
+        selection[2].text = LocalizationManager.Localize(titleSelectionText[GetNextSelection(currentSelection)]);
+    }
+
+    // Update is called once per frame
+    private TitleSelection GetPreviousSelection(TitleSelection current)
+    {
+        if (current <= TitleSelection.NewGame) return TitleSelection.Exit;
+        TitleSelection previous = current - 1;
+        return previous;
+    }
+
+    private TitleSelection GetCurrentSelection()
+    {
+        return currentSelection;
+    }
+
+    private TitleSelection GetNextSelection(TitleSelection current)
+    {
+        if (current >= TitleSelection.Exit) return TitleSelection.NewGame;
+        TitleSelection next = current + 1;
+        return next;
+    }
+
+    private IEnumerator MoveSelectionDown()
+    {
+        animationPlaying = true;
+        // setup
+        Vector3 originalPositionTop    = selection[0].rectTransform.position;
+        Vector3 originalPositionMid = selection[1].rectTransform.position;
+        Vector3 originalPositionBtm = selection[2].rectTransform.position;
+
+        Vector3 originalSizeTop = selection[0].rectTransform.localScale;
+        Vector3 originalSizeMid = selection[1].rectTransform.localScale;
+        Vector3 originalSizeBtm = selection[2].rectTransform.localScale;
+
+        Color originalColorTop = selection[0].color;
+        Color originalColorMid = selection[1].color;
+        Color originalColorBtm = selection[2].color;
+
+        float distance = selection[0].rectTransform.position.y - selection[1].rectTransform.position.y;
+
+        // ダミーを初期化設定
+        dummyText.rectTransform.position = new Vector3(originalPositionBtm.x, originalPositionBtm.y - distance, originalPositionBtm.z);
+        dummyText.text = LocalizationManager.Localize(titleSelectionText[GetNextSelection(GetNextSelection(currentSelection))]);
+
+        // アニメーション
+        selection[0].rectTransform.DOMoveY(originalPositionTop.y + distance, animationTime);
+        selection[1].rectTransform.DOMoveY(originalPositionTop.y, animationTime);
+        selection[2].rectTransform.DOMoveY(originalPositionMid.y, animationTime);
+        dummyText.rectTransform.DOMoveY(originalPositionBtm.y, animationTime);
+
+        selection[1].rectTransform.DOScale(originalSizeTop, animationTime);
+        selection[2].rectTransform.DOScale(originalSizeMid, animationTime);
+        dummyText.rectTransform.DOScale(originalSizeBtm, animationTime);
+
+        selection[0].DOColor(new Color(0, 0, 0, 0), animationTime);
+        selection[1].DOColor(originalColorTop, animationTime);
+        selection[2].DOColor(originalColorMid, animationTime);
+        dummyText.DOColor(originalColorBtm, animationTime);
+
+        yield return new WaitForSeconds(animationTime);
+
+        //set text
+        currentSelection = GetNextSelection(currentSelection);
+        UpdateSelectionText();
+
+        // reset
+        selection[0].rectTransform.position = originalPositionTop;
+        selection[1].rectTransform.position = originalPositionMid;
+        selection[2].rectTransform.position = originalPositionBtm;
+        selection[0].rectTransform.localScale = originalSizeTop;
+        selection[1].rectTransform.localScale = originalSizeMid;
+        selection[2].rectTransform.localScale = originalSizeBtm;
+        selection[0].color = originalColorTop;
+        selection[1].color = originalColorMid;
+        selection[2].color = originalColorBtm;
+        dummyText.color = new Color(0, 0, 0, 0);
+
+        animationPlaying = false;
+    }
+
+    private IEnumerator MoveSelectionUp()
+    {
+        animationPlaying = true;
+        // setup
+        Vector3 originalPositionTop = selection[0].rectTransform.position;
+        Vector3 originalPositionMid = selection[1].rectTransform.position;
+        Vector3 originalPositionBtm = selection[2].rectTransform.position;
+
+        Vector3 originalSizeTop = selection[0].rectTransform.localScale;
+        Vector3 originalSizeMid = selection[1].rectTransform.localScale;
+        Vector3 originalSizeBtm = selection[2].rectTransform.localScale;
+
+        Color originalColorTop = selection[0].color;
+        Color originalColorMid = selection[1].color;
+        Color originalColorBtm = selection[2].color;
+
+        float distance = selection[0].rectTransform.position.y - selection[1].rectTransform.position.y;
+
+        // ダミーを初期化設定
+        dummyText.rectTransform.position = new Vector3(originalPositionTop.x, originalPositionTop.y + distance, originalPositionTop.z);
+        dummyText.text = LocalizationManager.Localize(titleSelectionText[GetPreviousSelection(GetPreviousSelection(currentSelection))]);
+
+        // アニメーション
+        selection[0].rectTransform.DOMoveY(originalPositionMid.y, animationTime);
+        selection[1].rectTransform.DOMoveY(originalPositionBtm.y, animationTime);
+        selection[2].rectTransform.DOMoveY(originalPositionBtm.y - distance, animationTime);
+        dummyText.rectTransform.DOMoveY(originalPositionTop.y, animationTime);
+
+        selection[0].rectTransform.DOScale(originalSizeMid, animationTime);
+        selection[1].rectTransform.DOScale(originalSizeBtm, animationTime);
+        dummyText.rectTransform.DOScale(originalSizeTop, animationTime);
+
+        selection[0].DOColor(originalColorMid, animationTime);
+        selection[1].DOColor(originalColorBtm, animationTime);
+        selection[2].DOColor(new Color(0, 0, 0, 0), animationTime);
+        dummyText.DOColor(originalColorBtm, animationTime);
+
+        yield return new WaitForSeconds(animationTime);
+
+        //set text
+        currentSelection = GetPreviousSelection(currentSelection);
+        UpdateSelectionText();
+
+        // reset
+        selection[0].rectTransform.position = originalPositionTop;
+        selection[1].rectTransform.position = originalPositionMid;
+        selection[2].rectTransform.position = originalPositionBtm;
+        selection[0].rectTransform.localScale = originalSizeTop;
+        selection[1].rectTransform.localScale = originalSizeMid;
+        selection[2].rectTransform.localScale = originalSizeBtm;
+        selection[0].color = originalColorTop;
+        selection[1].color = originalColorMid;
+        selection[2].color = originalColorBtm;
+        dummyText.color = new Color(0, 0, 0, 0);
+
+        animationPlaying = false;
+    }
+
+    private void Update()
+    {
+        // Todo: Use Input manager instead
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !animationPlaying)
+        {
+            StartCoroutine(MoveSelectionUp());
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !animationPlaying)
+        {
+            StartCoroutine(MoveSelectionDown());
+        }
+    }
+}
