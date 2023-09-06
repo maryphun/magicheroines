@@ -43,6 +43,9 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         initialized = true;
     }
 
+    /// <summary>
+    /// •‚¢‰æ–Ê‚©‚ç–ß‚é
+    /// </summary>
     public void FadeIn(float time = 0.0f)
     {
         if (!initialized) Initializer();
@@ -52,6 +55,9 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.DOFade(0.0f, time);
     }
 
+    /// <summary>
+    /// ‰æ–Ê‚ª’iX•‚­‚È‚é
+    /// </summary>
     public void FadeOut(float time = 0.0f)
     {
         if (!initialized) Initializer();

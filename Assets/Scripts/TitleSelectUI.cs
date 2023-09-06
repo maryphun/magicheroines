@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Assets.SimpleLocalization.Scripts;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class TitleSelectUI : MonoBehaviour
 {
@@ -40,12 +41,16 @@ public class TitleSelectUI : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private TitleSelection currentSelection;
     [SerializeField] private bool animationPlaying;
+    [SerializeField] private KeyCode keyPrepressed;
     
     // Start is called before the first frame update
     void Start()
     {
+        AlphaFadeManager.Instance.FadeIn(1.0f);
+
         // フラグを初期化
         animationPlaying = false;
+        keyPrepressed = KeyCode.None;
         // 選択肢を初期化
         currentSelection = defaultSelection;
         UpdateSelectionText();
@@ -194,16 +199,55 @@ public class TitleSelectUI : MonoBehaviour
         animationPlaying = false;
     }
 
+    private IEnumerator ConfirmSelection()
+    {
+        const float animationTime = 1.0f;
+
+        // アニメーション
+        selection[0].DOFade(0.0f, animationTime);
+        selection[2].DOFade(0.0f, animationTime);
+
+        const float selectionScale = 1.5f;
+        selection[1].rectTransform.DOScale(new Vector3(selectionScale, selectionScale, selectionScale), animationTime);
+
+        AlphaFadeManager.Instance.FadeOut(animationTime);
+
+        // ニューゲームなので　ゲーム進捗を初期状態にする
+        ProgressManager.Instance.InitializeProgress();
+
+        // シーン遷移
+        yield return new WaitForSeconds(animationTime);
+        SceneManager.LoadScene("Home", LoadSceneMode.Single);
+    }
+
     private void Update()
     {
         // Todo: Use Input manager instead
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !animationPlaying)
+        if (Input.GetKeyDown(KeyCode.UpArrow)) keyPrepressed = KeyCode.UpArrow;
+        if (Input.GetKeyDown(KeyCode.DownArrow)) keyPrepressed = KeyCode.DownArrow;
+        if (Input.GetKeyDown(KeyCode.Return)) keyPrepressed = KeyCode.Return;
+
+        if (!animationPlaying)
         {
-            StartCoroutine(MoveSelectionUp());
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !animationPlaying)
-        {
-            StartCoroutine(MoveSelectionDown());
+            switch (keyPrepressed)
+            {
+                case KeyCode.UpArrow:
+                    keyPrepressed = KeyCode.None;
+                    StartCoroutine(MoveSelectionUp());
+                    break;
+                case KeyCode.DownArrow:
+                    keyPrepressed = KeyCode.None;
+                    StartCoroutine(MoveSelectionDown());
+                    break;
+                case KeyCode.Return:
+                    keyPrepressed = KeyCode.None;
+                    StartCoroutine(ConfirmSelection());
+                    return;
+
+                default:
+                    return;
+
+            }
         }
     }
 }
