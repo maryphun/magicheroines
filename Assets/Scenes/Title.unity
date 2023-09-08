@@ -347,6 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf87b973b7cde84eaab0c0565f2d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.75
   introTime: 1
   offset: {x: -100, y: 0}
   rect: {fileID: 0}
@@ -557,6 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf87b973b7cde84eaab0c0565f2d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.1
   introTime: 1
   offset: {x: 0, y: 100}
   rect: {fileID: 0}
@@ -993,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf87b973b7cde84eaab0c0565f2d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.5
   introTime: 1
   offset: {x: -100, y: 0}
   rect: {fileID: 0}
@@ -1221,6 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf87b973b7cde84eaab0c0565f2d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.2
   introTime: 1
   offset: {x: 100, y: 0}
   rect: {fileID: 0}
@@ -1314,6 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf87b973b7cde84eaab0c0565f2d250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.5
   introTime: 1
   offset: {x: 100, y: 0}
   rect: {fileID: 0}
