@@ -209,6 +209,7 @@ public class TitleSelectUI : MonoBehaviour
 
         const float selectionScale = 1.5f;
         selection[1].rectTransform.DOScale(new Vector3(selectionScale, selectionScale, selectionScale), animationTime);
+        selection[1].DOFade(0.5f, animationTime);
 
         AlphaFadeManager.Instance.FadeOut(animationTime);
 

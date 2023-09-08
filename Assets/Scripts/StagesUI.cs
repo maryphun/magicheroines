@@ -22,6 +22,10 @@ public class StagesUI : MonoBehaviour
         }
     }
 
+    [Header("Setting")]
+    [SerializeField] private Color lockedColor = new Color(0.196f, 0.196f, 0.196f, 1);
+    [SerializeField] private Color unlockedColor = new Color(1,1,1,1);
+
     [Header("References")]
     [SerializeField] List<GameObject> stageObj = new  List<GameObject>();
 
@@ -55,6 +59,10 @@ public class StagesUI : MonoBehaviour
                 unlockedStage++;
                 StartCoroutine(UnlockStage(stageObjParts[i]));
             }
+            else
+            {
+                stageObjParts[i].graphic.color = lockedColor;
+            }
         }
     }
 
@@ -74,8 +82,8 @@ public class StagesUI : MonoBehaviour
         componentImage.DOFillAmount(1.0f, animationTime*0.5f);
 
         yield return new WaitForSeconds(animationTime*0.5f);
-        stage.graphic.DOColor(new Color(1, 1, 1, 1), animationTime*0.5f);
-        stage.parent.rectTransform.DOShakePosition(animationTime * 0.5f);
+        stage.graphic.DOColor(unlockedColor, animationTime*0.5f);
+        ShakeManager.Instance.ShakeObject(stage.parent.rectTransform, animationTime * 0.5f, 1f);
     }
 
     public void PlayStageAnimation()
