@@ -25,7 +25,7 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         /// setting canvas
         canvasObj.renderMode = RenderMode.ScreenSpaceOverlay;
         canvasObj.vertexColorAlwaysGammaSpace = true;
-        canvasObj.sortingOrder = 1;
+        canvasObj.sortingOrder = 99;
 
         canvas.transform.SetParent(transform);
 
