@@ -309,6 +309,7 @@ namespace NovelEditor
 
             _nextDialogueNum = saveData.dialogueIndex;
             _nowParagraph = _novelData.paragraphList[saveData.paragraphIndex];
+
             _ParagraphName = saveData.ParagraphName;
             _choiceName = saveData.choiceName;
 
@@ -320,7 +321,7 @@ namespace NovelEditor
             if (OnLoad != null)
                 OnLoad();
 
-            SetNextDialogue(newData);
+            SetNextDialogue(newData, _nowParagraph.dialogueList.Count - 1);
             _isLoading = false;
             _isPlaying = true;
         }
@@ -387,7 +388,7 @@ namespace NovelEditor
             {
                 _nowParagraph = novelData.paragraphList[newData.ParagraphIndex];
                 _nextDialogueNum = _nowParagraph.dialogueList.Count;
-                SetNextDialogue(newData.dialogue);
+                SetNextDialogue(newData.dialogue, _nowParagraph.dialogueList.Count - 1);
             }
             else
             {
@@ -438,7 +439,7 @@ namespace NovelEditor
                     break;
             }
 
-            SetNextDialogue(newData);
+            SetNextDialogue(newData, _nowParagraph.dialogueList.Count - 1);
             _isLoading = false;
 
         }
@@ -615,7 +616,7 @@ namespace NovelEditor
                 if (ParagraphNodeChanged != null)
                     ParagraphNodeChanged(_nowParagraph.nodeName);
                 _nextDialogueNum = 0;
-                SetNextDialogue(_nowParagraph.dialogueList[_nextDialogueNum]);
+                SetNextDialogue(_nowParagraph.dialogueList[_nextDialogueNum], _nowParagraph.dialogueList.Count - 1);
             }
         }
 
@@ -624,7 +625,8 @@ namespace NovelEditor
         /// </summary>
         void SetNext()
         {
-            if (_nextDialogueNum >= _nowParagraph.dialogueList.Count)
+            Debug.Log("_nextDialogueNum: " + _nextDialogueNum.ToString() + " _nowParagraph.dialogueList.Count-1:" + (_nowParagraph.dialogueList.Count - 1).ToString());
+            if (_nextDialogueNum >= _nowParagraph.dialogueList.Count-1)
             {
                 switch (_nowParagraph.next)
                 {
@@ -641,7 +643,7 @@ namespace NovelEditor
             }
             else
             {
-                SetNextDialogue(_nowParagraph.dialogueList[_nextDialogueNum]);
+                SetNextDialogue(_nowParagraph.dialogueList[_nextDialogueNum], _nowParagraph.dialogueList.Count - 1);
             }
         }
 
@@ -686,7 +688,7 @@ namespace NovelEditor
         /// 次のセリフを再生する
         /// </summary>
         /// <param name="newData">次のセリフのデータ</param>
-        async void SetNextDialogue(NovelData.ParagraphData.Dialogue newData)
+        async void SetNextDialogue(NovelData.ParagraphData.Dialogue newData, int maxDialogue)
         {
             //画像の変更
             _isImageChangeing = true;
@@ -698,7 +700,9 @@ namespace NovelEditor
             //テキストを1文字ずつ再生
             _textCTS = new CancellationTokenSource();
             _isReading = true;
-            _nextDialogueNum++;
+            Debug.Log("maxDialogue: " + maxDialogue.ToString());
+            _nextDialogueNum = Mathf.Min(_nextDialogueNum+1, maxDialogue);
+
             if (OnDialogueChanged != null)
                 OnDialogueChanged(JsonUtility.FromJson<NovelData.ParagraphData.Dialogue>(JsonUtility.ToJson(newData)));
             _isReading = !await _novelUI.SetNextText(newData, _textCTS.Token);
