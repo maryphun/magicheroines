@@ -18,7 +18,7 @@ public class DialogueBox : MonoBehaviour
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text dialogueText;
 
-    List<Dialogue> registeredDialogue = new List<Dialogue>();
+    List<DialoguePaku> registeredDialogue = new List<DialoguePaku>();
     int dialogueCnt = 0;
 
     //設定
@@ -40,11 +40,11 @@ public class DialogueBox : MonoBehaviour
 
     public void StartDialogueBox()
     {
-        registeredDialogue.Add(new Dialogue(DialogueDir.Left, "こんにちは！"));
-        registeredDialogue.Add(new Dialogue(DialogueDir.Right, "テストテストテスト！　テスト！　てすと"));
-        registeredDialogue.Add(new Dialogue(DialogueDir.Left, "漢字ひらがなカタナカROMAJIromaji。；："));
-        registeredDialogue.Add(new Dialogue(DialogueDir.Left, "キャラ A", "名前表示する"));
-        registeredDialogue.Add(new Dialogue("キャラクターなし"));
+        registeredDialogue.Add(new DialoguePaku(DialogueDir.Left, "こんにちは！"));
+        registeredDialogue.Add(new DialoguePaku(DialogueDir.Right, "テストテストテスト！　テスト！　てすと"));
+        registeredDialogue.Add(new DialoguePaku(DialogueDir.Left, "漢字ひらがなカタナカROMAJIromaji。；："));
+        registeredDialogue.Add(new DialoguePaku(DialogueDir.Left, "キャラ A", "名前表示する"));
+        registeredDialogue.Add(new DialoguePaku("キャラクターなし"));
         dialogueCnt = 0;
 
         StartCoroutine(StartDialogueBoxAnim());

@@ -10,30 +10,30 @@ public enum DialogueDir
     None,
 }
 
-public struct Dialogue
+public struct DialoguePaku
 {
-    public Dialogue(DialogueDir dir, string txt)
+    public DialoguePaku(DialogueDir dir, string txt)
     {
         fromDir = dir;
         text = txt;
         name = string.Empty;
     }
 
-    public Dialogue(string txt)
+    public DialoguePaku(string txt)
     {
         fromDir = DialogueDir.None;
         text = txt;
         name = string.Empty;
     }
 
-    public Dialogue(string txt, string _name)
+    public DialoguePaku(string txt, string _name)
     {
         fromDir = DialogueDir.None;
         text = txt;
         name = _name;
     }
 
-    public Dialogue(DialogueDir dir, string _name, string txt)
+    public DialoguePaku(DialogueDir dir, string _name, string txt)
     {
         fromDir = dir;
         text = txt;

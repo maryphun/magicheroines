@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using System;
@@ -39,6 +40,7 @@ namespace NovelEditor
         private NovelUIManager _novelUI;
         private AudioPlayer _audioPlayer;
         private ChoiceManager _choiceManager;
+        private Coroutine _autoPlay;
 
         private NovelData.ParagraphData _nowParagraph;
         private int _nextDialogueNum = 0;
@@ -52,6 +54,7 @@ namespace NovelEditor
         private bool _mute = false;
         private bool _isEnd = false;
         private bool _isLoading = false;
+        private bool _isAutoPlay = false;
 
         private List<string> _choiceName = new();
         private List<string> _ParagraphName = new();
@@ -468,6 +471,25 @@ namespace NovelEditor
             _inputProvider = input;
         }
 
+        /// <summary>
+        /// オート開始
+        /// </summary>
+        public bool ToggleAutoPlay()
+        {
+            _isAutoPlay = !_isAutoPlay;
+
+            if (_isAutoPlay)
+            {
+                _autoPlay = StartCoroutine(AutoPlay());
+            }
+            else
+            {
+                StopCoroutine(_autoPlay);
+            }
+
+            return _isAutoPlay;
+        }
+
         #endregion
 
 
@@ -625,7 +647,6 @@ namespace NovelEditor
         /// </summary>
         void SetNext()
         {
-            Debug.Log("_nextDialogueNum: " + _nextDialogueNum.ToString() + " _nowParagraph.dialogueList.Count-1:" + (_nowParagraph.dialogueList.Count - 1).ToString());
             if (_nextDialogueNum >= _nowParagraph.dialogueList.Count-1)
             {
                 switch (_nowParagraph.next)
@@ -700,8 +721,11 @@ namespace NovelEditor
             //テキストを1文字ずつ再生
             _textCTS = new CancellationTokenSource();
             _isReading = true;
-            Debug.Log("maxDialogue: " + maxDialogue.ToString());
+
             _nextDialogueNum = Mathf.Min(_nextDialogueNum+1, maxDialogue);
+
+            // Logに記録する
+            LoggerManager.Instance.AddLog(newData.Name, newData.text);
 
             if (OnDialogueChanged != null)
                 OnDialogueChanged(JsonUtility.FromJson<NovelData.ParagraphData.Dialogue>(JsonUtility.ToJson(newData)));
@@ -741,6 +765,34 @@ namespace NovelEditor
         {
             _textCTS.Cancel();
             _novelUI.FlashText();
+        }
+
+        IEnumerator AutoPlay()
+        {
+            float timeElapsed = 0.0f;
+            const float waitTime = 1f;
+            while (_isAutoPlay)
+            {
+                if (_isReading || _isChoicing || _isImageChangeing)
+                {
+                    timeElapsed = 0.0f;
+                    yield return null;
+                }
+                else
+                {
+                    timeElapsed += Time.deltaTime;
+                    if (timeElapsed >= waitTime)
+                    {
+                        timeElapsed = 0.0f;
+                        SetNext();
+                        yield return null;
+                    }
+                    else
+                    {
+                        yield return null;
+                    }
+                }
+            }
         }
 
 #if UNITY_EDITOR
