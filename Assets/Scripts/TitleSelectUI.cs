@@ -223,21 +223,31 @@ public class TitleSelectUI : MonoBehaviour
         selection[1].rectTransform.DOScale(new Vector3(selectionScale, selectionScale, selectionScale), animationTime);
         selection[1].DOFade(0.5f, animationTime);
 
-        AlphaFadeManager.Instance.FadeOut(animationTime);
-
-        // ニューゲームなので　ゲーム進捗を初期状態にする
-        ProgressManager.Instance.InitializeProgress();
+        if (currentSelection == TitleSelection.NewGame)
+        {
+            // ニューゲームの場合の特殊処理
+            AlphaFadeManager.Instance.FadeOut(animationTime);
+            // ニューゲームなので　ゲーム進捗を初期状態にする
+            ProgressManager.Instance.InitializeProgress();
+            yield return new WaitForSeconds(animationTime);
+        }
 
         // シーン遷移
-        yield return new WaitForSeconds(animationTime);
         SceneTransition(currentSelection);
+
+        // complete
+        selection[0].DOComplete();
+        selection[1].DOComplete();
+        selection[2].DOComplete();
+        selection[0].rectTransform.DOComplete();
+        selection[1].rectTransform.DOComplete();
+        selection[2].rectTransform.DOComplete();
 
         // reset
         selection[1].rectTransform.DOScale(originalSizeMid, 0.0f);
         selection[0].color = originalColorTop;
         selection[1].color = originalColorMid;
         selection[2].color = originalColorBtm;
-        selection[1].rectTransform.DOComplete();
     }
 
     private void Update()
@@ -294,7 +304,6 @@ public class TitleSelectUI : MonoBehaviour
                 break;
             case TitleSelection.Option:
                 optionPanel.OpenOptionPanel();
-                AlphaFadeManager.Instance.FadeIn(0.25f);
                 break;
             default:
                 break;

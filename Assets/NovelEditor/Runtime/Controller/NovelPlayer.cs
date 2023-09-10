@@ -5,6 +5,7 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
 using TMPro;
+using Assets.SimpleLocalization.Scripts;
 
 namespace NovelEditor
 {
@@ -747,7 +748,14 @@ namespace NovelEditor
             _nextDialogueNum = Mathf.Min(_nextDialogueNum+1, maxDialogue);
 
             // Logに記録する
-            LoggerManager.Instance.AddLog(newData.Name, newData.text);
+            string name = newData.Name;
+            string text = newData.text;
+
+           // if (LocalizationManager.HasKey(name))
+            name = LocalizationManager.Localize(name);
+            if (newData.localizationID != string.Empty && LocalizationManager.HasKey(newData.localizationID)) text = LocalizationManager.Localize(newData.localizationID);
+
+            LoggerManager.Instance.AddLog(name, text);
 
             if (OnDialogueChanged != null)
                 OnDialogueChanged(JsonUtility.FromJson<NovelData.ParagraphData.Dialogue>(JsonUtility.ToJson(newData)));

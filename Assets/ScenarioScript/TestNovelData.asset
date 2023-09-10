@@ -29,8 +29,9 @@ MonoBehaviour:
     nodeName: 
     _dialogueList:
     - open: 0
-      Name: "\u7B39\u8C37 \u660E\u7A42"
+      Name: Name.Akiho
       text: "\u660E\u7A42\u51FA\u73FE\uFF01"
+      localizationID: Dialogue.Example
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -74,6 +75,7 @@ MonoBehaviour:
     - open: 0
       Name: "\u7B39\u8C37 \u660E\u7A42"
       text: "\u30B7\u30B9\u30C6\u30E0\u30C6\u30B9\u30C8\uFF01\uFF01\uFF01\n\u4ECA\u304B\u3089\u9078\u629E\u80A2\u304C\u73FE\u308C\u307E\u30FC\u3059\uFF01"
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -117,6 +119,7 @@ MonoBehaviour:
     - open: 0
       Name: 
       text: FirstParagraph
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -174,6 +177,7 @@ MonoBehaviour:
     - open: 0
       Name: "\u732B\u5BAE \u4EAC"
       text: "\u9078\u629E\u80A21\u3092\u9078\u3073\u307E\u3057\u305F"
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -217,6 +221,7 @@ MonoBehaviour:
     - open: 0
       Name: 
       text: Paragraph
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -274,6 +279,7 @@ MonoBehaviour:
     - open: 0
       Name: "\u732B\u5BAE \u4EAC"
       text: "\u9078\u629E\u80A22\u3092\u9078\u3073\u307E\u3057\u305F"
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -317,6 +323,7 @@ MonoBehaviour:
     - open: 0
       Name: 
       text: Paragraph
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -374,6 +381,7 @@ MonoBehaviour:
     - open: 0
       Name: 
       text: "\u30C6\u30B9\u30C8\u7D42\u4E86\uFF01"
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -417,6 +425,7 @@ MonoBehaviour:
     - open: 0
       Name: 
       text: Paragraph
+      localizationID: 
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -465,13 +474,14 @@ MonoBehaviour:
     _index: 0
     _nodePosition:
       serializedVersion: 2
-      x: 895
-      y: -24
+      x: 896
+      y: -23
       width: 120
       height: 77
     _nextParagraphIndex: 1
     nodeName: 
     text: "\u9078\u629E\u80A2\uFF11"
+    localizeID: Choice.Test1
   - _enabled: 1
     _index: 1
     _nodePosition:
@@ -483,6 +493,7 @@ MonoBehaviour:
     _nextParagraphIndex: 2
     nodeName: 
     text: "\u9078\u629E\u80A2\uFF12"
+    localizeID: 
   graphScale: {x: 1, y: 1, z: 1}
   graphPosition: {x: -350, y: 307, z: 0}
   havePreLocations: 0

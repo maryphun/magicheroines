@@ -8,6 +8,9 @@
         <ui:Box class="flexbox" name = "serihuBox">
             <ui:Label text="セリフ" />
         </ui:Box>
+        <ui:Box class="flexbox" name = "localizeBox">
+            <ui:Label text="ローカライズ" />
+        </ui:Box>
         <ui:Box class="detail">
             <ui:Foldout text="詳細設定" name="detailFoldOut" value="false">
 

@@ -22,9 +22,9 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
         GameObject spawnedObj = Instantiate(origin);
         spawnedObj.name = "NovelPlayerCanvas";
+        spawnedObj.transform.SetParent(this.transform);
 
         novelplayer = spawnedObj.GetComponentInChildren<NovelPlayer>();
-        novelplayer.transform.SetParent(this.transform);
 
         if (ReferenceEquals(novelplayer, null))
         {

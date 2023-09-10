@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using System.Threading;
 using System;
 using TMPro;
+using Assets.SimpleLocalization.Scripts;
 
 namespace NovelEditor
 {
@@ -27,7 +28,14 @@ namespace NovelEditor
         {
             _button = GetComponent<Button>();
             _button.onClick.AddListener(Clicked);
-            GetComponentInChildren<TextMeshProUGUI>().text = data.text;
+
+            // ローカライズ化されているかを確認
+            string text = data.text;
+            if (data.localizeID != string.Empty && LocalizationManager.HasKey("Choice.Test1"))
+            {
+                text = LocalizationManager.Localize("Choice.Test1");
+            }
+            GetComponentInChildren<TextMeshProUGUI>().text = text;
             try
             {
                 await UniTask.WaitUntil(() => _choiced, cancellationToken: token);

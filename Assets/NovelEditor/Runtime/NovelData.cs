@@ -87,6 +87,7 @@ namespace NovelEditor
 
             ParagraphData pdata = CreateParagraph();
             pdata.dialogueList[0].text = "FirstParagraph";
+            pdata.dialogueList[0].localizationID = "Dialogue.Example";
             pdata.SetIndex(0);
         }
 
@@ -107,6 +108,7 @@ namespace NovelEditor
             data.SetEnable(true);
             data.dialogueList.Add(new ParagraphData.Dialogue());
             data.dialogueList[0].text = "Paragraph";
+            data.dialogueList[0].localizationID = "Dialogue.Example";
             data.dialogueList[0].charas = new Sprite[locations.Count];
             data.dialogueList[0].howCharas = new CharaChangeStyle[locations.Count];
             data.dialogueList[0].charaFadeColor = new Color[locations.Count];
@@ -139,6 +141,7 @@ namespace NovelEditor
                 data = ChoiceStack.Pop();
             }
             data.text = "Choice";
+            data.localizeID = "Choice.Test1";
             data.SetEnable(true);
 
             return data;
@@ -149,6 +152,7 @@ namespace NovelEditor
             ChoiceData data = JsonUtility.FromJson<ChoiceData>(sdata);
             ChoiceData popData = CreateChoice();
             popData.text = data.text;
+            popData.localizeID = data.localizeID;
             return popData;
         }
 
@@ -216,6 +220,7 @@ namespace NovelEditor
             /// 選択肢のテキスト
             /// </summary>
             public string text;
+            public string localizeID;
 
             internal override void SetNodeDeleted(NovelData editingData)
             {
@@ -375,6 +380,7 @@ namespace NovelEditor
                 public bool open;
                 public string Name = "";
                 public string text;
+                public string localizationID;
 
                 public Sprite back;
                 public BackChangeStyle howBack;

@@ -172,6 +172,7 @@ namespace NovelEditor
         {
             data.Name = nowDialogue.Name;
             data.text = nowDialogue.text;
+            data.localizationID = nowDialogue.localizationID;
             data.howBack = BackChangeStyle.FadeAll;
             data.backFadeColor = Color.black;
             data.backFadeSpeed = 1.0f;

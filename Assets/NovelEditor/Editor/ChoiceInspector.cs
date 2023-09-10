@@ -25,9 +25,11 @@ namespace NovelEditor.Editor
             serializedObject.Update();
             SerializedProperty data = serializedObject.FindProperty("data");
             SerializedProperty text = data.FindPropertyRelative("text");
+            SerializedProperty localizeID = data.FindPropertyRelative("localizeID");
             SerializedProperty nodeName = data.FindPropertyRelative("nodeName");
 
             text.stringValue = EditorGUILayout.TextField("選択肢のテキスト", text.stringValue);
+            localizeID.stringValue = EditorGUILayout.TextField("ローカライズ", localizeID.stringValue);
             nodeName.stringValue = EditorGUILayout.TextField("ノードの名前(必要な場合のみ)", nodeName.stringValue);
 
             serializedObject.ApplyModifiedProperties();

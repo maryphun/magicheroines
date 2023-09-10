@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Assets.SimpleLocalization.Scripts;
 
 namespace NovelEditor
 {
@@ -42,7 +43,7 @@ namespace NovelEditor
         /// </summary>
         /// <param name="data">次のセリフのデータ</param>
         internal void UpdateNameText(NovelData.ParagraphData.Dialogue data){
-            tmpro.text = data.Name;
+            tmpro.text = LocalizationManager.Localize(data.Name);
             if (data.changeNameFont)
             {
                 tmpro.color = data.nameColor;

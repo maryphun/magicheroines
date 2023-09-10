@@ -7,7 +7,7 @@ using System.Threading;
 using System;
 using System.Linq;
 using System.Text.RegularExpressions;
-
+using Assets.SimpleLocalization.Scripts;
 
 namespace NovelEditor
 {
@@ -47,7 +47,15 @@ namespace NovelEditor
         {
             UpdateFont(data);
             //再生が終わったら通知
-            return await PlayText(data.text, token);
+            if (data.localizationID != string.Empty && LocalizationManager.HasKey(data.localizationID))
+            {
+                return await PlayText(LocalizationManager.Localize(data.localizationID), token);
+            }
+            else
+            {
+                Debug.Log(data.localizationID + " does not exist");
+                return await PlayText(data.text, token);
+            }
         }
 
         /// <summary>

@@ -39,7 +39,7 @@ namespace NovelEditor.Editor
             });
 
             root.Q<Box>("nameBox").Add(nameField);
-
+            //
             var serihuField = new IMGUIContainer(() =>
             {
                 try
@@ -60,6 +60,23 @@ namespace NovelEditor.Editor
             });
 
             root.Q<Box>("serihuBox").Add(serihuField);
+
+            //
+            var localizeField = new IMGUIContainer(() =>
+            {
+                try
+                {
+                    data.serializedObject.Update();
+                    var localizeText = data.FindPropertyRelative("localizationID");
+                    localizeText.stringValue = GUILayout.TextArea(localizeText.stringValue);
+                    data.serializedObject.ApplyModifiedProperties();
+                }
+                catch { }
+
+            });
+
+            root.Q<Box>("localizeBox").Add(localizeField);
+            //
 
             CharaSetting(root, data);
 
