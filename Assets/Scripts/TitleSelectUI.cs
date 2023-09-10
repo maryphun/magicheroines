@@ -37,6 +37,7 @@ public class TitleSelectUI : MonoBehaviour
     [Header("References")]
     [SerializeField] private TMP_Text[] selection = new TMP_Text[SelectionCount];
     [SerializeField] private TMP_Text dummyText;
+    [SerializeField] private OptionPanel optionPanel;
 
     [Header("Debug")]
     [SerializeField] private TitleSelection currentSelection;
@@ -45,6 +46,11 @@ public class TitleSelectUI : MonoBehaviour
     
     // Start is called before the first frame update
     void Start()
+    {
+        Init();
+    }
+
+    private void Init()
     {
         AlphaFadeManager.Instance.FadeIn(1.0f);
 
@@ -203,6 +209,12 @@ public class TitleSelectUI : MonoBehaviour
     {
         const float animationTime = 1.0f;
 
+
+        Vector3 originalSizeMid = selection[1].rectTransform.localScale;
+        Color originalColorTop = selection[0].color;
+        Color originalColorMid = selection[1].color;
+        Color originalColorBtm = selection[2].color;
+
         // アニメーション
         selection[0].DOFade(0.0f, animationTime);
         selection[2].DOFade(0.0f, animationTime);
@@ -218,11 +230,20 @@ public class TitleSelectUI : MonoBehaviour
 
         // シーン遷移
         yield return new WaitForSeconds(animationTime);
-        SceneManager.LoadScene("Home", LoadSceneMode.Single);
+        SceneTransition(currentSelection);
+
+        // reset
+        selection[1].rectTransform.DOScale(originalSizeMid, 0.0f);
+        selection[0].color = originalColorTop;
+        selection[1].color = originalColorMid;
+        selection[2].color = originalColorBtm;
+        selection[1].rectTransform.DOComplete();
     }
 
     private void Update()
     {
+        if (optionPanel.IsOpen()) return;
+
         // Todo: Use Input manager instead
         if (Input.GetKeyDown(KeyCode.UpArrow)) keyPrepressed = KeyCode.UpArrow;
         if (Input.GetKeyDown(KeyCode.DownArrow)) keyPrepressed = KeyCode.DownArrow;
@@ -249,6 +270,34 @@ public class TitleSelectUI : MonoBehaviour
                     return;
 
             }
+        }
+    }
+
+    private void SceneTransition(TitleSelection targetScene)
+    {
+        switch (targetScene)
+        {
+            case TitleSelection.Credit:
+                Init();
+                break;
+            case TitleSelection.Exit:
+                Application.Quit();
+                break;
+            case TitleSelection.Gallery:
+                Init();
+                break;
+            case TitleSelection.Load:
+                Init();
+                break;
+            case TitleSelection.NewGame:
+                SceneManager.LoadScene("Home", LoadSceneMode.Single);
+                break;
+            case TitleSelection.Option:
+                optionPanel.OpenOptionPanel();
+                AlphaFadeManager.Instance.FadeIn(0.25f);
+                break;
+            default:
+                break;
         }
     }
 }

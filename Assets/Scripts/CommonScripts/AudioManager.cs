@@ -32,8 +32,8 @@ public class AudioManager : MonoBehaviour
     private AudioSource musicSource2;
     private AudioSource sfxSource;
 
-    private float musicVolume;
-    private float masterVolumeSE = 1.0f;
+    [SerializeField] private float musicVolume = 0.5f;
+    [SerializeField] private float masterVolumeSE = 0.5f;
 
     private bool firstMusicSourceIsPlaying;
 
@@ -60,7 +60,8 @@ public class AudioManager : MonoBehaviour
         musicSource2.loop = true;
 
         // default music volume
-        musicVolume = 1f;
+        musicVolume = 0.5f;
+        masterVolumeSE = 0.5f;
 
         // Load all audio Resources
         seClips = Resources.LoadAll<AudioClip>("Audio/SE");
@@ -70,6 +71,10 @@ public class AudioManager : MonoBehaviour
     public void SetSEMasterVolume(float value)
     {
         masterVolumeSE = value;
+    }
+    public float GetSEMasterVolume()
+    {
+        return masterVolumeSE;
     }
 
     public void PlayMusic(string bgmname)
@@ -218,6 +223,10 @@ public class AudioManager : MonoBehaviour
         musicVolume = volume;
         AudioSource activeSource = (firstMusicSourceIsPlaying) ? musicSource : musicSource2;
         activeSource.volume = musicVolume;
+    }
+    public float GetMusicVolume()
+    {
+        return musicVolume;
     }
 
     public void PauseMusic()

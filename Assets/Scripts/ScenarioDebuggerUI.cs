@@ -15,7 +15,7 @@ public class ScenarioDebuggerUI : MonoBehaviour
     public void PlayScript()
     {
         UICanvas.enabled = false;
-        player.Play(data, true);
+        NovelSingletone.Instance.PlayNovel(data, true);
         isPlaying = true;
     }
 
@@ -24,8 +24,10 @@ public class ScenarioDebuggerUI : MonoBehaviour
         if (isPlaying)
         {
             // 終了チェック
-            if (player.IsStop)
+            if (NovelSingletone.Instance.IsStop())
             {
+                // 終了
+                Debug.Log("End");
                 isPlaying = false;
                 UICanvas.enabled = true;
             }

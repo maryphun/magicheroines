@@ -80,11 +80,13 @@ namespace NovelEditor
             {
                 NovelCanvas.alpha = 1;
                 NovelCanvas.interactable = true;
+                NovelCanvas.blocksRaycasts = true; 
             }
             else
             {
                 NovelCanvas.alpha = 0;
                 NovelCanvas.interactable = false;
+                NovelCanvas.blocksRaycasts = false;
             }
         }
 
@@ -98,10 +100,12 @@ namespace NovelEditor
             {
                 UIparents.alpha = 1;
                 UIparents.interactable = true;
+                UIparents.blocksRaycasts = true;
             }
             else
             {
                 UIparents.alpha = 0;
+                UIparents.interactable = false;
                 UIparents.interactable = false;
             }
         }

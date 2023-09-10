@@ -26,6 +26,7 @@ namespace NovelEditor
 
         [SerializeField, HideInInspector] private float _charaFadeTime = 0.2f;
         [SerializeField, HideInInspector] private int _textSpeed = 6;
+        [SerializeField, HideInInspector] private float _autoSpeed = 1.0f;
 
         [SerializeField, HideInInspector] private float _BGMVolume = 1;
         [SerializeField, HideInInspector] private float _SEVolume = 1;
@@ -214,6 +215,26 @@ namespace NovelEditor
                 }
 
                 _novelUI.SetTextSpeed(_textSpeed);
+            }
+        }
+
+        /// <summary>
+        /// テキスト自動再生
+        /// </summary>
+        public float autoSpeed
+        {
+            get
+            {
+                return _autoSpeed;
+            }
+            set
+            {
+                _autoSpeed = value;
+
+                if (value < 0.1f)
+                {
+                    _autoSpeed = 0.1f;
+                }
             }
         }
 
@@ -640,6 +661,7 @@ namespace NovelEditor
                 _nextDialogueNum = 0;
                 SetNextDialogue(_nowParagraph.dialogueList[_nextDialogueNum], _nowParagraph.dialogueList.Count - 1);
             }
+            
         }
 
         /// <summary>
@@ -770,7 +792,6 @@ namespace NovelEditor
         IEnumerator AutoPlay()
         {
             float timeElapsed = 0.0f;
-            const float waitTime = 1f;
             while (_isAutoPlay)
             {
                 if (_isReading || _isChoicing || _isImageChangeing)
@@ -781,7 +802,7 @@ namespace NovelEditor
                 else
                 {
                     timeElapsed += Time.deltaTime;
-                    if (timeElapsed >= waitTime)
+                    if (timeElapsed >= 2.0f - _autoSpeed)
                     {
                         timeElapsed = 0.0f;
                         SetNext();
