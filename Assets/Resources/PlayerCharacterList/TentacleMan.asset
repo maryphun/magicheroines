@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43b1c0590c3a05a449be16b7a076744a, type: 3}
-  m_Name: protagonist
+  m_Name: TentacleMan
   m_EditorClassIdentifier: 
   detail:
     characterID: 1
@@ -22,12 +22,12 @@ MonoBehaviour:
       item: {fileID: 0}
       attacked: {fileID: 0}
       retire: {fileID: 0}
-    name: "\u7121\u540D"
+    name: "\u89E6\u624B\u602A\u4EBA"
     max_hp: 100
     max_mp: 100
     attackDamage: 10
   animations:
-    idle: {fileID: 1725627163, guid: 90377d0cfeafb7d40a9fc250c4036ea5, type: 3}
+    idle: {fileID: 21300000, guid: 8447af4645f36474da5f73f92ddd24a8, type: 3}
     attack: {fileID: -679051172, guid: 90377d0cfeafb7d40a9fc250c4036ea5, type: 3}
     magic: {fileID: -1134551051, guid: 90377d0cfeafb7d40a9fc250c4036ea5, type: 3}
     item: {fileID: 128624008, guid: 90377d0cfeafb7d40a9fc250c4036ea5, type: 3}

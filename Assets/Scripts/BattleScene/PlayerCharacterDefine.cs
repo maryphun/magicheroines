@@ -4,5 +4,5 @@ using UnityEngine;
 public class PlayerCharacterDefine : ScriptableObject
 {
     [SerializeField] public PlayerCharacter detail;
-    [SerializeField] public BattlerAnimation animations;
+    [SerializeField] public GameObject battler;
 }
