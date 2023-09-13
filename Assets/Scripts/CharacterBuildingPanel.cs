@@ -17,9 +17,15 @@ public class CharacterBuildingPanel : MonoBehaviour
     [SerializeField] private GameObject characterDataButton;
     [SerializeField] private GameObject characterUpgradeButton;
     [SerializeField] private Image[] characterIconSlots;
+    [SerializeField] private RectTransform pinkPanel;
 
     [Header("Debug")]
     [SerializeField] List<Character> characters;
+    [SerializeField, HideInInspector] private float tabLocalPosY;
+
+    private Color _darkenedTabColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
+    const float _pinkPanelShakeTime = 0.1f;
+    const float _pinkPanelShakeMagnitude = 2.5f;
 
     public void OpenCharacterBuildingPanel()
     {
@@ -28,6 +34,7 @@ public class CharacterBuildingPanel : MonoBehaviour
         canvasGroup.blocksRaycasts = true;
 
         // 初期化
+        tabLocalPosY = characterDataButton.GetComponent<RectTransform>().localPosition.y;
         SwitchToCharacterDataTab();
 
         // キャラクター資料を取得して表示する
@@ -49,15 +56,47 @@ public class CharacterBuildingPanel : MonoBehaviour
         this.characters.Clear();
     }
 
+    /// <summary>
+    /// 資料タブ
+    /// </summary>
     public void SwitchToCharacterDataTab()
     {
-        characterDataButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+        characterDataButton.GetComponent<Image>().color = Color.white;
         characterDataButton.GetComponent<Button>().interactable = false;
-        characterUpgradeButton.GetComponent<Image>().color = new Color(0.75f, 0.75f, 0.75f, 1.0f);
-        characterDataButton.GetComponent<Button>().interactable = true;
+        characterDataButton.GetComponent<RectTransform>().localPosition = new Vector3(characterDataButton.GetComponent<RectTransform>().localPosition.x, 
+                                                                                      tabLocalPosY, 
+                                                                                      characterDataButton.GetComponent<RectTransform>().localPosition.z);
+        characterUpgradeButton.GetComponent<Image>().color = _darkenedTabColor;
+        characterUpgradeButton.GetComponent<Button>().interactable = true;
+        characterUpgradeButton.GetComponent<RectTransform>().localPosition = new Vector3(characterUpgradeButton.GetComponent<RectTransform>().localPosition.x,
+                                                                                         tabLocalPosY - 20f,
+                                                                                         characterUpgradeButton.GetComponent<RectTransform>().localPosition.z);
 
         characterDataPanel.SetActive(true);
         characterUpgradePanel.SetActive(false);
 
+        ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+    }
+
+    /// <summary>
+    /// 育成タブ
+    /// </summary>
+    public void SwitchToCharacterUpgradeTab()
+    {
+        characterUpgradeButton.GetComponent<Image>().color = Color.white;
+        characterUpgradeButton.GetComponent<Button>().interactable = false;
+        characterUpgradeButton.GetComponent<RectTransform>().localPosition = new Vector3(characterUpgradeButton.GetComponent<RectTransform>().localPosition.x,
+                                                                                        tabLocalPosY,
+                                                                                        characterUpgradeButton.GetComponent<RectTransform>().localPosition.z);
+        characterDataButton.GetComponent<Image>().color = _darkenedTabColor;
+        characterDataButton.GetComponent<Button>().interactable = true;
+        characterDataButton.GetComponent<RectTransform>().localPosition = new Vector3(characterDataButton.GetComponent<RectTransform>().localPosition.x,
+                                                                                      tabLocalPosY - 20f,
+                                                                                      characterDataButton.GetComponent<RectTransform>().localPosition.z);
+
+        characterUpgradePanel.SetActive(true);
+        characterDataPanel.SetActive(false);
+
+        ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
     }
 }
