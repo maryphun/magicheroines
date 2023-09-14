@@ -25,10 +25,13 @@ System.HolyCoreTraining,聖核研究
 System.Back,戻る
 System.OptionPanel,設定
 System.Attack,攻撃力：
+System.Level,LV：
 System.HP,体力：
 System.MP,魔力：
 System.Defense,防衛力：
 System.Speed,素早さ：
+System.Skill,特殊技：
+System.Equipment,装備
 System.CharacterData,資料
 System.CharacterUpgrade,育成
 WorldMapScene,ワールドマップ
@@ -40,6 +43,8 @@ Name.Rikka,水無瀬 六花
 Name.Kei,猫宮 京
 Name.Erena,清藤 エレナ
 Name.Nayuta,黒桐 那由多
+Name.Battler,戦闘員
+Name.Tentacle,触手怪人
 OptionSetting,オプション設定
 Option.BGM,BGM音量
 Option.SE,効果音音量
@@ -50,6 +55,6 @@ Option.Default,デフォルト
 Option.Second,秒
 BattleScene,戦闘シーン
 Battle.Attack,攻撃
-Battle.Magic,魔法
+Battle.Skill,特殊技
 Battle.Item,アイテム
 Battle.Idle,待機
