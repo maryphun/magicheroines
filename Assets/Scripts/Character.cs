@@ -20,20 +20,23 @@ public struct PlayerCharacter
     // graphic
     [Header("画像")]
     public Sprite icon;
-    public Sprite tachie;
+    public Sprite sprite;
     public BattlerAnimation animations;
 
     [Header("戦闘関連")]
     // battle related
-    public string name;
-    public int max_hp;
-    public int max_mp;
-    public int attack;
-    public int defense;
+    public string nameID;
+    public int starting_level;
+    public int base_hp;
+    public int base_mp;
+    public int base_attack;
+    public int base_defense;
+    public int base_speed;
     public int hp_growth;
     public int mp_growth;
     public int attack_growth;
     public int defense_growth;
+    public int speed_growth;
 
     [Header("ステータス")]
     public bool is_heroin;      //　ヒロイン
@@ -45,7 +48,14 @@ public class Character
 {
     public PlayerCharacter characterData; // 基本資料
     public GameObject battler; // 戦闘像
-    public int level;
     public int dark_gauge;
     public int horny_gauge;
+
+    public string localizedName;
+    public int current_level;
+    public int current_hp;
+    public int current_mp;
+    public int current_attack;
+    public int current_defense;
+    public int current_speed;
 }

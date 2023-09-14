@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.SimpleLocalization.Scripts;
 
 /// <summary>
 /// プレイヤーのゲーム進捗は全てここに記録する
@@ -31,7 +32,11 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.characters = new List<Character>();
 
         // 初期キャラ 
-        PlayerCharacterDefine tentacle = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/TentacleMan");
+        PlayerCharacterDefine battler = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/1.Battler");
+        AddPlayerCharacter(battler);
+        Resources.UnloadAsset(battler);
+
+        PlayerCharacterDefine tentacle = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/2.TentacleMan");
         AddPlayerCharacter(tentacle);
         Resources.UnloadAsset(tentacle);
     }
@@ -60,9 +65,17 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 持っている仲間のリストを取得
     /// </summary>
-    public List<Character> GetAllCharacter()
+    public List<Character> GetAllCharacter(bool originalReference = false)
     {
-        return playerData.characters;
+        if (originalReference)
+        {
+            return playerData.characters;
+        }
+        else
+        {
+            List<Character> characterListCopy = new List<Character>(playerData.characters);
+            return characterListCopy;
+        }
     }
 
     /// <summary>
@@ -72,8 +85,16 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         var obj = new Character();
 
+        obj.localizedName = LocalizationManager.Localize(newCharacter.detail.nameID);
         obj.characterData = newCharacter.detail;
         obj.battler = newCharacter.battler;
-        obj.level = 1;
+        obj.current_level = newCharacter.detail.starting_level;
+        obj.current_hp = newCharacter.detail.base_hp;
+        obj.current_mp = newCharacter.detail.base_mp;
+        obj.current_attack = newCharacter.detail.base_attack;
+        obj.current_defense = newCharacter.detail.base_defense;
+        obj.current_speed = newCharacter.detail.base_speed;
+
+        playerData.characters.Add(obj);
     }
 }

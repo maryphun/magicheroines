@@ -12,7 +12,7 @@ public class CharacterBuildingPanel : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private GameObject characterDataPanel;
+    [SerializeField] private CharacterDataPanel characterDataPanel;
     [SerializeField] private GameObject characterUpgradePanel;
     [SerializeField] private GameObject characterDataButton;
     [SerializeField] private GameObject characterUpgradeButton;
@@ -22,6 +22,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     [Header("Debug")]
     [SerializeField] List<Character> characters;
     [SerializeField, HideInInspector] private float tabLocalPosY;
+    [SerializeField] private int currentCheckingSlot = 0;
 
     private Color _darkenedTabColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
     const float _pinkPanelShakeTime = 0.1f;
@@ -34,8 +35,8 @@ public class CharacterBuildingPanel : MonoBehaviour
         canvasGroup.blocksRaycasts = true;
 
         // 初期化
+        currentCheckingSlot = 0;
         tabLocalPosY = characterDataButton.GetComponent<RectTransform>().localPosition.y;
-        SwitchToCharacterDataTab();
 
         // キャラクター資料を取得して表示する
         characters = ProgressManager.Instance.GetAllCharacter();
@@ -43,8 +44,12 @@ public class CharacterBuildingPanel : MonoBehaviour
         {
             int index = characters[i].characterData.characterID;
 
-            characterIconSlots[index].sprite = characters[i].characterData.icon;
+            // キャラクターが存在しているならアイコンを白くする
+            characterIconSlots[index].transform.Find("Character").GetComponent<Image>().color = Color.white;
         }
+
+        characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().color = Color.white;
+        SwitchToCharacterDataTab();
     }
 
     public void QuitCharacterBuildingPanel()
@@ -53,7 +58,9 @@ public class CharacterBuildingPanel : MonoBehaviour
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
 
+        // COPYしたものを削除
         this.characters.Clear();
+        this.characters = null;
     }
 
     /// <summary>
@@ -72,10 +79,13 @@ public class CharacterBuildingPanel : MonoBehaviour
                                                                                          tabLocalPosY - 20f,
                                                                                          characterUpgradeButton.GetComponent<RectTransform>().localPosition.z);
 
-        characterDataPanel.SetActive(true);
+        characterDataPanel.gameObject.SetActive(true);
         characterUpgradePanel.SetActive(false);
 
         ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+
+        // 資料更新
+        characterDataPanel.InitializeCharacterData(characters[currentCheckingSlot]);
     }
 
     /// <summary>
@@ -95,8 +105,21 @@ public class CharacterBuildingPanel : MonoBehaviour
                                                                                       characterDataButton.GetComponent<RectTransform>().localPosition.z);
 
         characterUpgradePanel.SetActive(true);
-        characterDataPanel.SetActive(false);
+        characterDataPanel.gameObject.SetActive(false);
 
         ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+    }
+
+    /// <summary>
+    /// キャラ変更
+    /// </summary>
+    public void ChangeCharacterSlot(int slot)
+    {
+        if (characters.Count <= slot) return;
+
+        characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().DOFade(0.0f, 0.1f);
+        currentCheckingSlot = slot;
+        characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().DOFade(1.0f, 0.1f);
+        characterDataPanel.InitializeCharacterData(characters[currentCheckingSlot]);
     }
 }

@@ -24,14 +24,6 @@ public class Battle : MonoBehaviour
     void InitializeBattleScene(List<PlayerCharacterDefine> _actors, List<EnemyDefine> _enemies)
     {
         // ƒLƒƒƒ‰¶¬
-        for (int i = 0; i < _actors.Count; i++)
-        {
-            Battler battler = new Battler();
-            battler.isEnemy = false;
-            battler.max_hp = _actors[i].detail.max_hp;
-            battler.max_mp = _actors[i].detail.max_mp;
-            battler.current_mp = _actors[i].detail.max_hp;
-            battler.current_mp = _actors[i].detail.max_mp;
-        }
+
     }
 }

@@ -7,6 +7,9 @@ public class HomeSceneUI : MonoBehaviour
 {
     private void Start()
     {
+#if DEBUG_MODE
+        ProgressManager.Instance.InitializeProgress();
+#endif
         AlphaFadeManager.Instance.FadeIn(1.0f);
     }
 
