@@ -38,6 +38,10 @@ public struct PlayerCharacter
     public int defense_growth;
     public int speed_growth;
 
+    [Header("育成")]
+    public int levelUp_base_cost;
+    public int levelUp_cost_increment;
+
     [Header("ステータス")]
     public bool is_heroin;      //　ヒロイン
     public int max_dark_gauge; //闇落ちゲージ

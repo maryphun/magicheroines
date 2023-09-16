@@ -13,7 +13,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     [Header("References")]
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private CharacterDataPanel characterDataPanel;
-    [SerializeField] private GameObject characterUpgradePanel;
+    [SerializeField] private CharacterUpgradePanel characterUpgradePanel;
     [SerializeField] private GameObject characterDataButton;
     [SerializeField] private GameObject characterUpgradeButton;
     [SerializeField] private Image[] characterIconSlots;
@@ -28,6 +28,11 @@ public class CharacterBuildingPanel : MonoBehaviour
     const float _pinkPanelShakeTime = 0.1f;
     const float _pinkPanelShakeMagnitude = 2.5f;
 
+    private void Start()
+    {
+        tabLocalPosY = characterDataButton.GetComponent<RectTransform>().localPosition.y;
+    }
+
     public void OpenCharacterBuildingPanel()
     {
         canvasGroup.DOFade(1.0f, animationTime);
@@ -36,7 +41,6 @@ public class CharacterBuildingPanel : MonoBehaviour
 
         // 初期化
         currentCheckingSlot = 0;
-        tabLocalPosY = characterDataButton.GetComponent<RectTransform>().localPosition.y;
 
         // キャラクター資料を取得して表示する
         characters = ProgressManager.Instance.GetAllCharacter();
@@ -49,7 +53,7 @@ public class CharacterBuildingPanel : MonoBehaviour
         }
 
         characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().color = Color.white;
-        SwitchToCharacterDataTab();
+        SwitchToCharacterDataTab(false);
     }
 
     public void QuitCharacterBuildingPanel()
@@ -66,7 +70,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// <summary>
     /// 資料タブ
     /// </summary>
-    public void SwitchToCharacterDataTab()
+    public void SwitchToCharacterDataTab(bool shake = true)
     {
         characterDataButton.GetComponent<Image>().color = Color.white;
         characterDataButton.GetComponent<Button>().interactable = false;
@@ -80,9 +84,12 @@ public class CharacterBuildingPanel : MonoBehaviour
                                                                                          characterUpgradeButton.GetComponent<RectTransform>().localPosition.z);
 
         characterDataPanel.gameObject.SetActive(true);
-        characterUpgradePanel.SetActive(false);
+        characterUpgradePanel.gameObject.SetActive(false);
 
-        ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+        if (shake)
+        {
+            ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+        }
 
         // 資料更新
         characterDataPanel.InitializeCharacterData(characters[currentCheckingSlot]);
@@ -91,7 +98,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// <summary>
     /// 育成タブ
     /// </summary>
-    public void SwitchToCharacterUpgradeTab()
+    public void SwitchToCharacterUpgradeTab(bool shake = true)
     {
         characterUpgradeButton.GetComponent<Image>().color = Color.white;
         characterUpgradeButton.GetComponent<Button>().interactable = false;
@@ -104,10 +111,16 @@ public class CharacterBuildingPanel : MonoBehaviour
                                                                                       tabLocalPosY - 20f,
                                                                                       characterDataButton.GetComponent<RectTransform>().localPosition.z);
 
-        characterUpgradePanel.SetActive(true);
+        characterUpgradePanel.gameObject.SetActive(true);
         characterDataPanel.gameObject.SetActive(false);
 
-        ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+        if (shake)
+        {
+            ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+        }
+
+        // 資料更新
+        characterUpgradePanel.InitializeUpgradePanel(characters[currentCheckingSlot]);
     }
 
     /// <summary>
@@ -121,5 +134,6 @@ public class CharacterBuildingPanel : MonoBehaviour
         currentCheckingSlot = slot;
         characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().DOFade(1.0f, 0.1f);
         characterDataPanel.InitializeCharacterData(characters[currentCheckingSlot]);
+        characterUpgradePanel.InitializeUpgradePanel(characters[currentCheckingSlot]);
     }
 }

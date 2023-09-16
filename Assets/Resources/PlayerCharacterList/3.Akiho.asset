@@ -35,6 +35,8 @@ MonoBehaviour:
     attack_growth: 0
     defense_growth: 2
     speed_growth: 3
+    levelUp_base_cost: 300
+    levelUp_cost_increment: 75
     is_heroin: 1
     max_dark_gauge: 100
     max_horny_gauge: 100

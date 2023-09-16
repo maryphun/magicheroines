@@ -27,8 +27,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData = new PlayerData();
 
         playerData.currentStage = 1; // 初期ステージ (チュートリアル)
-        playerData.currentMoney = 0;
-        playerData.currentResourcesPoint = 0;
+        playerData.currentMoney = 100;
+        playerData.currentResourcesPoint = 50;
         playerData.characters = new List<Character>();
 
         // 初期キャラ 
@@ -41,6 +41,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         Resources.UnloadAsset(tentacle);
     }
 
+    /// <summary>
+    /// 現在のゲーム進行状況を取得
+    /// </summary>
     public int GetCurrentStageProgress()
     {
         return playerData.currentStage;
@@ -96,5 +99,37 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         obj.current_speed = newCharacter.detail.base_speed;
 
         playerData.characters.Add(obj);
+    }
+
+    /// <summary>
+    /// 現在資金量を取得
+    /// </summary>
+    public int GetCurrentMoney()
+    {
+        return playerData.currentMoney;
+    }
+
+    /// <summary>
+    /// 資金量を変更
+    /// </summary>
+    public void SetMoney(int newValue)
+    {
+        playerData.currentMoney = Mathf.Max(newValue, 0);
+    }
+
+    /// <summary>
+    /// 現在資金量を取得
+    /// </summary>
+    public int GetCurrentResearchPoint()
+    {
+        return playerData.currentResourcesPoint;
+    }
+
+    /// <summary>
+    /// 資金量を変更
+    /// </summary>
+    public void SetResearchPoint(int newValue)
+    {
+        playerData.currentResourcesPoint = Mathf.Max(newValue, 0);
     }
 }

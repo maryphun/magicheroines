@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class HomeSceneUI : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class HomeSceneUI : MonoBehaviour
     {
 #if DEBUG_MODE
         ProgressManager.Instance.InitializeProgress();
+        ProgressManager.Instance.SetMoney(Random.Range(200, 9999));
+        ProgressManager.Instance.SetResearchPoint(Random.Range(200, 9999));
 #endif
         AlphaFadeManager.Instance.FadeIn(1.0f);
     }
