@@ -26,6 +26,7 @@ public class FormationSlot : MonoBehaviour
     [SerializeField] private CanvasGroup resourcesPanel;
     [SerializeField] private Button unlockSlotButton;
     [SerializeField] private FormationPanel formationPanel;
+    [SerializeField] private GameObject effect;
 
     [Header("Debug")]
     [SerializeField] private GameObject battler;
@@ -135,6 +136,11 @@ public class FormationSlot : MonoBehaviour
             // 外す
             // UpdateFormationで全スロットに対してResetDataをかけるのでObject.BattlerをDestroyする必要がない
             formationPanel.UpdateFormation(slotIndex, null, true, true);
+
+            // エフェクトを表示
+            var vfx = Instantiate(effect, transform);
+            vfx.GetComponent<RectTransform>().localPosition = new Vector3(0.0f, 80.0f, 0.0f);
+            vfx.GetComponent<Animator>().speed = 1.0f;
         }
         else if (ProgressManager.Instance.GetUnlockedFormationCount() > slotIndex) // 解放済み
         {
