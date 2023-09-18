@@ -13,9 +13,10 @@ public struct PlayerData
     public int currentMoney;             //< 資金
     public int currentResourcesPoint;    //< 研究ポイント
     public List<Character> characters;     //< 持っているキャラクター
-    public Character[] formationCharacters; //< パーティー編成
+    public FormationSlotData[] formationCharacters; //< パーティー編成
     public int formationSlotUnlocked;    //< 解放されたスロット
 }
+
 
 public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 {
@@ -36,7 +37,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.currentMoney = 100;
         playerData.currentResourcesPoint = 50;
         playerData.characters = new List<Character>();
-        playerData.formationCharacters = new Character[5];
+        playerData.formationCharacters = new FormationSlotData[5];
         playerData.formationSlotUnlocked = 2;
 
         // 初期キャラ 
@@ -49,9 +50,16 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         Resources.UnloadAsset(tentacle);
 
         // 初期キャラを自動的にパーティーに編入する
-        for (int i = 0; i < playerData.characters.Count; i++)
+        for (int i = 0; i < playerData.formationCharacters.Length; i++)
         {
-            playerData.formationCharacters[i] = playerData.characters[i];
+            if (i < playerData.characters.Count)
+            {
+                playerData.formationCharacters[i] = new FormationSlotData(playerData.characters[i], true);
+            }
+            else
+            {
+                playerData.formationCharacters[i] = new FormationSlotData(null, false);
+            }
         } 
     }
 
@@ -106,6 +114,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         obj.characterData = newCharacter.detail;
         obj.battler = newCharacter.battler;
         obj.current_level = newCharacter.detail.starting_level;
+        obj.current_maxHp = newCharacter.detail.base_hp;
+        obj.current_maxMp = newCharacter.detail.base_mp;
         obj.current_hp = newCharacter.detail.base_hp;
         obj.current_mp = newCharacter.detail.base_mp;
         obj.current_attack = newCharacter.detail.base_attack;
@@ -156,9 +166,17 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// パーティー編成最大数を増加
+    /// </summary>
+    public void UnlockedFormationCount()
+    {
+        playerData.formationSlotUnlocked ++;
+    }
+
+    /// <summary>
     /// 出征パーティー取得
     /// </summary>
-    public Character[] GetFormationParty(bool originalReference = false)
+    public FormationSlotData[] GetFormationParty(bool originalReference = false)
     {
         if (originalReference)
         {
@@ -167,7 +185,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         }
         else
         {
-            Character[] partyListCopy = (Character[])playerData.formationCharacters.Clone();
+            FormationSlotData[] partyListCopy = (FormationSlotData[])playerData.formationCharacters.Clone();
             return partyListCopy;
         }
     }
@@ -175,7 +193,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 出征パーティー取得
     /// </summary>
-    public void SetFormationParty(Character[] characters)
+    public void SetFormationParty(FormationSlotData[] characters)
     {
         playerData.formationCharacters = characters;
     }

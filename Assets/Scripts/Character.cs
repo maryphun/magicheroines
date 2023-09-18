@@ -66,3 +66,18 @@ public class Character
     public int current_defense;
     public int current_speed;
 }
+
+/// <summary>
+/// パーティー管理用
+/// </summary>
+public class FormationSlotData
+{
+    public Character characterData;
+    public bool isFilled;
+
+    public FormationSlotData(Character data, bool flag)
+    {
+        characterData = data;
+        isFilled = flag;
+    }
+}

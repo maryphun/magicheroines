@@ -36,6 +36,8 @@ System.CharacterData,資料
 System.CharacterUpgrade,育成
 System.LevelUp,レベルアップ
 System.Cost,資金コスト
+System.Locked,未開放
+System.Unlock,解放
 WorldMapScene,ワールドマップ
 System.Story,ストーリーを進む
 System.SideMission,資源調達クエスト
@@ -44,7 +46,7 @@ Name.Akiho,笹谷 明穂
 Name.Rikka,水無瀬 六花
 Name.Kei,猫宮 京
 Name.Erena,清藤 エレナ
-Name.Nayuta,黒桐 那由多
+Name.Nayuta,八雲 那由多
 Name.Battler,戦闘員
 Name.Tentacle,触手怪人
 OptionSetting,オプション設定
@@ -60,3 +62,6 @@ Battle.Attack,攻撃
 Battle.Skill,特殊技
 Battle.Item,アイテム
 Battle.Idle,待機
+Battle.Level,Lv.
+Battle.HP,HP
+Battle.MP,MP

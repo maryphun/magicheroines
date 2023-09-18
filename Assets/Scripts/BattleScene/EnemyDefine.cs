@@ -11,6 +11,7 @@ public class EnemyDefine : ScriptableObject
     [SerializeField] public int attack = 10;
     [SerializeField] public int defense = 10;
     [SerializeField] public int speed = 10;
+    [SerializeField] public int level = 1;
     [SerializeField] public Color character_color = new Color(1,1,1,1);
 
     [Header("ÉAÉCÉRÉì")]

@@ -22,6 +22,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private int attack;
     [SerializeField] private int defense;
     [SerializeField] private int speed;
+    [SerializeField] private int currentLevel;
 
     [Header("References")]
     [SerializeField] private Image graphic;
@@ -43,6 +44,7 @@ public class Battler : MonoBehaviour
         attack = enemy.attack;
         defense = enemy.defense;
         speed = enemy.speed;
+        currentLevel = enemy.level;
 
         Initialize();
     }
@@ -58,8 +60,17 @@ public class Battler : MonoBehaviour
         attack = character.current_attack;
         defense = character.current_defense;
         speed = character.current_speed;
+        currentLevel = character.current_level;
 
         Initialize();
+    }
+
+    /// <summary>
+    /// キャラクター編成画面の場合表示データが違う
+    /// </summary>
+    public void SetupFormationPanelMode()
+    {
+        name_UI.alpha = 0.0f;
     }
 
     public void Initialize()

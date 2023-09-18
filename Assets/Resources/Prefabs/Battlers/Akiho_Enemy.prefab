@@ -109,7 +109,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -348,9 +348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0615ffce14b2649b33df5bac3287b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character_name: "\u660E\u7A42"
-  isEnemy: 1
-  character_color: {r: 0.92549026, g: 0.83921576, b: 0.882353, a: 1}
   animations:
     idle: {fileID: 21300000, guid: ee3ad25fee3457c4aace3be7be3a9f16, type: 3}
     attack: {fileID: 21300000, guid: ee3ad25fee3457c4aace3be7be3a9f16, type: 3}
@@ -358,6 +355,9 @@ MonoBehaviour:
     item: {fileID: 21300000, guid: ee3ad25fee3457c4aace3be7be3a9f16, type: 3}
     attacked: {fileID: 21300000, guid: ee3ad25fee3457c4aace3be7be3a9f16, type: 3}
     retire: {fileID: 21300000, guid: ee3ad25fee3457c4aace3be7be3a9f16, type: 3}
+  character_name: "\u660E\u7A42"
+  isEnemy: 1
+  character_color: {r: 0.92549026, g: 0.83921576, b: 0.882353, a: 1}
   max_hp: 100
   max_mp: 0
   current_hp: 100
@@ -365,5 +365,6 @@ MonoBehaviour:
   attack: 0
   defense: 0
   speed: 0
+  currentLevel: 0
   graphic: {fileID: 7327100276064734370}
   name_UI: {fileID: 1324361431165308280}
