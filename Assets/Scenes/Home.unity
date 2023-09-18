@@ -2546,7 +2546,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151441177}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -2939,6 +2939,7 @@ MonoBehaviour:
   resourcesPanel: {fileID: 1042922685}
   unlockSlotButton: {fileID: 1967421891}
   formationPanel: {fileID: 151441183}
+  effect: {fileID: 1631839132994222541, guid: d9d231f54426ff941a17f0500de55e89, type: 3}
   battler: {fileID: 1042922683}
   objectPosition: {x: 0, y: 0, z: 0}
   isDisplaying: 0
@@ -5674,6 +5675,7 @@ MonoBehaviour:
   resourcesPanel: {fileID: 1042922685}
   unlockSlotButton: {fileID: 223812108}
   formationPanel: {fileID: 151441183}
+  effect: {fileID: 1631839132994222541, guid: d9d231f54426ff941a17f0500de55e89, type: 3}
   battler: {fileID: 0}
   objectPosition: {x: 0, y: 0, z: 0}
   isDisplaying: 0
@@ -6829,6 +6831,7 @@ MonoBehaviour:
   resourcesPanel: {fileID: 1042922685}
   unlockSlotButton: {fileID: 1868881251}
   formationPanel: {fileID: 151441183}
+  effect: {fileID: 1631839132994222541, guid: d9d231f54426ff941a17f0500de55e89, type: 3}
   battler: {fileID: 0}
   objectPosition: {x: 0, y: 0, z: 0}
   isDisplaying: 0
@@ -15476,6 +15479,7 @@ MonoBehaviour:
   resourcesPanel: {fileID: 1042922685}
   unlockSlotButton: {fileID: 1488429296}
   formationPanel: {fileID: 151441183}
+  effect: {fileID: 1631839132994222541, guid: d9d231f54426ff941a17f0500de55e89, type: 3}
   battler: {fileID: 0}
   objectPosition: {x: 0, y: 0, z: 0}
   isDisplaying: 0
@@ -24197,6 +24201,7 @@ MonoBehaviour:
   resourcesPanel: {fileID: 1042922685}
   unlockSlotButton: {fileID: 378683006}
   formationPanel: {fileID: 151441183}
+  effect: {fileID: 1631839132994222541, guid: d9d231f54426ff941a17f0500de55e89, type: 3}
   battler: {fileID: 0}
   objectPosition: {x: 0, y: 0, z: 0}
   isDisplaying: 0
