@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43b1c0590c3a05a449be16b7a076744a, type: 3}
-  m_Name: 4.Rikka
+  m_Name: 3.Clone
   m_EditorClassIdentifier: 
   detail:
-    characterID: 3
+    characterID: 2
     icon: {fileID: -1141764776, guid: ddfb2c5889060414988df1c56b2521e9, type: 3}
-    sprite: {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+    sprite: {fileID: 21300000, guid: c67d1d281a769ff47823a64565e21790, type: 3}
     animations:
       idle: {fileID: 0}
       attack: {fileID: 0}
@@ -24,21 +24,21 @@ MonoBehaviour:
       attacked: {fileID: 0}
       retire: {fileID: 0}
     color: {r: 0.3443396, g: 0.6905151, b: 1, a: 1}
-    nameID: Name.Rikka
-    starting_level: 18
-    base_hp: 0
-    base_mp: 0
-    base_attack: 0
-    base_defense: 0
-    base_speed: 0
-    hp_growth: 0
-    mp_growth: 0
-    attack_growth: 0
-    defense_growth: 0
-    speed_growth: 0
-    levelUp_base_cost: 300
-    levelUp_cost_increment: 75
-    is_heroin: 1
+    nameID: Name.Clone
+    starting_level: 1
+    base_hp: 50
+    base_mp: 50
+    base_attack: 5
+    base_defense: 5
+    base_speed: 5
+    hp_growth: 10
+    mp_growth: 10
+    attack_growth: 8
+    defense_growth: 5
+    speed_growth: 10
+    levelUp_base_cost: 350
+    levelUp_cost_increment: 50
+    is_heroin: 0
     max_dark_gauge: 100
     max_horny_gauge: 100
-  battler: {fileID: 0}
+  battler: {fileID: 6784901170540971542, guid: 471f4f6d45afb1e43af475fdb260a439, type: 3}

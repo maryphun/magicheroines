@@ -49,10 +49,14 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         AddPlayerCharacter(tentacle);
         Resources.UnloadAsset(tentacle);
 
+        PlayerCharacterDefine clone = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/3.Clone");
+        AddPlayerCharacter(clone);
+        Resources.UnloadAsset(clone);
+
         // 初期キャラを自動的にパーティーに編入する
         for (int i = 0; i < playerData.formationCharacters.Length; i++)
         {
-            if (i < playerData.characters.Count)
+            if (i < playerData.formationSlotUnlocked)
             {
                 playerData.formationCharacters[i] = new FormationSlotData(playerData.characters[i], true);
             }
