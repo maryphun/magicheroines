@@ -22,6 +22,7 @@ public struct PlayerCharacter
     public Sprite icon;
     public Sprite sprite;
     public BattlerAnimation animations;
+    public Color color;
 
     [Header("í“¬ŠÖ˜A")]
     // battle related
@@ -57,6 +58,8 @@ public class Character
 
     public string localizedName;
     public int current_level;
+    public int current_maxHp;
+    public int current_maxMp;
     public int current_hp;
     public int current_mp;
     public int current_attack;

@@ -23,6 +23,7 @@ MonoBehaviour:
       item: {fileID: 0}
       attacked: {fileID: 0}
       retire: {fileID: 0}
+    color: {r: 0.54901963, g: 0.39607844, b: 0.48235294, a: 1}
     nameID: Name.Tentacle
     starting_level: 1
     base_hp: 80
@@ -40,4 +41,4 @@ MonoBehaviour:
     is_heroin: 0
     max_dark_gauge: 0
     max_horny_gauge: 0
-  battler: {fileID: 0}
+  battler: {fileID: 6784901170540971542, guid: 7713ccedf30224c419c770ecdaced9e0, type: 3}

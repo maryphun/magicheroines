@@ -15,6 +15,7 @@ public class TMP_AutoMimic : MonoBehaviour
     {
         self = GetComponent<TMP_Text>();
     }
+
     private void OnEnable()
     {
         if (isInitialized)
@@ -27,7 +28,6 @@ public class TMP_AutoMimic : MonoBehaviour
 
     private void Update()
     {
-        if (!mimicTarget.havePropertiesChanged) return;
         self.text = mimicTarget.text;
     }
 }

@@ -52,7 +52,11 @@ public class CharacterBuildingPanel : MonoBehaviour
             characterIconSlots[index].transform.Find("Character").GetComponent<Image>().color = Color.white;
         }
 
-        characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().color = Color.white;
+        for (int i = 0; i < characterIconSlots.Length; i++)
+        {
+            Color tmp = (i == currentCheckingSlot) ? Color.white : new Color(1, 1, 1, 0);
+            characterIconSlots[i].transform.Find("Selection Highlight").GetComponent<Image>().color = tmp;
+        }
         SwitchToCharacterDataTab(false);
     }
 

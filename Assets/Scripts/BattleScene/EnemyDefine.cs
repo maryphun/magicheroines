@@ -8,11 +8,14 @@ public class EnemyDefine : ScriptableObject
     [SerializeField] public string enemyName = "スライム";
     [SerializeField] public int maxHP = 100;
     [SerializeField] public int maxMP = 100;
-    [SerializeField] public int attackDamage = 10;
+    [SerializeField] public int attack = 10;
+    [SerializeField] public int defense = 10;
+    [SerializeField] public int speed = 10;
+    [SerializeField] public Color character_color = new Color(1,1,1,1);
 
     [Header("アイコン")]
     [SerializeField] public Sprite icon;
 
-    [Header("スプライト")]
-    [SerializeField] public BattlerAnimation animations;
+    [Header("レファレンス")]
+    [SerializeField] public GameObject battler;
 }

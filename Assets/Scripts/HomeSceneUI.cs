@@ -8,11 +8,7 @@ public class HomeSceneUI : MonoBehaviour
 {
     private void Start()
     {
-#if DEBUG_MODE
-        ProgressManager.Instance.InitializeProgress();
-        ProgressManager.Instance.SetMoney(Random.Range(200, 9999));
-        ProgressManager.Instance.SetResearchPoint(Random.Range(200, 9999));
-#endif
+        ProgressManager.Instance.DebugModeInitialize();
         AlphaFadeManager.Instance.FadeIn(1.0f);
     }
 

@@ -82,8 +82,19 @@ public class StagesUI : MonoBehaviour
         componentImage.DOFillAmount(1.0f, animationTime*0.5f);
 
         yield return new WaitForSeconds(animationTime*0.5f);
+
+        // unattach
+        stage.line.transform.SetParent(transform, true);
+        newLine.transform.SetParent(transform, true);
+
+        // shake
         stage.graphic.DOColor(unlockedColor, animationTime*0.5f);
         ShakeManager.Instance.ShakeObject(stage.parent.rectTransform, animationTime * 0.5f, 1f);
+
+        yield return new WaitForSeconds(animationTime * 0.5f);
+
+        stage.line.transform.SetParent(stage.parent.transform, true);
+        newLine.transform.SetParent(stage.parent.transform, true);
     }
 
     public void PlayStageAnimation()

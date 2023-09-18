@@ -13,11 +13,17 @@ public struct PlayerData
     public int currentMoney;             //< 資金
     public int currentResourcesPoint;    //< 研究ポイント
     public List<Character> characters;     //< 持っているキャラクター
+    public Character[] formationCharacters; //< パーティー編成
+    public int formationSlotUnlocked;    //< 解放されたスロット
 }
 
 public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 {
     PlayerData playerData;
+
+#if DEBUG_MODE
+    bool isDebugModeInitialized = false;
+#endif
 
     /// <summary>
     /// ゲーム進捗を初期状態にする
@@ -30,6 +36,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.currentMoney = 100;
         playerData.currentResourcesPoint = 50;
         playerData.characters = new List<Character>();
+        playerData.formationCharacters = new Character[5];
+        playerData.formationSlotUnlocked = 2;
 
         // 初期キャラ 
         PlayerCharacterDefine battler = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/1.Battler");
@@ -39,6 +47,12 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         PlayerCharacterDefine tentacle = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/2.TentacleMan");
         AddPlayerCharacter(tentacle);
         Resources.UnloadAsset(tentacle);
+
+        // 初期キャラを自動的にパーティーに編入する
+        for (int i = 0; i < playerData.characters.Count; i++)
+        {
+            playerData.formationCharacters[i] = playerData.characters[i];
+        } 
     }
 
     /// <summary>
@@ -132,4 +146,54 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         playerData.currentResourcesPoint = Mathf.Max(newValue, 0);
     }
+
+    /// <summary>
+    /// パーティー編成最大数を取得
+    /// </summary>
+    public int GetUnlockedFormationCount()
+    {
+        return playerData.formationSlotUnlocked;
+    }
+
+    /// <summary>
+    /// 出征パーティー取得
+    /// </summary>
+    public Character[] GetFormationParty(bool originalReference = false)
+    {
+        if (originalReference)
+        {
+            return playerData.formationCharacters;
+
+        }
+        else
+        {
+            Character[] partyListCopy = (Character[])playerData.formationCharacters.Clone();
+            return partyListCopy;
+        }
+    }
+
+    /// <summary>
+    /// 出征パーティー取得
+    /// </summary>
+    public void SetFormationParty(Character[] characters)
+    {
+        playerData.formationCharacters = characters;
+    }
+
+
+#if DEBUG_MODE
+    public void DebugModeInitialize()
+    {
+        if (isDebugModeInitialized) return;
+        ProgressManager.Instance.InitializeProgress();
+        ProgressManager.Instance.SetMoney(Random.Range(200, 9999));
+        ProgressManager.Instance.SetResearchPoint(Random.Range(200, 9999));
+        isDebugModeInitialized = true;
+    }
+#else
+public void DebugModeInitialize()
+    {
+        
+    }
+#endif
 }

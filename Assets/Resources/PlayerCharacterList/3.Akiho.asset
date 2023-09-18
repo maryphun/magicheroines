@@ -23,6 +23,7 @@ MonoBehaviour:
       item: {fileID: 0}
       attacked: {fileID: 0}
       retire: {fileID: 0}
+    color: {r: 0.96966964, g: 0.6961997, b: 0.990566, a: 1}
     nameID: Name.Akiho
     starting_level: 10
     base_hp: 0
@@ -40,4 +41,4 @@ MonoBehaviour:
     is_heroin: 1
     max_dark_gauge: 100
     max_horny_gauge: 100
-  battler: {fileID: 0}
+  battler: {fileID: 7739895556670267509, guid: c3f4a55c60074764b8d2b23e3f7f591f, type: 3}

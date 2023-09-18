@@ -10,6 +10,8 @@ public class CharacterUpgradePanel : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField, Range(0f, 1f)] private float resourcesPanelAnimationTime = 0.5f;
+    [SerializeField] private Gradient upgradeGradient;
+    [SerializeField, Range(0f, 1f)] private float upgradeAnimationTime = 0.5f;
 
     [Header("References")]
     [SerializeField] private Image characterSprite;
@@ -98,6 +100,8 @@ public class CharacterUpgradePanel : MonoBehaviour
         int index = currentCharacter.characterData.characterID;
 
         data[index].current_level++;
+        data[index].current_maxHp += data[index].characterData.hp_growth;
+        data[index].current_maxMp += data[index].characterData.mp_growth;
         data[index].current_hp += data[index].characterData.hp_growth;
         data[index].current_mp += data[index].characterData.mp_growth;
         data[index].current_attack += data[index].characterData.attack_growth;
@@ -110,5 +114,9 @@ public class CharacterUpgradePanel : MonoBehaviour
         // 表示データ更新
         InitializeUpgradePanel(currentCharacter);
         HoverLevelUpButton();
+
+        // エフェクト
+        characterSprite.DOGradientColor(upgradeGradient, upgradeAnimationTime);
+        ShakeManager.Instance.ShakeObject(characterSprite.GetComponent<RectTransform>(), upgradeAnimationTime, 2);
     }
 }
