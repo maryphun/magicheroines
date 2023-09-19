@@ -18,6 +18,7 @@ MonoBehaviour:
   attack: 10
   defense: 10
   speed: 10
+  level: 1
   character_color: {r: 0.9333334, g: 0.8352942, b: 0.882353, a: 1}
-  icon: {fileID: 0}
+  icon: {fileID: 919604191, guid: ddfb2c5889060414988df1c56b2521e9, type: 3}
   battler: {fileID: 7739895556670267509, guid: c3f4a55c60074764b8d2b23e3f7f591f, type: 3}

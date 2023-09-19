@@ -11,18 +11,19 @@ public class Battler : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private BattlerAnimation animations;
 
-    [Header("Debug")]
-    [SerializeField] private string character_name;
-    [SerializeField] private bool isEnemy;
-    [SerializeField] private Color character_color = Color.white;
-    [SerializeField] private int max_hp;
-    [SerializeField] private int max_mp;
-    [SerializeField] private int current_hp;
-    [SerializeField] private int current_mp;
-    [SerializeField] private int attack;
-    [SerializeField] private int defense;
-    [SerializeField] private int speed;
-    [SerializeField] private int currentLevel;
+    [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
+    [SerializeField] public string character_name;
+    [SerializeField] public Sprite icon;
+    [SerializeField] public bool isEnemy;
+    [SerializeField] public Color character_color = Color.white;
+    [SerializeField] public int max_hp;
+    [SerializeField] public int max_mp;
+    [SerializeField] public int current_hp;
+    [SerializeField] public int current_mp;
+    [SerializeField] public int attack;
+    [SerializeField] public int defense;
+    [SerializeField] public int speed;
+    [SerializeField] public int currentLevel;
 
     [Header("References")]
     [SerializeField] private Image graphic;
@@ -30,13 +31,22 @@ public class Battler : MonoBehaviour
 
     private Vector3 originalScale;
     private float ease = 0.0f;
+    private RectTransform rect;
 
+    private void Awake()
+    {
+        rect = graphic.GetComponent<RectTransform>();
+    }
+
+    /// <summary>
+    /// 敵キャラクターの設定データをロードしてBattlerを生成する
+    /// </summary>
     public void InitializeEnemyData(EnemyDefine enemy)
     {
-
         character_name = LocalizationManager.Localize(enemy.enemyName);
-        isEnemy = false;
+        isEnemy = true;
         character_color = enemy.character_color;
+        icon = enemy.icon;
         max_hp = enemy.maxHP;
         max_mp = enemy.maxMP;
         current_hp = enemy.maxHP;
@@ -48,11 +58,15 @@ public class Battler : MonoBehaviour
 
         Initialize();
     }
+    /// <summary>
+    /// プレイヤーキャラクターの設定データをロードしてBattlerを生成する
+    /// </summary>
     public void InitializeCharacterData(Character character)
     {
         character_name = LocalizationManager.Localize(character.characterData.nameID);
         isEnemy = false;
         character_color = character.characterData.color;
+        icon = character.characterData.icon;
         max_hp = character.current_maxHp;
         max_mp = character.current_maxMp;
         current_hp = character.current_hp;
@@ -80,6 +94,16 @@ public class Battler : MonoBehaviour
         name_UI.color = character_color;
 
         originalScale = graphic.rectTransform.localScale;
+    }
+
+    public Vector2 GetCharacterSize()
+    {
+        return new Vector2(rect.rect.width * Mathf.Abs(rect.localScale.x), rect.rect.height * Mathf.Abs(rect.localScale.y));
+    }
+
+    public RectTransform GetGraphicRectTransform()
+    {
+        return rect;
     }
 
     private void Update()
