@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 
 public class Battle : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Battle : MonoBehaviour
     [SerializeField] private ActionPanel actionPanel;
     [SerializeField] private CharacterArrow characterArrow;
     [SerializeField] private RectTransform actionTargetArrow;
+    [SerializeField] private BattleSceneTransition sceneTransition;
 
     [Header("Debug")]
     [SerializeField] private List<Battler> characterList = new List<Battler>();
@@ -35,6 +37,11 @@ public class Battle : MonoBehaviour
         enemyList.Add(akiho);
 
         InitializeBattleScene(playerCharacters, enemyList);
+    }
+
+    private void Start()
+    {
+        sceneTransition.StartScene(NextTurn);
     }
 
     // Start is called before the first frame update
@@ -75,9 +82,6 @@ public class Battle : MonoBehaviour
 
         // 行動順を決める
         turnBaseManager.Initialization(characterList, enemyList);
-
-        // 早速最初のターンを始める
-        NextTurn(true);
     }
 
     /// <summary>
@@ -159,33 +163,67 @@ public class Battle : MonoBehaviour
 
         Battler currentCharacter = turnBaseManager.GetCurrentTurnBattler();
         characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
-        actionTargetArrow.position = currentCharacter.GetGraphicRectTransform().position;
+
+        var originPos = currentCharacter.GetGraphicRectTransform().position;
+        originPos = currentCharacter.isEnemy ? new Vector2(originPos.x - currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f) : new Vector2(originPos.x + currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f);
+        actionTargetArrow.position = originPos;
         actionPanel.SetEnablePanel(true);
     }
 
     public void PointTargetWithArrow(Battler target, float animTime)
     {
-        var originPos = turnBaseManager.GetCurrentTurnBattler().GetGraphicRectTransform().position;
+        Battler currentBattler = turnBaseManager.GetCurrentTurnBattler();
+
+        var originPos = currentBattler.GetGraphicRectTransform().position;
+        originPos = currentBattler.isEnemy ? new Vector2(originPos.x - currentBattler.GetCharacterSize().x * 0.25f, originPos.y + currentBattler.GetCharacterSize().y * 0.5f) : new Vector2(originPos.x + currentBattler.GetCharacterSize().x * 0.25f, originPos.y + currentBattler.GetCharacterSize().y * 0.5f);
         var targetPos = target.GetGraphicRectTransform().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.25f, targetPos.y + target.GetCharacterSize().y * 0.5f) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.25f, targetPos.y + target.GetCharacterSize().y * 0.5f);
         var length = Vector2.Distance(originPos, targetPos);
 
         actionTargetArrow.sizeDelta = new Vector2(actionTargetArrow.rect.width, 100.0f);
         actionTargetArrow.DOSizeDelta(new Vector2(actionTargetArrow.rect.width, length), animTime);
-        actionTargetArrow.GetComponent<Image>().DOFade(1.0f, animTime);
+        actionTargetArrow.GetComponent<Image>().DOFade(0.2f, animTime);
 
         // rotate
         // Calculate direction vector
-        Vector3 direction = (targetPos - originPos).normalized;
+        Vector3 diff = targetPos - originPos;
+        diff.Normalize();
 
-        // Calculate angle
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // Rotate object A
-        actionTargetArrow.rotation = Quaternion.Euler(0, 0, angle);
+        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        actionTargetArrow.rotation = Quaternion.Euler(0f, 0f, rot_z - 90.0f);
     }
 
     public void UnPointArrow(float animTime)
     {
         actionTargetArrow.GetComponent<Image>().DOFade(0.0f, animTime);
+    }
+
+    public void AttackCommand(Battler target)
+    {
+        StartCoroutine(AttackAnimation(turnBaseManager.GetCurrentTurnBattler(), target, NextTurn));
+    }
+
+    IEnumerator AttackAnimation(Battler attacker, Battler target, Action<bool> callback)
+    {
+        var targetPos = target.GetComponent<RectTransform>().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.5f, targetPos.y + target.GetCharacterSize().y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.5f, targetPos.y + target.GetCharacterSize().y);
+        var originalPos = attacker.GetComponent<RectTransform>().position;
+        attacker.GetComponent<RectTransform>().DOMove(targetPos, 0.5f);
+
+        yield return new WaitForSeconds(0.5f);
+
+        attacker.PlayAnimation(BattlerAnimationType.attack);
+        target.PlayAnimation(BattlerAnimationType.attacked);
+
+        yield return new WaitForSeconds(0.2f);
+
+        attacker.PlayAnimation(BattlerAnimationType.idle);
+        target.PlayAnimation(BattlerAnimationType.idle);
+
+        attacker.GetComponent<RectTransform>().DOMove(originalPos, 0.5f);
+
+        yield return new WaitForSeconds(0.5f);
+
+        callback?.Invoke(false);
     }
 }

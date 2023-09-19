@@ -4,6 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
+[System.Serializable]
+enum CommandType
+{
+    Attack,
+    Item,
+    Skill,
+}
+
 public class ActionPanel : MonoBehaviour
 {
     [Header("Setting")]
@@ -19,6 +27,7 @@ public class ActionPanel : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool isSelectingTarget;
     [SerializeField] private bool isSelectedTarget;
+    [SerializeField] private CommandType commandType;
 
     private void Awake()
     {
@@ -52,16 +61,23 @@ public class ActionPanel : MonoBehaviour
 
         // tips表示
         tipsText.DOFade(1.0f, 0.25f);
+
+        // 攻撃
+        commandType = CommandType.Attack;
     }
 
     public void OnClickItem()
     {
 
+        // アイテム
+        commandType = CommandType.Item;
     }
 
     public void OnClickSkill()
     {
 
+        // 特殊技
+        commandType = CommandType.Item;
     }
 
     public void OnClickIdle()
@@ -77,23 +93,7 @@ public class ActionPanel : MonoBehaviour
             // 右クリック
             if (Input.GetMouseButtonDown(1))
             {
-                // 取り消し
-                canvasGrp.alpha = 1f;
-                canvasGrp.interactable = true;
-                canvasGrp.blocksRaycasts = true;
-
-                isSelectingTarget = false;
-
-                // カーソルを戻す
-                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-
-                // tipsを消す
-                tipsText.DOFade(0.0f, 0.25f);
-
-                if (isSelectedTarget)
-                {
-                    battleManager.UnPointArrow(0.25f);
-                }
+                CancelAttack();
             }
             else
             {
@@ -105,12 +105,54 @@ public class ActionPanel : MonoBehaviour
                 {
                     isSelectedTarget = true;
                     battleManager.PointTargetWithArrow(targetBattler, 0.25f);
+
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        switch (commandType)
+                        {
+                            case CommandType.Attack: // 攻撃
+                                battleManager.AttackCommand(targetBattler);
+                                CancelAttack();
+                                break;
+                            case CommandType.Item: // アイテム
+
+                                break;
+                            case CommandType.Skill: // 特殊技
+
+                                break;
+                            default:
+                                break;
+                        }
+                    }
                 }
                 else if (isSelectedTarget)
                 {
                     battleManager.UnPointArrow(0.25f);
                 }
             }
+        }
+    }
+
+    private void CancelAttack()
+    {
+        if (commandType != CommandType.Attack) return;
+
+        // 取り消し
+        canvasGrp.alpha = 1f;
+        canvasGrp.interactable = true;
+        canvasGrp.blocksRaycasts = true;
+
+        isSelectingTarget = false;
+
+        // カーソルを戻す
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+
+        // tipsを消す
+        tipsText.DOFade(0.0f, 0.25f);
+
+        if (isSelectedTarget)
+        {
+            battleManager.UnPointArrow(0.25f);
         }
     }
 }

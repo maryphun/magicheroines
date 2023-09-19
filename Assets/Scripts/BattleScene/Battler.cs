@@ -10,6 +10,7 @@ public class Battler : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField] private BattlerAnimation animations;
+    [SerializeField] private Sprite attackVFX;
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -31,11 +32,11 @@ public class Battler : MonoBehaviour
 
     private Vector3 originalScale;
     private float ease = 0.0f;
-    private RectTransform rect;
+    private RectTransform graphicRect;
 
     private void Awake()
     {
-        rect = graphic.GetComponent<RectTransform>();
+        graphicRect = graphic.GetComponent<RectTransform>();
     }
 
     /// <summary>
@@ -98,12 +99,12 @@ public class Battler : MonoBehaviour
 
     public Vector2 GetCharacterSize()
     {
-        return new Vector2(rect.rect.width * Mathf.Abs(rect.localScale.x), rect.rect.height * Mathf.Abs(rect.localScale.y));
+        return new Vector2(graphicRect.rect.width * Mathf.Abs(graphicRect.localScale.x), graphicRect.rect.height * Mathf.Abs(graphicRect.localScale.y));
     }
 
     public RectTransform GetGraphicRectTransform()
     {
-        return rect;
+        return graphicRect;
     }
 
     private void Update()
@@ -120,5 +121,39 @@ public class Battler : MonoBehaviour
     private float EaseInOutSine(float x) 
     {
         return -(Mathf.Cos(Mathf.PI * x) - 1.0f) / 2.0f;
+    }
+
+    public void PlayAnimation(BattlerAnimationType type)
+    {
+        switch (type)
+        {
+            case BattlerAnimationType.attack:
+                graphic.sprite = animations.attack;
+                return;
+            case BattlerAnimationType.attacked:
+                graphic.sprite = animations.attacked;
+                return;
+            case BattlerAnimationType.idle:
+                graphic.sprite = animations.idle;
+                return;
+            case BattlerAnimationType.item:
+                graphic.sprite = animations.item;
+                return;
+            case BattlerAnimationType.magic:
+                graphic.sprite = animations.magic;
+                return;
+            case BattlerAnimationType.retire:
+                graphic.sprite = animations.retire;
+                return;
+            default:
+                return;
+        }
+    }
+
+    public void SpawnAttackVFX(Battler target)
+    {
+        var obj = Instantiate(attackVFX);
+
+        //target.GetGraphicRectTransform().
     }
 }

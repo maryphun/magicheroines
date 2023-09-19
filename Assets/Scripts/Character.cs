@@ -11,6 +11,12 @@ public struct BattlerAnimation
 }
 
 [System.Serializable]
+public enum BattlerAnimationType
+{
+    idle, attack, magic, item, attacked, retire,
+}
+
+[System.Serializable]
 public struct PlayerCharacter
 {
     // system
