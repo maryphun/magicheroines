@@ -279,7 +279,9 @@ MonoBehaviour:
     item: {fileID: 21300000, guid: 8447af4645f36474da5f73f92ddd24a8, type: 3}
     attacked: {fileID: 21300000, guid: 8447af4645f36474da5f73f92ddd24a8, type: 3}
     retire: {fileID: 21300000, guid: 8447af4645f36474da5f73f92ddd24a8, type: 3}
+  attackVFX: {fileID: 1343633729508638609, guid: 70f6957b9546fb448a9775b42739d195, type: 3}
   character_name: "\u89E6\u624B\u602A\u4EBA"
+  icon: {fileID: 0}
   isEnemy: 1
   character_color: {r: 0.64705884, g: 0.33333334, b: 0.38823533, a: 1}
   max_hp: 100

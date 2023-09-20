@@ -7,6 +7,12 @@ public class VFX : MonoBehaviour
 {
     private void Start()
     {
-        Object.Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorClipInfo(0)[0].clip.length);
+        var animator = GetComponent<Animator>();
+        if (ReferenceEquals(animator.runtimeAnimatorController, null))
+        {
+            Debug.LogError("Animator controller of " + gameObject.name + " doesn't exist!");
+            return;
+        }
+        Object.Destroy(gameObject, animator.GetCurrentAnimatorClipInfo(0)[0].clip.length);
     }
 }

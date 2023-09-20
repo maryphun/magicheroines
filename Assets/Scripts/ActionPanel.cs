@@ -7,6 +7,7 @@ using DG.Tweening;
 [System.Serializable]
 enum CommandType
 {
+    Waiting,    // コマンド待ち
     Attack,
     Item,
     Skill,
@@ -45,6 +46,11 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.blocksRaycasts = boolean;
 
         isSelectingTarget = false;
+
+        if (boolean) // 入力待ち
+        {
+            commandType = CommandType.Waiting;
+        }
     }
 
     public void OnClickAttack()
@@ -68,9 +74,29 @@ public class ActionPanel : MonoBehaviour
 
     public void OnClickItem()
     {
+        // インベントリメニューを表示
+        Inventory.Instance.obj.OpenInventory(CloseInventory);
+
+        // ActionPanel操作禁止
+        canvasGrp.alpha = 0.25f;
+        canvasGrp.interactable = false;
+        canvasGrp.blocksRaycasts = false;
 
         // アイテム
         commandType = CommandType.Item;
+    }
+
+    /// <summary>
+    /// Callback: インベントリメニューが閉じられたら自動的に呼ばれる
+    /// </summary>
+    public void CloseInventory()
+    {
+        // ActionPanel操作にもどる
+        canvasGrp.alpha = 1.0f;
+        canvasGrp.interactable = true;
+        canvasGrp.blocksRaycasts = true;
+
+        commandType = CommandType.Waiting;
     }
 
     public void OnClickSkill()
@@ -88,6 +114,8 @@ public class ActionPanel : MonoBehaviour
 
     private void Update()
     {
+        if (commandType == CommandType.Item) return; // アイテム選択中
+
         if (isSelectingTarget)
         {
             // 右クリック

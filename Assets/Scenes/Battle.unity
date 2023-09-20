@@ -2135,6 +2135,8 @@ MonoBehaviour:
   characterSpace: 150
   turnEndDelay: 1.1
   enemyAIDelay: 2
+  characterMoveTime: 0.35
+  attackAnimPlayTime: 0.2
   playerFormation: {fileID: 1167297676}
   enemyFormation: {fileID: 778722667}
   turnBaseManager: {fileID: 1196083468}

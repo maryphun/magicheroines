@@ -10,7 +10,7 @@ public class Battler : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField] private BattlerAnimation animations;
-    [SerializeField] private Sprite attackVFX;
+    [SerializeField] private VFX attackVFX;
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -107,6 +107,14 @@ public class Battler : MonoBehaviour
         return graphicRect;
     }
 
+    /// <summary>
+    /// キャラクターの画像中央を取得
+    /// </summary>
+    public Vector2 GetMiddleGlobalPosition()
+    {
+        return new Vector2(graphicRect.position.x -GetCharacterSize().x * 0.25f, graphicRect.position.y + GetCharacterSize().y * 0.5f);
+    }
+
     private void Update()
     {
         ease = (ease + Time.deltaTime);
@@ -152,8 +160,8 @@ public class Battler : MonoBehaviour
 
     public void SpawnAttackVFX(Battler target)
     {
-        var obj = Instantiate(attackVFX);
+        var obj = Instantiate(attackVFX.gameObject, target.transform);
 
-        //target.GetGraphicRectTransform().
+        obj.GetComponent<RectTransform>().position = target.GetMiddleGlobalPosition();
     }
 }

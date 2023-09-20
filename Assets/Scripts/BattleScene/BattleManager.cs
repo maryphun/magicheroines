@@ -11,6 +11,8 @@ public class Battle : MonoBehaviour
     [SerializeField] private float characterSpace = 150.0f;
     [SerializeField, Range(1.1f, 2.0f)] private float turnEndDelay = 1.1f;
     [SerializeField, Range(1.1f, 2.0f)] private float enemyAIDelay = 2.0f;
+    [SerializeField, Range(0.1f, 1.0f)] private float characterMoveTime = 0.5f;  // < キャラがターゲットの前に移動する時間
+    [SerializeField, Range(0.1f, 1.0f)] private float attackAnimPlayTime = 0.2f; // < 攻撃アニメーションの維持時間
 
     [Header("References")]
     [SerializeField] private Transform playerFormation;
@@ -37,6 +39,7 @@ public class Battle : MonoBehaviour
         enemyList.Add(akiho);
 
         InitializeBattleScene(playerCharacters, enemyList);
+        ItemExecute.Instance.Initialize(this);
     }
 
     private void Start()
@@ -206,23 +209,24 @@ public class Battle : MonoBehaviour
     IEnumerator AttackAnimation(Battler attacker, Battler target, Action<bool> callback)
     {
         var targetPos = target.GetComponent<RectTransform>().position;
-        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.5f, targetPos.y + target.GetCharacterSize().y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.5f, targetPos.y + target.GetCharacterSize().y);
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.5f, targetPos.y);
         var originalPos = attacker.GetComponent<RectTransform>().position;
-        attacker.GetComponent<RectTransform>().DOMove(targetPos, 0.5f);
+        attacker.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(characterMoveTime);
 
         attacker.PlayAnimation(BattlerAnimationType.attack);
         target.PlayAnimation(BattlerAnimationType.attacked);
+        attacker.SpawnAttackVFX(target);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(attackAnimPlayTime);
 
         attacker.PlayAnimation(BattlerAnimationType.idle);
         target.PlayAnimation(BattlerAnimationType.idle);
 
-        attacker.GetComponent<RectTransform>().DOMove(originalPos, 0.5f);
+        attacker.GetComponent<RectTransform>().DOMove(originalPos, characterMoveTime);
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(characterMoveTime);
 
         callback?.Invoke(false);
     }

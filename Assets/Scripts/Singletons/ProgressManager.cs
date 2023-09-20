@@ -14,6 +14,7 @@ public struct PlayerData
     public int currentResourcesPoint;    //< 研究ポイント
     public List<Character> characters;     //< 持っているキャラクター
     public FormationSlotData[] formationCharacters; //< パーティー編成
+    public List<ItemDefine> inventory;   //< 所持アイテム
     public int formationSlotUnlocked;    //< 解放されたスロット
 }
 
@@ -38,6 +39,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.currentResourcesPoint = 50;
         playerData.characters = new List<Character>();
         playerData.formationCharacters = new FormationSlotData[5];
+        playerData.inventory = new List<ItemDefine>();
         playerData.formationSlotUnlocked = 2;
 
         // 初期キャラ 
@@ -201,6 +203,46 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         playerData.formationCharacters = characters;
     }
+    
+    /// <summary>
+    /// 持っているアイテムのリストを取得
+    /// </summary>
+    public List<ItemDefine> GetItemList(bool originalReference = false)
+    {
+        if (originalReference)
+        {
+            return playerData.inventory;
+        }
+        else
+        {
+            List<ItemDefine> itemListCopy = new List<ItemDefine>(playerData.inventory);
+            return itemListCopy;
+        }
+    }
+
+    /// <summary>
+    /// インベントリを更新
+    /// </summary>
+    public void SetItemList(List<ItemDefine> newList)
+    {
+        playerData.inventory = newList;
+    }
+
+    /// <summary>
+    /// アイテム獲得
+    /// </summary>
+    public void AddItemToInventory(ItemDefine item)
+    {
+        playerData.inventory.Add(item);
+    }
+
+    /// <summary>
+    /// アイテム獲得
+    /// </summary>
+    public void RemoveItemFromInventory(ItemDefine item)
+    {
+        playerData.inventory.Remove(item);
+    }
 
 
 #if DEBUG_MODE
@@ -211,11 +253,17 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         ProgressManager.Instance.SetMoney(Random.Range(200, 9999));
         ProgressManager.Instance.SetResearchPoint(Random.Range(200, 9999));
         isDebugModeInitialized = true;
+
+        // アイテムをいくつかついかする
+        ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
+        for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(bread);
+        Resources.UnloadAsset(bread);
+
+        ItemDefine croissant = Resources.Load<ItemDefine>("ItemList/クロワッサン");
+        for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(croissant);
+        Resources.UnloadAsset(croissant);
     }
 #else
-public void DebugModeInitialize()
-    {
-        
-    }
+public void DebugModeInitialize() { }
 #endif
 }
