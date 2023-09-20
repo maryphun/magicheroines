@@ -10,6 +10,7 @@ public class TurnBaseInformation : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField, Range(0.0f, 1.0f)] private float animationSpeed = 0.25f;
+    [SerializeField, Range(0.0f, 1.0f)] private float colorBrightness = 0.25f;
 
     [Header("References")]
     [SerializeField] private CanvasGroup canvasGroup;
@@ -30,7 +31,7 @@ public class TurnBaseInformation : MonoBehaviour
     public void Initialize(Color characterColor, string name, string speed)
     {
         characterName.text = name;
-        characterName.color = characterColor;
+        characterName.color = new Color(characterColor.r * colorBrightness, characterColor.g * colorBrightness, characterColor.b * colorBrightness, 1.0f);
         characterSpeed.text = LocalizationManager.Localize("System.Speed") + speed;
     }
 

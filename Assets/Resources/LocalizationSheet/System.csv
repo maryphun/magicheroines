@@ -39,6 +39,10 @@ System.Cost,資金コスト
 System.Locked,未開放
 System.Unlock,解放
 System.Inventory,インベントリ
+System.EffectTarget,効果対象：
+System.EffectEnemy,敵単体
+System.EffectSelf,使用者
+System.EffectTeam,味方
 WorldMapScene,ワールドマップ
 System.Story,ストーリーを進む
 System.SideMission,資源調達クエスト

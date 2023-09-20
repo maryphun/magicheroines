@@ -230,4 +230,9 @@ public class Battle : MonoBehaviour
 
         callback?.Invoke(false);
     }
+
+    public Battler GetCurrentBattler()
+    {
+        return turnBaseManager.GetCurrentTurnBattler();
+    }
 }

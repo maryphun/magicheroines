@@ -112,7 +112,7 @@ public class Battler : MonoBehaviour
     /// </summary>
     public Vector2 GetMiddleGlobalPosition()
     {
-        return new Vector2(graphicRect.position.x -GetCharacterSize().x * 0.25f, graphicRect.position.y + GetCharacterSize().y * 0.5f);
+        return new Vector2(graphicRect.position.x, graphicRect.position.y + GetCharacterSize().y * 0.5f);
     }
 
     private void Update()

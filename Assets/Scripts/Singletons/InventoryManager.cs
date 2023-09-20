@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using DG.Tweening;
 using Assets.SimpleLocalization.Scripts;
+using TMPro;
 
 public class Inventory
 {
@@ -37,13 +38,25 @@ public class Inventory
         canvas.AddComponent<CanvasScaler>();
         canvas.AddComponent<GraphicRaycaster>();
 
-        /// setting canvas
+        // Setting Up canvas
         canvasObj.renderMode = RenderMode.ScreenSpaceOverlay;
         canvasObj.vertexColorAlwaysGammaSpace = true;
         canvasObj.sortingOrder = 99;
 
-        obj.transform.SetParent(canvas.transform);
+        // Create Alpha Image
+        GameObject img = new GameObject("FadeAlpha");
 
+        /// setting Image
+        fadeAlpha = img.AddComponent<Image>();
+        fadeAlpha.color = new Color(0,0,0,0.0f);
+        fadeAlpha.transform.SetParent(canvas.transform);
+        fadeAlpha.rectTransform.anchorMin = new Vector2(0.0f, 0.0f);
+        fadeAlpha.rectTransform.anchorMax = new Vector2(1.0f, 1.0f);
+        fadeAlpha.rectTransform.anchoredPosition = new Vector2(0.0f, 0.0f);
+        fadeAlpha.raycastTarget = false;
+
+        // Create Object (Inventory UI)
+        obj.transform.SetParent(canvas.transform);
         obj.GetComponent<RectTransform>().sizeDelta = new Vector2(1320.0f, 580.0f);
         obj.GetComponent<RectTransform>().anchoredPosition = new Vector2(0.0f, 0.0f);
         obj.Initialize();
@@ -52,6 +65,12 @@ public class Inventory
         GameObject.DontDestroyOnLoad(canvas);
     }
 
+    public Image GetAlphaImage()
+    {
+        return fadeAlpha;
+    }
+
+    private Image fadeAlpha;
     public Canvas canvasObj = null;
     public InventoryManager obj;
 }
@@ -61,12 +80,18 @@ public class InventoryManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private RectTransform originItemBox;
     [SerializeField] private float animTime;
+    [SerializeField] private float fadeAlpha = 0.785f;
+    [SerializeField] private RectTransform itemDescription;
+    [SerializeField] private TMP_Text itemDescription_Name;
+    [SerializeField] private TMP_Text itemDescription_Target;
+    [SerializeField] private TMP_Text itemDescription_Effect;
 
     [Header("Debug")]
     [SerializeField] private Canvas parent;
     [SerializeField] private CanvasGroup panel;
     [SerializeField] private bool isInitialized = false;
-    [SerializeField] private bool isOpened;
+    [SerializeField] private bool isDescriptionShowing = false;
+    [SerializeField] private bool isOpened = false;
     [SerializeField] private RectTransform[] itemSlots;
     [SerializeField] private Action onCloseCallback;
     [SerializeField] private List<Tuple<RectTransform, ItemDefine>> itemsInInventory;
@@ -110,7 +135,10 @@ public class InventoryManager : MonoBehaviour
         panel.blocksRaycasts = false;
 
         parent = transform.parent.GetComponent<Canvas>();
+        itemDescription.SetSiblingIndex(itemDescription.transform.parent.childCount);
 
+        isOpened = false;
+        isDescriptionShowing = false;
         isInitialized = true;
     }
 
@@ -130,7 +158,14 @@ public class InventoryManager : MonoBehaviour
             itemRect.sizeDelta = ItemSlotSize;
             itemRect.localPosition = Vector2.zero;
 
+            itemSlots[i].GetComponent<Image>().color = Color.white;
+
             itemsInInventory.Add(new Tuple<RectTransform, ItemDefine>(itemRect, itemList[i]));
+        }
+
+        for (int i = itemList.Count; i < itemSlots.Length; i++)
+        {
+            itemSlots[i].GetComponent<Image>().color = new Color(0.63f, 0.63f, 0.63f, 1.0f);
         }
     }
 
@@ -144,6 +179,9 @@ public class InventoryManager : MonoBehaviour
         panel.DOFade(1.0f, animTime);
         panel.interactable = true;
         panel.blocksRaycasts = true;
+
+        Inventory.Instance.GetAlphaImage().DOFade(fadeAlpha, animTime);
+        itemDescription.GetComponent<CanvasGroup>().alpha = 0.0f;
         isOpened = true;
     }
 
@@ -156,6 +194,8 @@ public class InventoryManager : MonoBehaviour
         panel.DOFade(0.0f, animTime);
         panel.interactable = false;
         panel.blocksRaycasts = false;
+
+        Inventory.Instance.GetAlphaImage().DOFade(0.0f, animTime);
 
         // remove all item
         foreach (Tuple<RectTransform, ItemDefine> item in itemsInInventory)
@@ -181,6 +221,13 @@ public class InventoryManager : MonoBehaviour
         // マウスクリックを検知
         Vector3 mousePosition = Input.mousePosition / parent.scaleFactor;
 
+        if (Input.GetMouseButtonDown(1)) // 消し
+        {
+            CloseInventory();
+            return;
+        }
+
+        bool isMouseOnItem = false;
         foreach (Tuple<RectTransform, ItemDefine> item in itemsInInventory)
         {
             if (   mousePosition.x > (item.Item1.position.x - ItemSlotSize.x * 0.5f)
@@ -188,9 +235,11 @@ public class InventoryManager : MonoBehaviour
                 && mousePosition.y > (item.Item1.position.y - ItemSlotSize.y * 0.5f)
                 && mousePosition.y < (item.Item1.position.y + ItemSlotSize.y * 0.5f))
             {
+                // フラグ
+                isMouseOnItem = true;
+
                 // 資料表示
-                /// ...
-                /// ...
+                ShowDescription(item);
 
                 // 選択・使用
                 if (Input.GetMouseButtonDown(0))
@@ -206,10 +255,16 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
+
+        if (!isMouseOnItem && isDescriptionShowing )
+        {
+            HideDescription();
+        }
     }
 
     private void UseItem(Tuple<RectTransform, ItemDefine> item)
     {
+        ItemExecute.Instance.SetItemIcon(item.Item2.Icon);
         switch (item.Item2.itemType)
         {
             case ItemType.SelfCast:
@@ -225,5 +280,50 @@ public class InventoryManager : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void ShowDescription(Tuple<RectTransform, ItemDefine> item)
+    {
+        //フラグ
+        isDescriptionShowing = true;
+
+        // UI
+        itemDescription.GetComponent<CanvasGroup>().DOFade(1.0f, 0.1f);
+        itemDescription.position = new Vector2(item.Item1.position.x, item.Item1.position.y + (ItemSlotSize.y * 0.5f) + 10.0f);
+
+        // データ読み込み
+        itemDescription_Name.text = LocalizationManager.Localize(item.Item2.itemNameID);
+        string effectTargetText = string.Empty;
+        switch (item.Item2.itemType)
+        {
+            case ItemType.SelfCast:
+                effectTargetText = LocalizationManager.Localize("System.EffectSelf");
+                break;
+            case ItemType.Teammate:
+                effectTargetText = LocalizationManager.Localize("System.EffectTeam");
+                break;
+            case ItemType.Enemy:
+                effectTargetText = LocalizationManager.Localize("System.EffectEnemy");
+                break;
+            default:
+                break;
+        }
+        itemDescription_Target.text = LocalizationManager.Localize("System.EffectTarget") + effectTargetText;
+        itemDescription_Effect.text = item.Item2.effectText + "\n\n" + LocalizationManager.Localize(item.Item2.descriptionID);
+
+        // 強制更新
+        itemDescription_Name.ForceMeshUpdate();
+        itemDescription_Target.ForceMeshUpdate();
+        itemDescription_Effect.ForceMeshUpdate();
+        
+        // Resize UI
+        itemDescription.sizeDelta = new Vector2(itemDescription.sizeDelta.x, 
+            (itemDescription_Name.rectTransform.rect.height + itemDescription_Target.rectTransform.rect.height + (itemDescription_Effect.GetRenderedValues(false).y) + itemDescription_Effect.fontSize));
+    }
+
+    private void HideDescription()
+    {
+        isDescriptionShowing = false;
+        itemDescription.GetComponent<CanvasGroup>().DOFade(0.0f, 0.1f);
     }
 }
