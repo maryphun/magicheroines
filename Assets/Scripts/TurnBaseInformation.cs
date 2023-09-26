@@ -33,6 +33,14 @@ public class TurnBaseInformation : MonoBehaviour
         characterName.text = name;
         characterName.color = new Color(characterColor.r * colorBrightness, characterColor.g * colorBrightness, characterColor.b * colorBrightness, 1.0f);
         characterSpeed.text = LocalizationManager.Localize("System.Speed") + speed;
+
+        // update UI length
+        characterName.ForceMeshUpdate();
+        characterSpeed.ForceMeshUpdate();
+        Vector2 textLengthName = characterName.GetRenderedValues();
+        Vector2 textLengthSpeed = characterSpeed.GetRenderedValues();
+        float textLength = Mathf.Max(textLengthName.x, textLengthSpeed.x) + (characterName.fontSize * 2);
+        informationHover.rectTransform.sizeDelta = new Vector2(textLength, informationHover.rectTransform.sizeDelta.y);
     }
 
     public void OnHover()

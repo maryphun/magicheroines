@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Battle : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class Battle : MonoBehaviour
     [SerializeField] private CharacterArrow characterArrow;
     [SerializeField] private RectTransform actionTargetArrow;
     [SerializeField] private BattleSceneTransition sceneTransition;
+    [SerializeField] private FloatingText floatingTextOrigin;
 
     [Header("Debug")]
     [SerializeField] private List<Battler> characterList = new List<Battler>();
@@ -34,9 +36,12 @@ public class Battle : MonoBehaviour
 
         var playerCharacters = ProgressManager.Instance.GetAllCharacter(false);
 
-        EnemyDefine akiho = Resources.Load<EnemyDefine>("EnemyList/Akiho_Enemy");
+        EnemyDefine drone = Resources.Load<EnemyDefine>("EnemyList/Drone");
         List<EnemyDefine> enemyList = new List<EnemyDefine>();
-        enemyList.Add(akiho);
+        enemyList.Add(drone);
+
+        EnemyDefine android = Resources.Load<EnemyDefine>("EnemyList/Android");
+        enemyList.Add(android);
 
         InitializeBattleScene(playerCharacters, enemyList);
         ItemExecute.Instance.Initialize(this);
@@ -72,15 +77,22 @@ public class Battle : MonoBehaviour
         }
 
         // 敵キャラ生成
+        positionX = -(enemies.Count * characterSpace) * 0.5f;
+        positionY_gap = totalGap / enemies.Count;
+        positionY = max_positionY - positionY_gap;
         foreach (EnemyDefine enemy in enemies)
         {
             GameObject obj = Instantiate<GameObject>(enemy.battler, enemyFormation);
-            obj.transform.localPosition = Vector3.zero;
+            obj.transform.localPosition = new Vector3(positionX, positionY, 0.0f);
+            obj.transform.SetSiblingIndex(0);
 
             Battler component = obj.GetComponent<Battler>();
             component.InitializeEnemyData(enemy);
 
             enemyList.Add(component);
+
+            positionX -= characterSpace;
+            positionY += positionY_gap;
         }
 
         // 行動順を決める
@@ -92,6 +104,12 @@ public class Battle : MonoBehaviour
     /// </summary>
     public void NextTurn(bool isFirstTurn)
     {
+        if (IsBattleEnded())
+        {
+            BattleEnd();
+            return;
+        }
+
         if (!isFirstTurn)
         {
             turnBaseManager.NextBattler();
@@ -113,14 +131,23 @@ public class Battle : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// リタイアしたキャラクターが出たらターンから外す
+    /// </summary>
+    public void UpdateTurnBaseManager(bool rearrange)
+    {
+        turnBaseManager.UpdateTurn(rearrange);
+    }
+
     // マウスが指しているところがBattlerが存在しているなら返す
-    public Battler GetBattlerByPosition(Vector2 mousePosition, bool enemyOnly)
+    public Battler GetBattlerByPosition(Vector2 mousePosition, bool enemyOnly, bool aliveOnly)
     {
         for (int i = 0; i < enemyList.Count; i++)
         {
-            Vector2 size = enemyList[i].GetCharacterSize();
-            Vector2 position = enemyList[i].GetGraphicRectTransform().position;
-            if (   mousePosition.x > position.x - size.x * 0.5f 
+            Vector2 size = enemyList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
+            Vector2 position = enemyList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
+            if (   (enemyList[i].isAlive || !aliveOnly)
+                && mousePosition.x > position.x - size.x * 0.5f 
                 && mousePosition.x < position.x + size.x * 0.5f
                 && mousePosition.y > position.y - size.y * 0.5f
                 && mousePosition.y < position.y + size.y * 0.5f)
@@ -133,9 +160,10 @@ public class Battle : MonoBehaviour
 
         for (int i = 0; i < characterList.Count; i++)
         {
-            Vector2 size = characterList[i].GetCharacterSize();
-            Vector2 position = characterList[i].GetGraphicRectTransform().position;
-            if (   mousePosition.x > position.x - size.x * 0.5f 
+            Vector2 size = characterList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
+            Vector2 position = characterList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
+            if (   (characterList[i].isAlive || !aliveOnly)
+                && mousePosition.x > position.x - size.x * 0.5f 
                 && mousePosition.x < position.x + size.x * 0.5f
                 && mousePosition.y > position.y - size.y * 0.5f
                 && mousePosition.y < position.y + size.y * 0.5f)
@@ -208,16 +236,33 @@ public class Battle : MonoBehaviour
 
     IEnumerator AttackAnimation(Battler attacker, Battler target, Action<bool> callback)
     {
+        Transform originalParent = attacker.transform.parent;
+        int originalChildIndex = attacker.transform.GetSiblingIndex();
+
         var targetPos = target.GetComponent<RectTransform>().position;
         targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.5f, targetPos.y);
         var originalPos = attacker.GetComponent<RectTransform>().position;
         attacker.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
 
-        yield return new WaitForSeconds(characterMoveTime);
+        yield return new WaitForSeconds(characterMoveTime * 0.5f);
+        // change character hirachy temporary
+        attacker.transform.SetParent(target.transform);
+        yield return new WaitForSeconds(characterMoveTime * 0.5f);
 
         attacker.PlayAnimation(BattlerAnimationType.attack);
         target.PlayAnimation(BattlerAnimationType.attacked);
         attacker.SpawnAttackVFX(target);
+
+        // deal damage
+        int realDamge = target.DeductHP(attacker.attack);
+        target.Shake(attackAnimPlayTime + characterMoveTime);
+
+        // check turns
+        UpdateTurnBaseManager(false);
+
+        // create floating text
+        var floatingText = Instantiate(floatingTextOrigin, target.transform);
+        floatingText.Init(1.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
 
         yield return new WaitForSeconds(attackAnimPlayTime);
 
@@ -226,7 +271,11 @@ public class Battle : MonoBehaviour
 
         attacker.GetComponent<RectTransform>().DOMove(originalPos, characterMoveTime);
 
-        yield return new WaitForSeconds(characterMoveTime);
+        yield return new WaitForSeconds(characterMoveTime * 0.5f);
+        // return to original parent
+        attacker.transform.SetParent(originalParent);
+        attacker.transform.SetSiblingIndex(originalChildIndex);
+        yield return new WaitForSeconds(characterMoveTime * 0.5f);
 
         callback?.Invoke(false);
     }
@@ -234,5 +283,44 @@ public class Battle : MonoBehaviour
     public Battler GetCurrentBattler()
     {
         return turnBaseManager.GetCurrentTurnBattler();
+    }
+
+    /// <summary>
+    ///  敵か味方か片方が全員リタイアした
+    /// </summary>
+    private bool IsBattleEnded()
+    {
+        // 敵全滅か
+        Battler result = enemyList.Find(s => s.isAlive);
+        if (result == null)
+        {
+            // 生存者いない
+            return true;
+        }
+
+        // 味方全滅か
+        result = characterList.Find(s => s.isAlive);
+        if (result == null)
+        {
+            // 生存者いない
+            return true;
+        }
+
+        // 戦闘が続く
+        return false;
+    }
+
+    private void BattleEnd()
+    {
+        actionTargetArrow.gameObject.SetActive(false);
+        characterArrow.gameObject.SetActive(false);
+        actionPanel.SetEnablePanel(false);
+
+        sceneTransition.EndScene(ChangeScene);
+    }
+
+    private void ChangeScene()
+    {
+        SceneManager.LoadScene("WorldMap", LoadSceneMode.Single);
     }
 }

@@ -94,6 +94,9 @@ public class FormationSlot : MonoBehaviour
             MPFill.fillAmount = unit.current_mp / unit.current_maxMp;
             MPText.text = LocalizationManager.Localize("Battle.MP") + "ÅF" + unit.current_mp.ToString() + "/" + unit.current_maxMp.ToString();
         }
+
+        // ï\é¶ÇµÇ»Ç¢Ç‡ÇÃÇîÒï\é¶Ç…
+        battlerScript.HideHPBar();
     }
 
     public void ResetData(float delay)

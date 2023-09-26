@@ -10,6 +10,7 @@ using DG.Tweening;
 public class TurnBase : MonoBehaviour
 {
     [Header("Setting")]
+    [SerializeField, Range(0.0f, 2.0f)] private float rearrangeAnimationTime = 1.0f;
     [SerializeField] private float startPosition = -350.0f;
     [SerializeField] private float gapSpace = 5.0f;
 
@@ -29,6 +30,9 @@ public class TurnBase : MonoBehaviour
         // Listを合成する
         battlerList = new List<Battler>(playerCharacters); // 元のデータを影響しないためにコピーを作っとく
         battlerList = battlerList.Concat(enemies).ToList();
+
+        // 死亡したものを排除
+        battlerList.RemoveAll(s => s.isAlive == false);
 
         // 人数分のアイコンを生成する
         for (int i = 0; i < battlerList.Count; i++)
@@ -57,6 +61,41 @@ public class TurnBase : MonoBehaviour
         });
 
         // アイコンを並ぶ
+        IconArrangeInstant();
+    }
+
+    /// <summary>
+    /// 最初から更新
+    /// </summary>
+    public void UpdateTurn(bool rearrange)
+    {
+        // リタイアのキャラがいるかを確認
+        for (int i = 0; i < characterInOrder.Count; i++)
+        {
+            if (!characterInOrder[i].Item1.isAlive)
+            {
+                // アイコンを非表示に
+                characterInOrder[i].Item2.DOColor(new Color(0,0,0,0), rearrangeAnimationTime);
+
+                characterInOrder.RemoveAt(i);
+                i--;
+            }
+        }
+
+        if (rearrange)
+        {
+            IconArrangeInstant();
+        }
+    }
+
+    public Battler GetCurrentTurnBattler()
+    {
+        return characterInOrder.First().Item1;
+    }
+
+    /// アイコンを並ぶ
+    private void IconArrangeInstant()
+    {
         float iconPosition = startPosition;
         for (int i = 0; i < characterInOrder.Count; i++)
         {
@@ -64,11 +103,6 @@ public class TurnBase : MonoBehaviour
             iconRect.localPosition = new Vector3(iconPosition, iconRect.localPosition.y, iconRect.localPosition.z);
             iconPosition += iconRect.rect.width + gapSpace;
         }
-    }
-
-    public Battler GetCurrentTurnBattler()
-    {
-        return characterInOrder.First().Item1;
     }
 
     public void NextBattler()
@@ -87,7 +121,7 @@ public class TurnBase : MonoBehaviour
 
     IEnumerator IconArrangeAnimation()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(rearrangeAnimationTime * 0.5f);
 
         // アイコンを再並ぶ
         float iconPosition = startPosition;
@@ -98,7 +132,7 @@ public class TurnBase : MonoBehaviour
             iconPosition += iconRect.rect.width + gapSpace;
         }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(rearrangeAnimationTime * 0.5f);
 
         int lastIndex = characterInOrder.Count - 1;
         var lastIconRect = characterInOrder[lastIndex].Item2.GetComponent<RectTransform>();

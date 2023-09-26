@@ -67,8 +67,17 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
     IEnumerator Bread()
     {
         // hp+40
-        //battleManager.GetCurrentBattler();
+        var target = battleManager.GetCurrentBattler();
         CreateFadingImage(itemSprite, 1.0f);
+
+        // text
+        GameObject origin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
+        var obj = Instantiate(origin);
+        var floatingText = obj.GetComponent<FloatingText>();
+        floatingText.Init(1.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "40", 64, new Color(0.33f, 1f, 0.5f));
+
+        // effect
+        target.Heal(40);
 
         yield return new WaitForSeconds(0.5f);
 

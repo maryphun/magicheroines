@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49019608, g: 0.49019608, b: 0.49019608, a: 1}
+  m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -762,7 +762,7 @@ SortingGroup:
   m_GameObject: {fileID: 671473971}
   m_Enabled: 1
   m_SortingLayerID: 1446284647
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!114 &671473976
@@ -1949,6 +1949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab07823ed85248d4690ea888ee61e6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rearrangeAnimationTime: 1
   startPosition: -230
   gapSpace: 5
   originIcon: {fileID: 1122966180}
@@ -2145,6 +2146,7 @@ MonoBehaviour:
   characterArrow: {fileID: 837002003}
   actionTargetArrow: {fileID: 1717617734}
   sceneTransition: {fileID: 1999713342}
+  floatingTextOrigin: {fileID: 6598968398884241739, guid: 466ba757e9a3b7049bf17c5291a3b1c3, type: 3}
   characterList: []
   enemyList: []
 --- !u!1 &1264239554
@@ -3272,6 +3274,7 @@ MonoBehaviour:
   textAnimationTime: 0.5
   blackOpenTime: 1
   bannerCloseTime: 1
+  endTransitionTime: 2
   leftPiece: {fileID: 1777530322}
   rightPiece: {fileID: 1665439178}
   banner: {fileID: 2120097995}

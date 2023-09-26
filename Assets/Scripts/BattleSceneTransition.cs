@@ -14,6 +14,7 @@ public class BattleSceneTransition : MonoBehaviour
     [SerializeField] private float textAnimationTime;
     [SerializeField] private float blackOpenTime;
     [SerializeField] private float bannerCloseTime;
+    [SerializeField] private float endTransitionTime;
 
     [Header("References")]
     [SerializeField] private RectTransform leftPiece;
@@ -24,12 +25,20 @@ public class BattleSceneTransition : MonoBehaviour
 
     private void Awake()
     {
+        Init();
+    }
+
+    private void Init()
+    {
         canvasGrp.alpha = 1.0f;
         canvasGrp.blocksRaycasts = true;
         canvasGrp.interactable = true;
 
         text.color = new Color(1, 1, 1, 0);
         text.GetComponent<RectTransform>().localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+        banner.sizeDelta = new Vector2(0.0f, 0.0f);
+        text.color = new Color(1, 1, 1, 0);
     }
 
     public void StartScene(Action<bool> callback)
@@ -64,5 +73,33 @@ public class BattleSceneTransition : MonoBehaviour
         canvasGrp.alpha = 0.0f;
         canvasGrp.blocksRaycasts = false;
         canvasGrp.interactable = false;
+    }
+
+    public void EndScene(Action callback)
+    {
+        StartCoroutine(EndSceneTransition(callback));
+    }
+
+    IEnumerator EndSceneTransition(Action callback)
+    {
+        Init();
+        text.text = LocalizationManager.Localize("Battle.Victory");
+        text.color = Color.white;
+        text.rectTransform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        banner.sizeDelta = new Vector2(banner.sizeDelta.x, -1125.0f);
+        banner.DOSizeDelta(new Vector2(banner.sizeDelta.x, -900.0f), bannerCloseTime);
+
+        yield return new WaitForSeconds(endTransitionTime);
+
+        leftPiece.DOLocalMoveX(leftPiece.localPosition.x + leftPiece.rect.width, blackOpenTime);
+        rightPiece.DOLocalMoveX(rightPiece.localPosition.x - rightPiece.rect.width, blackOpenTime);
+
+        yield return new WaitForSeconds(blackOpenTime);
+
+        AlphaFadeManager.Instance.FadeOut(textAnimationTime);
+
+        yield return new WaitForSeconds(textAnimationTime);
+
+        callback?.Invoke();
     }
 }
