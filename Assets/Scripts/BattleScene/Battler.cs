@@ -26,6 +26,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public int speed;
     [SerializeField] public int currentLevel;
     [SerializeField] public bool isAlive;
+    [SerializeField] public List<Ability> abilities;
 
     [Header("References")]
     [SerializeField] private Image graphic;
@@ -36,6 +37,7 @@ public class Battler : MonoBehaviour
     private Vector3 originalScale;
     private float ease = 0.0f;
     private RectTransform graphicRect;
+    private Image mpBarFill;
 
     private void Awake()
     {
@@ -59,6 +61,7 @@ public class Battler : MonoBehaviour
         defense = enemy.defense;
         speed = enemy.speed;
         currentLevel = enemy.level;
+        abilities = new List<Ability>();
 
         Initialize();
     }
@@ -79,6 +82,7 @@ public class Battler : MonoBehaviour
         defense = character.current_defense;
         speed = character.current_speed;
         currentLevel = character.current_level;
+        abilities = character.abilities;
 
         Initialize();
     }
@@ -98,6 +102,25 @@ public class Battler : MonoBehaviour
         name_UI.color = character_color;
         UpdateHPBar();
         isAlive = current_hp > 0;   // 最初からリタイア状態のもありかもしれない
+
+        if (max_mp > 0)
+        {
+            // MP表示
+            var originObj = hpBarFill.transform.parent.gameObject; // HPBARを複製
+            var obj = Instantiate(hpBarFill.transform.parent.gameObject, hpBarFill.transform.parent.parent);
+            obj.name = "SP Bar";
+            var rect = obj.GetComponent<RectTransform>();
+            rect.localPosition = new Vector2(rect.localPosition.x, rect.localPosition.y - originObj.GetComponent<RectTransform>().sizeDelta.y);
+
+            mpBarFill = obj.transform.GetChild(0).GetComponent<Image>();
+            mpBarFill.color = Color.blue;
+
+            UpdateMPBar();
+        }
+        else
+        {
+            mpBarFill = null;
+        }
 
         originalScale = graphic.rectTransform.localScale;
     }
@@ -193,7 +216,7 @@ public class Battler : MonoBehaviour
                 sequence.AppendInterval(0.2f)
                         .AppendCallback(() =>
                         {
-                            HideHPBar();
+                            HideBars();
                             graphic.DOFade(0.25f, 1.0f);
                             name_UI.text = "<s>" + name_UI.text + "</s>";
 
@@ -219,8 +242,17 @@ public class Battler : MonoBehaviour
     /// </summary>
     public void Heal(int amount)
     {
-        currentLevel = Mathf.Min(currentLevel + amount, max_hp);
+        current_hp = Mathf.Min(current_hp + amount, max_hp);
         UpdateHPBar();
+    }
+
+    /// <summary>
+    /// SP回復
+    /// </summary>
+    public void AddSP(int amount)
+    {
+        current_mp = Mathf.Min(current_mp + amount, max_mp);
+        UpdateMPBar();
     }
 
     /// <summary>
@@ -255,9 +287,24 @@ public class Battler : MonoBehaviour
         hpBarFill.DOColor(gradient.Evaluate(((float)current_hp / (float)max_hp)), 0.2f);
     }
 
-    public void HideHPBar()
+    /// <summary>
+    /// MP Barを更新
+    /// </summary>
+    public void UpdateMPBar()
+    {
+        if (mpBarFill)
+        {
+            mpBarFill.DOFillAmount(((float)current_mp / (float)max_mp), 0.2f);
+        }
+    }
+
+    public void HideBars()
     {
         hpBarFill.transform.parent.gameObject.SetActive(false);
+        if (mpBarFill)
+        {
+            mpBarFill.transform.parent.gameObject.SetActive(false);
+        }
     }
 
     public void Shake(float time)

@@ -267,14 +267,14 @@ public class InventoryManager : MonoBehaviour
         ItemExecute.Instance.SetItemIcon(item.Item2.Icon);
         switch (item.Item2.itemType)
         {
-            case ItemType.SelfCast:
+            case CastType.SelfCast:
                 ItemExecute.Instance.Invoke(item.Item2.functionName, 0);
                 CloseInventory();
                 break;
-            case ItemType.Teammate:
+            case CastType.Teammate:
 
                 break;
-            case ItemType.Enemy:
+            case CastType.Enemy:
 
                 break;
             default:
@@ -296,13 +296,13 @@ public class InventoryManager : MonoBehaviour
         string effectTargetText = string.Empty;
         switch (item.Item2.itemType)
         {
-            case ItemType.SelfCast:
+            case CastType.SelfCast:
                 effectTargetText = LocalizationManager.Localize("System.EffectSelf");
                 break;
-            case ItemType.Teammate:
+            case CastType.Teammate:
                 effectTargetText = LocalizationManager.Localize("System.EffectTeam");
                 break;
-            case ItemType.Enemy:
+            case CastType.Enemy:
                 effectTargetText = LocalizationManager.Localize("System.EffectEnemy");
                 break;
             default:

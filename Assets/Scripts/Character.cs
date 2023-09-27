@@ -53,6 +53,9 @@ public struct PlayerCharacter
     public bool is_heroin;      //@ƒqƒƒCƒ“
     public int max_dark_gauge; //ˆÅ—‚¿ƒQ[ƒW
     public int max_horny_gauge; //ˆú—ƒQ[ƒW
+
+    [Header("“Áê‹ZƒŠƒXƒg")]
+    public List<Ability> abilities;
 }
 
 public class Character
@@ -71,6 +74,8 @@ public class Character
     public int current_attack;
     public int current_defense;
     public int current_speed;
+
+    public List<Ability> abilities; 
 }
 
 /// <summary>

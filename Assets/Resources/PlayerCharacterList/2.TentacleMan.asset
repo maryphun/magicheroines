@@ -41,4 +41,8 @@ MonoBehaviour:
     is_heroin: 0
     max_dark_gauge: 0
     max_horny_gauge: 0
+    abilities:
+    - {fileID: 11400000, guid: 9206ad52942aa334f97b940d60e120a9, type: 2}
+    - {fileID: 11400000, guid: d04ceb2ac5723a243a4b1fd7442f446b, type: 2}
+    - {fileID: 11400000, guid: 14cf1698f9a1fc840b0bfde03a816795, type: 2}
   battler: {fileID: 6784901170540971542, guid: 7713ccedf30224c419c770ecdaced9e0, type: 3}

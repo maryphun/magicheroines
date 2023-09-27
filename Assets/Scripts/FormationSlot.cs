@@ -96,7 +96,7 @@ public class FormationSlot : MonoBehaviour
         }
 
         // •\Ž¦‚µ‚È‚¢‚à‚Ì‚ð”ñ•\Ž¦‚É
-        battlerScript.HideHPBar();
+        battlerScript.HideBars();
     }
 
     public void ResetData(float delay)

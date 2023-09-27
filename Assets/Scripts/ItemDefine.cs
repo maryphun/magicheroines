@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public enum ItemType
+public enum CastType
 {
     SelfCast, //< ターゲット無し
     Enemy, //< 敵に使う
@@ -16,7 +16,7 @@ public class ItemDefine : ScriptableObject
     [SerializeField] public string itemNameID;
     [SerializeField] public string descriptionID;
     [SerializeField] public string functionName;
-    [SerializeField] public ItemType itemType;
+    [SerializeField] public CastType itemType;
     [SerializeField, TextArea()] public string effectText;
 
     [Header("アイコン")]

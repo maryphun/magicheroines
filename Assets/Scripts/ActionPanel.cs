@@ -10,7 +10,7 @@ enum CommandType
     Waiting,    // コマンド待ち
     Attack,
     Item,
-    Skill,
+    Ability,
 }
 
 public class ActionPanel : MonoBehaviour
@@ -24,6 +24,7 @@ public class ActionPanel : MonoBehaviour
     [SerializeField] private Battle battleManager;
     [SerializeField] private TMPro.TMP_Text tipsText;
     [SerializeField] private Canvas mainCanvas;
+    [SerializeField] private AbilityPanel abilityPanel;
 
     [Header("Debug")]
     [SerializeField] private bool isSelectingTarget;
@@ -101,9 +102,30 @@ public class ActionPanel : MonoBehaviour
 
     public void OnClickSkill()
     {
+        // 特殊技リストを表示
+        abilityPanel.SetupAbilityData(battleManager.GetCurrentBattler().abilities);
+        abilityPanel.OpenPanel(OnCloseSkillPanel);
+
+        // ActionPanel操作禁止
+        canvasGrp.DOFade(0.5f, abilityPanel.GetAnimTime());
+        canvasGrp.interactable = false;
+        canvasGrp.blocksRaycasts = false;
 
         // 特殊技
-        commandType = CommandType.Item;
+        commandType = CommandType.Ability;
+    }
+    
+    /// <summary>
+    /// Callback: 特殊技リストが閉じられたら自動的に呼ばれる
+    /// </summary>
+    public void OnCloseSkillPanel()
+    {
+        // ActionPanel操作にもどる
+        canvasGrp.DOFade(1.0f, abilityPanel.GetAnimTime());
+        canvasGrp.interactable = true;
+        canvasGrp.blocksRaycasts = true;
+
+        commandType = CommandType.Waiting;
     }
 
     public void OnClickIdle()
@@ -114,7 +136,9 @@ public class ActionPanel : MonoBehaviour
 
     private void Update()
     {
-        if (commandType == CommandType.Item) return; // アイテム選択中
+        if (commandType == CommandType.Item && !isSelectingTarget) return; // アイテム選択中
+
+        if (commandType == CommandType.Ability && !isSelectingTarget) return; // 特殊技選択中
 
         if (isSelectingTarget)
         {
@@ -145,7 +169,7 @@ public class ActionPanel : MonoBehaviour
                             case CommandType.Item: // アイテム
 
                                 break;
-                            case CommandType.Skill: // 特殊技
+                            case CommandType.Ability: // 特殊技
 
                                 break;
                             default:

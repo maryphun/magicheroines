@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Assets.SimpleLocalization.Scripts;
+using System.Linq;
 
 /// <summary>
 /// プレイヤーのゲーム進捗は全てここに記録する
@@ -127,6 +128,20 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         obj.current_attack = newCharacter.detail.base_attack;
         obj.current_defense = newCharacter.detail.base_defense;
         obj.current_speed = newCharacter.detail.base_speed;
+        obj.abilities = new List<Ability>();
+
+        Debug.Log(obj.localizedName + ": " + newCharacter.detail.abilities.Count);
+        if (newCharacter.detail.abilities.Count > 0)
+        {
+            for (int i = 0; i < newCharacter.detail.abilities.Count; i++)
+            {
+                if (obj.current_level >= newCharacter.detail.abilities[i].requiredLevel)
+                {
+                    obj.abilities.Add(newCharacter.detail.abilities[i]);
+                }
+            }
+            obj.abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
+        }
 
         playerData.characters.Add(obj);
     }
