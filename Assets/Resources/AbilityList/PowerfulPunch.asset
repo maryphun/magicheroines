@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityNameID: Ability.PowerfulPunch
   descriptionID: Ability.PowerfulPunch_Info
   functionName: PowerfulPunch
-  cosumeSP: 5
-  requiredLevel: 1
+  cosumeSP: 0
+  requiredLevel: 5
   castType: 1
   abilityType: 0

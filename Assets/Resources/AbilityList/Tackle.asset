@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityNameID: Ability.Tackle
   descriptionID: Ability.Tackle_Info
   functionName: Tackle
-  cosumeSP: 10
-  requiredLevel: 1
+  cosumeSP: 0
+  requiredLevel: 10
   castType: 1
   abilityType: 1

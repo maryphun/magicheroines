@@ -20,6 +20,10 @@ public class AbilityPanel : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGrp;
     [SerializeField] private CanvasGroup descriptionPanel;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private TMP_Text description_Name;   //<　技名
+    [SerializeField] private TMP_Text description_Target; //<　効果対象
+    [SerializeField] private TMP_Text description_Type;   //<　機能
+    [SerializeField] private TMP_Text description_Info;   //<　技説明
 
     [Header("Debug")]
     [SerializeField] private bool isOpen = false;
@@ -156,42 +160,68 @@ public class AbilityPanel : MonoBehaviour
     {
         // レファレンス所得
         RectTransform buttonRect = ability.Item2.GetComponent<RectTransform>();
+        RectTransform descriptionPanelRect = descriptionPanel.GetComponent<RectTransform>();
 
         //フラグ
         isDescriptionShowing = true;
 
         // UI
-        //itemDescription.GetComponent<CanvasGroup>().DOFade(1.0f, 0.1f);
-        //itemDescription.position = new Vector2(buttonRect.anchoredPosition.x, buttonRect.anchoredPosition.y + (buttonRect.sizeDelta.y * 0.5f) + 10.0f);
+        descriptionPanel.GetComponent<CanvasGroup>().DOFade(1.0f, 0.1f);
+        descriptionPanelRect.position = new Vector2(buttonRect.position.x, buttonRect.position.y + (buttonRect.sizeDelta.y * 0.5f) + 10.0f);
 
-        //// データ読み込み
-        //itemDescription_Name.text = LocalizationManager.Localize(item.Item2.itemNameID);
-        //string effectTargetText = string.Empty;
-        //switch (item.Item2.itemType)
-        //{
-        //    case CastType.SelfCast:
-        //        effectTargetText = LocalizationManager.Localize("System.EffectSelf");
-        //        break;
-        //    case CastType.Teammate:
-        //        effectTargetText = LocalizationManager.Localize("System.EffectTeam");
-        //        break;
-        //    case CastType.Enemy:
-        //        effectTargetText = LocalizationManager.Localize("System.EffectEnemy");
-        //        break;
-        //    default:
-        //        break;
-        //}
-        //itemDescription_Target.text = LocalizationManager.Localize("System.EffectTarget") + effectTargetText;
-        //itemDescription_Effect.text = item.Item2.effectText + "\n\n" + LocalizationManager.Localize(item.Item2.descriptionID);
+        // データ読み込み
+        description_Name.text = LocalizationManager.Localize(ability.Item1.abilityNameID);
+        string effectTargetText = string.Empty;
+        switch (ability.Item1.castType)
+        {
+            case CastType.SelfCast:
+                effectTargetText = LocalizationManager.Localize("System.EffectSelf");
+                break;
+            case CastType.Teammate:
+                effectTargetText = LocalizationManager.Localize("System.EffectTeam");
+                break;
+            case CastType.Enemy:
+                effectTargetText = LocalizationManager.Localize("System.EffectEnemy");
+                break;
+            default:
+                break;
+        }
+        description_Target.text = LocalizationManager.Localize("System.EffectTarget") + effectTargetText;
 
-        //// 強制更新
-        //itemDescription_Name.ForceMeshUpdate();
-        //itemDescription_Target.ForceMeshUpdate();
-        //itemDescription_Effect.ForceMeshUpdate();
+        string abilityTypeText = string.Empty;
+        switch (ability.Item1.abilityType)
+        {
+            case AbilityType.Attack:
+                abilityTypeText = LocalizationManager.Localize("System.AbilityAttack");
+                break;
+            case AbilityType.Buff:
+                abilityTypeText = LocalizationManager.Localize("System.AbilityBuff");
+                break;
+            case AbilityType.Heal:
+                abilityTypeText = LocalizationManager.Localize("System.AbilityHeal");
+                break;
+            case AbilityType.Special:
+                abilityTypeText = LocalizationManager.Localize("System.AbilitySpecial");
+                break;
+            default:
+                break;
+        }
+        description_Type.text = LocalizationManager.Localize("System.AbilityType") + "：" + abilityTypeText;
 
-        //// Resize UI
-        //itemDescription.sizeDelta = new Vector2(itemDescription.sizeDelta.x,
-        //    (itemDescription_Name.rectTransform.rect.height + itemDescription_Target.rectTransform.rect.height + (itemDescription_Effect.GetRenderedValues(false).y) + itemDescription_Effect.fontSize));
+        description_Info.text = LocalizationManager.Localize(ability.Item1.descriptionID);
+
+        // 強制更新
+        description_Name.ForceMeshUpdate();
+        description_Target.ForceMeshUpdate();
+        description_Type.ForceMeshUpdate();
+        description_Info.ForceMeshUpdate();
+
+        // Resize UI
+        descriptionPanelRect.sizeDelta = new Vector2(descriptionPanelRect.sizeDelta.x,
+            (description_Name.rectTransform.rect.height + 
+             description_Target.rectTransform.rect.height + 
+             description_Type.rectTransform.rect.height + 
+            (description_Info.GetRenderedValues(false).y) + description_Info.fontSize));
     }
 
     private void HideDescription()
