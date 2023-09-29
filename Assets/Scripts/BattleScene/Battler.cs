@@ -34,6 +34,8 @@ public class Battler : MonoBehaviour
     [SerializeField] private Image hpBarFill;
     [SerializeField] private Image deadIcon;
 
+    [HideInInspector] public float Ease { get { return ease; } }
+
     private Vector3 originalScale;
     private float ease = 0.0f;
     private RectTransform graphicRect;

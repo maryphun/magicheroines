@@ -52,7 +52,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         AddPlayerCharacter(tentacle);
         Resources.UnloadAsset(tentacle);
 
-        PlayerCharacterDefine clone = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/3.Clone");
+        PlayerCharacterDefine clone = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
         AddPlayerCharacter(clone);
         Resources.UnloadAsset(clone);
 
