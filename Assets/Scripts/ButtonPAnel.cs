@@ -55,7 +55,7 @@ public class ButtonPAnel : MonoBehaviour
         // カーソル位置をワールド座標に変換
         Vector3 target = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        if (mousePosition.x > Screen.currentResolution.width * 0.75f)
+        if (mousePosition.x > Screen.width * 0.75f)
         {
             StartDisplay();
         }
