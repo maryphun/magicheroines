@@ -32,7 +32,9 @@ public class Battler : MonoBehaviour
     [SerializeField] private Image graphic;
     [SerializeField] private TMP_Text name_UI;
     [SerializeField] private Image hpBarFill;
+    [SerializeField] private Image shadow;
     [SerializeField] private Image deadIcon;
+    [SerializeField] private GameObject deadVFX;
 
     [HideInInspector] public float Ease { get { return ease; } }
 
@@ -219,8 +221,13 @@ public class Battler : MonoBehaviour
                         .AppendCallback(() =>
                         {
                             HideBars();
-                            graphic.DOFade(0.25f, 1.0f);
-                            name_UI.text = "<s>" + name_UI.text + "</s>";
+                            graphic.DOFade(0.0f, 1.0f);
+                            shadow.DOFade(0.0f, 1.0f);
+                            name_UI.DOFade(0.0f, 1.0f);
+
+                            var obj = Instantiate(deadVFX, graphic.transform);
+                            obj.GetComponent<RectTransform>().position = GetMiddleGlobalPosition();
+
 
                             // create icon
                             Image img = new GameObject("DeadIcon").AddComponent<Image>();
@@ -229,7 +236,7 @@ public class Battler : MonoBehaviour
                             img.rectTransform.SetParent(graphicRect);
                             img.rectTransform.position = GetMiddleGlobalPosition();
                             img.color = new Color(0.58f, 0.58f, 0.58f, 0.0f);
-                            img.DOFade(1.0f, 1.0f);
+                            img.DOFade(1.0f, 0.75f);
                         });
             }
             return realDamage;

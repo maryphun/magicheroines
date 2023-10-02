@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+  m_Color: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -547,7 +547,9 @@ MonoBehaviour:
   graphic: {fileID: 2732321730057990796}
   name_UI: {fileID: 7029439265376434276}
   hpBarFill: {fileID: 6452825025544831300}
+  shadow: {fileID: 8812162378099419046}
   deadIcon: {fileID: 0}
+  deadVFX: {fileID: 1631839132994222541, guid: 20b12bba355289c47958f7bf9514f851, type: 3}
 --- !u!223 &8869202411606451813
 Canvas:
   m_ObjectHideFlags: 0

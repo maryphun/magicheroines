@@ -182,9 +182,11 @@ public class Battle : MonoBehaviour
         actionTargetArrow.position = currentCharacter.GetGraphicRectTransform().position;
 
         yield return new WaitForSeconds(enemyAIDelay);
-        
-        // TODO: “GAIì¬
-        NextTurn(false);
+
+        // TODO: “G‹Zì¬
+        // UŒ‚–Ú•W‚ğ‘I‘ğ
+        Battler targetCharacter = turnBaseManager.GetRandomPlayerChaacter();
+        StartCoroutine(AttackAnimation(currentCharacter, targetCharacter, NextTurn));
     }
 
     IEnumerator TurnEndDelay()

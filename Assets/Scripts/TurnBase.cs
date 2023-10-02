@@ -93,6 +93,32 @@ public class TurnBase : MonoBehaviour
         return characterInOrder.First().Item1;
     }
 
+    // 次に順番が回ってくるプレイヤーキャラクターを獲得
+    public Battler GetNextPlayerChaacter()
+    {
+        for (int i = 0; i < characterInOrder.Count; i++) 
+        {
+            if (!characterInOrder[i].Item1.isEnemy)
+            {
+                return characterInOrder[i].Item1;
+            }
+        }
+
+        return null;
+    }
+
+    // プレイヤーキャラクターをランダムに獲得
+    public Battler GetRandomPlayerChaacter()
+    {
+        Battler randomPlayer = characterInOrder[UnityEngine.Random.Range(0, characterInOrder.Count)].Item1;
+        if (!randomPlayer.isEnemy)
+        {
+            return randomPlayer;
+        }
+
+        return GetRandomPlayerChaacter();
+    }
+
     /// アイコンを並ぶ
     private void IconArrangeInstant()
     {
