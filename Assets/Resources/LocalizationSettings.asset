@@ -17,7 +17,10 @@ MonoBehaviour:
   - Name: System
     Id: 0
     TextAsset: {fileID: 4900000, guid: c4b4aa61fe13a37469b4138ff1746dc3, type: 3}
-  - Name: Dialog
+  - Name: Dialog.Tutorial
     Id: 2051931960
     TextAsset: {fileID: 4900000, guid: afea52da9e2264843bb2d606d5c0652d, type: 3}
+  - Name: Dialog.Chapter1
+    Id: 90947388
+    TextAsset: {fileID: 0}
   SaveFolder: {fileID: 102900000, guid: b3eafc8c60857824e92b963927767919, type: 3}
