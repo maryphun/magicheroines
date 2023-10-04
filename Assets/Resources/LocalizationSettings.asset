@@ -19,8 +19,41 @@ MonoBehaviour:
     TextAsset: {fileID: 4900000, guid: c4b4aa61fe13a37469b4138ff1746dc3, type: 3}
   - Name: Dialog.Tutorial
     Id: 2051931960
-    TextAsset: {fileID: 4900000, guid: afea52da9e2264843bb2d606d5c0652d, type: 3}
+    TextAsset: {fileID: 4900000, guid: 8c7fd5aa04bfb0941aecfff6ce27dcc0, type: 3}
   - Name: Dialog.Chapter1
     Id: 90947388
-    TextAsset: {fileID: 0}
+    TextAsset: {fileID: 4900000, guid: f118c14d9553b4743b5fcfc62b6c909b, type: 3}
+  - Name: Dialog.Chapter2
+    Id: 1355473009
+    TextAsset: {fileID: 4900000, guid: b43e6d006652a1547a89bc666f57cb3a, type: 3}
+  - Name: Dialog.Chapter3
+    Id: 235471629
+    TextAsset: {fileID: 4900000, guid: 8a309d44dcc06aa4c91e79c2f28c7e86, type: 3}
+  - Name: Dialog.Chapter4
+    Id: 867448516
+    TextAsset: {fileID: 4900000, guid: 58863b71474eaf14081e2c5fa6b57de8, type: 3}
+  - Name: Dialog.Chapter5
+    Id: 1821760479
+    TextAsset: {fileID: 4900000, guid: 4aaf8afd260e096418713f9c610ba862, type: 3}
+  - Name: Dialog.Chapter6
+    Id: 1970138056
+    TextAsset: {fileID: 4900000, guid: 0b198a4107216a1459cf0e8a9672acb4, type: 3}
+  - Name: Dialog.Final
+    Id: 1434191709
+    TextAsset: {fileID: 4900000, guid: d2ed982287455e948bf46154d5eec407, type: 3}
+  - Name: Akiho
+    Id: 1948234565
+    TextAsset: {fileID: 4900000, guid: 11754dc9a04f0bc4cb7e8b2a9c6c99f9, type: 3}
+  - Name: Rikka
+    Id: 50883685
+    TextAsset: {fileID: 4900000, guid: e1dd776d655bb7b4ca76f3e51ff595dc, type: 3}
+  - Name: Erena
+    Id: 922634166
+    TextAsset: {fileID: 4900000, guid: c6d6728aca82f9f4db8f238cd04c9fb3, type: 3}
+  - Name: Kei
+    Id: 714885238
+    TextAsset: {fileID: 4900000, guid: d175c26fcb5dcaa479f2c40ea4aebfcd, type: 3}
+  - Name: Nayuta
+    Id: 1287952164
+    TextAsset: {fileID: 4900000, guid: 725e894d4dec5234e8d21be2dd67351c, type: 3}
   SaveFolder: {fileID: 102900000, guid: b3eafc8c60857824e92b963927767919, type: 3}
