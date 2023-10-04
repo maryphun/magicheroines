@@ -14,8 +14,14 @@ public class HomeSceneUI : MonoBehaviour
         // チュートリアルに入る?
         if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
         {
-            NovelSingletone.Instance.PlayNovel("Tutorial", true);
+            NovelSingletone.Instance.PlayNovel("Tutorial", true, EndTutorial);
         }
+    }
+
+    public void EndTutorial()
+    {
+        const float animationTime = 0.25f;
+        StartCoroutine(SceneTransition("Battle", animationTime));
     }
 
     public void ToWorldMapScene()

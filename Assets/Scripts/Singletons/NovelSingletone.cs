@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using NovelEditor;
 using System.Linq;
+using System;
 
 public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 {
     NovelPlayer novelplayer;
-
     bool isNovelCreated = false;
 
     List<GraphicRaycaster> disabledCanvas = new List<GraphicRaycaster>();
+    Action callbackWhenFinish;
 
     public void CreateNovelPlayer()
     {
@@ -40,19 +41,20 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         isNovelCreated = true;
     }
 
-    public void PlayNovel(string dataName, bool hideAfterPlay)
+    public void PlayNovel(string dataName, bool hideAfterPlay, Action callback = null)
     {
         if (!isNovelCreated) CreateNovelPlayer();
         NovelData data = Resources.Load<NovelData>(dataName);
-        this.PlayNovel(data, hideAfterPlay);
+        this.PlayNovel(data, hideAfterPlay, callback);
     }
 
-    public void PlayNovel(NovelData data, bool hideAfterPlay)
+    public void PlayNovel(NovelData data, bool hideAfterPlay, Action callback = null)
     {
         if (!isNovelCreated) CreateNovelPlayer();
 
         novelplayer.Play(data, hideAfterPlay);
 
+        // RaycastÇé◊ñÇÇ∑ÇÈÇ‡ÇÃÇàÍíUñ≥å¯Ç…Ç∑ÇÈ
         var raycasters = FindObjectsOfType<GraphicRaycaster>();
         disabledCanvas = raycasters.ToList();
 
@@ -68,6 +70,9 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
                 i--;
             }
         }
+
+        // èIÇÌÇ¡ÇΩå„ÇÃCallback
+        callbackWhenFinish = callback;
     }
 
     public bool IsPlaying()
@@ -124,6 +129,8 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
     {
         if (IsStop())
         {
+            callbackWhenFinish?.Invoke();
+
             foreach (GraphicRaycaster canvas in disabledCanvas)
             {
                 canvas.enabled = true;
