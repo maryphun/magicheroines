@@ -31,9 +31,9 @@ namespace NovelEditor
 
             // ローカライズ化されているかを確認
             string text = data.text;
-            if (data.localizeID != string.Empty && LocalizationManager.HasKey("Choice.Test1"))
+            if (data.localizeID != string.Empty && LocalizationManager.HasKey(data.localizeID))
             {
-                text = LocalizationManager.Localize("Choice.Test1");
+                text = LocalizationManager.Localize(data.localizeID);
             }
             GetComponentInChildren<TextMeshProUGUI>().text = text;
             try

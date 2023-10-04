@@ -38,7 +38,7 @@ namespace NovelEditor.Editor
 
             var obj = GameObject.Instantiate(button);
             obj.name = "ChoiceButton";
-
+            
             // 親を設定して同じレイヤーを継承
             GameObjectUtility.SetParentAndAlign(obj, menuCommand.context as GameObject);
 

@@ -35,7 +35,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         playerData = new PlayerData();
 
-        playerData.currentStage = 1; // 初期ステージ (チュートリアル)
+        playerData.currentStage = 0; // 初期ステージ (チュートリアル)
         playerData.currentMoney = 100;
         playerData.currentResourcesPoint = 50;
         playerData.characters = new List<Character>();
@@ -52,7 +52,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         AddPlayerCharacter(tentacle);
         Resources.UnloadAsset(tentacle);
 
-        PlayerCharacterDefine clone = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
+        PlayerCharacterDefine clone = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/3.Clone");
         AddPlayerCharacter(clone);
         Resources.UnloadAsset(clone);
 

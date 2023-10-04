@@ -36,12 +36,20 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         isNovelCreated = true;
     }
 
+    public void PlayNovel(string dataName, bool hideAfterPlay)
+    {
+        if (!isNovelCreated) CreateNovelPlayer();
+        NovelData data = Resources.Load<NovelData>(dataName);
+        this.PlayNovel(data, hideAfterPlay);
+    }
+
     public void PlayNovel(NovelData data, bool hideAfterPlay)
     {
         if (!isNovelCreated) CreateNovelPlayer();
 
         novelplayer.Play(data, hideAfterPlay);
     }
+
     public bool IsPlaying()
     {
         if (!isNovelCreated) CreateNovelPlayer();
