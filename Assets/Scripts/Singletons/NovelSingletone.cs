@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using NovelEditor;
+using System.Linq;
 
 public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 {
     NovelPlayer novelplayer;
 
     bool isNovelCreated = false;
+
+    List<GraphicRaycaster> disabledCanvas = new List<GraphicRaycaster>();
 
     public void CreateNovelPlayer()
     {
@@ -48,6 +52,22 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         if (!isNovelCreated) CreateNovelPlayer();
 
         novelplayer.Play(data, hideAfterPlay);
+
+        var raycasters = FindObjectsOfType<GraphicRaycaster>();
+        disabledCanvas = raycasters.ToList();
+
+        for (int i = 0; i < disabledCanvas.Count; i++)
+        {
+            if (disabledCanvas[i].gameObject.name != "NovelPlayerCanvas" && disabledCanvas[i].enabled)
+            {
+                disabledCanvas[i].enabled = false;
+            }
+            else
+            {
+                disabledCanvas.RemoveAt(i);
+                i--;
+            }
+        }
     }
 
     public bool IsPlaying()
@@ -98,5 +118,18 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         if (!isNovelCreated) CreateNovelPlayer();
 
         return novelplayer.autoSpeed;
+    }
+
+    private void Update()
+    {
+        if (IsStop())
+        {
+            foreach (GraphicRaycaster canvas in disabledCanvas)
+            {
+                canvas.enabled = true;
+            }
+            disabledCanvas.Clear();
+            enabled = false;
+        }
     }
 }

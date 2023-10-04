@@ -130,7 +130,6 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         obj.current_speed = newCharacter.detail.base_speed;
         obj.abilities = new List<Ability>();
 
-        Debug.Log(obj.localizedName + ": " + newCharacter.detail.abilities.Count);
         if (newCharacter.detail.abilities.Count > 0)
         {
             for (int i = 0; i < newCharacter.detail.abilities.Count; i++)
