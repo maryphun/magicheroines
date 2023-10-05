@@ -260,7 +260,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 
 
 #if DEBUG_MODE
-    public void DebugModeInitialize()
+    public void DebugModeInitialize(bool addEnemy = false)
     {
         if (isDebugModeInitialized) return;
         ProgressManager.Instance.InitializeProgress();
@@ -276,6 +276,13 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         ItemDefine croissant = Resources.Load<ItemDefine>("ItemList/クロワッサン");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(croissant);
         Resources.UnloadAsset(croissant);
+
+        // 敵キャラを設置
+        if (addEnemy)
+        {
+            SetupEnemy.AddEnemy("Akiho_Enemy");
+            SetupEnemy.AddEnemy("Rikka_Enemy");
+        }
     }
 #else
 public void DebugModeInitialize() { }

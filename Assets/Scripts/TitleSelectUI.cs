@@ -300,7 +300,7 @@ public class TitleSelectUI : MonoBehaviour
                 Init();
                 break;
             case TitleSelection.NewGame:
-                SceneManager.LoadScene("Home", LoadSceneMode.Single);
+                SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
                 break;
             case TitleSelection.Option:
                 optionPanel.OpenOptionPanel();

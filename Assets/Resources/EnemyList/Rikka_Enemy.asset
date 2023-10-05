@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa65797a759a6b45bc6f990676fa51d, type: 3}
-  m_Name: Akiho_Enemy
+  m_Name: Rikka_Enemy
   m_EditorClassIdentifier: 
-  enemyName: Name.Akiho
-  maxHP: 250
+  enemyName: Name.Rikka
+  maxHP: 600
   maxMP: 100
-  attack: 15
-  defense: 3
-  speed: 9
-  level: 10
-  character_color: {r: 0.9333334, g: 0.8352942, b: 0.882353, a: 1}
-  icon: {fileID: -562062219, guid: 0f4c4dbea7e7a1c4da0c02f12798160b, type: 3}
-  battler: {fileID: 7739895556670267509, guid: c3f4a55c60074764b8d2b23e3f7f591f, type: 3}
+  attack: 25
+  defense: 5
+  speed: 5
+  level: 15
+  character_color: {r: 0.7411765, g: 0.8862746, b: 0.9490197, a: 1}
+  icon: {fileID: -1647646626, guid: 0f4c4dbea7e7a1c4da0c02f12798160b, type: 3}
+  battler: {fileID: 7739895556670267509, guid: ada11d381567eb3418252881469f64f3, type: 3}

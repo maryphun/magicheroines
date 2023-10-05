@@ -73,6 +73,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
         // èIÇÌÇ¡ÇΩå„ÇÃCallback
         callbackWhenFinish = callback;
+        enabled = true;
     }
 
     public bool IsPlaying()

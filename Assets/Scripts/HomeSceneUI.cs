@@ -8,14 +8,8 @@ public class HomeSceneUI : MonoBehaviour
 {
     private void Start()
     {
-        //ProgressManager.Instance.DebugModeInitialize();
+        ProgressManager.Instance.DebugModeInitialize();
         AlphaFadeManager.Instance.FadeIn(1.0f);
-
-        // チュートリアルに入る?
-        if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
-        {
-            NovelSingletone.Instance.PlayNovel("Tutorial", true, EndTutorial);
-        }
     }
 
     public void EndTutorial()

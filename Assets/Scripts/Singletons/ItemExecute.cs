@@ -11,6 +11,10 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
     [SerializeField] private Sprite itemSprite;
     [SerializeField] private List<Battler> targetBattlers;
 
+    /// <summary>
+    /// Send references
+    /// </summary>
+    /// <param name="battleManagerScript"></param>
     public void Initialize(Battle battleManagerScript)
     {
         battleManager = battleManagerScript;

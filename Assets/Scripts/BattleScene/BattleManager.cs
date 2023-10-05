@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using System;
+using System.Linq;
 using UnityEngine.SceneManagement;
 
 public class Battle : MonoBehaviour
@@ -31,20 +32,23 @@ public class Battle : MonoBehaviour
 
     private void Awake()
     {
-        ProgressManager.Instance.DebugModeInitialize(); // デバッグ用
         AlphaFadeManager.Instance.FadeIn(5.0f);
 
-        var playerCharacters = ProgressManager.Instance.GetAllCharacter(false);
+        ProgressManager.Instance.DebugModeInitialize(false); // デバッグ用
+        var playerCharacters = ProgressManager.Instance.GetFormationParty(false);
+        var actors = new List<Character>();
+        for (int i = 0; i < playerCharacters.Count(); i++)
+        {
+            if (playerCharacters[i].characterData != null)
+            {
+                actors.Add(playerCharacters[i].characterData);
+            }
+        }
 
-        EnemyDefine drone = Resources.Load<EnemyDefine>("EnemyList/Drone");
-        List<EnemyDefine> enemyList = new List<EnemyDefine>();
-        enemyList.Add(drone);
+        List<EnemyDefine> enemyList = SetupEnemy.GetEnemyList(true);
+        InitializeBattleScene(actors, enemyList);
 
-        EnemyDefine android = Resources.Load<EnemyDefine>("EnemyList/Android");
-        enemyList.Add(android);
-
-        InitializeBattleScene(playerCharacters, enemyList);
-        ItemExecute.Instance.Initialize(this);
+        ItemExecute.Instance.Initialize(this); // Send references
     }
 
     private void Start()

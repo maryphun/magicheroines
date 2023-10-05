@@ -8,6 +8,9 @@ using Assets.SimpleLocalization.Scripts;
 
 public class Battler : MonoBehaviour
 {
+    [Header("Preset")]
+    [SerializeField] private bool autoInit = false;
+
     [Header("Setting")]
     [SerializeField] private BattlerAnimation animations;
     [SerializeField] private VFX attackVFX;
@@ -46,6 +49,13 @@ public class Battler : MonoBehaviour
     private void Awake()
     {
         graphicRect = graphic.GetComponent<RectTransform>();
+
+        if (autoInit)
+        {
+            Initialize();
+            HideBars();
+            name_UI.alpha = 0.0f;
+        }
     }
 
     /// <summary>
@@ -111,7 +121,7 @@ public class Battler : MonoBehaviour
         {
             // MPï\é¶
             var originObj = hpBarFill.transform.parent.gameObject; // HPBARÇï°êª
-            var obj = Instantiate(hpBarFill.transform.parent.gameObject, hpBarFill.transform.parent.parent);
+            var obj = Instantiate(originObj, originObj.transform.parent);
             obj.name = "SP Bar";
             var rect = obj.GetComponent<RectTransform>();
             rect.localPosition = new Vector2(rect.localPosition.x, rect.localPosition.y - originObj.GetComponent<RectTransform>().sizeDelta.y);
