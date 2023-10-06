@@ -26,6 +26,7 @@ public class Battle : MonoBehaviour
     [SerializeField] private RectTransform actionTargetArrow;
     [SerializeField] private BattleSceneTransition sceneTransition;
     [SerializeField] private FloatingText floatingTextOrigin;
+    [SerializeField] private BattleSceneTutorial battleSceneTutorial;
 
     [Header("Debug")]
     [SerializeField] private List<Battler> characterList = new List<Battler>();
@@ -106,8 +107,8 @@ public class Battle : MonoBehaviour
         turnBaseManager.Initialization(characterList, enemyList);
 
         // 初期位置
-        playerFormation.DOLocalMoveX(-formationPositionX * 2.0f, 0.0f, true);
-        enemyFormation.DOLocalMoveX(formationPositionX * 2.0f, 0.0f, true);
+        playerFormation.DOLocalMoveX(-formationPositionX * 2.1f, 0.0f, true);
+        enemyFormation.DOLocalMoveX(formationPositionX * 2.1f, 0.0f, true);
     }
 
     /// <summary>
@@ -131,6 +132,12 @@ public class Battle : MonoBehaviour
             // キャラクターが位置に付く
             playerFormation.DOLocalMoveX(-formationPositionX, 0.5f);
             enemyFormation.DOLocalMoveX(formationPositionX, 0.5f);
+
+            // チュートリアルに入る
+            if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
+            {
+                battleSceneTutorial.StartBattleTutorial();
+            }
         }
 
         Battler currentTurnCharacter = turnBaseManager.GetCurrentTurnBattler();
