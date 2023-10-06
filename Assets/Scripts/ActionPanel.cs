@@ -150,7 +150,8 @@ public class ActionPanel : MonoBehaviour
             else
             {
                 // arrow that follow the mouse
-                Vector3 mousePosition = Input.mousePosition / mainCanvas.scaleFactor;
+                Vector3 mousePosition = Input.mousePosition / mainCanvas.scaleFactor;
+
                 var targetBattler = battleManager.GetBattlerByPosition(mousePosition, true, true);
 
                 if (!ReferenceEquals(targetBattler, null))

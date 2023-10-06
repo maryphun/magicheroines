@@ -15,10 +15,11 @@ public class Battle : MonoBehaviour
     [SerializeField, Range(1.1f, 2.0f)] private float enemyAIDelay = 2.0f;
     [SerializeField, Range(0.1f, 1.0f)] private float characterMoveTime = 0.5f;  // < キャラがターゲットの前に移動する時間
     [SerializeField, Range(0.1f, 1.0f)] private float attackAnimPlayTime = 0.2f; // < 攻撃アニメーションの維持時間
+    [SerializeField] private float formationPositionX = 600.0f;
 
     [Header("References")]
-    [SerializeField] private Transform playerFormation;
-    [SerializeField] private Transform enemyFormation;
+    [SerializeField] private RectTransform playerFormation;
+    [SerializeField] private RectTransform enemyFormation;
     [SerializeField] private TurnBase turnBaseManager;
     [SerializeField] private ActionPanel actionPanel;
     [SerializeField] private CharacterArrow characterArrow;
@@ -34,7 +35,7 @@ public class Battle : MonoBehaviour
     {
         AlphaFadeManager.Instance.FadeIn(5.0f);
 
-        ProgressManager.Instance.DebugModeInitialize(false); // デバッグ用
+        ProgressManager.Instance.DebugModeInitialize(true); // デバッグ用
         var playerCharacters = ProgressManager.Instance.GetFormationParty(false);
         var actors = new List<Character>();
         for (int i = 0; i < playerCharacters.Count(); i++)
@@ -84,23 +85,29 @@ public class Battle : MonoBehaviour
         positionX = -(enemies.Count * characterSpace) * 0.5f;
         positionY_gap = totalGap / enemies.Count;
         positionY = max_positionY - positionY_gap;
+        int siblingIndex = 0;
         foreach (EnemyDefine enemy in enemies)
         {
             GameObject obj = Instantiate<GameObject>(enemy.battler, enemyFormation);
             obj.transform.localPosition = new Vector3(positionX, positionY, 0.0f);
-            obj.transform.SetSiblingIndex(0);
+            obj.transform.SetSiblingIndex(siblingIndex);
 
             Battler component = obj.GetComponent<Battler>();
             component.InitializeEnemyData(enemy);
 
             enemyList.Add(component);
 
-            positionX -= characterSpace;
-            positionY += positionY_gap;
+            positionX += characterSpace;
+            positionY -= positionY_gap;
+            siblingIndex++;
         }
 
         // 行動順を決める
         turnBaseManager.Initialization(characterList, enemyList);
+
+        // 初期位置
+        playerFormation.DOLocalMoveX(-formationPositionX * 2.0f, 0.0f, true);
+        enemyFormation.DOLocalMoveX(formationPositionX * 2.0f, 0.0f, true);
     }
 
     /// <summary>
@@ -117,6 +124,13 @@ public class Battle : MonoBehaviour
         if (!isFirstTurn)
         {
             turnBaseManager.NextBattler();
+        }
+        else
+        {
+            // 最初のターン
+            // キャラクターが位置に付く
+            playerFormation.DOLocalMoveX(-formationPositionX, 0.5f);
+            enemyFormation.DOLocalMoveX(formationPositionX, 0.5f);
         }
 
         Battler currentTurnCharacter = turnBaseManager.GetCurrentTurnBattler();
@@ -259,8 +273,10 @@ public class Battle : MonoBehaviour
         target.PlayAnimation(BattlerAnimationType.attacked);
         attacker.SpawnAttackVFX(target);
 
-        // deal damage
-        int realDamge = target.DeductHP(attacker.attack);
+        // calculate damage
+        int realDamge = (int)(((float)attacker.attack - (float)target.defense) * ((((float)attacker.currentLevel - (float)target.currentLevel) * 0.075f) + 1.0f));
+        target.DeductHP((int)realDamge, true);
+        
         target.Shake(attackAnimPlayTime + characterMoveTime);
 
         // check turns
