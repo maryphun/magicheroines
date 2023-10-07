@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class Battle : MonoBehaviour
 {
+    [Header("Debug")]
+    [SerializeField] private bool isDebug = false;
+
     [Header("Setting")]
     [SerializeField] private float characterSpace = 150.0f;
     [SerializeField, Range(1.1f, 2.0f)] private float turnEndDelay = 1.1f;
@@ -37,7 +40,7 @@ public class Battle : MonoBehaviour
     {
         AlphaFadeManager.Instance.FadeIn(5.0f);
 
-        ProgressManager.Instance.DebugModeInitialize(true); // デバッグ用
+        if (isDebug) ProgressManager.Instance.DebugModeInitialize(true); // デバッグ用
         var playerCharacters = ProgressManager.Instance.GetFormationParty(false);
         var actors = new List<Character>();
         for (int i = 0; i < playerCharacters.Count(); i++)
@@ -286,6 +289,9 @@ public class Battle : MonoBehaviour
         {
             // 回復できるSPがない
             NextTurn(false);
+
+            // SE再生
+            AudioManager.Instance.PlaySFX("SystemActionPanel");
             return;
         }
 
@@ -299,6 +305,9 @@ public class Battle : MonoBehaviour
                     // text
                     var floatingText = Instantiate(floatingTextOrigin, battler.transform);
                     floatingText.Init(1.0f, battler.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), healAmount.ToString(), 64, new Color(0.75f, 0.75f, 1.00f));
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("PowerCharge", 0.4f);
 
                     // effect
                     battler.AddSP(healAmount);
@@ -332,6 +341,9 @@ public class Battle : MonoBehaviour
         // calculate damage
         int realDamge = Mathf.RoundToInt((float)(attacker.attack - target.defense) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
         target.DeductHP(realDamge, true);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("Attacked", 0.4f);
         
         target.Shake(attackAnimPlayTime + characterMoveTime);
 

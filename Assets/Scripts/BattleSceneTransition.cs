@@ -55,12 +55,19 @@ public class BattleSceneTransition : MonoBehaviour
         text.DOFade(1.0f, textAnimationTime);
         text.GetComponent<RectTransform>().DOScale(0.2f, textAnimationTime);
 
+        // âπê∫ââèo
+        AudioManager.Instance.PlaySFXDelay("BattleTransition", textAnimationTime * 0.5f);
+
         yield return new WaitForSeconds(textAnimationTime);
+
         banner.sizeDelta = new Vector2(0.0f, -900.0f);
         ShakeManager.Instance.ShakeObject(text.GetComponent<RectTransform>(), blackOpenTime * 0.1f, 5.0f);
 
         leftPiece.DOLocalMoveX(leftPiece.localPosition.x - leftPiece.rect.width, blackOpenTime);
         rightPiece.DOLocalMoveX(rightPiece.localPosition.x + rightPiece.rect.width, blackOpenTime);
+
+        // âπê∫ââèo
+        AudioManager.Instance.PlaySFX("SystemCollide");
 
         yield return new WaitForSeconds(blackOpenTime);
 
@@ -101,6 +108,9 @@ public class BattleSceneTransition : MonoBehaviour
         banner.DOSizeDelta(new Vector2(banner.sizeDelta.x, -900.0f), bannerCloseTime);
 
         yield return new WaitForSeconds(endTransitionTime);
+
+        // âπê∫ââèo
+        AudioManager.Instance.PlaySFX("Defeat");
 
         leftPiece.DOLocalMoveX(leftPiece.localPosition.x + leftPiece.rect.width, blackOpenTime);
         rightPiece.DOLocalMoveX(rightPiece.localPosition.x - rightPiece.rect.width, blackOpenTime);

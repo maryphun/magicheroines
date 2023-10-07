@@ -71,6 +71,9 @@ public class ActionPanel : MonoBehaviour
 
         // 攻撃
         commandType = CommandType.Attack;
+
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemActionPanel");
     }
 
     public void OnClickItem()
@@ -85,6 +88,9 @@ public class ActionPanel : MonoBehaviour
 
         // アイテム
         commandType = CommandType.Item;
+
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemActionPanel");
     }
 
     /// <summary>
@@ -98,6 +104,9 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.blocksRaycasts = true;
 
         commandType = CommandType.Waiting;
+
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemActionCancel");
     }
 
     public void OnClickSkill()
@@ -113,6 +122,9 @@ public class ActionPanel : MonoBehaviour
 
         // 特殊技
         commandType = CommandType.Ability;
+
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemActionPanel");
     }
     
     /// <summary>
@@ -126,6 +138,9 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.blocksRaycasts = true;
 
         commandType = CommandType.Waiting;
+
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemActionCancel");
     }
 
     public void OnClickIdle()
@@ -150,6 +165,9 @@ public class ActionPanel : MonoBehaviour
             // 右クリック
             if (Input.GetMouseButtonDown(1))
             {
+                // SE再生
+                AudioManager.Instance.PlaySFX("SystemActionCancel");
+
                 CancelAttack();
             }
             else

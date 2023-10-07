@@ -14,6 +14,9 @@ public class TrainPanel : MonoBehaviour
 
     public void OpenTrainPanel()
     {
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemOpen");
+
         canvasGroup.DOFade(1.0f, animationTime);
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
@@ -21,6 +24,9 @@ public class TrainPanel : MonoBehaviour
 
     public void QuitTrainPanel()
     {
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemCancel");
+
         canvasGroup.DOFade(0.0f, animationTime);
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;

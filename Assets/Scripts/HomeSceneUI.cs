@@ -6,9 +6,12 @@ using TMPro;
 
 public class HomeSceneUI : MonoBehaviour
 {
+    [Header("Debug")]
+    [SerializeField] private bool isDebug = false;
+
     private void Start()
     {
-        //ProgressManager.Instance.DebugModeInitialize();
+        if (isDebug) ProgressManager.Instance.DebugModeInitialize();
         AlphaFadeManager.Instance.FadeIn(1.0f);
 
         AudioManager.Instance.PlayMusicWithFade("HomeScene", 2.0f);

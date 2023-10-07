@@ -35,6 +35,9 @@ public class CharacterBuildingPanel : MonoBehaviour
 
     public void OpenCharacterBuildingPanel()
     {
+        // SE Ä¶
+        AudioManager.Instance.PlaySFX("SystemOpen");
+
         canvasGroup.DOFade(1.0f, animationTime);
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
@@ -62,6 +65,9 @@ public class CharacterBuildingPanel : MonoBehaviour
 
     public void QuitCharacterBuildingPanel()
     {
+        // SE Ä¶
+        AudioManager.Instance.PlaySFX("SystemCancel");
+
         canvasGroup.DOFade(0.0f, animationTime);
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -128,11 +134,23 @@ public class CharacterBuildingPanel : MonoBehaviour
     }
 
     /// <summary>
+    /// SEÄ¶
+    /// </summary>
+    public void OnSwitchPanel()
+    {
+        // SE Ä¶
+        AudioManager.Instance.PlaySFX("SystemTab");
+    }
+
+    /// <summary>
     /// ƒLƒƒƒ‰•ÏX
     /// </summary>
     public void ChangeCharacterSlot(int slot)
     {
         if (characters.Count <= slot) return;
+
+        // SE Ä¶
+        AudioManager.Instance.PlaySFX("SystemSelect");
 
         characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().DOFade(0.0f, 0.1f);
         currentCheckingSlot = slot;

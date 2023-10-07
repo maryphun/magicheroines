@@ -92,6 +92,9 @@ public class CharacterUpgradePanel : MonoBehaviour
 
     public void OnClickLevelUpButton()
     {
+        // SEÄ¶
+        AudioManager.Instance.PlaySFX("SystemLevelUp");
+
         // ‘‹àXV
         ProgressManager.Instance.SetMoney(ProgressManager.Instance.GetCurrentMoney() - CalculateLevelUpCost(currentCharacter, currentCharacter.current_level));
 

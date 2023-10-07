@@ -2503,6 +2503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c808401b9dd15ce429a32af7542c636b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationTime: 0.5
   type: 1
 --- !u!1 &148448396
 GameObject:
@@ -2726,6 +2727,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: CharacterBuildingPanel, Assembly-CSharp
         m_MethodName: SwitchToCharacterDataTab
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1135095910}
+        m_TargetAssemblyTypeName: CharacterBuildingPanel, Assembly-CSharp
+        m_MethodName: OnSwitchPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5572,6 +5585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c808401b9dd15ce429a32af7542c636b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationTime: 0.5
   type: 0
 --- !u!1 &342508450
 GameObject:
@@ -6246,6 +6260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ccf481e8f3874d47929d3f371941601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDebug: 1
 --- !u!1 &375662490
 GameObject:
   m_ObjectHideFlags: 0
@@ -9076,6 +9091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c808401b9dd15ce429a32af7542c636b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationTime: 0.5
   type: 0
 --- !u!114 &529196066
 MonoBehaviour:
@@ -19524,14 +19540,14 @@ MonoBehaviour:
       - m_Target: {fileID: 151441183}
         m_TargetAssemblyTypeName: FormationPanel, Assembly-CSharp
         m_MethodName: CloseFormationSelectionPanel
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1245863297
 MonoBehaviour:
@@ -21424,6 +21440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c808401b9dd15ce429a32af7542c636b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationTime: 0.5
   type: 0
 --- !u!1 &1375413229
 GameObject:
@@ -22661,6 +22678,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: CharacterBuildingPanel, Assembly-CSharp
         m_MethodName: SwitchToCharacterUpgradeTab
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1135095910}
+        m_TargetAssemblyTypeName: CharacterBuildingPanel, Assembly-CSharp
+        m_MethodName: OnSwitchPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

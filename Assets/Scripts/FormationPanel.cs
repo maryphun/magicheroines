@@ -26,6 +26,9 @@ public class FormationPanel : MonoBehaviour
 
     public void OpenFormationPanel()
     {
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemOpen");
+
         canvasGroup.DOFade(1.0f, animationTime);
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
@@ -42,6 +45,9 @@ public class FormationPanel : MonoBehaviour
 
     public void QuitFormationPanel()
     {
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemCancel");
+
         canvasGroup.DOFade(0.0f, animationTime);
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -108,6 +114,9 @@ public class FormationPanel : MonoBehaviour
         {
             slots[slotIndex + 1].Initialize(true, moneyCostForSlot[slotIndex + 1], true, slotIndex + 1);
         }
+
+        // SEçƒê∂
+        AudioManager.Instance.PlaySFX("SystemUnlock", 1.5f);
     }
 
     public void OpenFormationSelectionPanel(int targetSlotIndex)
@@ -149,7 +158,7 @@ public class FormationPanel : MonoBehaviour
         formationSelectionPanelIndex = targetSlotIndex;
     }
 
-    public void CloseFormationSelectionPanel()
+    public void CloseFormationSelectionPanel(bool isPlaySE)
     {
         isFormationSelecting = false;
         FormationSelectionPanel.interactable = false;
@@ -157,13 +166,19 @@ public class FormationPanel : MonoBehaviour
         FormationSelectionPanel.DOFade(0.0f, formationSelectionPanelAnimationTime);
 
         formationSelectionPanelIndex = -1;
+
+        // SEçƒê∂
+        if (isPlaySE) AudioManager.Instance.PlaySFX("SystemCancel", 0.5f);
     }
 
     public void SelectFormationCharacter(int characterID)
     {
         UpdateFormation(formationSelectionPanelIndex, ProgressManager.Instance.GetAllCharacter()[characterID], false, true);
 
-        CloseFormationSelectionPanel();
+        // SEçƒê∂
+        AudioManager.Instance.PlaySFX("SystemEquip", 1.5f);
+
+        CloseFormationSelectionPanel(false);
     }
 
     private bool IsCharacterInFormation(Character character)

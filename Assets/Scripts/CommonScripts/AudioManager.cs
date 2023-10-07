@@ -199,6 +199,18 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlaySFXDelay(string clipname, float delay)
+    {
+        StartCoroutine(DelaySFX(clipname, delay));
+    }
+
+    private IEnumerator DelaySFX(string clip, float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        PlaySFX(clip);
+    }
+
     public void PlaySFX(string sename, float volume)
     {
         AudioClip clipToPlay = NameToSEClip(sename);

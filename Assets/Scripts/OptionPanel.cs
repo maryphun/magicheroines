@@ -44,6 +44,9 @@ public class OptionPanel : MonoBehaviour
 
     public void OpenOptionPanel()
     {
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemOpen");
+
         canvasGroup.DOFade(1.0f, animationTime);
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;

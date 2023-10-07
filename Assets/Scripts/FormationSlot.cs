@@ -144,10 +144,16 @@ public class FormationSlot : MonoBehaviour
             var vfx = Instantiate(effect, transform);
             vfx.GetComponent<RectTransform>().localPosition = new Vector3(0.0f, 80.0f, 0.0f);
             vfx.GetComponent<Animator>().speed = 1.0f;
+
+            // SEçƒê∂
+            AudioManager.Instance.PlaySFX("Flee", 0.5f);
         }
         else if (ProgressManager.Instance.GetUnlockedFormationCount() > slotIndex) // âï˙çœÇ›
         {
             formationPanel.OpenFormationSelectionPanel(slotIndex);
+
+            // SEçƒê∂
+            AudioManager.Instance.PlaySFX("SystemSelect");
         }
     }
 

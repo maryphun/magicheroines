@@ -81,6 +81,9 @@ public class BattleSceneTutorial : MonoBehaviour
         }
         else
         {
+            // âπê∫ââèo
+            AudioManager.Instance.PlaySFX("SystemCursor");
+
             // next
             switch (step)
             {
