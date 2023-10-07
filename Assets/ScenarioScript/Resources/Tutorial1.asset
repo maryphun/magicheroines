@@ -46,12 +46,12 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
+      BGM: {fileID: 8300000, guid: 0179fa270977da3459b2e2f61ad04eb8, type: 3}
       BGMStyle: 0
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
-      BGMFadeTime: 3
+      BGMFadeTime: 6
       BGMEndFadeTime: 3
       SE: {fileID: 0}
       SEStyle: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
+      Name: Name.No5
       text: "\u3053\u308C\u304B\u3089\u8CB4\u65B9\u306E\u88DC\u4F50\u3068\u8B66\u8B77\u3092\u62C5\u5F53\u3057\u307E\u3059\u3001\u79D8\u5BC6\u7D50\u793E\u3010\u30D5\u30A9\u30FC\u30EC\u30F3\u8CA1\u56E3\u3011\u6240\u5C5E\u3001\u30AF\u30ED\u30FC\u30F3\u6226\u95D8\u54E1005\u53F7\u3067\u3059\u30025\u53F7\u3068\u304A\u547C\u3073\u304F\u3060\u3055\u3044\u3002"
       localizationID: Dialog.Tutorial-1-6
       back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
@@ -267,7 +267,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
+      Name: Name.No5
       text: "\u2015\u2015\u8CB4\u65B9\u306E\u4E8B\u306F\u306A\u3093\u3068\u304A\u547C\u3073\u3059\u308C\u3070\u3044\u3044\u3067\u3057\u3087\u3046\u304B\uFF1F"
       localizationID: Dialog.Tutorial-1-7
       back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}

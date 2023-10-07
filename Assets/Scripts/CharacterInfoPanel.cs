@@ -25,6 +25,7 @@ public class CharacterInfoPanel : MonoBehaviour
 
     [SerializeField] private Canvas mainCanvas;
     [SerializeField] private Battle battleManager;
+    [SerializeField] private BattleSceneTutorial tutorialManager;
 
     [Header("Debug")]
     [SerializeField] private bool isDisplaying;
@@ -47,6 +48,18 @@ public class CharacterInfoPanel : MonoBehaviour
         characterName.text =  currentBattler.character_name;
         characterHPValue.text = "<size=125%>" + currentBattler.current_hp.ToString() + "</size>/" + currentBattler.max_hp.ToString();
         characterHPFill.fillAmount = (float)currentBattler.current_hp / (float)currentBattler.max_hp;
+
+        var gradient = new Gradient();
+        // Blend color from green at 0% to red at 100%
+        var colors = new GradientColorKey[2];
+        colors[0] = new GradientColorKey(Color.red, 0.35f);
+        colors[1] = new GradientColorKey(Color.green, 1.0f);
+        // Blend alpha from opaque at 0% to transparent at 100%
+        var alphas = new GradientAlphaKey[2];
+        alphas[0] = new GradientAlphaKey(1.0f, 0.0f);
+        alphas[1] = new GradientAlphaKey(1.0f, 1.0f);
+        gradient.SetKeys(colors, alphas);
+        characterHPFill.color = gradient.Evaluate(characterHPFill.fillAmount);
 
         if (currentBattler.max_mp > 0)
         {
@@ -71,6 +84,8 @@ public class CharacterInfoPanel : MonoBehaviour
 
     private void Update()
     {
+        if (tutorialManager.IsPlayingTutorial) return; // チュートリアル中は再生しない
+
         if (isDisplaying)
         {
             // HP と SPを情報を常に更新

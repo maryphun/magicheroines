@@ -69,6 +69,9 @@ public class OptionPanel : MonoBehaviour
 
     public void QuitOptionPanel()
     {
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemCancel");
+
         canvasGroup.DOFade(0.0f, animationTime);
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
@@ -97,6 +100,11 @@ public class OptionPanel : MonoBehaviour
         string percentValue = (seVolumeSlider.value * 100).ToString("0") + "%";
         seVolumeValue.SetText(percentValue);
     }
+    public void EndSEVolumeDrag()
+    {
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemAlert");
+    }
     public void TextSpeedVolume()
     {
         NovelSingletone.Instance.SetTextSpeed((int)(textSpeedSlider.value));
@@ -117,6 +125,9 @@ public class OptionPanel : MonoBehaviour
         seVolumeSlider.DOValue(defaultSEVolume, 0.25f);
         textSpeedSlider.DOValue(defaultTextSpeed, 0.25f);
         autoSpeedSlider.DOValue(defaultAutoSpeed, 0.25f);
+
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemSelect");
     }
 
     public void ApplySetting()
@@ -125,5 +136,8 @@ public class OptionPanel : MonoBehaviour
         tempSEVolume = AudioManager.Instance.GetSEMasterVolume();
         tempTextSpeed = NovelSingletone.Instance.GetTextSpeed();
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
+
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemSelect");
     }
 }

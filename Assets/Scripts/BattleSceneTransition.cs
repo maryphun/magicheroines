@@ -6,6 +6,7 @@ using TMPro;
 using DG.Tweening;
 using System;
 using Assets.SimpleLocalization.Scripts;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class BattleSceneTransition : MonoBehaviour
@@ -22,6 +23,7 @@ public class BattleSceneTransition : MonoBehaviour
     [SerializeField] private RectTransform banner;
     [SerializeField] private TMP_Text text;
     [SerializeField] private CanvasGroup canvasGrp;
+    [SerializeField] private Battle battleManager;
 
     private void Awake()
     {
@@ -53,7 +55,6 @@ public class BattleSceneTransition : MonoBehaviour
         text.DOFade(1.0f, textAnimationTime);
         text.GetComponent<RectTransform>().DOScale(0.2f, textAnimationTime);
 
-
         yield return new WaitForSeconds(textAnimationTime);
         banner.sizeDelta = new Vector2(0.0f, -900.0f);
         ShakeManager.Instance.ShakeObject(text.GetComponent<RectTransform>(), blackOpenTime * 0.1f, 5.0f);
@@ -75,15 +76,25 @@ public class BattleSceneTransition : MonoBehaviour
         canvasGrp.interactable = false;
     }
 
-    public void EndScene(Action callback)
+    public void EndScene(bool isVictory, Action<string> callback)
     {
-        StartCoroutine(EndSceneTransition(callback));
+        text.text = LocalizationManager.Localize(isVictory ? "Battle.Victory" : "Battle.Defeat");
+        StartCoroutine(EndSceneTransition(callback, "WorldMap"));
     }
 
-    IEnumerator EndSceneTransition(Action callback)
+    public void EndTutorial()
     {
+        text.text = LocalizationManager.Localize("Battle.Defeat");
+        ProgressManager.Instance.StageProgress(); // チュートリアル終了
+        StartCoroutine(EndSceneTransition(battleManager.ChangeScene, "Tutorial"));
+    }
+
+    IEnumerator EndSceneTransition(Action<string> callback, string sceneName)
+    {
+        // 音声演出
+        AudioManager.Instance.StopMusicWithFade(endTransitionTime);
+
         Init();
-        text.text = LocalizationManager.Localize("Battle.Victory");
         text.color = Color.white;
         text.rectTransform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         banner.sizeDelta = new Vector2(banner.sizeDelta.x, -1125.0f);
@@ -100,6 +111,6 @@ public class BattleSceneTransition : MonoBehaviour
 
         yield return new WaitForSeconds(textAnimationTime);
 
-        callback?.Invoke();
+        callback?.Invoke(sceneName);
     }
 }

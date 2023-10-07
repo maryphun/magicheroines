@@ -31,7 +31,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
         itemSprite = icon;
     }
 
-    private FloatingText CraeteFloatingText(Transform parent)
+    private FloatingText CreateFloatingText(Transform parent)
     {
         GameObject origin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
         var obj = Instantiate(origin);
@@ -40,6 +40,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
         return floatingTextComponent;
     }
+
     private void CreateFadingImage(Sprite sprite, float fadeTime)
     {
         Vector2 position = battleManager.GetCurrentBattler().GetMiddleGlobalPosition();
@@ -77,7 +78,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     var target = battleManager.GetCurrentBattler();
 
                     // text
-                    var floatingText = CraeteFloatingText(target.transform);
+                    var floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(1.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), SPAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
 
                     // effect
@@ -107,7 +108,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     var target = battleManager.GetCurrentBattler();
 
                     // text
-                    var floatingText = CraeteFloatingText(target.transform);
+                    var floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(1.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), healAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
 
                     // effect

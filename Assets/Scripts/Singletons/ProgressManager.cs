@@ -280,6 +280,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         // “GƒLƒƒƒ‰‚ğİ’u
         if (addEnemy)
         {
+            SetupEnemy.ClearEnemy();
             SetupEnemy.AddEnemy("Akiho_Enemy");
             SetupEnemy.AddEnemy("Rikka_Enemy");
         }

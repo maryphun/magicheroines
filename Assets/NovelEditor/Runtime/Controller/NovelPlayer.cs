@@ -22,7 +22,7 @@ namespace NovelEditor
         [SerializeField, HideInInspector] private Sprite _nonameDialogueSprite;
         [SerializeField, HideInInspector] private bool _playOnAwake = true;
         [SerializeField, HideInInspector] private bool _hideAfterPlay = false;
-        [SerializeField, HideInInspector] private float _hideFadeTime = 0.5f;
+        [SerializeField, HideInInspector] public float _hideFadeTime = 0.5f;
         [SerializeField, HideInInspector] private bool _isDisplay = true;
 
         [SerializeField, HideInInspector] private float _charaFadeTime = 0.2f;
@@ -387,6 +387,22 @@ namespace NovelEditor
             _novelUI.SetUIDisplay(true);
             UnPause();
             _isUIDisplay = true;
+        }
+
+        /// <summary>
+        /// UIをフェイドする
+        /// </summary>
+        public async void FadeUI(float alpha, float time)
+        {
+            await _novelUI.Fade(alpha, time);
+        }
+
+        /// <summary>
+        /// UIをフェイドする
+        /// </summary>
+        public void SetUIAlpha(float alpha)
+        {
+            _novelUI.SetUIAlpha(alpha);
         }
 
         /// <summary>

@@ -8,14 +8,10 @@ public class HomeSceneUI : MonoBehaviour
 {
     private void Start()
     {
-        ProgressManager.Instance.DebugModeInitialize();
+        //ProgressManager.Instance.DebugModeInitialize();
         AlphaFadeManager.Instance.FadeIn(1.0f);
-    }
 
-    public void EndTutorial()
-    {
-        const float animationTime = 0.25f;
-        StartCoroutine(SceneTransition("Battle", animationTime));
+        AudioManager.Instance.PlayMusicWithFade("HomeScene", 2.0f);
     }
 
     public void ToWorldMapScene()

@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using System.Threading;
 using System;
 using TMPro;
+using DG.Tweening;
 
 namespace NovelEditor
 {
@@ -108,6 +109,43 @@ namespace NovelEditor
                 UIparents.interactable = false;
                 UIparents.interactable = false;
             }
+        }
+
+        /// <summary>
+        /// UIの表示の設定
+        /// </summary>
+        /// <param name="display">UIを表示するかどうか</param>
+        internal async UniTask Fade(float finalAlpha, float time)
+        {
+            float alpha = 0;
+
+            float alphaSpeed = 0.01f;
+            if (time < 0.5)
+            {
+                alphaSpeed = 0.1f;
+            }
+            try
+            {
+                while (alpha != finalAlpha)
+                {
+                    NovelCanvas.alpha = finalAlpha;
+                    await UniTask.Delay(TimeSpan.FromSeconds(time * alphaSpeed));
+                    Mathf.MoveTowards(alpha, finalAlpha, alphaSpeed);
+                }
+            }
+            catch (OperationCanceledException)
+            { }
+        }
+
+
+
+        /// <summary>
+        /// UIの表示の設定
+        /// </summary>
+        /// <param name="display">UIを表示するかどうか</param>
+        internal void SetUIAlpha(float alpha)
+        {
+            NovelCanvas.alpha = alpha;
         }
 
         /// <summary>

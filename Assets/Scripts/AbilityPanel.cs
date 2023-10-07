@@ -84,8 +84,8 @@ public class AbilityPanel : MonoBehaviour
 
         onCloseCallback = callbackWhenClose;
         rectTransform.DOAnchorPosY(0.0f, animationTime);
-        isOpen = true;
-        
+        DOTween.Sequence().AppendInterval(animationTime * 0.75f).AppendCallback(() => { isOpen = true; }); // Š®‘S‚ÉŠJ‚¢‚Ä‚©‚çŸ‚Ì‚ğ‘€ìó‚¯•t‚¯‚é
+
         canvasGrp.DOFade(1.0f, animationTime);
         canvasGrp.interactable = true;
         canvasGrp.blocksRaycasts = true;

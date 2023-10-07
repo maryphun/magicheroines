@@ -60,6 +60,8 @@ public class TitleSelectUI : MonoBehaviour
         // 選択肢を初期化
         currentSelection = defaultSelection;
         UpdateSelectionText();
+        // テーマソング再生
+        AudioManager.Instance.PlayMusic("ThemeSong");
     }
 
     private void UpdateSelectionText()
@@ -91,6 +93,9 @@ public class TitleSelectUI : MonoBehaviour
 
     private IEnumerator MoveSelectionDown()
     {
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemSelect");
+
         animationPlaying = true;
         // setup
         Vector3 originalPositionTop    = selection[0].rectTransform.position;
@@ -149,6 +154,9 @@ public class TitleSelectUI : MonoBehaviour
 
     private IEnumerator MoveSelectionUp()
     {
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemSelect");
+
         animationPlaying = true;
         // setup
         Vector3 originalPositionTop = selection[0].rectTransform.position;
@@ -209,6 +217,8 @@ public class TitleSelectUI : MonoBehaviour
     {
         const float animationTime = 1.0f;
 
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemDecide");
 
         Vector3 originalSizeMid = selection[1].rectTransform.localScale;
         Color originalColorTop = selection[0].color;
@@ -225,6 +235,8 @@ public class TitleSelectUI : MonoBehaviour
 
         if (currentSelection == TitleSelection.NewGame)
         {
+            // BGM停止
+            AudioManager.Instance.StopMusicWithFade(animationTime);
             // ニューゲームの場合の特殊処理
             AlphaFadeManager.Instance.FadeOut(animationTime);
             // ニューゲームなので　ゲーム進捗を初期状態にする

@@ -13,6 +13,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
     List<GraphicRaycaster> disabledCanvas = new List<GraphicRaycaster>();
     Action callbackWhenFinish;
+    public float defaultHidePlayTime;
 
     public void CreateNovelPlayer()
     {
@@ -30,6 +31,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         spawnedObj.transform.SetParent(this.transform);
 
         novelplayer = spawnedObj.GetComponentInChildren<NovelPlayer>();
+        defaultHidePlayTime = novelplayer._hideFadeTime;
 
         if (ReferenceEquals(novelplayer, null))
         {
@@ -74,6 +76,13 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         // èIÇÌÇ¡ÇΩå„ÇÃCallback
         callbackWhenFinish = callback;
         enabled = true;
+    }
+
+    public void SetHidePlayTime(float time)
+    {
+        if (!isNovelCreated) CreateNovelPlayer();
+
+        novelplayer._hideFadeTime = time;
     }
 
     public bool IsPlaying()
@@ -137,6 +146,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
                 canvas.enabled = true;
             }
             disabledCanvas.Clear();
+            novelplayer._hideFadeTime = defaultHidePlayTime; // return to normal
             enabled = false;
         }
     }

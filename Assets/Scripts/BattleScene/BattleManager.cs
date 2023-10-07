@@ -31,6 +31,7 @@ public class Battle : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private List<Battler> characterList = new List<Battler>();
     [SerializeField] private List<Battler> enemyList = new List<Battler>();
+    [SerializeField] private Battler arrowPointingTarget = null;
 
     private void Awake()
     {
@@ -109,6 +110,8 @@ public class Battle : MonoBehaviour
         // 初期位置
         playerFormation.DOLocalMoveX(-formationPositionX * 2.1f, 0.0f, true);
         enemyFormation.DOLocalMoveX(formationPositionX * 2.1f, 0.0f, true);
+        playerFormation.GetComponent<CanvasGroup>().alpha = 0.0f;
+        enemyFormation.GetComponent<CanvasGroup>().alpha = 0.0f;
     }
 
     /// <summary>
@@ -116,9 +119,16 @@ public class Battle : MonoBehaviour
     /// </summary>
     public void NextTurn(bool isFirstTurn)
     {
-        if (IsBattleEnded())
+        // ターンを始める前に戦闘が終わっているかをチェック
+        if (IsVictory())
         {
-            BattleEnd();
+            BattleEnd(true);
+            return;
+        }
+
+        if (IsDefeat())
+        {
+            BattleEnd(false);
             return;
         }
 
@@ -132,6 +142,8 @@ public class Battle : MonoBehaviour
             // キャラクターが位置に付く
             playerFormation.DOLocalMoveX(-formationPositionX, 0.5f);
             enemyFormation.DOLocalMoveX(formationPositionX, 0.5f);
+            playerFormation.GetComponent<CanvasGroup>().DOFade(1.0f, 0.25f);
+            enemyFormation.GetComponent<CanvasGroup>().DOFade(1.0f, 0.25f);
 
             // チュートリアルに入る
             if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
@@ -230,6 +242,8 @@ public class Battle : MonoBehaviour
 
     public void PointTargetWithArrow(Battler target, float animTime)
     {
+        if (arrowPointingTarget == target) return;
+
         Battler currentBattler = turnBaseManager.GetCurrentTurnBattler();
 
         var originPos = currentBattler.GetGraphicRectTransform().position;
@@ -249,16 +263,51 @@ public class Battle : MonoBehaviour
 
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         actionTargetArrow.rotation = Quaternion.Euler(0f, 0f, rot_z - 90.0f);
+
+        arrowPointingTarget = target;
     }
 
     public void UnPointArrow(float animTime)
     {
         actionTargetArrow.GetComponent<Image>().DOFade(0.0f, animTime);
+        arrowPointingTarget = null;
     }
 
     public void AttackCommand(Battler target)
     {
         StartCoroutine(AttackAnimation(turnBaseManager.GetCurrentTurnBattler(), target, NextTurn));
+    }
+
+    public void IdleCommand()
+    {
+        var battler = GetCurrentBattler();
+
+        if (battler.max_mp == 0)
+        {
+            // 回復できるSPがない
+            NextTurn(false);
+            return;
+        }
+
+        // 総SPの15%~20%を回復する
+        int healAmount = Mathf.RoundToInt((float)battler.max_mp * UnityEngine.Random.Range(0.15f, 0.2f));
+
+        var sequence = DOTween.Sequence();
+                sequence
+                .AppendCallback(() =>
+                {
+                    // text
+                    var floatingText = Instantiate(floatingTextOrigin, battler.transform);
+                    floatingText.Init(1.0f, battler.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), healAmount.ToString(), 64, new Color(0.75f, 0.75f, 1.00f));
+
+                    // effect
+                    battler.AddSP(healAmount);
+                })
+                .AppendInterval(0.25f)
+                .AppendCallback(() =>
+                {
+                    NextTurn(false);
+                });
     }
 
     IEnumerator AttackAnimation(Battler attacker, Battler target, Action<bool> callback)
@@ -281,8 +330,8 @@ public class Battle : MonoBehaviour
         attacker.SpawnAttackVFX(target);
 
         // calculate damage
-        int realDamge = (int)(((float)attacker.attack - (float)target.defense) * ((((float)attacker.currentLevel - (float)target.currentLevel) * 0.075f) + 1.0f));
-        target.DeductHP((int)realDamge, true);
+        int realDamge = Mathf.RoundToInt((float)(attacker.attack - target.defense) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
+        target.DeductHP(realDamge, true);
         
         target.Shake(attackAnimPlayTime + characterMoveTime);
 
@@ -315,20 +364,12 @@ public class Battle : MonoBehaviour
     }
 
     /// <summary>
-    ///  敵か味方か片方が全員リタイアした
+    ///  敵を全員倒せた
     /// </summary>
-    private bool IsBattleEnded()
+    private bool IsVictory()
     {
         // 敵全滅か
         Battler result = enemyList.Find(s => s.isAlive);
-        if (result == null)
-        {
-            // 生存者いない
-            return true;
-        }
-
-        // 味方全滅か
-        result = characterList.Find(s => s.isAlive);
         if (result == null)
         {
             // 生存者いない
@@ -339,17 +380,43 @@ public class Battle : MonoBehaviour
         return false;
     }
 
-    private void BattleEnd()
+    /// <summary>
+    /// 味方全員リタイアした
+    /// </summary>
+    private bool IsDefeat()
+    {
+        // 味方全滅か
+        Battler result = characterList.Find(s => s.isAlive);
+        if (result == null)
+        {
+            // 生存者いない
+            return true;
+        }
+
+        // 戦闘が続く
+        return false;
+    }
+
+    private void BattleEnd(bool isVictory)
     {
         actionTargetArrow.gameObject.SetActive(false);
         characterArrow.gameObject.SetActive(false);
         actionPanel.SetEnablePanel(false);
 
-        sceneTransition.EndScene(ChangeScene);
+        bool isTutorial = (ProgressManager.Instance.GetCurrentStageProgress() == 0);
+        if (!isTutorial)
+        {
+            sceneTransition.EndScene(isVictory, ChangeScene);
+        }
+        else
+        {
+            // 敗北イベント(0.5秒待ってから)
+            DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Tutorial3", true, sceneTransition.EndTutorial); });
+        }
     }
 
-    private void ChangeScene()
+    public void ChangeScene(string sceneName)
     {
-        SceneManager.LoadScene("WorldMap", LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

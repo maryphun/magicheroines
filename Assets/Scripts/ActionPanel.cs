@@ -130,8 +130,13 @@ public class ActionPanel : MonoBehaviour
 
     public void OnClickIdle()
     {
+        // ActionPanel操作禁止
+        canvasGrp.DOFade(0.5f, abilityPanel.GetAnimTime());
+        canvasGrp.interactable = false;
+        canvasGrp.blocksRaycasts = false;
+
         // スキップターン
-        battleManager.NextTurn(false);
+        battleManager.IdleCommand();
     }
 
     private void Update()

@@ -1,0 +1,275 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
+  m_Name: Tutorial4
+  m_EditorClassIdentifier: 
+  _locations:
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 85
+      y: 11
+      width: 151
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.No5
+      text: "\u2015\u2015\u2015\u2015\u3068\u3044\u3046\u306E\u304C\u79C1\u305F\u3061\u306E\u7D44\u7E54\u306E\u73FE\u72B6\u3067\u3059\u3002"
+      localizationID: Dialog.Tutorial-4-7
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 01000000
+      charas:
+      - {fileID: 21300000, guid: db739741bd2948f4f8576690beb408d6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.No5
+      text: "\u5F37\u3044\u602A\u4EBA\u306F\u65E2\u306B\u307B\u3068\u3093\u3069\u5F7C\u5973\u305F\u3061\u306B\u5012\u3055\u308C\u307E\u3057\u305F\u3002"
+      localizationID: Dialog.Tutorial-4-8
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 21300000, guid: db739741bd2948f4f8576690beb408d6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.No5
+      text: "\u5F7C\u5973\u9054\u3068\u540C\u7B49\u306E\u529B\u3092\u6301\u3063\u305F\u8056\u6838\u6226\u59EB\u304C\u4F55\u4EBA\u3082\u5B58\u5728\u3057\u3001\u4E2D\u306B\u306F\u4E00\u4EBA\u3067\u4E00\u56FD\u306E\u652F\u90E8\u3092\u6570\u6642\u9593\u3067\u58CA\u6EC5\u3055\u305B\u308B\u3088\u3046\u306A\u5727\u5012\u7684\u306A\u5F37\u3055\u3092\u6301\u3064\u8056\u6838\u6226\u59EB\u3082\u5B58\u5728\u3057\u307E\u3059\u3002"
+      localizationID: Dialog.Tutorial-4-9
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 21300000, guid: db739741bd2948f4f8576690beb408d6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u304D\u3089\u3073\u3084\u304B\u306A\u30D3\u30EB\u304C\u305D\u3073\u3048\u7ACB\u3064\u4E00\u65B9\u3001\u9670\u3067\u4EBA\u3005\u306E\u9670\u8B00\u3084\u6B32\u671B\u306E\u6E26\u5DFB\u304F\u90FD\u5E02\u3067\u3042\u308B"
+      localizationID: Dialog.Tutorial-1-2
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 21300000, guid: db739741bd2948f4f8576690beb408d6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 0
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 157
+      y: 22
+      width: 108
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList: []
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 0
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 380
+      y: -2
+      width: 108
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList: []
+    detailOpen: 0
+    _next: 1
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 0
+    _index: 3
+    _nodePosition:
+      serializedVersion: 2
+      x: 811
+      y: -2
+      width: 157
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList: []
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  _choiceList:
+  - _enabled: 0
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 169
+      y: -2
+      width: 120
+      height: 77
+    _nextParagraphIndex: -1
+    nodeName: 
+    text: "\u300C\u2026\u300D"
+    localizeID: Choice.Tutorial-1-7(1)
+  - _enabled: 0
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 169
+      y: 90
+      width: 120
+      height: 77
+    _nextParagraphIndex: -1
+    nodeName: 
+    text: "\u300C\u597D\u304D\u306B\u547C\u3093\u3067\u3082\u3089\u3063\u3066\u69CB\u308F\u306A\u3044\u3002\u300D"
+    localizeID: Choice.Tutorial-1-7(2)
+  - _enabled: 0
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 601
+      y: -2
+      width: 120
+      height: 77
+    _nextParagraphIndex: -1
+    nodeName: "\u300C\u2026\u30A2\u30B8\u30C8\u306B\u3057\u3066\u306F\u968F\u5206\u3068\u9591\u6563\u3068\u3057\u3066\u3044\u308B\u2026\u3002\u300D"
+    text: "\u300C\u2026\u30A2\u30B8\u30C8\u306B\u3057\u3066\u306F\u968F\u5206\u3068\u9591\u6563\u3068\u3057\u3066\u3044\u308B\u2026\u3002\u300D"
+    localizeID: Choice.Tutorial-1-11(1)
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: 251, y: 176, z: 0}
+  havePreLocations: 0
+  newLocations:
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}

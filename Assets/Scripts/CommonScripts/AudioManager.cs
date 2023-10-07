@@ -148,21 +148,12 @@ public class AudioManager : MonoBehaviour
         // make sure the source is active and playing
         if (!activeSource.isPlaying)
             activeSource.Play();
-
-        float t = 0.0f;
-
-        //Fadeout
-        for (t = 0; t < transitionTime; t += Time.deltaTime)
-        {
-            activeSource.volume = (musicVolume - ((t / transitionTime) * musicVolume));
-            yield return null;
-        }
-
-        activeSource.Stop();
+        
         activeSource.clip = newClip;
         activeSource.Play();
 
         // Fadein
+        float t = 0.0f;
         for (t = 0; t < transitionTime; t += Time.deltaTime)
         {
             activeSource.volume = ((t / transitionTime) * musicVolume);

@@ -214,7 +214,8 @@ public class Battler : MonoBehaviour
     /// </summary>
     public int DeductHP(int damage, bool ignoreDefense = false)
     {
-        int realDamage = damage - (ignoreDefense ? 0 : defense);
+        int deduction = (ignoreDefense ? 0 : defense);
+        int realDamage = damage - deduction;
 
         if (realDamage > 0)
         {

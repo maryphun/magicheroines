@@ -1787,6 +1787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915399268180697873}
   - component: {fileID: 1476435146613785615}
+  - component: {fileID: 7496643692817589998}
   m_Layer: 5
   m_Name: Slider [SE Volume]
   m_TagString: Untagged
@@ -1882,6 +1883,35 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7496643692817589998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4640600034367093955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1709825651032162612}
+          m_TargetAssemblyTypeName: OptionPanel, Assembly-CSharp
+          m_MethodName: EndSEVolumeDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4672803073069083955
 GameObject:
   m_ObjectHideFlags: 0

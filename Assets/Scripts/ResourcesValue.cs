@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 [RequireComponent(typeof(TMP_Text))]
 public class ResourcesValue : MonoBehaviour
@@ -13,9 +14,12 @@ public class ResourcesValue : MonoBehaviour
         ResourcesPoint,
     }
 
+    [Header("Setting")]
+    [SerializeField, Range(0.0f, 1.0f)] private float animationTime = 0.5f;
     [SerializeField] private ResourcesType type;
 
-    private TMP_Text text;
+    [HideInInspector] private TMP_Text text;
+    [HideInInspector] private int currentDisplayingValue = 0;
 
     public void Start()
     {
@@ -30,6 +34,12 @@ public class ResourcesValue : MonoBehaviour
 
     private void UpdateValue()
     {
-        this.text.text = type == ResourcesType.Money ? ProgressManager.Instance.GetCurrentMoney().ToString() : ProgressManager.Instance.GetCurrentResearchPoint().ToString();
+        int realValue = type == ResourcesType.Money ? ProgressManager.Instance.GetCurrentMoney() : ProgressManager.Instance.GetCurrentResearchPoint();
+
+        if (realValue != currentDisplayingValue)
+        {
+            this.text.DOCounter(currentDisplayingValue, realValue, animationTime);
+            currentDisplayingValue = realValue;
+        }
     }
 }
