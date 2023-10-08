@@ -185,7 +185,10 @@ public class AudioManager : MonoBehaviour
             yield return null;
         }
 
-        StopCoroutine(musicPlayer);
+        if (musicPlayer != null)
+        {
+            StopCoroutine(musicPlayer);
+        }
         source.Stop();
     }
 

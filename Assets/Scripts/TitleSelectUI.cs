@@ -271,6 +271,10 @@ public class TitleSelectUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow)) keyPrepressed = KeyCode.DownArrow;
         if (Input.GetKeyDown(KeyCode.Return)) keyPrepressed = KeyCode.Return;
 
+        // mouse scroll
+        if (Input.mouseScrollDelta.y > 0.0f) keyPrepressed = KeyCode.UpArrow;
+        if (Input.mouseScrollDelta.y < 0.0f) keyPrepressed = KeyCode.DownArrow;
+
         if (!animationPlaying)
         {
             switch (keyPrepressed)
@@ -293,6 +297,20 @@ public class TitleSelectUI : MonoBehaviour
 
             }
         }
+    }
+
+    public void MouseClickSelect()
+    {
+        keyPrepressed = KeyCode.Return;
+    }
+    public void MouseClickUp()
+    {
+        Debug.Log("Clicked up");
+        keyPrepressed = KeyCode.UpArrow;
+    }
+    public void MouseClickDown()
+    {
+        keyPrepressed = KeyCode.DownArrow;
     }
 
     private void SceneTransition(TitleSelection targetScene)
