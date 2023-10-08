@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(RectTransform))]
 public class BattleBackground : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField] private Vector2 movement;
+    [SerializeField] private float moveSpeed = 0.5f;
 
     [Header("References")]
     [SerializeField] private Canvas mainCanvas;
@@ -28,6 +30,6 @@ public class BattleBackground : MonoBehaviour
         Vector2 mousePosition = (Input.mousePosition / mainCanvas.scaleFactor) / new Vector2(Screen.width, Screen.height) - new Vector2(0.5f, 0.5f);
         mousePosition = new Vector2(Mathf.Clamp(mousePosition.x, -0.5f, 0.5f), Mathf.Clamp(mousePosition.y, -0.5f, 0.5f));
 
-        rect.anchoredPosition = originalPosition + (mousePosition * movement);
+        rect.DOAnchorPos(originalPosition + (mousePosition * movement), moveSpeed);
     }
 }

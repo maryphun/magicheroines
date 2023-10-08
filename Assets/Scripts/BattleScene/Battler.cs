@@ -13,6 +13,7 @@ public class Battler : MonoBehaviour
 
     [Header("Setting")]
     [SerializeField] private BattlerAnimation animations;
+    [SerializeField] private BattlerSoundEffect soundEffects;
     [SerializeField] private VFX attackVFX;
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]

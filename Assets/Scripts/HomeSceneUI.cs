@@ -19,6 +19,11 @@ public class HomeSceneUI : MonoBehaviour
 
     public void ToWorldMapScene()
     {
+        // SEçƒê∂
+        AudioManager.Instance.PlaySFX("SystemPrebattle");
+
+        AudioManager.Instance.PauseMusic();
+
         const float animationTime = 1.0f;
         StartCoroutine(SceneTransition("WorldMap", animationTime));
     }

@@ -815,6 +815,7 @@ GameObject:
   - component: {fileID: 180789209}
   - component: {fileID: 180789211}
   - component: {fileID: 180789210}
+  - component: {fileID: 180789212}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -880,6 +881,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180789208}
   m_CullTransparentMesh: 1
+--- !u!114 &180789212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180789208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7244c0bf2130c7478918257673b9a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {x: 10, y: 10}
+  moveSpeed: 2
+  mainCanvas: {fileID: 1737923946}
 --- !u!1 &195191735
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,6 +7470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c808401b9dd15ce429a32af7542c636b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationTime: 0.5
   type: 0
 --- !u!114 &1844841500
 MonoBehaviour:
@@ -7996,6 +8013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c808401b9dd15ce429a32af7542c636b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationTime: 0.5
   type: 1
 --- !u!114 &1956228189
 MonoBehaviour:

@@ -10,6 +10,10 @@ public class WorldMapUI : MonoBehaviour
 
     private void Start()
     {
+        // BGMÄ¶
+        AudioManager.Instance.PlayMusicWithFade("WorldMap", 6.0f);
+
+        // ‰æ–Ê‘JˆÚ
         AlphaFadeManager.Instance.FadeIn(1.0f);
     }
 
@@ -21,6 +25,9 @@ public class WorldMapUI : MonoBehaviour
 
     IEnumerator SceneTransition(string sceneName, float animationTime)
     {
+        // BGM’â~
+        AudioManager.Instance.StopMusicWithFade(1.0f);
+
         // ƒV[ƒ“‘JˆÚ
         AlphaFadeManager.Instance.FadeOut(animationTime);
         yield return new WaitForSeconds(animationTime);
