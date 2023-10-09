@@ -268,6 +268,15 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         ProgressManager.Instance.SetResearchPoint(Random.Range(200, 9999));
         isDebugModeInitialized = true;
 
+        // 調教できるヒロインを追加
+        PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
+        AddPlayerCharacter(Akiho);
+        Resources.UnloadAsset(Akiho);
+
+        PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
+        AddPlayerCharacter(Rikka);
+        Resources.UnloadAsset(Rikka);
+
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(bread);

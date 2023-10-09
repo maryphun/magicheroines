@@ -56,9 +56,8 @@ public struct PlayerCharacter
     public int levelUp_cost_increment;
 
     [Header("ステータス")]
-    public bool is_heroin;      //　ヒロイン
-    public int max_dark_gauge; //闇落ちゲージ
-    public int max_horny_gauge; //淫乱ゲージ
+    public bool is_heroin;      // ヒロイン
+    public List<CharacterStatus> characterStatus;
 
     [Header("特殊技リスト")]
     public List<Ability> abilities;
@@ -70,6 +69,7 @@ public class Character
     public GameObject battler; // 戦闘像
     public int dark_gauge;
     public int horny_gauge;
+    public int holyCore_ResearchRate;
 
     public string localizedName;
     public int current_level;
@@ -82,6 +82,16 @@ public class Character
     public int current_speed;
 
     public List<Ability> abilities; 
+}
+
+[System.Serializable]
+public struct CharacterStatus
+{
+    [SerializeField] public string moodNameID;
+    [SerializeField] public Color textColor;
+    [SerializeField] public Sprite character;
+    [SerializeField, Range(0, 100)] public int requiredDarkGauge;
+    [SerializeField, Range(0, 100)] public int requiredHornyGauge;
 }
 
 /// <summary>

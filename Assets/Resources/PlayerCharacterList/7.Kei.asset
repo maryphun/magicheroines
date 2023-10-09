@@ -41,5 +41,11 @@ MonoBehaviour:
     is_heroin: 1
     max_dark_gauge: 100
     max_horny_gauge: 100
+    characterStatus:
+    - moodNameID: Mood.Despair
+      textColor: {r: 0.8584906, g: 0, b: 0, a: 1}
+      character: {fileID: 21300000, guid: 711c4994a9fb30e41afaaed36d193bf7, type: 3}
+      requiredDarkGauge: 0
+      requiredHornyGauge: 0
     abilities: []
   battler: {fileID: 6784901170540971542, guid: c9441c52ccbec044b8547e6d29bea473, type: 3}
