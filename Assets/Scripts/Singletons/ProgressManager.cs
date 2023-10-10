@@ -134,7 +134,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             for (int i = 0; i < newCharacter.detail.abilities.Count; i++)
             {
-                if (obj.current_level >= newCharacter.detail.abilities[i].requiredLevel)
+                if (   obj.current_level >= newCharacter.detail.abilities[i].requiredLevel 
+                    && obj.horny_gauge > newCharacter.detail.abilities[i].requiredHornyness)
                 {
                     obj.abilities.Add(newCharacter.detail.abilities[i]);
                 }

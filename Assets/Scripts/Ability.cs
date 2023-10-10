@@ -20,6 +20,7 @@ public class Ability : ScriptableObject
     public string functionName;
     public int cosumeSP;
     public int requiredLevel;
+    public int requiredHornyness; // ˆú—“x—v‹
     public CastType castType;
     public AbilityType abilityType;
 }
