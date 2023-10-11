@@ -134,7 +134,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             for (int i = 0; i < newCharacter.detail.abilities.Count; i++)
             {
-                if (obj.current_level >= newCharacter.detail.abilities[i].requiredLevel)
+                if (   obj.current_level >= newCharacter.detail.abilities[i].requiredLevel 
+                    && obj.horny_gauge > newCharacter.detail.abilities[i].requiredHornyness)
                 {
                     obj.abilities.Add(newCharacter.detail.abilities[i]);
                 }
@@ -267,6 +268,15 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         ProgressManager.Instance.SetMoney(Random.Range(200, 9999));
         ProgressManager.Instance.SetResearchPoint(Random.Range(200, 9999));
         isDebugModeInitialized = true;
+
+        // 調教できるヒロインを追加
+        PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
+        AddPlayerCharacter(Akiho);
+        Resources.UnloadAsset(Akiho);
+
+        PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
+        AddPlayerCharacter(Rikka);
+        Resources.UnloadAsset(Rikka);
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");

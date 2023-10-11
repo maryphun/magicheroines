@@ -76,7 +76,7 @@ public class Battler : MonoBehaviour
         defense = enemy.defense;
         speed = enemy.speed;
         currentLevel = enemy.level;
-        abilities = new List<Ability>();
+        abilities = new List<Ability>(); // TODO: “G‚Ì“ÁŽê‹Z‚ðŽÀ‘•
 
         Initialize();
     }
