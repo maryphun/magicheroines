@@ -55,7 +55,7 @@ System.SideMission,資源調達クエスト
 Names,名詞/名称
 Name.Akiho,笹谷 明穂
 Name.Rikka,水無瀬 六花
-Name.Kei,猫宮 京
+Name.Kei,識宮 京
 Name.Erena,清藤 エレナ
 Name.Nayuta,八雲 那由多
 Name.No5,005号
@@ -126,6 +126,8 @@ Item.Cola,コーラ
 Item.Cola_Info,
 Item.Parfait,パフェ
 Item.Parfait_Info,
+Item.ThrowingKnife,投げナイフ
+Item.ThrowingKnife_Info,戦闘中に敵に投げるための消耗品である。作りが雑。
 Ability,特殊技名とその説明文
 Ability.DeepBreath,深呼吸
 Ability.DeepBreath_Info,体力回復20%

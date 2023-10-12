@@ -120,5 +120,12 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     battleManager.NextTurn(false);
                 });
     }
+
+    public void OnUseThrowingKnife()
+    {
+        const int damage = 50;
+
+        
+    }
     #endregion items
 }
