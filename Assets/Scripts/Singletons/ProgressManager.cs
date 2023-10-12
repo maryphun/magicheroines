@@ -111,6 +111,22 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// 使える仲間キャラのリストを取得
+    /// </summary>
+    public List<Character> GetAllUseableCharacter(bool originalReference = false)
+    {
+        if (originalReference)
+        {
+            return playerData.characters;
+        }
+        else
+        {
+            List<Character> characterListCopy = new List<Character>(playerData.characters);
+            return characterListCopy;
+        }
+    }
+
+    /// <summary>
     /// 新しい仲間追加
     /// </summary>
     public void AddPlayerCharacter(PlayerCharacterDefine newCharacter)
@@ -129,6 +145,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         obj.current_defense = newCharacter.detail.base_defense;
         obj.current_speed = newCharacter.detail.base_speed;
         obj.abilities = new List<Ability>();
+        obj.is_corrupted = !(newCharacter.detail.is_heroin); // ヒロインキャラはとりあえず使用できない
 
         if (newCharacter.detail.abilities.Count > 0)
         {

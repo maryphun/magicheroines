@@ -132,12 +132,13 @@ public class FormationPanel : MonoBehaviour
         float firstPosition = -totalGap * 0.5f;
         for (int i = 0; i < formationSelectIcon.Length; i++)
         {
-            if (i >= characterCount)
-            {
-                // ‚±‚ÌƒLƒƒƒ‰‚Í‚Ü‚¾‚Á‚Ä‚¢‚È‚¢
-                formationSelectIcon[i].gameObject.SetActive(false);
-            }
-            else
+            bool isSelectable = false;
+
+            // •Ò“ü‚Å‚«‚éğŒ
+            if (i >= characterCount) isSelectable = false; // ‚±‚ÌƒLƒƒƒ‰‚Í‚Ü‚¾‚Á‚Ä‚¢‚È‚¢
+            if (allCharacters[i].characterData.is_heroin && !allCharacters[i].is_corrupted) isSelectable = false; // ‚Ü‚¾ˆÅ—‚¿‚Å‚«‚Ä‚¢‚È‚¢
+
+            if (isSelectable)
             {
                 // ‚Á‚Ä‚¢‚é
                 formationSelectIcon[i].gameObject.SetActive(true);

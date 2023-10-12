@@ -51,8 +51,11 @@ public class CharacterBuildingPanel : MonoBehaviour
         {
             int index = characters[i].characterData.characterID;
 
-            // キャラクターが存在しているならアイコンを白くする
-            characterIconSlots[index].transform.Find("Character").GetComponent<Image>().color = Color.white;
+            if (characters[i].is_corrupted || !characters[i].characterData.is_heroin) // ヒロインキャラは闇落ちした後のみ使用御覧できる
+            {
+                // キャラクターが存在しているならアイコンを白くする
+                characterIconSlots[index].transform.Find("Character").GetComponent<Image>().color = Color.white;
+            }
         }
 
         for (int i = 0; i < characterIconSlots.Length; i++)

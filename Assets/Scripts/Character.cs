@@ -81,6 +81,8 @@ public class Character
     public int current_defense;
     public int current_speed;
 
+    public bool is_corrupted;    // ˆÅ—‚¿‚µ‚½‚©
+
     public List<Ability> abilities; 
 }
 
