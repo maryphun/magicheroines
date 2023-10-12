@@ -127,18 +127,16 @@ public class FormationPanel : MonoBehaviour
         FormationSelectionPanel.DOFade(1.0f, formationSelectionPanelAnimationTime);
 
         var allCharacters = ProgressManager.Instance.GetAllCharacter();
-        int characterCount = allCharacters.Count; // キャラクター所持数
+        int characterCount = ProgressManager.Instance.GetAllUsableCharacter().Count; // 使用できるキャラクター所持数
         float totalGap = iconGap * (characterCount-1);
         float firstPosition = -totalGap * 0.5f;
         for (int i = 0; i < formationSelectIcon.Length; i++)
         {
-            bool isSelectable = false;
-
             // 編入できる条件
-            if (i >= characterCount) isSelectable = false; // このキャラはまだ持っていない
-            if (allCharacters[i].characterData.is_heroin && !allCharacters[i].is_corrupted) isSelectable = false; // まだ闇落ちできていない
+            if (i >= characterCount) continue; // このキャラはまだ持っていない
+            if (allCharacters[i].characterData.is_heroin && !allCharacters[i].is_corrupted) continue; // まだ闇落ちできていない
 
-            if (isSelectable)
+            // 編入できるキャラ
             {
                 // 持っている
                 formationSelectIcon[i].gameObject.SetActive(true);

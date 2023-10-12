@@ -113,17 +113,11 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 使える仲間キャラのリストを取得
     /// </summary>
-    public List<Character> GetAllUseableCharacter(bool originalReference = false)
+    public List<Character> GetAllUsableCharacter()
     {
-        if (originalReference)
-        {
-            return playerData.characters;
-        }
-        else
-        {
-            List<Character> characterListCopy = new List<Character>(playerData.characters);
-            return characterListCopy;
-        }
+        List<Character> usableCharacter = playerData.characters.Where(data => data.is_corrupted || !data.characterData.is_heroin).ToList();
+
+        return usableCharacter;
     }
 
     /// <summary>
