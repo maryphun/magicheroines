@@ -4105,6 +4105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f02fd6c5f76041a7d5e8ada33fed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDebug: 1
   characterSpace: 150
   turnEndDelay: 1.1
   enemyAIDelay: 1.2
@@ -6121,6 +6122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {x: 2, y: 1}
+  moveSpeed: 0.5
   mainCanvas: {fileID: 1458978426}
 --- !u!1 &1840235566
 GameObject:

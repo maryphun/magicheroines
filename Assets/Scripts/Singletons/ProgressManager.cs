@@ -298,6 +298,10 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(croissant);
         Resources.UnloadAsset(croissant);
 
+        ItemDefine knife = Resources.Load<ItemDefine>("ItemList/投げナイフ");
+        for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(knife);
+        Resources.UnloadAsset(knife);
+
         // 敵キャラを設置
         if (addEnemy)
         {

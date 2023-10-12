@@ -132,11 +132,13 @@ public class BattleSceneTutorial : MonoBehaviour
                     break;
                 case TutorialStep.SkillLearn:
                     currentTween = SequenceText("Dialog.Tutorial-3-9");
+                    textPanel.DOSizeDelta(new Vector2(1037.0f, 90.0f), 1.0f);
                     step = TutorialStep.Item;
                     DisplayObject(itemBtn);
                     break;
                 case TutorialStep.Item:
                     currentTween = SequenceText("Dialog.Tutorial-3-10");
+                    textPanel.DOSizeDelta(new Vector2(615.0f, 90.0f), 1.0f);
                     step = TutorialStep.Idle;
                     DisplayObject(idleBtn);
                     break;

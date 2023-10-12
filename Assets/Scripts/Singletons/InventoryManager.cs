@@ -92,6 +92,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private bool isInitialized = false;
     [SerializeField] private bool isDescriptionShowing = false;
     [SerializeField] private bool isOpened = false;
+    [SerializeField] private bool isHiding = false;
     [SerializeField] private RectTransform[] itemSlots;
     [SerializeField] private Action onCloseCallback;
     [SerializeField] private List<Tuple<RectTransform, ItemDefine>> itemsInInventory;
@@ -138,6 +139,7 @@ public class InventoryManager : MonoBehaviour
         itemDescription.SetSiblingIndex(itemDescription.transform.parent.childCount);
 
         isOpened = false;
+        isHiding = false;
         isDescriptionShowing = false;
         isInitialized = true;
     }
@@ -183,12 +185,14 @@ public class InventoryManager : MonoBehaviour
         Inventory.Instance.GetAlphaImage().DOFade(fadeAlpha, animTime);
         itemDescription.GetComponent<CanvasGroup>().alpha = 0.0f;
         isOpened = true;
+        isHiding = false;
     }
 
     public void CloseInventory()
     {
         if (!isOpened) return;
         isOpened = false;
+        isHiding = false;
 
         onCloseCallback?.Invoke();
         panel.DOFade(0.0f, animTime);
@@ -204,6 +208,16 @@ public class InventoryManager : MonoBehaviour
         }
         itemsInInventory.Clear();
         itemsInInventory = null;
+    }
+
+    public void HideInventory()
+    {
+        if (!isOpened) return;
+        if (isHiding) return;
+
+        isHiding = true;
+
+
     }
 
     /// <summary>
@@ -246,9 +260,6 @@ public class InventoryManager : MonoBehaviour
                 {
                     // effect
                     UseItem(item);
-
-                    // remove this item from list
-                    ProgressManager.Instance.RemoveItemFromInventory(item.Item2);
                 }
 
                 // écÇËÇÃÉãÅ[ÉvÇè»ó™
@@ -269,6 +280,7 @@ public class InventoryManager : MonoBehaviour
         {
             case CastType.SelfCast:
                 ItemExecute.Instance.Invoke(item.Item2.functionName, 0);
+                ProgressManager.Instance.RemoveItemFromInventory(item.Item2);
                 CloseInventory();
                 break;
             case CastType.Teammate:
