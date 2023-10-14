@@ -146,7 +146,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
             for (int i = 0; i < newCharacter.detail.abilities.Count; i++)
             {
                 if (   obj.current_level >= newCharacter.detail.abilities[i].requiredLevel 
-                    && obj.horny_gauge > newCharacter.detail.abilities[i].requiredHornyness)
+                    && obj.horny_gauge >= newCharacter.detail.abilities[i].requiredHornyness)
                 {
                     obj.abilities.Add(newCharacter.detail.abilities[i]);
                 }
@@ -301,6 +301,10 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         ItemDefine knife = Resources.Load<ItemDefine>("ItemList/“Š‚°ƒiƒCƒt");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(knife);
         Resources.UnloadAsset(knife);
+
+        ItemDefine aid = Resources.Load<ItemDefine>("ItemList/‹~‹}” ");
+        for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(aid);
+        Resources.UnloadAsset(aid);
 
         // “GƒLƒƒƒ‰‚ðÝ’u
         if (addEnemy)

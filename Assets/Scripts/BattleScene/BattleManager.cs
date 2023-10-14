@@ -143,10 +143,13 @@ public class Battle : MonoBehaviour
         {
             // 最初のターン
             // キャラクターが位置に付く
-            playerFormation.DOLocalMoveX(-formationPositionX, 0.5f);
-            enemyFormation.DOLocalMoveX(formationPositionX, 0.5f);
+            playerFormation.DOLocalMoveX(-formationPositionX, 0.5f).SetEase(Ease.OutQuart);
+            enemyFormation.DOLocalMoveX(formationPositionX, 0.5f).SetEase(Ease.OutQuart);
             playerFormation.GetComponent<CanvasGroup>().DOFade(1.0f, 0.25f);
             enemyFormation.GetComponent<CanvasGroup>().DOFade(1.0f, 0.25f);
+
+            // SE
+            AudioManager.Instance.PlaySFX("FormationCharge");
 
             // チュートリアルに入る
             if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
@@ -180,35 +183,39 @@ public class Battle : MonoBehaviour
     }
 
     // マウスが指しているところがBattlerが存在しているなら返す
-    public Battler GetBattlerByPosition(Vector2 mousePosition, bool enemyOnly, bool aliveOnly)
+    public Battler GetBattlerByPosition(Vector2 mousePosition, bool allowTeammate, bool allowEnemy, bool aliveOnly)
     {
-        for (int i = 0; i < enemyList.Count; i++)
+        if (allowEnemy)
         {
-            Vector2 size = enemyList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
-            Vector2 position = enemyList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
-            if (   (enemyList[i].isAlive || !aliveOnly)
-                && mousePosition.x > position.x - size.x * 0.5f 
-                && mousePosition.x < position.x + size.x * 0.5f
-                && mousePosition.y > position.y - size.y * 0.5f
-                && mousePosition.y < position.y + size.y * 0.5f)
+            for (int i = 0; i < enemyList.Count; i++)
             {
-                return enemyList[i];
+                Vector2 size = enemyList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
+                Vector2 position = enemyList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
+                if ((enemyList[i].isAlive || !aliveOnly)
+                    && mousePosition.x > position.x - size.x * 0.5f
+                    && mousePosition.x < position.x + size.x * 0.5f
+                    && mousePosition.y > position.y - size.y * 0.5f
+                    && mousePosition.y < position.y + size.y * 0.5f)
+                {
+                    return enemyList[i];
+                }
             }
         }
 
-        if (enemyOnly) return null;
-
-        for (int i = 0; i < characterList.Count; i++)
+        if (allowTeammate)
         {
-            Vector2 size = characterList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
-            Vector2 position = characterList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
-            if (   (characterList[i].isAlive || !aliveOnly)
-                && mousePosition.x > position.x - size.x * 0.5f 
-                && mousePosition.x < position.x + size.x * 0.5f
-                && mousePosition.y > position.y - size.y * 0.5f
-                && mousePosition.y < position.y + size.y * 0.5f)
+            for (int i = 0; i < characterList.Count; i++)
             {
-                return characterList[i];
+                Vector2 size = characterList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
+                Vector2 position = characterList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
+                if ((characterList[i].isAlive || !aliveOnly)
+                    && mousePosition.x > position.x - size.x * 0.5f
+                    && mousePosition.x < position.x + size.x * 0.5f
+                    && mousePosition.y > position.y - size.y * 0.5f
+                    && mousePosition.y < position.y + size.y * 0.5f)
+                {
+                    return characterList[i];
+                }
             }
         }
 
@@ -249,10 +256,12 @@ public class Battle : MonoBehaviour
 
         Battler currentBattler = turnBaseManager.GetCurrentTurnBattler();
 
+        if (target == currentBattler) return; // 自分に指すことはないだろう
+
         var originPos = currentBattler.GetGraphicRectTransform().position;
         originPos = currentBattler.isEnemy ? new Vector2(originPos.x - currentBattler.GetCharacterSize().x * 0.25f, originPos.y + currentBattler.GetCharacterSize().y * 0.5f) : new Vector2(originPos.x + currentBattler.GetCharacterSize().x * 0.25f, originPos.y + currentBattler.GetCharacterSize().y * 0.5f);
         var targetPos = target.GetGraphicRectTransform().position;
-        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.25f, targetPos.y + target.GetCharacterSize().y * 0.5f) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.25f, targetPos.y + target.GetCharacterSize().y * 0.5f);
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.25f, targetPos.y + target.GetCharacterSize().y * 0.5f) : new Vector2(targetPos.x, targetPos.y + target.GetCharacterSize().y * 0.5f);
         var length = Vector2.Distance(originPos, targetPos);
 
         actionTargetArrow.sizeDelta = new Vector2(actionTargetArrow.rect.width, 100.0f);
@@ -304,10 +313,10 @@ public class Battle : MonoBehaviour
                 {
                     // text
                     var floatingText = Instantiate(floatingTextOrigin, battler.transform);
-                    floatingText.Init(1.0f, battler.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), healAmount.ToString(), 64, new Color(0.75f, 0.75f, 1.00f));
+                    floatingText.Init(2f, battler.GetMiddleGlobalPosition(), new Vector2(0.0f, 150.0f), "+"+healAmount.ToString(), 64, new Color(0.75f, 0.75f, 1.00f));
 
                     // play SE
-                    AudioManager.Instance.PlaySFX("PowerCharge", 0.4f);
+                    AudioManager.Instance.PlaySFX("PowerCharge");
 
                     // effect
                     battler.AddSP(healAmount);
@@ -352,7 +361,7 @@ public class Battle : MonoBehaviour
 
         // create floating text
         var floatingText = Instantiate(floatingTextOrigin, target.transform);
-        floatingText.Init(1.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
+        floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
 
         yield return new WaitForSeconds(attackAnimPlayTime);
 

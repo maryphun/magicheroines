@@ -942,6 +942,10 @@ MonoBehaviour:
   isInitialized: 0
   isDescriptionShowing: 0
   isOpened: 0
+  isHiding: 0
+  isSelectingEnemy: 0
+  isSelectingTeammate: 0
+  selectingItem: {fileID: 0}
   itemSlots: []
 --- !u!1 &5758298723872609202
 GameObject:

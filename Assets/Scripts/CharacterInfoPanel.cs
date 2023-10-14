@@ -99,7 +99,7 @@ public class CharacterInfoPanel : MonoBehaviour
 
         {
             Vector3 mousePosition = Input.mousePosition / mainCanvas.scaleFactor;
-            var obj = (battleManager.GetBattlerByPosition(mousePosition, false, true));
+            var obj = (battleManager.GetBattlerByPosition(mousePosition, true, true, true));
             if (obj != null)
             {
                 SetCharacter(obj);

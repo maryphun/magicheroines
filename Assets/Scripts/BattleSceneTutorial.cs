@@ -23,6 +23,8 @@ public class BattleSceneTutorial : MonoBehaviour
     [SerializeField] private TutorialStep step;
     [SerializeField] private GameObject lastDisplayingObject = null;
     [SerializeField] private bool isPlayingTutorial = false;
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private bool isSkipping = false;
 
     public bool IsPlayingTutorial { get { return isPlayingTutorial; } }
 
@@ -65,6 +67,9 @@ public class BattleSceneTutorial : MonoBehaviour
                     currentTween = tutorialText.DOText(LocalizationManager.Localize("Dialog.Tutorial-3-1"), 1.0f);
                     StartCoroutine(WaitForInput());
                     step = TutorialStep.Basic;
+
+                    // SE
+                    audio = AudioManager.Instance.PlaySFX("TextDisplay");
                 });
     }
 
@@ -173,7 +178,9 @@ public class BattleSceneTutorial : MonoBehaviour
 
     bool IsButtonDown()
     {
-        return Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space);
+        if (isSkipping || !isPlayingTutorial) return false;
+
+        return (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space));
     }
 
     private void DisplayObject(GameObject origin)
@@ -222,6 +229,8 @@ public class BattleSceneTutorial : MonoBehaviour
 
     private Tween SequenceText(string localizeID)
     {
+        if (audio) audio.Stop();
+
         var sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
         {
@@ -235,9 +244,31 @@ public class BattleSceneTutorial : MonoBehaviour
             tutorialText.text = string.Empty;
 
             string newText = LocalizationManager.Localize(localizeID);
-            tutorialText.DOText(newText, newText.Length * textInterval, true);
+            tutorialText.DOText(newText, newText.Length * textInterval, true).SetEase(Ease.Linear).OnComplete(() => { if (audio) audio.Stop(); });
+
+            // SE
+            audio = AudioManager.Instance.PlaySFX("TextDisplay");
         });
 
         return sequence;
+    }
+
+    public void SkipTutorial()
+    {
+        step = TutorialStep.End;
+
+        // End Battle Tutorial
+        tutorialUI.DOFade(0.0f, 1.0f);
+        tutorialUI.blocksRaycasts = false;
+        tutorialUI.interactable = false;
+        isPlayingTutorial = false;
+
+        if (audio) audio.Stop();
+        AudioManager.Instance.PlaySFX("SystemDecide");
+    }
+
+    public void MouseOnHoverSkipButton(bool value)
+    {
+        isSkipping = value;
     }
 }

@@ -55,6 +55,18 @@ public class Inventory
         fadeAlpha.rectTransform.anchoredPosition = new Vector2(0.0f, 0.0f);
         fadeAlpha.raycastTarget = false;
 
+        // Create Tips Text
+        origin = Resources.Load("Prefabs/Tips");
+        var tip = (GameObject)GameObject.Instantiate(origin);
+        tip.name = "Tips";
+        tip.transform.SetParent(canvas.transform);
+        tips = tip.GetComponent<TMP_Text>();
+        tips.rectTransform.anchoredPosition = Vector3.zero;
+        tips.raycastTarget = false;
+        tips.text = LocalizationManager.Localize("Battle.Cancel");
+        tips.color = Color.red;
+        tips.alpha = 0.0f;
+
         // Create Object (Inventory UI)
         obj.transform.SetParent(canvas.transform);
         obj.GetComponent<RectTransform>().sizeDelta = new Vector2(1320.0f, 580.0f);
@@ -70,7 +82,17 @@ public class Inventory
         return fadeAlpha;
     }
 
+    public void ShowTipsText()
+    {
+        tips.DOFade(1.0f, 0.25f);
+    }
+    public void HideTipsText()
+    {
+        tips.DOFade(0.0f, 0.25f);
+    }
+
     private Image fadeAlpha;
+    private TMP_Text tips;
     public Canvas canvasObj = null;
     public InventoryManager obj;
 }
@@ -93,6 +115,9 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private bool isDescriptionShowing = false;
     [SerializeField] private bool isOpened = false;
     [SerializeField] private bool isHiding = false;
+    [SerializeField] private bool isSelectingEnemy = false;
+    [SerializeField] private bool isSelectingTeammate = false;
+    [SerializeField] private ItemDefine selectingItem;
     [SerializeField] private RectTransform[] itemSlots;
     [SerializeField] private Action onCloseCallback;
     [SerializeField] private List<Tuple<RectTransform, ItemDefine>> itemsInInventory;
@@ -140,6 +165,8 @@ public class InventoryManager : MonoBehaviour
 
         isOpened = false;
         isHiding = false;
+        isSelectingEnemy = false;
+        isSelectingTeammate = false;
         isDescriptionShowing = false;
         isInitialized = true;
     }
@@ -216,8 +243,22 @@ public class InventoryManager : MonoBehaviour
         if (isHiding) return;
 
         isHiding = true;
+        Inventory.Instance.GetAlphaImage().DOFade(0.0f, animTime);
+        panel.DOFade(0.0f, animTime);
+        panel.interactable = false;
+        panel.blocksRaycasts = false;
+    }
 
+    public void UnhideInventory()
+    {
+        if (!isOpened) return;
+        if (!isHiding) return;
 
+        isHiding = false;
+        Inventory.Instance.GetAlphaImage().DOFade(fadeAlpha, animTime);
+        panel.DOFade(1.0f, animTime);
+        panel.interactable = true;
+        panel.blocksRaycasts = true;
     }
 
     /// <summary>
@@ -230,7 +271,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if (!isOpened || !isInitialized) return;
+        if (!isOpened || !isInitialized || isHiding) return;
 
         // マウスクリックを検知
         Vector3 mousePosition = Input.mousePosition / parent.scaleFactor;
@@ -273,6 +314,76 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    private IEnumerator SelectingTarget(bool isTeammateAllowed, bool isEnemyAllowed, bool isAliveOnly)
+    {
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemActionPanel");
+
+        var battleManager = FindObjectOfType<Battle>(); // lazy implementation...
+
+        // カーソルを変更
+        var texture = Resources.Load<Texture2D>("Icon/focus");
+        Cursor.SetCursor(texture, new Vector2(texture.width * 0.5f, texture.height * 0.5f), CursorMode.Auto);
+        bool isSelectingTarget = false;
+        bool isFinished = false;
+
+        // Tips
+        Inventory.Instance.ShowTipsText();
+
+        do
+        {
+            // arrow that follow the mouse
+            Vector3 mousePosition = Input.mousePosition / parent.scaleFactor;
+            var targetBattler = battleManager.GetBattlerByPosition(mousePosition, isTeammateAllowed, isEnemyAllowed, isAliveOnly);
+
+            if (!ReferenceEquals(targetBattler, null))
+            {
+                isSelectingTarget = true;
+                battleManager.PointTargetWithArrow(targetBattler, 0.25f);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isFinished = true;
+
+                    // 選択した敵
+                    ItemExecute.Instance.SetTargetBattler(targetBattler);
+
+                    // アイテムを使用
+                    ItemExecute.Instance.Invoke(selectingItem.functionName, 0);
+                    ProgressManager.Instance.RemoveItemFromInventory(selectingItem);
+                    CloseInventory();
+
+                    // カーソルを戻す
+                    Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                    battleManager.UnPointArrow(0.25f);
+                }
+            }
+            else if (isSelectingTarget)
+            {
+                isSelectingTarget = false;
+                battleManager.UnPointArrow(0.25f);
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                // SE再生
+                AudioManager.Instance.PlaySFX("SystemActionCancel");
+
+                // キャンセル
+                isFinished = true;
+                battleManager.UnPointArrow(0.25f);
+                UnhideInventory();
+
+                // カーソルを戻す
+                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            }
+
+            yield return null;
+        } while (!isFinished);
+
+        // Hide Tips
+        Inventory.Instance.HideTipsText();
+    }
+
     private void UseItem(Tuple<RectTransform, ItemDefine> item)
     {
         ItemExecute.Instance.SetItemIcon(item.Item2.Icon);
@@ -284,10 +395,16 @@ public class InventoryManager : MonoBehaviour
                 CloseInventory();
                 break;
             case CastType.Teammate:
-
+                isSelectingTeammate = true;
+                HideInventory();
+                selectingItem = item.Item2;
+                StartCoroutine(SelectingTarget(true, false, true));
                 break;
             case CastType.Enemy:
-
+                isSelectingEnemy = true;
+                HideInventory();
+                selectingItem = item.Item2;
+                StartCoroutine(SelectingTarget(false, true, true));
                 break;
             default:
                 break;

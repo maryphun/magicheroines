@@ -192,7 +192,7 @@ public class AudioManager : MonoBehaviour
         source.Stop();
     }
 
-    public void PlaySFX(string clipname)
+    public AudioSource PlaySFX(string clipname)
     {
         AudioClip clipToPlay = NameToSEClip(clipname);
 
@@ -200,6 +200,8 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.PlayOneShot(clipToPlay, masterVolumeSE);
         }
+
+        return sfxSource;
     }
 
     public void PlaySFXDelay(string clipname, float delay)
