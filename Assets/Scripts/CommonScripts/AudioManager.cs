@@ -204,6 +204,11 @@ public class AudioManager : MonoBehaviour
         return sfxSource;
     }
 
+    public AudioSource GetSFXSource()
+    {
+        return sfxSource;
+    }
+
     public void PlaySFXDelay(string clipname, float delay)
     {
         StartCoroutine(DelaySFX(clipname, delay));

@@ -183,6 +183,9 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
                     // play SE
                     AudioManager.Instance.PlaySFX("KnifeAttack");
+
+                    // VFX
+                    VFXSpawner.SpawnVFX("BloodImpact", target.transform, target.GetMiddleGlobalPosition());
                 })
                 .AppendInterval(0.2f)
                 .AppendCallback(() =>

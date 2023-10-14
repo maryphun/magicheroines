@@ -20,6 +20,7 @@ public class AbilityPanel : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGrp;
     [SerializeField] private CanvasGroup descriptionPanel;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private Battle battleManager;
     [SerializeField] private TMP_Text description_Name;   //<　技名
     [SerializeField] private TMP_Text description_Target; //<　効果対象
     [SerializeField] private TMP_Text description_Type;   //<　機能
@@ -27,6 +28,7 @@ public class AbilityPanel : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private bool isOpen = false;
+    [SerializeField] private bool isHiding = false;
     [SerializeField] private Action onCloseCallback;
     [SerializeField] private Tuple<Ability, Button>[] buttonList;
     [SerializeField] private bool isDescriptionShowing = false;
@@ -36,6 +38,7 @@ public class AbilityPanel : MonoBehaviour
     {
         rectTransform.anchoredPosition = new Vector3(rectTransform.anchoredPosition.x, -(rectTransform.sizeDelta.y+closeButton.sizeDelta.y), 0.0f);
         isOpen = false;
+        isHiding = false;
         isDescriptionShowing = false;
         abilityButton.gameObject.SetActive(false);
 
@@ -72,10 +75,39 @@ public class AbilityPanel : MonoBehaviour
             buttonList[i].Item2.GetComponent<RectTransform>().localPosition = new Vector3(0.0f, 50.0f + (i * spacePerAbility), 0.0f);
             buttonList[i].Item2.transform.GetChild(0).GetComponent<TMP_Text>().text = abilityName;
             buttonList[i].Item2.gameObject.SetActive(true);
+            Ability ability = buttonList[i].Item1;
+            buttonList[i].Item2.onClick.AddListener(delegate { OnClickAbility(ability); });
+
+            // 使用できるかをチェック
+            buttonList[i].Item2.interactable = battleManager.GetCurrentBattler().current_mp >= buttonList[i].Item1.consumeSP;
         }
 
         // setup close button
         closeButton.anchoredPosition = new Vector3(closeButton.anchoredPosition.x, (rectTransform.sizeDelta.y * 0.5f) + (closeButton.sizeDelta.y * 0.5f), 0.0f);
+    }
+
+    public void OnClickAbility(Ability ability)
+    {
+        HideDescription();
+
+        switch (ability.castType)
+        {
+            case CastType.SelfCast:
+                AbilityExecute.Instance.Invoke(ability.functionName, 0);
+                battleManager.GetCurrentBattler().DeductSP(ability.consumeSP);
+                ClosePanel();
+                break;
+            case CastType.Teammate:
+                StartCoroutine(SelectingTarget(ability, true, false, true));
+                HidePanel();
+                break;
+            case CastType.Enemy:
+                StartCoroutine(SelectingTarget(ability, false, true, true));
+                HidePanel();
+                break;
+            default:
+                break;
+        }
     }
 
     public void OpenPanel(Action callbackWhenClose)
@@ -85,6 +117,7 @@ public class AbilityPanel : MonoBehaviour
         onCloseCallback = callbackWhenClose;
         rectTransform.DOAnchorPosY(0.0f, animationTime);
         DOTween.Sequence().AppendInterval(animationTime * 0.75f).AppendCallback(() => { isOpen = true; }); // 完全に開いてから次のを操作受け付ける
+        isHiding = false;
 
         canvasGrp.DOFade(1.0f, animationTime);
         canvasGrp.interactable = true;
@@ -97,6 +130,7 @@ public class AbilityPanel : MonoBehaviour
 
         rectTransform.DOAnchorPosY(-(rectTransform.sizeDelta.y+closeButton.sizeDelta.y), animationTime);
         isOpen = false;
+        isHiding = false;
 
         if (!ReferenceEquals(buttonList, null))
         {
@@ -115,6 +149,33 @@ public class AbilityPanel : MonoBehaviour
         canvasGrp.blocksRaycasts = false;
 
         onCloseCallback?.Invoke();
+    }
+
+
+    private void HidePanel()
+    {
+        if (!isOpen) return;
+        if (isHiding) return;
+
+        rectTransform.DOAnchorPosY(-(rectTransform.sizeDelta.y + closeButton.sizeDelta.y), animationTime);
+        isOpen = false;
+        isHiding = true;
+
+        canvasGrp.DOFade(0.0f, animationTime);
+        canvasGrp.interactable = false;
+        canvasGrp.blocksRaycasts = false;
+    }
+
+    private void UnhidePanel()
+    {
+        if (!isOpen) return;
+        if (!isHiding) return;
+
+        rectTransform.DOAnchorPosY(-(rectTransform.sizeDelta.y + closeButton.sizeDelta.y), animationTime);
+
+        canvasGrp.DOFade(1.0f, animationTime);
+        canvasGrp.interactable = true;
+        canvasGrp.blocksRaycasts = true;
     }
 
     private void Update()
@@ -228,6 +289,74 @@ public class AbilityPanel : MonoBehaviour
     {
         isDescriptionShowing = false;
         descriptionPanel.DOFade(0.0f, 0.1f);
+    }
+
+    private IEnumerator SelectingTarget(Ability ability, bool isTeammateAllowed, bool isEnemyAllowed, bool isAliveOnly)
+    {
+        // SE再生
+        AudioManager.Instance.PlaySFX("SystemActionPanel");
+
+        // カーソルを変更
+        var texture = Resources.Load<Texture2D>("Icon/focus");
+        Cursor.SetCursor(texture, new Vector2(texture.width * 0.5f, texture.height * 0.5f), CursorMode.Auto);
+        bool isSelectingTarget = false;
+        bool isFinished = false;
+
+        // Tips
+        Inventory.Instance.ShowTipsText();
+
+        do
+        {
+            // arrow that follow the mouse
+            Vector3 mousePosition = Input.mousePosition / canvas.scaleFactor;
+            var targetBattler = battleManager.GetBattlerByPosition(mousePosition, isTeammateAllowed, isEnemyAllowed, isAliveOnly);
+
+            if (!ReferenceEquals(targetBattler, null))
+            {
+                isSelectingTarget = true;
+                battleManager.PointTargetWithArrow(targetBattler, 0.25f);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    isFinished = true;
+
+                    // 選択した敵
+                    AbilityExecute.Instance.SetTargetBattler(targetBattler);
+
+                    // 技を使用
+                    AbilityExecute.Instance.Invoke(ability.functionName, 0);
+                    battleManager.GetCurrentBattler().DeductSP(ability.consumeSP);
+                    ClosePanel();
+
+                    // カーソルを戻す
+                    Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+                    battleManager.UnPointArrow(0.25f);
+                }
+            }
+            else if (isSelectingTarget)
+            {
+                isSelectingTarget = false;
+                battleManager.UnPointArrow(0.25f);
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                // SE再生
+                AudioManager.Instance.PlaySFX("SystemActionCancel");
+
+                // キャンセル
+                isFinished = true;
+                battleManager.UnPointArrow(0.25f);
+                UnhidePanel();
+
+                // カーソルを戻す
+                Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            }
+
+            yield return null;
+        } while (!isFinished);
+
+        // Hide Tips
+        Inventory.Instance.HideTipsText();
     }
 
     public float GetAnimTime()

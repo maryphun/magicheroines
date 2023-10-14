@@ -18,7 +18,7 @@ public class Ability : ScriptableObject
     public string abilityNameID;
     public string descriptionID;
     public string functionName;
-    public int cosumeSP;
+    public int consumeSP;
     public int requiredLevel;
     public int requiredHornyness; // ˆú—“x—v‹
     public CastType castType;

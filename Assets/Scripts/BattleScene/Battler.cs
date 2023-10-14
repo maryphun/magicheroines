@@ -240,7 +240,6 @@ public class Battler : MonoBehaviour
                             var obj = Instantiate(deadVFX, graphic.transform);
                             obj.GetComponent<RectTransform>().position = GetMiddleGlobalPosition();
 
-
                             // create icon
                             Image img = new GameObject("DeadIcon").AddComponent<Image>();
                             img.sprite = Resources.Load<Sprite>("Icon/Dead");
@@ -249,8 +248,13 @@ public class Battler : MonoBehaviour
                             img.rectTransform.position = GetMiddleGlobalPosition();
                             img.color = new Color(0.58f, 0.58f, 0.58f, 0.0f);
                             img.DOFade(1.0f, 0.75f);
+
+                            // play SE
+                            AudioManager.Instance.PlaySFX("Retired");
                         });
             }
+
+            FindObjectOfType<Battle>().UpdateTurnBaseManager(false);
             return realDamage;
         }
 
@@ -273,6 +277,15 @@ public class Battler : MonoBehaviour
     public void AddSP(int amount)
     {
         current_mp = Mathf.Min(current_mp + amount, max_mp);
+        UpdateMPBar();
+    }
+
+    /// <summary>
+    /// SPè¡ñ’
+    /// </summary>
+    public void DeductSP(int amount)
+    {
+        current_mp = Mathf.Max(current_mp - amount, 0);
         UpdateMPBar();
     }
 

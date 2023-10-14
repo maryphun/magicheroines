@@ -229,8 +229,6 @@ public class BattleSceneTutorial : MonoBehaviour
 
     private Tween SequenceText(string localizeID)
     {
-        if (audio) audio.Stop();
-
         var sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
         {
@@ -239,6 +237,8 @@ public class BattleSceneTutorial : MonoBehaviour
         .AppendInterval(0.25f)
         .AppendCallback(() =>
         {
+            if (audio) audio.Stop();
+
             tutorialText.DOComplete();
             tutorialText.alpha = 1.0f;
             tutorialText.text = string.Empty;

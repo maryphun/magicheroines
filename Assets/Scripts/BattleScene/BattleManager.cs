@@ -54,7 +54,9 @@ public class Battle : MonoBehaviour
         List<EnemyDefine> enemyList = SetupEnemy.GetEnemyList(true);
         InitializeBattleScene(actors, enemyList);
 
-        ItemExecute.Instance.Initialize(this); // Send references
+        // Send references
+        ItemExecute.Instance.Initialize(this);
+        AbilityExecute.Instance.Initialize(this);
     }
 
     private void Start()
@@ -338,6 +340,9 @@ public class Battle : MonoBehaviour
         var originalPos = attacker.GetComponent<RectTransform>().position;
         attacker.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
 
+        // play SE
+        AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
         // change character hirachy temporary
         attacker.transform.SetParent(target.transform);
@@ -355,9 +360,6 @@ public class Battle : MonoBehaviour
         AudioManager.Instance.PlaySFX("Attacked", 0.4f);
         
         target.Shake(attackAnimPlayTime + characterMoveTime);
-
-        // check turns
-        UpdateTurnBaseManager(false);
 
         // create floating text
         var floatingText = Instantiate(floatingTextOrigin, target.transform);
