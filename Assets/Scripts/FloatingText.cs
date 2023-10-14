@@ -23,7 +23,7 @@ public class FloatingText : MonoBehaviour
         Destroy(gameObject, time);
 
         text.rectTransform.localScale = Vector3.zero;
-        text.rectTransform.DOScale(1.25f, 0.25f).OnComplete(() => { text.rectTransform.DOScale(1.0f, 0.1f); });
+        text.rectTransform.DOScale(1.25f, 0.5f).SetEase(Ease.OutElastic);
         var sequence = DOTween.Sequence(); //Sequenceê∂ê¨
                                            //TweenÇÇ¬Ç»Ç∞ÇÈ
         sequence.Append(text.DOFade(0.0f, time * 0.5f)).SetDelay(time * 0.5f);
