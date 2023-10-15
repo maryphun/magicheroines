@@ -151,7 +151,7 @@ public class Battle : MonoBehaviour
             enemyFormation.GetComponent<CanvasGroup>().DOFade(1.0f, 0.25f);
 
             // SE
-            AudioManager.Instance.PlaySFX("FormationCharge");
+            AudioManager.Instance.PlaySFX("FormationCharge", 0.5f);
 
             // チュートリアルに入る
             if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
@@ -348,26 +348,53 @@ public class Battle : MonoBehaviour
         attacker.transform.SetParent(target.transform);
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
 
-        attacker.PlayAnimation(BattlerAnimationType.attack);
-        target.PlayAnimation(BattlerAnimationType.attacked);
         attacker.SpawnAttackVFX(target);
 
-        // calculate damage
-        int realDamge = Mathf.RoundToInt((float)(attacker.attack - target.defense) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
-        target.DeductHP(realDamge, true);
+        // attack miss?
+        bool isMiss = (UnityEngine.Random.Range(0, 100) > CalculateHitChance(attacker.speed - target.speed));
 
-        // play SE
-        AudioManager.Instance.PlaySFX("Attacked", 0.4f);
-        
-        target.Shake(attackAnimPlayTime + characterMoveTime);
+        if (!isMiss)
+        {
+            // calculate damage
+            int realDamge = Mathf.RoundToInt((float)(attacker.attack - target.defense) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
+            target.DeductHP(realDamge, true);
 
-        // create floating text
-        var floatingText = Instantiate(floatingTextOrigin, target.transform);
-        floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
+            // play SE
+            AudioManager.Instance.PlaySFX("Attacked", 0.4f);
+
+            // animation
+            target.Shake(attackAnimPlayTime + characterMoveTime);
+            attacker.PlayAnimation(BattlerAnimationType.attack);
+            target.PlayAnimation(BattlerAnimationType.attacked);
+
+            // create floating text
+            var floatingText = Instantiate(floatingTextOrigin, target.transform);
+            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
+        }
+        else
+        {
+            // play SE
+            AudioManager.Instance.PlaySFX("Miss", 0.5f);
+
+            // animation
+            RectTransform targetGraphic = target.GetGraphicRectTransform();
+            float enemyPos = targetGraphic.localPosition.x;
+            targetGraphic.DOLocalMoveX(enemyPos + ((target.transform.position.x - attacker.transform.position.x) * 0.5f), attackAnimPlayTime).SetEase(Ease.InOutBounce)
+                .OnComplete(() => { targetGraphic.DOLocalMoveX(enemyPos, characterMoveTime); });
+
+            // move character shadow with it
+            RectTransform shadow = target.GetShadowRectTransform();
+            shadow.DOLocalMoveX(enemyPos + ((target.transform.position.x - attacker.transform.position.x) * 0.5f), attackAnimPlayTime).SetEase(Ease.InOutBounce)
+                .OnComplete(() => { shadow.DOLocalMoveX(0.0f, characterMoveTime); });
+
+            // create floating text
+            var floatingText = Instantiate(floatingTextOrigin, target.transform);
+            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), "MISS", 32, Color.yellow);
+        }
 
         yield return new WaitForSeconds(attackAnimPlayTime);
 
-        attacker.PlayAnimation(BattlerAnimationType.idle);
+        attacker.PlayAnimation(BattlerAnimationType.idle); 
         target.PlayAnimation(BattlerAnimationType.idle);
 
         attacker.GetComponent<RectTransform>().DOMove(originalPos, characterMoveTime);
@@ -379,6 +406,26 @@ public class Battle : MonoBehaviour
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
 
         callback?.Invoke(false);
+    }
+
+    /// <summary>
+    /// 攻撃の命中率を計算
+    /// </summary>
+    int CalculateHitChance(int dexterityDifference)
+    {
+        if (dexterityDifference < 0)
+        {
+            const int baseHitChance = 85;
+            const float chanceModifier = 1.25f;
+
+            int calculatedHitChance = baseHitChance + Mathf.RoundToInt((float)dexterityDifference * chanceModifier);
+
+            // Ensure the calculatedHitChance is within valid bounds (0 to 100)
+            return Mathf.Clamp(calculatedHitChance, 0, 100);
+        }
+
+        // If the defender has equal or lower speed, chance of hitting is 100%
+        return 100;
     }
 
     public Battler GetCurrentBattler()

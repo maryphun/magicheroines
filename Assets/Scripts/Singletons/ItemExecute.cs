@@ -151,7 +151,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                 });
     }
 
-    public void OnUseThrowingKnife()
+    public void OnUseM24()
     {
         const int damage = 50;
         var target = targetBattlers[0];
@@ -160,7 +160,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
         sequence.AppendCallback(() =>
         {
             // play SE
-            AudioManager.Instance.PlaySFX("Air", 0.5f);
+            AudioManager.Instance.PlaySFX("Throw", 0.5f);
 
             // create image
             CreateMovingImage(itemSprite, targetBattlers[0].GetMiddleGlobalPosition(), 0.8f);
@@ -179,13 +179,13 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     target.PlayAnimation(BattlerAnimationType.attacked);
 
                     // shake enemy
-                    target.Shake(0.4f);
+                    target.Shake(1f);
 
                     // play SE
-                    AudioManager.Instance.PlaySFX("KnifeAttack");
+                    AudioManager.Instance.PlaySFX("Explode");
 
                     // VFX
-                    VFXSpawner.SpawnVFX("BloodImpact", target.transform, target.GetMiddleGlobalPosition());
+                    VFXSpawner.SpawnVFX("Explode", target.transform, target.GetMiddleGlobalPosition());
                 })
                 .AppendInterval(0.2f)
                 .AppendCallback(() =>

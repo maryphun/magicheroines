@@ -127,8 +127,8 @@ Item.Cola,コーラ
 Item.Cola_Info,
 Item.Parfait,パフェ
 Item.Parfait_Info,
-Item.ThrowingKnife,投げナイフ
-Item.ThrowingKnife_Info,戦闘中に敵に投げるための消耗品である。作りが雑。敵をしばらく出血させることができる。
+Item.M24,柄付手榴弾
+Item.M24_Info,手投げ弾を投げてダメージを与える。
 Item.FirstAid,救急箱
 Item.FirstAid_Info,効果が不安定だが、緊急時には仕方ない。
 Ability,特殊技名とその説明文
@@ -144,3 +144,8 @@ Ability.TentacleService,触手サービス
 Ability.TentacleService_Info,SPを全部仲間単体に分け与える。女性相手のみ効果有る
 Ability.Capture,捕縛
 Ability.Capture_Info,敵単体を2ターン行動不能にする
+HomeCharacter,ホーム台詞
+HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
+HomeChar.No5_1-2,「噂されてるドクターの非情な手腕を期待しています。組織を勝利へ導いてください。」
+HomeChar.No5_1-3,「準備は万全です。いつでも出撃できます。」
+HomeChar.No5_1-4,「組織の状況は非常に悪いです。聖核戦姫に何とかしないと...」

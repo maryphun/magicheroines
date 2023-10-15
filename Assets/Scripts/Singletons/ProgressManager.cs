@@ -8,6 +8,7 @@ using System.Linq;
 /// プレイヤーのゲーム進捗は全てここに記録する
 /// セーブロードはこの構造体を保存したら良いという認識
 /// </summary>
+[System.Serializable]
 public struct PlayerData
 {
     public int currentStage;             //< 現ステージ数
@@ -16,9 +17,9 @@ public struct PlayerData
     public List<Character> characters;     //< 持っているキャラクター
     public FormationSlotData[] formationCharacters; //< パーティー編成
     public List<ItemDefine> inventory;   //< 所持アイテム
+    public List<HomeDialogue> homeDialogue;   //< ホームシーンのセリフを管理する
     public int formationSlotUnlocked;    //< 解放されたスロット
 }
-
 
 public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 {
@@ -41,7 +42,28 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.characters = new List<Character>();
         playerData.formationCharacters = new FormationSlotData[5];
         playerData.inventory = new List<ItemDefine>();
+        playerData.homeDialogue = new List<HomeDialogue>();
         playerData.formationSlotUnlocked = 2;
+
+        // 初期ホームシーンキャラ
+        HomeDialogue no5 = Resources.Load<HomeDialogue>("HomeDialogue/No5");
+        HomeDialogue a = Resources.Load<HomeDialogue>("HomeDialogue/Akiho");
+        HomeDialogue b = Resources.Load<HomeDialogue>("HomeDialogue/Rikka");
+        HomeDialogue c = Resources.Load<HomeDialogue>("HomeDialogue/Erena");
+        HomeDialogue d = Resources.Load<HomeDialogue>("HomeDialogue/Kei");
+        HomeDialogue e = Resources.Load<HomeDialogue>("HomeDialogue/Nayuta");
+        playerData.homeDialogue.Add(no5);
+        playerData.homeDialogue.Add(a);
+        playerData.homeDialogue.Add(b);
+        playerData.homeDialogue.Add(c);
+        playerData.homeDialogue.Add(d);
+        playerData.homeDialogue.Add(e);
+        Resources.UnloadAsset(no5);
+        Resources.UnloadAsset(a);
+        Resources.UnloadAsset(b);
+        Resources.UnloadAsset(c);
+        Resources.UnloadAsset(d);
+        Resources.UnloadAsset(e);
 
         // 初期キャラ 
         PlayerCharacterDefine battler = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/1.Battler");
@@ -270,6 +292,15 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.inventory.Remove(item);
     }
 
+    /// <summary>
+    /// ホーム台詞キャラクターを取得
+    /// </summary>
+    public List<HomeDialogue> GetHomeCharacter() 
+    {
+        Debug.Log(playerData.homeDialogue.Count);
+        return playerData.homeDialogue;
+    }
+
 
 #if DEBUG_MODE
     public void DebugModeInitialize(bool addEnemy = false)
@@ -298,9 +329,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(croissant);
         Resources.UnloadAsset(croissant);
 
-        ItemDefine knife = Resources.Load<ItemDefine>("ItemList/投げナイフ");
-        for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(knife);
-        Resources.UnloadAsset(knife);
+        ItemDefine m24 = Resources.Load<ItemDefine>("ItemList/M24");
+        for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(m24);
+        Resources.UnloadAsset(m24);
 
         ItemDefine aid = Resources.Load<ItemDefine>("ItemList/救急箱");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(aid);

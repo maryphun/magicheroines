@@ -9,9 +9,13 @@ public class HomeSceneUI : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool isDebug = false;
 
-    private void Start()
+    private void Awake()
     {
         if (isDebug) ProgressManager.Instance.DebugModeInitialize();
+    }
+
+    private void Start()
+    {
         AlphaFadeManager.Instance.FadeIn(1.0f);
 
         AudioManager.Instance.PlayMusicWithFade("HomeScene", 2.0f);

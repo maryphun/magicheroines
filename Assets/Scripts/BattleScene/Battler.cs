@@ -149,6 +149,10 @@ public class Battler : MonoBehaviour
     {
         return graphicRect;
     }
+    public RectTransform GetShadowRectTransform()
+    {
+        return shadow.GetComponent<RectTransform>();
+    }
 
     /// <summary>
     /// キャラクターの画像中央を取得

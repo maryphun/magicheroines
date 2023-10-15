@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
+  m_Name: No5
+  m_EditorClassIdentifier: 
+  characterSprite: {fileID: 21300000, guid: db739741bd2948f4f8576690beb408d6, type: 3}
+  dialogueList:
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No5_1-1
+    clip: {fileID: 0}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No5_1-2
+    clip: {fileID: 0}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No5_1-3
+    clip: {fileID: 0}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No5_1-4
+    clip: {fileID: 0}

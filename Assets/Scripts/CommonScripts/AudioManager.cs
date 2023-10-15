@@ -204,6 +204,18 @@ public class AudioManager : MonoBehaviour
         return sfxSource;
     }
 
+    public AudioSource PlayClip(AudioClip clip)
+    {
+        AudioClip clipToPlay = clip;
+
+        if (clipToPlay != null)
+        {
+            sfxSource.PlayOneShot(clipToPlay, masterVolumeSE);
+        }
+
+        return sfxSource;
+    }
+
     public AudioSource GetSFXSource()
     {
         return sfxSource;
