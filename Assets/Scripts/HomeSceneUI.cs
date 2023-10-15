@@ -32,7 +32,7 @@ public class HomeSceneUI : MonoBehaviour
         StartCoroutine(SceneTransition("WorldMap", animationTime));
     }
 
-    IEnumerator SceneTransition(string sceneName, float animationTime)
+    public IEnumerator SceneTransition(string sceneName, float animationTime)
     {
         // ƒV[ƒ“‘JˆÚ
         AlphaFadeManager.Instance.FadeOut(animationTime);

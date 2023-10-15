@@ -23,6 +23,7 @@ public struct PlayerData
 
 public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 {
+    public PlayerData PlayerData { get { return playerData; } }
     PlayerData playerData;
 
 #if DEBUG_MODE
@@ -47,23 +48,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 
         // 初期ホームシーンキャラ
         HomeDialogue no5 = Resources.Load<HomeDialogue>("HomeDialogue/No5");
-        HomeDialogue a = Resources.Load<HomeDialogue>("HomeDialogue/Akiho");
-        HomeDialogue b = Resources.Load<HomeDialogue>("HomeDialogue/Rikka");
-        HomeDialogue c = Resources.Load<HomeDialogue>("HomeDialogue/Erena");
-        HomeDialogue d = Resources.Load<HomeDialogue>("HomeDialogue/Kei");
-        HomeDialogue e = Resources.Load<HomeDialogue>("HomeDialogue/Nayuta");
         playerData.homeDialogue.Add(no5);
-        playerData.homeDialogue.Add(a);
-        playerData.homeDialogue.Add(b);
-        playerData.homeDialogue.Add(c);
-        playerData.homeDialogue.Add(d);
-        playerData.homeDialogue.Add(e);
         Resources.UnloadAsset(no5);
-        Resources.UnloadAsset(a);
-        Resources.UnloadAsset(b);
-        Resources.UnloadAsset(c);
-        Resources.UnloadAsset(d);
-        Resources.UnloadAsset(e);
 
         // 初期キャラ 
         PlayerCharacterDefine battler = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/1.Battler");
@@ -90,6 +76,11 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
                 playerData.formationCharacters[i] = new FormationSlotData(null, false);
             }
         } 
+    }
+
+    public void ApplyLoadedData(PlayerData data)
+    {
+        playerData = data;
     }
 
     /// <summary>
@@ -297,7 +288,6 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// </summary>
     public List<HomeDialogue> GetHomeCharacter() 
     {
-        Debug.Log(playerData.homeDialogue.Count);
         return playerData.homeDialogue;
     }
 

@@ -83,7 +83,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// <summary>
     /// 資料タブ
     /// </summary>
-    public void SwitchToCharacterDataTab(bool shake = true)
+    public void SwitchToCharacterDataTab(bool playSE = true)
     {
         characterDataButton.GetComponent<Image>().color = Color.white;
         characterDataButton.GetComponent<Button>().interactable = false;
@@ -99,9 +99,10 @@ public class CharacterBuildingPanel : MonoBehaviour
         characterDataPanel.gameObject.SetActive(true);
         characterUpgradePanel.gameObject.SetActive(false);
 
-        if (shake)
+        if (playSE)
         {
-            ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+            // SE
+            AudioManager.Instance.PlaySFX("SystemTab");
         }
 
         // 資料更新
@@ -111,7 +112,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// <summary>
     /// 育成タブ
     /// </summary>
-    public void SwitchToCharacterUpgradeTab(bool shake = true)
+    public void SwitchToCharacterUpgradeTab(bool playSE = true)
     {
         characterUpgradeButton.GetComponent<Image>().color = Color.white;
         characterUpgradeButton.GetComponent<Button>().interactable = false;
@@ -127,9 +128,10 @@ public class CharacterBuildingPanel : MonoBehaviour
         characterUpgradePanel.gameObject.SetActive(true);
         characterDataPanel.gameObject.SetActive(false);
 
-        if (shake)
+        if (playSE)
         {
-            ShakeManager.Instance.ShakeObject(pinkPanel, _pinkPanelShakeTime, _pinkPanelShakeMagnitude);
+            // SE
+            AudioManager.Instance.PlaySFX("SystemTab");
         }
 
         // 資料更新

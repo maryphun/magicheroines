@@ -49,6 +49,11 @@ System.AbilityHeal,回復
 System.AbilityBuff,状態
 System.AbilitySpecial,特殊
 System.AbilityAbsent,特殊技持っていない
+System.Save,セーブ
+System.Cancel,キャンセル
+System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？
+System.ConfirmReplace,スロット<color=yellow>{0}</color>のデータを上書きしますか？
+System.ConfirmLoad,スロット<color=yellow>{0}</color>をロードしますか？
 WorldMapScene,ワールドマップ
 System.Story,ストーリーを進む
 System.SideMission,資源調達クエスト

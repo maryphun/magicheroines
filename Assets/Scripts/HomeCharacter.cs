@@ -34,8 +34,12 @@ public class HomeCharacter : MonoBehaviour
         lastDialogueIndex = -1;
         animation = DOTween.Sequence();
 
-        dialogues = ProgressManager.Instance.GetHomeCharacter().ToArray();
-        SetupCharacter();
+        var characters = ProgressManager.Instance.GetHomeCharacter();
+        if (characters != null)
+        {
+            dialogues = characters.ToArray();
+            SetupCharacter();
+        }
     }
 
     public void SetupCharacter()
@@ -82,6 +86,8 @@ public class HomeCharacter : MonoBehaviour
 
     public void OnClickCharacter()
     {
+        if (characterSprite == null) return;
+
         // SE
         AudioManager.Instance.PlaySFX("SystemCuteClick");
 
