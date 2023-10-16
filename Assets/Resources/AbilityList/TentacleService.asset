@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: TentacleService
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 3d9f2bf561c42c74aa71c2764a088959, type: 3}
   abilityNameID: Ability.TentacleService
   descriptionID: Ability.TentacleService_Info
   functionName: TentacleService
-  cosumeSP: 0
+  consumeSP: 0
   requiredLevel: 5
+  requiredHornyness: 0
   castType: 2
   abilityType: 2

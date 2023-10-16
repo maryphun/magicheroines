@@ -76,6 +76,7 @@ public class AbilityPanel : MonoBehaviour
             buttonList[i].Item2.transform.GetChild(0).GetComponent<TMP_Text>().text = abilityName;
             buttonList[i].Item2.gameObject.SetActive(true);
             Ability ability = buttonList[i].Item1;
+            buttonList[i].Item2.onClick.RemoveAllListeners();
             buttonList[i].Item2.onClick.AddListener(delegate { OnClickAbility(ability); });
 
             // 使用できるかをチェック

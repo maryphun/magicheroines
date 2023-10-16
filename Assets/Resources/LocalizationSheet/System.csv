@@ -43,7 +43,7 @@ System.EffectTarget,効果対象：
 System.EffectEnemy,敵単体
 System.EffectSelf,使用者
 System.EffectTeam,味方
-System.AbilityType,機能
+System.AbilityType,種類
 System.AbilityAttack,攻撃
 System.AbilityHeal,回復
 System.AbilityBuff,状態
@@ -54,6 +54,7 @@ System.Cancel,キャンセル
 System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？
 System.ConfirmReplace,スロット<color=yellow>{0}</color>のデータを上書きしますか？
 System.ConfirmLoad,スロット<color=yellow>{0}</color>をロードしますか？
+System.Close,閉じる
 WorldMapScene,ワールドマップ
 System.Story,ストーリーを進む
 System.SideMission,資源調達クエスト
@@ -151,6 +152,6 @@ Ability.Capture,捕縛
 Ability.Capture_Info,敵単体を2ターン行動不能にする
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
-HomeChar.No5_1-2,「噂されてるドクターの非情な手腕を期待しています。組織を勝利へ導いてください。」
+HomeChar.No5_1-2,「ドクターの非情な手腕を期待しています。組織を勝利へ導いてください。」
 HomeChar.No5_1-3,「準備は万全です。いつでも出撃できます。」
-HomeChar.No5_1-4,「組織の状況は非常に悪いです。聖核戦姫に何とかしないと...」
+HomeChar.No5_1-4,「組織の状況は非常に悪いです。聖核戦姫を何とかしないと...」

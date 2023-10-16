@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: PowerfulPunch
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: b56de19e05d8e9e42bfa767efc721470, type: 3}
   abilityNameID: Ability.PowerfulPunch
   descriptionID: Ability.PowerfulPunch_Info
   functionName: PowerfulPunch
-  cosumeSP: 0
+  consumeSP: 0
   requiredLevel: 5
+  requiredHornyness: 0
   castType: 1
   abilityType: 0

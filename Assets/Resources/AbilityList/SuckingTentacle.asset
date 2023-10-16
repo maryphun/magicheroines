@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: SuckingTentacle
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: d7a690c939a22304f84bcdb93052e9f6, type: 3}
   abilityNameID: Ability.SuckingTentacle
   descriptionID: Ability.SuckingTentacle_Info
   functionName: SuckingTentacle
-  cosumeSP: 35
+  consumeSP: 0
   requiredLevel: 1
+  requiredHornyness: 0
   castType: 1
   abilityType: 0

@@ -15,6 +15,7 @@ public enum AbilityType
 public class Ability : ScriptableObject
 {
     [Header("Šî–{Ž‘—¿")]
+    public Sprite icon;
     public string abilityNameID;
     public string descriptionID;
     public string functionName;
