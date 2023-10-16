@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
+using Newtonsoft.Json;
 
 public static class FileManager
 {
@@ -13,7 +14,6 @@ public static class FileManager
         try
         {
             File.WriteAllText(fullPath, a_FileContents);
-            Debug.Log(Application.persistentDataPath);
             return true;
         }
         catch (Exception e)
@@ -60,7 +60,7 @@ public static class SaveDataManager
         if (FileManager.LoadFromFile("SaveData" + slotIndex.ToString("00") + ".dat", out var json))
         {
             SaveData sd = new SaveData();
-            sd.LoadFromJson(json);
+            sd = SaveData.LoadFromJson(json);
 
             ProgressManager.Instance.ApplyLoadedData(sd.playerData);
 
@@ -73,7 +73,7 @@ public static class SaveDataManager
         if (FileManager.LoadFromFile("SaveData" + slotIndex.ToString("00") + ".dat", out var json))
         {
             SaveData sd = new SaveData();
-            sd.LoadFromJson(json);
+            sd = SaveData.LoadFromJson(json);
 
             string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + ((sd.playerData.currentStage / 3)+1).ToString() + "-" + ((sd.playerData.currentStage % 3)+1).ToString();
             if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
@@ -98,11 +98,16 @@ public class SaveData
 
     public string ToJson()
     {
-        return JsonUtility.ToJson(this);
+        JsonSerializerSettings settings = new JsonSerializerSettings
+        {
+            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+        };
+
+        return JsonConvert.SerializeObject(this, settings);
     }
 
-    public void LoadFromJson(string a_Json)
+    public static SaveData LoadFromJson(string a_Json)
     {
-        JsonUtility.FromJsonOverwrite(a_Json, this);
+        return JsonConvert.DeserializeObject<SaveData>(a_Json);
     }
 }
