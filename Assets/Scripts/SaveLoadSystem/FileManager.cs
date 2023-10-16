@@ -13,6 +13,7 @@ public static class FileManager
         try
         {
             File.WriteAllText(fullPath, a_FileContents);
+            Debug.Log(Application.persistentDataPath);
             return true;
         }
         catch (Exception e)

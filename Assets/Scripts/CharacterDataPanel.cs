@@ -23,6 +23,7 @@ public class CharacterDataPanel : MonoBehaviour
     [SerializeField] private Button[] skillButtonList = new Button[4];
     [SerializeField] private Image[] skillImageList = new Image[4];
     [SerializeField] private bool[] skillAvailable = new bool[4];
+
     // pop up
     [SerializeField] private CanvasGroup popup;
     [SerializeField] private TMP_Text abilityName;
@@ -109,7 +110,7 @@ public class CharacterDataPanel : MonoBehaviour
     public void OnClickAbility(Ability ability)
     {
         // ãZê‡ñæpop upÇèâä˙âª
-        popup.DOFade(1.0f, 0.5f);
+        popup.DOFade(1.0f, 0.2f);
         popup.interactable = true;
         popup.blocksRaycasts = true;
 
@@ -117,14 +118,20 @@ public class CharacterDataPanel : MonoBehaviour
         abilityType.text = LocalizationManager.Localize("System.AbilityType") + "ÅF" + AbilityTypeToString(ability.abilityType);
         abilityCastType.text = LocalizationManager.Localize("System.EffectTarget") + CastTypeToString(ability.castType);
         abilityDescription.text = LocalizationManager.Localize(ability.descriptionID);
+
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemOpen");
     }
 
     public void CloseAbilityInfoPopup()
     {
-        popup.DOFade(0.0f, 0.5f).OnComplete(() => {
+        popup.DOFade(0.0f, 0.2f).OnComplete(() => {
             popup.interactable = false;
             popup.blocksRaycasts = false;
         });
+
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemCancel");
     }
 
     private string CastTypeToString(CastType castType)

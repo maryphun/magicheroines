@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using Assets.SimpleLocalization.Scripts;
 using TMPro;
+using System.Linq;
 
 public class CharacterUpgradePanel : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class CharacterUpgradePanel : MonoBehaviour
     [SerializeField] private TMP_Text defenseValue;
     [SerializeField] private TMP_Text speedValue;
     [SerializeField] private TMP_Text levelUpText;
+    [SerializeField] private TMP_Text newAbility;
     [SerializeField] private Button levelUpButton;
     [SerializeField] private CanvasGroup resourcesPanel;
 
@@ -111,6 +113,26 @@ public class CharacterUpgradePanel : MonoBehaviour
         data[index].current_defense += data[index].characterData.defense_growth;
         data[index].current_speed += data[index].characterData.speed_growth;
 
+        // 新しく習得した技があるか
+        if (data[index].characterData.abilities.Any(item => item.requiredLevel == data[index].current_level))
+        {
+            newAbility.rectTransform.localScale = new Vector3(2.2f, 2.2f, 1f);
+            newAbility.alpha = 0.0f;
+
+            DOTween.Sequence()
+                .AppendCallback(() => {   
+                    newAbility.DOFade(1.0f, 0.2f);
+                    newAbility.rectTransform.DOScale(1.0f, 0.2f);
+                                      })
+                .AppendInterval(0.2f)
+                .AppendCallback(() => { newAbility.rectTransform.DOShakePosition(0.5f, 3); })
+                .AppendInterval(1.0f)
+                .AppendCallback(() => { newAbility.DOFade(0.0f, 0.2f); });
+
+            // SE
+            AudioManager.Instance.PlaySFX("NewAbility");
+        }
+        
         // 再度データをコピー
         currentCharacter = ProgressManager.Instance.GetAllCharacter(false)[index];
 

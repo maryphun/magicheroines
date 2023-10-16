@@ -168,11 +168,11 @@ public class SaveLoadPanel : MonoBehaviour
         if (isSaving)
         {
             SaveDataManager.SaveJsonData(currentSelectingSlotIndex, saveCommentInput.text);
-            UpdateSlotInfo();
-            ClosePopUp();
-
             PlayerPrefs.SetInt("LastSavedSlot", currentSelectingSlotIndex);
             PlayerPrefs.Save();
+
+            UpdateSlotInfo();
+            ClosePopUp();
         }
         else
         {

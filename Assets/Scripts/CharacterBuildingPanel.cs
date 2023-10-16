@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class CharacterBuildingPanel : MonoBehaviour
@@ -66,6 +67,9 @@ public class CharacterBuildingPanel : MonoBehaviour
         SwitchToCharacterDataTab(false);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void QuitCharacterBuildingPanel()
     {
         // SE 再生
@@ -85,6 +89,8 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// </summary>
     public void SwitchToCharacterDataTab(bool playSE = true)
     {
+        if (characters[currentCheckingSlot].characterData.is_heroin && !characters[currentCheckingSlot].is_corrupted) return; // まだ闇落ちされていないヒロインキャラは確認できない
+
         characterDataButton.GetComponent<Image>().color = Color.white;
         characterDataButton.GetComponent<Button>().interactable = false;
         characterDataButton.GetComponent<RectTransform>().localPosition = new Vector3(characterDataButton.GetComponent<RectTransform>().localPosition.x, 
