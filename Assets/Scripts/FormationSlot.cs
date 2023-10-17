@@ -138,7 +138,7 @@ public class FormationSlot : MonoBehaviour
         {
             // 外す
             // UpdateFormationで全スロットに対してResetDataをかけるのでObject.BattlerをDestroyする必要がない
-            formationPanel.UpdateFormation(slotIndex, null, true, true);
+            formationPanel.UpdateFormation(slotIndex, -1, true, true);
 
             // エフェクトを表示
             var vfx = Instantiate(effect, transform);

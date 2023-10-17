@@ -69,11 +69,11 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             if (i < playerData.formationSlotUnlocked)
             {
-                playerData.formationCharacters[i] = new FormationSlotData(playerData.characters[i], true);
+                playerData.formationCharacters[i] = new FormationSlotData(playerData.characters[i].characterData.characterID, true);
             }
             else
             {
-                playerData.formationCharacters[i] = new FormationSlotData(null, false);
+                playerData.formationCharacters[i] = new FormationSlotData(-1, false);
             }
         } 
     }
@@ -124,6 +124,17 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// CharacterID からキャラクターを取得する
+    /// </summary>
+    /// <returns></returns>
+    public Character GetCharacterByID(int characterID)
+    {
+        List<Character> characterListCopy = new List<Character>(playerData.characters);
+
+        return characterListCopy.Find(item => item.characterData.characterID == characterID);
+    }
+
+    /// <summary>
     /// 使える仲間キャラのリストを取得
     /// </summary>
     public List<Character> GetAllUsableCharacter()
@@ -140,6 +151,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         var obj = new Character();
 
+        obj.pathName = newCharacter.name;
+
         obj.localizedName = LocalizationManager.Localize(newCharacter.detail.nameID);
         obj.characterData = newCharacter.detail;
         obj.battler = newCharacter.battler;
@@ -151,22 +164,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         obj.current_attack = newCharacter.detail.base_attack;
         obj.current_defense = newCharacter.detail.base_defense;
         obj.current_speed = newCharacter.detail.base_speed;
-        obj.abilities = new List<Ability>();
         obj.is_corrupted = !(newCharacter.detail.is_heroin); // ヒロインキャラはとりあえず使用できない
-
-        if (newCharacter.detail.abilities.Count > 0)
-        {
-            for (int i = 0; i < newCharacter.detail.abilities.Count; i++)
-            {
-                if (   obj.current_level >= newCharacter.detail.abilities[i].requiredLevel 
-                    && obj.horny_gauge >= newCharacter.detail.abilities[i].requiredHornyness)
-                {
-                    obj.abilities.Add(newCharacter.detail.abilities[i]);
-                }
-            }
-            obj.abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
-        }
-
+        
         playerData.characters.Add(obj);
     }
 
@@ -226,7 +225,6 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         if (originalReference)
         {
             return playerData.formationCharacters;
-
         }
         else
         {

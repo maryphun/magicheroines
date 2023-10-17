@@ -63,8 +63,13 @@ public struct PlayerCharacter
     public List<Ability> abilities;
 }
 
+[System.Serializable]
 public class Character
 {
+    [Header("セーブロード対応")]
+    [SerializeField] public string pathName;
+
+    [Header("資料")]
     public PlayerCharacter characterData; // 基本資料
     public GameObject battler; // 戦闘像
     public int dark_gauge;
@@ -82,8 +87,6 @@ public class Character
     public int current_speed;
 
     public bool is_corrupted;    // 闇落ちしたか
-
-    public List<Ability> abilities; 
 }
 
 [System.Serializable]
@@ -99,14 +102,15 @@ public struct CharacterStatus
 /// <summary>
 /// パーティー管理用
 /// </summary>
+[System.Serializable]
 public class FormationSlotData
 {
-    public Character characterData;
+    public int characterID;
     public bool isFilled;
 
-    public FormationSlotData(Character data, bool flag)
+    public FormationSlotData(int ID, bool flag)
     {
-        characterData = data;
+        characterID = ID;
         isFilled = flag;
     }
 }

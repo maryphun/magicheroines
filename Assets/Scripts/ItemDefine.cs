@@ -12,6 +12,9 @@ public enum CastType
 [CreateAssetMenu(fileName = "NewItem", menuName = "作成/アイテム生成")]
 public class ItemDefine : ScriptableObject
 {
+    [Header("セーブロード対応")]
+    [SerializeField] public string pathName;
+
     [Header("基本資料")]
     [SerializeField] public string itemNameID;
     [SerializeField] public string descriptionID;

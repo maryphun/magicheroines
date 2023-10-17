@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
   m_Name: No5
   m_EditorClassIdentifier: 
+  pathName: No5
   characterSprite: {fileID: 21300000, guid: db739741bd2948f4f8576690beb408d6, type: 3}
   dialogueList:
   - startStage: 0

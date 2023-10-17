@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa5ae0fbebd08f4c8d03b5869130fa2, type: 3}
   m_Name: M24
   m_EditorClassIdentifier: 
+  pathName: M24
   itemNameID: Item.M24
   descriptionID: Item.M24_Info
   functionName: OnUseM24

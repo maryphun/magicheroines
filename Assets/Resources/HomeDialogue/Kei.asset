@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
   m_Name: Kei
   m_EditorClassIdentifier: 
+  pathName: Kei
   characterSprite: {fileID: 21300000, guid: 501687496ba32ae4aa786710e8b26a75, type: 3}
   dialogueList: []

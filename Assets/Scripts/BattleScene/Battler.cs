@@ -97,7 +97,20 @@ public class Battler : MonoBehaviour
         defense = character.current_defense;
         speed = character.current_speed;
         currentLevel = character.current_level;
-        abilities = character.abilities;
+
+        abilities = new List<Ability>();
+        if (character.characterData.abilities.Count > 0)
+        {
+            for (int i = 0; i < character.characterData.abilities.Count; i++)
+            {
+                if (currentLevel >= character.characterData.abilities[i].requiredLevel
+                    && character.horny_gauge >= character.characterData.abilities[i].requiredHornyness)
+                {
+                    abilities.Add(character.characterData.abilities[i]);
+                }
+            }
+            abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
+        }
 
         Initialize();
     }

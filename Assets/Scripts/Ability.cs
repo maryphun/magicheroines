@@ -11,6 +11,7 @@ public enum AbilityType
     Special,//< “ÁŽê
 }
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "NewAbility", menuName = "ì¬/“ÁŽê‹Z¶¬")]
 public class Ability : ScriptableObject
 {

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
   m_Name: Akiho
   m_EditorClassIdentifier: 
+  pathName: Akiho
   characterSprite: {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
   dialogueList: []

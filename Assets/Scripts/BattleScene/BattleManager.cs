@@ -45,9 +45,9 @@ public class Battle : MonoBehaviour
         var actors = new List<Character>();
         for (int i = 0; i < playerCharacters.Count(); i++)
         {
-            if (playerCharacters[i].characterData != null)
+            if (playerCharacters[i].characterID != -1)
             {
-                actors.Add(playerCharacters[i].characterData);
+                actors.Add(ProgressManager.Instance.GetCharacterByID(playerCharacters[i].characterID));
             }
         }
 

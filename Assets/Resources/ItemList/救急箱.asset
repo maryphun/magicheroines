@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa5ae0fbebd08f4c8d03b5869130fa2, type: 3}
   m_Name: "\u6551\u6025\u7BB1"
   m_EditorClassIdentifier: 
+  pathName: "\u6551\u6025\u7BB1"
   itemNameID: Item.FirstAid
   descriptionID: Item.FirstAid_Info
   functionName: OnUseFirstAid

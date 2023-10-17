@@ -75,15 +75,15 @@ public class FormationPanel : MonoBehaviour
             var party = ProgressManager.Instance.GetFormationParty(false);
             if (party[i].isFilled)
             {
-                slots[i].SetBattler(party[i].characterData);
+                slots[i].SetBattler(ProgressManager.Instance.GetCharacterByID(party[i].characterID));
             }
         }
     }
 
-    public void UpdateFormation(int slot, Character character, bool isNull, bool UpdateUI)
+    public void UpdateFormation(int slot, int characterID, bool isNull, bool UpdateUI)
     {
         var originalData = ProgressManager.Instance.GetFormationParty(true);
-        originalData[slot].characterData = character;
+        originalData[slot].characterID = characterID;
         originalData[slot].isFilled = !isNull;
 
         if (UpdateUI)
@@ -172,7 +172,7 @@ public class FormationPanel : MonoBehaviour
 
     public void SelectFormationCharacter(int characterID)
     {
-        UpdateFormation(formationSelectionPanelIndex, ProgressManager.Instance.GetAllCharacter()[characterID], false, true);
+        UpdateFormation(formationSelectionPanelIndex, characterID, false, true);
 
         // SEçƒê∂
         AudioManager.Instance.PlaySFX("SystemEquip", 1.5f);
@@ -185,7 +185,7 @@ public class FormationPanel : MonoBehaviour
         var party = ProgressManager.Instance.GetFormationParty(false);
         foreach (FormationSlotData data in party)
         {
-            if (data.isFilled && data.characterData.characterData.characterID == character.characterData.characterID)
+            if (data.isFilled && data.characterID == character.characterData.characterID)
             {
                 return true;
             }

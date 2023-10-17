@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
   m_Name: Nayuta
   m_EditorClassIdentifier: 
+  pathName: Nayuta
   characterSprite: {fileID: 21300000, guid: 16f3b6d9aa24b3d43aedea082bd3c9bb, type: 3}
   dialogueList: []

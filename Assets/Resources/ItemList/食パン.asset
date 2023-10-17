@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa5ae0fbebd08f4c8d03b5869130fa2, type: 3}
   m_Name: "\u98DF\u30D1\u30F3"
   m_EditorClassIdentifier: 
+  pathName: "\u98DF\u30D1\u30F3"
   itemNameID: Item.Bread
   descriptionID: Item.Bread_Info
   functionName: OnUseBread

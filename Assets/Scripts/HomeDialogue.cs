@@ -12,9 +12,14 @@ public struct HomeSceneDialogue
     public AudioClip clip;
 }
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "NewHomeCharacter", menuName = "作成/ホーム台詞キャラ")]
 public class HomeDialogue : ScriptableObject
 {
+    [Header("セーブロード対応")]
+    [SerializeField] public string pathName;
+
+    [Header("データ")]
     [SerializeField] public Sprite characterSprite;
     [SerializeField] public List<HomeSceneDialogue> dialogueList;
 }
