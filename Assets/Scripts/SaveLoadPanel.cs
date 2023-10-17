@@ -144,6 +144,7 @@ public class SaveLoadPanel : MonoBehaviour
             else
             {
                 saveComfirmText.text = string.Format(LocalizationManager.Localize("System.ConfirmSave"), slotIndex + 1);
+                saveCommentInput.text = string.Empty;
 
                 // SE
                 AudioManager.Instance.PlaySFX("SystemAlert");

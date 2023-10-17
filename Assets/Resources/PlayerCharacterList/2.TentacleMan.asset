@@ -23,7 +23,7 @@ MonoBehaviour:
       item: {fileID: 0}
       attacked: {fileID: 0}
       retire: {fileID: 0}
-    color: {r: 0.54901963, g: 0.39607844, b: 0.48235294, a: 1}
+    color: {r: 0.8773585, g: 0.64146495, b: 0.77453315, a: 1}
     nameID: Name.Tentacle
     starting_level: 1
     base_hp: 80
@@ -39,8 +39,6 @@ MonoBehaviour:
     levelUp_base_cost: 200
     levelUp_cost_increment: 75
     is_heroin: 0
-    max_dark_gauge: 0
-    max_horny_gauge: 0
     characterStatus:
     - moodNameID: 
       textColor: {r: 0, g: 0, b: 0, a: 0}

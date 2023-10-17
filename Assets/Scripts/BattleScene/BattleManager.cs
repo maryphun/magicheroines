@@ -6,6 +6,7 @@ using DG.Tweening;
 using System;
 using System.Linq;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Battle : MonoBehaviour
 {
@@ -18,7 +19,10 @@ public class Battle : MonoBehaviour
     [SerializeField, Range(1.1f, 2.0f)] private float enemyAIDelay = 2.0f;
     [SerializeField, Range(0.1f, 1.0f)] private float characterMoveTime = 0.5f;  // < キャラがターゲットの前に移動する時間
     [SerializeField, Range(0.1f, 1.0f)] private float attackAnimPlayTime = 0.2f; // < 攻撃アニメーションの維持時間
+    [SerializeField, Range(0.1f, 1.0f)] private float buffIconFadeTime = 0.4f; // < バフアイコンの出現・消し時間
     [SerializeField] private float formationPositionX = 600.0f;
+    [SerializeField] private Sprite buffIconFrame;
+    [SerializeField] private GameObject buffCounterText;
 
     [Header("References")]
     [SerializeField] private RectTransform playerFormation;
@@ -35,6 +39,7 @@ public class Battle : MonoBehaviour
     [SerializeField] private List<Battler> characterList = new List<Battler>();
     [SerializeField] private List<Battler> enemyList = new List<Battler>();
     [SerializeField] private Battler arrowPointingTarget = null;
+    [SerializeField] private List<Buff> buffedCharacters = new List<Buff>();
 
     private void Awake()
     {
@@ -57,6 +62,7 @@ public class Battle : MonoBehaviour
         // Send references
         ItemExecute.Instance.Initialize(this);
         AbilityExecute.Instance.Initialize(this);
+        BuffManager.Init();
     }
 
     private void Start()
@@ -139,6 +145,9 @@ public class Battle : MonoBehaviour
 
         if (!isFirstTurn)
         {
+            // バフを先にチェック
+            CheckBuffEffect(GetCurrentBattler());
+
             turnBaseManager.NextBattler();
         }
         else
@@ -154,7 +163,7 @@ public class Battle : MonoBehaviour
             AudioManager.Instance.PlaySFX("FormationCharge", 0.5f);
 
             // チュートリアルに入る
-            if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
+            if (ProgressManager.Instance.GetCurrentStageProgress() == 1)
             {
                 battleSceneTutorial.StartBattleTutorial();
             }
@@ -234,8 +243,17 @@ public class Battle : MonoBehaviour
 
         // TODO: 敵技作成
         // 攻撃目標を選択
-        Battler targetCharacter = turnBaseManager.GetRandomPlayerChaacter();
-        StartCoroutine(AttackAnimation(currentCharacter, targetCharacter, NextTurn));
+        // is character stunned
+        if (IsCharacterInBuff(currentCharacter, BuffType.stun))
+        {
+            yield return new WaitForSeconds(turnEndDelay);
+            NextTurn(false);
+        }
+        else
+        {
+            Battler targetCharacter = turnBaseManager.GetRandomPlayerChaacter();
+            StartCoroutine(AttackAnimation(currentCharacter, targetCharacter, NextTurn));
+        }
     }
 
     IEnumerator TurnEndDelay()
@@ -249,7 +267,17 @@ public class Battle : MonoBehaviour
         var originPos = currentCharacter.GetGraphicRectTransform().position;
         originPos = currentCharacter.isEnemy ? new Vector2(originPos.x - currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f) : new Vector2(originPos.x + currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f);
         actionTargetArrow.position = originPos;
-        actionPanel.SetEnablePanel(true);
+
+        // is character stunned
+        if (IsCharacterInBuff(currentCharacter, BuffType.stun))
+        {
+            yield return new WaitForSeconds(characterArrow.ChangeCharacterSpeed + turnEndDelay);
+            NextTurn(false);
+        }
+        else
+        {
+            actionPanel.SetEnablePanel(true);
+        }
     }
 
     public void PointTargetWithArrow(Battler target, float animTime)
@@ -367,6 +395,9 @@ public class Battle : MonoBehaviour
             attacker.PlayAnimation(BattlerAnimationType.attack);
             target.PlayAnimation(BattlerAnimationType.attacked);
 
+            // stun enemy
+            AddBuffToBattler(target, BuffType.stun, 3, 0);
+
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
@@ -434,6 +465,98 @@ public class Battle : MonoBehaviour
     }
 
     /// <summary>
+    /// キャラクターにバフを追加
+    /// </summary>
+    public void AddBuffToBattler(Battler target, BuffType buff, int turn, int value)
+    {
+        Buff _buff = new Buff();
+        _buff.type = buff;
+        _buff.data = BuffManager.BuffList[buff];
+        _buff.target = target;
+        _buff.remainingTurn = turn;
+        _buff.value = value;
+
+        _buff.data.start.Invoke(target, value);
+
+        buffedCharacters.Add(_buff);
+
+        // Graphic
+        // create icon
+        Image border = new GameObject(_buff.data.name).AddComponent<Image>();
+        border.sprite = buffIconFrame;
+        border.raycastTarget = false;
+        border.rectTransform.SetParent(_buff.target.transform);
+        border.rectTransform.position = _buff.target.GetMiddleGlobalPosition() + new Vector2(-_buff.target.GetCharacterSize().x * 0.25f, _buff.target.GetCharacterSize().y * 0.5f);
+        border.rectTransform.sizeDelta = new Vector2(37.0f, 37.0f);
+        border.color = new Color(1f, 1f, 1f, 0.0f);
+        border.DOFade(1.0f, buffIconFadeTime);
+
+        Image img = new GameObject(_buff.data.name).AddComponent<Image>();
+        img.sprite = _buff.data.icon;
+        img.raycastTarget = false;
+        img.rectTransform.SetParent(border.transform);
+        img.rectTransform.localPosition = Vector2.zero;
+        img.rectTransform.sizeDelta = new Vector2(30.0f, 30.0f);
+        img.color = new Color(1f, 1f, 1f, 0.0f);
+        img.DOFade(1.0f, buffIconFadeTime);
+
+        var text = Instantiate(buffCounterText, border.transform);
+        _buff.text = text.GetComponent<TMP_Text>();
+        _buff.text.text = turn.ToString();
+        _buff.text.rectTransform.localPosition = new Vector2(0.0f, 17.0f);
+
+        _buff.icon = border.gameObject;
+
+        ArrangeBuffIcon(target);
+    }
+
+    /// <summary>
+    /// キャラにかけられているバフを更新
+    /// </summary>
+    public void CheckBuffEffect(Battler target)
+    {
+        for (int i = 0; i < buffedCharacters.Count; i++)
+        {
+            var buff = buffedCharacters[i];
+
+            if (buff.target == target)
+            {
+                buff.remainingTurn--;
+                buff.data.update.Invoke(buff.target, buff.value);
+                buff.text.text = buff.remainingTurn.ToString();
+
+                if (buff.remainingTurn <= 0)
+                {
+                    buff.data.end.Invoke(buff.target, buff.value);
+                    buff.icon.GetComponent<Image>().DOFade(0.0f, buffIconFadeTime);
+                    Destroy(buff.icon, 0.5f);
+                    buffedCharacters.RemoveAt(i);
+                    ArrangeBuffIcon(buff.target);
+                    i--;
+                }
+            }
+        }
+    }
+
+    public bool IsCharacterInBuff(Battler battler, BuffType buffType)
+    {
+        for (int i = 0; i < buffedCharacters.Count; i++)
+        {
+            if (buffedCharacters[i].type == buffType && buffedCharacters[i].target == battler)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void ArrangeBuffIcon(Battler battler)
+    {
+
+    }
+
+    /// <summary>
     ///  敵を全員倒せた
     /// </summary>
     private bool IsVictory()
@@ -473,7 +596,8 @@ public class Battle : MonoBehaviour
         characterArrow.gameObject.SetActive(false);
         actionPanel.SetEnablePanel(false);
 
-        bool isTutorial = (ProgressManager.Instance.GetCurrentStageProgress() == 0);
+        // チュートリアル終了 (負けイべント)
+        bool isTutorial = (ProgressManager.Instance.GetCurrentStageProgress() == 1);
         if (!isTutorial)
         {
             sceneTransition.EndScene(isVictory, ChangeScene);

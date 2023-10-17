@@ -4440,7 +4440,10 @@ MonoBehaviour:
   enemyAIDelay: 1.2
   characterMoveTime: 0.35
   attackAnimPlayTime: 0.2
+  buffIconFadeTime: 0.4
   formationPositionX: 600
+  buffIconFrame: {fileID: 21300000, guid: fd44917e5357dda46b780046ef939712, type: 3}
+  buffCounterText: {fileID: 2625639937715879894, guid: 4de0e565183a8e74ba10678dcd1ad82b, type: 3}
   playerFormation: {fileID: 1167297676}
   enemyFormation: {fileID: 778722667}
   turnBaseManager: {fileID: 1196083468}
@@ -7891,6 +7894,7 @@ MonoBehaviour:
   description_Type: {fileID: 1638452812}
   description_Info: {fileID: 50183057}
   isOpen: 0
+  isHiding: 0
   isDescriptionShowing: 0
 --- !u!225 &2134354603
 CanvasGroup:

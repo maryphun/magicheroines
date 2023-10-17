@@ -37,9 +37,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         playerData = new PlayerData();
 
-        playerData.currentStage = 0; // 初期ステージ (チュートリアル)
-        playerData.currentMoney = 100;
-        playerData.currentResourcesPoint = 50;
+        playerData.currentStage = 1; // 初期ステージ (チュートリアル)
+        playerData.currentMoney = 500;
+        playerData.currentResourcesPoint = 0;
         playerData.characters = new List<Character>();
         playerData.formationCharacters = new FormationSlotData[5];
         playerData.inventory = new List<ItemDefine>();

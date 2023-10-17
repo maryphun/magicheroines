@@ -54,8 +54,9 @@ System.Cancel,キャンセル
 System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？
 System.ConfirmReplace,スロット<color=yellow>{0}</color>のデータを上書きしますか？
 System.ConfirmLoad,スロット<color=yellow>{0}</color>をロードしますか？
+System.InsertComment,注釈を付ける...
 System.Close,閉じる
-System.NewAbility,特殊技習得！！
+System.NewAbility,特殊技習得！
 WorldMapScene,ワールドマップ
 System.Story,ストーリーを進む
 System.SideMission,資源調達クエスト
@@ -68,7 +69,8 @@ Name.Nayuta,八雲 那由多
 Name.No5,005号
 Name.Battler,戦闘員
 Name.Tentacle,触手怪人
-Name.Clone,クローン 005号
+Name.Clone,005号
+Name.No72,072号
 Name.Drone,パトロールドローン
 Name.Android,治安維持ドロイド
 Name.Battler+Tentacle,触手怪人、戦闘員

@@ -20,6 +20,8 @@ public class CharacterArrow : MonoBehaviour
     [SerializeField] private bool isSetCharacter = false;
     [SerializeField] private bool isLocked = false;
 
+    public float ChangeCharacterSpeed { get { return changeCharacterSpeed; } }
+
     private void Awake()
     {
         img = GetComponent<Image>();

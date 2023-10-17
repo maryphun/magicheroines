@@ -16,7 +16,7 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         AlphaFadeManager.Instance.FadeIn(sceneTransitionTime);
-        if (ProgressManager.Instance.GetCurrentStageProgress() == 0)
+        if (ProgressManager.Instance.GetCurrentStageProgress() == 1) // チュートリアルバトル前
         {
             AudioManager.Instance.PlayMusicWithFade("Tutorial1", 6.0f);
             NovelSingletone.Instance.PlayNovel("Tutorial1", true, LookAtMonitor);
