@@ -89,8 +89,6 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// </summary>
     public void SwitchToCharacterDataTab(bool playSE = true)
     {
-        if (characters[currentCheckingSlot].characterData.is_heroin && !characters[currentCheckingSlot].is_corrupted) return; // まだ闇落ちされていないヒロインキャラは確認できない
-
         characterDataButton.GetComponent<Image>().color = Color.white;
         characterDataButton.GetComponent<Button>().interactable = false;
         characterDataButton.GetComponent<RectTransform>().localPosition = new Vector3(characterDataButton.GetComponent<RectTransform>().localPosition.x, 
@@ -159,6 +157,8 @@ public class CharacterBuildingPanel : MonoBehaviour
     public void ChangeCharacterSlot(int slot)
     {
         if (characters.Count <= slot) return;
+
+        if (characters[slot].characterData.is_heroin && !characters[slot].is_corrupted) return; // まだ闇落ちされていないヒロインキャラは確認できない
 
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemSelect");
