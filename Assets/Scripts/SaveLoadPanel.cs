@@ -16,6 +16,7 @@ public class SaveLoadPanel : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Button[] saveSlot = new Button[totalSlotNum];
+    [SerializeField] private string[] slotComment = new string[totalSlotNum];
     [SerializeField] private Button saveTab;
     [SerializeField] private Button loadTab;
     [SerializeField] private CanvasGroup canvasGroup;
@@ -40,6 +41,7 @@ public class SaveLoadPanel : MonoBehaviour
         {
             int slotIndex = i;
             saveSlot[i].onClick.AddListener(delegate { OnClickSlot(slotIndex); });
+            slotComment[i] = string.Empty;
         }
     }
 
@@ -134,6 +136,7 @@ public class SaveLoadPanel : MonoBehaviour
             if (SaveDataManager.IsDataExist(slotIndex))
             {
                 saveComfirmText.text = string.Format(LocalizationManager.Localize("System.ConfirmReplace"), slotIndex + 1);
+                saveCommentInput.text = slotComment[slotIndex];
             }
             else
             {
@@ -185,9 +188,10 @@ public class SaveLoadPanel : MonoBehaviour
     {
         for (int i = 0; i < totalSlotNum; i++)
         {
-            string slotName = SaveDataManager.GetDataInfo(i);
+            string slotName = SaveDataManager.GetDataInfo(i, out string comment);
             if (PlayerPrefs.GetInt("LastSavedSlot", -1) == i) slotName = "<color=red>" + slotName;
             saveSlot[i].GetComponentInChildren<TMP_Text>().text = slotName;
+            slotComment[i] = comment;
         }
     }
 }

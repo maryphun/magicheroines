@@ -73,7 +73,7 @@ public static class SaveDataManager
         }
     }
 
-    public static string GetDataInfo(int slotIndex)
+    public static string GetDataInfo(int slotIndex, out string comment)
     {
         if (FileManager.LoadFromFile("SaveData" + slotIndex.ToString("00") + ".dat", out var json))
         {
@@ -84,9 +84,10 @@ public static class SaveDataManager
 
             string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + ((pd.currentStage / 3)+1).ToString() + "-" + ((pd.currentStage % 3)+1).ToString();
             if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
+            comment = sd.dataComment;
             return slotInfo;
         }
-
+        comment = string.Empty;
         return (slotIndex + 1).ToString() + "  <color=grey>No Data</color>";
     }
 
