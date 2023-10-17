@@ -68,7 +68,7 @@ Name.Nayuta,八雲 那由多
 Name.No5,005号
 Name.Battler,戦闘員
 Name.Tentacle,触手怪人
-Name.Clone,クローン戦闘員
+Name.Clone,クローン 005号
 Name.Drone,パトロールドローン
 Name.Android,治安維持ドロイド
 Name.Battler+Tentacle,触手怪人、戦闘員
@@ -105,6 +105,16 @@ Battle.Start,任務開始
 Battle.Victory,任務クリア
 Battle.Defeat,敗北
 Battle.SkipTutorial,スキップ
+Buff,状態
+Buff.Stun,行動不能
+Buff.Bleed,継続ダメージ
+Buff.Heal,継続回復
+Buff.Shield_up,防御力上昇
+Buff.Shield_down,防御力下降
+Buff.Attack_up,攻撃力上昇
+Buff.Attack_down,攻撃力下降
+Buff.Speed_up,素早さ上昇
+Buff.Speed_down,素早さ下降
 Items,アイテム名とその説明文
 Item.Croissant,クロワッサン
 Item.Croissant_Info,エレガントな味覚を楽しむための特別な軽食。

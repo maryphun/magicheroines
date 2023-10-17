@@ -140,6 +140,7 @@ public class CharacterBuildingPanel : MonoBehaviour
 
         // éëóøçXêV
         characterUpgradePanel.InitializeUpgradePanel(characters[currentCheckingSlot]);
+        characterUpgradePanel.ResetAnimation();
     }
 
     /// <summary>
@@ -168,5 +169,6 @@ public class CharacterBuildingPanel : MonoBehaviour
         characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().DOFade(1.0f, 0.1f);
         characterDataPanel.InitializeCharacterData(characters[currentCheckingSlot]);
         characterUpgradePanel.InitializeUpgradePanel(characters[currentCheckingSlot]);
+        characterUpgradePanel.ResetAnimation();
     }
 }

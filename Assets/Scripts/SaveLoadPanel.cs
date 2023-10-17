@@ -137,10 +137,16 @@ public class SaveLoadPanel : MonoBehaviour
             {
                 saveComfirmText.text = string.Format(LocalizationManager.Localize("System.ConfirmReplace"), slotIndex + 1);
                 saveCommentInput.text = slotComment[slotIndex];
+
+                // SE
+                AudioManager.Instance.PlaySFX("SystemWarning");
             }
             else
             {
                 saveComfirmText.text = string.Format(LocalizationManager.Localize("System.ConfirmSave"), slotIndex + 1);
+
+                // SE
+                AudioManager.Instance.PlaySFX("SystemAlert");
             }
         }
         else
@@ -148,22 +154,28 @@ public class SaveLoadPanel : MonoBehaviour
             saveComfirm.SetActive(false);
             loadComfirm.SetActive(true);
             loadComfirmText.text = string.Format(LocalizationManager.Localize("System.ConfirmLoad"), slotIndex+1);
+
+            // SE
+            AudioManager.Instance.PlaySFX("SystemAlert");
         }
 
-        comfirmationPopUp.DOFade(1.0f, animationTime);
+        comfirmationPopUp.DOFade(1.0f, animationTime * 0.5f);
         comfirmationPopUp.interactable = true;
         comfirmationPopUp.blocksRaycasts = true;
     }
 
     public void ClosePopUp()
     {
-        comfirmationPopUp.DOFade(0.0f, animationTime).OnComplete(() => {
+        comfirmationPopUp.DOFade(0.0f, animationTime * 0.5f).OnComplete(() => {
             comfirmationPopUp.interactable = false;
             comfirmationPopUp.blocksRaycasts = false;
 
             saveComfirm.SetActive(false);
             loadComfirm.SetActive(false);
         });
+
+        // SE
+        AudioManager.Instance.PlaySFX("SystemCancel");
     }
 
     public void ComfirmPopUp()
@@ -176,11 +188,17 @@ public class SaveLoadPanel : MonoBehaviour
 
             UpdateSlotInfo();
             ClosePopUp();
+
+            // SE
+            AudioManager.Instance.PlaySFX("SystemSave");
         }
         else
         {
             SaveDataManager.LoadJsonData(currentSelectingSlotIndex);
             StartCoroutine(homeSceneUI.SceneTransition("Home", 1.0f));
+
+            // SE
+            AudioManager.Instance.PlaySFX("SystemActionPanel");
         }
     }
 

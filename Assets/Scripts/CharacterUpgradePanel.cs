@@ -30,6 +30,14 @@ public class CharacterUpgradePanel : MonoBehaviour
 
     [Header("Debug")]
     Character currentCharacter;
+    Sequence newAbilitySequence;
+
+    public void ResetAnimation()
+    {
+        // Reset
+        newAbilitySequence.Complete();
+        newAbility.alpha = 0.0f;
+    }
 
     /// <summary>
     /// 表示するキャラクターを更新
@@ -119,7 +127,7 @@ public class CharacterUpgradePanel : MonoBehaviour
             newAbility.rectTransform.localScale = new Vector3(2.2f, 2.2f, 1f);
             newAbility.alpha = 0.0f;
 
-            DOTween.Sequence()
+            newAbilitySequence = DOTween.Sequence()
                 .AppendCallback(() => {   
                     newAbility.DOFade(1.0f, 0.2f);
                     newAbility.rectTransform.DOScale(1.0f, 0.2f);
