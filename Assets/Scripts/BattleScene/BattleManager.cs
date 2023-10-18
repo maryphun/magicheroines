@@ -147,9 +147,6 @@ public class Battle : MonoBehaviour
 
         if (!isFirstTurn)
         {
-            // バフを先にチェック
-            UpdateBuffForCharacter(GetCurrentBattler());
-
             turnBaseManager.NextBattler();
         }
         else
@@ -241,6 +238,9 @@ public class Battle : MonoBehaviour
         characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
         actionTargetArrow.position = currentCharacter.GetGraphicRectTransform().position;
 
+        // バフを先にチェック
+        UpdateBuffForCharacter(GetCurrentBattler());
+
         yield return new WaitForSeconds(enemyAIDelay);
 
         // TODO: 敵技作成
@@ -269,6 +269,9 @@ public class Battle : MonoBehaviour
         var originPos = currentCharacter.GetGraphicRectTransform().position;
         originPos = currentCharacter.isEnemy ? new Vector2(originPos.x - currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f) : new Vector2(originPos.x + currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f);
         actionTargetArrow.position = originPos;
+
+        // バフを先にチェック
+        UpdateBuffForCharacter(GetCurrentBattler());
 
         // is character stunned
         if (IsCharacterInBuff(currentCharacter, BuffType.stun))
@@ -396,8 +399,6 @@ public class Battle : MonoBehaviour
             target.Shake(attackAnimPlayTime + characterMoveTime);
             attacker.PlayAnimation(BattlerAnimationType.attack);
             target.PlayAnimation(BattlerAnimationType.attacked);
-
-            AddBuffToBattler(target, BuffType.hurt, 5, 20);
 
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);

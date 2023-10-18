@@ -164,7 +164,7 @@ public static class BuffManager
     {
         // create floating text
         var floatingText = UnityEngine.GameObject.Instantiate(floatingTextOrigin, target.transform);
-        floatingText.GetComponent<FloatingText>().Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), text, size, color);
+        floatingText.GetComponent<FloatingText>().Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.35f), new Vector2(0.0f, 100.0f), text, size, color);
     }
 
     public static void StunStart(Battler target, int value) { }
@@ -175,7 +175,8 @@ public static class BuffManager
     public static void HurtUpdate(Battler target, int value) 
     { 
         target.DeductHP(value);
-        CreateFloatingText(value.ToString(), new Color(1f, 0.75f, 0.33f), 64, target);
+        CreateFloatingText(value.ToString(), new Color(1f, 0.75f, 0.33f), 32, target);
+        AudioManager.Instance.PlaySFX("Damage");
     }
     public static void HurtEnd(Battler target, int value) { }
 
@@ -183,7 +184,8 @@ public static class BuffManager
     public static void HealUpdate(Battler target, int value) 
     {  
         target.Heal(value);
-        CreateFloatingText(value.ToString(), new Color(0.33f, 1f, 0.5f), 64, target);
+        CreateFloatingText(value.ToString(), new Color(0.33f, 1f, 0.5f), 32, target);
+        AudioManager.Instance.PlaySFX("Heal2");
     }
     public static void HealEnd(Battler target, int value) { }
 

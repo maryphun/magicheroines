@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public enum EquipmentType
+{
+    Normal,
+    Rare,
+    Holy,
+}
+
 [CreateAssetMenu(fileName = "NewEquipment", menuName = "作成/装備生成")]
 public class EquipmentDefine : ScriptableObject
 {
@@ -11,9 +19,10 @@ public class EquipmentDefine : ScriptableObject
     [Header("基本資料")]
     [SerializeField] public string equipNameID;
     [SerializeField] public string descriptionID;
+    [SerializeField] public EquipmentType equipmentType;
+    [SerializeField, TextArea()] public string effectText;
     [SerializeField] public string battleStartFunctionName;
     [SerializeField] public string battleEndFunctionName;
-    [SerializeField, TextArea()] public string effectText;
 
     [Header("アイコン")]
     [SerializeField] public Sprite Icon;
