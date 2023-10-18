@@ -31,7 +31,7 @@ public enum BuffType
 }
 
 [System.Serializable]
-public struct Buff
+public class Buff
 {
     public BuffType type;
     public BuffData data;
@@ -40,7 +40,7 @@ public struct Buff
     public int remainingTurn;
     public int value;
 
-    public GameObject icon;
+    public GameObject graphic;
     public TMP_Text text;
 }
 
@@ -69,6 +69,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Hurt");
             data.start = HurtStart;
             data.end = HurtEnd;
+            data.update = HurtUpdate;
             data.isBad = true;
             BuffList.Add(BuffType.hurt, data);
         }
@@ -79,6 +80,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Heal");
             data.start = HealStart;
             data.end = HealEnd;
+            data.update = HealUpdate;
             data.isBad = false;
             BuffList.Add(BuffType.heal, data);
         }
@@ -89,6 +91,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Shield_up");
             data.start = ShieldUpStart;
             data.end = ShieldUpEnd;
+            data.update = ShieldUpUpdate;
             data.isBad = false;
             BuffList.Add(BuffType.shield_up, data);
         }
@@ -99,6 +102,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Shield_down");
             data.start = ShieldDownStart;
             data.end = ShieldDownEnd;
+            data.update = ShieldDownUpdate;
             data.isBad = true;
             BuffList.Add(BuffType.shield_down, data);
         }
@@ -109,6 +113,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Attack_up");
             data.start = AttackUpStart;
             data.end = AttackUpEnd;
+            data.update = AttackUpUpdate;
             data.isBad = false;
             BuffList.Add(BuffType.attack_up, data);
         }
@@ -119,6 +124,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Attack_down");
             data.start = AttackDownStart;
             data.end = AttackDownEnd;
+            data.update = AttackDownUpdate;
             data.isBad = true;
             BuffList.Add(BuffType.attack_down, data);
         }
@@ -129,6 +135,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Speed_up");
             data.start = SpeedUpStart;
             data.end = SpeedUpEnd;
+            data.update = SpeedUpUpdate;
             data.isBad = false;
             BuffList.Add(BuffType.speed_up, data);
         }
@@ -139,6 +146,7 @@ public static class BuffManager
             data.name = LocalizationManager.Localize("Buff.Speed_down");
             data.start = SpeedDownStart;
             data.end = SpeedDownEnd;
+            data.update = SpeedDownUpdate;
             data.isBad = true;
             BuffList.Add(BuffType.speed_down, data);
         }
@@ -149,112 +157,39 @@ public static class BuffManager
         currentBattler = battler;
     }
 
-    public static void StunStart(Battler target, int value)
-    {
+    public static void StunStart(Battler target, int value) { }
+    public static void StunUpdate(Battler target, int value) { }
+    public static void StunEnd(Battler target, int value) { }
 
-    }
-    public static void StunUpdate(Battler target, int value)
-    {
+    public static void HurtStart(Battler target, int value) { }
+    public static void HurtUpdate(Battler target, int value) { target.DeductHP(value); }
+    public static void HurtEnd(Battler target, int value) { }
 
-    }
-    public static void StunEnd(Battler target, int value)
-    {
+    public static void HealStart(Battler target, int value) { }
+    public static void HealUpdate(Battler target, int value) {  target.Heal(value); }
+    public static void HealEnd(Battler target, int value) { }
 
-    }
-    public static void HurtStart(Battler target, int value)
-    {
+    public static void ShieldUpStart(Battler target, int value) {  target.defense += value; }
+    public static void ShieldUpUpdate(Battler target, int value) { }
+    public static void ShieldUpEnd(Battler target, int value) { target.defense -= value; }
 
-    }
-    public static void HurtUpdate(Battler target, int value)
-    {
-        target.DeductHP(value);
-    }
-    public static void HurtEnd(Battler target, int value)
-    {
+    public static void ShieldDownStart(Battler target, int value) {  target.defense -= value;  }
+    public static void ShieldDownUpdate(Battler target, int value) { }
+    public static void ShieldDownEnd(Battler target, int value) {  target.defense += value;  }
 
-    }
-    public static void HealStart(Battler target, int value)
-    {
+    public static void AttackUpStart(Battler target, int value) {  target.attack += value; }
+    public static void AttackUpUpdate(Battler target, int value) { }
+    public static void AttackUpEnd(Battler target, int value) { target.attack -= value; }
 
-    }
-    public static void HealUpdate(Battler target, int value)
-    {
-        target.Heal(value);
-    }
-    public static void HealEnd(Battler target, int value)
-    {
+    public static void AttackDownStart(Battler target, int value) { target.attack -= value; }
+    public static void AttackDownUpdate(Battler target, int value) { }
+    public static void AttackDownEnd(Battler target, int value) { target.attack += value; }
 
-    }
-    public static void ShieldUpStart(Battler target, int value)
-    {
-        target.defense += value;
-    }
-    public static void ShieldUpUpdate(Battler target, int value)
-    {
+    public static void SpeedUpStart(Battler target, int value) { target.speed += value; }
+    public static void SpeedUpUpdate(Battler target, int value) { }
+    public static void SpeedUpEnd(Battler target, int value) { target.speed -= value; }
 
-    }
-    public static void ShieldUpEnd(Battler target, int value)
-    {
-        target.defense -= value;
-    }
-    public static void ShieldDownStart(Battler target, int value)
-    {
-        target.defense -= value;
-    }
-    public static void ShieldDownUpdate(Battler target, int value)
-    {
-
-    }
-    public static void ShieldDownEnd(Battler target, int value)
-    {
-        target.defense += value;
-    }
-    public static void AttackUpStart(Battler target, int value)
-    {
-        target.attack += value;
-    }
-    public static void AttackUpUpdate(Battler target, int value)
-    {
-
-    }
-    public static void AttackUpEnd(Battler target, int value)
-    {
-        target.attack -= value;
-    }
-    public static void AttackDownStart(Battler target, int value)
-    {
-        target.attack -= value;
-    }
-    public static void AttackDownUpdate(Battler target, int value)
-    {
-
-    }
-    public static void AttackDownEnd(Battler target, int value)
-    {
-        target.attack += value;
-    }
-    public static void SpeedUpStart(Battler target, int value)
-    {
-        target.speed += value;
-    }
-    public static void SpeedUpUpdate(Battler target, int value)
-    {
-
-    }
-    public static void SpeedUpEnd(Battler target, int value)
-    {
-        target.speed -= value;
-    }
-    public static void SpeedDownStart(Battler target, int value)
-    {
-        target.speed -= value;
-    }
-    public static void SpeedDownUpdate(Battler target, int value)
-    {
-
-    }
-    public static void SpeedDownEnd(Battler target, int value)
-    {
-        target.speed += value;
-    }
+    public static void SpeedDownStart(Battler target, int value) { target.speed -= value; }
+    public static void SpeedDownUpdate(Battler target, int value) { }
+    public static void SpeedDownEnd(Battler target, int value) { target.speed += value; }
 }

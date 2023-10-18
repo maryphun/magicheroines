@@ -146,7 +146,7 @@ public class Battle : MonoBehaviour
         if (!isFirstTurn)
         {
             // バフを先にチェック
-            CheckBuffEffect(GetCurrentBattler());
+            UpdateBuffForCharacter(GetCurrentBattler());
 
             turnBaseManager.NextBattler();
         }
@@ -397,6 +397,7 @@ public class Battle : MonoBehaviour
 
             // stun enemy
             AddBuffToBattler(target, BuffType.stun, 3, 0);
+            AddBuffToBattler(target, BuffType.hurt, 5, 10);
 
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
@@ -469,6 +470,19 @@ public class Battle : MonoBehaviour
     /// </summary>
     public void AddBuffToBattler(Battler target, BuffType buff, int turn, int value)
     {
+        if (IsCharacterInBuff(target, buff))
+        {
+            // 既にこのバフ持っている
+            var instance = buffedCharacters.FirstOrDefault(x => x.target == target && x.type == buff);
+
+            // 終了させる
+            RemoveBuffInstance(instance);
+
+            // 高い数値の方を上書きする
+            turn = Mathf.Max(turn, instance.remainingTurn);
+            value = Mathf.Max(value, instance.value);
+        }
+
         Buff _buff = new Buff();
         _buff.type = buff;
         _buff.data = BuffManager.BuffList[buff];
@@ -478,34 +492,33 @@ public class Battle : MonoBehaviour
 
         _buff.data.start.Invoke(target, value);
 
-        buffedCharacters.Add(_buff);
-
         // Graphic
         // create icon
-        Image border = new GameObject(_buff.data.name).AddComponent<Image>();
-        border.sprite = buffIconFrame;
-        border.raycastTarget = false;
-        border.rectTransform.SetParent(_buff.target.transform);
-        border.rectTransform.position = _buff.target.GetMiddleGlobalPosition() + new Vector2(-_buff.target.GetCharacterSize().x * 0.25f, _buff.target.GetCharacterSize().y * 0.5f);
-        border.rectTransform.sizeDelta = new Vector2(37.0f, 37.0f);
-        border.color = new Color(1f, 1f, 1f, 0.0f);
-        border.DOFade(1.0f, buffIconFadeTime);
+        _buff.graphic = new GameObject(_buff.data.name + "[" + turn.ToString() + "]");
+        var frame = _buff.graphic.AddComponent<Image>();
+        frame.sprite = buffIconFrame;
+        frame.raycastTarget = false;
+        frame.rectTransform.SetParent(_buff.target.transform);
+        frame.rectTransform.position =  GetPositionOfFirstBuff(_buff.target);
+        frame.rectTransform.sizeDelta = new Vector2(37.0f, 37.0f);
+        frame.color = new Color(1f, 1f, 1f, 0.0f);
+        frame.DOFade(1.0f, buffIconFadeTime);
+        
+        Image icon = new GameObject(_buff.data.icon.name).AddComponent<Image>();
+        icon.sprite = _buff.data.icon;
+        icon.raycastTarget = false;
+        icon.rectTransform.SetParent(frame.transform);
+        icon.rectTransform.localPosition = Vector2.zero;
+        icon.rectTransform.sizeDelta = new Vector2(30.0f, 30.0f);
+        icon.color = new Color(1f, 1f, 1f, 0.0f);
+        icon.DOFade(1.0f, buffIconFadeTime);
 
-        Image img = new GameObject(_buff.data.name).AddComponent<Image>();
-        img.sprite = _buff.data.icon;
-        img.raycastTarget = false;
-        img.rectTransform.SetParent(border.transform);
-        img.rectTransform.localPosition = Vector2.zero;
-        img.rectTransform.sizeDelta = new Vector2(30.0f, 30.0f);
-        img.color = new Color(1f, 1f, 1f, 0.0f);
-        img.DOFade(1.0f, buffIconFadeTime);
-
-        var text = Instantiate(buffCounterText, border.transform);
-        _buff.text = text.GetComponent<TMP_Text>();
+        var countingText = Instantiate(buffCounterText, frame.transform);
+        _buff.text = countingText.GetComponent<TMP_Text>();
         _buff.text.text = turn.ToString();
         _buff.text.rectTransform.localPosition = new Vector2(0.0f, 17.0f);
 
-        _buff.icon = border.gameObject;
+        buffedCharacters.Add(_buff);
 
         ArrangeBuffIcon(target);
     }
@@ -513,47 +526,101 @@ public class Battle : MonoBehaviour
     /// <summary>
     /// キャラにかけられているバフを更新
     /// </summary>
-    public void CheckBuffEffect(Battler target)
+    public void UpdateBuffForCharacter(Battler target)
     {
-        for (int i = 0; i < buffedCharacters.Count; i++)
+        var buffList = GetAllBuffForSpecificBattler(target);
+        for (int i = 0; i < buffList.Count; i++)
         {
-            var buff = buffedCharacters[i];
+            var buff = buffList[i];
+            
+            buff.remainingTurn--;
+            buff.data.update.Invoke(buff.target, buff.value);
+            buff.text.text = buff.remainingTurn.ToString();
 
-            if (buff.target == target)
+            if (buff.remainingTurn <= 0)
             {
-                buff.remainingTurn--;
-                buff.data.update.Invoke(buff.target, buff.value);
-                buff.text.text = buff.remainingTurn.ToString();
-
-                if (buff.remainingTurn <= 0)
-                {
-                    buff.data.end.Invoke(buff.target, buff.value);
-                    buff.icon.GetComponent<Image>().DOFade(0.0f, buffIconFadeTime);
-                    Destroy(buff.icon, 0.5f);
-                    buffedCharacters.RemoveAt(i);
-                    ArrangeBuffIcon(buff.target);
-                    i--;
-                }
+                RemoveBuffInstance(buff);
             }
         }
     }
 
+    /// <summary>
+    /// 特定のバフを消す
+    /// </summary>
+    /// <param name="instance"></param>
+    private void RemoveBuffInstance(Buff instance)
+    {
+        instance.data.end.Invoke(instance.target, instance.value);
+        instance.graphic.GetComponent<Image>().DOFade(0.0f, buffIconFadeTime);
+        Destroy(instance.graphic, 0.5f);
+        buffedCharacters.Remove(instance);
+        ArrangeBuffIcon(instance.target);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
     public bool IsCharacterInBuff(Battler battler, BuffType buffType)
     {
-        for (int i = 0; i < buffedCharacters.Count; i++)
+        List<Buff> list = GetAllBuffForSpecificBattler(battler);
+
+        for (int i = 0; i < list.Count; i++)
         {
-            if (buffedCharacters[i].type == buffType && buffedCharacters[i].target == battler)
+            if (list[i].type == buffType && list[i].target == battler)
             {
                 return true;
             }
         }
-
+        
         return false;
     }
 
+    /// <summary>
+    /// キャラクターが持っているバフを全部取得する
+    /// </summary>
+    public List<Buff> GetAllBuffForSpecificBattler(Battler battler)
+    {
+        // Use LINQ to get all elements that match the condition
+        IEnumerable<Buff> rtn = buffedCharacters.Where(x => x.target == battler);
+
+        return rtn.ToList();
+    }
+
+    /// <summary>
+    /// キャラが複数のバフを持っている場合バフの表示位置をアレンジする
+    /// </summary>
     public void ArrangeBuffIcon(Battler battler)
     {
+        var buffs = GetAllBuffForSpecificBattler(battler);
 
+        // Check if any matches are found
+        if (buffs.Any())
+        {
+            // スタート位置
+            Vector3 position = GetPositionOfFirstBuff(battler);
+            Vector3 addition = BuffPositionAddition();
+
+            foreach (Buff buff in buffs)
+            {
+                buff.graphic.GetComponent<RectTransform>().position = position;
+                position += addition;
+            }
+        }
+    }
+
+    public Vector3 GetPositionOfFirstBuff(Battler battler)
+    {
+        return battler.GetMiddleGlobalPosition() + new Vector2(-battler.GetCharacterSize().x * 0.25f, battler.GetCharacterSize().y * 0.5f);
+    }
+
+    /// <summary>
+    /// バフのアレンジ用：アイコン位置の加算値を取得
+    /// </summary>
+    public Vector3 BuffPositionAddition()
+    {
+        Vector3 addition = new Vector3(50.0f, 0.0f, 0.0f);
+
+        return addition;
     }
 
     /// <summary>
