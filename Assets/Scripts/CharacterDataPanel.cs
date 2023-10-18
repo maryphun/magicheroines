@@ -24,6 +24,7 @@ public class CharacterDataPanel : MonoBehaviour
     [SerializeField] private Button[] skillButtonList = new Button[4];
     [SerializeField] private Image[] skillImageList = new Image[4];
     [SerializeField] private bool[] skillAvailable = new bool[4];
+    [SerializeField] private CharacterBuildingPanel mainPanel;
 
     // pop up
     [SerializeField] private CanvasGroup popup;
@@ -106,6 +107,8 @@ public class CharacterDataPanel : MonoBehaviour
         popup.alpha = 0.0f;
         popup.interactable = false;
         popup.blocksRaycasts = false;
+
+        UpdateEquipmentIcon();
     }
 
     public void OnClickAbility(Ability ability)
@@ -170,8 +173,18 @@ public class CharacterDataPanel : MonoBehaviour
         }
     }
 
-    public void OnClickEquipmentButton()
+    public void UpdateEquipmentIcon()
     {
-
+        var EquipmentData = ProgressManager.Instance.GetEquipmentData();
+        bool isEquiped = EquipmentData.Any(x => x.equipingCharacterID == mainPanel.CurrentCheckingSlot);
+        if (isEquiped)
+        {
+            equipment.sprite = ProgressManager.Instance.GetEquipmentData().FirstOrDefault(x => x.equipingCharacterID == mainPanel.CurrentCheckingSlot).data.Icon;
+            equipment.color = Color.white;
+        }
+        else
+        {
+            equipment.color = new Color(1, 1, 1, 0);
+        }
     }
 }

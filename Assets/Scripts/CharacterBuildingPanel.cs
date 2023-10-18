@@ -28,6 +28,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     private Color _darkenedTabColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
     const float _pinkPanelShakeTime = 0.1f;
     const float _pinkPanelShakeMagnitude = 2.5f;
+    public int CurrentCheckingSlot { get { return currentCheckingSlot; } }
 
     private void Start()
     {

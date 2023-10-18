@@ -303,13 +303,13 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 指定の装備アイテムを装備する, セーブデータの都合でCharacterIDとしてデータを残し、装備とキャラを紐つける
     /// </summary>
-    public void ApplyEquipmentToCharacter(EquipmentDefine data, Character character)
+    public void ApplyEquipmentToCharacter(EquipmentDefine data, int characterID)
     {
         for (int i = 0; i < playerData.equipment.Count; i++)
         {
             if (playerData.equipment[i].data.pathName == data.pathName)
             {
-                playerData.equipment[i].SetEquipCharacter(character.characterData.characterID);
+                playerData.equipment[i].equipingCharacterID = characterID;
             }
         }
     }
@@ -317,11 +317,11 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 装備を外す
     /// </summary>
-    public void UnapplyEquipment(EquipmentDefine data)
+    public void UnapplyEquipment(string name)
     {
         for (int i = 0; i < playerData.equipment.Count; i++)
         {
-            if (playerData.equipment[i].data.pathName == data.pathName)
+            if (playerData.equipment[i].data.pathName == name)
             {
                 playerData.equipment[i].Unequip();
             }
@@ -375,6 +375,19 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         ItemDefine aid = Resources.Load<ItemDefine>("ItemList/救急箱");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(aid);
         Resources.UnloadAsset(aid);
+
+        // 装備を貰う
+        EquipmentDefine helmet = Resources.Load<EquipmentDefine>("EquipmentList/Helmet");
+        AddNewEquipment(helmet);
+        Resources.UnloadAsset(helmet);
+
+        EquipmentDefine corruptedGlove = Resources.Load<EquipmentDefine>("EquipmentList/CorruptedGlove");
+        AddNewEquipment(corruptedGlove);
+        Resources.UnloadAsset(corruptedGlove);
+
+        EquipmentDefine niceTshirt = Resources.Load<EquipmentDefine>("EquipmentList/NiceTshirt");
+        AddNewEquipment(niceTshirt);
+        Resources.UnloadAsset(niceTshirt);
 
         // 敵キャラを設置
         if (addEnemy)

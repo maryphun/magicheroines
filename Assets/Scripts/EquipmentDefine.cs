@@ -28,7 +28,8 @@ public class EquipmentDefine : ScriptableObject
     [SerializeField] public Sprite Icon;
 }
 
-public struct EquipmentData
+[System.Serializable]
+public class EquipmentData
 {
     public EquipmentDefine data;
     public int equipingCharacterID;
