@@ -48,6 +48,7 @@ public static class BuffManager
 {
     public static Dictionary<BuffType, BuffData> BuffList = new Dictionary<BuffType, BuffData>();
     public static Battler currentBattler;
+    public static GameObject floatingTextOrigin;
 
     public static void Init()
     {
@@ -150,6 +151,8 @@ public static class BuffManager
             data.isBad = true;
             BuffList.Add(BuffType.speed_down, data);
         }
+
+        floatingTextOrigin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
     }
 
     public static void CurrentTurn(Battler battler)
@@ -157,16 +160,31 @@ public static class BuffManager
         currentBattler = battler;
     }
 
+    public static void CreateFloatingText(string text, Color color, float size, Battler target)
+    {
+        // create floating text
+        var floatingText = UnityEngine.GameObject.Instantiate(floatingTextOrigin, target.transform);
+        floatingText.GetComponent<FloatingText>().Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), text, size, color);
+    }
+
     public static void StunStart(Battler target, int value) { }
     public static void StunUpdate(Battler target, int value) { }
     public static void StunEnd(Battler target, int value) { }
 
     public static void HurtStart(Battler target, int value) { }
-    public static void HurtUpdate(Battler target, int value) { target.DeductHP(value); }
+    public static void HurtUpdate(Battler target, int value) 
+    { 
+        target.DeductHP(value);
+        CreateFloatingText(value.ToString(), new Color(1f, 0.75f, 0.33f), 64, target);
+    }
     public static void HurtEnd(Battler target, int value) { }
 
     public static void HealStart(Battler target, int value) { }
-    public static void HealUpdate(Battler target, int value) {  target.Heal(value); }
+    public static void HealUpdate(Battler target, int value) 
+    {  
+        target.Heal(value);
+        CreateFloatingText(value.ToString(), new Color(0.33f, 1f, 0.5f), 64, target);
+    }
     public static void HealEnd(Battler target, int value) { }
 
     public static void ShieldUpStart(Battler target, int value) {  target.defense += value; }

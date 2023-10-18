@@ -396,7 +396,9 @@ public class Battle : MonoBehaviour
             target.Shake(attackAnimPlayTime + characterMoveTime);
             attacker.PlayAnimation(BattlerAnimationType.attack);
             target.PlayAnimation(BattlerAnimationType.attacked);
-            
+
+            AddBuffToBattler(target, BuffType.hurt, 5, 20);
+
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
