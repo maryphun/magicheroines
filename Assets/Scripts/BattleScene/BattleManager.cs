@@ -16,6 +16,7 @@ public class Battle : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private float characterSpace = 150.0f;
     [SerializeField, Range(1.1f, 2.0f)] private float turnEndDelay = 1.1f;
+    [SerializeField, Range(1.1f, 2.0f)] private float stunWaitDelay = 0.55f;
     [SerializeField, Range(1.1f, 2.0f)] private float enemyAIDelay = 2.0f;
     [SerializeField, Range(0.1f, 1.0f)] private float characterMoveTime = 0.5f;  // < キャラがターゲットの前に移動する時間
     [SerializeField, Range(0.1f, 1.0f)] private float attackAnimPlayTime = 0.2f; // < 攻撃アニメーションの維持時間
@@ -34,6 +35,7 @@ public class Battle : MonoBehaviour
     [SerializeField] private BattleSceneTransition sceneTransition;
     [SerializeField] private FloatingText floatingTextOrigin;
     [SerializeField] private BattleSceneTutorial battleSceneTutorial;
+    [SerializeField] private CharacterInfoPanel characterInfoPanel;
 
     [Header("Debug")]
     [SerializeField] private List<Battler> characterList = new List<Battler>();
@@ -246,7 +248,7 @@ public class Battle : MonoBehaviour
         // is character stunned
         if (IsCharacterInBuff(currentCharacter, BuffType.stun))
         {
-            yield return new WaitForSeconds(turnEndDelay);
+            yield return new WaitForSeconds(stunWaitDelay);
             NextTurn(false);
         }
         else
@@ -271,7 +273,7 @@ public class Battle : MonoBehaviour
         // is character stunned
         if (IsCharacterInBuff(currentCharacter, BuffType.stun))
         {
-            yield return new WaitForSeconds(characterArrow.ChangeCharacterSpeed + turnEndDelay);
+            yield return new WaitForSeconds(stunWaitDelay);
             NextTurn(false);
         }
         else
@@ -394,11 +396,7 @@ public class Battle : MonoBehaviour
             target.Shake(attackAnimPlayTime + characterMoveTime);
             attacker.PlayAnimation(BattlerAnimationType.attack);
             target.PlayAnimation(BattlerAnimationType.attacked);
-
-            // stun enemy
-            AddBuffToBattler(target, BuffType.stun, 3, 0);
-            AddBuffToBattler(target, BuffType.hurt, 5, 10);
-
+            
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
@@ -521,6 +519,7 @@ public class Battle : MonoBehaviour
         buffedCharacters.Add(_buff);
 
         ArrangeBuffIcon(target);
+        characterInfoPanel.UpdateIcons(target);
     }
 
     /// <summary>
@@ -542,6 +541,7 @@ public class Battle : MonoBehaviour
                 RemoveBuffInstance(buff);
             }
         }
+        characterInfoPanel.UpdateIcons(target);
     }
 
     /// <summary>

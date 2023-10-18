@@ -22,6 +22,7 @@ public class CharacterInfoPanel : MonoBehaviour
     [SerializeField] private Image characterHPFill;
     [SerializeField] private Image characterSPFill;
     [SerializeField] private CanvasGroup SPBar;
+    [SerializeField] private RectTransform buffHandler;
 
     [SerializeField] private Canvas mainCanvas;
     [SerializeField] private Battle battleManager;
@@ -31,6 +32,8 @@ public class CharacterInfoPanel : MonoBehaviour
     [SerializeField] private bool isDisplaying;
     [SerializeField] private Battler currentBattler;
     [SerializeField] private float hideDelayCnt;
+    [SerializeField] private List<Buff> characterBuffs;
+    [SerializeField] private List<GameObject> buffIcons;
 
     private void Start()
     {
@@ -71,6 +74,9 @@ public class CharacterInfoPanel : MonoBehaviour
         {
             SPBar.alpha = 0.0f;
         }
+
+        // Display character buff
+        UpdateIcons(currentBattler);
 
         isDisplaying = true;
         GetComponent<CanvasGroup>().DOFade(1.0f, fadeTime);
@@ -114,6 +120,30 @@ public class CharacterInfoPanel : MonoBehaviour
                     Hide();
                 }
             }
+        }
+    }
+
+    public void UpdateIcons(Battler target)
+    {
+        if (!isDisplaying) return;
+        if (currentBattler != target) return;
+
+        // Clear old buff icons if there are any.
+        if (buffIcons != null) foreach (var obj in buffIcons) Destroy(obj);
+        buffIcons = new List<GameObject>();
+
+        // Create new buff icons
+        characterBuffs = battleManager.GetAllBuffForSpecificBattler(currentBattler);
+        Vector3 iconPosition = Vector3.zero;
+        Vector3 addition = battleManager.BuffPositionAddition();
+        foreach (var buff in characterBuffs)
+        {
+            var newObj = Instantiate(buff.graphic);
+            newObj.transform.SetParent(buffHandler);
+            newObj.GetComponent<RectTransform>().localPosition = iconPosition;
+            Destroy(newObj.GetComponentInChildren<TMP_Text>());
+            iconPosition += addition;
+            buffIcons.Add(newObj);
         }
     }
 }

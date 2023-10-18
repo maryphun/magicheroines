@@ -2116,6 +2116,42 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!1 &834114837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834114838}
+  m_Layer: 5
+  m_Name: Buff Handler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &834114838
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834114837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 859521353}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -23.56, y: -5}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &837001999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,6 +2585,7 @@ RectTransform:
   - {fileID: 1840235567}
   - {fileID: 221440305}
   - {fileID: 1092064856}
+  - {fileID: 834114838}
   m_Father: {fileID: 1458978427}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2629,12 +2666,15 @@ MonoBehaviour:
   characterHPFill: {fileID: 1663142958}
   characterSPFill: {fileID: 591297924}
   SPBar: {fileID: 1092064859}
+  buffHandler: {fileID: 834114838}
   mainCanvas: {fileID: 1458978426}
   battleManager: {fileID: 1211329629}
   tutorialManager: {fileID: 1925851522}
   isDisplaying: 0
   currentBattler: {fileID: 0}
   hideDelayCnt: 0
+  characterBuffs: []
+  buffIcons: []
 --- !u!1 &866861550
 GameObject:
   m_ObjectHideFlags: 0
@@ -4453,9 +4493,11 @@ MonoBehaviour:
   sceneTransition: {fileID: 1999713342}
   floatingTextOrigin: {fileID: 6598968398884241739, guid: 466ba757e9a3b7049bf17c5291a3b1c3, type: 3}
   battleSceneTutorial: {fileID: 1925851522}
+  characterInfoPanel: {fileID: 859521357}
   characterList: []
   enemyList: []
   arrowPointingTarget: {fileID: 0}
+  buffedCharacters: []
 --- !u!1 &1264239554
 GameObject:
   m_ObjectHideFlags: 0

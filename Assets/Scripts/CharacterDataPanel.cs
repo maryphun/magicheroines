@@ -18,6 +18,7 @@ public class CharacterDataPanel : MonoBehaviour
     [SerializeField] private TMP_Text attackValue;
     [SerializeField] private TMP_Text defenseValue;
     [SerializeField] private TMP_Text speedValue;
+    [SerializeField] private Button equipmentButton;
     [SerializeField] private Image equipment;
     [SerializeField] private TMP_Text skillList;
     [SerializeField] private Button[] skillButtonList = new Button[4];
@@ -167,5 +168,10 @@ public class CharacterDataPanel : MonoBehaviour
             default:
                 return string.Empty;
         }
+    }
+
+    public void OnClickEquipmentButton()
+    {
+
     }
 }

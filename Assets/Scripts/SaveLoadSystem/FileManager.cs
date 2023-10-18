@@ -118,6 +118,18 @@ public static class SaveDataManager
         }
 
         {
+            data.equipment = new List<SaveLoad.SerializedEquipment>();
+            foreach (EquipmentData item in pd.equipment)
+            {
+                SaveLoad.SerializedEquipment newData = new SaveLoad.SerializedEquipment();
+                newData.pathName = item.data.pathName;
+                newData.equipingCharacterID = item.equipingCharacterID;
+
+                data.equipment.Add(newData);
+            }
+        }
+
+        {
             data.homeDialogue = new List<SaveLoad.SerializedHomeDialogue>();
             foreach (HomeDialogue homeDialogue in pd.homeDialogue)
             {
@@ -179,6 +191,19 @@ public static class SaveDataManager
         }
 
         {
+            playerData.equipment = new List<EquipmentData>();
+            foreach (SaveLoad.SerializedEquipment equipmentData in serializableData.equipment)
+            {
+                EquipmentDefine scriptableObject = Resources.Load<EquipmentDefine>("EquipmentList/" + equipmentData.pathName);
+
+                EquipmentData newData = new EquipmentData(scriptableObject);
+                newData.equipingCharacterID = equipmentData.equipingCharacterID;
+
+                playerData.equipment.Add(newData);
+            }
+        }
+
+        {
             playerData.homeDialogue = new List<HomeDialogue>();
             foreach (SaveLoad.SerializedHomeDialogue homeDialogue in serializableData.homeDialogue)
             {
@@ -233,12 +258,19 @@ public struct SerializablePlayerData
     public int formationSlotUnlocked;
     public FormationSlotData[] formationCharacters;
 
+    public List<SaveLoad.SerializedEquipment> equipment;
     public List<SaveLoad.SerializedCharacter> characters;
     public List<SaveLoad.SerializedHomeDialogue> homeDialogue;
 }
 
 namespace SaveLoad
 {
+    public struct SerializedEquipment
+    {
+        public string pathName;
+        public int equipingCharacterID;
+    }
+
     public struct SerializedHomeDialogue
     {
         public string pathName;

@@ -17,6 +17,7 @@ public struct PlayerData
     public List<Character> characters;     //< 持っているキャラクター
     public FormationSlotData[] formationCharacters; //< パーティー編成
     public List<ItemDefine> inventory;   //< 所持アイテム
+    public List<EquipmentData> equipment;   //< 所持装備
     public List<HomeDialogue> homeDialogue;   //< ホームシーンのセリフを管理する
     public int formationSlotUnlocked;    //< 解放されたスロット
 }
@@ -43,6 +44,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.characters = new List<Character>();
         playerData.formationCharacters = new FormationSlotData[5];
         playerData.inventory = new List<ItemDefine>();
+        playerData.equipment = new List<EquipmentData>();
         playerData.homeDialogue = new List<HomeDialogue>();
         playerData.formationSlotUnlocked = 2;
 
@@ -289,6 +291,55 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         return playerData.homeDialogue;
     }
 
+    /// <summary>
+    /// 装備を入手する
+    /// </summary>
+    public void AddNewEquipment(EquipmentDefine data)
+    {
+        EquipmentData newEquipment = new EquipmentData(data);
+        playerData.equipment.Add(newEquipment);
+    }
+
+    /// <summary>
+    /// 指定の装備アイテムを装備する, セーブデータの都合でCharacterIDとしてデータを残し、装備とキャラを紐つける
+    /// </summary>
+    public void ApplyEquipmentToCharacter(EquipmentDefine data, Character character)
+    {
+        for (int i = 0; i < playerData.equipment.Count; i++)
+        {
+            if (playerData.equipment[i].data.pathName == data.pathName)
+            {
+                playerData.equipment[i].SetEquipCharacter(character.characterData.characterID);
+            }
+        }
+    }
+
+    /// <summary>
+    /// 装備を外す
+    /// </summary>
+    public void UnapplyEquipment(EquipmentDefine data)
+    {
+        for (int i = 0; i < playerData.equipment.Count; i++)
+        {
+            if (playerData.equipment[i].data.pathName == data.pathName)
+            {
+                playerData.equipment[i].Unequip();
+            }
+        }
+    }
+
+    public List<EquipmentData> GetEquipmentData(bool originalReference = false)
+    {
+        if (originalReference)
+        {
+            return playerData.equipment;
+        }
+        else
+        {
+            List<EquipmentData> copy = new List<EquipmentData>(playerData.equipment);
+            return copy;
+        }
+    }
 
 #if DEBUG_MODE
     public void DebugModeInitialize(bool addEnemy = false)
