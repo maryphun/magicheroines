@@ -687,6 +687,7 @@ public class Battle : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        Debug.Log("Load Scene : " + sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

@@ -37,6 +37,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Drone");
                     BattleSetup.AddEnemy("Android");
                     StartCoroutine(SceneTransition("Battle", 0));
+                    AudioManager.Instance.PlayMusicWithCrossFade("BattleTutorial", 2.0f);
                 }
                 break;
             case 3:

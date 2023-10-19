@@ -63,6 +63,15 @@ public class WorldMapUI : MonoBehaviour
 
     public void NextStory()
     {
+        const float animationTime = 1.0f;
 
+        // ƒV[ƒ“‘JˆÚ
+        AlphaFadeManager.Instance.FadeOut(animationTime);
+        DOTween.Sequence()
+            .AppendInterval(animationTime)
+            .AppendCallback(() => { SceneManager.LoadScene("Story", LoadSceneMode.Single); });
+
+        // SE
+        AudioManager.Instance.PlaySFX("QuestStart");
     }
 }

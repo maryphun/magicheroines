@@ -51,7 +51,7 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         if (!initialized) Initializer();
 
         fadeAlpha.DOComplete();
-        fadeAlpha.DOFade(1.0f, time);
+        fadeAlpha.color = new Color(0, 0, 0, 1);
         fadeAlpha.DOFade(0.0f, time);
 
         fadeAlpha.raycastTarget = false;
@@ -65,7 +65,7 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         if (!initialized) Initializer();
 
         fadeAlpha.DOComplete();
-        fadeAlpha.DOFade(0.0f, time);
+        fadeAlpha.color = new Color(0, 0, 0, 0);
         fadeAlpha.DOFade(1.0f, time);
 
         fadeAlpha.raycastTarget = true;
