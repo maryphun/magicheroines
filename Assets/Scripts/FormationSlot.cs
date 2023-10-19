@@ -76,23 +76,23 @@ public class FormationSlot : MonoBehaviour
         battlerScript.SetupFormationPanelMode();
 
         // 名前とレベル
-        slotName.text = LocalizationManager.Localize("Battle.Level") + unit.current_level + " " + unit.localizedName;
+        slotName.text = LocalizationManager.Localize("Battle.Level") + battlerScript.currentLevel + " " + unit.localizedName;
         slotName.fontSize = nameTextSize;
         slotName.color = Color.white;
 
         // ステータス表示
-        if (unit.current_maxHp > 0)
+        if (battlerScript.max_hp > 0)
         {
             HPStatus.SetActive(true);
-            HPFill.fillAmount = unit.current_hp / unit.current_maxHp;
+            HPFill.fillAmount = battlerScript.current_hp / battlerScript.max_hp;
         }
-        HPText.text = LocalizationManager.Localize("Battle.HP") + "：" + unit.current_hp.ToString() + "/" + unit.current_maxHp.ToString();
+        HPText.text = LocalizationManager.Localize("Battle.HP") + "：" + battlerScript.current_hp.ToString() + "/" + battlerScript.max_hp.ToString();
 
         if (unit.current_maxMp > 0)
         {
             MPStatus.SetActive(true);
-            MPFill.fillAmount = unit.current_mp / unit.current_maxMp;
-            MPText.text = LocalizationManager.Localize("Battle.MP") + "：" + unit.current_mp.ToString() + "/" + unit.current_maxMp.ToString();
+            MPFill.fillAmount = battlerScript.current_mp / battlerScript.max_hp;
+            MPText.text = LocalizationManager.Localize("Battle.MP") + "：" + battlerScript.current_mp.ToString() + "/" + battlerScript.max_mp.ToString();
         }
 
         // 表示しないものを非表示に

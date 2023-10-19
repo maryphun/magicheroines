@@ -129,22 +129,18 @@ public class Battler : MonoBehaviour
         {
             try
             {
-                var method = EquipmentExecute.Instance.GetType().GetMethod(equipment.battleStartFunctionName);
-
-                if (method != null)
-                {
-                    var arguments = new object[] { this };
-                    method.Invoke(EquipmentExecute.Instance, arguments);
-                }
-                else
-                {
-                    Debug.LogError($"Method {equipment.battleStartFunctionName} not found in EquipmentExecute.Instance");
-                }
+                EquipmentExecute.Instance.SetBattler(this);
+                Debug.Log("Calling method " + equipment.battleStartFunctionName);
+                EquipmentExecute.Instance.Invoke(equipment.battleStartFunctionName, 0);
             }
             catch (Exception ex)
             {
                 Debug.LogError($"An exception occurred: {ex.Message}");
             }
+        }
+        else
+        {
+            Debug.Log("Equipment for characterID " + characterID.ToString() + " = null");
         }
     }
 
