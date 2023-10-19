@@ -25,7 +25,7 @@ public struct PlayerData
 public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 {
     public PlayerData PlayerData { get { return playerData; } }
-    PlayerData playerData;
+    [SerializeField] PlayerData playerData;
 
 #if DEBUG_MODE
     bool isDebugModeInitialized = false;
@@ -309,7 +309,6 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             if (playerData.equipment[i].data.pathName == data.pathName)
             {
-                Debug.Log(data.pathName + " equipped by " + GetCharacterByID(characterID).localizedName + ".");
                 playerData.equipment[i].equipingCharacterID = characterID;
             }
         }
@@ -324,7 +323,6 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             if (playerData.equipment[i].data.pathName == name)
             {
-                Debug.Log(name + " unequipped.");
                 playerData.equipment[i].equipingCharacterID = -1;
             }
         }
@@ -346,14 +344,18 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// このキャラが装備しているアイテムを取得
     /// </summary>
-    public EquipmentDefine GetCharacterEquipment(int characterID)
+    public bool GetCharacterEquipment(int characterID, ref EquipmentDefine result)
     {
         for (int i = 0; i < playerData.equipment.Count; i++)
         {
-            if (playerData.equipment[i].equipingCharacterID == characterID) return playerData.equipment[i].data;
+            if (playerData.equipment[i].equipingCharacterID == characterID)
+            {
+                result = playerData.equipment[i].data;
+                return true; 
+            }
         }
 
-        return null;
+        return false;
     }
 
 #if DEBUG_MODE

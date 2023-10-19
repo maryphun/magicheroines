@@ -79,7 +79,7 @@ public class FormationSlot : MonoBehaviour
         slotName.text = LocalizationManager.Localize("Battle.Level") + battlerScript.currentLevel + " " + unit.localizedName;
         slotName.fontSize = nameTextSize;
         slotName.color = Color.white;
-
+        
         // ステータス表示
         if (battlerScript.max_hp > 0)
         {

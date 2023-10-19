@@ -123,24 +123,16 @@ public class Battler : MonoBehaviour
     /// </summary>
     public void ApplyEquipmentFromCharacter(int characterID)
     {
-        equipment = ProgressManager.Instance.GetCharacterEquipment(characterID);
-
-        if (equipment != null)
+        if (ProgressManager.Instance.GetCharacterEquipment(characterID, ref equipment))
         {
             try
             {
-                EquipmentExecute.Instance.SetBattler(this);
-                Debug.Log("Calling method " + equipment.battleStartFunctionName);
-                EquipmentExecute.Instance.Invoke(equipment.battleStartFunctionName, 0);
+                EquipmentExecute.Instance.StartCoroutine(equipment.battleStartFunctionName, this);
             }
             catch (Exception ex)
             {
                 Debug.LogError($"An exception occurred: {ex.Message}");
             }
-        }
-        else
-        {
-            Debug.Log("Equipment for characterID " + characterID.ToString() + " = null");
         }
     }
 
