@@ -52,7 +52,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
+      BGM: {fileID: 8300000, guid: a846639beeb7b0845ba0206a3382b1de, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -211,7 +211,7 @@ MonoBehaviour:
     _index: 1
     _nodePosition:
       serializedVersion: 2
-      x: 118
+      x: 117
       y: 140
       width: 159
       height: 97
@@ -286,8 +286,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 5b7da27e623454d47808181bc3cb3527, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -330,7 +330,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
+      BGM: {fileID: 8300000, guid: 5b7da27e623454d47808181bc3cb3527, type: 3}
       BGMStyle: 0
       BGMLoop: 0
       BGMCount: 1
@@ -434,8 +434,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 010000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -478,8 +478,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 040000000000000001000000
+      charaEffectStrength: 090000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -522,8 +522,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -566,8 +566,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -610,8 +610,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 040000000000000001000000
+      charaEffectStrength: 090000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -654,8 +654,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -698,8 +698,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 040000000000000001000000
+      charaEffectStrength: 090000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -742,8 +742,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -786,8 +786,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 040000000000000001000000
+      charaEffectStrength: 090000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -830,8 +830,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -874,8 +874,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 040000000000000001000000
+      charaEffectStrength: 090000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -918,8 +918,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -962,8 +962,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 040000000000000001000000
+      charaEffectStrength: 090000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -1006,8 +1006,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 010000000000000004000000
+      charaEffectStrength: 000000000000000009000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -1034,8 +1034,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 4d4b4c6b45d8eaf47bd86efab48c8dfe, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -1078,7 +1078,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
+      BGM: {fileID: 8300000, guid: 4d4b4c6b45d8eaf47bd86efab48c8dfe, type: 3}
       BGMStyle: 0
       BGMLoop: 0
       BGMCount: 1
@@ -1891,7 +1891,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
+      Name: Name.Akiho
       text: "\u300C\u3072\u3083\u3046\u3063\u3001\u3093\u3063\u2764\u3001\u3084\u3081\u3066\u304F\u3060\u3055\u3044\u3063\u3001\u3084\u3081\u3066\uFF01\u300D"
       localizationID: Dialog.Chapter1-1-42
       back: {fileID: 21300000, guid: b14e98b98d2fcd14c8fe49172db0aedf, type: 3}
@@ -2531,15 +2531,15 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: aeb1493eb7450d1449031513fc9596d4, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3

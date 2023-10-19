@@ -19,7 +19,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
     {
         if (isNovelCreated) return;
 
-        GameObject origin = Resources.Load<GameObject>("Prefabs/Canvas");
+        GameObject origin = Resources.Load<GameObject>("Prefabs/NovelPlayer");
 
         if (ReferenceEquals(origin, null))
         {
