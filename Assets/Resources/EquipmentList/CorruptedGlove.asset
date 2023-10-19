@@ -23,4 +23,9 @@ MonoBehaviour:
     +25 ATK'
   battleStartFunctionName: CorruptedGloveStart
   battleEndFunctionName: CorruptedGloveEnd
+  hp: -30
+  sp: 0
+  atk: 25
+  def: -3
+  spd: 0
   Icon: {fileID: 21300000, guid: 552ecd24a0bc6a8468da06d058fc1b0b, type: 3}

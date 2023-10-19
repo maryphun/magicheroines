@@ -115,8 +115,6 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private bool isDescriptionShowing = false;
     [SerializeField] private bool isOpened = false;
     [SerializeField] private bool isHiding = false;
-    [SerializeField] private bool isSelectingEnemy = false;
-    [SerializeField] private bool isSelectingTeammate = false;
     [SerializeField] private ItemDefine selectingItem;
     [SerializeField] private RectTransform[] itemSlots;
     [SerializeField] private Action onCloseCallback;
@@ -165,8 +163,6 @@ public class InventoryManager : MonoBehaviour
 
         isOpened = false;
         isHiding = false;
-        isSelectingEnemy = false;
-        isSelectingTeammate = false;
         isDescriptionShowing = false;
         isInitialized = true;
     }
@@ -395,13 +391,11 @@ public class InventoryManager : MonoBehaviour
                 CloseInventory();
                 break;
             case CastType.Teammate:
-                isSelectingTeammate = true;
                 HideInventory();
                 selectingItem = item.Item2;
                 StartCoroutine(SelectingTarget(true, false, true));
                 break;
             case CastType.Enemy:
-                isSelectingEnemy = true;
                 HideInventory();
                 selectingItem = item.Item2;
                 StartCoroutine(SelectingTarget(false, true, true));

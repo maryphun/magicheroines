@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
 using Assets.SimpleLocalization.Scripts;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadPanel : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class SaveLoadPanel : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Button[] saveSlot = new Button[totalSlotNum];
-    [SerializeField] private string[] slotComment = new string[totalSlotNum];
     [SerializeField] private Button saveTab;
     [SerializeField] private Button loadTab;
     [SerializeField] private CanvasGroup canvasGroup;
@@ -32,7 +32,12 @@ public class SaveLoadPanel : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool isSaving = false;
     [SerializeField] private int currentSelectingSlotIndex = -1;
+    [SerializeField] private string[] slotComment = new string[totalSlotNum];
+    [SerializeField] private bool[] isDataAvailable = new bool[totalSlotNum];
+    [SerializeField] private bool isMainMenu = false;
+    [SerializeField] private bool isOpen = false;
 
+    public bool IsOpen { get { return isOpen; } }
     private Color _darkenedTabColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
 
     private void Start()
@@ -45,13 +50,14 @@ public class SaveLoadPanel : MonoBehaviour
         }
     }
 
-    public void OpenSaveLoadPanel()
+    public void OpenSaveLoadPanel(bool isMainMenu)
     {
+        // タイトルメニューからは仕様が違う
+        this.isMainMenu = isMainMenu;
+        isOpen = true;
+
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemOpen");
-
-        // デフォルトタブ
-        SwapToSaveTab(false);
 
         canvasGroup.DOFade(1.0f, animationTime);
         canvasGroup.interactable = true;
@@ -64,10 +70,22 @@ public class SaveLoadPanel : MonoBehaviour
         // データ初期化
         currentSelectingSlotIndex = -1;
         UpdateSlotInfo();
+
+        // デフォルトタブ
+        if (isMainMenu)
+        {
+            SwapToLoadTab(false);
+        }
+        else
+        {
+            SwapToSaveTab(false);
+        }
     }
 
     public void CloseSaveLoadPanel()
     {
+        isOpen = false;
+
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemCancel");
 
@@ -78,14 +96,17 @@ public class SaveLoadPanel : MonoBehaviour
 
     public void SwapToSaveTab(bool playSE)
     {
-        saveTab.interactable = false;
-        loadTab.interactable = true;
+        if (!isMainMenu)
+        {
+            saveTab.interactable = false;
+            loadTab.interactable = true;
 
-        saveTab.image.color = Color.white;
-        loadTab.image.color = _darkenedTabColor;
+            saveTab.image.color = Color.white;
+            loadTab.image.color = _darkenedTabColor;
 
-        saveTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -33.0f, 0.0f);
-        loadTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -50.0f, 0.0f);
+            saveTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -33.0f, 0.0f);
+            loadTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -50.0f, 0.0f);
+        }
 
         if (playSE)
         {
@@ -98,18 +119,27 @@ public class SaveLoadPanel : MonoBehaviour
 
         // flag
         isSaving = true;
+
+        // enable all slot
+        for (int i = 0; i < totalSlotNum; i++)
+        {
+            saveSlot[i].interactable = true;
+        }
     }
 
     public void SwapToLoadTab(bool playSE)
     {
-        saveTab.interactable = true;
-        loadTab.interactable = false;
+        if (!isMainMenu)
+        {
+            saveTab.interactable = true;
+            loadTab.interactable = false;
 
-        saveTab.image.color = _darkenedTabColor;
-        loadTab.image.color = Color.white;
+            saveTab.image.color = _darkenedTabColor;
+            loadTab.image.color = Color.white;
 
-        saveTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -50.0f, 0.0f);
-        loadTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -33.0f, 0.0f);
+            saveTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -50.0f, 0.0f);
+            loadTab.GetComponent<RectTransform>().anchoredPosition = new Vector3(saveTab.GetComponent<RectTransform>().anchoredPosition.x, -33.0f, 0.0f);
+        }
 
         if (playSE)
         {
@@ -122,6 +152,12 @@ public class SaveLoadPanel : MonoBehaviour
 
         // flag
         isSaving = false;
+
+        // disable slot with no data
+        for (int i = 0; i < totalSlotNum; i++)
+        {
+            saveSlot[i].interactable = isDataAvailable[i];
+        }
     }
 
     public void OnClickSlot(int slotIndex)
@@ -196,7 +232,16 @@ public class SaveLoadPanel : MonoBehaviour
         else
         {
             SaveDataManager.LoadJsonData(currentSelectingSlotIndex);
-            StartCoroutine(homeSceneUI.SceneTransition("Home", 1.0f));
+
+            // ロードが使えるところは二か所ある
+            if (isMainMenu)
+            {
+                StartCoroutine(this.SceneTransition());
+            }
+            else
+            {
+                StartCoroutine(homeSceneUI.SceneTransition("Home", 1.0f));
+            }
 
             // SE
             AudioManager.Instance.PlaySFX("SystemActionPanel");
@@ -207,10 +252,19 @@ public class SaveLoadPanel : MonoBehaviour
     {
         for (int i = 0; i < totalSlotNum; i++)
         {
-            string slotName = SaveDataManager.GetDataInfo(i, out string comment);
+            isDataAvailable[i] = SaveDataManager.GetDataInfo(i, out string slotName, out string comment);
+            
             if (PlayerPrefs.GetInt("LastSavedSlot", -1) == i) slotName = "<color=red>" + slotName;
             saveSlot[i].GetComponentInChildren<TMP_Text>().text = slotName;
             slotComment[i] = comment;
         }
+    }
+
+    public IEnumerator SceneTransition(string sceneName = "Home", float animationTime = 1.0f)
+    {
+        // シーン遷移
+        AlphaFadeManager.Instance.FadeOut(animationTime);
+        yield return new WaitForSeconds(animationTime);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

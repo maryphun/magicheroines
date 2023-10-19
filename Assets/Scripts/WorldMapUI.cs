@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class WorldMapUI : MonoBehaviour
 {
@@ -38,5 +39,25 @@ public class WorldMapUI : MonoBehaviour
     {
         ProgressManager.Instance.StageProgress();
         stagesUIScript.PlayStageAnimation();
+    }
+
+    public void ResourceGatheringQuest()
+    {
+        // “GƒLƒƒƒ‰‚ðÝ’u
+        SetupEnemy.ClearEnemy();
+        SetupEnemy.AddEnemy("Android");
+        SetupEnemy.AddEnemy("Drone");
+
+        const float animationTime = 1.0f;
+
+        // ƒV[ƒ“‘JˆÚ
+        AlphaFadeManager.Instance.FadeOut(animationTime);
+
+        DOTween.Sequence()
+            .AppendInterval(animationTime)
+            .AppendCallback(() => { SceneManager.LoadScene("Battle", LoadSceneMode.Single); });
+
+        // Switch BGM
+        AudioManager.Instance.PlayMusicWithCrossFade("BattleTutorial", 2.0f);
     }
 }

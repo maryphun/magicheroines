@@ -32,7 +32,7 @@ public static class FileManager
             result = File.ReadAllText(fullPath);
             return true;
         }
-        catch (Exception e)
+        catch
         {
             result = "";
             return false;
@@ -73,7 +73,7 @@ public static class SaveDataManager
         }
     }
 
-    public static string GetDataInfo(int slotIndex, out string comment)
+    public static bool GetDataInfo(int slotIndex, out string slotName, out string comment)
     {
         try
         {
@@ -84,21 +84,24 @@ public static class SaveDataManager
 
                 PlayerData pd = ConvertSerializableDataToPlayerData(sd.serializablePlayerData);
 
-                string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + ((pd.currentStage / 3) + 1).ToString() + "-" + ((pd.currentStage % 3) + 1).ToString();
+                string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + ((pd.currentStage / 3) + 1).ToString() + "-" + (((pd.currentStage-1) % 3) + 1).ToString();
                 if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
                 comment = sd.dataComment;
-                return slotInfo;
+                slotName = slotInfo;
+                return true;
             }
         }
         catch (Exception e)
         {
             Debug.LogWarning("SaveData" + slotIndex.ToString("00") + ".dat cannot be loaded properly. (" + e.Message + ")");
             comment = string.Empty;
-            return (slotIndex + 1).ToString() + "  <color=grey>" + Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("System.FileCorrupted") + "</color>";
+            slotName = (slotIndex + 1).ToString() + "  <color=grey>" + Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("System.FileCorrupted") + "</color>";
+            return false;
         }
         
         comment = string.Empty;
-        return (slotIndex + 1).ToString() + "  <color=grey>No Data</color>";
+        slotName = (slotIndex + 1).ToString() + "  <color=grey>No Data</color>";
+        return false;
     }
 
 

@@ -38,6 +38,7 @@ public class TitleSelectUI : MonoBehaviour
     [SerializeField] private TMP_Text[] selection = new TMP_Text[SelectionCount];
     [SerializeField] private TMP_Text dummyText;
     [SerializeField] private OptionPanel optionPanel;
+    [SerializeField] private SaveLoadPanel saveloadPanel;
 
     [Header("Debug")]
     [SerializeField] private TitleSelection currentSelection;
@@ -265,6 +266,7 @@ public class TitleSelectUI : MonoBehaviour
     private void Update()
     {
         if (optionPanel.IsOpen()) return;
+        if (saveloadPanel.IsOpen) return;
 
         // Todo: Use Input manager instead
         if (Input.GetKeyDown(KeyCode.UpArrow)) keyPrepressed = KeyCode.UpArrow;
@@ -327,7 +329,7 @@ public class TitleSelectUI : MonoBehaviour
                 Init();
                 break;
             case TitleSelection.Load:
-                Init();
+                saveloadPanel.OpenSaveLoadPanel(true);
                 break;
             case TitleSelection.NewGame:
                 SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);

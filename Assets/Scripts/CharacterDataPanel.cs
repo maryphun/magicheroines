@@ -51,6 +51,21 @@ public class CharacterDataPanel : MonoBehaviour
         defenseValue.text = character.current_defense.ToString();
         speedValue.text = character.current_speed.ToString();
 
+        // get equipment bonus
+        EquipmentDefine equipmentData = new EquipmentDefine();
+        bool isEquiped = ProgressManager.Instance.GetCharacterEquipment(character.characterData.characterID, ref equipmentData);
+        if (isEquiped)
+        {
+            var data = ProgressManager.Instance.GetEquipmentData().FirstOrDefault(x => x.equipingCharacterID == mainPanel.CurrentCheckingSlot).data;
+
+            if (data.hp != 0) hpValue.text = hpValue.text + "<size=75%><color=" + (data.hp > 0 ? "green>(+" : "red>(") + data.hp + ")";
+            if (data.sp != 0) mpValue.text = mpValue.text + "<size=75%><color=" + (data.sp > 0 ? "green>(+" : "red>(") + data.sp + ")";
+            if (data.atk != 0) attackValue.text = attackValue.text + "<size=75%><color=" + (data.atk > 0 ? "green>(+" : "red>(") + data.atk + ")";
+            if (data.def != 0) defenseValue.text = defenseValue.text + "<size=75%><color=" + (data.def > 0 ? "green>(+" : "red>(") + data.def + ")";
+            if (data.spd != 0) speedValue.text = speedValue.text + "<size=75%><color=" + (data.spd > 0 ? "green>(+" : "red>(") + data.spd + ")";
+        }
+
+
         // setup ability
         List<Ability> abilities = new List<Ability>(character.characterData.abilities);
 
@@ -160,13 +175,10 @@ public class CharacterDataPanel : MonoBehaviour
         {
             case AbilityType.Attack:
                 return LocalizationManager.Localize("System.AbilityAttack");
-                break;
             case AbilityType.Buff:
                 return LocalizationManager.Localize("System.AbilityBuff");
-                break;
             case AbilityType.Heal:
                 return LocalizationManager.Localize("System.AbilityHeal");
-                break;
             case AbilityType.Special:
                 return LocalizationManager.Localize("System.AbilitySpecial");
             default:

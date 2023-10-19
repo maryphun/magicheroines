@@ -49,9 +49,12 @@ public static class BuffManager
     public static Dictionary<BuffType, BuffData> BuffList = new Dictionary<BuffType, BuffData>();
     public static Battler currentBattler;
     public static GameObject floatingTextOrigin;
+    public static bool isInitialized = false;
 
     public static void Init()
     {
+        if (isInitialized) return;
+
         // stun
         {
             BuffData data = new BuffData();
@@ -153,6 +156,7 @@ public static class BuffManager
         }
 
         floatingTextOrigin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
+        isInitialized = true;
     }
 
     public static void CurrentTurn(Battler battler)

@@ -128,6 +128,14 @@ public class Battler : MonoBehaviour
             try
             {
                 EquipmentExecute.Instance.StartCoroutine(equipment.battleStartFunctionName, this);
+                max_hp = Mathf.Max(max_hp + equipment.hp, 1);
+                max_mp = Mathf.Max(max_mp + equipment.sp, max_mp == 0 ? 0 : 1);
+                attack = Mathf.Max(attack + equipment.atk, 0);
+                defense = Mathf.Max(defense + equipment.def, 0);
+                speed = Mathf.Max(speed + equipment.spd, 0);
+
+                current_hp += equipment.hp;
+                current_mp += equipment.sp;
             }
             catch (Exception ex)
             {

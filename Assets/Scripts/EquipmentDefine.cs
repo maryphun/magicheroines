@@ -23,6 +23,11 @@ public class EquipmentDefine : ScriptableObject
     [SerializeField, TextArea()] public string effectText;
     [SerializeField] public string battleStartFunctionName;
     [SerializeField] public string battleEndFunctionName;
+    [SerializeField] public int hp;
+    [SerializeField] public int sp;
+    [SerializeField] public int atk;
+    [SerializeField] public int def;
+    [SerializeField] public int spd;
 
     [Header("ÉAÉCÉRÉì")]
     [SerializeField] public Sprite Icon;

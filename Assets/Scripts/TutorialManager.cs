@@ -63,12 +63,15 @@ public class TutorialManager : MonoBehaviour
     {
         // ƒV[ƒ“‘JˆÚ
         DOTween.Sequence()
-            .AppendCallback(() => {
+            .AppendCallback(() => 
+            {
                 AudioManager.Instance.StopMusicWithFade(sceneTransitionTime * 0.5f);
                 AlphaFadeManager.Instance.FadeOut(sceneTransitionTime);
-                                  })
-            .AppendInterval(sceneTransitionTime).AppendCallback(() => {
-                                     SceneManager.LoadScene("Home", LoadSceneMode.Single);
-                                  });
+            })
+            .AppendInterval(sceneTransitionTime)
+            .AppendCallback(() => 
+            {
+                SceneManager.LoadScene("Home", LoadSceneMode.Single);
+            });
     }
 }

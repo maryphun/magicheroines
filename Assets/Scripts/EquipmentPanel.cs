@@ -33,7 +33,6 @@ public class EquipmentPanel : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private int characterID = -1;
     [SerializeField] private List<EquipmentData> equips;
-    [SerializeField] private bool isOpen = false;
 
     public void OpenEquipmentPanel()
     {
@@ -51,7 +50,6 @@ public class EquipmentPanel : MonoBehaviour
         // データを初期化
         ResetData();
         InitEquipmentSlots(mainPanel.CurrentCheckingSlot);
-        isOpen = true;
 
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemOpen");
@@ -64,7 +62,6 @@ public class EquipmentPanel : MonoBehaviour
             panel.interactable = false;
             panel.blocksRaycasts = false;
         });
-        isOpen = false;
 
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemCancel");
@@ -202,7 +199,7 @@ public class EquipmentPanel : MonoBehaviour
         }
 
         // 外部のアイコンも更新
-        dataPanel.UpdateEquipmentIcon();
+        dataPanel.InitializeCharacterData(ProgressManager.Instance.GetCharacterByID(characterID));
     }
 
     public void OnPointerEnter(EquipmentDefine itemdefine)

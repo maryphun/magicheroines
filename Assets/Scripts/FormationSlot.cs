@@ -91,7 +91,7 @@ public class FormationSlot : MonoBehaviour
         if (unit.current_maxMp > 0)
         {
             MPStatus.SetActive(true);
-            MPFill.fillAmount = battlerScript.current_mp / battlerScript.max_hp;
+            MPFill.fillAmount = battlerScript.current_mp / battlerScript.max_mp;
             MPText.text = LocalizationManager.Localize("Battle.MP") + "ÅF" + battlerScript.current_mp.ToString() + "/" + battlerScript.max_mp.ToString();
         }
 
