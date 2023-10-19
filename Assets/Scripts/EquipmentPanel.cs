@@ -52,6 +52,9 @@ public class EquipmentPanel : MonoBehaviour
         ResetData();
         InitEquipmentSlots(mainPanel.CurrentCheckingSlot);
         isOpen = true;
+
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemOpen");
     }
 
     public void CloseEquipmentPanel()
@@ -62,6 +65,9 @@ public class EquipmentPanel : MonoBehaviour
             panel.blocksRaycasts = false;
         });
         isOpen = false;
+
+        // SE çƒê∂
+        AudioManager.Instance.PlaySFX("SystemCancel");
     }
 
     private void InitEquipmentSlots(int characterID)
