@@ -79,6 +79,8 @@ Name.No72,072号
 Name.Drone,パトロールドローン
 Name.Android,治安維持ドロイド
 Name.Battler+Tentacle,触手怪人、戦闘員
+Name.Man,男
+Name.GuardMan,駅員
 Mood,心情
 Mood.Rebel,反抗的
 Mood.Pleasure,享楽
@@ -129,6 +131,17 @@ Equipment.Helmet,ヘルメット
 Equipment.Helmet_Info,重要な頭部を守てくれる。
 Equipment.CorruptedGlove,呪われた手袋
 Equipment.CorruptedGlove_Info,呪われており、装備するのに勇気がいる...。
+Equipment.Akiho,明穂の聖核
+Equipment.Akiho_Info,装備者は毎ターンHPとSPを回復する。
+Equipment.Rikka,立花の聖核
+Equipment.Rikka_Info,"攻撃目標になる可能性を高める。
+攻撃された時に自動的に反撃する。"
+Equipment.Erena,エレナの聖核
+Equipment.Erena_Info,攻撃でたまに敵を行動不能にする。
+Equipment.Kei,京の聖核
+Equipment.Kei_Info,いくつか敵に異常状態を与えられる特殊技を使えるようになる。
+Equipment.Nayuta,那由多の聖核
+Equipment.Nayuta_Info,装備者は毎ターン攻撃力を5~15点増加する。
 Items,アイテム名とその説明文
 Item.Croissant,クロワッサン
 Item.Croissant_Info,エレガントな味覚を楽しむための特別な軽食。

@@ -19,6 +19,7 @@ public class Battler : MonoBehaviour
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
+    [SerializeField] public int characterID;
     [SerializeField] public Sprite icon;
     [SerializeField] public bool isEnemy;
     [SerializeField] public Color character_color = Color.white;
@@ -67,6 +68,7 @@ public class Battler : MonoBehaviour
     public void InitializeEnemyData(EnemyDefine enemy)
     {
         character_name = LocalizationManager.Localize(enemy.enemyName);
+        characterID = -1; // 敵キャラはIDを持っていない
         isEnemy = true;
         character_color = enemy.character_color;
         icon = enemy.icon;
@@ -88,6 +90,7 @@ public class Battler : MonoBehaviour
     public void InitializeCharacterData(Character character)
     {
         character_name = LocalizationManager.Localize(character.characterData.nameID);
+        characterID = character.characterData.characterID;
         isEnemy = false;
         character_color = character.characterData.color;
         icon = character.characterData.icon;

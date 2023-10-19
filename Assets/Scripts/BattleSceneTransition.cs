@@ -86,7 +86,15 @@ public class BattleSceneTransition : MonoBehaviour
     public void EndScene(bool isVictory, Action<string> callback)
     {
         text.text = LocalizationManager.Localize(isVictory ? "Battle.Victory" : "Battle.Defeat");
-        StartCoroutine(EndSceneTransition(callback, "WorldMap"));
+
+        if (BattleSetup.isStoryMode)
+        {
+            StartCoroutine(EndSceneTransition(callback, "Story"));
+        }
+        else
+        {
+            StartCoroutine(EndSceneTransition(callback, "WorldMap"));
+        }
     }
 
     public void EndTutorial()

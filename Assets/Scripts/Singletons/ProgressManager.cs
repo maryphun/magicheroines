@@ -126,6 +126,17 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// 戦闘終了後にキャラのHPとMPをデータに同期化
+    /// </summary>
+    public void UpdateCharacterByBattler(int characterID, Battler battler)
+    {
+        var character = playerData.characters.Find(item => item.characterData.characterID == characterID);
+
+        character.current_hp = battler.current_hp;
+        character.current_mp = battler.current_mp;
+    }
+
+    /// <summary>
     /// CharacterID からキャラクターを取得する
     /// </summary>
     /// <returns></returns>
@@ -409,9 +420,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         // 敵キャラを設置
         if (addEnemy)
         {
-            SetupEnemy.ClearEnemy();
-            SetupEnemy.AddEnemy("Akiho_Enemy");
-            SetupEnemy.AddEnemy("Rikka_Enemy");
+            BattleSetup.Reset(false);
+            BattleSetup.AddEnemy("Akiho_Enemy");
+            BattleSetup.AddEnemy("Rikka_Enemy");
         }
     }
 #else

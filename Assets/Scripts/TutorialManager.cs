@@ -49,9 +49,9 @@ public class TutorialManager : MonoBehaviour
     IEnumerator SceneTransition(string sceneName, float animationTime)
     {
         // 敵キャラを設置
-        SetupEnemy.ClearEnemy();
-        SetupEnemy.AddEnemy("Akiho_Enemy");
-        SetupEnemy.AddEnemy("Rikka_Enemy");
+        BattleSetup.Reset(true);
+        BattleSetup.AddEnemy("Akiho_Enemy");
+        BattleSetup.AddEnemy("Rikka_Enemy");
 
         // シーン遷移
         AlphaFadeManager.Instance.FadeOut(animationTime);

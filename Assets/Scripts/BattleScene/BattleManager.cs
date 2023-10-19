@@ -58,7 +58,7 @@ public class Battle : MonoBehaviour
             }
         }
 
-        List<EnemyDefine> enemyList = SetupEnemy.GetEnemyList(true);
+        List<EnemyDefine> enemyList = BattleSetup.GetEnemyList(true);
         InitializeBattleScene(actors, enemyList);
 
         // Send references
@@ -665,6 +665,12 @@ public class Battle : MonoBehaviour
         actionTargetArrow.gameObject.SetActive(false);
         characterArrow.gameObject.SetActive(false);
         actionPanel.SetEnablePanel(false);
+
+        // キャラの状態をデータに更新
+        foreach (Battler battler in characterList)
+        {
+            ProgressManager.Instance.UpdateCharacterByBattler(battler.characterID, battler);
+        }
 
         // チュートリアル終了 (負けイべント)
         bool isTutorial = (ProgressManager.Instance.GetCurrentStageProgress() == 1);

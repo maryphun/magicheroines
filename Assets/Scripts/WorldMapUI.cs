@@ -44,9 +44,9 @@ public class WorldMapUI : MonoBehaviour
     public void ResourceGatheringQuest()
     {
         // “GƒLƒƒƒ‰‚ğİ’u
-        SetupEnemy.ClearEnemy();
-        SetupEnemy.AddEnemy("Android");
-        SetupEnemy.AddEnemy("Drone");
+        BattleSetup.Reset(false);
+        BattleSetup.AddEnemy("Android");
+        BattleSetup.AddEnemy("Drone");
 
         const float animationTime = 1.0f;
 
@@ -59,5 +59,10 @@ public class WorldMapUI : MonoBehaviour
 
         // Switch BGM
         AudioManager.Instance.PlayMusicWithCrossFade("BattleTutorial", 2.0f);
+    }
+
+    public void NextStory()
+    {
+
     }
 }

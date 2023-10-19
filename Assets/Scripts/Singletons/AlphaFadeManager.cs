@@ -53,6 +53,8 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.DOComplete();
         fadeAlpha.DOFade(1.0f, time);
         fadeAlpha.DOFade(0.0f, time);
+
+        fadeAlpha.raycastTarget = false;
     }
 
     /// <summary>
@@ -65,6 +67,8 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.DOComplete();
         fadeAlpha.DOFade(0.0f, time);
         fadeAlpha.DOFade(1.0f, time);
+
+        fadeAlpha.raycastTarget = true;
     }
 
     public void Fade(float start, float end, float time = 0.0f)

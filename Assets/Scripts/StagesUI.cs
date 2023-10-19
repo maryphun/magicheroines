@@ -28,6 +28,7 @@ public class StagesUI : MonoBehaviour
 
     [Header("References")]
     [SerializeField] List<GameObject> stageObj = new  List<GameObject>();
+    [SerializeField] StageArrow stageArrow;
 
     private List<StageObjectParts> stageObjParts = new List<StageObjectParts>();
     private int unlockedStage = 0;
@@ -58,6 +59,8 @@ public class StagesUI : MonoBehaviour
             {
                 unlockedStage++;
                 StartCoroutine(UnlockStage(stageObjParts[i]));
+                stageArrow.SetStage(stageObjParts[i], 40.0f);
+
             }
             else
             {

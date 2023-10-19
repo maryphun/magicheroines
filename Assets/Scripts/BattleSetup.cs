@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class SetupEnemy
+public class BattleSetup
 {
     static List<EnemyDefine> enemies;
+    public static bool isStoryMode = false;
+
     public static List<EnemyDefine> GetEnemyList(bool clear)
     {
         var rtn = new List<EnemyDefine>(enemies);
@@ -22,9 +24,13 @@ public class SetupEnemy
         enemies = enemyList;
     }
 
-    public static void ClearEnemy()
+    /// <summary>
+    /// Žg‚¤‘O‚É•K‚¸ŒÄ‚ñ‚Å‚¨‚­‚±‚Æ
+    /// </summary>
+    public static void Reset(bool isStory)
     {
         enemies = new List<EnemyDefine>();
+        isStoryMode = isStory;
     }
 
     /// <summary>
