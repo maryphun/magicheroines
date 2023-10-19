@@ -49,6 +49,7 @@ System.AbilityHeal,回復
 System.AbilityBuff,状態
 System.AbilitySpecial,特殊
 System.AbilityAbsent,特殊技持っていない
+System.FileCorrupted,データ異常
 System.Save,セーブ
 System.Cancel,キャンセル
 System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？

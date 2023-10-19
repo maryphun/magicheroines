@@ -75,18 +75,28 @@ public static class SaveDataManager
 
     public static string GetDataInfo(int slotIndex, out string comment)
     {
-        if (FileManager.LoadFromFile("SaveData" + slotIndex.ToString("00") + ".dat", out var json))
+        try
         {
-            SaveData sd = new SaveData();
-            sd = SaveData.LoadFromJson(json);
+            if (FileManager.LoadFromFile("SaveData" + slotIndex.ToString("00") + ".dat", out var json))
+            {
+                SaveData sd = new SaveData();
+                sd = SaveData.LoadFromJson(json);
 
-            PlayerData pd = ConvertSerializableDataToPlayerData(sd.serializablePlayerData);
+                PlayerData pd = ConvertSerializableDataToPlayerData(sd.serializablePlayerData);
 
-            string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + ((pd.currentStage / 3)+1).ToString() + "-" + ((pd.currentStage % 3)+1).ToString();
-            if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
-            comment = sd.dataComment;
-            return slotInfo;
+                string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + ((pd.currentStage / 3) + 1).ToString() + "-" + ((pd.currentStage % 3) + 1).ToString();
+                if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
+                comment = sd.dataComment;
+                return slotInfo;
+            }
         }
+        catch (Exception e)
+        {
+            Debug.LogWarning("SaveData" + slotIndex.ToString("00") + ".dat cannot be loaded properly. (" + e.Message + ")");
+            comment = string.Empty;
+            return (slotIndex + 1).ToString() + "  <color=grey>" + Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("System.FileCorrupted") + "</color>";
+        }
+        
         comment = string.Empty;
         return (slotIndex + 1).ToString() + "  <color=grey>No Data</color>";
     }
