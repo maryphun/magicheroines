@@ -27,6 +27,7 @@ public class EquipmentPanel : MonoBehaviour
     [SerializeField] private RectTransform cursor;
     [SerializeField] private Image sprite;
     [SerializeField] private TMP_Text equipmentName_Text;
+    [SerializeField] private TMP_Text equipmentType_Text;
     [SerializeField] private TMP_Text description;
 
     [Header("Debug")]
@@ -36,10 +37,19 @@ public class EquipmentPanel : MonoBehaviour
 
     public void OpenEquipmentPanel()
     {
+        // アニメション
         panel.DOFade(1.0f, animTime);
         panel.interactable = true;
         panel.blocksRaycasts = true;
+        
+        // カーソルを初期化する
+        cursor.SetParent(transform);
+        cursor.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        var cursorImg = cursor.GetComponent<Image>();
+        cursorImg.color = new Color(cursorImg.color.r, cursorImg.color.g, cursorImg.color.b, 0);
 
+        // データを初期化
+        ResetData();
         InitEquipmentSlots(mainPanel.CurrentCheckingSlot);
         isOpen = true;
     }
@@ -62,9 +72,9 @@ public class EquipmentPanel : MonoBehaviour
 
         // arrange
         equips = new List<EquipmentData>();
-        equips.AddRange(data.Where(x => x.data.equipmentType == EquipmentType.Holy && (x.equipingCharacterID <= -1 || x.equipingCharacterID == characterID)).ToList());
-        equips.AddRange(data.Where(x => x.data.equipmentType == EquipmentType.Rare && (x.equipingCharacterID <= -1 || x.equipingCharacterID == characterID)).ToList());
-        equips.AddRange(data.Where(x => x.data.equipmentType == EquipmentType.Normal && (x.equipingCharacterID <= -1 || x.equipingCharacterID == characterID)).ToList());
+        equips.AddRange(data.Where(x => x.data.equipmentType == EquipmentType.Holy).ToList());
+        equips.AddRange(data.Where(x => x.data.equipmentType == EquipmentType.Rare).ToList());
+        equips.AddRange(data.Where(x => x.data.equipmentType == EquipmentType.Normal).ToList());
 
         for (int i = 0; i < totalSlotNumber; i++)
         {
@@ -73,7 +83,17 @@ public class EquipmentPanel : MonoBehaviour
             {
                 // 装備を表示
                 equipmentSlot[i].interactable = true;
-                icon.color = Color.white;
+
+                if (equips[i].equipingCharacterID >= 0 && equips[i].equipingCharacterID != characterID)
+                {
+                    // 別のキャラに装備されている装備
+                    equipmentSlot[i].interactable = false;
+                    icon.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                }
+                else
+                {
+                    icon.color = Color.white;
+                }
                 icon.sprite = equips[i].data.Icon;
 
                 switch (equips[i].data.equipmentType)
@@ -90,18 +110,19 @@ public class EquipmentPanel : MonoBehaviour
                 }
                 EquipmentDefine item = equips[i].data;
                 int slotIndex = i;
+                equipmentSlot[i].onClick.RemoveAllListeners();
                 equipmentSlot[i].onClick.AddListener(delegate { OnClickEquipItem(item, slotIndex); });
 
                 // event triggers
                 var trigger = equipmentSlot[i].GetComponent<EventTrigger>();
                 EventTrigger.Entry enter = new EventTrigger.Entry();
                 enter.eventID = EventTriggerType.PointerEnter;
-                enter.callback.AddListener((data) => { OnPointerEnter(item); });
+                enter.callback.AddListener((a) => { OnPointerEnter(item); });
                 trigger.triggers.Add(enter);
                 
                 EventTrigger.Entry exit = new EventTrigger.Entry();
                 exit.eventID = EventTriggerType.PointerExit;
-                exit.callback.AddListener((data) => { OnPointerExit(); });
+                exit.callback.AddListener((a) => { ResetData(); });
                 trigger.triggers.Add(exit);
 
                 // すでに装備している
@@ -130,6 +151,7 @@ public class EquipmentPanel : MonoBehaviour
 
     private void OnClickEquipItem(EquipmentDefine item, int slotIndex)
     {
+        ResetCursor();
         var cursorImg = cursor.GetComponent<Image>();
 
         // このキャラが装備しているアイテムがあるかをチェック
@@ -179,15 +201,60 @@ public class EquipmentPanel : MonoBehaviour
 
     public void OnPointerEnter(EquipmentDefine itemdefine)
     {
+        // Reset
+        ResetData();
+
         sprite.sprite = itemdefine.Icon;
         sprite.DOFade(1.0f, 0.1f);
-        description.text = LocalizationManager.Localize(itemdefine.descriptionID) +"\n\n"+ itemdefine.effectText;
-        equipmentName_Text.text = LocalizationManager.Localize(itemdefine.equipNameID);
+        description.DOText(LocalizationManager.Localize(itemdefine.descriptionID) +"\n\n"+ itemdefine.effectText, 0.5f).SetEase(Ease.Linear);
+        equipmentName_Text.DOText(LocalizationManager.Localize(itemdefine.equipNameID), 0.2f).SetEase(Ease.Linear);
+
+        equipmentType_Text.color = GetColorByEquipmentType(itemdefine.equipmentType);
+        string label = LocalizationManager.Localize("System.EquipmentType") + ": ";
+        switch (itemdefine.equipmentType)
+        {
+            case EquipmentType.Normal:
+                equipmentType_Text.DOText(label + LocalizationManager.Localize("System.EquipmentNormal"), 0.2f).SetEase(Ease.Linear);
+                break;
+            case EquipmentType.Rare:
+                equipmentType_Text.DOText(label + LocalizationManager.Localize("System.EquipmentRare"), 0.2f).SetEase(Ease.Linear);
+                break;
+            case EquipmentType.Holy:
+                equipmentType_Text.DOText(label + LocalizationManager.Localize("System.EquipmentHoly"), 0.2f).SetEase(Ease.Linear);
+                break;
+        }
     }
-    public void OnPointerExit()
+    public void ResetData()
     {
+        // end all animation
+        sprite.DOKill();
+        description.DOKill();
+        equipmentType_Text.DOKill();
+        equipmentName_Text.DOKill();
+
         sprite.color = new Color(1, 1, 1, 0);
         description.text = string.Empty;
+        equipmentType_Text.text = string.Empty;
         equipmentName_Text.text = string.Empty;
+    }
+
+    public void ResetCursor()
+    {
+        cursor.DOKill(true);
+        cursor.GetComponent<Image>().DOKill(true);
+    }
+
+    public Color GetColorByEquipmentType(EquipmentType type)
+    {
+        switch (type)
+        {
+            case EquipmentType.Normal:
+                return normalItemColor;
+            case EquipmentType.Rare:
+                return rareItemColor;
+            case EquipmentType.Holy:
+                return holyItemColor;
+        }
+        return Color.white;
     }
 }

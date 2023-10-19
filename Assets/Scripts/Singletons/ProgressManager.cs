@@ -309,6 +309,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             if (playerData.equipment[i].data.pathName == data.pathName)
             {
+                Debug.Log(data.pathName + " equipped by " + GetCharacterByID(characterID).localizedName + ".");
                 playerData.equipment[i].equipingCharacterID = characterID;
             }
         }
@@ -323,7 +324,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             if (playerData.equipment[i].data.pathName == name)
             {
-                playerData.equipment[i].Unequip();
+                Debug.Log(name + " unequipped.");
+                playerData.equipment[i].equipingCharacterID = -1;
             }
         }
     }
@@ -339,6 +341,19 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
             List<EquipmentData> copy = new List<EquipmentData>(playerData.equipment);
             return copy;
         }
+    }
+
+    /// <summary>
+    /// このキャラが装備しているアイテムを取得
+    /// </summary>
+    public EquipmentDefine GetCharacterEquipment(int characterID)
+    {
+        for (int i = 0; i < playerData.equipment.Count; i++)
+        {
+            if (playerData.equipment[i].equipingCharacterID == characterID) return playerData.equipment[i].data;
+        }
+
+        return null;
     }
 
 #if DEBUG_MODE

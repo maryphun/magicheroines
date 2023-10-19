@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public int currentLevel;
     [SerializeField] public bool isAlive;
     [SerializeField] public List<Ability> abilities;
+    [SerializeField] public EquipmentDefine equipment;
 
     [Header("References")]
     [SerializeField] private Image graphic;
@@ -112,7 +114,38 @@ public class Battler : MonoBehaviour
             abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
         }
 
+        ApplyEquipmentFromCharacter(character.characterData.characterID);
         Initialize();
+    }
+
+    /// <summary>
+    /// ƒLƒƒƒ‰‚ª‚Á‚Ä‚¢‚é‘•”õ‚ğ—LŒø‰»
+    /// </summary>
+    public void ApplyEquipmentFromCharacter(int characterID)
+    {
+        equipment = ProgressManager.Instance.GetCharacterEquipment(characterID);
+
+        if (equipment != null)
+        {
+            try
+            {
+                var method = EquipmentExecute.Instance.GetType().GetMethod(equipment.battleStartFunctionName);
+
+                if (method != null)
+                {
+                    var arguments = new object[] { this };
+                    method.Invoke(EquipmentExecute.Instance, arguments);
+                }
+                else
+                {
+                    Debug.LogError($"Method {equipment.battleStartFunctionName} not found in EquipmentExecute.Instance");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"An exception occurred: {ex.Message}");
+            }
+        }
     }
 
     /// <summary>
