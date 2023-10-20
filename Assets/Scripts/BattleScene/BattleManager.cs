@@ -363,6 +363,9 @@ public class Battle : MonoBehaviour
                 });
     }
 
+    /// <summary>
+    /// 攻撃用シーケンス
+    /// </summary>
     IEnumerator AttackAnimation(Battler attacker, Battler target, Action<bool> callback)
     {
         Transform originalParent = attacker.transform.parent;
@@ -390,6 +393,7 @@ public class Battle : MonoBehaviour
         {
             // calculate damage
             int realDamge = Mathf.RoundToInt((float)(attacker.attack - target.defense) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
+            realDamge = Mathf.Max(1, realDamge); // 最低限1ダメージにする
             target.DeductHP(realDamge, true);
 
             // play SE

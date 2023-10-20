@@ -28,19 +28,17 @@ MonoBehaviour:
     starting_level: 1
     base_hp: 50
     base_mp: 50
-    base_attack: 5
-    base_defense: 5
-    base_speed: 5
-    hp_growth: 10
-    mp_growth: 10
-    attack_growth: 8
-    defense_growth: 5
-    speed_growth: 10
+    base_attack: 6
+    base_defense: 2
+    base_speed: 17
+    hp_growth: 15
+    mp_growth: 7
+    attack_growth: 5
+    defense_growth: 2
+    speed_growth: 5
     levelUp_base_cost: 350
     levelUp_cost_increment: 50
     is_heroin: 0
-    max_dark_gauge: 100
-    max_horny_gauge: 100
     characterStatus:
     - moodNameID: 
       textColor: {r: 0, g: 0, b: 0, a: 0}

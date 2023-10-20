@@ -28,12 +28,12 @@ MonoBehaviour:
     starting_level: 1
     base_hp: 100
     base_mp: 0
-    base_attack: 15
-    base_defense: 8
+    base_attack: 5
+    base_defense: 2
     base_speed: 5
-    hp_growth: 10
+    hp_growth: 12
     mp_growth: 0
-    attack_growth: 7
+    attack_growth: 5
     defense_growth: 3
     speed_growth: 2
     levelUp_base_cost: 100

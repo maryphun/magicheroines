@@ -26,7 +26,7 @@ MonoBehaviour:
     color: {r: 0.96966964, g: 0.6961997, b: 0.990566, a: 1}
     nameID: Name.Akiho
     starting_level: 10
-    base_hp: 0
+    base_hp: 700
     base_mp: 0
     base_attack: 0
     base_defense: 0
@@ -39,8 +39,6 @@ MonoBehaviour:
     levelUp_base_cost: 300
     levelUp_cost_increment: 75
     is_heroin: 1
-    max_dark_gauge: 100
-    max_horny_gauge: 100
     characterStatus:
     - moodNameID: Mood.Disgust
       textColor: {r: 0.8773585, g: 0, b: 0, a: 1}

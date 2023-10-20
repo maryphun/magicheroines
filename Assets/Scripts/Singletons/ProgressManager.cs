@@ -77,12 +77,22 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
             {
                 playerData.formationCharacters[i] = new FormationSlotData(-1, false);
             }
-        } 
+        }
+
+        // 乱数を初期化する
+        var randomizer = new System.Random();
+        int seed = randomizer.Next(int.MinValue, int.MaxValue);
+        UnityEngine.Random.InitState(seed + System.Environment.TickCount);
     }
 
     public void ApplyLoadedData(PlayerData data)
     {
         playerData = data;
+
+        // 乱数を初期化する
+        var randomizer = new System.Random();
+        int seed = randomizer.Next(int.MinValue, int.MaxValue);
+        UnityEngine.Random.InitState(seed + System.Environment.TickCount);
     }
 
     /// <summary>
@@ -132,7 +142,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         var character = playerData.characters.Find(item => item.characterData.characterID == characterID);
 
-        character.current_hp = battler.current_hp;
+        character.current_hp = Mathf.Max(battler.current_hp, 1); // 最低1点にする
         character.current_mp = battler.current_mp;
     }
 
@@ -374,6 +384,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         if (isDebugModeInitialized) return;
         ProgressManager.Instance.InitializeProgress();
+        playerData.currentStage = 2; // (チュートリアルをスキップ)
         ProgressManager.Instance.SetMoney(Random.Range(200, 9999));
         ProgressManager.Instance.SetResearchPoint(Random.Range(200, 9999));
         isDebugModeInitialized = true;
@@ -404,18 +415,13 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(aid);
         Resources.UnloadAsset(aid);
 
-        // 装備を貰う
-        EquipmentDefine helmet = Resources.Load<EquipmentDefine>("EquipmentList/Helmet");
-        AddNewEquipment(helmet);
-        Resources.UnloadAsset(helmet);
-
-        EquipmentDefine corruptedGlove = Resources.Load<EquipmentDefine>("EquipmentList/CorruptedGlove");
-        AddNewEquipment(corruptedGlove);
-        Resources.UnloadAsset(corruptedGlove);
-
-        EquipmentDefine niceTshirt = Resources.Load<EquipmentDefine>("EquipmentList/NiceTshirt");
-        AddNewEquipment(niceTshirt);
-        Resources.UnloadAsset(niceTshirt);
+        // 全装備を開放する
+        EquipmentDefine[] allEquipment = Resources.LoadAll<EquipmentDefine>("EquipmentList");
+        foreach (EquipmentDefine equip in allEquipment)
+        {
+            AddNewEquipment(equip);
+            Resources.UnloadAsset(equip);
+        }
 
         // 敵キャラを設置
         if (addEnemy)

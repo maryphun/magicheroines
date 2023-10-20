@@ -26,15 +26,15 @@ MonoBehaviour:
     color: {r: 0.8773585, g: 0.64146495, b: 0.77453315, a: 1}
     nameID: Name.Tentacle
     starting_level: 1
-    base_hp: 80
+    base_hp: 75
     base_mp: 40
-    base_attack: 20
-    base_defense: 5
+    base_attack: 15
+    base_defense: 0
     base_speed: 15
     hp_growth: 5
     mp_growth: 5
-    attack_growth: 10
-    defense_growth: 3
+    attack_growth: 4
+    defense_growth: 2
     speed_growth: 4
     levelUp_base_cost: 200
     levelUp_cost_increment: 75

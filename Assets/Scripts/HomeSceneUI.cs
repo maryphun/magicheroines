@@ -31,6 +31,15 @@ public class HomeSceneUI : MonoBehaviour
         const float animationTime = 1.0f;
         StartCoroutine(SceneTransition("WorldMap", animationTime));
     }
+    public void ToBlackMarketScene()
+    {
+        // SEçƒê∂
+        AudioManager.Instance.PlaySFX("BattleTransition");
+
+        const float animationTime = 1.0f;
+        AudioManager.Instance.StopMusicWithFade(animationTime);
+        StartCoroutine(SceneTransition("BlackMarket", animationTime));
+    }
 
     public IEnumerator SceneTransition(string sceneName, float animationTime)
     {

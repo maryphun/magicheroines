@@ -10,22 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddfe01fdd14817e4a9a32e74727d2b04, type: 3}
-  m_Name: CorruptedGlove
+  m_Name: Shoes
   m_EditorClassIdentifier: 
-  pathName: CorruptedGlove
-  equipNameID: Equipment.CorruptedGlove
-  descriptionID: Equipment.CorruptedGlove_Info
+  pathName: Shoes
+  equipNameID: Equipment.Shoes
+  descriptionID: Equipment.Shoes_Info
   equipmentType: 1
-  effectText: '-30 HP
-
-    -3 DEF
-
-    +25 ATK'
-  battleStartFunctionName: CorruptedGloveStart
-  battleEndFunctionName: CorruptedGloveEnd
-  hp: -30
+  effectText: 
+  battleStartFunctionName: 
+  battleEndFunctionName: 
+  hp: 0
   sp: 0
-  atk: 25
-  def: -3
+  atk: 0
+  def: 0
   spd: 0
-  Icon: {fileID: 21300000, guid: 552ecd24a0bc6a8468da06d058fc1b0b, type: 3}
+  Icon: {fileID: 21300000, guid: ae041c5fae8f9e64d957a454fe5a1316, type: 3}
