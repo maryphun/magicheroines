@@ -89,8 +89,15 @@ public class BattleSceneTransition : MonoBehaviour
 
         if (BattleSetup.isStoryMode)
         {
-            Debug.Log("is story mode");
-            StartCoroutine(EndSceneTransition(callback, "AfterStory"));
+            if (isVictory)
+            {
+                StartCoroutine(EndSceneTransition(callback, "AfterStory"));
+            }
+            else
+            {
+                // îsêÌâÊñ 
+                StartCoroutine(EndSceneTransition(callback, "GameOver"));
+            }
         }
         else
         {

@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlackMarket.unity
     guid: c93158061235e0345a67d92e042b09da
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 7926d16f17a0b8845ba78978174d63a0
+  - enabled: 1
+    path: Assets/Scenes/Reward.unity
+    guid: 9698ac4dcfe67154b931304e89801964
   m_configObjects: {}

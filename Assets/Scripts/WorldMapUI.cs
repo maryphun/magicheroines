@@ -73,5 +73,8 @@ public class WorldMapUI : MonoBehaviour
 
         // SE
         AudioManager.Instance.PlaySFX("QuestStart");
+
+        // Switch BGM
+        AudioManager.Instance.StopMusicWithFade(animationTime);
     }
 }

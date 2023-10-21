@@ -65,6 +65,7 @@ public class StoryManager : MonoBehaviour
             default:
                 break;
         }
+        ProgressManager.Instance.StageProgress();
     }
 
     public void GoToBattle()

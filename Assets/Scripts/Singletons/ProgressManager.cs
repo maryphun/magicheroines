@@ -281,6 +281,18 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// アイテムを持っているかをチェック
+    /// </summary>
+    public bool PlayerHasItem(ItemDefine item)
+    {
+        if (playerData.inventory != null)
+        {
+            return playerData.inventory.Any((x) => x.pathName == item.pathName);
+        }
+        return false;
+    }
+
+    /// <summary>
     /// インベントリを更新
     /// </summary>
     public void SetItemList(List<ItemDefine> newList)
@@ -360,6 +372,18 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
             List<EquipmentData> copy = new List<EquipmentData>(playerData.equipment);
             return copy;
         }
+    }
+
+    /// <summary>
+    /// 装備を持っているかをチェック
+    /// </summary>
+    public bool PlayerHasEquipment(EquipmentDefine equipment)
+    {
+        if (playerData.equipment != null)
+        {
+            return playerData.equipment.Any((x) => x.data.pathName == equipment.pathName);
+        }
+        return false;
     }
 
     /// <summary>

@@ -671,9 +671,12 @@ public class Battle : MonoBehaviour
         actionPanel.SetEnablePanel(false);
 
         // キャラの状態をデータに更新
-        foreach (Battler battler in characterList)
+        if (isVictory || !BattleSetup.isStoryMode) // story modeで負けた時はリトライされるかもしれないので、データ更新しない
         {
-            ProgressManager.Instance.UpdateCharacterByBattler(battler.characterID, battler);
+            foreach (Battler battler in characterList)
+            {
+                ProgressManager.Instance.UpdateCharacterByBattler(battler.characterID, battler);
+            }
         }
 
         // チュートリアル終了 (負けイべント)
@@ -691,7 +694,6 @@ public class Battle : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        Debug.Log("Load Scene : " + sceneName);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

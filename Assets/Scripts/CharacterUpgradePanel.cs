@@ -47,8 +47,8 @@ public class CharacterUpgradePanel : MonoBehaviour
         characterSprite.sprite = character.characterData.sprite;
         characterName.text = character.localizedName;
         levelValue.text = character.current_level.ToString();
-        hpValue.text = character.current_hp.ToString();
-        mpValue.text = character.current_mp.ToString();
+        hpValue.text = character.current_maxHp.ToString();
+        mpValue.text = character.current_maxMp.ToString();
         attackValue.text = character.current_attack.ToString();
         defenseValue.text = character.current_defense.ToString();
         speedValue.text = character.current_speed.ToString();
@@ -83,8 +83,8 @@ public class CharacterUpgradePanel : MonoBehaviour
         if (currentCharacter == null) return;
 
         levelValue.text = currentCharacter.current_level.ToString() + "<color=green>(+1)</color>";
-        hpValue.text = currentCharacter.current_hp.ToString() + "<color=green>(+" + currentCharacter.characterData.hp_growth + ")</color>";
-        mpValue.text = currentCharacter.current_mp.ToString() + "<color=green>(+" + currentCharacter.characterData.mp_growth + ")</color>";
+        hpValue.text = currentCharacter.current_maxHp.ToString() + "<color=green>(+" + currentCharacter.characterData.hp_growth + ")</color>";
+        mpValue.text = currentCharacter.current_maxMp.ToString() + "<color=green>(+" + currentCharacter.characterData.mp_growth + ")</color>";
         attackValue.text = currentCharacter.current_attack.ToString() + "<color=green>(+" + currentCharacter.characterData.attack_growth + ")</color>";
         defenseValue.text = currentCharacter.current_defense.ToString() + "<color=green>(+" + currentCharacter.characterData.defense_growth + ")</color>";
         speedValue.text = currentCharacter.current_speed.ToString() + "<color=green>(+" + currentCharacter.characterData.speed_growth + ")</color>";
