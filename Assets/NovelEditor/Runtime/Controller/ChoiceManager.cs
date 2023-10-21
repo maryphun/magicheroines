@@ -39,8 +39,14 @@ namespace NovelEditor
             foreach (NovelData.ChoiceData data in datas)
             {
                 ChoiceButton button = Instantiate(_button, transform);
+
                 button.transform.SetParent(transform);
                 wait.Add(button.SetChoice(data, token));
+
+                // Resize
+                var text = button.GetComponentInChildren<TMPro.TMP_Text>();
+                text.ForceMeshUpdate();
+                GetComponent<UnityEngine.UI.GridLayoutGroup>().cellSize = new Vector2(Mathf.Max(1062.5f, text.GetRenderedValues().x + 100.0f), button.GetComponent<RectTransform>().sizeDelta.y);
             }
 
             var sendData = await UniTask.WhenAny(wait);

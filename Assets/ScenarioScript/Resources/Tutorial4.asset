@@ -235,16 +235,16 @@ MonoBehaviour:
     _index: 4
     _nodePosition:
       serializedVersion: 2
-      x: 518
+      x: 517
       y: 11
-      width: 108
+      width: 152
       height: 97
     _nextParagraphIndex: -1
     nodeName: 
     _dialogueList:
     - open: 0
       Name: Name.No5
-      text: "\u3053\u306E\u4ED5\u4E8B\u3092\u5F15\u304D\u53D7\u3051\u3066\u3044\u305F\u3060\u3051\u308B\u3068\u3044\u3046\u3053\u3068\u3067\u3088\u308D\u3057\u3044\u3067\u3059\u3088\u306D\u3002"
+      text: "\u300C\u2026\u7D44\u7E54\u306E\u529B\u306B\u306A\u3063\u3066\u3044\u305F\u3060\u3051\u308B\u69D8\u3067\u4F55\u3088\u308A\u3067\u3059\u3002\u305D\u308C\u3067\u306F\u602A\u4EBA\u306E\u7814\u7A76\u3092\u2015\u2015\u2015\u300D"
       localizationID: Dialog.Tutorial-4-10
       back: {fileID: 0}
       howBack: 0
@@ -283,9 +283,197 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
+      Name: 
+      text: Paragraph
+      localizationID: Dialogue.Example
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 1
+    _nextChoiceIndexes: 04000000
+  - _enabled: 1
+    _index: 5
+    _nodePosition:
+      serializedVersion: 2
+      x: 962
+      y: 11
+      width: 108
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
       Name: Name.No5
-      text: "\u5642\u3055\u308C\u3066\u308B\u30C9\u30AF\u30BF\u30FC\u306E\u975E\u60C5\u306A\u624B\u8155\u3092\u671F\u5F85\u3057\u3066\u3044\u307E\u3059\u3002\u30D5\u30A9\u30FC\u30EC\u30F3\u8CA1\u56E3\u3092\u52DD\u5229\u3078\u5C0E\u3044\u3066\u304F\u3060\u3055\u3044\u3002"
-      localizationID: Dialog.Tutorial-4-11
+      text: "\u300C\u2015\u2015\u2015\u95A2\u5FC3\u304C\u3042\u308B\u306E\u306F\u305D\u3061\u3089\u306E\u65B9\u3067\u3057\u305F\u304B\u3002\u300D"
+      localizationID: Dialog.Tutorial-4-12
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: Paragraph
+      localizationID: Dialogue.Example
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 1
+    _nextChoiceIndexes: 05000000
+  - _enabled: 1
+    _index: 6
+    _nodePosition:
+      serializedVersion: 2
+      x: 1342
+      y: 11
+      width: 108
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.No5
+      text: "\u300C\u2026\u2026\u627F\u77E5\u3057\u307E\u3057\u305F\u3002\u4E0A\u306B\u306F\u305D\u306E\u3088\u3046\u306B\u4F1D\u3048\u3066\u304A\u304D\u307E\u3059\u3002\u300D"
+      localizationID: Dialog.Tutorial-4-13
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.No5
+      text: "\u300C\u305D\u308C\u3067\u306F\u30C9\u30AF\u30BF\u30FC\u3001\u8CB4\u65B9\u306E\u6D3B\u8E8D\u3092\u671F\u5F85\u3057\u3066\u3044\u307E\u3059\u3002\u300D"
+      localizationID: Dialog.Tutorial-4-14
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -406,16 +594,40 @@ MonoBehaviour:
     _index: 3
     _nodePosition:
       serializedVersion: 2
-      x: 318
+      x: 319
       y: 11
       width: 120
       height: 77
     _nextParagraphIndex: 4
     nodeName: 
-    text: "\u300C\u9762\u767D\u3044\u300D"
+    text: "\u300C....\u9762\u767D\u3044\u300D"
     localizeID: Choice.Tutorial-4-9(1)
+  - _enabled: 1
+    _index: 4
+    _nodePosition:
+      serializedVersion: 2
+      x: 737
+      y: 11
+      width: 120
+      height: 77
+    _nextParagraphIndex: 5
+    nodeName: 
+    text: "\u300C\u79C1\u306E\u4F5C\u3063\u305F\u602A\u4EBA\u9054\u3092\u5BB9\u6613\u306B\u5012\u3059\u529B\u2015\u2015\u2015\u3002\u975E\u5E38\u306B\u8208\u5473\u6DF1\u3044\u300D"
+    localizeID: Dialog.Tutorial-4-11(1)
+  - _enabled: 1
+    _index: 5
+    _nodePosition:
+      serializedVersion: 2
+      x: 1159
+      y: 11
+      width: 120
+      height: 77
+    _nextParagraphIndex: 6
+    nodeName: 
+    text: "\u300C\u602A\u4EBA\u306E\u7814\u7A76\u306F\u6B62\u3081\u3060\u3002\u8056\u6838\u6226\u59EB\u3092\u6355\u7372\u3057\u3001\u305D\u306E\u529B\u3092\u7814\u7A76\u3057\u3066\u6211\u3005\u306E\u7269\u3068\u3059\u308B\u3002\u300D"
+    localizeID: Dialog.Tutorial-4-12(1)
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 62, y: 188, z: 0}
+  graphPosition: {x: 42, y: 274, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
