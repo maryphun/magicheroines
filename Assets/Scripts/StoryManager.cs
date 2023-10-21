@@ -8,6 +8,9 @@ public class StoryManager : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private bool isAfterBattle = false;
 
+    [Header("Debug")]
+    [SerializeField] private string battleBGM = "";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,8 @@ public class StoryManager : MonoBehaviour
             case 3:
                 {
                     BattleSetup.AddEnemy("Akiho");
+                    NovelSingletone.Instance.PlayNovel("Chapter1-2 Prebattle", true, GoToBattle);
+                    battleBGM = "AkihoBattle";
                 }
                 break;
             default:
@@ -62,6 +67,12 @@ public class StoryManager : MonoBehaviour
                     NovelSingletone.Instance.PlayNovel("Chapter1-1", true, GoToHomeScreen);
                 }
                 break;
+            case 3:
+                {
+                    // –¾•ä”s–k
+                    NovelSingletone.Instance.PlayNovel("Chapter1-2 AfterBattle", true, GoToHomeScreen);
+                }
+                break;
             default:
                 break;
         }
@@ -70,7 +81,11 @@ public class StoryManager : MonoBehaviour
 
     public void GoToBattle()
     {
-        StartCoroutine(SceneTransition("Battle", 0.5f));
+        if (battleBGM != string.Empty)
+        {
+            AudioManager.Instance.PlayMusicWithCrossFade(battleBGM, 2.0f);
+        }
+        StartCoroutine(SceneTransition("Battle", 0));
     }
 
     public void GoToHomeScreen()
