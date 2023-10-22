@@ -23,7 +23,7 @@ public class BattleSceneTutorial : MonoBehaviour
     [SerializeField] private TutorialStep step;
     [SerializeField] private GameObject lastDisplayingObject = null;
     [SerializeField] private bool isPlayingTutorial = false;
-    [SerializeField] private AudioSource audio;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private bool isSkipping = false;
 
     public bool IsPlayingTutorial { get { return isPlayingTutorial; } }
@@ -69,7 +69,7 @@ public class BattleSceneTutorial : MonoBehaviour
                     step = TutorialStep.Basic;
 
                     // SE
-                    audio = AudioManager.Instance.PlaySFX("TextDisplay");
+                    audioSource = AudioManager.Instance.PlaySFX("TextDisplay");
                 });
     }
 
@@ -237,17 +237,17 @@ public class BattleSceneTutorial : MonoBehaviour
         .AppendInterval(0.25f)
         .AppendCallback(() =>
         {
-            if (audio) audio.Stop();
+            if (audioSource) audioSource.Stop();
 
             tutorialText.DOComplete();
             tutorialText.alpha = 1.0f;
             tutorialText.text = string.Empty;
 
             string newText = LocalizationManager.Localize(localizeID);
-            tutorialText.DOText(newText, newText.Length * textInterval, true).SetEase(Ease.Linear).OnComplete(() => { if (audio) audio.Stop(); });
+            tutorialText.DOText(newText, newText.Length * textInterval, true).SetEase(Ease.Linear).OnComplete(() => { if (audioSource) audioSource.Stop(); });
 
             // SE
-            audio = AudioManager.Instance.PlaySFX("TextDisplay");
+            audioSource = AudioManager.Instance.PlaySFX("TextDisplay");
         });
 
         return sequence;
@@ -263,7 +263,7 @@ public class BattleSceneTutorial : MonoBehaviour
         tutorialUI.interactable = false;
         isPlayingTutorial = false;
 
-        if (audio) audio.Stop();
+        if (audioSource) audioSource.Stop();
         AudioManager.Instance.PlaySFX("SystemDecide");
     }
 

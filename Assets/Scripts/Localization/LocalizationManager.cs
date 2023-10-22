@@ -116,6 +116,8 @@ namespace Assets.SimpleLocalization.Scripts
                 Read();
             }
 
+            if (localizationKey == string.Empty) return localizationKey;
+
             if (!Dictionary.ContainsKey(Language)) throw new KeyNotFoundException("Language not found: " + Language);
 
             var missed = !Dictionary[Language].ContainsKey(localizationKey) || Dictionary[Language][localizationKey] == "";
@@ -127,7 +129,9 @@ namespace Assets.SimpleLocalization.Scripts
                 return Dictionary["Japanese"].ContainsKey(localizationKey) ? Dictionary["Japanese"][localizationKey] : localizationKey;
             }
 
-            return Dictionary[Language][localizationKey];
+            string manipulatedText = AddCspace(Dictionary[Language][localizationKey]);
+
+            return manipulatedText;
         }
 
 	    /// <summary>
@@ -159,6 +163,39 @@ namespace Assets.SimpleLocalization.Scripts
         public static List<string> GetColumns(string line)
         {
             return line.Split(',').Select(j => j.Trim()).Select(j => j.Replace("[_quote_]", "\"").Replace("[_comma_]", ",").Replace("[_newline_]", "\n")).ToList();
+        }
+
+        static string AddCspace(string inputString)
+        {
+            int dashCount = CountDashes(inputString);
+
+            if (dashCount > 1)
+            {
+                int firstDashIndex = inputString.IndexOf('―');
+                int lastDashIndex = inputString.LastIndexOf('―');
+
+                string cspaceTag = "<cspace=-0.17em>";
+                string openingTag = inputString.Substring(0, firstDashIndex) + cspaceTag;
+                string closingTag = "</cspace>" + inputString.Substring(lastDashIndex + 1);
+
+                inputString = openingTag + inputString.Substring(firstDashIndex, lastDashIndex - firstDashIndex + 1) + closingTag;
+            }
+
+            return inputString;
+        }
+
+        static int CountDashes(string inputString)
+        {
+            int count = 0;
+            foreach (char c in inputString)
+            {
+                if (c == '―')
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
 }

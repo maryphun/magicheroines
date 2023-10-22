@@ -414,10 +414,6 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         isDebugModeInitialized = true;
 
         // ’²‹³‚Å‚«‚éƒqƒƒCƒ“‚ğ’Ç‰Á
-        PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
-        AddPlayerCharacter(Akiho);
-        Resources.UnloadAsset(Akiho);
-
         PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
         AddPlayerCharacter(Rikka);
         Resources.UnloadAsset(Rikka);

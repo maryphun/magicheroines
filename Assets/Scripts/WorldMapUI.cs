@@ -47,6 +47,13 @@ public class WorldMapUI : MonoBehaviour
         BattleSetup.Reset(false);
         BattleSetup.AddEnemy("Android");
         BattleSetup.AddEnemy("Drone");
+        BattleSetup.SetBattleBGM("BattleTutorial");
+        BattleSetup.SetReward(Random.Range(300, 600), Random.Range(100, 300));
+        BattleSetup.AddEquipmentReward("Stick");
+        BattleSetup.AddItemReward("‹~‹}” ");
+        BattleSetup.AddItemReward("‹~‹}” ");
+        BattleSetup.AddItemReward("Hƒpƒ“");
+        BattleSetup.AddItemReward("Hƒpƒ“");
 
         const float animationTime = 1.0f;
 
@@ -56,9 +63,6 @@ public class WorldMapUI : MonoBehaviour
         DOTween.Sequence()
             .AppendInterval(animationTime)
             .AppendCallback(() => { SceneManager.LoadScene("Battle", LoadSceneMode.Single); });
-
-        // Switch BGM
-        AudioManager.Instance.PlayMusicWithCrossFade("BattleTutorial", 2.0f);
     }
 
     public void NextStory()

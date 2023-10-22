@@ -16,6 +16,9 @@ public class GameOverManager : MonoBehaviour
 
     public void Retry()
     {
+        //SE 
+        AudioManager.Instance.PlaySFX("SystemSelect");
+
         AlphaFadeManager.Instance.FadeOut(0.5f);
 
         DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => 
@@ -26,11 +29,15 @@ public class GameOverManager : MonoBehaviour
 
     public void Load()
     {
+        //SE 
+        AudioManager.Instance.PlaySFX("SystemSelect");
         loadPanel.OpenSaveLoadPanel(true);
     }
 
     public void TitleMenu()
     {
+        //SE 
+        AudioManager.Instance.PlaySFX("SystemSelect");
         AlphaFadeManager.Instance.FadeOut(0.5f);
 
         DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() =>

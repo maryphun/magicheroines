@@ -58,7 +58,7 @@ public class Battle : MonoBehaviour
             }
         }
 
-        List<EnemyDefine> enemyList = BattleSetup.GetEnemyList(true);
+        List<EnemyDefine> enemyList = BattleSetup.GetEnemyList(false);
         InitializeBattleScene(actors, enemyList);
 
         // Send references
@@ -70,6 +70,12 @@ public class Battle : MonoBehaviour
     private void Start()
     {
         sceneTransition.StartScene(NextTurn);
+
+        // Start BGM
+        if (BattleSetup.BattleBGM != string.Empty)
+        {
+            AudioManager.Instance.PlayMusicWithFade(BattleSetup.BattleBGM, 2.0f);
+        }
     }
 
     // Start is called before the first frame update

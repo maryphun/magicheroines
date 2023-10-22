@@ -87,21 +87,31 @@ public class BattleSceneTransition : MonoBehaviour
     {
         text.text = LocalizationManager.Localize(isVictory ? "Battle.Victory" : "Battle.Defeat");
 
-        if (BattleSetup.isStoryMode)
+        if (BattleSetup.isStoryMode) // ストーリーモード
         {
             if (isVictory)
             {
+                // ストーリーに突入
                 StartCoroutine(EndSceneTransition(callback, "AfterStory"));
             }
             else
             {
-                // 敗戦画面
+                // ゲームオーバー
                 StartCoroutine(EndSceneTransition(callback, "GameOver"));
             }
         }
-        else
+        else // 資源調達クエスト
         {
-            StartCoroutine(EndSceneTransition(callback, "WorldMap"));
+            if (isVictory)
+            {
+                // 報酬を表示
+                StartCoroutine(EndSceneTransition(callback, "Reward"));
+            }
+            else
+            {
+                // 失敗
+                StartCoroutine(EndSceneTransition(callback, "WorldMap"));
+            }
         }
     }
 

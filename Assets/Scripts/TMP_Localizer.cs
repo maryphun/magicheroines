@@ -8,6 +8,7 @@ using Assets.SimpleLocalization.Scripts;
 public class TMP_Localizer : MonoBehaviour
 {
     public string LocalizationKey;
+    public string Extra;
 
     public void Start()
     {
@@ -22,6 +23,6 @@ public class TMP_Localizer : MonoBehaviour
 
     private void Localize()
     {
-        GetComponent<TMP_Text>().SetText(LocalizationManager.Localize(LocalizationKey));
+        GetComponent<TMP_Text>().SetText(LocalizationManager.Localize(LocalizationKey) + Extra);
     }
 }

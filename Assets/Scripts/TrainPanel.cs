@@ -20,6 +20,7 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private Image darkGaugeFill, holyCoreGaugeFill;
     [SerializeField] private RectTransform previousCharacterBtn, nextCharacterBtn;
     [SerializeField] private Button hornyActionBtn, corruptActionBtn, researchBtn;
+    [SerializeField] private GameObject unavailablePanel;
 
     [Header("Debug")]
     [SerializeField] private Vector2 previousCharacterBtnPos, nextCharacterBtnPos;
@@ -46,6 +47,17 @@ public class TrainPanel : MonoBehaviour
         // ƒqƒƒCƒ“‚¶‚á‚È‚¢ƒLƒƒƒ‰‚ğ”rœ
         currentIndex = 0;
         characters.RemoveAll(s => !s.characterData.is_heroin);
+
+        if (characters.Count <= 0)
+        {
+            // •ßŠl‚µ‚½ƒqƒƒCƒ“‚ª‚¢‚È‚¢
+            unavailablePanel.SetActive(true);
+            return;
+        }
+        else
+        {
+            characterImg.gameObject.SetActive(true);
+        }
         UpdateCharacterData();
     }
 

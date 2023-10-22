@@ -42,7 +42,7 @@ public class TutorialManager : MonoBehaviour
 
     public void SceneTransit()
     {
-        AudioManager.Instance.PlayMusicWithCrossFade("BattleTutorial", 2.0f);
+        AudioManager.Instance.StopMusicWithFade(sceneTransitionTime);
         StartCoroutine(SceneTransition("Battle", sceneTransitionTime));
     }
 
@@ -52,6 +52,7 @@ public class TutorialManager : MonoBehaviour
         BattleSetup.Reset(true);
         BattleSetup.AddEnemy("Akiho_Enemy");
         BattleSetup.AddEnemy("Rikka_Enemy");
+        BattleSetup.SetBattleBGM("BattleTutorial");
 
         // ÉVÅ[ÉìëJà⁄
         AlphaFadeManager.Instance.FadeOut(animationTime);

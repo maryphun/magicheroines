@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useSafeMode: 1
   safeModeOptions:
-    logBehaviour: 2
+    logBehaviour: 0
     nestedTweenFailureBehaviour: 0
   timeScale: 1
   unscaledTimeScale: 1
@@ -28,7 +28,7 @@ MonoBehaviour:
   defaultAutoPlay: 3
   defaultUpdateType: 0
   defaultTimeScaleIndependent: 0
-  defaultEaseType: 6
+  defaultEaseType: 12
   defaultEaseOvershootOrAmplitude: 1.70158
   defaultEasePeriod: 0
   defaultAutoKill: 1

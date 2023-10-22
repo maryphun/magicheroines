@@ -22,9 +22,12 @@ public class StagesUI : MonoBehaviour
         }
     }
 
+    const int numberOfStages = 15;
+
     [Header("Setting")]
     [SerializeField] private Color lockedColor = new Color(0.196f, 0.196f, 0.196f, 1);
     [SerializeField] private Color unlockedColor = new Color(1,1,1,1);
+    [SerializeField] private float[] positionForStage = new float[numberOfStages];
 
     [Header("References")]
     [SerializeField] List<GameObject> stageObj = new  List<GameObject>();
@@ -59,7 +62,7 @@ public class StagesUI : MonoBehaviour
             {
                 unlockedStage++;
                 StartCoroutine(UnlockStage(stageObjParts[i]));
-                stageArrow.SetStage(stageObjParts[i], 40.0f);
+                stageArrow.SetStage(stageObjParts[i], 0.0f);
 
             }
             else
@@ -67,6 +70,8 @@ public class StagesUI : MonoBehaviour
                 stageObjParts[i].graphic.color = lockedColor;
             }
         }
+
+        GetComponent<RectTransform>().anchoredPosition = new Vector2(positionForStage[currentStageProgress], GetComponent<RectTransform>().anchoredPosition.y);
     }
 
     private void InitializeStage(StageObjectParts stage)
@@ -113,5 +118,6 @@ public class StagesUI : MonoBehaviour
             }
         }
         unlockedStage = currentStageProgress;
+        GetComponent<RectTransform>().DOAnchorPos(new Vector2(positionForStage[unlockedStage], GetComponent<RectTransform>().anchoredPosition.y), 2.0f);
     }
 }

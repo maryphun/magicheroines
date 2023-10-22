@@ -23,7 +23,7 @@ public class HomeCharacter : MonoBehaviour
     [SerializeField] private HomeDialogue[] dialogues;
     [SerializeField] private int currentCharacterIndex;
     [SerializeField] private int lastDialogueIndex;
-    [SerializeField] private Sequence animation;
+    [SerializeField] private Sequence animSequence;
 
     public void Start()
     {
@@ -32,7 +32,7 @@ public class HomeCharacter : MonoBehaviour
         dialogueText.text = string.Empty;
         currentCharacterIndex = -1;
         lastDialogueIndex = -1;
-        animation = DOTween.Sequence();
+        animSequence = DOTween.Sequence();
 
         var characters = ProgressManager.Instance.GetHomeCharacter();
         if (characters != null)
@@ -73,9 +73,9 @@ public class HomeCharacter : MonoBehaviour
         characterSprite.DOFade(0.0f, 0.25f).OnComplete(() => { characterSprite.sprite = dialogues[currentCharacterIndex].characterSprite; });
         characterSprite.DOFade(1.0f, 0.25f).SetDelay(0.3f);
 
-        if (animation.IsPlaying())
+        if (animSequence.IsPlaying())
         {
-            animation.Complete();
+            animSequence.Complete();
             dialogueText.DOComplete();
             dialogueBack.DOComplete();
 
@@ -110,9 +110,9 @@ public class HomeCharacter : MonoBehaviour
             clipLength = dialogue.clip.length;
         }
 
-        if (animation.IsPlaying())
+        if (animSequence.IsPlaying())
         {
-            animation.Complete();
+            animSequence.Complete();
             dialogueText.DOComplete();
             dialogueBack.DOComplete();
 
@@ -120,7 +120,7 @@ public class HomeCharacter : MonoBehaviour
             dialogueBack.localScale = new Vector3(1, 0, 1);
         }
 
-        animation = DOTween.Sequence()
+        animSequence = DOTween.Sequence()
             .AppendCallback(() => { dialogueBack.DOScaleY(1.0f, 0.25f); })
             .AppendInterval(0.25f)
             .AppendCallback(() => {
@@ -152,7 +152,7 @@ public class HomeCharacter : MonoBehaviour
             clipLength = dialogue.clip.length;
         }
 
-        animation = DOTween.Sequence()
+        animSequence = DOTween.Sequence()
             .AppendInterval(0.35f)
             .AppendCallback(() => { dialogueBack.DOScaleY(1.0f, 0.25f); })
             .AppendInterval(0.25f)

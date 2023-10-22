@@ -33,8 +33,8 @@ public class StageArrow : MonoBehaviour
     public void SetStage(StagesUI.StageObjectParts stage, float offsetY)
     {
         transform.SetParent(stage.parent.transform);
-        originalPositionY = offsetY;
-        rect.localPosition = new Vector3(0.0f, offsetY, 0.0f);
+        originalPositionY = offsetY + (stage.parent.rectTransform.sizeDelta.y * 0.5f);
+        rect.localPosition = new Vector3(0.0f, originalPositionY, 0.0f);
         img.color = Color.white;
     }
 

@@ -8,9 +8,6 @@ public class StoryManager : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private bool isAfterBattle = false;
 
-    [Header("Debug")]
-    [SerializeField] private string battleBGM = "";
-
     // Start is called before the first frame update
     void Start()
     {
@@ -39,15 +36,17 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Drone");
                     BattleSetup.AddEnemy("Android");
+                    BattleSetup.SetBattleBGM("BattleTutorial");
+                    BattleSetup.SetReward(500, 25);
                     StartCoroutine(SceneTransition("Battle", 0));
-                    AudioManager.Instance.PlayMusicWithCrossFade("BattleTutorial", 2.0f);
                 }
                 break;
             case 3:
                 {
-                    BattleSetup.AddEnemy("Akiho");
+                    BattleSetup.AddEnemy("Akiho_Enemy");
+                    BattleSetup.SetBattleBGM("AkihoBattle");
+                    BattleSetup.SetReward(1500, 150);
                     NovelSingletone.Instance.PlayNovel("Chapter1-2 Prebattle", true, GoToBattle);
-                    battleBGM = "AkihoBattle";
                 }
                 break;
             default:
@@ -64,13 +63,17 @@ public class StoryManager : MonoBehaviour
         {
             case 2:
                 {
-                    NovelSingletone.Instance.PlayNovel("Chapter1-1", true, GoToHomeScreen);
+                    NovelSingletone.Instance.PlayNovel("Chapter1-1", true, GoToRewardScreen);
                 }
                 break;
             case 3:
                 {
                     // –¾•ä”s–k
-                    NovelSingletone.Instance.PlayNovel("Chapter1-2 AfterBattle", true, GoToHomeScreen);
+                    NovelSingletone.Instance.PlayNovel("Chapter1-2 AfterBattle", true, GoToRewardScreen);
+
+                    PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
+                    ProgressManager.Instance.AddPlayerCharacter(Akiho);
+                    Resources.UnloadAsset(Akiho);
                 }
                 break;
             default:
@@ -81,16 +84,17 @@ public class StoryManager : MonoBehaviour
 
     public void GoToBattle()
     {
-        if (battleBGM != string.Empty)
-        {
-            AudioManager.Instance.PlayMusicWithCrossFade(battleBGM, 2.0f);
-        }
         StartCoroutine(SceneTransition("Battle", 0));
     }
 
     public void GoToHomeScreen()
     {
         StartCoroutine(SceneTransition("Home", 0.5f));
+    }
+
+    public void GoToRewardScreen()
+    {
+        StartCoroutine(SceneTransition("Reward", 0.5f));
     }
 
     IEnumerator SceneTransition(string sceneName, float animationTime)
