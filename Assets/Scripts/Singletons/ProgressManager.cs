@@ -14,6 +14,7 @@ public struct PlayerData
     public int currentStage;             //< 現ステージ数
     public int currentMoney;             //< 資金
     public int currentResourcesPoint;    //< 研究ポイント
+    public SideQuestData sideQuestData;  //< 各所の警戒度を記録
     public List<Character> characters;     //< 持っているキャラクター
     public FormationSlotData[] formationCharacters; //< パーティー編成
     public List<ItemDefine> inventory;   //< 所持アイテム
@@ -41,6 +42,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.currentStage = 1; // 初期ステージ (チュートリアル)
         playerData.currentMoney = 500;
         playerData.currentResourcesPoint = 0;
+        playerData.sideQuestData = new SideQuestData(1, 1, 1);
         playerData.characters = new List<Character>();
         playerData.formationCharacters = new FormationSlotData[5];
         playerData.inventory = new List<ItemDefine>();
@@ -401,6 +403,19 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         }
 
         return false;
+    }
+
+    /// <summary>
+    /// 警戒度を変える
+    /// </summary>
+    public void SetSideQuestData(int foodQuest, int bankQuest, int researchQuest)
+    {
+        playerData.sideQuestData = new SideQuestData(foodQuest, bankQuest, researchQuest);
+    }
+
+    public SideQuestData GetSideQuestData()
+    {
+        return playerData.sideQuestData;
     }
 
 #if DEBUG_MODE

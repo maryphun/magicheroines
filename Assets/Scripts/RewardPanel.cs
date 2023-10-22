@@ -33,6 +33,11 @@ public class RewardPanel : MonoBehaviour
     {
         DisplayMoneyAndResearchPointReward();
         AlphaFadeManager.Instance.FadeIn(0.5f);
+
+        // Œx‰ú“x‚ğXV
+        ProgressManager.Instance.SetSideQuestData(ProgressManager.Instance.GetSideQuestData().food + BattleSetup.sideQuestIncrement.food,
+                                                  ProgressManager.Instance.GetSideQuestData().bank + BattleSetup.sideQuestIncrement.bank,
+                                                  ProgressManager.Instance.GetSideQuestData().research + BattleSetup.sideQuestIncrement.research);
     }
 
     private void PlayAnimation()

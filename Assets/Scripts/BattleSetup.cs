@@ -15,6 +15,7 @@ public class BattleSetup
     public static List<ItemDefine> itemReward;
     public static int moneyReward;
     public static int researchPointReward;
+    public static SideQuestData sideQuestIncrement;
 
     public static List<EnemyDefine> GetEnemyList(bool clear)
     {
@@ -42,6 +43,7 @@ public class BattleSetup
         battleBGM = string.Empty;
         equipmentReward = new List<EquipmentDefine>();
         itemReward = new List<ItemDefine>();
+        sideQuestIncrement = new SideQuestData(0,0,0);
         moneyReward = 0;
         researchPointReward = 0;
     }
@@ -103,5 +105,10 @@ public class BattleSetup
     public static void AddEquipmentReward(EquipmentDefine equipment)
     {
         equipmentReward.Add(equipment);
+    }
+
+    public static void SetSideQuestIncrement(int food, int bank, int research)
+    {
+        sideQuestIncrement = new SideQuestData(food, bank, research);
     }
 }

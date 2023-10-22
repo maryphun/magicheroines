@@ -120,6 +120,7 @@ public static class SaveDataManager
         data.currentResourcesPoint = pd.currentResourcesPoint;
         data.formationSlotUnlocked = pd.formationSlotUnlocked;
         data.formationCharacters = pd.formationCharacters;
+        data.sideQuestData = pd.sideQuestData;
 
         // Serializeしきれないデータ
         {
@@ -192,6 +193,7 @@ public static class SaveDataManager
         playerData.currentResourcesPoint = serializableData.currentResourcesPoint;
         playerData.formationSlotUnlocked = serializableData.formationSlotUnlocked;
         playerData.formationCharacters = serializableData.formationCharacters;
+        playerData.sideQuestData = serializableData.sideQuestData;
 
         // Serializeしきれないデータ
         {
@@ -266,7 +268,8 @@ public struct SerializablePlayerData
 {
     public int currentStage;
     public int currentMoney;
-    public int currentResourcesPoint; 
+    public int currentResourcesPoint;
+    public SideQuestData sideQuestData;
     public List<string> inventory; 
     public int formationSlotUnlocked;
     public FormationSlotData[] formationCharacters;
