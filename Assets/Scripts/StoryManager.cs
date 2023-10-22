@@ -8,6 +8,9 @@ public class StoryManager : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private bool isAfterBattle = false;
 
+    [Header("References")]
+    [SerializeField] private GameObject underdevelopment;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +53,8 @@ public class StoryManager : MonoBehaviour
                 }
                 break;
             default:
+                // 未開発地帯
+                underdevelopment.SetActive(true);
                 break;
         }
     }
@@ -77,6 +82,8 @@ public class StoryManager : MonoBehaviour
                 }
                 break;
             default:
+                // 未開発地帯
+                underdevelopment.SetActive(true);
                 break;
         }
         ProgressManager.Instance.StageProgress();

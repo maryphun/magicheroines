@@ -71,7 +71,7 @@ public class BlackMarketManager : MonoBehaviour
                 {
                     continue;
                 }
-                else if (ProgressManager.Instance.PlayerHasItem(itemToSell[i].item))
+                else if (!itemToSell[i].isEquipment && ProgressManager.Instance.PlayerHasItem(itemToSell[i].item))
                 {
                     continue;
                 }

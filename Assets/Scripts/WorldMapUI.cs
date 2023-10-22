@@ -7,7 +7,8 @@ using DG.Tweening;
 public class WorldMapUI : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private StagesUI stagesUIScript;
+    [SerializeField] private StageHandler stagehandler;
+    [SerializeField] private TMPro.TMP_Text chapterName;
 
     private void Start()
     {
@@ -16,10 +17,15 @@ public class WorldMapUI : MonoBehaviour
 
         // âÊñ ëJà⁄
         AlphaFadeManager.Instance.FadeIn(1.0f);
+
+        chapterName.text = GetChapterName(ProgressManager.Instance.GetCurrentStageProgress());
     }
 
     public void ToHomeScene()
     {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemTrainPanel");
+
         const float animationTime = 1.0f;
         StartCoroutine(SceneTransition("Home", animationTime));
     }
@@ -38,11 +44,14 @@ public class WorldMapUI : MonoBehaviour
     public void DebugNextStage()
     {
         ProgressManager.Instance.StageProgress();
-        stagesUIScript.PlayStageAnimation();
+        stagehandler.Init();
     }
 
     public void ResourceGatheringQuest()
     {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemOpen");
+
         // ìGÉLÉÉÉâÇê›íu
         BattleSetup.Reset(false);
         BattleSetup.AddEnemy("Android");
@@ -80,5 +89,10 @@ public class WorldMapUI : MonoBehaviour
 
         // Switch BGM
         AudioManager.Instance.StopMusicWithFade(animationTime);
+    }
+
+    private string GetChapterName(int progress)
+    {
+        return "Chapter " + (((progress - 1) / 3) + 1).ToString() + "-" + (((progress - 1) % 3) + 1).ToString();
     }
 }

@@ -30,10 +30,10 @@ public class StageArrow : MonoBehaviour
         isLocked = false;
     }
 
-    public void SetStage(StagesUI.StageObjectParts stage, float offsetY)
+    public void SetStage(RectTransform stageObj, float offsetY)
     {
-        transform.SetParent(stage.parent.transform);
-        originalPositionY = offsetY + (stage.parent.rectTransform.sizeDelta.y * 0.5f);
+        transform.SetParent(stageObj);
+        originalPositionY = offsetY + (stageObj.sizeDelta.y * 0.5f);
         rect.localPosition = new Vector3(0.0f, originalPositionY, 0.0f);
         img.color = Color.white;
     }
