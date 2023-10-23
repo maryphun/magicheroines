@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿#if UNITY_EDITOR
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -96,3 +97,4 @@ namespace Assets.SimpleLocalization.Scripts.Editor
         }
     }
 }
+#endif

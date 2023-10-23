@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 
 namespace Assets.SimpleLocalization.Scripts.Editor
 {
@@ -16,3 +17,4 @@ namespace Assets.SimpleLocalization.Scripts.Editor
         }
     }
 }
+#endif
