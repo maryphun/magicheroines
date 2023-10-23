@@ -39,9 +39,13 @@ public class EnemyActionPatternDrawer : PropertyDrawer
             EditorGUILayout.PropertyField(property.FindPropertyRelative("SpThreshold"));
         }
 
+        EditorGUILayout.Space();
+
         Rect rect = EditorGUILayout.GetControlRect(false, 1);
         rect.height = 1;
         EditorGUI.DrawRect(rect, new Color(0.5f, 0.5f, 0.5f, 1));
+
+        EditorGUILayout.Space();
 
         EditorGUILayout.EndVertical();
 

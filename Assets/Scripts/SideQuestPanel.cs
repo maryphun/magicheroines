@@ -103,7 +103,7 @@ public class SideQuestPanel : MonoBehaviour
         BattleSetup.AddEnemy("Android");
         BattleSetup.AddEnemy("Drone");
         BattleSetup.SetBattleBGM("BattleTutorial");
-        BattleSetup.SetSideQuestIncrement(1, -1, -1);
+        BattleSetup.SetSideQuestIncrement(-1, 1, -1);
         BattleSetup.SetReward(Random.Range(300 + (75 * ProgressManager.Instance.GetSideQuestData().bank), 900 + (75 * ProgressManager.Instance.GetSideQuestData().bank)), Random.Range(10, 50));
         CheckEquipmentDrop();
 
@@ -127,7 +127,7 @@ public class SideQuestPanel : MonoBehaviour
         BattleSetup.AddEnemy("Android");
         BattleSetup.AddEnemy("Drone");
         BattleSetup.SetBattleBGM("BattleTutorial");
-        BattleSetup.SetSideQuestIncrement(1, -1, -1);
+        BattleSetup.SetSideQuestIncrement(-1, -1, 1);
         BattleSetup.SetReward(Random.Range(100, 300), Random.Range(100 + (30 * ProgressManager.Instance.GetSideQuestData().research), 300 + (30 * ProgressManager.Instance.GetSideQuestData().research)));
         CheckEquipmentDrop();
 

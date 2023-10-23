@@ -116,8 +116,8 @@ public class Battler : MonoBehaviour
         icon = character.characterData.icon;
         max_hp = character.current_maxHp;
         max_mp = character.current_maxMp;
-        current_hp = character.current_hp;
-        current_mp = character.current_mp;
+        current_hp = Mathf.Min(character.current_hp, max_hp);
+        current_mp = Mathf.Min(character.current_mp, max_mp);
         attack = character.current_attack;
         defense = character.current_defense;
         speed = character.current_speed;
@@ -150,7 +150,10 @@ public class Battler : MonoBehaviour
         {
             try
             {
-                EquipmentExecute.Instance.StartCoroutine(equipment.battleStartFunctionName, this);
+                if (equipment.battleStartFunctionName != string.Empty)
+                {
+                    EquipmentExecute.Instance.StartCoroutine(equipment.battleStartFunctionName, this);
+                }
                 max_hp = Mathf.Max(max_hp + equipment.hp, 1);
                 max_mp = Mathf.Max(max_mp + equipment.sp, max_mp == 0 ? 0 : 1);
                 attack = Mathf.Max(attack + equipment.atk, 0);
@@ -284,8 +287,19 @@ public class Battler : MonoBehaviour
     /// </summary>
     public int DeductHP(int damage, bool ignoreDefense = false)
     {
-        int deduction = (ignoreDefense ? 0 : defense);
-        int realDamage = damage - deduction;
+        int realDamage = damage;
+
+        if (!ignoreDefense)
+        {
+            float defuction = (0.03f * defense) / (1.0f + (0.03f * defense));
+            realDamage = Mathf.RoundToInt((float)realDamage * (1.0f-defuction));
+
+
+            Debug.Log(damage.ToString() + "*" + defuction.ToString() + "=="+ realDamage);
+        }
+
+        // ­‚È‚­‚Ä‚à1ƒ_ƒ[ƒW‚Í•ÛØ‚³‚ê‚é
+        realDamage = Mathf.Max(1, realDamage);
 
         if (realDamage > 0)
         {

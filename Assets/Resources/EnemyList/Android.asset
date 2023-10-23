@@ -29,7 +29,7 @@ MonoBehaviour:
     SpThreshold: 0
   - actionType: 1
     ability: {fileID: 11400000, guid: a0dc5c96db9815c4995075ade38b6e1f, type: 2}
-    chance: 0.5
+    chance: 1
     hasThresholdCondition: 1
     HpThreshold: 0.5
     SpThreshold: 0

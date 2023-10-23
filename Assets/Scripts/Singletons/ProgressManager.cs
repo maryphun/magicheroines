@@ -410,7 +410,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// </summary>
     public void SetSideQuestData(int foodQuest, int bankQuest, int researchQuest)
     {
-        playerData.sideQuestData = new SideQuestData(foodQuest, bankQuest, researchQuest);
+        playerData.sideQuestData = new SideQuestData(Mathf.Max(1, foodQuest), Mathf.Max(1, bankQuest), Mathf.Max(1, researchQuest));
     }
 
     public SideQuestData GetSideQuestData()

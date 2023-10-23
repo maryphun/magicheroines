@@ -270,7 +270,6 @@ public class Battle : MonoBehaviour
                 Battler targetCharacter;
                 var action = currentCharacter.GetNextAction(possibleAction);
 
-                Debug.Log("Possible Action number for " + currentCharacter.character_name + " is <color=red>" + possibleAction.Count + "</color>.");
                 switch (action.actionType)
                 {
                     case EnemyActionType.NormalAttack:
@@ -453,9 +452,9 @@ public class Battle : MonoBehaviour
         if (!isMiss)
         {
             // calculate damage
-            int realDamge = Mathf.RoundToInt((float)(attacker.attack - target.defense) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
-            realDamge = Mathf.Max(1, realDamge); // ç≈í·å¿1É_ÉÅÅ[ÉWÇ…Ç∑ÇÈ
-            target.DeductHP(realDamge, true);
+            int levelAdjustedDamage = Mathf.RoundToInt((float)(attacker.attack) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
+
+            int realDamage = target.DeductHP(attacker.attack, false);
 
             // play SE
             AudioManager.Instance.PlaySFX("Attacked", 0.4f);
@@ -467,7 +466,7 @@ public class Battle : MonoBehaviour
 
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
-            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamge.ToString(), 64, new Color(1f, 0.75f, 0.33f));
+            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, new Color(1f, 0.75f, 0.33f));
         }
         else
         {
