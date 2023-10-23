@@ -269,6 +269,8 @@ public class Battle : MonoBehaviour
             {
                 Battler targetCharacter;
                 var action = currentCharacter.GetNextAction(possibleAction);
+
+                Debug.Log("Possible Action number for " + currentCharacter.character_name + " is <color=red>" + possibleAction.Count + "</color>.");
                 switch (action.actionType)
                 {
                     case EnemyActionType.NormalAttack:

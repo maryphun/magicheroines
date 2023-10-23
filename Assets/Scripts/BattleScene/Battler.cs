@@ -445,8 +445,8 @@ public class Battler : MonoBehaviour
                 float hpPercentage = (float)current_hp / (float)max_hp;
                 float spPercentage = (float)current_mp / (float)max_mp;
 
-                if (hpPercentage > action.HpThreshold) continue;
-                if (spPercentage > action.SpThreshold) continue;
+                if (hpPercentage > action.HpThreshold && action.HpThreshold != 0) continue;
+                if (spPercentage > action.SpThreshold && action.SpThreshold != 0) continue;
             }
 
             if (action.actionType == EnemyActionType.SpecialAbility)

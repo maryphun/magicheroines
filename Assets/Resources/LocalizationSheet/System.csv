@@ -222,6 +222,10 @@ Ability.TentacleService,触手サービス
 Ability.TentacleService_Info,SPを全部仲間単体に分け与える。女性相手のみ効果有る
 Ability.Capture,捕縛
 Ability.Capture_Info,敵単体を2ターン行動不能にする
+Ability.SelfRepair,自己修復
+Ability.SelfRepair_Info,25% HP 回復
+Ability.SelfEnchant,自己強化
+Ability.SelfEnchant_Info,ランダムのバフを獲得
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」
