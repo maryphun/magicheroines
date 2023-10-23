@@ -108,7 +108,7 @@ public class TurnBase : MonoBehaviour
     }
 
     // プレイヤーキャラクターをランダムに獲得
-    public Battler GetRandomPlayerChaacter()
+    public Battler GetRandomPlayerCharacter()
     {
         Battler randomPlayer = characterInOrder[UnityEngine.Random.Range(0, characterInOrder.Count)].Item1;
         if (!randomPlayer.isEnemy)
@@ -116,7 +116,39 @@ public class TurnBase : MonoBehaviour
             return randomPlayer;
         }
 
-        return GetRandomPlayerChaacter();
+        return GetRandomPlayerCharacter();
+    }
+
+    // 敵キャラをランダムに取得
+    public Battler GetRandomEnemyCharacter()
+    {
+        Battler randomPlayer = characterInOrder[UnityEngine.Random.Range(0, characterInOrder.Count)].Item1;
+        if (randomPlayer.isEnemy)
+        {
+            return randomPlayer;
+        }
+
+        return GetRandomPlayerCharacter();
+    }
+
+
+    // 敵キャラをランダムに取得 (HP低い方を優先)
+    public Battler GetEnemyCharacterWithLowestHP()
+    {
+        // Get the enemy with the lowest current_hp
+        var lowestHpEnemy = characterInOrder
+            .Where(tuple => tuple.Item1.isEnemy) // Filter out only enemy battlers
+            .OrderBy(tuple => tuple.Item1.current_hp) // Order by current_hp in ascending order
+            .FirstOrDefault(); // Take the first (lowest) enemy battler or null if the list is empty
+
+        if (lowestHpEnemy == null)
+        {
+            // enemy list is empty
+            Debug.Log("Enemy list is empty");
+            return null;
+        }
+
+        return lowestHpEnemy.Item1;
     }
 
     /// アイコンを並ぶ

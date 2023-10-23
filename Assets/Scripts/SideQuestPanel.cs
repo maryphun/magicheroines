@@ -76,7 +76,7 @@ public class SideQuestPanel : MonoBehaviour
         BattleSetup.AddEnemy("Android");
         BattleSetup.AddEnemy("Drone");
         BattleSetup.SetBattleBGM("BattleTutorial");
-        BattleSetup.SetSideQuestIncrement(1, 0, 0);
+        BattleSetup.SetSideQuestIncrement(1, -1, -1);
         BattleSetup.SetReward(Random.Range(100, 200), Random.Range(10, 50));
         CheckEquipmentDrop();
         BattleSetup.AddItemReward("ã~ã}î†");
@@ -97,17 +97,14 @@ public class SideQuestPanel : MonoBehaviour
     {
         // SE
         AudioManager.Instance.PlaySFX("SystemAlert2");
-
-        // SE
-        AudioManager.Instance.PlaySFX("SystemAlert2");
-
+        
         // ìGÉLÉÉÉâÇê›íu
         BattleSetup.Reset(false);
         BattleSetup.AddEnemy("Android");
         BattleSetup.AddEnemy("Drone");
         BattleSetup.SetBattleBGM("BattleTutorial");
-        BattleSetup.SetSideQuestIncrement(1, 0, 0);
-        BattleSetup.SetReward(Random.Range(300, 900), Random.Range(10, 50));
+        BattleSetup.SetSideQuestIncrement(1, -1, -1);
+        BattleSetup.SetReward(Random.Range(300 + (75 * ProgressManager.Instance.GetSideQuestData().bank), 900 + (75 * ProgressManager.Instance.GetSideQuestData().bank)), Random.Range(10, 50));
         CheckEquipmentDrop();
 
         const float animationTime = 1.0f;
@@ -124,17 +121,14 @@ public class SideQuestPanel : MonoBehaviour
     {
         // SE
         AudioManager.Instance.PlaySFX("SystemAlert2");
-
-        // SE
-        AudioManager.Instance.PlaySFX("SystemAlert2");
-
+        
         // ìGÉLÉÉÉâÇê›íu
         BattleSetup.Reset(false);
         BattleSetup.AddEnemy("Android");
         BattleSetup.AddEnemy("Drone");
         BattleSetup.SetBattleBGM("BattleTutorial");
-        BattleSetup.SetSideQuestIncrement(1, 0, 0);
-        BattleSetup.SetReward(Random.Range(100, 300), Random.Range(100, 300));
+        BattleSetup.SetSideQuestIncrement(1, -1, -1);
+        BattleSetup.SetReward(Random.Range(100, 300), Random.Range(100 + (30 * ProgressManager.Instance.GetSideQuestData().research), 300 + (30 * ProgressManager.Instance.GetSideQuestData().research)));
         CheckEquipmentDrop();
 
         const float animationTime = 1.0f;

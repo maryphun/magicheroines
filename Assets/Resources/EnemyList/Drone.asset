@@ -20,5 +20,12 @@ MonoBehaviour:
   speed: 12
   level: 1
   character_color: {r: 1, g: 1, b: 1, a: 1}
+  actionPattern:
+  - actionType: 0
+    ability: {fileID: 0}
+    chance: 1
+    hasThresholdCondition: 0
+    HpThreshold: 0
+    SpThreshold: 0
   icon: {fileID: 627639012, guid: 0f4c4dbea7e7a1c4da0c02f12798160b, type: 3}
   battler: {fileID: 7739895556670267509, guid: e4504644182f95f4a8e5d8912deae49b, type: 3}

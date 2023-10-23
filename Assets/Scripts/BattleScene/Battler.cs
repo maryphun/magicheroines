@@ -34,6 +34,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public bool isAlive;
     [SerializeField] public List<Ability> abilities;
     [SerializeField] public EquipmentDefine equipment;
+    [SerializeField] public List<EnemyActionPattern> actionPattern; // 敵AI作成用
 
     [Header("References")]
     [SerializeField] private Image graphic;
@@ -80,10 +81,29 @@ public class Battler : MonoBehaviour
         defense = enemy.defense;
         speed = enemy.speed;
         currentLevel = enemy.level;
-        abilities = new List<Ability>(); // TODO: 敵の特殊技を実装
+        abilities = new List<Ability>();
+        actionPattern = new List<EnemyActionPattern>();
+
+        foreach (var action in enemy.actionPattern)
+        {
+            if (action.chance <= 0.0f)
+            {
+                // 倍率が0
+                continue;
+            }
+
+            if (action.actionType == EnemyActionType.SpecialAbility && action.ability.requiredLevel > currentLevel)
+            {
+                // レベル不足
+                continue;
+            }
+
+            actionPattern.Add(action);
+        }
 
         Initialize();
     }
+
     /// <summary>
     /// プレイヤーキャラクターの設定データをロードしてBattlerを生成する
     /// </summary>
@@ -410,4 +430,73 @@ public class Battler : MonoBehaviour
         // return to original
         graphicRect.localPosition = originalLocalPosition;
     }
+
+    #region EnemyAI
+
+    public List<EnemyActionPattern> GetAllPossibleAction()
+    {
+        var rtn = new List<EnemyActionPattern>();
+
+        foreach (var action in actionPattern)
+        {
+            // 行動条件チェック
+            if (action.hasThresholdCondition)
+            {
+                float hpPercentage = (float)current_hp / (float)max_hp;
+                float spPercentage = (float)current_mp / (float)max_mp;
+
+                if (hpPercentage > action.HpThreshold) continue;
+                if (spPercentage > action.SpThreshold) continue;
+            }
+
+            if (action.actionType == EnemyActionType.SpecialAbility)
+            {
+                // SP 不足
+                if (current_mp < action.ability.consumeSP)
+                {
+                    continue;
+                }
+            }
+
+            rtn.Add(action);
+        }
+
+        // 取れるアクシオンがない場合は待機する
+        return rtn;
+    }
+
+    public float GetAllChance(List<EnemyActionPattern> posibleActionPattern)
+    {
+        float rtn = 0.0f;
+        foreach (var action in posibleActionPattern)
+        {
+            rtn += action.chance;
+        }
+
+        return rtn;
+    }
+
+    public EnemyActionPattern GetNextAction(List<EnemyActionPattern> posibleActionPattern)
+    {
+        float fullChance = GetAllChance(posibleActionPattern);
+
+        float randomValue = UnityEngine.Random.Range(0.0f, fullChance);
+
+        // Loop through the elements and subtract their weight from the random value until you find the selected element
+        for (int i = 0; i < posibleActionPattern.Count; i++)
+        {
+            if (randomValue < posibleActionPattern[i].chance)
+            {
+                return posibleActionPattern[i];
+            }
+
+            randomValue -= posibleActionPattern[i].chance;
+        }
+
+        // This should never happen, but just in case
+        Debug.LogError("Error in GetRandomElement(). Returning the last element.");
+        return posibleActionPattern[posibleActionPattern.Count - 1];
+    }
+
+    #endregion EnemyAI
 }

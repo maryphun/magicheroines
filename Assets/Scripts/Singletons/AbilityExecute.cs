@@ -78,7 +78,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
     #endregion common methods
 
-    #region items
+    #region abilities
     public void DeepBreath()
     {
         var target = battleManager.GetCurrentBattler();
@@ -94,7 +94,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     // text
-                    var floatingText = CreateFloatingText(target.transform);
+                    floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
 
                     // effect
@@ -172,7 +172,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     audio = AudioManager.Instance.PlaySFX("Tentacle");
 
                     // text
-                    var floatingText = CreateFloatingText(target.transform);
+                    floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, new Color(0.75f, 0.75f, 1.00f));
                 })
                 .AppendInterval(animationTime)
@@ -198,5 +198,42 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     battleManager.NextTurn(false);
                 });
     }
-    #endregion items
+
+    public void SelfRepair()
+    {
+        var target = battleManager.GetCurrentBattler();
+        int healAmount = (int)((float)target.max_hp * 0.25f);
+
+        // ‹Z–¼‚ð•\Ž¦
+        var floatingText = CreateFloatingText(target.transform);
+        string abilityName = LocalizationManager.Localize("Ability.SelfRepair");
+        floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // text
+                    floatingText = CreateFloatingText(target.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
+
+                    // effect
+                    target.Heal(healAmount);
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("SelfRepair");
+
+                    // VFX
+                    var vfx = VFXSpawner.SpawnVFX("Worm", target.transform, target.GetGraphicRectTransform().position);
+                    vfx.GetComponent<Image>().color = new Color(1, 1, 1, 0);
+                    vfx.GetComponent<Image>().DOFade(1.0f, 0.2f);
+                    vfx.GetComponent<Image>().DOFade(0.0f, 0.2f).SetDelay(0.5f);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
+    }
+    #endregion abilities
 }

@@ -364,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4583614028545910670, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4737260428109958591, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
       propertyPath: m_Name
@@ -1020,6 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.PickTraining
+  Extra: 
 --- !u!1 &53109633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,7 +1058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 15, y: -33}
+  m_AnchoredPosition: {x: 15, y: 0}
   m_SizeDelta: {x: 384.3816, y: 72.07153}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &53109635
@@ -1190,7 +1191,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -550, y: 395}
+  m_AnchoredPosition: {x: -550, y: 0}
   m_SizeDelta: {x: -1100, y: -810}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62645712
@@ -1268,7 +1269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -540}
+  m_AnchoredPosition: {x: 60, y: 0}
   m_SizeDelta: {x: 259.37708, y: 86.2608}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &62814262
@@ -1645,6 +1646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Load
+  Extra: 
 --- !u!114 &67703439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,6 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Money
+  Extra: 
 --- !u!222 &71773026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2770,6 +2773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Attack
+  Extra: 
 --- !u!1 &88431629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,6 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Cancel
+  Extra: 
 --- !u!114 &91579388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3140,6 +3145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Save
+  Extra: 
 --- !u!114 &95494110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3386,6 +3392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Unlock
+  Extra: 
 --- !u!1 &105909097
 GameObject:
   m_ObjectHideFlags: 0
@@ -4947,6 +4954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.HP
+  Extra: 
 --- !u!1 &156137614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6509,8 +6517,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1039703657}
   m_HandleRect: {fileID: 1039703656}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.8339914
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6917,6 +6925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.MP
+  Extra: 
 --- !u!1 &227113649
 GameObject:
   m_ObjectHideFlags: 0
@@ -8546,6 +8555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Defense
+  Extra: 
 --- !u!1 &337101270
 GameObject:
   m_ObjectHideFlags: 0
@@ -9003,6 +9013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.HornyTraining
+  Extra: 
 --- !u!1 &348256351
 GameObject:
   m_ObjectHideFlags: 0
@@ -9379,6 +9390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Cancel
+  Extra: 
 --- !u!114 &355403731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9861,7 +9873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -35, y: -60}
+  m_AnchoredPosition: {x: -35, y: 0}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &379932247
@@ -10007,7 +10019,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 60, y: 150}
+  m_AnchoredPosition: {x: 60, y: 0}
   m_SizeDelta: {x: 391.8899, y: 187.59412}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &381654446
@@ -10538,6 +10550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Equipment
+  Extra: 
 --- !u!114 &413918442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10805,7 +10818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &422217194
@@ -11379,6 +11392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Load
+  Extra: 
 --- !u!114 &444322092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11933,6 +11947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.InsertComment
+  Extra: 
 --- !u!1 &494851163
 GameObject:
   m_ObjectHideFlags: 0
@@ -11985,6 +12000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.CharacterBuilding
+  Extra: 
 --- !u!114 &494851166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12746,6 +12762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.HolyCoreTraining
+  Extra: 
 --- !u!1 &501818102
 GameObject:
   m_ObjectHideFlags: 0
@@ -14908,7 +14925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -140, y: -60}
+  m_AnchoredPosition: {x: -140, y: 0}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &643553656
@@ -16396,6 +16413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.BlackMarket
+  Extra: 
 --- !u!222 &758643047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16896,6 +16914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Skill
+  Extra: 
 --- !u!114 &782490945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17032,7 +17051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1050, y: 550}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &783397614
@@ -17633,6 +17652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.ResearchPoint
+  Extra: 
 --- !u!222 &808713720
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17790,6 +17810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.BrainwashTraining
+  Extra: 
 --- !u!1 &810401695
 GameObject:
   m_ObjectHideFlags: 0
@@ -18194,7 +18215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -30}
+  m_AnchoredPosition: {x: 100, y: 0}
   m_SizeDelta: {x: 185.8783, y: 62.53302}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &822210870
@@ -19393,6 +19414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Money
+  Extra: 
 --- !u!222 &866564355
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19712,7 +19734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -300}
+  m_AnchoredPosition: {x: 60, y: 0}
   m_SizeDelta: {x: 259.38, y: 86.2608}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &886834227
@@ -19946,6 +19968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.CharacterData
+  Extra: 
 --- !u!1 &906244690
 GameObject:
   m_ObjectHideFlags: 0
@@ -20343,7 +20366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -60}
+  m_AnchoredPosition: {x: 60, y: 0}
   m_SizeDelta: {x: 1128.6764, y: 86.2608}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &926359131
@@ -21684,6 +21707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Unlock
+  Extra: 
 --- !u!1 &971602352
 GameObject:
   m_ObjectHideFlags: 0
@@ -22594,6 +22618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Close
+  Extra: 
 --- !u!114 &1003043637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23408,8 +23433,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 74329558}
   m_HandleRect: {fileID: 74329557}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.51
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24269,6 +24294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.CoreResearch
+  Extra: 
 --- !u!1 &1085128100
 GameObject:
   m_ObjectHideFlags: 0
@@ -24796,6 +24822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Speed
+  Extra: 
 --- !u!1 &1105544342
 GameObject:
   m_ObjectHideFlags: 0
@@ -25455,6 +25482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Money
+  Extra: 
 --- !u!222 &1119302636
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25680,6 +25708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Memory
+  Extra: 
 --- !u!222 &1126673502
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25865,6 +25894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Save
+  Extra: 
 --- !u!114 &1146988853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26224,6 +26254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Mood
+  Extra: 
 --- !u!114 &1164099991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26552,6 +26583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.SwitchCharacter
+  Extra: 
 --- !u!222 &1182821734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27441,6 +27473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Speed
+  Extra: 
 --- !u!114 &1224763974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28045,7 +28078,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -550, y: 395}
+  m_AnchoredPosition: {x: -550, y: 0}
   m_SizeDelta: {x: -1100, y: -810}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241621274
@@ -28579,6 +28612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Unlock
+  Extra: 
 --- !u!1 &1263915631
 GameObject:
   m_ObjectHideFlags: 0
@@ -28707,6 +28741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Back
+  Extra: 
 --- !u!114 &1270812971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29678,6 +29713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Action
+  Extra: 
 --- !u!222 &1315358208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30304,6 +30340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.NewAbility
+  Extra: 
 --- !u!1 &1357981487
 GameObject:
   m_ObjectHideFlags: 0
@@ -30340,7 +30377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -550, y: 395}
+  m_AnchoredPosition: {x: -550, y: 0}
   m_SizeDelta: {x: -1100, y: -810}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357981489
@@ -31149,6 +31186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Back
+  Extra: 
 --- !u!1 &1385955833
 GameObject:
   m_ObjectHideFlags: 0
@@ -32206,6 +32244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Formation
+  Extra: 
 --- !u!114 &1463386464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32801,6 +32840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Training
+  Extra: 
 --- !u!222 &1473189447
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36379,6 +36419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Formation
+  Extra: 
 --- !u!222 &1636451487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37136,6 +37177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.PanelUnavailable
+  Extra: 
 --- !u!1 &1655731186
 GameObject:
   m_ObjectHideFlags: 0
@@ -37189,6 +37231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Defense
+  Extra: 
 --- !u!114 &1655731189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38808,6 +38851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Dark
+  Extra: 
 --- !u!1 &1714679931
 GameObject:
   m_ObjectHideFlags: 0
@@ -39234,6 +39278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Level
+  Extra: 
 --- !u!114 &1727801341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39647,6 +39692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Unlock
+  Extra: 
 --- !u!1 &1744394798
 GameObject:
   m_ObjectHideFlags: 0
@@ -40148,6 +40194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Unlock
+  Extra: 
 --- !u!1 &1760840174
 GameObject:
   m_ObjectHideFlags: 0
@@ -41161,6 +41208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.CharacterUpgrade
+  Extra: 
 --- !u!1 &1816300541
 GameObject:
   m_ObjectHideFlags: 0
@@ -41289,6 +41337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Back
+  Extra: 
 --- !u!114 &1825333835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41439,6 +41488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Level
+  Extra: 
 --- !u!114 &1827241232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42951,6 +43001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.HP
+  Extra: 
 --- !u!114 &1910403706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43913,6 +43964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Back
+  Extra: 
 --- !u!114 &1951857933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45939,6 +45991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.CharacterBuilding
+  Extra: 
 --- !u!222 &2022610133
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46090,7 +46143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -15, y: -33}
+  m_AnchoredPosition: {x: -15, y: 0}
   m_SizeDelta: {x: 384.3816, y: 72.07153}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2024440021
@@ -46586,6 +46639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Back
+  Extra: 
 --- !u!114 &2045882603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47199,6 +47253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.MP
+  Extra: 
 --- !u!114 &2054828920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47650,6 +47705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Close
+  Extra: 
 --- !u!114 &2079300771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47878,6 +47934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Attack
+  Extra: 
 --- !u!114 &2093939672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48102,7 +48159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60, y: -420}
+  m_AnchoredPosition: {x: 60, y: 0}
   m_SizeDelta: {x: 259.37708, y: 86.2608}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2099503501
@@ -48348,6 +48405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Training
+  Extra: 
 --- !u!1 &2109239187
 GameObject:
   m_ObjectHideFlags: 0

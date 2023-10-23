@@ -248,8 +248,7 @@ public class Battle : MonoBehaviour
         UpdateBuffForCharacter(GetCurrentBattler());
 
         yield return new WaitForSeconds(enemyAIDelay);
-
-        // TODO: 敵技作成
+        
         // 攻撃目標を選択
         // is character stunned
         if (IsCharacterInBuff(currentCharacter, BuffType.stun))
@@ -259,8 +258,62 @@ public class Battle : MonoBehaviour
         }
         else
         {
-            Battler targetCharacter = turnBaseManager.GetRandomPlayerChaacter();
-            StartCoroutine(AttackAnimation(currentCharacter, targetCharacter, NextTurn));
+            // どこ行動を取るかを決める
+            var possibleAction = currentCharacter.GetAllPossibleAction();
+            if (possibleAction.Count == 0)
+            {
+                // 取れる行動がない、待機する
+                IdleCommand();
+            }
+            else
+            {
+                Battler targetCharacter;
+                var action = currentCharacter.GetNextAction(possibleAction);
+                switch (action.actionType)
+                {
+                    case EnemyActionType.NormalAttack:
+                        {
+                            targetCharacter = turnBaseManager.GetRandomPlayerCharacter();
+                            StartCoroutine(AttackAnimation(currentCharacter, targetCharacter, NextTurn));
+                        }
+                        break;
+                    case EnemyActionType.SpecialAbility:
+                        {
+                            if (action.ability.castType == CastType.Enemy)
+                            {
+                                // プレイヤーキャラをランダムに選択する
+                                targetCharacter = turnBaseManager.GetRandomPlayerCharacter();
+                            }
+                            else if (action.ability.castType == CastType.Teammate)
+                            {
+                                if (action.ability.abilityType == AbilityType.Heal)
+                                {
+                                    // 治療タイプの技なら低いHPの仲間にする
+                                    targetCharacter = turnBaseManager.GetEnemyCharacterWithLowestHP();
+                                }
+                                else
+                                {
+                                    targetCharacter = turnBaseManager.GetRandomEnemyCharacter();
+                                }
+                            }
+                            else // CastType.Self
+                            {
+                                targetCharacter = null;
+                            }
+
+                            AbilityExecute.Instance.SetTargetBattler(targetCharacter);
+                            AbilityExecute.Instance.Invoke(action.ability.functionName, 0);
+                            currentCharacter.DeductSP(action.ability.consumeSP);
+                        }
+                        break;
+                    case EnemyActionType.Idle:
+                        {
+                            IdleCommand();
+                        }
+                        break;
+                }
+            }
+
         }
     }
 
