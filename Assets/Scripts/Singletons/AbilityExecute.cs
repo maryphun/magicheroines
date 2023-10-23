@@ -224,7 +224,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     AudioManager.Instance.PlaySFX("SelfRepair");
 
                     // VFX
-                    var vfx = VFXSpawner.SpawnVFX("Worm", target.transform, target.GetGraphicRectTransform().position);
+                    var vfx = VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
                     vfx.GetComponent<Image>().color = new Color(1, 1, 1, 0);
                     vfx.GetComponent<Image>().DOFade(1.0f, 0.2f);
                     vfx.GetComponent<Image>().DOFade(0.0f, 0.2f).SetDelay(0.5f);
