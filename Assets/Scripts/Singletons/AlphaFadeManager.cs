@@ -39,6 +39,7 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.rectTransform.anchorMin = new Vector2(0.0f, 0.0f);
         fadeAlpha.rectTransform.anchorMax = new Vector2(1.0f, 1.0f);
         fadeAlpha.rectTransform.anchoredPosition = new Vector2(0.0f, 0.0f);
+        fadeAlpha.raycastTarget = true;
 
         initialized = true;
     }

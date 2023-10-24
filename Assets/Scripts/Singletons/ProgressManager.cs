@@ -106,11 +106,11 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
-    /// 
+    /// ストーリー進行
     /// </summary>
-    public void StageProgress()
+    public void StageProgress(int value = 1)
     {
-        playerData.currentStage++;
+        playerData.currentStage += value;
     }
 
     /// <summary>
