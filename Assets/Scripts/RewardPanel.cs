@@ -9,10 +9,13 @@ using UnityEngine.SceneManagement;
 
 public class RewardPanel : MonoBehaviour
 {
-    [Header("Header")]
+    [SerializeField] private bool isDebug = false;
+
+    [Header("Setting")]
     [SerializeField] private float displayPositionY = -150.0f;
     [SerializeField] private float animTime = 0.25f;
     [SerializeField] private float removeAnimTime = 1f;
+    [SerializeField] private Sprite[] heroinSprite = new Sprite[5];
 
     [Header("References")]
     [SerializeField] private RectTransform panel;
@@ -26,11 +29,27 @@ public class RewardPanel : MonoBehaviour
 
     [SerializeField] private Button nextButton;
 
+    [SerializeField] private CanvasGroup heroinPanel;
+    [SerializeField] private Image newHeroin;
+    [SerializeField] private TMP_Text newHeroinText;
+
     [Header("Debug")]
     [SerializeField] private bool isFirst = true;
+    [SerializeField] private bool isHeroinDisplayed = false;
 
     private void Start()
     {
+#if DEBUG_MODE
+        if (isDebug)
+        {
+            ProgressManager.Instance.InitializeProgress();
+            BattleSetup.Reset(true);
+            BattleSetup.SetReward(Random.Range(100, 300), Random.Range(200, 2000));
+            BattleSetup.AddItemReward("救急箱");
+            ProgressManager.Instance.StageProgress(3);
+        }
+#endif
+
         DisplayMoneyAndResearchPointReward();
         AlphaFadeManager.Instance.FadeIn(0.5f);
 
@@ -89,6 +108,17 @@ public class RewardPanel : MonoBehaviour
             ProgressManager.Instance.AddNewEquipment(equipment);
             BattleSetup.equipmentReward.Remove(equipment);
         }
+        else if (IsNewHeroinGet())
+        {
+            heroinPanel.DOFade(1.0f, 1.0f);
+            isHeroinDisplayed = true;
+
+            panelCanvas.DOKill(false);
+            panelCanvas.alpha = 0.0f;
+
+            // SE
+            AudioManager.Instance.PlaySFX("SystemNewHeroin");
+        }
         else　// reward end
         {
             panelCanvas.DOKill(false);
@@ -103,6 +133,53 @@ public class RewardPanel : MonoBehaviour
             AlphaFadeManager.Instance.FadeOut(1.0f);
             string nextScene = BattleSetup.isStoryMode ? "Home" : "WorldMap"; 
             DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { SceneManager.LoadScene(nextScene, LoadSceneMode.Single); });
+        }
+    }
+
+    /// <summary>
+    /// 新しく聖核戦姫を捕獲できたか
+    /// </summary>
+    private bool IsNewHeroinGet()
+    {
+        if (!BattleSetup.isStoryMode) return false; // 資源調達クエストでヒロインを捉えることはない
+        if (isHeroinDisplayed)
+        {
+            // UIを非表示にする
+            heroinPanel.DOFade(0.0f, 1.0f);
+            return false;
+        }
+
+        int stage = (ProgressManager.Instance.GetCurrentStageProgress() - 1); // ステージ番号はすでに更新されているので-1で見る
+        string s = string.Empty;
+        switch (stage)
+        {
+            case 3: // 明穂
+                newHeroin.sprite = heroinSprite[0];
+                s = "<color=#FFC0CB>" + LocalizationManager.Localize("Name.Akiho") + "</color>";
+                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                return true;
+            case 6: // 立花
+                newHeroin.sprite = heroinSprite[1];
+                s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Rikka") + "</color>";
+                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                return true;
+            case 9: // エレナ
+                newHeroin.sprite = heroinSprite[2];
+                s = "<color=#F1E5AC>" + LocalizationManager.Localize("Name.Erena") + "</color>";
+                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                return true;
+            case 12: // 京
+                newHeroin.sprite = heroinSprite[3];
+                s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Kei") + "</color>";
+                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                return true;
+            case 15: // 那由多
+                newHeroin.sprite = heroinSprite[4];
+                s = "<color=#8b0000>" + LocalizationManager.Localize("Name.Nayuta") + "</color>";
+                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                return true;
+            default:
+                return false;
         }
     }
 
