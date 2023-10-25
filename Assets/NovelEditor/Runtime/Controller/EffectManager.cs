@@ -31,6 +31,7 @@ namespace NovelEditor
         Shader Jaggy;
         Shader ChromaticAberration;
         Shader Blur;
+        Shader Hidden;
 
         internal EffectManager()
         {
@@ -43,6 +44,7 @@ namespace NovelEditor
             Jaggy = Resources.Load<Shader>("JaggyEffect");
             ChromaticAberration = Resources.Load<Shader>("ChromaticEffect");
             Blur = Resources.Load<Shader>("BlurEffect");
+            Hidden = Resources.Load<Shader>("Hidden");
         }
 
         /// <summary>
@@ -98,6 +100,9 @@ namespace NovelEditor
                     break;
                 case Effect.Blur:
                     image.material.shader = Blur;
+                    break;
+                case Effect.Hidden:
+                    image.material.shader = Hidden;
                     break;
             }
             if (image.material.HasProperty("_Strength"))

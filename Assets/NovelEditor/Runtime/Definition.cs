@@ -129,7 +129,8 @@ namespace NovelEditor
         Sepia,
         Jaggy,
         ChromaticAberration,
-        Blur
+        Blur,
+        Hidden,
     }
 
 }

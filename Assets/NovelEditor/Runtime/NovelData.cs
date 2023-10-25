@@ -86,8 +86,8 @@ namespace NovelEditor
             _paragraphList.Clear();
 
             ParagraphData pdata = CreateParagraph();
-            pdata.dialogueList[0].text = "FirstParagraph";
-            pdata.dialogueList[0].localizationID = "Dialogue.Example";
+            pdata.dialogueList[0].text = "";
+            pdata.dialogueList[0].localizationID = "";
             pdata.SetIndex(0);
         }
 
@@ -107,8 +107,8 @@ namespace NovelEditor
 
             data.SetEnable(true);
             data.dialogueList.Add(new ParagraphData.Dialogue());
-            data.dialogueList[0].text = "Paragraph";
-            data.dialogueList[0].localizationID = "Dialogue.Example";
+            data.dialogueList[0].text = "";
+            data.dialogueList[0].localizationID = "";
             data.dialogueList[0].charas = new Sprite[locations.Count];
             data.dialogueList[0].howCharas = new CharaChangeStyle[locations.Count];
             data.dialogueList[0].charaFadeColor = new Color[locations.Count];

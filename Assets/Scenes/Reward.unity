@@ -1166,6 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf340b1009425b45ac3953b4e3a92fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDebug: 0
   displayPositionY: -735
   animTime: 1
   removeAnimTime: 1
@@ -1187,6 +1188,7 @@ MonoBehaviour:
   newHeroin: {fileID: 820426518}
   newHeroinText: {fileID: 919697963}
   isFirst: 1
+  isHeroinDisplayed: 0
 --- !u!1 &898277048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,7 +1789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1167294259
 RectTransform:
   m_ObjectHideFlags: 0
