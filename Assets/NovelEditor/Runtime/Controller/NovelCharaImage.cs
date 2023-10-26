@@ -65,5 +65,23 @@ namespace NovelEditor
 
             return true;
         }
+
+        /// <summary>
+        /// キャラをフェードで非表示する
+        /// </summary>
+        /// <param name="color">フェード色</param>
+        /// <param name="fadeTime">フェードにかかる時間</param>
+        /// <param name="token">使用するCancellationToken</param>
+        internal async UniTask<bool> Grey(Sprite sprite, float fade, float fadeTime, CancellationToken token)
+        {
+            if (image.sprite != null)
+            {
+                Color from = new Color(image.color.r, image.color.g, image.color.b, 1);
+                Color dest = new Color(_defaultColor.r * fade, _defaultColor.g * fade, _defaultColor.b * fade, 1);
+                await FadeGrey(from, dest, fadeTime / 2, token);
+            }
+
+            return true;
+        }
     }
 }

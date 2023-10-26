@@ -110,6 +110,36 @@ namespace NovelEditor
         }
 
 
+        /// <summary>
+        /// Imageをフェードさせる
+        /// </summary>
+        /// <param name="from">元の色</param>
+        /// <param name="dest">目標の色</param>
+        /// <param name="fadeTime">フェードにかかる時間</param>
+        /// <param name="token">使用するCancellationToken</param>
+        internal async UniTask<bool> FadeGrey(Color from, Color dest, float fadeTime, CancellationToken token)
+        {
+            float alpha = 0;
+            _image.color = from;
+
+            float alphaSpeed = 0.01f;
+            try
+            {
+                while (alpha < 1)
+                {
+                    _image.color = Color.Lerp(from, dest, alpha);
+                    await UniTask.Delay(TimeSpan.FromSeconds(fadeTime * alphaSpeed), cancellationToken: token);
+                    alpha += alphaSpeed;
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                //return false;
+            }
+
+            _image.color = dest;
+            return true;
+        }
     }
 
 }

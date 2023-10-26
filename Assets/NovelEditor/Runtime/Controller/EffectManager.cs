@@ -75,7 +75,6 @@ namespace NovelEditor
         /// <param name="strength">エフェクトの強さ</param>
         internal void SetEffect(Image image, Effect effect, float strength)
         {
-            image.color = Color.white;
             switch (effect)
             {
                 case Effect.None:

@@ -90,16 +90,6 @@ namespace NovelEditor
         /// <param name="token">使用するCancellationToken</param>
         async UniTask<bool> SetChara(CharaChangeStyle[] style, Sprite[] sprites, Color[] color, Effect[] charaEffects, int[] strength, CancellationToken token)
         {
-            // color change
-            for (int i = 0; i < _charas.Count; i++)
-            {
-                if (charaEffects[i] == Effect.GrayScale)
-                {
-                    Debug.Log(_charas[i].image.gameObject.name + color);
-                    color[i] = new Color(color[i].r * 0.5f, color[i].g * 0.5f, color[i].b * 0.5f, color[i].a);
-                }
-            }
-
             //先にフェードアウト
             List<UniTask<bool>> tasks = new();
             for (int i = 0; i < _charas.Count; i++)
@@ -132,6 +122,22 @@ namespace NovelEditor
                 }
             }
             await UniTask.WhenAll(tasks);
+
+            tasks.Clear();
+            // color change
+            for (int i = 0; i < _charas.Count; i++)
+            {
+                if (charaEffects[i] == Effect.GrayScale)
+                {
+                    tasks.Add(_charas[i].Grey(sprites[i], 0.5f, _charaFadetime, token));
+                }
+                else if (charaEffects[i] == Effect.None)
+                {
+                    tasks.Add(_charas[i].Grey(sprites[i], 1.0f, _charaFadetime, token));
+                }
+            }
+            //await UniTask.WhenAll(tasks);
+
             return true;
         }
 
