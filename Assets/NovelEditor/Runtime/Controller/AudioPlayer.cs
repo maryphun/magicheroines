@@ -142,23 +142,22 @@ namespace NovelEditor
         /// <param name="token">フェードの非同期処理に使用するCancellationToken</param>
         async UniTask<bool> Play(SoundData data, float defaultVolume, AudioSource player, CancellationToken token)
         {
-            player.clip = data.clip;
-            player.volume = 0;
-            player.Play();
-            await FadeVolume(0, defaultVolume, data.FadeTime, player, token);
-            switch (data.Loop)
-            {
-                case LoopMode.Count:
-                    await UniTask.Delay((int)(data.clip.length * data.Count * 1000), cancellationToken: token);
-                    await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
-                    player.Stop();
-                    break;
-                case LoopMode.Second:
-                    await UniTask.Delay((int)(data.Second * 1000), cancellationToken: token);
-                    await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
-                    player.Stop();
-                    break;
-            }
+            player.volume = defaultVolume;
+            player.PlayOneShot(data.clip);
+            //await FadeVolume(0, defaultVolume, data.FadeTime, player, token);
+            //switch (data.Loop)
+            //{
+            //    case LoopMode.Count:
+            //        await UniTask.Delay((int)(data.clip.length * data.Count * 1000), cancellationToken: token);
+            //        await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
+            //        player.Stop();
+            //        break;
+            //    case LoopMode.Second:
+            //        await UniTask.Delay((int)(data.Second * 1000), cancellationToken: token);
+            //        await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
+            //        player.Stop();
+            //        break;
+            //}
             return true;
         }
 

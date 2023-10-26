@@ -123,20 +123,18 @@ namespace NovelEditor
             }
             await UniTask.WhenAll(tasks);
 
-            tasks.Clear();
             // color change
             for (int i = 0; i < _charas.Count; i++)
             {
                 if (charaEffects[i] == Effect.GrayScale)
                 {
-                    tasks.Add(_charas[i].Grey(sprites[i], 0.5f, _charaFadetime, token));
+                    _charas[i].Grey(sprites[i], 0.5f, _charaFadetime, token);
                 }
                 else if (charaEffects[i] == Effect.None)
                 {
-                    tasks.Add(_charas[i].Grey(sprites[i], 1.0f, _charaFadetime, token));
+                    _charas[i].Grey(sprites[i], 1.0f, _charaFadetime, token);
                 }
             }
-            //await UniTask.WhenAll(tasks);
 
             return true;
         }
