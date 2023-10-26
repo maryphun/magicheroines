@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 namespace NovelEditor
 {
@@ -74,7 +75,7 @@ namespace NovelEditor
         /// <param name="strength">エフェクトの強さ</param>
         internal void SetEffect(Image image, Effect effect, float strength)
         {
-
+            image.color = Color.white;
             switch (effect)
             {
                 case Effect.None:
@@ -87,7 +88,7 @@ namespace NovelEditor
                     image.material.shader = Mosaic;
                     break;
                 case Effect.GrayScale:
-                    image.material.shader = GrayScale;
+                    image.material.shader = None;
                     break;
                 case Effect.Sepia:
                     image.material.shader = Sepia;

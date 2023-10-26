@@ -140,8 +140,8 @@ namespace NovelEditor
             {
                 data = ChoiceStack.Pop();
             }
-            data.text = "Choice";
-            data.localizeID = "Choice.Test1";
+            data.text = "";
+            data.localizeID = "";
             data.SetEnable(true);
 
             return data;
