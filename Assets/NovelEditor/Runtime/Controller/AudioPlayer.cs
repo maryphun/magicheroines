@@ -114,7 +114,7 @@ namespace NovelEditor
                     Stop(_SE, SEcancellation);
                     SEcancellation = new CancellationTokenSource();
                     SoundData soundData = new SoundData(data.SE, data.SELoop, data.SECount, data.SESecond, data.SEFadeTime, data.SEEndFadeTime);
-                    var t = Play(soundData, _SEVolume, _SE, SEcancellation.Token);
+                    var t = PlaySE(soundData, _SEVolume, _SE, SEcancellation.Token);
                     break;
                 case SoundStyle.Stop:
                     Stop(_SE, SEcancellation);
@@ -144,20 +144,51 @@ namespace NovelEditor
         {
             player.volume = defaultVolume;
             player.PlayOneShot(data.clip);
-            //await FadeVolume(0, defaultVolume, data.FadeTime, player, token);
-            //switch (data.Loop)
-            //{
-            //    case LoopMode.Count:
-            //        await UniTask.Delay((int)(data.clip.length * data.Count * 1000), cancellationToken: token);
-            //        await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
-            //        player.Stop();
-            //        break;
-            //    case LoopMode.Second:
-            //        await UniTask.Delay((int)(data.Second * 1000), cancellationToken: token);
-            //        await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
-            //        player.Stop();
-            //        break;
-            //}
+            await FadeVolume(0, defaultVolume, data.FadeTime, player, token);
+            switch (data.Loop)
+            {
+                case LoopMode.Endless:
+                    await UniTask.Delay((int)((data.clip.length - data.EndFadeTime  - data.FadeTime) * 1000), cancellationToken: token);
+                    await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
+                    SoundData newData = new SoundData(data.clip, data.Loop, data.Count, data.Second, 0.1f, data.EndFadeTime);
+                    await Play(newData, defaultVolume, player, token);
+                    break;
+                case LoopMode.Count:
+                    await UniTask.Delay((int)(data.clip.length * data.Count * 1000), cancellationToken: token);
+                    await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
+                    player.Stop();
+                    break;
+                case LoopMode.Second:
+                    await UniTask.Delay((int)(data.Second * 1000), cancellationToken: token);
+                    await FadeVolume(defaultVolume, 0, data.EndFadeTime, player, token);
+                    player.Stop();
+                    break;
+            }
+            return true;
+        }
+
+
+        /// <summary>
+        /// 指定したAudioSourceのサウンドを設定する
+        /// </summary>
+        /// <param name="data">サウンドのデータ</param>
+        /// <param name="defaultVolume">再生したいAudioSourceの元々の音量</param>
+        /// <param name="player">再生したいAudioSource</param>
+        /// <param name="token">フェードの非同期処理に使用するCancellationToken</param>
+        async UniTask<bool> PlaySE(SoundData data, float defaultVolume, AudioSource player, CancellationToken token)
+        {
+            player.volume = defaultVolume;
+            player.PlayOneShot(data.clip);
+
+            switch (data.Loop)
+            {
+                case LoopMode.Endless:
+                    // TODO: 機能していなさそう。要確認
+                    await UniTask.Delay((int)(data.clip.length * 1000), cancellationToken: token);
+                    await Play(data, defaultVolume, player, token);
+                    break;
+            }
+
             return true;
         }
 

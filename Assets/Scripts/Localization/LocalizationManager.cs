@@ -174,9 +174,9 @@ namespace Assets.SimpleLocalization.Scripts
                 int firstDashIndex = inputString.IndexOf('―');
                 int lastDashIndex = inputString.LastIndexOf('―');
 
-                string cspaceTag = "<cspace=-0.17em>";
+                string cspaceTag = "<font=JP/ipaexg SDF><cspace=-0.18em>";
                 string openingTag = inputString.Substring(0, firstDashIndex) + cspaceTag;
-                string closingTag = "</cspace>" + inputString.Substring(lastDashIndex + 1);
+                string closingTag = "</cspace></font>" + inputString.Substring(lastDashIndex + 1);
 
                 inputString = openingTag + inputString.Substring(firstDashIndex, lastDashIndex - firstDashIndex + 1) + closingTag;
             }
