@@ -198,8 +198,8 @@ public class RewardPanel : MonoBehaviour
         AudioManager.Instance.PlaySFX("Reward");
 
         // UI
-        researchPointValue.DOCounter(0, BattleSetup.researchPointReward, 2.0f);
-        moneyValue.DOCounter(0, BattleSetup.moneyReward, 2.0f);
+        researchPointValue.DOCounter(0, BattleSetup.researchPointReward, 2.0f).SetEase(Ease.Linear);
+        moneyValue.DOCounter(0, BattleSetup.moneyReward, 2.0f).SetEase(Ease.Linear);
 
         // Add resources
         ProgressManager.Instance.SetResearchPoint(ProgressManager.Instance.GetCurrentResearchPoint() + BattleSetup.researchPointReward);

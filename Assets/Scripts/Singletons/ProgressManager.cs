@@ -137,6 +137,16 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         }
     }
 
+    // 該当のキャラを持っているか
+    public bool HasCharacter(int characterID, bool mustBeUsable = true)
+    {
+        if (mustBeUsable)
+        {
+            return playerData.characters.Any(x => x.characterData.characterID == characterID && (!x.characterData.is_heroin || x.is_corrupted));
+        }
+        return playerData.characters.Any(x => x.characterData.characterID == characterID);
+    }
+
     /// <summary>
     /// 戦闘終了後にキャラのHPとMPをデータに同期化
     /// </summary>

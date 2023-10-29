@@ -257,7 +257,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 00000000000000000000000000000000
       charaEffectStrength: 00000000000000000000000000000000
-      DialogueEffect: 0
+      DialogueEffect: 9
       DialogueEffectStrength: 0
     - open: 0
       Name: Name.Akiho
@@ -2152,9 +2152,9 @@ MonoBehaviour:
     _index: 1
     _nodePosition:
       serializedVersion: 2
-      x: 187
+      x: 186
       y: -17
-      width: 108
+      width: 143
       height: 97
     _nextParagraphIndex: -1
     nodeName: 
@@ -2203,7 +2203,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 00000000000000000000000000000000
       charaEffectStrength: 00000000000000000000000000000000
-      DialogueEffect: 0
+      DialogueEffect: 1
       DialogueEffectStrength: 0
     - open: 0
       Name: 

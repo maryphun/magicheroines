@@ -76,6 +76,8 @@ public class WorldMapUI : MonoBehaviour
 
     public void NextStory()
     {
+        if (!CheckCondition()) return;
+
         const float animationTime = 1.0f;
 
         // ƒV[ƒ“‘JˆÚ
@@ -94,5 +96,20 @@ public class WorldMapUI : MonoBehaviour
     private string GetChapterName(int progress)
     {
         return "Chapter " + (((progress - 1) / 3) + 1).ToString() + "-" + (((progress - 1) % 3) + 1).ToString();
+    }
+
+    private bool CheckCondition()
+    {
+        // ğŒ‚ª–‚½‚³‚ê‚Ä‚¢‚È‚¢?
+        if (ProgressManager.Instance.GetCurrentStageProgress() == 6) // —§‰Ô”s–kChapter
+        {
+            if (!ProgressManager.Instance.HasCharacter(3))
+            {
+                NovelSingletone.Instance.PlayNovel("Condition Chapter2-3", true);
+                return false;
+            }
+        }
+
+        return true;
     }
 }

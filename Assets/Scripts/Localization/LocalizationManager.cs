@@ -167,35 +167,11 @@ namespace Assets.SimpleLocalization.Scripts
 
         static string AddCspace(string inputString)
         {
-            int dashCount = CountDashes(inputString);
+            string inputText = inputString;
+            string pattern = "―+";
+            string replacement = "<font=JP/ipaexg SDF><cspace=-0.18em>$0</cspace></font>";
 
-            if (dashCount > 1)
-            {
-                int firstDashIndex = inputString.IndexOf('―');
-                int lastDashIndex = inputString.LastIndexOf('―');
-
-                string cspaceTag = "<font=JP/ipaexg SDF><cspace=-0.18em>";
-                string openingTag = inputString.Substring(0, firstDashIndex) + cspaceTag;
-                string closingTag = "</cspace></font>" + inputString.Substring(lastDashIndex + 1);
-
-                inputString = openingTag + inputString.Substring(firstDashIndex, lastDashIndex - firstDashIndex + 1) + closingTag;
-            }
-
-            return inputString;
-        }
-
-        static int CountDashes(string inputString)
-        {
-            int count = 0;
-            foreach (char c in inputString)
-            {
-                if (c == '―')
-                {
-                    count++;
-                }
-            }
-
-            return count;
+            return Regex.Replace(inputString, pattern, replacement);
         }
     }
 }
