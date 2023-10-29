@@ -158,9 +158,9 @@ public class AbilityPanel : MonoBehaviour
         if (!isOpen) return;
         if (isHiding) return;
 
-        rectTransform.DOAnchorPosY(-(rectTransform.sizeDelta.y + closeButton.sizeDelta.y), animationTime);
-        isOpen = false;
         isHiding = true;
+
+        rectTransform.DOAnchorPosY(-(rectTransform.sizeDelta.y + closeButton.sizeDelta.y), animationTime);
 
         canvasGrp.DOFade(0.0f, animationTime);
         canvasGrp.interactable = false;
@@ -172,7 +172,9 @@ public class AbilityPanel : MonoBehaviour
         if (!isOpen) return;
         if (!isHiding) return;
 
-        rectTransform.DOAnchorPosY(-(rectTransform.sizeDelta.y + closeButton.sizeDelta.y), animationTime);
+        isHiding = false;
+
+        rectTransform.DOAnchorPosY(0.0f, animationTime);
 
         canvasGrp.DOFade(1.0f, animationTime);
         canvasGrp.interactable = true;
@@ -182,6 +184,7 @@ public class AbilityPanel : MonoBehaviour
     private void Update()
     {
         if (!isOpen) return;
+        if (isHiding) return;
 
         if (Input.GetMouseButtonDown(1))
         {

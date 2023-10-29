@@ -451,10 +451,10 @@ public class Battle : MonoBehaviour
 
         if (!isMiss)
         {
-            // calculate damage
-            int levelAdjustedDamage = Mathf.RoundToInt((float)(attacker.attack) * Mathf.Clamp((((float)(attacker.currentLevel - target.currentLevel) * 0.075f) + 1.0f), 0.5f, 2.0f));
+            // calculate damage ([a.ATK \ *0.5F] - [b.DEF * 0.25F]) * Clamp.(a.LVL / b.LVL, 0.5F, 1.5F)
+            int levelAdjustedDamage = Mathf.RoundToInt(((float)attacker.attack * 0.5f) * ((float)target.defense * 0.25f) * Mathf.Clamp((float)attacker.currentLevel / (float)target.currentLevel, 0.5f, 1.5f));
 
-            int realDamage = target.DeductHP(attacker.attack, false);
+            int realDamage = target.DeductHP(attacker.attack);
 
             // play SE
             AudioManager.Instance.PlaySFX("Attacked", 0.4f);

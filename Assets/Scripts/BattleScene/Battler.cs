@@ -285,18 +285,9 @@ public class Battler : MonoBehaviour
     /// <summary>
     /// ダメージを食らった
     /// </summary>
-    public int DeductHP(int damage, bool ignoreDefense = false)
+    public int DeductHP(int damage)
     {
         int realDamage = damage;
-
-        if (!ignoreDefense)
-        {
-            float defuction = (0.03f * defense) / (1.0f + (0.03f * defense));
-            realDamage = Mathf.RoundToInt((float)realDamage * (1.0f-defuction));
-
-
-            Debug.Log(damage.ToString() + "*" + defuction.ToString() + "=="+ realDamage);
-        }
 
         // 少なくても1ダメージは保証される
         realDamage = Mathf.Max(1, realDamage);

@@ -173,7 +173,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - battleManager.GetCurrentBattler().GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, new Color(1f, 0.75f, 0.33f));
 
                     // effect
-                    target.DeductHP(damage, true);
+                    target.DeductHP(damage);
 
                     // animation
                     target.PlayAnimation(BattlerAnimationType.attacked);

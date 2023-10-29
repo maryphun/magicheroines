@@ -52,6 +52,32 @@ public class StoryManager : MonoBehaviour
                     NovelSingletone.Instance.PlayNovel("Chapter1-2 Prebattle", true, GoToBattle);
                 }
                 break;
+            case 4:
+                {
+                    BattleSetup.AddEnemy("Drone");
+                    BattleSetup.AddEnemy("Android");
+                    BattleSetup.SetBattleBGM("AkihoBattle");
+                    BattleSetup.SetReward(550, 50);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 5:
+                {
+                    BattleSetup.AddEnemy("Drone");
+                    BattleSetup.AddEnemy("Android");
+                    BattleSetup.SetBattleBGM("AkihoBattle");
+                    BattleSetup.SetReward(600, 50);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 6:
+                {
+                    BattleSetup.AddEnemy("Rikka_Enemy");
+                    BattleSetup.SetBattleBGM("RikkaBattle");
+                    BattleSetup.SetReward(2000, 300);
+                    NovelSingletone.Instance.PlayNovel("Chapter2-3 Prebattle", true, GoToBattle);
+                }
+                break;
             default:
                 // –¢ŠJ”­’n‘Ñ
                 underdevelopment.SetActive(true);
@@ -79,6 +105,21 @@ public class StoryManager : MonoBehaviour
                     PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
                     ProgressManager.Instance.AddPlayerCharacter(Akiho);
                     Resources.UnloadAsset(Akiho);
+                }
+                break;
+            case 4:
+                {
+                    NovelSingletone.Instance.PlayNovel("Chapter2-1", true, GoToRewardScreen);
+                }
+                break;
+            case 5:
+                {
+                    NovelSingletone.Instance.PlayNovel("Chapter2-2", true, GoToRewardScreen);
+                }
+                break;
+            case 6:
+                {
+                    // —§‰Ô”s–k
                 }
                 break;
             default:

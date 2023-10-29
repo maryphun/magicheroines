@@ -797,6 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.SkipTutorial
+  Extra: 
 --- !u!114 &236694104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,6 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.HP
+  Extra: 
 --- !u!114 &378774268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,6 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.ActionOrder
+  Extra: 
 --- !u!1 &495113494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,6 +2402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.Idle
+  Extra: 
 --- !u!1 &848995576
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,6 +2552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.Item
+  Extra: 
 --- !u!1 &859521352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,6 +2829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.Cancel
+  Extra: 
 --- !u!1 &955757308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,6 +3871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.AbilityAbsent
+  Extra: 
 --- !u!1 &1167297675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,6 +3973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.MP
+  Extra: 
 --- !u!114 &1171424916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5147,6 +5155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.HP
+  Extra: 
 --- !u!114 &1516231937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5642,6 +5651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: System.Back
+  Extra: 
 --- !u!114 &1648937058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6847,7 +6857,7 @@ MonoBehaviour:
   step: 0
   lastDisplayingObject: {fileID: 0}
   isPlayingTutorial: 0
-  audio: {fileID: 0}
+  audioSource: {fileID: 0}
   isSkipping: 0
 --- !u!225 &1925851523
 CanvasGroup:
@@ -7229,6 +7239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.Skill
+  Extra: 
 --- !u!1 &2018373250
 GameObject:
   m_ObjectHideFlags: 0
@@ -7416,6 +7427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.HP
+  Extra: 
 --- !u!114 &2049998188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7738,6 +7750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LocalizationKey: Battle.Attack
+  Extra: 
 --- !u!1 &2120097994
 GameObject:
   m_ObjectHideFlags: 0
