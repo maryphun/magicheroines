@@ -45,6 +45,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
     public void PlayNovel(string dataName, bool hideAfterPlay, Action callback = null)
     {
+        Debug.Log("Start playing " + dataName);
         if (!isNovelCreated) CreateNovelPlayer();
         NovelData data = Resources.Load<NovelData>(dataName);
         this.PlayNovel(data, hideAfterPlay, callback);

@@ -39,13 +39,11 @@ MonoBehaviour:
     levelUp_base_cost: 300
     levelUp_cost_increment: 75
     is_heroin: 1
-    max_dark_gauge: 100
-    max_horny_gauge: 100
     characterStatus:
     - moodNameID: Mood.Angry
-      textColor: {r: 0.9528302, g: 0, b: 0.18227042, a: 0}
+      textColor: {r: 0.9528302, g: 0, b: 0.18227042, a: 1}
       character: {fileID: 21300000, guid: 6155501f563498743866699bee5d2eb5, type: 3}
-      requiredDarkGauge: 0
-      requiredHornyGauge: 0
+      requiredCorruptionEpisode: 0
+      requiredHornyEpisode: 0
     abilities: []
   battler: {fileID: 0}

@@ -77,7 +77,21 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         if (!initialized) Initializer();
 
         fadeAlpha.DOComplete();
-        fadeAlpha.DOFade(start, time);
+        fadeAlpha.color = new Color(0, 0, 0, start);
         fadeAlpha.DOFade(end, time);
+    }
+
+    public void FadeOutThenFadeIn(float time = 0.0f)
+    {
+        if (!initialized) Initializer();
+
+        fadeAlpha.DOComplete();
+        fadeAlpha.color = new Color(0, 0, 0, 0);
+
+        DOTween.Sequence().AppendCallback(() => { fadeAlpha.DOFade(1.0f, time * 0.5f); }).AppendInterval(time * 0.5f).AppendCallback(() =>
+        {
+            fadeAlpha.DOComplete();
+            fadeAlpha.DOFade(0.0f, time * 0.5f);
+        });
     }
 }

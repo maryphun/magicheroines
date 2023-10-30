@@ -129,7 +129,7 @@ public class Battler : MonoBehaviour
             for (int i = 0; i < character.characterData.abilities.Count; i++)
             {
                 if (currentLevel >= character.characterData.abilities[i].requiredLevel
-                    && character.horny_gauge >= character.characterData.abilities[i].requiredHornyness)
+                    && character.hornyEpisode >= character.characterData.abilities[i].requiredHornyness)
                 {
                     abilities.Add(character.characterData.abilities[i]);
                 }

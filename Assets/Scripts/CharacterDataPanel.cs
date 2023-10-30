@@ -77,7 +77,7 @@ public class CharacterDataPanel : MonoBehaviour
             for (int i = 0; i < abilities.Count; i++)
             {
                 skillAvailable[i] = (character.current_level >= abilities[i].requiredLevel
-                                    && character.horny_gauge >= abilities[i].requiredHornyness);
+                                    && character.hornyEpisode >= abilities[i].requiredHornyness);
             }
         }
         else

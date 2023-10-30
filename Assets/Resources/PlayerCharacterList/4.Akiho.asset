@@ -43,12 +43,12 @@ MonoBehaviour:
     - moodNameID: Mood.Disgust
       textColor: {r: 0.8773585, g: 0, b: 0, a: 1}
       character: {fileID: 21300000, guid: ae1c9f9c05663b34dac45d9bb7b8d520, type: 3}
-      requiredDarkGauge: 0
-      requiredHornyGauge: 0
+      requiredCorruptionEpisode: 0
+      requiredHornyEpisode: 0
     - moodNameID: Mood.Submissive
       textColor: {r: 0.7616956, g: 0.33490568, b: 1, a: 1}
       character: {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
-      requiredDarkGauge: 100
-      requiredHornyGauge: 0
+      requiredCorruptionEpisode: 1
+      requiredHornyEpisode: 0
     abilities: []
   battler: {fileID: 7739895556670267509, guid: c3f4a55c60074764b8d2b23e3f7f591f, type: 3}

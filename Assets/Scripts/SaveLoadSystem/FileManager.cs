@@ -161,9 +161,9 @@ public static class SaveDataManager
                 SaveLoad.SerializedCharacter newData = new SaveLoad.SerializedCharacter();
                 newData.pathName = character.pathName;
 
-                newData.dark_gauge = character.dark_gauge;
-                newData.horny_gauge = character.horny_gauge;
-                newData.holyCore_ResearchRate = character.holyCore_ResearchRate;
+                newData.dark_gauge = character.corruptionEpisode;
+                newData.horny_gauge = character.hornyEpisode;
+                newData.holyCore_ResearchRate = character.holyCoreEpisode;
 
                 newData.localizedName = character.localizedName;
                 newData.current_level = character.current_level;
@@ -239,9 +239,9 @@ public static class SaveDataManager
                 newData.battler = scriptableObject.battler;
                 newData.pathName = character.pathName;
 
-                newData.dark_gauge = character.dark_gauge;
-                newData.horny_gauge = character.horny_gauge;
-                newData.holyCore_ResearchRate = character.holyCore_ResearchRate;
+                newData.corruptionEpisode = character.dark_gauge;
+                newData.hornyEpisode = character.horny_gauge;
+                newData.holyCoreEpisode = character.holyCore_ResearchRate;
 
                 newData.localizedName = character.localizedName;
                 newData.current_level = character.current_level;

@@ -72,9 +72,9 @@ public class Character
     [Header("‘—¿")]
     public PlayerCharacter characterData; // Šî–{‘—¿
     public GameObject battler; // í“¬‘œ
-    public int dark_gauge;
-    public int horny_gauge;
-    public int holyCore_ResearchRate;
+    public int corruptionEpisode;
+    public int hornyEpisode;
+    public int holyCoreEpisode;
 
     public string localizedName;
     public int current_level;
@@ -95,8 +95,8 @@ public struct CharacterStatus
     [SerializeField] public string moodNameID;
     [SerializeField] public Color textColor;
     [SerializeField] public Sprite character;
-    [SerializeField, Range(0, 100)] public int requiredDarkGauge;
-    [SerializeField, Range(0, 100)] public int requiredHornyGauge;
+    [SerializeField] public int requiredCorruptionEpisode;
+    [SerializeField] public int requiredHornyEpisode;
 }
 
 /// <summary>
