@@ -225,15 +225,30 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // VFX
                     var vfx = VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
-                    vfx.GetComponent<Image>().color = new Color(1, 1, 1, 0);
-                    vfx.GetComponent<Image>().DOFade(1.0f, 0.2f);
-                    vfx.GetComponent<Image>().DOFade(0.0f, 0.2f).SetDelay(0.5f);
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
                     battleManager.NextTurn(false);
                 });
+    }
+
+    /// <summary>
+    /// 明穂戦特殊技
+    /// </summary>
+    public void HealAttack()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(target.transform);
+        string abilityName = LocalizationManager.Localize("Ability.HealAttack");
+        floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
+
+        // エフェクト (Holy)
+        var vfx = VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, self.GetCharacterSize().y, 0.0f));
+
     }
     #endregion abilities
 }
