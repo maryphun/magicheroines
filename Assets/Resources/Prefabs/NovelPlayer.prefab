@@ -666,8 +666,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interval: 0.1
+  toggleONButton: {fileID: 21300000, guid: 2bdd704da7926b84ba1825f4820031e4, type: 3}
+  toggleOFFButton: {fileID: 21300000, guid: 3e05e1f397bb02c448e3d5f9f4518683, type: 3}
   novelPlayer: {fileID: 2248004457913512207}
+  buttonIcon: {fileID: 2573310751673402008}
   isSkipping: 0
+  isFlashing: 0
   intervalcnt: 0
 --- !u!1 &4141666561323818469
 GameObject:

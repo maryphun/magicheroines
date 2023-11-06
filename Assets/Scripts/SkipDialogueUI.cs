@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(Image))]
 public class SkipDialogueUI : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField] private float interval = 0.05f;
+    [SerializeField] private Sprite toggleONButton;
+    [SerializeField] private Sprite toggleOFFButton;
 
     [Header("References")]
     [SerializeField] private NovelEditor.NovelPlayer novelPlayer;
+    [SerializeField] private Image buttonIcon;
 
     [Header("Debug")]
     [SerializeField] private bool isSkipping = false;
@@ -19,6 +24,8 @@ public class SkipDialogueUI : MonoBehaviour
     {
         isSkipping = false;
         enabled = false;
+
+        buttonIcon.sprite = toggleOFFButton;
     }
 
     public void StartSkipping()
@@ -27,6 +34,8 @@ public class SkipDialogueUI : MonoBehaviour
         isSkipping = true;
         isFlashing = false;
         enabled = true;
+
+        buttonIcon.sprite = toggleONButton;
     }
 
     public void StopSkipping()
@@ -35,6 +44,8 @@ public class SkipDialogueUI : MonoBehaviour
         isSkipping = false;
         isFlashing = false;
         enabled = false;
+
+        buttonIcon.sprite = toggleOFFButton;
     }
 
     private void Update()
@@ -43,11 +54,19 @@ public class SkipDialogueUI : MonoBehaviour
         {
             if (Input.anyKeyDown)
             {
-                StopSkipping();
-                return;
+                if (!novelPlayer.IsChoicing)
+                {
+                    StopSkipping();
+                    return;
+                }
             }
 
             if (novelPlayer.IsImageChanging)
+            {
+                return;
+            }
+
+            if (novelPlayer.IsChoicing)
             {
                 return;
             }

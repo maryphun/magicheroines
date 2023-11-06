@@ -104,7 +104,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
     {
         if (!isNovelCreated) CreateNovelPlayer();
 
-        return novelplayer.IsEnded;
+        return novelplayer.IsEnded && !novelplayer.IsImageChanging;
     }
 
     public void SetBGMVolume(float value)
