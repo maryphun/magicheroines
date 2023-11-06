@@ -24,7 +24,7 @@ public class ScenarioDebuggerUI : MonoBehaviour
         if (isPlaying)
         {
             // 終了チェック
-            if (NovelSingletone.Instance.IsStop())
+            if (NovelSingletone.Instance.IsEnded())
             {
                 // 終了
                 Debug.Log("End");

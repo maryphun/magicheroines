@@ -92,11 +92,19 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
         return novelplayer.IsPlaying;
     }
-    public bool IsStop()
+
+    public bool IsPaused()
     {
         if (!isNovelCreated) CreateNovelPlayer();
 
         return novelplayer.IsStop;
+    }
+
+    public bool IsEnded()
+    {
+        if (!isNovelCreated) CreateNovelPlayer();
+
+        return novelplayer.IsEnded;
     }
 
     public void SetBGMVolume(float value)
@@ -138,7 +146,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
     private void Update()
     {
-        if (IsStop())
+        if (IsEnded())
         {
             callbackWhenFinish?.Invoke();
 

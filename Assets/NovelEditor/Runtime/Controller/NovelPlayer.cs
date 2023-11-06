@@ -79,6 +79,14 @@ namespace NovelEditor
         /// </summary>
         public bool IsStop => _isStop;
         /// <summary>
+        /// 終わったか
+        /// </summary>
+        public bool IsEnded => _isEnd;
+        /// <summary>
+        /// アニメション中か
+        /// </summary>
+        public bool IsImageChanging => _isImageChangeing;
+        /// <summary>
         /// 現在再生中か
         /// </summary>
         public bool IsPlaying => _isPlaying;
@@ -528,6 +536,12 @@ namespace NovelEditor
             return _isAutoPlay;
         }
 
+        // スキップ機能用
+        public void GoNext()
+        {
+            SetNext();
+        }
+
         #endregion
 
 
@@ -613,7 +627,7 @@ namespace NovelEditor
             SetDisplay(true);
         }
 
-        void Update()
+        void LateUpdate()
         {
             if (!_isPlaying || _isImageChangeing || !_isDisplay)
             {
@@ -686,6 +700,8 @@ namespace NovelEditor
         /// </summary>
         void SetNext()
         {
+            if (!IsDisplay) return;
+
             if (_nextDialogueNum >= _nowParagraph.dialogueList.Count-1)
             {
                 switch (_nowParagraph.next)
@@ -807,7 +823,7 @@ namespace NovelEditor
         /// <summary>
         /// 1文字ずつ表示していたテキストを全て表示する
         /// </summary>
-        void FlashText()
+        public void FlashText()
         {
             _textCTS.Cancel();
             _novelUI.FlashText();
