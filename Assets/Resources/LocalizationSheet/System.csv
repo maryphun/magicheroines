@@ -229,6 +229,12 @@ Ability.SelfRepair,自己修復
 Ability.SelfRepair_Info,25% HP 回復
 Ability.SelfEnchant,自己強化
 Ability.SelfEnchant_Info,ランダムのバフを獲得
+Ability.HealAttack,エナジーレーザー
+Ability.HealAttack_Info,相手に30ダメージを与える
+Ability.GreatRegen,ヒーリング
+Ability.GreatRegen_Info,HPとSPを回復。HPは持続的回復する
+Ability.QuickAttack,連続攻撃
+Ability.QuickAttack_Info,
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」

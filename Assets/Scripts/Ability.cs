@@ -25,4 +25,5 @@ public class Ability : ScriptableObject
     public int requiredHornyness; // ˆú—“x—v‹
     public CastType castType;
     public AbilityType abilityType;
+    public bool isAOE;
 }

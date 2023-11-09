@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8231194910352163040}
   - component: {fileID: 1343633729508638609}
   m_Layer: 5
-  m_Name: Holy
+  m_Name: Recovery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 273, y: 273}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7766868282276885438
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1178487476, guid: 1bbf84fb17a38064e9ee69bd8a011df5, type: 3}
+  m_Sprite: {fileID: -1617017671, guid: a8d60ad7bfa159a4daa9b536cac330ed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 1631839132994222541}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e4e29387ca54e141ac769980d58c172, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1987c5fedbe5d354fb7b417c4440eb6f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

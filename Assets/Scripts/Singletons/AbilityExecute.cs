@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using Assets.SimpleLocalization.Scripts;
+using System.Linq;
 
 public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 {
@@ -244,35 +245,38 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 技名を表示
-        var floatingText = CreateFloatingText(target.transform);
+        var floatingText = CreateFloatingText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.HealAttack");
-        floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
         // エフェクト (Holy)
-        VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, self.GetCharacterSize().y, 0.0f));
+        VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position);
         self.PlayAnimation(BattlerAnimationType.magic);
+
+        // Audio
+        AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
 
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
                     // エフェクト (Light)
-                    VFXSpawner.SpawnVFX("Light", target.transform, target.GetGraphicRectTransform().position + new Vector3(0.0f, target.GetCharacterSize().y, 0.0f));
+                    VFXSpawner.SpawnVFX("DarkBolt", target.transform, target.GetGraphicRectTransform().position);
                     
                     // text
-                    floatingText = CreateFloatingText(self.transform);
-                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + damage.ToString(), 64, CustomColor.heal());
                     floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
                     
                     // effect
                     target.DeductHP(damage);
-                    self.Heal(damage);
                     
                     // animation
                     target.Shake(0.75f);
                     self.PlayAnimation(BattlerAnimationType.idle);
                     target.PlayAnimation(BattlerAnimationType.attacked);
+
+                    // Audio
+                    AudioManager.Instance.PlaySFX("Bolt");
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -292,16 +296,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         float percentage = Random.Range(0.05f, 0.15f);
         int hpHealAmount = Mathf.RoundToInt((float)target.max_hp * percentage);
-        int spHealAmount = Mathf.RoundToInt((float)target.max_mp * percentage);
+        int spHealAmount = Mathf.RoundToInt((float)target.max_mp * 0.8f);
         
         // 技名を表示
-        var floatingText = CreateFloatingText(target.transform);
+        var floatingText = CreateFloatingText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.GreatRegen");
-        floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
         // エフェクト (Holy)
-        VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, self.GetCharacterSize().y, 0.0f));
+        VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position);
         self.PlayAnimation(BattlerAnimationType.magic);
+
+        // Audio
+        AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
 
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
@@ -311,23 +318,65 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.PlayAnimation(BattlerAnimationType.idle);
 
                     // エフェクト (Light)
-                    VFXSpawner.SpawnVFX("Light", target.transform, target.GetGraphicRectTransform().position + new Vector3(0.0f, target.GetCharacterSize().y, 0.0f));
+                    for (int i = 0; i < 5; i ++)
+                    {
+                        Vector2 move = Vector2.zero;
+                        move += Vector2.MoveTowards(move, move + new Vector2(Random.Range(-100, 100), Random.Range(-100, 100)), Random.Range(0.0f, 300.0f));
+                        VFXSpawner.SpawnVFX("Recovery", target.transform, target.GetMiddleGlobalPosition() + move);
+                    }
 
                     // text
                     floatingText = CreateFloatingText(self.transform);
-                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(-50.0f, 0.0f), new Vector2(0.0f, 100.0f), "+" + hpHealAmount.ToString(), 64, CustomColor.heal());
-                    floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(50.0f, 0.0f), new Vector2(0.0f, 100.0f), "+" + spHealAmount.ToString(), 64, CustomColor.SP());
+                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + hpHealAmount.ToString(), 64, CustomColor.heal());
 
                     // effect
                     target.Heal(hpHealAmount);
-                    target.AddSP(spHealAmount);
-                    battleManager.AddBuffToBattler(target, BuffType.heal, 3, hpHealAmount);
+
+                    // Audio
+                    AudioManager.Instance.PlaySFX("Heal");
                 })
-                .AppendInterval(0.5f)
+                .AppendInterval(0.25f)
+                .AppendCallback(() =>
+                {
+                    // SP
+                    floatingText = CreateFloatingText(target.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + spHealAmount.ToString(), 64, CustomColor.SP());
+                    target.AddSP(spHealAmount);
+                })
+                .AppendInterval(0.25f)
                 .AppendCallback(() =>
                 {
                     battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// 立花戦特殊技
+    /// </summary>
+    public void QuickAttack()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var firstTarget = targetBattlers[Random.Range(0, targetBattlers.Count)];
+        var secondTarget = targetBattlers[Random.Range(0, targetBattlers.Count)];
+        var thirdTarget = targetBattlers[Random.Range(0, targetBattlers.Count)];
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.QuickAttack");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+        self.transform.DOMove(Vector3.zero, 0.25f);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.25f)
+                .AppendCallback(() =>
+                {
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+
                 });
     }
     #endregion abilities

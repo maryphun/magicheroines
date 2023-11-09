@@ -94,7 +94,7 @@ public class TurnBase : MonoBehaviour
     }
 
     // 次に順番が回ってくるプレイヤーキャラクターを獲得
-    public Battler GetNextPlayerChaacter()
+    public Battler GetNextPlayerCharacter()
     {
         for (int i = 0; i < characterInOrder.Count; i++) 
         {
@@ -105,6 +105,21 @@ public class TurnBase : MonoBehaviour
         }
 
         return null;
+    }
+
+    // 次に順番が回ってくるプレイヤーキャラクターを獲得
+    public List<Battler> GetAllPlayerCharacters()
+    {
+        var rtn = new List<Battler>();
+        foreach (var character in characterInOrder)
+        {
+            if (!character.Item1.isEnemy)
+            {
+                rtn.Add(character.Item1);
+            }
+        }
+
+        return rtn;
     }
 
     // プレイヤーキャラクターをランダムに獲得

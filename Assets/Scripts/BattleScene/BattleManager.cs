@@ -267,7 +267,8 @@ public class Battle : MonoBehaviour
             }
             else
             {
-                Battler targetCharacter;
+                Battler targetCharacter = null;
+                List<Battler> targetCharacters = null;
                 var action = currentCharacter.GetNextAction(possibleAction);
 
                 switch (action.actionType)
@@ -282,8 +283,16 @@ public class Battle : MonoBehaviour
                         {
                             if (action.ability.castType == CastType.Enemy)
                             {
-                                // プレイヤーキャラをランダムに選択する
-                                targetCharacter = turnBaseManager.GetRandomPlayerCharacter();
+                                if (action.ability.isAOE)
+                                {
+                                    // 全部選ぶ
+                                    targetCharacters = turnBaseManager.GetAllPlayerCharacters();
+                                }
+                                else
+                                {
+                                    // プレイヤーキャラをランダムに選択する
+                                    targetCharacter = turnBaseManager.GetRandomPlayerCharacter();
+                                }
                             }
                             else if (action.ability.castType == CastType.Teammate)
                             {
@@ -302,7 +311,14 @@ public class Battle : MonoBehaviour
                                 targetCharacter = null;
                             }
 
-                            AbilityExecute.Instance.SetTargetBattler(targetCharacter);
+                            if (targetCharacters == null)
+                            {
+                                AbilityExecute.Instance.SetTargetBattler(targetCharacter);
+                            }
+                            else
+                            {
+                                AbilityExecute.Instance.SetTargetBattlers(targetCharacters);
+                            }
                             AbilityExecute.Instance.Invoke(action.ability.functionName, 0);
                             currentCharacter.DeductSP(action.ability.consumeSP);
                         }
