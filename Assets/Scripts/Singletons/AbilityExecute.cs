@@ -271,13 +271,62 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     
                     // animation
                     target.Shake(0.75f);
+                    self.PlayAnimation(BattlerAnimationType.idle);
                     target.PlayAnimation(BattlerAnimationType.attacked);
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
                     target.PlayAnimation(BattlerAnimationType.idle);
+                    battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// 明穂戦特殊技
+    /// </summary>
+    public void GreatRegen()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        float percentage = Random.Range(0.05f, 0.15f);
+        int hpHealAmount = Mathf.RoundToInt((float)target.max_hp * percentage);
+        int spHealAmount = Mathf.RoundToInt((float)target.max_mp * percentage);
+        
+        // 技名を表示
+        var floatingText = CreateFloatingText(target.transform);
+        string abilityName = LocalizationManager.Localize("Ability.GreatRegen");
+        floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
+
+        // エフェクト (Holy)
+        VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, self.GetCharacterSize().y, 0.0f));
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // animation
                     self.PlayAnimation(BattlerAnimationType.idle);
+
+                    // エフェクト (Light)
+                    VFXSpawner.SpawnVFX("Light", target.transform, target.GetGraphicRectTransform().position + new Vector3(0.0f, target.GetCharacterSize().y, 0.0f));
+
+                    // text
+                    floatingText = CreateFloatingText(self.transform);
+                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(-50.0f, 0.0f), new Vector2(0.0f, 100.0f), "+" + hpHealAmount.ToString(), 64, CustomColor.heal());
+                    floatingText = CreateFloatingText(target.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(50.0f, 0.0f), new Vector2(0.0f, 100.0f), "+" + spHealAmount.ToString(), 64, CustomColor.SP());
+
+                    // effect
+                    target.Heal(hpHealAmount);
+                    target.AddSP(spHealAmount);
+                    battleManager.AddBuffToBattler(target, BuffType.heal, 3, hpHealAmount);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
                     battleManager.NextTurn(false);
                 });
     }
