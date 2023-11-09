@@ -408,7 +408,7 @@ public class Battle : MonoBehaviour
                 {
                     // text
                     var floatingText = Instantiate(floatingTextOrigin, battler.transform);
-                    floatingText.Init(2f, battler.GetMiddleGlobalPosition(), new Vector2(0.0f, 150.0f), "+"+healAmount.ToString(), 64, new Color(0.75f, 0.75f, 1.00f));
+                    floatingText.Init(2f, battler.GetMiddleGlobalPosition(), new Vector2(0.0f, 150.0f), "+"+healAmount.ToString(), 64, CustomColor.SP());
 
                     // play SE
                     AudioManager.Instance.PlaySFX("PowerCharge");
@@ -466,7 +466,7 @@ public class Battle : MonoBehaviour
 
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
-            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, new Color(1f, 0.75f, 0.33f));
+            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
         }
         else
         {
@@ -486,7 +486,7 @@ public class Battle : MonoBehaviour
 
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
-            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), "MISS", 32, Color.yellow);
+            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), "MISS", 32, CustomColor.miss());
         }
 
         yield return new WaitForSeconds(attackAnimPlayTime);

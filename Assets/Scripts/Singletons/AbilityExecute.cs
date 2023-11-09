@@ -95,7 +95,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 {
                     // text
                     floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
 
                     // effect
                     target.Heal(healAmount);
@@ -105,7 +105,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // VFX
                     var vfx = VFXSpawner.SpawnVFX("Worm", target.transform, target.GetGraphicRectTransform().position);
-                    vfx.GetComponent<Image>().color = new Color(1,1,1,0);
+                    vfx.GetComponent<Image>().color = CustomColor.invisible();
                     vfx.GetComponent<Image>().DOFade(1.0f, 0.2f);
                     vfx.GetComponent<Image>().DOFade(0.0f, 0.2f).SetDelay(0.5f);
                 })
@@ -173,7 +173,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // text
                     floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, new Color(0.75f, 0.75f, 1.00f));
+                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, CustomColor.SP());
                 })
                 .AppendInterval(animationTime)
                 .AppendCallback(() =>
@@ -215,7 +215,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 {
                     // text
                     floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
 
                     // effect
                     target.Heal(healAmount);
@@ -224,7 +224,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     AudioManager.Instance.PlaySFX("SelfRepair");
 
                     // VFX
-                    var vfx = VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
+                    VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -238,6 +238,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     /// </summary>
     public void HealAttack()
     {
+        const int damage = 30;
+
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
@@ -247,8 +249,37 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
         // エフェクト (Holy)
-        var vfx = VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, self.GetCharacterSize().y, 0.0f));
+        VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, self.GetCharacterSize().y, 0.0f));
+        self.PlayAnimation(BattlerAnimationType.magic);
 
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // エフェクト (Light)
+                    VFXSpawner.SpawnVFX("Light", target.transform, target.GetGraphicRectTransform().position + new Vector3(0.0f, target.GetCharacterSize().y, 0.0f));
+                    
+                    // text
+                    floatingText = CreateFloatingText(self.transform);
+                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + damage.ToString(), 64, CustomColor.heal());
+                    floatingText = CreateFloatingText(target.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
+                    
+                    // effect
+                    target.DeductHP(damage);
+                    self.Heal(damage);
+                    
+                    // animation
+                    target.Shake(0.75f);
+                    target.PlayAnimation(BattlerAnimationType.attacked);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    target.PlayAnimation(BattlerAnimationType.idle);
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    battleManager.NextTurn(false);
+                });
     }
     #endregion abilities
 }

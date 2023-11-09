@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8231194910352163040}
   - component: {fileID: 1343633729508638609}
   m_Layer: 5
-  m_Name: Holy
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1178487476, guid: 1bbf84fb17a38064e9ee69bd8a011df5, type: 3}
+  m_Sprite: {fileID: 1709383953, guid: 2e3197d608150b746b34bf0d1c58295a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 1631839132994222541}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e4e29387ca54e141ac769980d58c172, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1684424922477ef439802847052687fa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
