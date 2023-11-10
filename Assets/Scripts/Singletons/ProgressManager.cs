@@ -472,8 +472,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         if (addEnemy)
         {
             BattleSetup.Reset(false);
-            BattleSetup.AddEnemy("Akiho_Enemy");
-            //BattleSetup.AddEnemy("Rikka_Enemy");
+            //BattleSetup.AddEnemy("Akiho_Enemy");
+            BattleSetup.AddEnemy("Rikka_Enemy");
         }
     }
 #else
