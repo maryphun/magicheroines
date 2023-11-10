@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyName: Name.Rikka
   maxHP: 600
   maxMP: 100
-  attack: 25
+  attack: 45
   defense: 5
   speed: 5
   level: 15
@@ -23,7 +23,7 @@ MonoBehaviour:
   actionPattern:
   - actionType: 0
     ability: {fileID: 0}
-    chance: 1
+    chance: 0
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0

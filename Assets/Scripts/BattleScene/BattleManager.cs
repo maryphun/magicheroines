@@ -467,10 +467,9 @@ public class Battle : MonoBehaviour
 
         if (!isMiss)
         {
-            // calculate damage ([a.ATK \ *0.5F] - [b.DEF * 0.25F]) * Clamp.(a.LVL / b.LVL, 0.5F, 1.5F)
-            int levelAdjustedDamage = Mathf.RoundToInt(((float)attacker.attack * 0.5f) * ((float)target.defense * 0.25f) * Mathf.Clamp((float)attacker.currentLevel / (float)target.currentLevel, 0.5f, 1.5f));
-
-            int realDamage = target.DeductHP(attacker.attack);
+            // UŒ‚ŒvZ
+            int levelAdjustedDamage = CalculateDamage(attacker, target);
+            int realDamage = target.DeductHP(levelAdjustedDamage);
 
             // play SE
             AudioManager.Instance.PlaySFX("Attacked", 0.4f);
@@ -519,6 +518,13 @@ public class Battle : MonoBehaviour
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
 
         callback?.Invoke(false);
+    }
+
+    // UŒ‚—ÍŒvZŒö®
+    public static int CalculateDamage(Battler attacker, Battler target)
+    {
+        // calculate damage ([a.ATK \ *0.5F] - [b.DEF * 0.25F]) * Clamp.(a.LVL / b.LVL, 0.5F, 1.5F)
+        return Mathf.RoundToInt(((float)attacker.attack * 0.5f) * ((float)target.defense * 0.25f) * Mathf.Clamp((float)attacker.currentLevel / (float)target.currentLevel, 0.5f, 1.5f));
     }
 
     /// <summary>

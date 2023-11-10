@@ -356,9 +356,17 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     public void QuickAttack()
     {
         var self = battleManager.GetCurrentBattler();
-        var firstTarget = targetBattlers[Random.Range(0, targetBattlers.Count)];
-        var secondTarget = targetBattlers[Random.Range(0, targetBattlers.Count)];
-        var thirdTarget = targetBattlers[Random.Range(0, targetBattlers.Count)];
+
+        const int numOfTarget = 3;
+        var targets = new Battler[numOfTarget];
+        targets[0] = targetBattlers[Random.Range(0, targetBattlers.Count)];
+        targets[1] = targetBattlers[Random.Range(0, targetBattlers.Count)];
+        targets[2] = targetBattlers[Random.Range(0, targetBattlers.Count)];
+
+        // 元データを記録
+        Transform originalParent = self.transform.parent;
+        int originalChildIndex = self.transform.GetSiblingIndex();
+        var originalPos = self.GetComponent<RectTransform>().position;
 
         // 技名を表示
         var floatingText = CreateFloatingText(self.transform);
@@ -368,15 +376,147 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
 
-        self.transform.DOMove(Vector3.zero, 0.25f);
+        // キャラを真ん中に移動する
+        self.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
+
+        // 残像生成コンポネント
+        FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(4.0f, 0.1f, self.GetGraphicRectTransform().GetComponent<Image>());
 
         var sequence = DOTween.Sequence();
-        sequence.AppendInterval(0.25f)
+        sequence.AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
                     // play SE
                     AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
 
+                    // move to first target
+                    self.transform.SetParent(targets[0].transform);
+                    var targetPos = targets[0].GetComponent<RectTransform>().position;
+                    targetPos = targets[0].isEnemy ? new Vector2(targetPos.x - targets[0].GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + targets[0].GetCharacterSize().x * 0.5f, targetPos.y);
+                    self.GetComponent<RectTransform>().DOMove(targetPos, 0.4f);
+                })
+                .AppendInterval(0.4f)
+                .AppendCallback(() =>
+                {
+                    // deal damage
+                    int realDamage = targets[0].DeductHP(Battle.CalculateDamage(self, targets[0]));
+
+                    // text
+                    floatingText = CreateFloatingText(targets[0].transform);
+                    floatingText.Init(2.0f, targets[0].GetMiddleGlobalPosition(), (targets[0].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("Attacked", 0.5f);
+
+                    // animation
+                    targets[0].Shake(0.75f);
+                    self.PlayAnimation(BattlerAnimationType.attack);
+                    targets[0].PlayAnimation(BattlerAnimationType.attacked);
+                })
+                .AppendInterval(0.1f)
+                .AppendCallback(() =>
+                {
+                    // return to middle
+                    self.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0.0f, -140.0f, 0.0f), 0.5f);
+
+                    // cancel animation
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    targets[0].PlayAnimation(BattlerAnimationType.idle);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+
+                    // move to second target
+                    self.transform.SetParent(targets[1].transform);
+                    var targetPos = targets[1].GetComponent<RectTransform>().position;
+                    targetPos = targets[1].isEnemy ? new Vector2(targetPos.x - targets[1].GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + targets[1].GetCharacterSize().x * 0.5f, targetPos.y);
+                    self.GetComponent<RectTransform>().DOMove(targetPos, 0.4f);
+                })
+                .AppendInterval(0.4f)
+                .AppendCallback(() =>
+                {
+                    // deal damage
+                    int realDamage = targets[1].DeductHP(Battle.CalculateDamage(self, targets[1]));
+
+                    // text
+                    floatingText = CreateFloatingText(targets[1].transform);
+                    floatingText.Init(2.0f, targets[1].GetMiddleGlobalPosition(), (targets[1].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("Attacked", 0.5f);
+
+                    // animation
+                    targets[1].Shake(0.75f);
+                    self.PlayAnimation(BattlerAnimationType.attack);
+                    targets[1].PlayAnimation(BattlerAnimationType.attacked);
+                })
+                .AppendInterval(0.1f)
+                .AppendCallback(() =>
+                {
+                    // return to middle
+                    self.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0.0f, -140.0f, 0.0f), 0.5f);
+
+                    // cancel animation
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    targets[1].PlayAnimation(BattlerAnimationType.idle);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+
+                    // move to third target
+                    self.transform.SetParent(targets[3].transform);
+                    var targetPos = targets[2].GetComponent<RectTransform>().position;
+                    targetPos = targets[2].isEnemy ? new Vector2(targetPos.x - targets[2].GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + targets[2].GetCharacterSize().x * 0.5f, targetPos.y);
+                    self.GetComponent<RectTransform>().DOMove(targetPos, 0.4f);
+                })
+                .AppendInterval(0.4f)
+                .AppendCallback(() =>
+                {
+                    // deal damage
+                    int realDamage = targets[2].DeductHP(Battle.CalculateDamage(self, targets[2]));
+
+                    // text
+                    floatingText = CreateFloatingText(targets[2].transform);
+                    floatingText.Init(2.0f, targets[2].GetMiddleGlobalPosition(), (targets[2].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("Attacked", 0.5f);
+
+                    // animation
+                    targets[2].Shake(0.75f);
+                    self.PlayAnimation(BattlerAnimationType.attack);
+                    targets[2].PlayAnimation(BattlerAnimationType.attacked);
+                })
+                .AppendInterval(0.1f)
+                .AppendCallback(() =>
+                {
+                    // return to middle
+                    self.GetComponent<RectTransform>().DOMove(new Vector3(0.0f, -140.0f, 0.0f), 0.5f);
+
+                    // cancel animation
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    targets[2].PlayAnimation(BattlerAnimationType.idle);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // move to original position
+                    self.GetComponent<RectTransform>().DOMove(originalPos, 0.5f);
+                    self.transform.SetParent(originalParent);
+                    self.transform.SetSiblingIndex(originalChildIndex);
+                })
+                .AppendInterval(1.0f)
+                .AppendCallback(() => 
+                {
+                    // next turn
+                    battleManager.NextTurn(false);
                 });
     }
     #endregion abilities
