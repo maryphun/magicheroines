@@ -16,7 +16,7 @@ MonoBehaviour:
   abilityNameID: Ability.QuickAttack
   descriptionID: Ability.QuickAttack_Info
   functionName: QuickAttack
-  consumeSP: 80
+  consumeSP: 0
   requiredLevel: 0
   requiredHornyness: 0
   castType: 1

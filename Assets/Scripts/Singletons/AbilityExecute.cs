@@ -377,11 +377,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
 
         // キャラを真ん中に移動する
-        self.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
+        Vector3 middle = new Vector3(1920.0f * 0.5f, 1080.0f * 0.5f, 0.0f);
+        self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
 
         // 残像生成コンポネント
         FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
-        fadeEffect.Initialize(4.0f, 0.1f, self.GetGraphicRectTransform().GetComponent<Image>());
+        fadeEffect.Initialize(4.0f, 0.05f, self.GetGraphicRectTransform().GetComponent<Image>());
 
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
@@ -418,7 +419,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     // return to middle
-                    self.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0.0f, -140.0f, 0.0f), 0.5f);
+                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
 
                     // cancel animation
                     self.PlayAnimation(BattlerAnimationType.idle);
@@ -458,7 +459,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     // return to middle
-                    self.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0.0f, -140.0f, 0.0f), 0.5f);
+                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
 
                     // cancel animation
                     self.PlayAnimation(BattlerAnimationType.idle);
@@ -471,7 +472,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
 
                     // move to third target
-                    self.transform.SetParent(targets[3].transform);
+                    self.transform.SetParent(targets[2].transform);
                     var targetPos = targets[2].GetComponent<RectTransform>().position;
                     targetPos = targets[2].isEnemy ? new Vector2(targetPos.x - targets[2].GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + targets[2].GetCharacterSize().x * 0.5f, targetPos.y);
                     self.GetComponent<RectTransform>().DOMove(targetPos, 0.4f);
@@ -498,7 +499,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     // return to middle
-                    self.GetComponent<RectTransform>().DOMove(new Vector3(0.0f, -140.0f, 0.0f), 0.5f);
+                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
 
                     // cancel animation
                     self.PlayAnimation(BattlerAnimationType.idle);

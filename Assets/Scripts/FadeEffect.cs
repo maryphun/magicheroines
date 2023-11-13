@@ -21,7 +21,7 @@ public class FadeEffect : MonoBehaviour
     private Sprite targetSprite;
 
     // constant
-    const float fadeTime = 0.5f;
+    const float fadeTime = 1f;
 
     // Update is called once per frame
     void Update()
@@ -40,12 +40,15 @@ public class FadeEffect : MonoBehaviour
             // écëúÇçÏê¨
             Image img = new GameObject("FadingImage["+gameObject.name+"]").AddComponent<Image>();
             img.transform.SetParent(transform.parent);
-            img.transform.SetSiblingIndex(transform.GetSiblingIndex() - 1);
+            img.transform.SetSiblingIndex(transform.GetSiblingIndex());
             img.sprite = targetSprite;
             img.raycastTarget = false;
+            img.rectTransform.pivot = targetImgComponent.rectTransform.pivot;
             img.rectTransform.position = targetImgComponent.rectTransform.position;
             img.rectTransform.localScale = targetImgComponent.rectTransform.localScale;
+            img.rectTransform.sizeDelta = targetImgComponent.rectTransform.sizeDelta;
 
+            img.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
             img.DOFade(0.0f, fadeTime);
             Destroy(img.gameObject, fadeTime + Time.deltaTime);
         }
