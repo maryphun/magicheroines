@@ -21,6 +21,7 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private RectTransform previousCharacterBtn, nextCharacterBtn;
     [SerializeField] private Button hornyActionBtn, corruptActionBtn, researchBtn;
     [SerializeField] private GameObject unavailablePanel;
+    [SerializeField] private CanvasGroup underDevelopmentPopUp;
 
     [Header("Debug")]
     [SerializeField] private Vector2 previousCharacterBtnPos, nextCharacterBtnPos;
@@ -208,6 +209,17 @@ public class TrainPanel : MonoBehaviour
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
 
+        // ébíË
+        {
+            underDevelopmentPopUp.DOFade(1.0f, 0.5f);
+            underDevelopmentPopUp.interactable = true;
+            underDevelopmentPopUp.blocksRaycasts = true;
+            return; // äJî≠íÜ
+        }
+
+        // BGM í‚é~
+        AudioManager.Instance.PauseMusic();
+
         List<string> episodeList = CharacterID_To_HornyNovelNameList[characters[currentIndex].characterData.characterID];
 
         // ÉVÉiÉäÉIçƒê∂
@@ -230,6 +242,8 @@ public class TrainPanel : MonoBehaviour
     {
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
+        // BGM í‚é~
+        AudioManager.Instance.PauseMusic();
 
         List<string> episodeList = CharacterID_To_BrainwashNovelNameList[characters[currentIndex].characterData.characterID];
 
@@ -254,6 +268,17 @@ public class TrainPanel : MonoBehaviour
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
 
+        // ébíË
+        {
+            underDevelopmentPopUp.DOFade(1.0f, 0.5f);
+            underDevelopmentPopUp.interactable = true;
+            underDevelopmentPopUp.blocksRaycasts = true;
+            return; // äJî≠íÜ
+        }
+
+        // BGM í‚é~
+        AudioManager.Instance.PauseMusic();
+
         List<string> episodeList = CharacterID_To_ResearchNovelNameList[characters[currentIndex].characterData.characterID];
 
         // ÉVÉiÉäÉIçƒê∂
@@ -274,5 +299,12 @@ public class TrainPanel : MonoBehaviour
         AlphaFadeManager.Instance.FadeOutThenFadeIn(1.0f);
         UpdateCharacterData();
         canvasGroup.interactable = true;
+    }
+
+    public void CloseUnderDevelopmentPopup()
+    {
+        underDevelopmentPopUp.DOFade(0.0f, 0.1f);
+        underDevelopmentPopUp.interactable = false;
+        underDevelopmentPopUp.blocksRaycasts = false;
     }
 }

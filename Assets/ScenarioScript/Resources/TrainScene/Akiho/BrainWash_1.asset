@@ -23,7 +23,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: -233
       y: 111
-      width: 64
+      width: 137
       height: 97
     _nextParagraphIndex: 1
     nodeName: "\u660E\u7A42\u8ABF\u6559\u30B7\u30FC\u30F31"
@@ -52,8 +52,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 7b1586d102bcadb499883af3210daa5d, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20

@@ -410,6 +410,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // play SE
                     AudioManager.Instance.PlaySFX("Attacked", 0.5f);
 
+                    // VFX
+                    self.SpawnAttackVFX(targets[0]);
+
                     // animation
                     targets[0].Shake(0.75f);
                     self.PlayAnimation(BattlerAnimationType.attack);
@@ -450,6 +453,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // play SE
                     AudioManager.Instance.PlaySFX("Attacked", 0.5f);
 
+                    // VFX
+                    self.SpawnAttackVFX(targets[1]);
+
                     // animation
                     targets[1].Shake(0.75f);
                     self.PlayAnimation(BattlerAnimationType.attack);
@@ -489,6 +495,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Attacked", 0.5f);
+
+                    // VFX
+                    self.SpawnAttackVFX(targets[2]);
 
                     // animation
                     targets[2].Shake(0.75f);
