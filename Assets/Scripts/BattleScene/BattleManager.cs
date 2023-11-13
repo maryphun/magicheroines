@@ -47,7 +47,9 @@ public class Battle : MonoBehaviour
     {
         AlphaFadeManager.Instance.FadeIn(5.0f);
 
+#if DEBUG_MODE
         if (isDebug) ProgressManager.Instance.DebugModeInitialize(true); // デバッグ用
+#endif
         var playerCharacters = ProgressManager.Instance.GetFormationParty(false);
         var actors = new List<Character>();
         for (int i = 0; i < playerCharacters.Count(); i++)

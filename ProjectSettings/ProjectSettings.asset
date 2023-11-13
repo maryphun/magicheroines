@@ -17,7 +17,7 @@ PlayerSettings:
   defaultCursor: {fileID: 2800000, guid: 17c6fc89c26fca64ea4236efab09ac28, type: 3}
   cursorHotspot: {x: 73, y: 5}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -609,7 +609,7 @@ PlayerSettings:
     QNX: UNITY_VISUAL_SCRIPTING
     Server: UNITY_VISUAL_SCRIPTING
     Stadia: UNITY_VISUAL_SCRIPTING
-    Standalone: DEBUG_MODE;MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;UNITY_VISUAL_SCRIPTING
+    Standalone: MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;UNITY_VISUAL_SCRIPTING
     WebGL: UNITY_VISUAL_SCRIPTING
     Windows Store Apps: UNITY_VISUAL_SCRIPTING
     XboxOne: UNITY_VISUAL_SCRIPTING
