@@ -85,7 +85,7 @@ public class BattleSetup
     {
         ItemDefine itemData = Resources.Load<ItemDefine>("ItemList/" + itemName);
         AddItemReward(itemData);
-        Resources.UnloadAsset(itemData);
+        //Resources.UnloadAsset(itemData);
     }
     public static void AddEquipmentReward(string equipmentName)
     {
@@ -96,7 +96,7 @@ public class BattleSetup
             AddEquipmentReward(equipmentData);
         }
 
-        Resources.UnloadAsset(equipmentData);
+        //Resources.UnloadAsset(equipmentData);
     }
     public static void AddItemReward(ItemDefine item)
     {

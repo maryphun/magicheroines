@@ -104,7 +104,7 @@ public class StoryManager : MonoBehaviour
 
                     PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
                     ProgressManager.Instance.AddPlayerCharacter(Akiho);
-                    Resources.UnloadAsset(Akiho);
+                    //Resources.UnloadAsset(Akiho);
                 }
                 break;
             case 4:

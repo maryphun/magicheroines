@@ -53,20 +53,20 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         // 初期ホームシーンキャラ
         HomeDialogue no5 = Resources.Load<HomeDialogue>("HomeDialogue/No5");
         playerData.homeDialogue.Add(no5);
-        Resources.UnloadAsset(no5);
+        //Resources.UnloadAsset(no5);
 
         // 初期キャラ 
         PlayerCharacterDefine battler = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/1.Battler");
         AddPlayerCharacter(battler);
-        Resources.UnloadAsset(battler);
+        //Resources.UnloadAsset(battler);
 
         PlayerCharacterDefine tentacle = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/2.TentacleMan");
         AddPlayerCharacter(tentacle);
-        Resources.UnloadAsset(tentacle);
+        //Resources.UnloadAsset(tentacle);
 
         PlayerCharacterDefine clone = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/3.Clone");
         AddPlayerCharacter(clone);
-        Resources.UnloadAsset(clone);
+        //Resources.UnloadAsset(clone);
 
         // 初期キャラを自動的にパーティーに編入する
         for (int i = 0; i < playerData.formationCharacters.Length; i++)
@@ -441,31 +441,31 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         // 調教できるヒロインを追加
         PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
         AddPlayerCharacter(Rikka);
-        Resources.UnloadAsset(Rikka);
+        //Resources.UnloadAsset(Rikka);
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(bread);
-        Resources.UnloadAsset(bread);
+        //Resources.UnloadAsset(bread);
 
         ItemDefine croissant = Resources.Load<ItemDefine>("ItemList/クロワッサン");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(croissant);
-        Resources.UnloadAsset(croissant);
+        //Resources.UnloadAsset(croissant);
 
         ItemDefine m24 = Resources.Load<ItemDefine>("ItemList/M24");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(m24);
-        Resources.UnloadAsset(m24);
+        //Resources.UnloadAsset(m24);
 
         ItemDefine aid = Resources.Load<ItemDefine>("ItemList/救急箱");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(aid);
-        Resources.UnloadAsset(aid);
+        //Resources.UnloadAsset(aid);
 
         // 全装備を開放する
         EquipmentDefine[] allEquipment = Resources.LoadAll<EquipmentDefine>("EquipmentList");
         foreach (EquipmentDefine equip in allEquipment)
         {
             AddNewEquipment(equip);
-            Resources.UnloadAsset(equip);
+            //Resources.UnloadAsset(equip);
         }
 
         // 敵キャラを設置
