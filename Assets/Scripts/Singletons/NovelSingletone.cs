@@ -14,6 +14,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
     List<GraphicRaycaster> disabledCanvas = new List<GraphicRaycaster>();
     Action callbackWhenFinish;
     public float defaultHidePlayTime;
+    const int defaultTextSpeed = 10;
 
     public void CreateNovelPlayer()
     {
@@ -32,6 +33,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
         novelplayer = spawnedObj.GetComponentInChildren<NovelPlayer>();
         defaultHidePlayTime = novelplayer._hideFadeTime;
+        novelplayer.textSpeed = defaultTextSpeed;
 
         if (ReferenceEquals(novelplayer, null))
         {
@@ -123,7 +125,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
     {
         if (!isNovelCreated) CreateNovelPlayer();
 
-        novelplayer.textSpeed = Mathf.Clamp(value, 1, 10);
+        novelplayer.textSpeed = Mathf.Clamp(value, 1, 10) * 2;
     }
     public void SetAutoSpeed(float value)
     {
@@ -135,7 +137,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
     {
         if (!isNovelCreated) CreateNovelPlayer();
 
-        return novelplayer.textSpeed;
+        return novelplayer.textSpeed / 2;
     }
     public float GetAutoSpeed()
     {

@@ -272,7 +272,7 @@ public class InventoryManager : MonoBehaviour
         // マウスクリックを検知
         Vector3 mousePosition = Input.mousePosition / parent.scaleFactor;
 
-        if (Input.GetMouseButtonDown(1)) // 消し
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)) // 消し
         {
             CloseInventory();
             return;

@@ -143,4 +143,14 @@ public class OptionPanel : MonoBehaviour
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemSelect");
     }
+
+    private void Update()
+    {
+        if (!isOpen) return;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitOptionPanel();
+        }
+    }
 }
