@@ -189,6 +189,7 @@ public class ActionPanel : MonoBehaviour
                             case CommandType.Attack: // UŒ‚
                                 battleManager.AttackCommand(targetBattler);
                                 CancelAttack();
+                                SetEnablePanel(false);
                                 break;
                             case CommandType.Item: // ƒAƒCƒeƒ€
 

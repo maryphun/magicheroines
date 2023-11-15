@@ -4867,9 +4867,9 @@ MonoBehaviour:
     isUnique: 1
     isEquipment: 1
   - item: {fileID: 0}
-    equipment: {fileID: 11400000, guid: 7ca8345203d5a2042b27f48e1cdd73ff, type: 2}
-    cost: 350
-    requirementProgress: 2
+    equipment: {fileID: 11400000, guid: f8fb8603ab15de44abec02cfa352a864, type: 2}
+    cost: 0
+    requirementProgress: 0
     isUnique: 1
     isEquipment: 1
   ShopItemList:

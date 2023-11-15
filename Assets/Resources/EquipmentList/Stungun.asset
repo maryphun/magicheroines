@@ -17,7 +17,7 @@ MonoBehaviour:
   descriptionID: Equipment.Stungun_Info
   equipmentType: 1
   effectText: 
-  battleStartFunctionName: 
+  battleStartFunctionName: StungunStart
   battleEndFunctionName: 
   hp: 0
   sp: 0

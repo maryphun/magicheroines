@@ -32,4 +32,19 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
     {
         yield return null;
     }
+
+    public IEnumerator StungunStart(Battler battler)
+    {
+        var ability = Resources.Load<Ability>("AbilityList/Stungun");
+
+        if (!ReferenceEquals(ability, null))
+        {
+            battler.AddAbilityToCharacter(ability);
+        }
+        else
+        {
+            Debug.LogWarning("Ability data 'AbilityList/Stungun' not couldn't be loaded.");
+        }
+        yield return null;
+    }
 }

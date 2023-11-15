@@ -170,6 +170,11 @@ public class Battler : MonoBehaviour
         }
     }
 
+    public void AddAbilityToCharacter(Ability ability)
+    {
+        abilities.Add(ability);
+    }
+
     /// <summary>
     /// キャラクター編成画面の場合表示データが違う
     /// </summary>

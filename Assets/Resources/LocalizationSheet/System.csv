@@ -99,7 +99,7 @@ Name.Tentacle,触手怪人
 Name.Clone,005号
 Name.No72,072号
 Name.Drone,パトロールドローン
-Name.Android,治安維持ドロイド
+Name.Android,警備ドロイド
 Name.Battler+Tentacle,触手怪人、戦闘員
 Name.Man,男
 Name.GuardMan,駅員
@@ -160,7 +160,7 @@ Equipment.Umbrella,高強度繊維傘
 Equipment.Umbrella_Info,最新のナノテクノロジーを駆使した日本製の傘。攻撃と防御の二面性を持ち、まさに武器としての芸術品。
 Equipment.Stungun,ショックウェーブ・パルサー
 Equipment.Stungun_Info,"都市伝説として語り継がれるスタンガン、名が囁かれるだけで、敵対者を感電させてしまうという噂が立つ。
-敵にSPDデバフを与えられる特殊技を使えるようになる。"
+敵を行動不能にする特殊技を使えるようになる。"
 Equipment.Glove,雷鋼製の手袋
 Equipment.Glove_Info,"新しく発明された「雷鋼」で作った手袋。
 変形可能で攻撃力が向上しますが、非常に重く、実用性が課題となっている。"
@@ -239,6 +239,7 @@ Ability.GreatRegen,ヒーリング
 Ability.GreatRegen_Info,HPとSPを回復。HPは持続的回復する
 Ability.QuickAttack,連続攻撃
 Ability.QuickAttack_Info,
+Ability.Stungun_Info,スタンガンで目標を1ターン行動不能にする。
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」

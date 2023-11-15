@@ -77,6 +77,31 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         Destroy(img.gameObject, animTime);
     }
+
+    private RectTransform CreateProjectile(string projectileName, Vector3 start, Vector3 end, float time, bool rotateTowardDirection = true)
+    {
+        GameObject data = Resources.Load<GameObject>("Prefabs/VFX/" + projectileName);
+        var obj = Instantiate(data);
+
+        obj.transform.SetParent(battleManager.GetCurrentBattler().transform.parent.parent);
+
+        var rect = obj.GetComponent<RectTransform>();
+        rect.position = start;
+        rect.DOMove(end, time, true).SetEase(Ease.Linear);
+        
+        // rotate
+        // Calculate direction vector
+        if (rotateTowardDirection)
+        {
+            Vector3 diff = end - start;
+            diff.Normalize();
+            float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+            rect.rotation = Quaternion.Euler(0f, 0f, rot_z - 90.0f);
+        }
+
+        Destroy(obj, time);
+        return rect;
+    }
     #endregion common methods
 
     #region abilities
@@ -528,6 +553,38 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // next turn
                     battleManager.NextTurn(false);
                 });
+    }
+
+    /// <summary>
+    /// ショックウェーブ・パルサー 装備することで獲得する特殊技
+    /// </summary>
+    public void Stungun()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        var selfPos = self.GetMiddleGlobalPosition();
+        var startPoint = self.isEnemy ? new Vector2(selfPos.x - self.GetCharacterSize().x * 0.5f, selfPos.y) : new Vector2(selfPos.x + self.GetCharacterSize().x * 0.5f, selfPos.y);
+        var endPoint = target.GetMiddleGlobalPosition();
+
+        // calculate projectile time base on range
+        float projectileTime = Vector3.Distance(startPoint, endPoint) / 500.0f;
+
+        CreateProjectile("Stungun Projectile", startPoint, endPoint, projectileTime, true);
+        DOTween.Sequence().AppendInterval(projectileTime)
+            .AppendCallback(() => 
+            {
+                // VFX
+                VFXSpawner.SpawnVFX("Stungun Hit", target.transform, endPoint);
+
+                // stun target
+                battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
+            })
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                battleManager.NextTurn(false);
+            });
     }
     #endregion abilities
 }

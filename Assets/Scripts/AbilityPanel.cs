@@ -21,6 +21,7 @@ public class AbilityPanel : MonoBehaviour
     [SerializeField] private CanvasGroup descriptionPanel;
     [SerializeField] private Canvas canvas;
     [SerializeField] private Battle battleManager;
+    [SerializeField] private ActionPanel actionPanel;
     [SerializeField] private TMP_Text description_Name;   //<　技名
     [SerializeField] private TMP_Text description_Target; //<　効果対象
     [SerializeField] private TMP_Text description_Type;   //<　機能
@@ -97,6 +98,7 @@ public class AbilityPanel : MonoBehaviour
                 AbilityExecute.Instance.Invoke(ability.functionName, 0);
                 battleManager.GetCurrentBattler().DeductSP(ability.consumeSP);
                 ClosePanel();
+                actionPanel.SetEnablePanel(false);
                 break;
             case CastType.Teammate:
                 StartCoroutine(SelectingTarget(ability, true, false, true));
@@ -330,6 +332,7 @@ public class AbilityPanel : MonoBehaviour
                     AbilityExecute.Instance.Invoke(ability.functionName, 0);
                     battleManager.GetCurrentBattler().DeductSP(ability.consumeSP);
                     ClosePanel();
+                    actionPanel.SetEnablePanel(false);
 
                     // カーソルを戻す
                     Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
@@ -359,7 +362,7 @@ public class AbilityPanel : MonoBehaviour
             yield return null;
         } while (!isFinished);
 
-        // Hide Tips
+        // Hide Tips (必要なのでバグではない！)
         Inventory.Instance.HideTipsText();
     }
 

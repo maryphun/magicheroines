@@ -211,13 +211,13 @@ public class InventoryManager : MonoBehaviour
         isHiding = false;
     }
 
-    public void CloseInventory()
+    public void CloseInventory(bool isUsingItem)
     {
         if (!isOpened) return;
         isOpened = false;
         isHiding = false;
 
-        onCloseCallback?.Invoke();
+        if (!isUsingItem) onCloseCallback?.Invoke();
         panel.DOFade(0.0f, animTime);
         panel.interactable = false;
         panel.blocksRaycasts = false;
@@ -274,7 +274,7 @@ public class InventoryManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)) // 消し
         {
-            CloseInventory();
+            CloseInventory(false);
             return;
         }
 
@@ -346,7 +346,7 @@ public class InventoryManager : MonoBehaviour
                     // アイテムを使用
                     ItemExecute.Instance.Invoke(selectingItem.functionName, 0);
                     ProgressManager.Instance.RemoveItemFromInventory(selectingItem);
-                    CloseInventory();
+                    CloseInventory(true);
 
                     // カーソルを戻す
                     Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
@@ -388,7 +388,7 @@ public class InventoryManager : MonoBehaviour
             case CastType.SelfCast:
                 ItemExecute.Instance.Invoke(item.Item2.functionName, 0);
                 ProgressManager.Instance.RemoveItemFromInventory(item.Item2);
-                CloseInventory();
+                CloseInventory(true);
                 break;
             case CastType.Teammate:
                 HideInventory();
