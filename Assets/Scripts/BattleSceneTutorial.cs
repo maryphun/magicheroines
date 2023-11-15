@@ -80,6 +80,7 @@ public class BattleSceneTutorial : MonoBehaviour
         if (currentTween.IsPlaying())
         {
             currentTween.Complete();
+            tutorialText.DOComplete();
             yield return null;
             // çƒãA
             StartCoroutine(WaitForInput());
