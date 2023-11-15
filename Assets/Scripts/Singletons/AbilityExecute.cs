@@ -568,7 +568,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var endPoint = target.GetMiddleGlobalPosition();
 
         // calculate projectile time base on range
-        float projectileTime = Vector3.Distance(startPoint, endPoint) / 500.0f;
+        float projectileTime = Vector3.Distance(startPoint, endPoint) / 850.0f;
+
+        // SE
+        AudioManager.Instance.PlaySFX("GunShoot");
 
         CreateProjectile("Stungun Projectile", startPoint, endPoint, projectileTime, true);
         DOTween.Sequence().AppendInterval(projectileTime)
@@ -579,6 +582,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                 // stun target
                 battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
+
+                // SE
+                AudioManager.Instance.PlaySFX("ElectricShock", 0.75f);
             })
             .AppendInterval(0.5f)
             .AppendCallback(() =>

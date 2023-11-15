@@ -69,6 +69,7 @@ public class SideQuestPanel : MonoBehaviour
     public void OnClickSideQuestFood()
     {
         // SE
+        AudioManager.Instance.PauseMusic();
         AudioManager.Instance.PlaySFX("SystemAlert2");
 
         // 敵キャラを設置
@@ -96,6 +97,7 @@ public class SideQuestPanel : MonoBehaviour
     public void OnClickSideQuestBank()
     {
         // SE
+        AudioManager.Instance.PauseMusic();
         AudioManager.Instance.PlaySFX("SystemAlert2");
         
         // 敵キャラを設置
@@ -120,6 +122,7 @@ public class SideQuestPanel : MonoBehaviour
     public void OnClickSideQuestResearch()
     {
         // SE
+        AudioManager.Instance.PauseMusic();
         AudioManager.Instance.PlaySFX("SystemAlert2");
         
         // 敵キャラを設置

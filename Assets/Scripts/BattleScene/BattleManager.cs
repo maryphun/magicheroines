@@ -246,11 +246,11 @@ public class Battle : MonoBehaviour
         characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
         actionTargetArrow.position = currentCharacter.GetGraphicRectTransform().position;
 
+        yield return new WaitForSeconds(enemyAIDelay);
+
         // バフを先にチェック
         UpdateBuffForCharacter(GetCurrentBattler());
 
-        yield return new WaitForSeconds(enemyAIDelay);
-        
         // 攻撃目標を選択
         // is character stunned
         if (IsCharacterInBuff(currentCharacter, BuffType.stun))
