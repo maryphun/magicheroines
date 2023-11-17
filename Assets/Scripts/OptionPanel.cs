@@ -154,6 +154,7 @@ public class OptionPanel : MonoBehaviour
             if (windowScreenToggle.isOn)
             {
                 Screen.fullScreenMode = FullScreenMode.Windowed;
+                Screen.SetResolution(1920, 1080, FullScreenMode.Windowed);
                 PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.Windowed);
             }
         }
@@ -168,6 +169,17 @@ public class OptionPanel : MonoBehaviour
 
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemSelect");
+    }
+
+    public void OnToggleFullScreen()
+    {
+        AudioManager.Instance.PlaySFX("SystemCursor");
+        windowScreenToggle.isOn = !fullScreenToggle.isOn;
+    }
+    public void OnToggleWindoedScreen()
+    {
+        AudioManager.Instance.PlaySFX("SystemCursor");
+        fullScreenToggle.isOn = !windowScreenToggle.isOn;
     }
 
     private void Update()

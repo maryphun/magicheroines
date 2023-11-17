@@ -15,8 +15,11 @@ public static class PlayerPrefsManager
 
     public static void LoadPlayerPrefs()
     {
+        PlayerPrefs.DeleteAll();
+
         int fullScreenMode = PlayerPrefs.GetInt(PlayerPrefsSave.IsFullScreen.ToString(), (int)(OptionPanel.defaultFullScreenToggle ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed));
         Screen.fullScreenMode = (FullScreenMode)fullScreenMode;
+        Screen.SetResolution(1920, 1080, Screen.fullScreenMode);
 
         float musicVolume = PlayerPrefs.GetFloat(PlayerPrefsSave.BGM_Volume.ToString(), OptionPanel.defaultBGMVolume);
         AudioManager.Instance.SetMusicVolume(musicVolume);
