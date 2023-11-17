@@ -87,6 +87,21 @@ public class Character
     public int current_speed;
 
     public bool is_corrupted;    // ˆÅ—‚¿‚µ‚½‚©
+
+    public CharacterStatus GetCurrentStatus()
+    {
+        for (int i = 0; i < characterData.characterStatus.Count; i++)
+        {
+            if (corruptionEpisode >= characterData.characterStatus[i].requiredCorruptionEpisode
+             && hornyEpisode >= characterData.characterStatus[i].requiredHornyEpisode)
+            {
+                return characterData.characterStatus[i];
+            }
+        }
+
+        // ‚Ç‚ê‚à–‚½‚³‚È‚¢ê‡‚Í‰Šú’l‚ğ•Ô‚·
+        return characterData.characterStatus[0];
+    }
 }
 
 [System.Serializable]

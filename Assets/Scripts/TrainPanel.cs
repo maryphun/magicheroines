@@ -22,6 +22,8 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private Button hornyActionBtn, corruptActionBtn, researchBtn;
     [SerializeField] private GameObject unavailablePanel;
     [SerializeField] private CanvasGroup underDevelopmentPopUp;
+    [SerializeField] private CanvasGroup newBattlerPopup;
+    [SerializeField] private TMPro.TMP_Text newBattlerPopupText;
 
     [Header("Debug")]
     [SerializeField] private Vector2 previousCharacterBtnPos, nextCharacterBtnPos;
@@ -182,15 +184,9 @@ public class TrainPanel : MonoBehaviour
         characterName.text = characters[currentIndex].localizedName;
 
         // 条件を満たしている「心情」
-        for (int i = 0; i < characters[currentIndex].characterData.characterStatus.Count; i++)
-        {
-            if (characters[currentIndex].corruptionEpisode >= characters[currentIndex].characterData.characterStatus[i].requiredCorruptionEpisode
-                && characters[currentIndex].hornyEpisode >= characters[currentIndex].characterData.characterStatus[i].requiredHornyEpisode)
-            {
-                currentMood.text = LocalizationManager.Localize(characters[currentIndex].characterData.characterStatus[i].moodNameID);
-                characterImg.sprite = characters[currentIndex].characterData.characterStatus[i].character;
-            }
-        }
+        var characterStatus = characters[currentIndex].GetCurrentStatus();
+        currentMood.text = LocalizationManager.Localize(characterStatus.moodNameID);
+        characterImg.sprite = characterStatus.character;
 
         darkGaugeFill.fillAmount = ((float)characters[currentIndex].corruptionEpisode) / (float)CharacterID_To_BrainwashNovelNameList[characters[currentIndex].characterData.characterID].Count;
         holyCoreGaugeFill.fillAmount = ((float)characters[currentIndex].holyCoreEpisode) / (float)CharacterID_To_ResearchNovelNameList[characters[currentIndex].characterData.characterID].Count;
@@ -258,6 +254,13 @@ public class TrainPanel : MonoBehaviour
             NovelSingletone.Instance.PlayNovel("TrainScene/" + episodeList[characters[currentIndex].corruptionEpisode], true, ReturnFromEpisode);
             characters[currentIndex].corruptionEpisode++;
         });
+
+        // キャラ獲得?
+        if (characters[currentIndex].corruptionEpisode >= episodeList.Count - 1)
+        {
+            // 闇落ち
+            characters[currentIndex].is_corrupted = true;
+        }
     }
 
     /// <summary>
@@ -299,6 +302,11 @@ public class TrainPanel : MonoBehaviour
         AlphaFadeManager.Instance.FadeOutThenFadeIn(1.0f);
         UpdateCharacterData();
         canvasGroup.interactable = true;
+
+        if (characters[currentIndex].is_corrupted)
+        {
+            CallNewBattlerPopUp();
+        }
     }
 
     public void CloseUnderDevelopmentPopup()
@@ -306,5 +314,53 @@ public class TrainPanel : MonoBehaviour
         underDevelopmentPopUp.DOFade(0.0f, 0.1f);
         underDevelopmentPopUp.interactable = false;
         underDevelopmentPopUp.blocksRaycasts = false;
+    }
+
+    public void CallNewBattlerPopUp()
+    {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemNewHeroin");
+
+        // Update Text
+        newBattlerPopupText.text = CorruptedMessage(characters[currentIndex].characterData.characterID);
+
+        // UI
+        newBattlerPopup.DOFade(1.0f, 0.5f);
+        newBattlerPopup.interactable = true;
+        newBattlerPopup.blocksRaycasts = true;
+    }
+    public void CloseNewBattlerPopup()
+    {
+        newBattlerPopup.DOFade(0.0f, 0.1f);
+        newBattlerPopup.interactable = false;
+        newBattlerPopup.blocksRaycasts = false;
+    }
+
+    /// <summary>
+    /// 闇落ち成功のシステムメッセージ
+    /// </summary>
+    public string CorruptedMessage(int characterID)
+    {
+        string s = string.Empty;
+        switch (characterID)
+        {
+            case 3: // 明穂
+                s = "<color=#FFC0CB>" + LocalizationManager.Localize("Name.Akiho") + "</color>";
+                return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            case 4: // 立花
+                s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Rikka") + "</color>";
+                return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            case 5: // エレナ
+                s = "<color=#F1E5AC>" + LocalizationManager.Localize("Name.Erena") + "</color>";
+                return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            case 6: // 京
+                s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Kei") + "</color>";
+                return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            case 7: // 那由多
+                s = "<color=#8b0000>" + LocalizationManager.Localize("Name.Nayuta") + "</color>";
+                return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            default:
+                return string.Empty;
+        }
     }
 }

@@ -42,7 +42,7 @@ public class CharacterDataPanel : MonoBehaviour
     /// </summary>
     public void InitializeCharacterData(Character character)
     {
-        characterSprite.sprite = character.characterData.sprite;
+        characterSprite.sprite = character.GetCurrentStatus().character;
         characterName.text = character.localizedName;
         levelValue.text = character.current_level.ToString();
         hpValue.text = character.current_maxHp.ToString();
