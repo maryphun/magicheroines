@@ -51,6 +51,12 @@ public class TitleSelectUI : MonoBehaviour
         Init();
     }
 
+    private void Awake()
+    {
+        // ƒQ[ƒ€İ’è‚ğƒ[ƒh
+        PlayerPrefsManager.LoadPlayerPrefs();
+    }
+
     private void Init()
     {
         AlphaFadeManager.Instance.FadeIn(1.0f);

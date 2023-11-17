@@ -2630,6 +2630,8 @@ MonoBehaviour:
   seVolumeValue: {fileID: 6917989316860930547}
   textSpeedValue: {fileID: 9218694347917296284}
   autoSpeedValue: {fileID: 4827146856639838995}
+  fullScreenToggle: {fileID: 2340900253882008790}
+  windowScreenToggle: {fileID: 7583468872889547764}
 --- !u!1 &4833292273642228618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2715,7 +2717,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &4985323679613346552
 GameObject:
   m_ObjectHideFlags: 0
@@ -3362,7 +3364,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &6188200512802508248
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,11 +23,15 @@ public class OptionPanel : MonoBehaviour
     [SerializeField] private TMP_Text seVolumeValue;
     [SerializeField] private TMP_Text textSpeedValue;
     [SerializeField] private TMP_Text autoSpeedValue;
+    [SerializeField] private Toggle fullScreenToggle;
+    [SerializeField] private Toggle windowScreenToggle;
 
-    const float defaultBGMVolume = 0.5f;
-    const float defaultSEVolume = 0.5f;
-    const int defaultTextSpeed = 6;
-    const float defaultAutoSpeed = 1.0f;
+    public static float defaultBGMVolume = 0.5f;
+    public static float defaultSEVolume = 0.5f;
+    public static int defaultTextSpeed = 6;
+    public static float defaultAutoSpeed = 1.0f;
+    public static bool defaultFullScreenToggle = true;
+    public static bool defaultWindowScreenToggle = false;
 
 
     private float tempBGMVolume = 0.5f;
@@ -60,7 +64,9 @@ public class OptionPanel : MonoBehaviour
         seVolumeSlider.value = tempSEVolume;
         textSpeedSlider.value = tempTextSpeed;
         autoSpeedSlider.value = tempAutoSpeed;
-
+        fullScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.FullScreenWindow;
+        windowScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.Windowed;
+        
         // Update value texts
         ChangeBGMVolume();
         ChangeSEVolume();
@@ -128,6 +134,8 @@ public class OptionPanel : MonoBehaviour
         seVolumeSlider.DOValue(defaultSEVolume, 0.25f);
         textSpeedSlider.DOValue(defaultTextSpeed, 0.25f);
         autoSpeedSlider.DOValue(defaultAutoSpeed, 0.25f);
+        fullScreenToggle.isOn = defaultFullScreenToggle;
+        windowScreenToggle.isOn = defaultWindowScreenToggle;
 
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemSelect");
@@ -139,6 +147,24 @@ public class OptionPanel : MonoBehaviour
         tempSEVolume = AudioManager.Instance.GetSEMasterVolume();
         tempTextSpeed = NovelSingletone.Instance.GetTextSpeed();
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
+
+        // apply to change full screen mode
+        if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow)
+        {
+            if (windowScreenToggle.isOn)
+            {
+                Screen.fullScreenMode = FullScreenMode.Windowed;
+                PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.Windowed);
+            }
+        }
+        else
+        {
+            if (fullScreenToggle.isOn)
+            {
+                Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+                PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.FullScreenWindow);
+            }
+        }
 
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemSelect");
