@@ -35,13 +35,17 @@ public class Inventory
         GameObject canvas = new GameObject("InventoryCanvas(Don't Destroy)");
 
         canvasObj = canvas.AddComponent<Canvas>();
-        canvas.AddComponent<CanvasScaler>();
+        var canvasScaler = canvas.AddComponent<CanvasScaler>();
         canvas.AddComponent<GraphicRaycaster>();
 
         // Setting Up canvas
         canvasObj.renderMode = RenderMode.ScreenSpaceOverlay;
         canvasObj.vertexColorAlwaysGammaSpace = true;
         canvasObj.sortingOrder = 99;
+
+        // Setting Up Canvas Scaler
+        canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        canvasScaler.referenceResolution = new Vector2(1920, 1080);
 
         // Create Alpha Image
         GameObject img = new GameObject("FadeAlpha");
@@ -178,6 +182,7 @@ public class InventoryManager : MonoBehaviour
             itemImg.name = "Item [" + itemName + "]";
             itemImg.sprite = itemList[i].Icon;
             itemImg.transform.SetParent(itemSlots[i].transform);
+            itemImg.rectTransform.localScale = Vector3.one;
 
             var itemRect = itemImg.GetComponent<RectTransform>();
             itemRect.sizeDelta = ItemSlotSize;
@@ -281,10 +286,10 @@ public class InventoryManager : MonoBehaviour
         bool isMouseOnItem = false;
         foreach (Tuple<RectTransform, ItemDefine> item in itemsInInventory)
         {
-            if (   mousePosition.x > (item.Item1.position.x - ItemSlotSize.x * 0.5f)
-                && mousePosition.x < (item.Item1.position.x + ItemSlotSize.x * 0.5f)
-                && mousePosition.y > (item.Item1.position.y - ItemSlotSize.y * 0.5f)
-                && mousePosition.y < (item.Item1.position.y + ItemSlotSize.y * 0.5f))
+            if (   mousePosition.x > (item.Item1.position.x / parent.scaleFactor - ItemSlotSize.x * 0.5f)
+                && mousePosition.x < (item.Item1.position.x / parent.scaleFactor + ItemSlotSize.x * 0.5f)
+                && mousePosition.y > (item.Item1.position.y / parent.scaleFactor - ItemSlotSize.y * 0.5f)
+                && mousePosition.y < (item.Item1.position.y / parent.scaleFactor + ItemSlotSize.y * 0.5f))
             {
                 // ƒtƒ‰ƒO
                 isMouseOnItem = true;

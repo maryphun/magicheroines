@@ -173,7 +173,7 @@ public class TurnBase : MonoBehaviour
         for (int i = 0; i < characterInOrder.Count; i++)
         {
             var iconRect = characterInOrder[i].Item2.GetComponent<RectTransform>();
-            iconRect.localPosition = new Vector3(iconPosition, iconRect.localPosition.y, iconRect.localPosition.z);
+            iconRect.anchoredPosition = new Vector3(iconPosition, iconRect.localPosition.y, iconRect.localPosition.z);
             iconPosition += iconRect.rect.width + gapSpace;
         }
     }
@@ -201,7 +201,7 @@ public class TurnBase : MonoBehaviour
         for (int i = 0; i < characterInOrder.Count -1; i++)
         {
             var iconRect = characterInOrder[i].Item2.GetComponent<RectTransform>();
-            iconRect.DOLocalMoveX(iconPosition, 0.5f);
+            iconRect.DOAnchorPosX(iconPosition, 0.5f);
             iconPosition += iconRect.rect.width + gapSpace;
         }
 
@@ -210,9 +210,9 @@ public class TurnBase : MonoBehaviour
         int lastIndex = characterInOrder.Count - 1;
         var lastIconRect = characterInOrder[lastIndex].Item2.GetComponent<RectTransform>();
         lastIconRect.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        lastIconRect.localPosition = new Vector3(iconPosition + 200.0f, lastIconRect.localPosition.y, lastIconRect.localPosition.z);
+        lastIconRect.anchoredPosition = new Vector3(iconPosition + 200.0f, lastIconRect.localPosition.y, lastIconRect.localPosition.z);
 
-        lastIconRect.DOLocalMoveX(iconPosition, 0.5f);
+        lastIconRect.DOAnchorPosX(iconPosition, 0.5f);
         characterInOrder[lastIndex].Item2.DOFade(1.0f, 0.5f);
     }
 }

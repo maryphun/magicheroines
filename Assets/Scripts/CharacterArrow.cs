@@ -39,6 +39,7 @@ public class CharacterArrow : MonoBehaviour
     public void SetCharacter(Battler battler, float offsetY)
     {
         transform.SetParent(battler.transform);
+        offsetY /= CanvasReferencer.Instance.GetScaleFactor();
         originalPositionY = offsetY;
         if (isFirstTurn)
         {

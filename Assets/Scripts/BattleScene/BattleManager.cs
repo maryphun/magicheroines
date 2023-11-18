@@ -36,6 +36,7 @@ public class Battle : MonoBehaviour
     [SerializeField] private FloatingText floatingTextOrigin;
     [SerializeField] private BattleSceneTutorial battleSceneTutorial;
     [SerializeField] private CharacterInfoPanel characterInfoPanel;
+    [SerializeField] private Canvas canvas;
 
     [Header("Debug")]
     [SerializeField] private List<Battler> characterList = new List<Battler>();
@@ -208,7 +209,7 @@ public class Battle : MonoBehaviour
             for (int i = 0; i < enemyList.Count; i++)
             {
                 Vector2 size = enemyList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
-                Vector2 position = enemyList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
+                Vector2 position = (enemyList[i].GetGraphicRectTransform().position / canvas.scaleFactor) + new Vector3(0.0f, size.y * 0.5f);
                 if ((enemyList[i].isAlive || !aliveOnly)
                     && mousePosition.x > position.x - size.x * 0.5f
                     && mousePosition.x < position.x + size.x * 0.5f
@@ -225,7 +226,7 @@ public class Battle : MonoBehaviour
             for (int i = 0; i < characterList.Count; i++)
             {
                 Vector2 size = characterList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
-                Vector2 position = characterList[i].GetGraphicRectTransform().position + new Vector3(0.0f, size.y * 0.5f);
+                Vector2 position = (characterList[i].GetGraphicRectTransform().position / canvas.scaleFactor) + new Vector3(0.0f, size.y * 0.5f);
                 if ((characterList[i].isAlive || !aliveOnly)
                     && mousePosition.x > position.x - size.x * 0.5f
                     && mousePosition.x < position.x + size.x * 0.5f
@@ -244,7 +245,6 @@ public class Battle : MonoBehaviour
     {
         Battler currentCharacter = turnBaseManager.GetCurrentTurnBattler();
         characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
-        actionTargetArrow.position = currentCharacter.GetGraphicRectTransform().position;
 
         yield return new WaitForSeconds(enemyAIDelay);
 
@@ -345,7 +345,8 @@ public class Battle : MonoBehaviour
         characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
 
         var originPos = currentCharacter.GetGraphicRectTransform().position;
-        originPos = currentCharacter.isEnemy ? new Vector2(originPos.x - currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f) : new Vector2(originPos.x + currentCharacter.GetCharacterSize().x * 0.25f, originPos.y + currentCharacter.GetCharacterSize().y * 0.5f);
+        var offset = currentCharacter.isEnemy ? new Vector3(-currentCharacter.GetCharacterSize().x * 0.25f, currentCharacter.GetCharacterSize().y * 0.5f) : new Vector3(currentCharacter.GetCharacterSize().x * 0.25f, currentCharacter.GetCharacterSize().y * 0.5f);
+        originPos = originPos + offset;
         actionTargetArrow.position = originPos;
 
         // バフを先にチェック
@@ -369,13 +370,13 @@ public class Battle : MonoBehaviour
 
         Battler currentBattler = turnBaseManager.GetCurrentTurnBattler();
 
-        if (target == currentBattler) return; // 自分に指すことはないだろう
+        if (target == currentBattler) return; // 自分に指すことはできない
 
         var originPos = currentBattler.GetGraphicRectTransform().position;
         originPos = currentBattler.isEnemy ? new Vector2(originPos.x - currentBattler.GetCharacterSize().x * 0.25f, originPos.y + currentBattler.GetCharacterSize().y * 0.5f) : new Vector2(originPos.x + currentBattler.GetCharacterSize().x * 0.25f, originPos.y + currentBattler.GetCharacterSize().y * 0.5f);
         var targetPos = target.GetGraphicRectTransform().position;
         targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.25f, targetPos.y + target.GetCharacterSize().y * 0.5f) : new Vector2(targetPos.x, targetPos.y + target.GetCharacterSize().y * 0.5f);
-        var length = Vector2.Distance(originPos, targetPos);
+        var length = Vector2.Distance(originPos, targetPos) / CanvasReferencer.Instance.GetScaleFactor();
 
         actionTargetArrow.sizeDelta = new Vector2(actionTargetArrow.rect.width, 100.0f);
         actionTargetArrow.DOSizeDelta(new Vector2(actionTargetArrow.rect.width, length), animTime);

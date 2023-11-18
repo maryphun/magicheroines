@@ -58,6 +58,7 @@ public struct PlayerCharacter
     [Header("ステータス")]
     public bool is_heroin;      // ヒロイン
     public List<CharacterStatus> characterStatus;
+    public string corruptedName; // 闇落ち後の名前
 
     [Header("特殊技リスト")]
     public List<Ability> abilities;
@@ -87,6 +88,27 @@ public class Character
     public int current_speed;
 
     public bool is_corrupted;    // 闇落ちしたか
+
+    public CharacterStatus GetCurrentStatus()
+    {
+        if (!characterData.is_heroin)
+        {
+            // 普通戦闘員
+            return new CharacterStatus(characterData.sprite);
+        }
+
+        for (int i = characterData.characterStatus.Count-1; i >= 0; i--)
+        {
+            if (corruptionEpisode >= characterData.characterStatus[i].requiredCorruptionEpisode
+             && hornyEpisode >= characterData.characterStatus[i].requiredHornyEpisode)
+            {
+                return characterData.characterStatus[i];
+            }
+        }
+
+        // どれも満たさない場合は初期値を返す
+        return characterData.characterStatus[0];
+    }
 }
 
 [System.Serializable]
@@ -97,6 +119,15 @@ public struct CharacterStatus
     [SerializeField] public Sprite character;
     [SerializeField] public int requiredCorruptionEpisode;
     [SerializeField] public int requiredHornyEpisode;
+
+    public CharacterStatus(Sprite sprite)
+    {
+        moodNameID = string.Empty;
+        textColor = Color.white;
+        character = sprite;
+        requiredCorruptionEpisode = 0;
+        requiredHornyEpisode = 0;
+    }
 }
 
 /// <summary>

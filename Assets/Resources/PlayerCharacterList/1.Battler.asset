@@ -43,8 +43,9 @@ MonoBehaviour:
     - moodNameID: 
       textColor: {r: 0, g: 0, b: 0, a: 0}
       character: {fileID: 0}
-      requiredDarkGauge: 0
-      requiredHornyGauge: 0
+      requiredCorruptionEpisode: 0
+      requiredHornyEpisode: 0
+    corruptedName: Name.Battler
     abilities:
     - {fileID: 11400000, guid: 45937aedd15502c439467861046eccb9, type: 2}
     - {fileID: 11400000, guid: 2aa6233340d749942b0b4bc7aa70bb67, type: 2}

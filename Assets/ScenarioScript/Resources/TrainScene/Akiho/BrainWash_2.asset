@@ -669,7 +669,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 
       charaEffectStrength: 
-      DialogueEffect: 1
+      DialogueEffect: 9
       DialogueEffectStrength: 0
     - open: 0
       Name: Name.Battler
@@ -3453,7 +3453,7 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 0.2842624, y: 0.2842624, z: 1}
-  graphPosition: {x: 78, y: 331, z: 0}
+  graphScale: {x: 0.8695652, y: 0.8695652, z: 1}
+  graphPosition: {x: 22, y: 248, z: 0}
   havePreLocations: 0
   newLocations: []

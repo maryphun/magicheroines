@@ -337,6 +337,14 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// ホーム台詞キャラクターを取得
+    /// </summary>
+    public void AddHomeCharacter(HomeDialogue data)
+    {
+        playerData.homeDialogue.Add(data);
+    }
+
+    /// <summary>
     /// 装備を入手する
     /// </summary>
     public void AddNewEquipment(EquipmentDefine data)
