@@ -32,6 +32,8 @@ public class OptionPanel : MonoBehaviour
     public static float defaultAutoSpeed = 1.0f;
     public static bool defaultFullScreenToggle = true;
     public static bool defaultWindowScreenToggle = false;
+    public static Vector2Int defaultResolutionSizeWindowed = new Vector2Int(1280, 720);
+    public static Vector2Int defaultResolutionSizeFull = new Vector2Int(1920, 1080);
 
 
     private float tempBGMVolume = 0.5f;
@@ -149,12 +151,12 @@ public class OptionPanel : MonoBehaviour
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
 
         // apply to change full screen mode
-        if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow)
+        if (Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
         {
             if (windowScreenToggle.isOn)
             {
                 Screen.fullScreenMode = FullScreenMode.Windowed;
-                Screen.SetResolution(1920, 1080, FullScreenMode.Windowed);
+                Screen.SetResolution(defaultResolutionSizeWindowed.x, defaultResolutionSizeWindowed.y, FullScreenMode.Windowed);
                 PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.Windowed);
             }
         }
@@ -162,8 +164,9 @@ public class OptionPanel : MonoBehaviour
         {
             if (fullScreenToggle.isOn)
             {
-                Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-                PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.FullScreenWindow);
+                Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+                Screen.SetResolution(defaultResolutionSizeFull.x, defaultResolutionSizeFull.y, FullScreenMode.ExclusiveFullScreen);
+                PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.ExclusiveFullScreen);
             }
         }
 

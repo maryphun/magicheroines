@@ -90,7 +90,13 @@ public class Character
 
     public CharacterStatus GetCurrentStatus()
     {
-        for (int i = 0; i < characterData.characterStatus.Count; i++)
+        if (!characterData.is_heroin)
+        {
+            // •’Êí“¬ˆõ
+            return new CharacterStatus(characterData.sprite);
+        }
+
+        for (int i = characterData.characterStatus.Count-1; i >= 0; i--)
         {
             if (corruptionEpisode >= characterData.characterStatus[i].requiredCorruptionEpisode
              && hornyEpisode >= characterData.characterStatus[i].requiredHornyEpisode)
@@ -112,6 +118,15 @@ public struct CharacterStatus
     [SerializeField] public Sprite character;
     [SerializeField] public int requiredCorruptionEpisode;
     [SerializeField] public int requiredHornyEpisode;
+
+    public CharacterStatus(Sprite sprite)
+    {
+        moodNameID = string.Empty;
+        textColor = Color.white;
+        character = sprite;
+        requiredCorruptionEpisode = 0;
+        requiredHornyEpisode = 0;
+    }
 }
 
 /// <summary>

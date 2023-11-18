@@ -402,7 +402,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
 
         // キャラを真ん中に移動する
-        Vector3 middle = new Vector3(1920.0f * 0.5f, 1080.0f * 0.5f, 0.0f);
+        Vector3 middle = new Vector3(CanvasReferencer.Instance.GetResolution().x * 0.5f, CanvasReferencer.Instance.GetResolution().y * 0.5f, 0.0f);
         self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
 
         // 残像生成コンポネント
