@@ -49,12 +49,7 @@ public class ButtonPAnel : MonoBehaviour
         if (!isEnabled) return;
 
         // カーソル位置を取得
-        Vector3 mousePosition = Input.mousePosition;
-        // カーソル位置のz座標を10に
-        mousePosition.z = 10;
-        // カーソル位置をワールド座標に変換
-        Vector3 target = Camera.main.ScreenToWorldPoint(mousePosition);
-
+        Vector3 mousePosition = Input.mousePosition; // no need to calculate scale factor as Screen.width does change the resolution.
         if (mousePosition.x > Screen.width * 0.75f)
         {
             StartDisplay();

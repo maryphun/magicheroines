@@ -45,6 +45,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private GameObject deadVFX;
 
     [HideInInspector] public float Ease { get { return ease; } }
+    [HideInInspector] public Image Graphic { get { return graphic; } }
 
     private Vector3 originalScale;
     private float ease = 0.0f;
@@ -439,6 +440,21 @@ public class Battler : MonoBehaviour
 
         // return to original
         graphicRect.localPosition = originalLocalPosition;
+    }
+    public void CreateGlowEffect(float finalScale, float time)
+    {
+        Image effect = Instantiate(graphicRect.gameObject, graphicRect.transform.parent).GetComponent<Image>();
+        effect.rectTransform.pivot = new Vector2(0.5f, 0.5f);
+        effect.rectTransform.position = GetMiddleGlobalPosition();
+        effect.rectTransform.DOScale(finalScale * graphicRect.localScale, time).SetEase(DG.Tweening.Ease.Linear);
+        effect.DOFade(0.0f, time + Time.deltaTime).SetEase(DG.Tweening.Ease.Linear).OnComplete(() => { Destroy(effect.gameObject); });
+    }
+    public void ColorTint(Color color, float time)
+    {
+        graphic.DOComplete();
+        Color originalColor = graphic.color;
+        graphic.color = color;
+        graphic.DOColor(originalColor, time);
     }
 
     #region EnemyAI

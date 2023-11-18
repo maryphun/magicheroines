@@ -117,6 +117,9 @@ public class FormationPanel : MonoBehaviour
 
         // SEçƒê∂
         AudioManager.Instance.PlaySFX("SystemUnlock", 1.5f);
+
+        // éëã‡îÒï\é¶Ç…
+        slots[slotIndex + 1].HideResourcesPanel(1.5f);
     }
 
     public void OpenFormationSelectionPanel(int targetSlotIndex)
@@ -191,5 +194,10 @@ public class FormationPanel : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public int GetUnlockCost(int slotIndex)
+    {
+        return moneyCostForSlot[slotIndex];
     }
 }

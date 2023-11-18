@@ -201,10 +201,10 @@ public class AbilityPanel : MonoBehaviour
         foreach (var ability in buttonList)
         {
             RectTransform buttonRect = ability.Item2.GetComponent<RectTransform>();
-            if (   mousePosition.x > (buttonRect.position.x - buttonRect.sizeDelta.x * 0.5f)
-                && mousePosition.x < (buttonRect.position.x + buttonRect.sizeDelta.x * 0.5f)
-                && mousePosition.y > (buttonRect.position.y - buttonRect.sizeDelta.y * 0.5f)
-                && mousePosition.y < (buttonRect.position.y + buttonRect.sizeDelta.y * 0.5f))
+            if (   mousePosition.x > (buttonRect.position.x / canvas.scaleFactor - buttonRect.sizeDelta.x * 0.5f)
+                && mousePosition.x < (buttonRect.position.x / canvas.scaleFactor + buttonRect.sizeDelta.x * 0.5f)
+                && mousePosition.y > (buttonRect.position.y / canvas.scaleFactor - buttonRect.sizeDelta.y * 0.5f)
+                && mousePosition.y < (buttonRect.position.y / canvas.scaleFactor + buttonRect.sizeDelta.y * 0.5f))
             {
                 // ƒtƒ‰ƒO
                 isMouseOnItem = true;

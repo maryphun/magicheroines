@@ -115,10 +115,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 166.28572
-        height: 165
+        width: 224
+        height: 224
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: charactersIcon_1
       rect:
         serializedVersion: 2
-        x: 166
+        x: 224
         y: 0
-        width: 167
-        height: 165
+        width: 223
+        height: 224
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: charactersIcon_2
       rect:
         serializedVersion: 2
-        x: 333
+        x: 448
         y: 0
-        width: 166
-        height: 165
+        width: 223
+        height: 224
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: charactersIcon_3
       rect:
         serializedVersion: 2
-        x: 499
+        x: 671
         y: 0
-        width: 166
-        height: 165
+        width: 224
+        height: 224
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: charactersIcon_4
       rect:
         serializedVersion: 2
-        x: 666
+        x: 895
         y: 0
-        width: 166
-        height: 165
+        width: 224
+        height: 224
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: charactersIcon_5
       rect:
         serializedVersion: 2
-        x: 832
+        x: 1119
         y: 0
-        width: 166
-        height: 165
+        width: 223
+        height: 224
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: charactersIcon_6
       rect:
         serializedVersion: 2
-        x: 998
+        x: 1342
         y: 0
-        width: 166
-        height: 165
+        width: 224
+        height: 224
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,6 +252,27 @@ TextureImporter:
       bones: []
       spriteID: 358b563ab13965046a28fb27b3cd80d7
       internalID: -1109058711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: charactersIcon_7
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 0
+        width: 223
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4f28c591ca7f844b4fe50165c491f1
+      internalID: -989093311
       vertices: []
       indices: 
       edges: []
@@ -274,6 +295,7 @@ TextureImporter:
       charactersIcon_4: -1775873685
       charactersIcon_5: 620309047
       charactersIcon_6: -1109058711
+      charactersIcon_7: -989093311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

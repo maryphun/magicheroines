@@ -275,7 +275,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
         // エフェクト (Holy)
-        VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position);
+        var vfx = VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position);
+        vfx.transform.SetSiblingIndex(0); // キャラの後ろに回す
         self.PlayAnimation(BattlerAnimationType.magic);
 
         // Audio
