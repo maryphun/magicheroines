@@ -39,13 +39,12 @@ MonoBehaviour:
     levelUp_base_cost: 300
     levelUp_cost_increment: 75
     is_heroin: 1
-    max_dark_gauge: 100
-    max_horny_gauge: 100
     characterStatus:
     - moodNameID: Mood.Disgust
       textColor: {r: 0.8018868, g: 0, b: 0, a: 1}
       character: {fileID: 21300000, guid: ca788abd92e8c3d4296b7f07982137a0, type: 3}
-      requiredDarkGauge: 0
-      requiredHornyGauge: 0
+      requiredCorruptionEpisode: 0
+      requiredHornyEpisode: 0
+    corruptedName: Name.Erena_Corrupted
     abilities: []
   battler: {fileID: 0}

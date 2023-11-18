@@ -58,6 +58,7 @@ public struct PlayerCharacter
     [Header("ステータス")]
     public bool is_heroin;      // ヒロイン
     public List<CharacterStatus> characterStatus;
+    public string corruptedName; // 闇落ち後の名前
 
     [Header("特殊技リスト")]
     public List<Ability> abilities;

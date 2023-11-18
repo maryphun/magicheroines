@@ -299,14 +299,18 @@ public class TrainPanel : MonoBehaviour
 
     private void ReturnFromEpisode()
     {
-        AlphaFadeManager.Instance.FadeOutThenFadeIn(1.0f);
-        UpdateCharacterData();
-        canvasGroup.interactable = true;
-
+        // update heroin data
         if (characters[currentIndex].is_corrupted)
         {
             CallNewBattlerPopUp();
+            AddNewHomeCharacter(characters[currentIndex].characterData.characterID);
+
+            // update character name
+            characters[currentIndex].localizedName = LocalizationManager.Localize(characters[currentIndex].characterData.corruptedName);
         }
+
+        canvasGroup.interactable = true;
+        UpdateCharacterData();
     }
 
     public void CloseUnderDevelopmentPopup()
@@ -361,6 +365,36 @@ public class TrainPanel : MonoBehaviour
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
             default:
                 return string.Empty;
+        }
+    }
+
+    // ホーム台詞キャラ追加
+    public void AddNewHomeCharacter(int characterID)
+    {
+        switch (characterID)
+        {
+            case 3: // 明穂
+                HomeDialogue akiho = Resources.Load<HomeDialogue>("HomeDialogue/Akiho");
+                ProgressManager.Instance.AddHomeCharacter(akiho);
+                break;
+            case 4: // 立花
+                HomeDialogue rikka = Resources.Load<HomeDialogue>("HomeDialogue/Rikka");
+                ProgressManager.Instance.AddHomeCharacter(rikka);
+                break;
+            case 5: // エレナ
+                HomeDialogue erena = Resources.Load<HomeDialogue>("HomeDialogue/Erena");
+                ProgressManager.Instance.AddHomeCharacter(erena);
+                break;
+            case 6: // 京
+                HomeDialogue kei = Resources.Load<HomeDialogue>("HomeDialogue/Kei");
+                ProgressManager.Instance.AddHomeCharacter(kei);
+                break;
+            case 7: // 那由多
+                HomeDialogue nayuta = Resources.Load<HomeDialogue>("HomeDialogue/Nayuta");
+                ProgressManager.Instance.AddHomeCharacter(nayuta);
+                break;
+            default:
+                return;
         }
     }
 }
