@@ -104,7 +104,6 @@ public class StoryManager : MonoBehaviour
 
                     PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
                     ProgressManager.Instance.AddPlayerCharacter(Akiho);
-                    //Resources.UnloadAsset(Akiho);
                 }
                 break;
             case 4:
@@ -120,6 +119,10 @@ public class StoryManager : MonoBehaviour
             case 6:
                 {
                     // —§‰Ô”s–k
+                    NovelSingletone.Instance.PlayNovel("Chapter2-3 AfterBattle", true, GoToRewardScreen);
+
+                    PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
+                    ProgressManager.Instance.AddPlayerCharacter(Rikka);
                 }
                 break;
             default:
