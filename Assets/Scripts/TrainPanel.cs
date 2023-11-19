@@ -20,15 +20,18 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private Image darkGaugeFill, holyCoreGaugeFill;
     [SerializeField] private RectTransform previousCharacterBtn, nextCharacterBtn;
     [SerializeField] private Button hornyActionBtn, corruptActionBtn, researchBtn;
+    [SerializeField] private TMP_Text hornyActionCost, corruptActionCost, researchCost;
     [SerializeField] private GameObject unavailablePanel;
     [SerializeField] private CanvasGroup underDevelopmentPopUp;
     [SerializeField] private CanvasGroup newBattlerPopup;
     [SerializeField] private TMPro.TMP_Text newBattlerPopupText;
+    [SerializeField] private CanvasGroup researchPointPanel;
 
     [Header("Debug")]
     [SerializeField] private Vector2 previousCharacterBtnPos, nextCharacterBtnPos;
     [SerializeField] private List<Character> characters;
     [SerializeField] private int currentIndex;
+    [SerializeField] private int[] cost = new int[3];
 
     [Header("調教シーン内容管理")]
     // 闇落ちシーン
@@ -195,6 +198,51 @@ public class TrainPanel : MonoBehaviour
         hornyActionBtn.interactable = characters[currentIndex].hornyEpisode < CharacterID_To_HornyNovelNameList[characters[currentIndex].characterData.characterID].Count;
         corruptActionBtn.interactable = characters[currentIndex].corruptionEpisode < CharacterID_To_BrainwashNovelNameList[characters[currentIndex].characterData.characterID].Count;
         researchBtn.interactable = characters[currentIndex].holyCoreEpisode < CharacterID_To_ResearchNovelNameList[characters[currentIndex].characterData.characterID].Count;
+
+        // 淫乱化
+        if (!hornyActionBtn.interactable)
+        {
+            // (調教完了)
+            hornyActionCost.text = "<color=#d400ff><size=25>" + LocalizationManager.Localize("System.ResearchComplete");
+        }
+        else
+        {
+            cost[0] = (characters[currentIndex].hornyEpisode * 50) + 50;
+            hornyActionCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[0];
+
+            // ポイント不足
+            if (ProgressManager.Instance.GetCurrentResearchPoint() < cost[0]) hornyActionBtn.interactable = false;
+        }
+
+        // 闇落ち
+        if (!corruptActionBtn.interactable)
+        {
+            // (調教完了)
+            corruptActionCost.text = "<color=#d400ff><size=25>" + LocalizationManager.Localize("System.ResearchComplete");
+        }
+        else
+        {
+            cost[1] = (characters[currentIndex].corruptionEpisode * 50) + 50;
+            corruptActionCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[1];
+
+            // ポイント不足
+            if (ProgressManager.Instance.GetCurrentResearchPoint() < cost[1]) corruptActionBtn.interactable = false;
+        }
+
+        // 聖核研究
+        if (!researchBtn.interactable)
+        {
+            // (調教完了)
+            researchCost.text = "<color=#d400ff><size=25>" + LocalizationManager.Localize("System.ResearchComplete");
+        }
+        else
+        {
+            cost[2] = (characters[currentIndex].holyCoreEpisode * 50) + 50;
+            researchCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[2];
+
+            // ポイント不足
+            if (ProgressManager.Instance.GetCurrentResearchPoint() < cost[2]) researchBtn.interactable = false;
+        }
     }
 
     /// <summary>
@@ -221,6 +269,9 @@ public class TrainPanel : MonoBehaviour
         // シナリオ再生
         canvasGroup.interactable = false;
 
+        // ポイント消費
+        ProgressManager.Instance.SetResearchPoint(ProgressManager.Instance.GetCurrentResearchPoint() - cost[0]);
+
         // 画面遷移
         AlphaFadeManager.Instance.FadeOut(0.5f);
         DOTween.Sequence().AppendInterval(0.6f).AppendCallback(() => 
@@ -245,6 +296,9 @@ public class TrainPanel : MonoBehaviour
 
         // シナリオ再生
         AlphaFadeManager.Instance.FadeOut(1.0f);
+
+        // ポイント消費
+        ProgressManager.Instance.SetResearchPoint(ProgressManager.Instance.GetCurrentResearchPoint() - cost[1]);
 
         // 画面遷移
         AlphaFadeManager.Instance.FadeOut(0.5f);
@@ -287,6 +341,9 @@ public class TrainPanel : MonoBehaviour
         // シナリオ再生
         AlphaFadeManager.Instance.FadeOut(1.0f);
 
+        // ポイント消費
+        ProgressManager.Instance.SetResearchPoint(ProgressManager.Instance.GetCurrentResearchPoint() - cost[2]);
+
         // 画面遷移
         AlphaFadeManager.Instance.FadeOut(0.5f);
         DOTween.Sequence().AppendInterval(0.6f).AppendCallback(() =>
@@ -315,9 +372,12 @@ public class TrainPanel : MonoBehaviour
 
     public void CloseUnderDevelopmentPopup()
     {
-        underDevelopmentPopUp.DOFade(0.0f, 0.1f);
-        underDevelopmentPopUp.interactable = false;
-        underDevelopmentPopUp.blocksRaycasts = false;
+        underDevelopmentPopUp.DOKill(false);
+        underDevelopmentPopUp.DOFade(0.0f, 0.1f).OnComplete(() =>
+        { 
+            underDevelopmentPopUp.interactable = false;
+            underDevelopmentPopUp.blocksRaycasts = false;
+        });
     }
 
     public void CallNewBattlerPopUp()
@@ -329,15 +389,19 @@ public class TrainPanel : MonoBehaviour
         newBattlerPopupText.text = CorruptedMessage(characters[currentIndex].characterData.characterID);
 
         // UI
+        newBattlerPopup.DOKill(false);
         newBattlerPopup.DOFade(1.0f, 0.5f);
         newBattlerPopup.interactable = true;
         newBattlerPopup.blocksRaycasts = true;
     }
     public void CloseNewBattlerPopup()
     {
-        newBattlerPopup.DOFade(0.0f, 0.1f);
-        newBattlerPopup.interactable = false;
-        newBattlerPopup.blocksRaycasts = false;
+        newBattlerPopup.DOKill(false);
+        newBattlerPopup.DOFade(0.0f, 0.1f).OnComplete(() =>
+        {
+            newBattlerPopup.interactable = false;
+            newBattlerPopup.blocksRaycasts = false;
+        });
     }
 
     /// <summary>
@@ -396,5 +460,10 @@ public class TrainPanel : MonoBehaviour
             default:
                 return;
         }
+    }
+
+    public void DisplayResearchPointPanel(bool display)
+    {
+        researchPointPanel.DOFade(display ? 1.0f: 0.0f, 0.5f);
     }
 }
