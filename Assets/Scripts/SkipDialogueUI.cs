@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 [RequireComponent(typeof(Image))]
 public class SkipDialogueUI : MonoBehaviour
@@ -19,6 +20,7 @@ public class SkipDialogueUI : MonoBehaviour
     [SerializeField] private bool isSkipping = false;
     [SerializeField] private bool isFlashing = false;
     [SerializeField] private float intervalcnt;
+    [SerializeField] private bool isCooldown; // ˆê’èŽžŠÔ‚¢‚È‚¢ƒ{ƒ^ƒ“‚ð–³Œø‚Æ‚·‚é
 
     private void Start()
     {
@@ -30,6 +32,8 @@ public class SkipDialogueUI : MonoBehaviour
 
     public void StartSkipping()
     {
+        if (isCooldown) return;
+
         intervalcnt = interval;
         isSkipping = true;
         isFlashing = false;
@@ -44,6 +48,8 @@ public class SkipDialogueUI : MonoBehaviour
         isSkipping = false;
         isFlashing = false;
         enabled = false;
+        isCooldown = true;
+        DOTween.Sequence().AppendInterval(0.2f).AppendCallback(() => { isCooldown = false; });
 
         buttonIcon.sprite = toggleOFFButton;
     }

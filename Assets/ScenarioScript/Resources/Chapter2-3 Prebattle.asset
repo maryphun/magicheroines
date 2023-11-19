@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _locations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: 09af6c94e7d2d3f46b59aad0e763eedb, type: 3}
   - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
   - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
   _paragraphList:
@@ -36,12 +37,14 @@ MonoBehaviour:
       howBack: 1
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 020000000000000000000000
+      howCharas: 00000000000000000000000002000000
       charas:
       - {fileID: 0}
       - {fileID: 0}
       - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
       charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -68,24 +71,26 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
+      Name: Name.Akiho
       text: "\u300C\u2015\u2015\u2015\u2015\u516D\u82B1\u2026\uFF1F\u300D"
-      localizationID: 
+      localizationID: Dialog.Chapter2-3-2
       back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 000000000000000000000000
+      howCharas: 02000000000000000000000000000000
       charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
       - {fileID: 0}
       - {fileID: 0}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
       charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -112,8 +117,1296 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 00000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3063\uFF01\u30D0\u30B1\u30E2\u30CE\u304C\u3063\u3001\u3082\u3046\u4E0A\u304C\u3063\u3066\u304D\u3084\u304C\u3063\u305F\u306E\u304B\u3063\uFF01\uFF1F\u300D"
+      localizationID: Dialog.Chapter2-3-3
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000020000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u2015\u2015\u2015\u660E\u7A42\u304B\u3089\u96E2\u308C\u308D\u3063\uFF01\u300D"
+      localizationID: Dialog.Chapter2-3-4
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000040000000000000001000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u306E\u77AC\u9593\u3001\u516D\u82B1\u306E\u8E74\u308A\u304C\u6226\u95D8\u54E1\u4E8C\u4EBA\u3092\u5439\u304D\u98DB\u3070\u3059"
+      localizationID: Dialog.Chapter2-3-5
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000020000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 1, g: 0.514151, b: 0.514151, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 3d98526f4dcf8424da316c87b9a0b470, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u660E\u7A42\u3063\uFF01\u300D"
+      localizationID: Dialog.Chapter2-3-6
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000000000000000000001000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho
+      text: "\u300C\u2015\u2015\u2015\u516D\u82B1\uFF01\u300D"
+      localizationID: Dialog.Chapter2-3-7
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3088\u304B\u3063\u305F\u2026\u7121\u4E8B\u3067\u2026\u300D"
+      localizationID: Dialog.Chapter2-3-8
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000000000000000000001000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho
+      text: "\u300C\u3046\u3093\u2026\u516D\u82B1\u306A\u3089\u52A9\u3051\u306B\u6765\u3066\u304F\u308C\u308B\u3063\u3066\u4FE1\u3058\u3066\u305F\u2026\u3002\u300D"
+      localizationID: Dialog.Chapter2-3-9
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u65E9\u304F\u3053\u3053\u304B\u3089\u9003\u3052\u3088\u3046\u3002\u80CC\u4E2D\u306B\u3064\u304B\u307E\u3063\u3066\u3002\u300D"
+      localizationID: Dialog.Chapter2-3-10
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000000000000000000001000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u516D\u82B1\u304C\u660E\u7A42\u306E\u62D8\u675F\u3092\u89E3\u304D\u3001\u80CC\u4E2D\u306B\u80CC\u8CA0\u3063\u3066\u5B89\u5835\u3057\u305F\u77AC\u9593"
+      localizationID: Dialog.Chapter2-3-11
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u2015\u2015\u2015\u516D\u82B1\u306E\u9996\u7B4B\u306B\u30C1\u30AF\u30EA\u3068\u3057\u305F\u75DB\u307F\u304C\u8D70\u308B"
+      localizationID: Dialog.Chapter2-3-12
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u2015\u2015\u2015\u2015\u2015\u2015\uFF1F\u3063\uFF01\u300D"
+      localizationID: Dialog.Chapter2-3-13
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u516D\u82B1\u306E\u5168\u8EAB\u304B\u3089\u529B\u304C\u629C\u3051\u5909\u8EAB\u304C\u89E3\u3051\u3001\u305D\u306E\u5834\u306B\u5EA7\u308A\u8FBC\u3080"
+      localizationID: Dialog.Chapter2-3-14
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho
+      text: "\u300C\u3046\u3093\u3063\u3002\u3061\u3083\u3093\u3068\u52B9\u3044\u305F\u306D\uFF5E\uFF01\u826F\u304B\u3063\u305F\uFF01\u300D"
+      localizationID: Dialog.Chapter2-3-15
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u2015\u2015\u2015\u2015\u3063\u3001\u306A\u3093\u2026\u3067\u3063\u3001\u660E\u7A42\u3063\uFF01\uFF1F\u300D"
+      localizationID: Dialog.Chapter2-3-16
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000000000000000000001000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho
+      text: "\u300C\u3054\u3081\u3093\u306D\u516D\u82B1\u3002\u3067\u3082\u3057\u3087\u3046\u304C\u306A\u3044\u306E\u2026\u300D"
+      localizationID: Dialog.Chapter2-3-17
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u660E\u7A42\u306E\u4F53\u304B\u3089\u8D64\u7D2B\u306E\u30C9\u30ED\u30C9\u30ED\u3068\u3057\u305F\u602A\u3057\u3044\u5149\u304C\u7ACB\u3061\u4E0A\u308A\u3001\u59FF\u3092\u5909\u3048\u308B"
+      localizationID: Dialog.Chapter2-3-18
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 02000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 1, g: 0.48584908, b: 0.98887974, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 85af7e937dd58224eab28e508bcfa274, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u2015\u2015\u2015\u2015\u2015\u2015\u3063\u3001\u2015\u2015\u660E\u7A42\u2026\u2026\u306A\u306E\uFF1F\u300D"
+      localizationID: Dialog.Chapter2-3-19
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000000000000000000001000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho
+      text: "\u300C\u3075\u3075\u3063\u3001\u305D\u3046\u3060\u3088\u516D\u82B1\u2665\u3061\u3087\u3063\u3068\u898B\u305F\u76EE\u306F\u5909\u308F\u3063\u3061\u3083\u3063\u305F\u304B\u3082\u3057\u308C\u306A\u3044\u3051\u3069\u2665\u300D"
+      localizationID: Dialog.Chapter2-3-20
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u660E\u7A42\u306E\u9AEA\u306F\u6226\u95D8\u54E1\u306E\u3088\u3046\u306A\u767D\u8272\u306B\u5909\u308F\u308A\u3001\u3082\u3068\u3082\u3068\u5927\u304D\u3081\u3060\u3063\u305F\u80F8\u306F\u80A5\u5927\u5316\u3057\u3066\u4EBA\u9593\u306E\u4F53\u3068\u306F\u601D\u3048\u306A\u3044\u307B\u3069\u306B\u306A\u3063\u3066\u3044\u308B\u3002"
+      localizationID: Dialog.Chapter2-3-21
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u3001\u305D\u306E\u53E3\u5143\u304B\u3089\u306F\u304B\u3064\u3066\u306E\u89AA\u53CB\u304C\u3059\u308B\u306F\u305A\u306E\u306A\u3044\u6DEB\u7325\u3067\u55DC\u8650\u7684\u306A\u7B11\u307F\u304C\u3053\u307C\u308C\u3066\u3044\u305F\u3002"
+      localizationID: Dialog.Chapter2-3-22
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho
+      text: "\u300C\u516D\u82B1\u306F\u6700\u521D\u304B\u3089\u3053\u3053\u306B\u6765\u308B\u3088\u3046\u306B\u8A98\u5C0E\u3055\u308C\u3066\u305F\u3093\u3060\u3088\uFF1F\u6D41\u77F3\u306B\u5E8A\u3092\u7834\u3063\u3066\u304F\u308B\u3068\u306F\u601D\u308F\u306A\u304B\u3063\u305F\u3051\u3069\u2026\u300D"
+      localizationID: Dialog.Chapter2-3-23
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u3001\u7269\u9670\u304B\u3089\u4F55\u4EBA\u3082\u306E\u8CA1\u56E3\u306E\u6226\u95D8\u54E1\u3068\u602A\u4EBA\u304C\u73FE\u308C\u308B\u3002"
+      localizationID: Dialog.Chapter2-3-24
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u300C\u79C1\u3001\u8CA1\u56E3\u306B\u602A\u4EBA\u306B\u6539\u9020\u3057\u3066\u3082\u3089\u3063\u3066\u3001\u4ECA\u306F\u3053\u3093\u306A\u7D20\u6575\u306A\u4F53\u306B\u3057\u3066\u3082\u3089\u3048\u305F\u306E\u2665\u516D\u82B1\u3082\u602A\u4EBA\u306B\u306A\u3063\u3066\u79C1\u3068\u4E00\u7DD2\u306B\u6C17\u6301\u3061\u3088\u304F\u306A\u3063\u3061\u3083\u304A\uFF1F\u300D"
+      localizationID: Dialog.Chapter2-3-25
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u305D\u3001\u3093\u306A\u2026\u3063\u300D"
+      localizationID: Dialog.Chapter2-3-26
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 04000000000000000000000001000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u2026\u2026\u8A31\u3055\u306A\u3044\u3063\uFF01\u2015\u2015\u2015\u2015\u2015\u2015\uFF01\u300D"
+      localizationID: Dialog.Chapter2-3-27
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u529B\u304C\u5165\u3089\u305A\u3001\u6726\u6727\u3068\u3057\u305F\u610F\u8B58\u306E\u4E2D\u3001\u516D\u82B1\u306F\u6C17\u5408\u3067\u7121\u7406\u3084\u308A\u7ACB\u3061\u4E0A\u304C\u308B\u3002"
+      localizationID: Dialog.Chapter2-3-28
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u30CF\u30A1\u3001\u30CF\u30A1\u30C3\u3001\u660E\u7A42\u306F\u2026\u7D76\u5BFE\u53D6\u308A\u623B\u3059\u30C3\uFF01\u5909\u8EAB\u3063\uFF01\u300D"
+      localizationID: Dialog.Chapter2-3-29
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho
+      text: "\u300C\u3055\u3059\u304C\u516D\u82B1\uFF01\u3084\u3063\u3071\u308A\u30AF\u30B9\u30EA\u3060\u3051\u3058\u3083\u6B62\u3081\u3089\u308C\u306A\u3044\u3088\u306D\u3002\u2015\u2015\u2015\u3061\u3087\u3063\u3068\u75DB\u3044\u304B\u3082\u3060\u3051\u3069\u6211\u6162\u3057\u3066\u306D\uFF1F\u300D"
+      localizationID: Dialog.Chapter2-3-30
+      back: {fileID: 21300000, guid: 8af2d64f51e07d04eab3caea700065b9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 01000000000000000000000004000000
+      charaEffectStrength: 00000000000000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -124,12 +1417,14 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 000000000000000000000000
+      howCharas: 00000000000000000000000000000000
       charas:
+      - {fileID: 21300000, guid: 56b93b9be67c2de48a5cd1a5bde33184, type: 3}
       - {fileID: 0}
       - {fileID: 0}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
       charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -156,8 +1451,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
-      charaEffectStrength: 000000000000000000000000
+      charaEffects: 00000000000000000000000000000000
+      charaEffectStrength: 00000000000000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     detailOpen: 0
@@ -169,5 +1464,6 @@ MonoBehaviour:
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: 09af6c94e7d2d3f46b59aad0e763eedb, type: 3}
   - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
   - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
