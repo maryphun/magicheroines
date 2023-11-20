@@ -20,6 +20,11 @@ public class ButtonHotkey : MonoBehaviour
     private void Start()
     {
         if (!ReferenceEquals(text, null)) text.text = key.ToString();
+
+        if (ReferenceEquals(eventSystem, null))
+        {
+            eventSystem = FindObjectOfType<EventSystem>();
+        }
     }
 
     private void Update()
