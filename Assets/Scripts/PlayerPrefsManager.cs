@@ -15,8 +15,6 @@ public static class PlayerPrefsManager
 
     public static void LoadPlayerPrefs()
     {
-        PlayerPrefs.DeleteAll();
-
         int fullScreenMode = PlayerPrefs.GetInt(PlayerPrefsSave.IsFullScreen.ToString(), (int)(OptionPanel.defaultFullScreenToggle ? FullScreenMode.ExclusiveFullScreen : FullScreenMode.Windowed));
         Screen.fullScreenMode = (FullScreenMode)fullScreenMode;
         Screen.SetResolution(OptionPanel.defaultResolutionSizeWindowed.x, OptionPanel.defaultResolutionSizeWindowed.y, Screen.fullScreenMode);
