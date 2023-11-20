@@ -19,7 +19,7 @@ public class HighlightImage : MonoBehaviour
 
     private void Loop()
     {
-        const float animTime = 1.0f;
+        const float animTime = 1.2f;
         var sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
         {

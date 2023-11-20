@@ -244,4 +244,15 @@ public class BlackMarketManager : MonoBehaviour
     {
         itemDescription.GetComponent<CanvasGroup>().DOFade(0.0f, 0.25f);
     }
+
+    public void OpenInventory()
+    {
+        // インベントリメニューを表示
+        Inventory.Instance.obj.OpenInventory(OnCloseInventory);
+    }
+
+    public void OnCloseInventory()
+    {
+        // 何もしない
+    }
 }
