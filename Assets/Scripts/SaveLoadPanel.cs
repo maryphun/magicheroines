@@ -275,6 +275,8 @@ public static class AutoSave
     /// </summary>
     public static void ExecuteAutoSave()
     {
+        if (ReferenceEquals(ProgressManager.Instance.PlayerData, null)) return; // PlayerDataが存在しない時はオートセーブ行わない、そもそもデバッグ時にしか発生しない状況のはず
+
         SaveDataManager.SaveJsonData(AutoSave.AutoSaveSlot, LocalizationManager.Localize("System.AutoSave"));
         PlayerPrefs.SetInt("LastSavedSlot", AutoSave.AutoSaveSlot);
         PlayerPrefs.Save();
