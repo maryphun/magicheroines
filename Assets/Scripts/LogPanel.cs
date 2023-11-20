@@ -16,6 +16,7 @@ public class LogPanel : MonoBehaviour
     [SerializeField] private LogDialogField logDialogOrigin;
     [SerializeField] private CanvasGroup logPanelCanvas;
     [SerializeField] private RectTransform scrollSize;
+    [SerializeField] private ScrollRect scrollView;
 
     [Header("Debug")]
     [SerializeField] private List<LogDialogField> logObjs;
@@ -31,9 +32,19 @@ public class LogPanel : MonoBehaviour
 
     public void ClosePanel()
     {
-        logPanelCanvas.DOFade(0.0f, fadeAnimationTime);
         logPanelCanvas.interactable = false;
         logPanelCanvas.blocksRaycasts = false;
+
+        logPanelCanvas.DOFade(0.0f, fadeAnimationTime).OnComplete(() => 
+        {
+            // ÉçÉOÇè¡Ç∑
+            for (int i = 0; i < logObjs.Count; i++)
+            {
+                Destroy(logObjs[i].gameObject);
+            }
+            logObjs.Clear();
+            logObjs = null;
+        });
     }
 
     private void SetupLogPanel()
@@ -74,5 +85,8 @@ public class LogPanel : MonoBehaviour
 
         const float MinScrollSize = 800.0f;
         scrollSize.sizeDelta = new Vector2(0.0f, Mathf.Max(MinScrollSize, (LogHeight + LogGap) * (log.Count)));
+
+        // Reset into the bottom
+        scrollView.verticalNormalizedPosition = 0;
     }
 }

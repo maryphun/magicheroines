@@ -326,6 +326,7 @@ MonoBehaviour:
   logDialogOrigin: {fileID: 8429773562828901728}
   logPanelCanvas: {fileID: 5238019515015691384}
   scrollSize: {fileID: 6021332657751321467}
+  scrollView: {fileID: 422568614354457873}
   logObjs: []
 --- !u!225 &5238019515015691384
 CanvasGroup:
