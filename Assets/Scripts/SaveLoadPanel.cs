@@ -16,7 +16,7 @@ public class SaveLoadPanel : MonoBehaviour
     [SerializeField, Range(0.0f, 1.0f)] private float animationTime = 0.5f;
 
     [Header("References")]
-    [SerializeField] private Button[] saveSlot = new Button[totalSlotNum];
+    [SerializeField] private SaveLoadSlotButton[] saveSlot = new SaveLoadSlotButton[totalSlotNum];
     [SerializeField] private Button saveTab;
     [SerializeField] private Button loadTab;
     [SerializeField] private CanvasGroup canvasGroup;
@@ -45,7 +45,7 @@ public class SaveLoadPanel : MonoBehaviour
         for (int i = 0; i < totalSlotNum; i ++)
         {
             int slotIndex = i;
-            saveSlot[i].onClick.AddListener(delegate { OnClickSlot(slotIndex); });
+            saveSlot[i].Button.onClick.AddListener(delegate { OnClickSlot(slotIndex); });
             slotComment[i] = string.Empty;
         }
     }
@@ -72,14 +72,7 @@ public class SaveLoadPanel : MonoBehaviour
         UpdateSlotInfo();
 
         // デフォルトタブ
-        if (isMainMenu)
-        {
-            SwapToLoadTab(false);
-        }
-        else
-        {
-            SwapToSaveTab(false);
-        }
+        SwapToLoadTab(false);
     }
 
     public void CloseSaveLoadPanel()
@@ -121,10 +114,13 @@ public class SaveLoadPanel : MonoBehaviour
         isSaving = true;
 
         // enable all slot
-        for (int i = 0; i < totalSlotNum; i++)
+        for (int i = 1; i < totalSlotNum; i++)
         {
-            saveSlot[i].interactable = true;
+            saveSlot[i].Button.interactable = true;
         }
+
+        // slot 1はオートセーブ用のスロットとして確保。マニュアルでセーブ不能
+        saveSlot[AutoSave.AutoSaveSlot].Button.interactable = false;
     }
 
     public void SwapToLoadTab(bool playSE)
@@ -156,7 +152,7 @@ public class SaveLoadPanel : MonoBehaviour
         // disable slot with no data
         for (int i = 0; i < totalSlotNum; i++)
         {
-            saveSlot[i].interactable = isDataAvailable[i];
+            saveSlot[i].Button.interactable = isDataAvailable[i];
         }
     }
 
@@ -252,10 +248,11 @@ public class SaveLoadPanel : MonoBehaviour
     {
         for (int i = 0; i < totalSlotNum; i++)
         {
-            isDataAvailable[i] = SaveDataManager.GetDataInfo(i, out string slotName, out string comment);
+            isDataAvailable[i] = SaveDataManager.GetDataInfo(i, out string slotName, out string comment, out string dateTime);
             
             if (PlayerPrefs.GetInt("LastSavedSlot", -1) == i) slotName = "<color=red>" + slotName;
-            saveSlot[i].GetComponentInChildren<TMP_Text>().text = slotName;
+            saveSlot[i].SlotText.text = slotName;
+            saveSlot[i].DateText.text = dateTime;
             slotComment[i] = comment;
         }
     }
@@ -266,5 +263,20 @@ public class SaveLoadPanel : MonoBehaviour
         AlphaFadeManager.Instance.FadeOut(animationTime);
         yield return new WaitForSeconds(animationTime);
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+}
+
+public static class AutoSave
+{
+    public static readonly int AutoSaveSlot = 0; // オートセーブ用のスロット
+
+    /// <summary>
+    /// オートセーブ実行
+    /// </summary>
+    public static void ExecuteAutoSave()
+    {
+        SaveDataManager.SaveJsonData(AutoSave.AutoSaveSlot, LocalizationManager.Localize("System.AutoSave"));
+        PlayerPrefs.SetInt("LastSavedSlot", AutoSave.AutoSaveSlot);
+        PlayerPrefs.Save();
     }
 }

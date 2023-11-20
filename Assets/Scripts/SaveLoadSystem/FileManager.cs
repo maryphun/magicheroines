@@ -73,7 +73,7 @@ public static class SaveDataManager
         }
     }
 
-    public static bool GetDataInfo(int slotIndex, out string slotName, out string comment)
+    public static bool GetDataInfo(int slotIndex, out string slotName, out string comment, out string dateTime)
     {
         try
         {
@@ -88,6 +88,7 @@ public static class SaveDataManager
                 if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
                 comment = sd.dataComment;
                 slotName = slotInfo;
+                dateTime = sd.serializablePlayerData.date.ToString("g");
                 return true;
             }
         }
@@ -96,11 +97,13 @@ public static class SaveDataManager
             Debug.LogWarning("SaveData" + slotIndex.ToString("00") + ".dat cannot be loaded properly. (" + e.Message + ")");
             comment = string.Empty;
             slotName = (slotIndex + 1).ToString() + "  <color=grey>" + Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("System.FileCorrupted") + "</color>";
+            dateTime = string.Empty;
             return false;
         }
         
         comment = string.Empty;
         slotName = (slotIndex + 1).ToString() + "  <color=grey>No Data</color>";
+        dateTime = string.Empty;
         return false;
     }
 
@@ -121,6 +124,7 @@ public static class SaveDataManager
         data.formationSlotUnlocked = pd.formationSlotUnlocked;
         data.formationCharacters = pd.formationCharacters;
         data.sideQuestData = pd.sideQuestData;
+        data.date = System.DateTime.Now;
 
         // SerializeÇµÇ´ÇÍÇ»Ç¢ÉfÅ[É^
         {
@@ -277,6 +281,8 @@ public struct SerializablePlayerData
     public List<SaveLoad.SerializedEquipment> equipment;
     public List<SaveLoad.SerializedCharacter> characters;
     public List<SaveLoad.SerializedHomeDialogue> homeDialogue;
+
+    public DateTime date;
 }
 
 namespace SaveLoad

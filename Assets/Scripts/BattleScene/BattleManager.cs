@@ -108,6 +108,7 @@ public class Battle : MonoBehaviour
         float positionX = (actors.Count * characterSpace) * 0.5f;
         float positionY_gap = totalGap / actors.Count;
         float positionY = max_positionY - positionY_gap;
+        if (actors.Count == 1) positionY = -50; // 1êlÇµÇ©Ç¢Ç»Ç¢èÍçá
         foreach (Character actor in actors)
         {
             GameObject obj = Instantiate<GameObject>(actor.battler, playerFormation);
@@ -127,6 +128,7 @@ public class Battle : MonoBehaviour
         positionY_gap = totalGap / enemies.Count;
         positionY = max_positionY - positionY_gap;
         int siblingIndex = 0;
+        if (enemies.Count == 1) positionY = -50; // 1êlÇµÇ©Ç¢Ç»Ç¢èÍçá
         foreach (EnemyDefine enemy in enemies)
         {
             GameObject obj = Instantiate<GameObject>(enemy.battler, enemyFormation);
