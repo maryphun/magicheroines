@@ -34,11 +34,16 @@ public class HomeCharacter : MonoBehaviour
         lastDialogueIndex = -1;
         animSequence = DOTween.Sequence();
 
+        Initialization();
+        SetupCharacter();
+    }
+
+    private void Initialization()
+    {
         var characters = ProgressManager.Instance.GetHomeCharacter();
         if (characters != null)
         {
             dialogues = characters.ToArray();
-            SetupCharacter();
         }
     }
 
@@ -135,12 +140,12 @@ public class HomeCharacter : MonoBehaviour
             .AppendCallback(() => { dialogueText.DOFade(0.0f, 0.25f); })
             .AppendInterval(0.25f)
             .AppendCallback(() => {
-                dialogueBack.DOScaleY(0.0f, 0.25f); 
+                dialogueBack.DOScaleY(0.0f, 0.25f);
             });
     }
 
     private void OnChangeCharacter()
-    { 
+    {
         // Display Dialogue
         var dialogue = GetDialogue();
         dialogueText.text = string.Empty;
@@ -182,11 +187,22 @@ public class HomeCharacter : MonoBehaviour
         do
         {
             randomIndex = Random.Range(0, dialogues[currentCharacterIndex].dialogueList.Count);
-        } while (randomIndex == lastDialogueIndex 
-        || dialogues[currentCharacterIndex].dialogueList[randomIndex].startStage > currentStage 
+        } while (randomIndex == lastDialogueIndex
+        || dialogues[currentCharacterIndex].dialogueList[randomIndex].startStage > currentStage
         || dialogues[currentCharacterIndex].dialogueList[randomIndex].endStage <= currentStage);
 
         lastDialogueIndex = randomIndex;
         return dialogues[currentCharacterIndex].dialogueList[randomIndex];
     }
+    
+    // V‚µ‚­’Ç‰Á‚³‚ê‚½ƒLƒƒƒ‰‚ð•\Ž¦
+    public void SetToLastCharacter()
+    {
+        Initialization();
+        currentCharacterIndex = dialogues.Length-1;
+        characterSprite.sprite = dialogues[currentCharacterIndex].characterSprite;
+        characterSprite.color = Color.white;
+        characterSprite.DOFade(1.0f, 0.5f);
+    }
+
 }

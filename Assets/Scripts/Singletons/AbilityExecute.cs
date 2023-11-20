@@ -434,7 +434,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText.Init(2.0f, targets[0].GetMiddleGlobalPosition(), (targets[0].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
                     // play SE
-                    AudioManager.Instance.PlaySFX("Attacked", 0.5f);
+                    AudioManager.Instance.PlaySFX("Attacked", 0.8f);
 
                     // VFX
                     self.SpawnAttackVFX(targets[0]);
@@ -477,7 +477,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText.Init(2.0f, targets[1].GetMiddleGlobalPosition(), (targets[1].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
                     // play SE
-                    AudioManager.Instance.PlaySFX("Attacked", 0.5f);
+                    AudioManager.Instance.PlaySFX("Attacked", 0.8f);
 
                     // VFX
                     self.SpawnAttackVFX(targets[1]);
@@ -520,7 +520,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText.Init(2.0f, targets[2].GetMiddleGlobalPosition(), (targets[2].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
                     // play SE
-                    AudioManager.Instance.PlaySFX("Attacked", 0.5f);
+                    AudioManager.Instance.PlaySFX("Attacked", 0.8f);
 
                     // VFX
                     self.SpawnAttackVFX(targets[2]);

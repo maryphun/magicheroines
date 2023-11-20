@@ -146,9 +146,13 @@ public class OptionPanel : MonoBehaviour
     public void ApplySetting()
     {
         tempBGMVolume = AudioManager.Instance.GetMusicVolume();
+        PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.BGM_Volume, tempBGMVolume);
         tempSEVolume = AudioManager.Instance.GetSEMasterVolume();
+        PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.SE_Volume, tempSEVolume);
         tempTextSpeed = NovelSingletone.Instance.GetTextSpeed();
+        PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.TextSpeed, tempTextSpeed);
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
+        PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.AutoSpeed, tempAutoSpeed);
 
         // apply to change full screen mode
         if (Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)

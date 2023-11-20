@@ -26,6 +26,7 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private CanvasGroup newBattlerPopup;
     [SerializeField] private TMPro.TMP_Text newBattlerPopupText;
     [SerializeField] private CanvasGroup researchPointPanel;
+    [SerializeField] private HomeCharacter homeCharacterScript;
 
     [Header("Debug")]
     [SerializeField] private Vector2 previousCharacterBtnPos, nextCharacterBtnPos;
@@ -440,23 +441,28 @@ public class TrainPanel : MonoBehaviour
             case 3: // –¾•ä
                 HomeDialogue akiho = Resources.Load<HomeDialogue>("HomeDialogue/Akiho");
                 ProgressManager.Instance.AddHomeCharacter(akiho);
-                break;
+                homeCharacterScript.SetToLastCharacter();
+                return;
             case 4: // —§‰Ô
                 HomeDialogue rikka = Resources.Load<HomeDialogue>("HomeDialogue/Rikka");
                 ProgressManager.Instance.AddHomeCharacter(rikka);
-                break;
+                homeCharacterScript.SetToLastCharacter();
+                return;
             case 5: // ƒGƒŒƒi
                 HomeDialogue erena = Resources.Load<HomeDialogue>("HomeDialogue/Erena");
                 ProgressManager.Instance.AddHomeCharacter(erena);
-                break;
+                homeCharacterScript.SetToLastCharacter();
+                return;
             case 6: // ‹ž
                 HomeDialogue kei = Resources.Load<HomeDialogue>("HomeDialogue/Kei");
                 ProgressManager.Instance.AddHomeCharacter(kei);
-                break;
+                homeCharacterScript.SetToLastCharacter();
+                return;
             case 7: // “ß—R‘½
                 HomeDialogue nayuta = Resources.Load<HomeDialogue>("HomeDialogue/Nayuta");
                 ProgressManager.Instance.AddHomeCharacter(nayuta);
-                break;
+                homeCharacterScript.SetToLastCharacter();
+                return;
             default:
                 return;
         }

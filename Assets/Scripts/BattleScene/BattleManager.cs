@@ -494,7 +494,7 @@ public class Battle : MonoBehaviour
             int realDamage = target.DeductHP(levelAdjustedDamage);
 
             // play SE
-            AudioManager.Instance.PlaySFX("Attacked", 0.4f);
+            AudioManager.Instance.PlaySFX("Attacked", 0.8f);
 
             // animation
             target.Shake(attackAnimPlayTime + characterMoveTime);
