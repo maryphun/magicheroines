@@ -51,13 +51,30 @@ public class Battle : MonoBehaviour
 #if DEBUG_MODE
         if (isDebug) ProgressManager.Instance.DebugModeInitialize(true); // デバッグ用
 #endif
-        var playerCharacters = ProgressManager.Instance.GetFormationParty(false);
+
         var actors = new List<Character>();
-        for (int i = 0; i < playerCharacters.Count(); i++)
+        if (BattleSetup.IsCustomFormation())
         {
-            if (playerCharacters[i].characterID != -1)
+            // 特殊イベント
+            var formation = BattleSetup.GetCustomFormation();
+            for (int i = 0; i < formation.Count; i++)
             {
-                actors.Add(ProgressManager.Instance.GetCharacterByID(playerCharacters[i].characterID));
+                if (formation[i] != -1)
+                {
+                    actors.Add(ProgressManager.Instance.GetCharacterByID(formation[i]));
+                }
+            }
+        }
+        else
+        {
+            // フォーメーションにいるキャラをそのまま流用
+            var playerCharacters = ProgressManager.Instance.GetFormationParty(false);
+            for (int i = 0; i < playerCharacters.Count(); i++)
+            {
+                if (playerCharacters[i].characterID != -1)
+                {
+                    actors.Add(ProgressManager.Instance.GetCharacterByID(playerCharacters[i].characterID));
+                }
             }
         }
 

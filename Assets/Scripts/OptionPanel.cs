@@ -66,7 +66,7 @@ public class OptionPanel : MonoBehaviour
         seVolumeSlider.value = tempSEVolume;
         textSpeedSlider.value = tempTextSpeed;
         autoSpeedSlider.value = tempAutoSpeed;
-        fullScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.FullScreenWindow;
+        fullScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen;
         windowScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.Windowed;
         
         // Update value texts

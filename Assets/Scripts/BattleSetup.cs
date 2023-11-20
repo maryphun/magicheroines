@@ -5,6 +5,7 @@ using System.Linq;
 
 public class BattleSetup
 {
+    static List<int> teammates; // insert characterID
     static List<EnemyDefine> enemies;
     public static bool isStoryMode = false;
 
@@ -28,6 +29,25 @@ public class BattleSetup
         return rtn;
     }
 
+    /// <summary>
+    /// フォーメーションが決まれているか
+    /// </summary>
+    public static bool IsCustomFormation()
+    {
+        return teammates.Count > 0;
+    }
+
+    /// <summary>
+    /// 特殊イベント用
+    /// </summary>
+    public static List<int> GetCustomFormation()
+    {
+        return teammates;
+    }
+
+    /// <summary>
+    /// 敵をまとめて設定
+    /// </summary>
     public static void SetEnemy(List<EnemyDefine> enemyList)
     {
         enemies = enemyList;
@@ -38,6 +58,7 @@ public class BattleSetup
     /// </summary>
     public static void Reset(bool isStory)
     {
+        teammates = new List<int>();
         enemies = new List<EnemyDefine>();
         isStoryMode = isStory;
         battleBGM = string.Empty;
@@ -69,11 +90,29 @@ public class BattleSetup
         }
     }
 
+    /// <summary>
+    /// チームメイトを追加
+    /// </summary>
+    public static void AddTeammate(int characterID)
+    {
+        teammates.Add(characterID);
+    }
+    public static void AddTeammate(PlayerCharacerID characterID)
+    {
+        teammates.Add((int)characterID);
+    }
+
+    /// <summary>
+    /// バトルBGMを設定
+    /// </summary>
     public static void SetBattleBGM(string clipName)
     {
         battleBGM = clipName;
     }
 
+    /// <summary>
+    /// 戦闘奨励を設定
+    /// </summary>
     public static void SetReward(int money, int researchPoint)
     {
         moneyReward = money;

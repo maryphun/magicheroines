@@ -50,6 +50,8 @@ public class TutorialManager : MonoBehaviour
     {
         // “GƒLƒƒƒ‰‚ğİ’u
         BattleSetup.Reset(true);
+        BattleSetup.AddTeammate(PlayerCharacerID.TentacleMan);
+        BattleSetup.AddTeammate(PlayerCharacerID.Battler);
         BattleSetup.AddEnemy("Akiho_Enemy");
         BattleSetup.AddEnemy("Rikka_Enemy");
         BattleSetup.SetBattleBGM("BattleTutorial");

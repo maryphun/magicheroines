@@ -145,3 +145,16 @@ public class FormationSlotData
         isFilled = flag;
     }
 }
+
+[System.Serializable]
+public enum PlayerCharacerID
+{
+    Battler = 0,
+    TentacleMan = 1,
+    Clone = 2,
+    Akiho = 3,
+    Rikka = 4,
+    Erena = 5,
+    Kei = 6,
+    Nayuta = 7,
+}

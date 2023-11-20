@@ -410,21 +410,21 @@ public class TrainPanel : MonoBehaviour
     public string CorruptedMessage(int characterID)
     {
         string s = string.Empty;
-        switch (characterID)
+        switch ((PlayerCharacerID)characterID)
         {
-            case 3: // 明穂
+            case PlayerCharacerID.Akiho: // 明穂
                 s = "<color=#FFC0CB>" + LocalizationManager.Localize("Name.Akiho") + "</color>";
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
-            case 4: // 立花
+            case PlayerCharacerID.Rikka: // 立花
                 s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Rikka") + "</color>";
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
-            case 5: // エレナ
+            case PlayerCharacerID.Erena: // エレナ
                 s = "<color=#F1E5AC>" + LocalizationManager.Localize("Name.Erena") + "</color>";
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
-            case 6: // 京
+            case PlayerCharacerID.Kei: // 京
                 s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Kei") + "</color>";
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
-            case 7: // 那由多
+            case PlayerCharacerID.Nayuta: // 那由多
                 s = "<color=#8b0000>" + LocalizationManager.Localize("Name.Nayuta") + "</color>";
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
             default:
