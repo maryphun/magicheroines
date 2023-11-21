@@ -240,7 +240,7 @@ public class TitleSelectUI : MonoBehaviour
         selection[1].rectTransform.DOScale(new Vector3(selectionScale, selectionScale, selectionScale), animationTime);
         selection[1].DOFade(0.5f, animationTime);
 
-        if (currentSelection == TitleSelection.NewGame)
+        if (currentSelection == TitleSelection.NewGame || currentSelection == TitleSelection.Credit)
         {
             // BGMí‚é~
             AudioManager.Instance.StopMusicWithFade(animationTime);
@@ -326,7 +326,7 @@ public class TitleSelectUI : MonoBehaviour
         switch (targetScene)
         {
             case TitleSelection.Credit:
-                Init();
+                SceneManager.LoadScene("Credit", LoadSceneMode.Single);
                 break;
             case TitleSelection.Exit:
                 Application.Quit();
