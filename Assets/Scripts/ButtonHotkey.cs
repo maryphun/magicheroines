@@ -29,6 +29,12 @@ public class ButtonHotkey : MonoBehaviour
 
     private void Update()
     {
+        if (ReferenceEquals(button, null))
+        {
+            enabled = false;
+            return;
+        }
+
         if (!button.IsInteractable()) return;
         if (!button.enabled) return;
         if (!button.gameObject.activeInHierarchy) return;

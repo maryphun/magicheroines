@@ -279,6 +279,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         vfx.transform.SetSiblingIndex(0); // ÉLÉÉÉâÇÃå„ÇÎÇ…âÒÇ∑
         self.PlayAnimation(BattlerAnimationType.magic);
 
+        float originalLocalPosY = self.GetGraphicRectTransform().localPosition.y;
+        self.GetGraphicRectTransform().DOLocalMoveY(originalLocalPosY + 30.0f, 0.75f);
+
         // Audio
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
 
@@ -307,6 +310,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
+                    self.GetGraphicRectTransform().DOLocalMoveY(originalLocalPosY, 0.2f);
                     target.PlayAnimation(BattlerAnimationType.idle);
                     battleManager.NextTurn(false);
                 });
@@ -332,6 +336,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // ÉGÉtÉFÉNÉg (Holy)
         VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position);
         self.PlayAnimation(BattlerAnimationType.magic);
+
+        float originalLocalPosY = self.GetGraphicRectTransform().localPosition.y;
+        self.GetGraphicRectTransform().DOLocalMoveY(originalLocalPosY + 30.0f, 0.75f);
 
         // Audio
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
@@ -372,6 +379,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(0.25f)
                 .AppendCallback(() =>
                 {
+                    self.GetGraphicRectTransform().DOLocalMoveY(originalLocalPosY, 0.2f);
+
                     battleManager.NextTurn(false);
                 });
     }
@@ -381,6 +390,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     /// </summary>
     public void QuickAttack()
     {
+        const float StrikeTime = 0.2f; // ê^ÇÒíÜÇ©ÇÁìGÇçUåÇÇ∑ÇÈà⁄ìÆéûä‘
+        const float AttackStopTime = 0.25f; // çUåÇÇ∑ÇÈéûÇÃí‚é~éûä‘
+        const float ReturnTime = 0.2f; // çUåÇÇ©ÇÁñﬂÇÈéûä‘
+
         var self = battleManager.GetCurrentBattler();
 
         const int numOfTarget = 3;
@@ -421,9 +434,11 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.transform.SetParent(targets[0].transform);
                     var targetPos = targets[0].GetComponent<RectTransform>().position;
                     targetPos = targets[0].isEnemy ? new Vector2(targetPos.x - targets[0].GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + targets[0].GetCharacterSize().x * 0.5f, targetPos.y);
-                    self.GetComponent<RectTransform>().DOMove(targetPos, 0.4f);
+                    self.GetComponent<RectTransform>().DOMove(targetPos, StrikeTime);
+
+                    self.PlayAnimation(BattlerAnimationType.attack);
                 })
-                .AppendInterval(0.4f)
+                .AppendInterval(StrikeTime)
                 .AppendCallback(() =>
                 {
                     // deal damage
@@ -441,20 +456,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // animation
                     targets[0].Shake(0.75f);
-                    self.PlayAnimation(BattlerAnimationType.attack);
                     targets[0].PlayAnimation(BattlerAnimationType.attacked);
                 })
-                .AppendInterval(0.1f)
+                .AppendInterval(AttackStopTime)
                 .AppendCallback(() =>
                 {
                     // return to middle
-                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
+                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), ReturnTime);
 
                     // cancel animation
                     self.PlayAnimation(BattlerAnimationType.idle);
                     targets[0].PlayAnimation(BattlerAnimationType.idle);
                 })
-                .AppendInterval(0.5f)
+                .AppendInterval(ReturnTime)
                 .AppendCallback(() =>
                 {
                     // play SE
@@ -464,9 +478,11 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.transform.SetParent(targets[1].transform);
                     var targetPos = targets[1].GetComponent<RectTransform>().position;
                     targetPos = targets[1].isEnemy ? new Vector2(targetPos.x - targets[1].GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + targets[1].GetCharacterSize().x * 0.5f, targetPos.y);
-                    self.GetComponent<RectTransform>().DOMove(targetPos, 0.4f);
+                    self.GetComponent<RectTransform>().DOMove(targetPos, StrikeTime);
+
+                    self.PlayAnimation(BattlerAnimationType.attack);
                 })
-                .AppendInterval(0.4f)
+                .AppendInterval(StrikeTime)
                 .AppendCallback(() =>
                 {
                     // deal damage
@@ -484,20 +500,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // animation
                     targets[1].Shake(0.75f);
-                    self.PlayAnimation(BattlerAnimationType.attack);
                     targets[1].PlayAnimation(BattlerAnimationType.attacked);
                 })
-                .AppendInterval(0.1f)
+                .AppendInterval(AttackStopTime)
                 .AppendCallback(() =>
                 {
                     // return to middle
-                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
+                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), ReturnTime);
 
                     // cancel animation
                     self.PlayAnimation(BattlerAnimationType.idle);
                     targets[1].PlayAnimation(BattlerAnimationType.idle);
                 })
-                .AppendInterval(0.5f)
+                .AppendInterval(ReturnTime)
                 .AppendCallback(() =>
                 {
                     // play SE
@@ -507,9 +522,11 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.transform.SetParent(targets[2].transform);
                     var targetPos = targets[2].GetComponent<RectTransform>().position;
                     targetPos = targets[2].isEnemy ? new Vector2(targetPos.x - targets[2].GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + targets[2].GetCharacterSize().x * 0.5f, targetPos.y);
-                    self.GetComponent<RectTransform>().DOMove(targetPos, 0.4f);
+                    self.GetComponent<RectTransform>().DOMove(targetPos, StrikeTime);
+
+                    self.PlayAnimation(BattlerAnimationType.attack);
                 })
-                .AppendInterval(0.4f)
+                .AppendInterval(StrikeTime)
                 .AppendCallback(() =>
                 {
                     // deal damage
@@ -527,20 +544,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // animation
                     targets[2].Shake(0.75f);
-                    self.PlayAnimation(BattlerAnimationType.attack);
                     targets[2].PlayAnimation(BattlerAnimationType.attacked);
                 })
-                .AppendInterval(0.1f)
+                .AppendInterval(AttackStopTime)
                 .AppendCallback(() =>
                 {
                     // return to middle
-                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
+                    self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), ReturnTime);
 
                     // cancel animation
                     self.PlayAnimation(BattlerAnimationType.idle);
                     targets[2].PlayAnimation(BattlerAnimationType.idle);
                 })
-                .AppendInterval(0.5f)
+                .AppendInterval(ReturnTime)
                 .AppendCallback(() =>
                 {
                     // move to original position
