@@ -7,9 +7,11 @@ public class MemoryPanel : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField, Range(0.0f, 1.0f)] private float animationTime = 0.5f;
+    [SerializeField] private Sprite lockedMemorySprite;
 
     [Header("References")]
     [SerializeField] private CanvasGroup canvasGrp;
+    [SerializeField] private Transform memoryHandle;
 
     public void OpenMemoryPanel()
     {
@@ -20,6 +22,9 @@ public class MemoryPanel : MonoBehaviour
         canvasGrp.DOFade(1.0f, animationTime);
         canvasGrp.interactable = true;
         canvasGrp.blocksRaycasts = true;
+
+        // èâä˙âª
+        SetupMemories();
     }
 
     public void CloseMemoryPanel()
@@ -30,5 +35,19 @@ public class MemoryPanel : MonoBehaviour
         canvasGrp.DOFade(0.0f, animationTime);
         canvasGrp.interactable = false;
         canvasGrp.blocksRaycasts = false;
+    }
+
+    /// <summary>
+    /// èâä˙âª
+    /// </summary>
+    private void SetupMemories()
+    {
+        for (int i = 0; i < memoryHandle.childCount; i++)
+        {
+            if (memoryHandle.GetChild(i).gameObject.activeSelf)
+            {
+                memoryHandle.GetChild(i).GetComponent<MemorySlot>().Initialization(lockedMemorySprite);
+            }
+        }
     }
 }

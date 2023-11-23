@@ -79,6 +79,9 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         // I‚í‚Á‚½Œã‚ÌCallback
         callbackWhenFinish = callback;
         enabled = true;
+
+        // ‰ñ‘zŠJ•ú
+        PlayerPrefsManager.SetBool("memoryunlock:" + data.name, true);
     }
 
     public void SetHidePlayTime(float time)

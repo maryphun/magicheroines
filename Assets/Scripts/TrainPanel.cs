@@ -369,6 +369,9 @@ public class TrainPanel : MonoBehaviour
 
         canvasGroup.interactable = true;
         UpdateCharacterData();
+
+        // Play home music
+        AudioManager.Instance.PlayMusicWithFade("HomeScene", 4.0f);
     }
 
     public void CloseUnderDevelopmentPopup()
