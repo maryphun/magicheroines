@@ -16,6 +16,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private BattlerAnimation animations;
     [SerializeField] private BattlerSoundEffect soundEffects;
     [SerializeField] private VFX attackVFX;
+    [SerializeField] private float breathScale = 0.005f; // キャラのアニメション
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -244,7 +245,7 @@ public class Battler : MonoBehaviour
 
         Mathf.PingPong(ease, 1.0f);
 
-        float value = (EaseInOutSine(ease) * 0.005f);
+        float value = (EaseInOutSine(ease) * breathScale);
 
         graphic.rectTransform.localScale = new Vector3(originalScale.x, originalScale.y - value, originalScale.z);
     }

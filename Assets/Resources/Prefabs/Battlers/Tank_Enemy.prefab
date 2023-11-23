@@ -509,7 +509,8 @@ MonoBehaviour:
     attack: {fileID: 0}
     attacked: {fileID: 0}
     retire: {fileID: 0}
-  attackVFX: {fileID: 1343633729508638609, guid: 50e1eebc5a9297944bd413cedb616ae1, type: 3}
+  attackVFX: {fileID: 1343633729508638609, guid: 7f432de0fd457e14d8accbe3936e0925, type: 3}
+  breathScale: 0.001
   character_name: "\u660E\u7A42"
   characterID: 0
   icon: {fileID: 0}

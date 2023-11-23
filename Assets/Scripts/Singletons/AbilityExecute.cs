@@ -609,5 +609,61 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 battleManager.NextTurn(false);
             });
     }
+
+    public void TankAttack()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var selfRect = self.GetComponent<RectTransform>();
+        var target = targetBattlers[0];
+
+        const float ChargeTime = 0.75f;
+        self.Shake(ChargeTime);
+        AudioManager.Instance.PlaySFX("TankStandby");
+
+        var originalPosition = selfRect.localPosition.x;
+        DOTween.Sequence().AppendInterval(ChargeTime)
+            .AppendCallback(() =>
+            {
+                // shoot
+                selfRect.DOLocalMoveX(originalPosition + 50.0f, 0.05f).SetEase(Ease.Linear);
+                AudioManager.Instance.PlaySFX("TankBeam");
+                self.ColorTint(Color.red, 0.5f);
+
+                // VFX
+                VFXSpawner.SpawnVFX("SparkExplode", self.transform.parent, self.GetMiddleGlobalPosition() + new Vector2(-105f, 150.0f));
+            })
+            .AppendInterval(0.075f)
+            .AppendCallback(() =>
+            {
+                // deal damage
+                int realDamage = target.DeductHP(Battle.CalculateDamage(self, target));
+
+                // text
+                var floatingText = CreateFloatingText(target.transform);
+                floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                // play SE
+                AudioManager.Instance.PlaySFX("Attacked", 0.8f);
+                AudioManager.Instance.PlaySFX("Explode", 1f);
+
+                // animation
+                target.Shake(0.75f);
+                target.PlayAnimation(BattlerAnimationType.attacked);
+
+                // VFX
+                self.SpawnAttackVFX(target);
+            })
+            .AppendInterval(0.075f)
+            .AppendCallback(() =>
+            {
+                selfRect.DOLocalMoveX(originalPosition, 0.5f);
+                target.PlayAnimation(BattlerAnimationType.idle);
+            })
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                battleManager.NextTurn(false);
+            });
+    }
     #endregion abilities
 }
