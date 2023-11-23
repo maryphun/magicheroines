@@ -17,6 +17,7 @@ public class BattleSetup
     public static int moneyReward;
     public static int researchPointReward;
     public static SideQuestData sideQuestIncrement;
+    public static bool isAllowEscape;
 
     public static List<EnemyDefine> GetEnemyList(bool clear)
     {
@@ -67,6 +68,7 @@ public class BattleSetup
         sideQuestIncrement = new SideQuestData(0,0,0);
         moneyReward = 0;
         researchPointReward = 0;
+        isAllowEscape = false;
     }
 
     /// <summary>
@@ -149,5 +151,10 @@ public class BattleSetup
     public static void SetSideQuestIncrement(int food, int bank, int research)
     {
         sideQuestIncrement = new SideQuestData(food, bank, research);
+    }
+
+    public static void SetAllowEscape(bool value)
+    {
+        isAllowEscape = value;
     }
 }

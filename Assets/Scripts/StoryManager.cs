@@ -33,6 +33,7 @@ public class StoryManager : MonoBehaviour
     void Story()
     {
         BattleSetup.Reset(true);
+        BattleSetup.SetAllowEscape(false);
         switch (ProgressManager.Instance.GetCurrentStageProgress())
         {
             case 2:

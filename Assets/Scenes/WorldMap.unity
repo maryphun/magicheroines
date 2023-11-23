@@ -4939,6 +4939,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67afd3d7bf2875c43954f2cf5952dba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chapter1Enemies:
+  - enemy: {fileID: 11400000, guid: 1b9edcf6b25674a48a2f64434df395d0, type: 2}
+    alertLevel: 1
+  - enemy: {fileID: 11400000, guid: b328b770d72df7c40b1e828482fda818, type: 2}
+    alertLevel: 1
+  - enemy: {fileID: 11400000, guid: 862289a47bccb5b46b1ef1d788c92cc9, type: 2}
+    alertLevel: 2
+  - enemy: {fileID: 11400000, guid: 2cc38c13e48ddde4e98f714a368cd621, type: 2}
+    alertLevel: 3
+  - enemy: {fileID: 11400000, guid: 575d1368c518ef44a9873fe63351ad25, type: 2}
+    alertLevel: 5
+  chapter2Enemies:
+  - enemy: {fileID: 11400000, guid: 862289a47bccb5b46b1ef1d788c92cc9, type: 2}
+    alertLevel: 1
+  - enemy: {fileID: 11400000, guid: 2cc38c13e48ddde4e98f714a368cd621, type: 2}
+    alertLevel: 1
+  - enemy: {fileID: 11400000, guid: b328b770d72df7c40b1e828482fda818, type: 2}
+    alertLevel: 2
+  - enemy: {fileID: 11400000, guid: 575d1368c518ef44a9873fe63351ad25, type: 2}
+    alertLevel: 5
+  chapter3Enemies:
+  - enemy: {fileID: 11400000, guid: 862289a47bccb5b46b1ef1d788c92cc9, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: 2cc38c13e48ddde4e98f714a368cd621, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: b328b770d72df7c40b1e828482fda818, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: 575d1368c518ef44a9873fe63351ad25, type: 2}
+    alertLevel: 0
+  chapter4Enemies:
+  - enemy: {fileID: 11400000, guid: 862289a47bccb5b46b1ef1d788c92cc9, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: 2cc38c13e48ddde4e98f714a368cd621, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: b328b770d72df7c40b1e828482fda818, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: 575d1368c518ef44a9873fe63351ad25, type: 2}
+    alertLevel: 0
+  chapter5Enemies:
+  - enemy: {fileID: 11400000, guid: 862289a47bccb5b46b1ef1d788c92cc9, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: 2cc38c13e48ddde4e98f714a368cd621, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: b328b770d72df7c40b1e828482fda818, type: 2}
+    alertLevel: 0
+  - enemy: {fileID: 11400000, guid: 575d1368c518ef44a9873fe63351ad25, type: 2}
+    alertLevel: 0
+  enemyPerAlertLevel: 0100000002000000020000000300000004000000
   canvasGrp: {fileID: 1455998366}
   rewardFood: {fileID: 1293686059}
   rewardBank: {fileID: 2085753962}

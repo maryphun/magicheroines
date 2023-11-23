@@ -428,7 +428,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// </summary>
     public void SetSideQuestData(int foodQuest, int bankQuest, int researchQuest)
     {
-        playerData.sideQuestData = new SideQuestData(Mathf.Max(1, foodQuest), Mathf.Max(1, bankQuest), Mathf.Max(1, researchQuest));
+        const int MaxAlertLevel = 5;
+        playerData.sideQuestData = new SideQuestData(Mathf.Clamp(foodQuest, 1, MaxAlertLevel), Mathf.Clamp(bankQuest, 1, MaxAlertLevel), Mathf.Clamp(researchQuest, 1, MaxAlertLevel));
     }
 
     public SideQuestData GetSideQuestData()
@@ -480,6 +481,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         if (addEnemy)
         {
             BattleSetup.Reset(false);
+            BattleSetup.SetAllowEscape(true);
             //BattleSetup.AddEnemy("Akiho_Enemy");
             BattleSetup.AddEnemy("Rikka_Enemy");
         }

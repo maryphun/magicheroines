@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ddfb2c5889060414988df1c56b2521e9
+guid: b46b2f83a9690dd47b3ee7d800bfa80c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: charactersIcon_0
+      name: enemyIcons_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 224
-        height: 224
+        width: 231.875
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e56097095aac2684bafd9468b80ef9e2
-      internalID: 499111351
+      spriteID: 4ba6ae966c59bbf4fa9940cb0f3c6827
+      internalID: -844860767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: charactersIcon_1
+      name: enemyIcons_1
       rect:
         serializedVersion: 2
-        x: 224
+        x: 232
         y: 0
-        width: 223
-        height: 224
+        width: 232
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 1, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12c40b4a29b73e941aaef8580d27d72a
-      internalID: 578282170
+      spriteID: 2b854e55f1f52ba47a20911fe72fb1bd
+      internalID: 1359009472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: charactersIcon_2
+      name: enemyIcons_2
       rect:
         serializedVersion: 2
-        x: 448
+        x: 463
         y: 0
-        width: 223
-        height: 224
+        width: 232
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 639e0ad6328d0874f8c9ca911ab36730
-      internalID: 919604191
+      spriteID: 600cf8bb1ce79b74fbada382162de2ef
+      internalID: 1244813357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: charactersIcon_3
+      name: enemyIcons_3
       rect:
         serializedVersion: 2
-        x: 671
+        x: 695
         y: 0
-        width: 224
-        height: 224
+        width: 232
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a654e7496ba7df4b85b55872ba4c176
-      internalID: -1141764776
+      spriteID: be549dc283aa71a42a063d2082956235
+      internalID: -722245859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: charactersIcon_4
+      name: enemyIcons_4
       rect:
         serializedVersion: 2
-        x: 895
+        x: 927
         y: 0
-        width: 224
-        height: 224
+        width: 232
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7af40ba5d18b83c46a55f568305cf1a3
-      internalID: -1775873685
+      spriteID: 6f50504c09c1bab4ebbec19873660767
+      internalID: 439198399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: charactersIcon_5
+      name: enemyIcons_5
       rect:
         serializedVersion: 2
-        x: 1119
+        x: 1159
         y: 0
-        width: 223
-        height: 224
+        width: 232
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27022ca6d15c0354ab6aea2fa26fae2b
-      internalID: 620309047
+      spriteID: c6d327e19f241a647ab3c9c1b4f07e0b
+      internalID: -2144037659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: charactersIcon_6
+      name: enemyIcons_6
       rect:
         serializedVersion: 2
-        x: 1342
+        x: 1391
         y: 0
-        width: 224
-        height: 224
+        width: 232
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 358b563ab13965046a28fb27b3cd80d7
-      internalID: -1109058711
+      spriteID: b8fbf1622e8b02a47a8017d5739570ab
+      internalID: 753358305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: charactersIcon_7
+      name: enemyIcons_7
       rect:
         serializedVersion: 2
-        x: 1566
+        x: 1623
         y: 0
-        width: 223
-        height: 224
+        width: 232
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e4f28c591ca7f844b4fe50165c491f1
-      internalID: -989093311
+      spriteID: ea9c9b62ab281304b8cc3feec0b90388
+      internalID: -470764281
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      charactersIcon_0: 499111351
-      charactersIcon_1: 578282170
-      charactersIcon_2: 919604191
-      charactersIcon_3: -1141764776
-      charactersIcon_4: -1775873685
-      charactersIcon_5: 620309047
-      charactersIcon_6: -1109058711
-      charactersIcon_7: -989093311
+      enemyIcons_0: -844860767
+      enemyIcons_1: 1359009472
+      enemyIcons_2: 1244813357
+      enemyIcons_3: -722245859
+      enemyIcons_4: 439198399
+      enemyIcons_5: -2144037659
+      enemyIcons_6: 753358305
+      enemyIcons_7: -470764281
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

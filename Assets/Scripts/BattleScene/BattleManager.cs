@@ -37,6 +37,8 @@ public class Battle : MonoBehaviour
     [SerializeField] private BattleSceneTutorial battleSceneTutorial;
     [SerializeField] private CharacterInfoPanel characterInfoPanel;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private GameObject escapeButton;
+    [SerializeField] private CanvasGroup escapePopup;
 
     [Header("Debug")]
     [SerializeField] private List<Battler> characterList = new List<Battler>();
@@ -80,6 +82,9 @@ public class Battle : MonoBehaviour
 
         List<EnemyDefine> enemyList = BattleSetup.GetEnemyList(false);
         InitializeBattleScene(actors, enemyList);
+
+        // 撤退ボタン
+        escapeButton.SetActive(BattleSetup.isAllowEscape);
 
         // Send references
         ItemExecute.Instance.Initialize(this);
@@ -802,4 +807,45 @@ public class Battle : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
+
+    #region Escape
+    public void ShowEscapePopUp()
+    {
+        escapePopup.DOFade(1.0f, 0.25f);
+        escapePopup.interactable = true;
+        escapePopup.blocksRaycasts = true;
+
+        AudioManager.Instance.PlaySFX("SystemAlert2");
+    }
+    
+    public void CancelEscape()
+    {
+        escapePopup.DOFade(0.0f, 0.25f);
+        escapePopup.interactable = false;
+        escapePopup.blocksRaycasts = false;
+
+        AudioManager.Instance.PlaySFX("SystemCancel");
+    }
+
+    public void ConfirmEscape()
+    {
+        // データ更新
+        foreach (Battler battler in characterList)
+        {
+            ProgressManager.Instance.UpdateCharacterByBattler(battler.characterID, battler);
+        }
+
+        AudioManager.Instance.PlaySFX("Escape");
+
+        const float AnimTime = 1.0f;
+        playerFormation.DOLocalMoveX(-formationPositionX * 2.1f, AnimTime);
+        AudioManager.Instance.StopMusicWithFade(AnimTime);
+        AlphaFadeManager.Instance.FadeOut(AnimTime);
+        DOTween.Sequence().AppendInterval(AnimTime + Time.deltaTime).AppendCallback(() => 
+        {
+            ChangeScene("Home");
+            AudioManager.Instance.PlaySFX("BattleTransition");
+        });
+    }
+    #endregion Escape
 }

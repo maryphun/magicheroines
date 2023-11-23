@@ -121,6 +121,7 @@ Name.Android,警備ドロイド
 Name.Battler+Tentacle,触手怪人、戦闘員
 Name.Man,男
 Name.GuardMan,駅員
+Name.Tank,四脚タンク
 Name.Akiho_Corrupted,笹谷 明穂
 Name.Rikka_Corrupted,072号
 Name.Kei_Corrupted,識宮 京
@@ -162,6 +163,8 @@ Battle.Start,任務開始
 Battle.Victory,任務クリア
 Battle.Defeat,敗北
 Battle.SkipTutorial,スキップ
+Battle.EscapeConfirm,撤退しますか？
+Battle.Escape,撤退
 Buff,状態
 Buff.Stun,行動不能
 Buff.Hurt,継続ダメージ
