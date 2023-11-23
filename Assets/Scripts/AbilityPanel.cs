@@ -23,6 +23,7 @@ public class AbilityPanel : MonoBehaviour
     [SerializeField] private Battle battleManager;
     [SerializeField] private ActionPanel actionPanel;
     [SerializeField] private TMP_Text description_Name;   //<　技名
+    [SerializeField] private TMP_Text description_SPCost; //<　SP消耗
     [SerializeField] private TMP_Text description_Target; //<　効果対象
     [SerializeField] private TMP_Text description_Type;   //<　機能
     [SerializeField] private TMP_Text description_Info;   //<　技説明
@@ -237,6 +238,8 @@ public class AbilityPanel : MonoBehaviour
         descriptionPanelRect.position = new Vector2(buttonRect.position.x, buttonRect.position.y + (buttonRect.sizeDelta.y * 0.5f) + 10.0f);
 
         // データ読み込み
+        description_SPCost.text = LocalizationManager.Localize("System.SPCost") + ability.Item1.consumeSP + "/" + battleManager.GetCurrentBattler().current_mp;
+
         description_Name.text = LocalizationManager.Localize(ability.Item1.abilityNameID);
         string effectTargetText = string.Empty;
         switch (ability.Item1.castType)
@@ -279,13 +282,15 @@ public class AbilityPanel : MonoBehaviour
 
         // 強制更新
         description_Name.ForceMeshUpdate();
+        description_SPCost.ForceMeshUpdate();
         description_Target.ForceMeshUpdate();
         description_Type.ForceMeshUpdate();
         description_Info.ForceMeshUpdate();
 
         // Resize UI
         descriptionPanelRect.sizeDelta = new Vector2(descriptionPanelRect.sizeDelta.x,
-            (description_Name.rectTransform.rect.height + 
+            (description_Name.rectTransform.rect.height +
+             description_SPCost.rectTransform.rect.height + 
              description_Target.rectTransform.rect.height + 
              description_Type.rectTransform.rect.height + 
             (description_Info.GetRenderedValues(false).y) + description_Info.fontSize));

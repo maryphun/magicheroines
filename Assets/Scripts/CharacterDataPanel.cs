@@ -30,6 +30,7 @@ public class CharacterDataPanel : MonoBehaviour
     // pop up
     [SerializeField] private CanvasGroup popup;
     [SerializeField] private TMP_Text abilityName;
+    [SerializeField] private TMP_Text abilitySPCost;
     [SerializeField] private TMP_Text abilityType;
     [SerializeField] private TMP_Text abilityCastType;
     [SerializeField] private TMP_Text abilityDescription;
@@ -135,6 +136,7 @@ public class CharacterDataPanel : MonoBehaviour
         popup.blocksRaycasts = true;
 
         abilityName.text = LocalizationManager.Localize(ability.abilityNameID);
+        abilitySPCost.text = LocalizationManager.Localize("System.SPCost") + ability.consumeSP;
         abilityType.text = LocalizationManager.Localize("System.AbilityType") + "ÅF" + AbilityTypeToString(ability.abilityType);
         abilityCastType.text = LocalizationManager.Localize("System.EffectTarget") + CastTypeToString(ability.castType);
         abilityDescription.text = LocalizationManager.Localize(ability.descriptionID);

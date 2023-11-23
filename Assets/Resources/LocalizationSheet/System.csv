@@ -31,7 +31,7 @@ System.OptionPanel,設定
 System.Attack,攻撃力：
 System.Level,LV：
 System.HP,体力：
-System.MP,魔力：
+System.MP,SP：
 System.Defense,防衛力：
 System.Speed,素早さ：
 System.Skill,特殊技：
@@ -45,6 +45,7 @@ System.Unlock,解放
 System.Regenerate,回復
 System.RegenerateCost,回復コスト
 System.Inventory,インベントリ
+System.SPCost,SP消耗：
 System.EffectTarget,効果対象：
 System.EffectEnemy,敵単体
 System.EffectSelf,使用者
