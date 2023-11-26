@@ -114,6 +114,7 @@ namespace NovelEditor
                     await UniTask.Delay(250 / textSpeed, cancellationToken: token);
 
                     tmpro.text += words[wordCnt];
+                    tmpro.richText = true;
                     await UniTask.WaitUntil(() => !IsStop);
                     wordCnt++;
                 }
