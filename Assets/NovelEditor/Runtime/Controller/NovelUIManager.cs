@@ -5,8 +5,6 @@ using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using System;
-using TMPro;
-using DG.Tweening;
 
 namespace NovelEditor
 {
