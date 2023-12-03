@@ -21,7 +21,7 @@ MonoBehaviour:
     _index: 0
     _nodePosition:
       serializedVersion: 2
-      x: -3
+      x: -2
       y: 0
       width: 154
       height: 97
@@ -235,13 +235,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: c8191c1d9b5b1a94da14f9b36c78d16c, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 010000000000000001000000
@@ -272,8 +272,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: e31139d61ba449343b42a07e3bcf47df, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -508,7 +508,7 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000001000000
+      charaEffects: 040000000000000001000000
       charaEffectStrength: 000000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 000000000000000000000000
+      charaEffects: 040000000000000001000000
       charaEffectStrength: 000000000000000000000000
       DialogueEffect: 0
       DialogueEffectStrength: 0

@@ -121,6 +121,11 @@ public class BattleSceneTransition : MonoBehaviour
         ProgressManager.Instance.StageProgress(); // チュートリアル終了
         StartCoroutine(EndSceneTransition(battleManager.ChangeScene, "Tutorial"));
     }
+    public void EndScene()
+    {
+        text.text = LocalizationManager.Localize("Battle.Defeat");
+        StartCoroutine(EndSceneTransition(battleManager.ChangeScene, "Home"));
+    }
 
     IEnumerator EndSceneTransition(Action<string> callback, string sceneName)
     {

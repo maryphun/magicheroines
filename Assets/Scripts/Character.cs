@@ -157,4 +157,5 @@ public enum PlayerCharacerID
     Erena = 5,
     Kei = 6,
     Nayuta = 7,
+    BattlerTemp = 8,
 }

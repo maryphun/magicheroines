@@ -119,6 +119,10 @@ public class RewardPanel : MonoBehaviour
             // SE
             AudioManager.Instance.PlaySFX("SystemNewHeroin");
         }
+        else if (IsSpecialEvent())
+        {
+
+        }
         else　// reward end
         {
             panelCanvas.DOKill(false);
@@ -213,5 +217,45 @@ public class RewardPanel : MonoBehaviour
     {
         rect.DOScale(0.5f, removeAnimTime);
         fade.DOFade(0.0f, removeAnimTime);
+    }
+
+    // 特殊イベント発生
+    private bool IsSpecialEvent()
+    {
+        int stage = (ProgressManager.Instance.GetCurrentStageProgress() - 1); // ステージ番号はすでに更新されているので-1で見る
+        if (BattleSetup.isStoryMode && stage == 6)
+        {
+            panelCanvas.DOKill(false);
+            panelCanvas.alpha = 0.0f;
+
+            nextButton.interactable = false;
+
+            // SE
+            AudioManager.Instance.PlaySFX("RewardEnd");
+
+            // scene transition
+            AlphaFadeManager.Instance.FadeOut(1.0f);
+
+            // setup event battle
+            BattleSetup.Reset(false);
+            BattleSetup.SetAllowEscape(false);
+            BattleSetup.SetEventBattle(true);
+            BattleSetup.SetReward(0, 0);
+            BattleSetup.AddTeammate(8);
+            BattleSetup.AddTeammate(8);
+            BattleSetup.AddEnemy("Erena_Enemy");
+
+            DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => {
+                AlphaFadeManager.Instance.FadeIn(0.25f); 
+                NovelSingletone.Instance.PlayNovel("Chapter2-3 PreEvent", true, StartEventBattle); 
+            });
+            return true;
+        }
+        return false;
+    }
+
+    public void StartEventBattle()
+    {
+        DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { SceneManager.LoadScene("Battle", LoadSceneMode.Single); });
     }
 }

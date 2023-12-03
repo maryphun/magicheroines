@@ -162,6 +162,10 @@ namespace NovelEditor
                 {
                     _charas[i].image.color = new Color(_charas[i]._defaultColor.r * 0.5f, _charas[i]._defaultColor.g * 0.5f, _charas[i]._defaultColor.b * 0.5f, 1.0f);
                 }
+                else if (charaEffects[i] == Effect.None)
+                {
+                    _charas[i].image.color = _charas[i]._defaultColor;
+                }
                 EffectManager.Instance.SetEffect(_charas[i].image, charaEffects[i], strength[i]);
             }
         }

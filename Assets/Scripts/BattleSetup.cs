@@ -8,6 +8,7 @@ public class BattleSetup
     static List<int> teammates; // insert characterID
     static List<EnemyDefine> enemies;
     public static bool isStoryMode = false;
+    public static bool isEventBattle = false;
 
     public static string BattleBGM { get { return battleBGM; } }
     private static string battleBGM = string.Empty;
@@ -69,6 +70,7 @@ public class BattleSetup
         moneyReward = 0;
         researchPointReward = 0;
         isAllowEscape = false;
+        isEventBattle = false;
     }
 
     /// <summary>
@@ -156,5 +158,9 @@ public class BattleSetup
     public static void SetAllowEscape(bool value)
     {
         isAllowEscape = value;
+    }
+    public static void SetEventBattle(bool value)
+    {
+        isEventBattle = value;
     }
 }

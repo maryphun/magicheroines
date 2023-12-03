@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u7B39\u8C37 \u660E\u7A42"
+  m_text: "\u7ACB\u82B1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93f23378213356944b52c827fd0e09f9, type: 2}
   m_sharedMaterial: {fileID: 6193186823750436286, guid: 93f23378213356944b52c827fd0e09f9, type: 2}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ee3ad25fee3457c4aace3be7be3a9f16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89cc5bf27b11eb54ab672b9806b947c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 5235309725233065212}
   - component: {fileID: 544500000650176807}
   m_Layer: 5
-  m_Name: Akiho_Enemy
+  m_Name: Erena_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -424,19 +424,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoInit: 0
   animations:
-    idle: {fileID: 21300000, guid: 93aa0d116d4884444966f54c61116bc5, type: 3}
-    attack: {fileID: 21300000, guid: 0cab280875ebe5a469f5892d9f587640, type: 3}
-    magic: {fileID: 21300000, guid: 0cab280875ebe5a469f5892d9f587640, type: 3}
-    item: {fileID: 21300000, guid: 0cab280875ebe5a469f5892d9f587640, type: 3}
-    attacked: {fileID: 21300000, guid: 993ee530611723c4c8d19c55b7352cba, type: 3}
-    retire: {fileID: 21300000, guid: 993ee530611723c4c8d19c55b7352cba, type: 3}
+    idle: {fileID: 21300000, guid: e13cf46995e72a6449bd87e9265137f3, type: 3}
+    attack: {fileID: 21300000, guid: 77e433fac4ef2ab4d8b9b2c337fc7701, type: 3}
+    magic: {fileID: 21300000, guid: 77e433fac4ef2ab4d8b9b2c337fc7701, type: 3}
+    item: {fileID: 21300000, guid: e13cf46995e72a6449bd87e9265137f3, type: 3}
+    attacked: {fileID: 21300000, guid: e121f9c9519aa0043946fe33fb812dd6, type: 3}
+    retire: {fileID: 21300000, guid: e13cf46995e72a6449bd87e9265137f3, type: 3}
   soundEffects:
     attack: {fileID: 0}
     attacked: {fileID: 0}
     retire: {fileID: 0}
   attackVFX: {fileID: 1343633729508638609, guid: 50e1eebc5a9297944bd413cedb616ae1, type: 3}
   breathScale: 0.005
-  character_name: "\u660E\u7A42"
+  character_name: "\u7ACB\u82B1"
   characterID: 0
   icon: {fileID: 0}
   isEnemy: 1

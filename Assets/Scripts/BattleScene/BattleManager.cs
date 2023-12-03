@@ -790,16 +790,25 @@ public class Battle : MonoBehaviour
             }
         }
 
-        // チュートリアル終了 (負けイべント)
-        bool isTutorial = (ProgressManager.Instance.GetCurrentStageProgress() == 1);
-        if (!isTutorial)
+        // 負けイべント?
+        bool isEvent = BattleSetup.isEventBattle; 
+        if (!isEvent)
         {
             sceneTransition.EndScene(isVictory, ChangeScene);
         }
         else
         {
-            // 敗北イベント(0.5秒待ってから)
-            DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Tutorial3", true, sceneTransition.EndTutorial); });
+            // チュートリアル終了
+            if (ProgressManager.Instance.GetCurrentStageProgress() == 1)
+            {
+                // 敗北イベント(0.5秒待ってから)
+                DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Tutorial3", true, sceneTransition.EndTutorial); });
+            }
+            else if (ProgressManager.Instance.GetCurrentStageProgress() == 6)
+            {
+                // 敗北イベント(那由多戦)
+                DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter2-3 AfterEvent", true, sceneTransition.EndScene); });
+            }
         }
     }
 
