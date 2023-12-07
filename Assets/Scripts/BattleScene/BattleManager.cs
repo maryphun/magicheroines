@@ -273,11 +273,12 @@ public class Battle : MonoBehaviour
         yield return new WaitForSeconds(enemyAIDelay);
 
         // バフを先にチェック
+        bool isCharacterStunned = IsCharacterInBuff(currentCharacter, BuffType.stun);
         UpdateBuffForCharacter(GetCurrentBattler());
 
         // 攻撃目標を選択
         // is character stunned
-        if (IsCharacterInBuff(currentCharacter, BuffType.stun))
+        if (isCharacterStunned)
         {
             yield return new WaitForSeconds(stunWaitDelay);
             NextTurn(false);
@@ -374,10 +375,11 @@ public class Battle : MonoBehaviour
         actionTargetArrow.position = originPos;
 
         // バフを先にチェック
+        bool isCharacterStunned = IsCharacterInBuff(currentCharacter, BuffType.stun);
         UpdateBuffForCharacter(GetCurrentBattler());
 
         // is character stunned
-        if (IsCharacterInBuff(currentCharacter, BuffType.stun))
+        if (isCharacterStunned)
         {
             yield return new WaitForSeconds(stunWaitDelay);
             NextTurn(false);
