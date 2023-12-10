@@ -88,6 +88,23 @@ public class StoryManager : MonoBehaviour
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
+            case 8:
+                {
+                    BattleSetup.AddEnemy("Drone 2");
+                    BattleSetup.AddEnemy("Tank");
+                    BattleSetup.SetBattleBGM("Cyber45");
+                    BattleSetup.SetReward(700, 75);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 9:
+                {
+                    BattleSetup.AddEnemy("Erena_Enemy");
+                    BattleSetup.SetBattleBGM("ErenaBattle");
+                    BattleSetup.SetReward(2500, 300);
+                    NovelSingletone.Instance.PlayNovel("Chapter3-3 Prebattle", true, GoToBattle);
+                }
+                break;
             default:
                 // –¢ŠJ”­’n‘Ñ
                 underdevelopment.SetActive(true);
@@ -138,6 +155,20 @@ public class StoryManager : MonoBehaviour
             case 7:
                 {
                     NovelSingletone.Instance.PlayNovel("Chapter3-1", true, GoToRewardScreen);
+                }
+                break;
+            case 8:
+                {
+                    NovelSingletone.Instance.PlayNovel("Chapter3-2", true, GoToRewardScreen);
+                }
+                break;
+            case 9:
+                {
+                    // ƒGƒŒƒi”s–k
+                    NovelSingletone.Instance.PlayNovel("Chapter3-3 AfterBattle", true, GoToRewardScreen);
+
+                    PlayerCharacterDefine Erena = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/6.Erena");
+                    ProgressManager.Instance.AddPlayerCharacter(Erena);
                 }
                 break;
             default:
