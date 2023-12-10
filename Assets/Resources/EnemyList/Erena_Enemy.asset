@@ -15,17 +15,17 @@ MonoBehaviour:
   enemyName: Name.Erena
   maxHP: 600
   maxMP: 100
-  attack: 45
-  defense: 5
-  speed: 5
-  level: 15
-  character_color: {r: 0.7411765, g: 0.8862746, b: 0.9490197, a: 1}
+  attack: 65
+  defense: 10
+  speed: 10
+  level: 20
+  character_color: {r: 1, g: 0.94869184, b: 0.5518868, a: 1}
   actionPattern:
   - actionType: 0
     ability: {fileID: 0}
-    chance: 0
+    chance: 1
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0
   icon: {fileID: 644697127, guid: 0f4c4dbea7e7a1c4da0c02f12798160b, type: 3}
-  battler: {fileID: 7739895556670267509, guid: ada11d381567eb3418252881469f64f3, type: 3}
+  battler: {fileID: 7739895556670267509, guid: a75cadbd5c0f5c949b56db209ccce1be, type: 3}

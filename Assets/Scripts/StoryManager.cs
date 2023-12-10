@@ -79,6 +79,15 @@ public class StoryManager : MonoBehaviour
                     NovelSingletone.Instance.PlayNovel("Chapter2-3 Prebattle", true, GoToBattle);
                 }
                 break;
+            case 7:
+                {
+                    BattleSetup.AddEnemy("Drone 2");
+                    BattleSetup.AddEnemy("Tank");
+                    BattleSetup.SetBattleBGM("Cyber45");
+                    BattleSetup.SetReward(650, 75);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
             default:
                 // –¢ŠJ”­’n‘Ñ
                 underdevelopment.SetActive(true);
@@ -124,6 +133,11 @@ public class StoryManager : MonoBehaviour
 
                     PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
                     ProgressManager.Instance.AddPlayerCharacter(Rikka);
+                }
+                break;
+            case 7:
+                {
+                    NovelSingletone.Instance.PlayNovel("Chapter3-1", true, GoToRewardScreen);
                 }
                 break;
             default:

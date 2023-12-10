@@ -229,6 +229,7 @@ public class RewardPanel : MonoBehaviour
             panelCanvas.alpha = 0.0f;
 
             nextButton.interactable = false;
+            nextButton.gameObject.SetActive(false);
 
             // SE
             AudioManager.Instance.PlaySFX("RewardEnd");
@@ -241,9 +242,10 @@ public class RewardPanel : MonoBehaviour
             BattleSetup.SetAllowEscape(false);
             BattleSetup.SetEventBattle(true);
             BattleSetup.SetReward(0, 0);
-            BattleSetup.AddTeammate(8);
-            BattleSetup.AddTeammate(8);
+            BattleSetup.AddTeammate("9.Battler(Event)");
+            BattleSetup.AddTeammate("9.Battler(Event)");
             BattleSetup.AddEnemy("Erena_Enemy");
+            BattleSetup.SetBattleBGM("ErenaBattle");
 
             DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => {
                 AlphaFadeManager.Instance.FadeIn(0.25f); 

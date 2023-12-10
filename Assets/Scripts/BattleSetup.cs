@@ -5,7 +5,7 @@ using System.Linq;
 
 public class BattleSetup
 {
-    static List<int> teammates; // insert characterID
+    static List<Character> teammates; // insert characterID
     static List<EnemyDefine> enemies;
     public static bool isStoryMode = false;
     public static bool isEventBattle = false;
@@ -42,7 +42,7 @@ public class BattleSetup
     /// <summary>
     /// 特殊イベント用
     /// </summary>
-    public static List<int> GetCustomFormation()
+    public static List<Character> GetCustomFormation()
     {
         return teammates;
     }
@@ -60,7 +60,7 @@ public class BattleSetup
     /// </summary>
     public static void Reset(bool isStory)
     {
-        teammates = new List<int>();
+        teammates = new List<Character>();
         enemies = new List<EnemyDefine>();
         isStoryMode = isStory;
         battleBGM = string.Empty;
@@ -99,11 +99,24 @@ public class BattleSetup
     /// </summary>
     public static void AddTeammate(int characterID)
     {
-        teammates.Add(characterID);
+        if (ProgressManager.Instance.HasCharacter(characterID, true))
+        {
+            teammates.Add(ProgressManager.Instance.GetCharacterByID(characterID));
+        }
+        else
+        {
+            Debug.Log("Character doesn't exist");
+        }
     }
     public static void AddTeammate(PlayerCharacerID characterID)
     {
-        teammates.Add((int)characterID);
+        AddTeammate((int)characterID);
+    }
+
+    public static void AddTeammate(string dataName)
+    {
+        Character character = ProgressManager.Instance.LoadCharacter(dataName); 
+        teammates.Add(character);
     }
 
     /// <summary>

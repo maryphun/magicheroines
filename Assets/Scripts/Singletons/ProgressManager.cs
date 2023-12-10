@@ -170,6 +170,14 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// Character名 からキャラクターをロードする
+    /// </summary>
+    public Character LoadCharacter(string name)
+    {
+        return ConvertCharacterDefine(Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/" + name));
+    }
+
+    /// <summary>
     /// 使える仲間キャラのリストを取得
     /// </summary>
     public List<Character> GetAllUsableCharacter()
@@ -183,6 +191,12 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// 新しい仲間追加
     /// </summary>
     public void AddPlayerCharacter(PlayerCharacterDefine newCharacter)
+    {
+        Character obj = ConvertCharacterDefine(newCharacter);
+        playerData.characters.Add(obj);
+    }
+
+    private Character ConvertCharacterDefine(PlayerCharacterDefine newCharacter)
     {
         var obj = new Character();
 
@@ -200,8 +214,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         obj.current_defense = newCharacter.detail.base_defense;
         obj.current_speed = newCharacter.detail.base_speed;
         obj.is_corrupted = !(newCharacter.detail.is_heroin); // ヒロインキャラはとりあえず使用できない
-        
-        playerData.characters.Add(obj);
+
+        return obj;
     }
 
     /// <summary>

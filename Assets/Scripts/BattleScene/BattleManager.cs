@@ -59,13 +59,7 @@ public class Battle : MonoBehaviour
         {
             // 特殊イベント
             var formation = BattleSetup.GetCustomFormation();
-            for (int i = 0; i < formation.Count; i++)
-            {
-                if (formation[i] != -1)
-                {
-                    actors.Add(ProgressManager.Instance.GetCharacterByID(formation[i]));
-                }
-            }
+            actors = formation;
         }
         else
         {
@@ -784,7 +778,7 @@ public class Battle : MonoBehaviour
         actionPanel.SetEnablePanel(false);
 
         // キャラの状態をデータに更新
-        if (isVictory || !BattleSetup.isStoryMode) // story modeで負けた時はリトライされるかもしれないので、データ更新しない
+        if ((isVictory || !BattleSetup.isStoryMode) && !BattleSetup.isEventBattle) // story modeで負けた時はリトライされるかもしれないので、データ更新しない
         {
             foreach (Battler battler in characterList)
             {
@@ -806,8 +800,10 @@ public class Battle : MonoBehaviour
                 // 敗北イベント(0.5秒待ってから)
                 DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Tutorial3", true, sceneTransition.EndTutorial); });
             }
-            else if (ProgressManager.Instance.GetCurrentStageProgress() == 6)
+            else if (ProgressManager.Instance.GetCurrentStageProgress() == 7)
             {
+                AudioManager.Instance.StopMusicWithFade();
+
                 // 敗北イベント(那由多戦)
                 DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter2-3 AfterEvent", true, sceneTransition.EndScene); });
             }
