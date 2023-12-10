@@ -10,6 +10,7 @@ public struct HomeSceneDialogue
     public int endStage;
     public string dialogueID;
     public AudioClip clip;
+    public Sprite sprite;
 }
 
 [System.Serializable]

@@ -11,4 +11,5 @@ public class CustomColor
     public static Color heal() { return new Color(0.33f, 1f, 0.5f); }
     public static Color invisible() { return new Color(1,1,1,0); }
     public static Color SP() { return new Color(0.75f, 0.75f, 1.00f); }
+    public static Color stun() { return new Color(0.5f, 0.00f, 0.00f); }
 }

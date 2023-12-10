@@ -150,6 +150,9 @@ public class HomeCharacter : MonoBehaviour
 
             dialogueText.text = string.Empty;
             dialogueBack.localScale = new Vector3(1, 0, 1);
+
+            // reset sprite
+            characterSprite.sprite = dialogues[currentCharacterIndex].characterSprite;
         }
 
         animSequence = DOTween.Sequence()
@@ -162,12 +165,19 @@ public class HomeCharacter : MonoBehaviour
                 {
                     AudioManager.Instance.PlayClip(dialogue.clip);
                 }
+                if (dialogue.sprite != null)
+                {
+                    characterSprite.sprite = dialogue.sprite;
+                }
             })
             .AppendInterval(extraDisplayTime + clipLength)
             .AppendCallback(() => { dialogueText.DOFade(0.0f, 0.25f); })
             .AppendInterval(0.25f)
             .AppendCallback(() => {
                 dialogueBack.DOScaleY(0.0f, 0.25f);
+
+                // reset sprite
+                characterSprite.sprite = dialogues[currentCharacterIndex].characterSprite;
             });
     }
 
