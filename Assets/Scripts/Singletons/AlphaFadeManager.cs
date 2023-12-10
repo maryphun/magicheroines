@@ -56,6 +56,8 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.DOFade(0.0f, time);
 
         fadeAlpha.raycastTarget = false;
+
+        SetEnableMouse(true);
     }
 
     /// <summary>
@@ -70,6 +72,8 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.DOFade(1.0f, time);
 
         fadeAlpha.raycastTarget = true;
+
+        SetEnableMouse(false);
     }
 
     public void Fade(float start, float end, float time = 0.0f)
@@ -88,10 +92,34 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.DOComplete();
         fadeAlpha.color = new Color(0, 0, 0, 0);
 
-        DOTween.Sequence().AppendCallback(() => { fadeAlpha.DOFade(1.0f, time * 0.5f); }).AppendInterval(time * 0.5f).AppendCallback(() =>
+        DOTween.Sequence().AppendCallback(() =>
+        { 
+            fadeAlpha.DOFade(1.0f, time * 0.5f);
+            SetEnableMouse(false);
+        })
+        .AppendInterval(time * 0.5f)
+        .AppendCallback(() =>
         {
             fadeAlpha.DOComplete();
             fadeAlpha.DOFade(0.0f, time * 0.5f);
+            SetEnableMouse(true);
         });
+    }
+
+    /// <summary>
+    /// É}ÉEÉXëÄçÏ
+    /// </summary>
+    private void SetEnableMouse(bool value)
+    {
+        if (value)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 }
