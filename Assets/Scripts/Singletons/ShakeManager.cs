@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class ShakeManager : SingletonMonoBehaviour<ShakeManager>
 {
-    public void ShakeObject(RectTransform rectTransform, float duration, float magnitude)
+    public Coroutine ShakeObject(RectTransform rectTransform, float duration, float magnitude)
     {
-        StartCoroutine(ShakeObjectAnimation(rectTransform, duration, magnitude));
+        return StartCoroutine(ShakeObjectAnimation(rectTransform, duration, magnitude));
+    }
+
+    /// <summary>
+    /// í‚é~
+    /// </summary>
+    public void StopObjectShake(Coroutine reference)
+    {
+        StopCoroutine(reference);
     }
 
     IEnumerator ShakeObjectAnimation(RectTransform rectTransform, float duration, float magnitude)

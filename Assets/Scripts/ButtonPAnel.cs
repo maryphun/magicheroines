@@ -14,6 +14,7 @@ public class ButtonPAnel : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private Image arrowIcon; 
+    [SerializeField] private HomeCharacter homeCharacterScript; 
 
     private RectTransform rect;
     private bool isDisplaying;
@@ -67,6 +68,11 @@ public class ButtonPAnel : MonoBehaviour
         if (!isEnabled) 
         {
             EndDisplay();
+        }
+        else
+        {
+            // ‘äŽŒ
+            homeCharacterScript.TriggerDialogue(); // ‚È‚ñ‚©‚µ‚á‚×‚ç‚¹‚é
         }
     }
 }

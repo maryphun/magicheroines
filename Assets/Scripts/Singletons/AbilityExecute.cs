@@ -141,6 +141,112 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     battleManager.NextTurn(false);
                 });
     }
+    public void PowerfulPunch()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        int dmg = (self.attack * 2);
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.PowerfulPunch");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // キャラ移動の準備
+        Transform originalParent = self.transform.parent;
+        int originalChildIndex = self.transform.GetSiblingIndex();
+
+        var targetPos = target.GetComponent<RectTransform>().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 1.5f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 1.5f, targetPos.y);
+        var originalPos = self.GetComponent<RectTransform>().position;
+        const float characterMoveTime = 0.35f;
+        const float animationTime = 0.8f;
+        const float strikeTime = 0.1f;
+        const float attackStayTime = 0.35f;
+
+        // Shake
+        Coroutine shake = null;
+        Vector2 positionPreShake = Vector2.zero;
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+                    // move
+                    self.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // change character hirachy temporary
+                    self.transform.SetParent(target.transform);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // charge
+                    self.PlayAnimation(BattlerAnimationType.attack);
+                    AudioManager.Instance.PlaySFX("Charge");
+                    positionPreShake = self.GetComponent<RectTransform>().position;
+                    shake = ShakeManager.Instance.ShakeObject(self.GetComponent<RectTransform>(), animationTime, 5.0f);
+                    self.ColorTint(Color.blue, animationTime);
+                })
+                .AppendInterval(animationTime)
+                .AppendCallback(() =>
+                {
+                    ShakeManager.Instance.StopObjectShake(shake);
+                    self.GetComponent<RectTransform>().position = positionPreShake;
+                    var position = target.GetComponent<RectTransform>().position;
+                    position = target.isEnemy ? new Vector2(position.x - target.GetCharacterSize().x * 0.5f, position.y) : new Vector2(position.x + target.GetCharacterSize().x * 0.5f, position.y);
+                    self.DOComplete(true);
+                    self.GetComponent<RectTransform>().DOMove(position, strikeTime).SetEase(Ease.Linear);
+
+                    // 残像生成コンポネント
+                    FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
+                    fadeEffect.Initialize(strikeTime, 0.05f, self.GetGraphicRectTransform().GetComponent<Image>());
+                })
+                .AppendInterval(strikeTime)
+                .AppendCallback(() =>
+                {
+                    // attack
+                    self.PlayAnimation(BattlerAnimationType.attacked);
+                    self.SpawnAttackVFX(target);
+                    AudioManager.Instance.PlaySFX("PowerfulPunch", 1f);
+                    target.Shake(1.75f);
+                    target.DeductHP(dmg);
+
+                    // text
+                    floatingText = CreateFloatingText(target.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), dmg.ToString(), 64, CustomColor.damage());
+                })
+                .AppendInterval(attackStayTime)
+                .AppendCallback(() =>
+                {
+                    self.GetComponent<RectTransform>().DOMove(originalPos, characterMoveTime);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // return to original parent
+                    self.transform.SetParent(originalParent);
+                    self.transform.SetSiblingIndex(originalChildIndex);
+
+                    target.PlayAnimation(BattlerAnimationType.idle);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+
+                    // stun for 1 turn
+                    battleManager.AddBuffToBattler(self, BuffType.stun, 1, 0);
+                });
+    }
+
     public void SuckingTentacle()
     {
         var self = battleManager.GetCurrentBattler();

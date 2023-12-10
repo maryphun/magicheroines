@@ -36,6 +36,7 @@ public class HomeCharacter : MonoBehaviour
 
         Initialization();
         SetupCharacter();
+        TriggerDialogue();
     }
 
     private void Initialization()
@@ -104,6 +105,32 @@ public class HomeCharacter : MonoBehaviour
             .AppendInterval(animationTime / 6f)
             .AppendCallback(() => { characterRect.DOScale(1.00f, animationTime - (animationTime / 6f)).SetEase(Ease.OutElastic); });
 
+        TriggerDialogue();
+    }
+
+    private void OnChangeCharacter()
+    {
+        // Display Dialogue
+        var dialogue = GetDialogue();
+        dialogueText.text = string.Empty;
+        dialogueText.alpha = 0.0f;
+
+        float clipLength = 0.0f;
+        if (dialogue.clip != null)
+        {
+            clipLength = dialogue.clip.length;
+        }
+
+        DOTween.Sequence()
+            .AppendInterval(0.35f)
+            .AppendCallback(() => 
+            {
+                TriggerDialogue();
+            });
+    }
+
+    public void TriggerDialogue()
+    {
         // Display Dialogue
         var dialogue = GetDialogue();
         dialogueText.text = string.Empty;
@@ -126,39 +153,6 @@ public class HomeCharacter : MonoBehaviour
         }
 
         animSequence = DOTween.Sequence()
-            .AppendCallback(() => { dialogueBack.DOScaleY(1.0f, 0.25f); })
-            .AppendInterval(0.25f)
-            .AppendCallback(() => {
-                dialogueText.DOFade(1.0f, 0.25f);
-                dialogueText.DOText(LocalizationManager.Localize(dialogue.dialogueID), Mathf.Clamp(clipLength, 1.0f, 3.0f)).SetEase(Ease.Linear);
-                if (dialogue.clip != null)
-                {
-                    AudioManager.Instance.PlayClip(dialogue.clip);
-                }
-            })
-            .AppendInterval(extraDisplayTime + clipLength)
-            .AppendCallback(() => { dialogueText.DOFade(0.0f, 0.25f); })
-            .AppendInterval(0.25f)
-            .AppendCallback(() => {
-                dialogueBack.DOScaleY(0.0f, 0.25f);
-            });
-    }
-
-    private void OnChangeCharacter()
-    {
-        // Display Dialogue
-        var dialogue = GetDialogue();
-        dialogueText.text = string.Empty;
-        dialogueText.alpha = 0.0f;
-
-        float clipLength = 0.0f;
-        if (dialogue.clip != null)
-        {
-            clipLength = dialogue.clip.length;
-        }
-
-        animSequence = DOTween.Sequence()
-            .AppendInterval(0.35f)
             .AppendCallback(() => { dialogueBack.DOScaleY(1.0f, 0.25f); })
             .AppendInterval(0.25f)
             .AppendCallback(() => {

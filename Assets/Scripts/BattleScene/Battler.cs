@@ -257,6 +257,13 @@ public class Battler : MonoBehaviour
 
     public void PlayAnimation(BattlerAnimationType type)
     {
+        if (CheckDead())
+        {
+            // 死亡状態はリタイアアニメションしか流れない
+            graphic.sprite = animations.retire;
+            return;
+        }
+
         switch (type)
         {
             case BattlerAnimationType.attack:
