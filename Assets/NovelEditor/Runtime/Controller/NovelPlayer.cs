@@ -766,12 +766,12 @@ namespace NovelEditor
         /// <param name="newData">次のセリフのデータ</param>
         async void SetNextDialogue(NovelData.ParagraphData.Dialogue newData, int maxDialogue)
         {
+            _audioPlayer.SetSound(newData);
+
             //画像の変更
             _isImageChangeing = true;
             _imageCTS = new CancellationTokenSource();
             _isImageChangeing = !await _novelUI.SetNextImage(newData, _imageCTS.Token);
-
-            _audioPlayer.SetSound(newData);
 
             //テキストを1文字ずつ再生
             _textCTS = new CancellationTokenSource();
