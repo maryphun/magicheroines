@@ -13,21 +13,30 @@ MonoBehaviour:
   m_Name: No5
   m_EditorClassIdentifier: 
   pathName: No5
-  characterSprite: {fileID: 21300000, guid: db739741bd2948f4f8576690beb408d6, type: 3}
+  characterSprite: {fileID: 21300000, guid: 6e4933831e4cfd1469077e622cbd41ed, type: 3}
   dialogueList:
   - startStage: 0
     endStage: 99
     dialogueID: HomeChar.No5_1-1
     clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
   - startStage: 0
     endStage: 99
     dialogueID: HomeChar.No5_1-2
     clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
   - startStage: 0
     endStage: 99
     dialogueID: HomeChar.No5_1-3
     clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
   - startStage: 0
-    endStage: 99
+    endStage: 3
     dialogueID: HomeChar.No5_1-4
     clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 93eaeb3a1873cb04c93af88e8101e9cc, type: 3}
+  - startStage: 7
+    endStage: 99
+    dialogueID: HomeChar.No5_2-3
+    clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}

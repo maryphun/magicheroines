@@ -351,11 +351,28 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
-    /// ホーム台詞キャラクターを取得
+    /// ホーム台詞キャラクターを追加
     /// </summary>
     public void AddHomeCharacter(HomeDialogue data)
     {
         playerData.homeDialogue.Add(data);
+    }
+
+    /// <summary>
+    /// ホーム台詞キャラクターを排除
+    /// </summary>
+    public void RemoveHomeCharacter(string dataPathName)
+    {
+        for (int i = 0; i < playerData.homeDialogue.Count; i++)
+        {
+            if (string.Equals(playerData.homeDialogue[i].pathName, dataPathName))
+            {
+                playerData.homeDialogue.RemoveAt(i);
+                return;
+            }
+        }
+
+        Debug.LogWarning("削除しようとしているホームキャラが存在していない");
     }
 
     /// <summary>

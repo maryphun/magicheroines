@@ -449,6 +449,7 @@ public class TrainPanel : MonoBehaviour
             case 4: // 立花
                 HomeDialogue rikka = Resources.Load<HomeDialogue>("HomeDialogue/Rikka");
                 ProgressManager.Instance.AddHomeCharacter(rikka);
+                ProgressManager.Instance.RemoveHomeCharacter("No5"); // 立花が闇落ちした後No5をホームキャラから排除
                 homeCharacterScript.SetToLastCharacter();
                 return;
             case 5: // エレナ
