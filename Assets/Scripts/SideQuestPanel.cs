@@ -107,11 +107,13 @@ public class SideQuestPanel : MonoBehaviour
         const float animationTime = 1.0f;
 
         // ƒV[ƒ“‘JˆÚ
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
         AlphaFadeManager.Instance.FadeOut(animationTime);
 
         DOTween.Sequence()
                .AppendInterval(animationTime)
-               .AppendCallback(() => { SceneManager.LoadScene("Battle", LoadSceneMode.Single); });
+               .AppendCallback(() => { asyncLoad.allowSceneActivation = true; });
     }
 
     public void OnClickSideQuestBank()
@@ -132,11 +134,13 @@ public class SideQuestPanel : MonoBehaviour
         const float animationTime = 1.0f;
 
         // ƒV[ƒ“‘JˆÚ
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
         AlphaFadeManager.Instance.FadeOut(animationTime);
 
         DOTween.Sequence()
                .AppendInterval(animationTime)
-               .AppendCallback(() => { SceneManager.LoadScene("Battle", LoadSceneMode.Single); });
+               .AppendCallback(() => { asyncLoad.allowSceneActivation = true; });
     }
 
     public void OnClickSideQuestResearch()
@@ -157,11 +161,13 @@ public class SideQuestPanel : MonoBehaviour
         const float animationTime = 1.0f;
 
         // ƒV[ƒ“‘JˆÚ
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
         AlphaFadeManager.Instance.FadeOut(animationTime);
 
         DOTween.Sequence()
                .AppendInterval(animationTime)
-               .AppendCallback(() => { SceneManager.LoadScene("Battle", LoadSceneMode.Single); });
+               .AppendCallback(() => { asyncLoad.allowSceneActivation = true; });
     }
 
     private void CheckEquipmentDrop()

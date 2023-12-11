@@ -198,10 +198,13 @@ public class StoryManager : MonoBehaviour
     {
         // ƒV[ƒ“‘JˆÚ
         AlphaFadeManager.Instance.FadeOut(animationTime);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
         if (animationTime > 0)
         {
             yield return new WaitForSeconds(animationTime);
         }
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        while (asyncLoad.progress < 0.9f) yield return null; // wait until the scene is completely loaded 
+        asyncLoad.allowSceneActivation = true;
     }
 }

@@ -84,6 +84,14 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
         fadeAlpha.color = new Color(0, 0, 0, start);
         fadeAlpha.DOFade(end, time);
     }
+    
+    public void FadeInstant(float end)
+    {
+        if (!initialized) Initializer();
+
+        fadeAlpha.DOComplete();
+        fadeAlpha.color = new Color(0, 0, 0, end);
+    }
 
     public void FadeOutThenFadeIn(float time = 0.0f)
     {
@@ -109,7 +117,7 @@ public class AlphaFadeManager : SingletonMonoBehaviour<AlphaFadeManager>
     /// <summary>
     /// É}ÉEÉXëÄçÏ
     /// </summary>
-    private void SetEnableMouse(bool value)
+    public void SetEnableMouse(bool value)
     {
         if (value)
         {

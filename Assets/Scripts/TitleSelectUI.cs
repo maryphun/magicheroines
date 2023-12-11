@@ -240,8 +240,13 @@ public class TitleSelectUI : MonoBehaviour
         selection[1].rectTransform.DOScale(new Vector3(selectionScale, selectionScale, selectionScale), animationTime);
         selection[1].DOFade(0.5f, animationTime);
 
-        if (currentSelection == TitleSelection.NewGame || currentSelection == TitleSelection.Credit)
+        // シーン遷移
+        string sceneToLoad = SceneTransition(currentSelection);
+        if (sceneToLoad != string.Empty)
         {
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Single);
+            asyncLoad.allowSceneActivation = false;
+
             // BGM停止
             AudioManager.Instance.StopMusicWithFade(animationTime);
             // ニューゲームの場合の特殊処理
@@ -249,10 +254,9 @@ public class TitleSelectUI : MonoBehaviour
             // ニューゲームなので　ゲーム進捗を初期状態にする
             ProgressManager.Instance.InitializeProgress();
             yield return new WaitForSeconds(animationTime);
+            while (asyncLoad.progress < 0.9f) yield return null; // wait until the scene is completely loaded 
+            asyncLoad.allowSceneActivation = true;
         }
-
-        // シーン遷移
-        SceneTransition(currentSelection);
 
         // complete
         selection[0].DOComplete();
@@ -321,30 +325,28 @@ public class TitleSelectUI : MonoBehaviour
         keyPrepressed = KeyCode.DownArrow;
     }
 
-    private void SceneTransition(TitleSelection targetScene)
+    private string SceneTransition(TitleSelection targetScene)
     {
         switch (targetScene)
         {
             case TitleSelection.Credit:
-                SceneManager.LoadScene("Credit", LoadSceneMode.Single);
-                break;
+                return "Credit";
             case TitleSelection.Exit:
                 Application.Quit();
-                break;
+                return string.Empty;
             case TitleSelection.Gallery:
                 Init();
-                break;
+                return string.Empty;
             case TitleSelection.Load:
                 saveloadPanel.OpenSaveLoadPanel(true);
-                break;
+                return string.Empty;
             case TitleSelection.NewGame:
-                SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
-                break;
+                return "Tutorial";
             case TitleSelection.Option:
                 optionPanel.OpenOptionPanel();
-                break;
+                return string.Empty;
             default:
-                break;
+                return string.Empty;
         }
     }
 }

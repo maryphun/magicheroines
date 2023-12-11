@@ -67,6 +67,8 @@ public class TutorialManager : MonoBehaviour
     public void EndTutorial()
     {
         // ƒV[ƒ“‘JˆÚ
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Home", LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
         DOTween.Sequence()
             .AppendCallback(() => 
             {
@@ -74,9 +76,9 @@ public class TutorialManager : MonoBehaviour
                 AlphaFadeManager.Instance.FadeOut(sceneTransitionTime);
             })
             .AppendInterval(sceneTransitionTime)
-            .AppendCallback(() => 
+            .AppendCallback(() =>
             {
-                SceneManager.LoadScene("Home", LoadSceneMode.Single);
+                asyncLoad.allowSceneActivation = true;
             });
     }
 }

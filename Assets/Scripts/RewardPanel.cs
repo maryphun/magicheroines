@@ -135,8 +135,10 @@ public class RewardPanel : MonoBehaviour
 
             // scene transition
             AlphaFadeManager.Instance.FadeOut(1.0f);
-            string nextScene = BattleSetup.isStoryMode ? "Home" : "WorldMap"; 
-            DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { SceneManager.LoadScene(nextScene, LoadSceneMode.Single); });
+            string nextScene = BattleSetup.isStoryMode ? "Home" : "WorldMap";
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Single);
+            asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
+            DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { asyncLoad.allowSceneActivation = true; });
         }
     }
 
@@ -258,6 +260,10 @@ public class RewardPanel : MonoBehaviour
 
     public void StartEventBattle()
     {
-        DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { SceneManager.LoadScene("Battle", LoadSceneMode.Single); });
+        // scene transition
+        string nextScene = "Battle";
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
+        DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { asyncLoad.allowSceneActivation = true; });
     }
 }

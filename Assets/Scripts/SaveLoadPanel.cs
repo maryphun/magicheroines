@@ -259,10 +259,16 @@ public class SaveLoadPanel : MonoBehaviour
 
     public IEnumerator SceneTransition(string sceneName = "Home", float animationTime = 1.0f)
     {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
+
         // シーン遷移
         AlphaFadeManager.Instance.FadeOut(animationTime);
+
         yield return new WaitForSeconds(animationTime);
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        while (asyncLoad.progress < 0.9f) yield return null; // wait until the scene is completely loaded 
+
+        asyncLoad.allowSceneActivation = true;
     }
 }
 
@@ -274,8 +280,10 @@ public static class AutoSave
     /// オートセーブ実行
     /// </summary>
     public static void ExecuteAutoSave()
-    {
-        if (ReferenceEquals(ProgressManager.Instance.PlayerData, null)) return; // PlayerDataが存在しない時はオートセーブ行わない、そもそもデバッグ時にしか発生しない状況のはず
+    { 
+        // PlayerDataが存在しない時はオートセーブ行わない、そもそもデバッグ時にしか発生しない状況のはず
+        if (ReferenceEquals(ProgressManager.Instance.PlayerData, null)) return;
+        if (!ProgressManager.Instance.IsInitialized) return;
 
         SaveDataManager.SaveJsonData(AutoSave.AutoSaveSlot, LocalizationManager.Localize("System.AutoSave"));
         PlayerPrefs.SetInt("LastSavedSlot", AutoSave.AutoSaveSlot);

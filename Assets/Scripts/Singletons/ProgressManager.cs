@@ -25,6 +25,9 @@ public struct PlayerData
 
 public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 {
+    public bool IsInitialized { get { return isInitialized; } }
+    [SerializeField] bool isInitialized = false;
+
     public PlayerData PlayerData { get { return playerData; } }
     [SerializeField] PlayerData playerData;
 
@@ -85,6 +88,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         var randomizer = new System.Random();
         int seed = randomizer.Next(int.MinValue, int.MaxValue);
         UnityEngine.Random.InitState(seed + System.Environment.TickCount);
+
+        // フラグ更新
+        isInitialized = true;
     }
 
     public void ApplyLoadedData(PlayerData data)
@@ -95,6 +101,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         var randomizer = new System.Random();
         int seed = randomizer.Next(int.MinValue, int.MaxValue);
         UnityEngine.Random.InitState(seed + System.Environment.TickCount);
+
+        // フラグ更新
+        isInitialized = true;
     }
 
     /// <summary>

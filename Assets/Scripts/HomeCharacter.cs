@@ -34,6 +34,8 @@ public class HomeCharacter : MonoBehaviour
         lastDialogueIndex = -1;
         animSequence = DOTween.Sequence();
 
+        if (!ProgressManager.Instance.IsInitialized) return;
+
         Initialization();
         SetupCharacter();
         TriggerDialogue();
