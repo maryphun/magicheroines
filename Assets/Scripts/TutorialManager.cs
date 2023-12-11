@@ -18,12 +18,12 @@ public class TutorialManager : MonoBehaviour
         AlphaFadeManager.Instance.FadeIn(sceneTransitionTime);
         if (ProgressManager.Instance.GetCurrentStageProgress() == 1) // チュートリアルバトル前
         {
-            AudioManager.Instance.PlayMusicWithFade("Tutorial1", 6.0f);
+            AudioManager.Instance.PlayMusicWithFade("Loop 3 (Tutorial)", 6.0f);
             NovelSingletone.Instance.PlayNovel("Tutorial1", true, LookAtMonitor);
         }
         else // バトル終了後
         {
-            AudioManager.Instance.PlayMusicWithFade("Tutorial1", 6.0f);
+            AudioManager.Instance.PlayMusicWithFade("Loop 3 (Tutorial)", 6.0f);
             NovelSingletone.Instance.PlayNovel("Tutorial4", true, EndTutorial);
             tutorial4.SetActive(true);
         }

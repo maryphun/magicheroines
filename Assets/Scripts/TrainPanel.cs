@@ -371,7 +371,7 @@ public class TrainPanel : MonoBehaviour
         UpdateCharacterData();
 
         // Play home music
-        AudioManager.Instance.PlayMusicWithFade("HomeScene", 4.0f);
+        AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 4.0f);
     }
 
     public void CloseUnderDevelopmentPopup()

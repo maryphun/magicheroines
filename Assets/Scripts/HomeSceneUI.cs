@@ -18,7 +18,7 @@ public class HomeSceneUI : MonoBehaviour
     {
         AlphaFadeManager.Instance.FadeIn(1.0f);
 
-        AudioManager.Instance.PlayMusicWithFade("HomeScene", 2.0f);
+        AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 2.0f);
 
         // HomeSceneに入るたびにオートセーブを実行する
         AutoSave.ExecuteAutoSave();
