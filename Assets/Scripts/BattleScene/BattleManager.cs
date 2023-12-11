@@ -36,6 +36,7 @@ public class Battle : MonoBehaviour
     [SerializeField] private FloatingText floatingTextOrigin;
     [SerializeField] private BattleSceneTutorial battleSceneTutorial;
     [SerializeField] private CharacterInfoPanel characterInfoPanel;
+    [SerializeField] private BattleLog battleLogScript;
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject escapeButton;
     [SerializeField] private CanvasGroup escapePopup;
@@ -505,6 +506,9 @@ public class Battle : MonoBehaviour
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+            // ログ
+            AddBattleLog(attacker.character_name + "の攻撃！ " + target.character_name + " に " + realDamage.ToString() + " のダメージを与えた！");
         }
         else
         {
@@ -813,6 +817,14 @@ public class Battle : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
+    /// <summary>
+    /// 戦闘ログを追加
+    /// </summary>
+    public void AddBattleLog(string text)
+    {
+        battleLogScript.RegisterNewLog(text);
     }
 
     #region Escape
