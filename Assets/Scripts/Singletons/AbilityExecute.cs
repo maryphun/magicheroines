@@ -105,6 +105,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     #endregion common methods
 
     #region abilities
+    /// <summary>
+    /// 深呼吸 (戦闘員)
+    /// </summary>
     public void DeepBreath()
     {
         var target = battleManager.GetCurrentBattler();
@@ -141,6 +144,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     battleManager.NextTurn(false);
                 });
     }
+    /// <summary>
+    /// パワフルパンチ (戦闘員)
+    /// </summary>
     public void PowerfulPunch()
     {
         var self = battleManager.GetCurrentBattler();
@@ -216,7 +222,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.PlayAnimation(BattlerAnimationType.attacked);
                     self.SpawnAttackVFX(target);
                     AudioManager.Instance.PlaySFX("PowerfulPunch", 1f);
-                    target.Shake(1.75f);
+                    target.Shake(0.75f);
                     target.DeductHP(dmg);
 
                     // text
@@ -246,6 +252,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     battleManager.AddBuffToBattler(self, BuffType.stun, 1, 0);
                 });
     }
+
+    /// <summary>
+    /// 全力タックル (戦闘員)
+    /// </summary>
     public void Tackle()
     {
         var self = battleManager.GetCurrentBattler();
@@ -320,7 +330,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.PlayAnimation(BattlerAnimationType.attacked);
                     self.SpawnAttackVFX(target);
                     AudioManager.Instance.PlaySFX("PowerfulPunch", 1f);
-                    target.Shake(1.75f);
+                    target.Shake(0.75f);
 
                     // stun for 1 turn
                     battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
@@ -356,6 +366,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 });
     }
 
+    /// <summary>
+    /// 吸収触手 (触手怪人)
+    /// </summary>
     public void SuckingTentacle()
     {
         var self = battleManager.GetCurrentBattler();
@@ -415,6 +428,97 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // text
                     floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, CustomColor.SP());
+                })
+                .AppendInterval(animationTime)
+                .AppendCallback(() =>
+                {
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    target.PlayAnimation(BattlerAnimationType.idle);
+
+                    self.GetComponent<RectTransform>().DOMove(originalPos, characterMoveTime);
+
+                    if (audio) audio.Stop();
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // return to original parent
+                    self.transform.SetParent(originalParent);
+                    self.transform.SetSiblingIndex(originalChildIndex);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// 触手サービス (触手怪人)
+    /// </summary>
+    public void TentacleService()
+    {
+
+    }
+
+    /// <summary>
+    /// 丸呑み (触手怪人)
+    /// </summary>
+    public void Capture()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        int attackDownAmount = (int)((float)target.attack * 0.25f);
+        int speedDownAmount = (int)((float)target.speed * 0.25f);
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Capture");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // キャラ移動の準備
+        Transform originalParent = self.transform.parent;
+        int originalChildIndex = self.transform.GetSiblingIndex();
+
+        var targetPos = target.GetComponent<RectTransform>().position;
+        var originalPos = self.GetComponent<RectTransform>().position;
+        const float characterMoveTime = 0.35f;
+        const float animationTime = 1f;
+
+        AudioSource audio = AudioManager.Instance.GetSFXSource();
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+                    // move
+                    self.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // change character hirachy temporary
+                    self.transform.SetParent(target.transform);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    self.PlayAnimation(BattlerAnimationType.magic);
+                    target.PlayAnimation(BattlerAnimationType.attacked);
+
+                    self.Shake(animationTime);
+                    target.Shake(animationTime);
+
+                    // debuff
+                    battleManager.AddBuffToBattler(target, BuffType.attack_down, Random.Range(2, 4), attackDownAmount);
+                    battleManager.AddBuffToBattler(target, BuffType.speed_down, Random.Range(2, 4), speedDownAmount);
+
+                    // SE
+                    audio = AudioManager.Instance.PlaySFX("Tentacle");
                 })
                 .AppendInterval(animationTime)
                 .AppendCallback(() =>
