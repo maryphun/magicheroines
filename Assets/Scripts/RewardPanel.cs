@@ -247,7 +247,7 @@ public class RewardPanel : MonoBehaviour
             BattleSetup.AddTeammate("9.Battler(Event)");
             BattleSetup.AddTeammate("9.Battler(Event)");
             BattleSetup.AddEnemy("Erena_Enemy");
-            BattleSetup.SetBattleBGM("ErenaBattle");
+            BattleSetup.SetBattleBGM("Loop 5 (ErenaBattle)");
 
             DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => {
                 AlphaFadeManager.Instance.FadeIn(0.25f); 

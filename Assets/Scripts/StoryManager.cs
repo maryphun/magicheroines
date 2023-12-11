@@ -74,7 +74,7 @@ public class StoryManager : MonoBehaviour
             case 6:
                 {
                     BattleSetup.AddEnemy("Rikka_Enemy");
-                    BattleSetup.SetBattleBGM("RikkaBattle");
+                    BattleSetup.SetBattleBGM("Loop 37 (RikkaBattle)");
                     BattleSetup.SetReward(2000, 300);
                     NovelSingletone.Instance.PlayNovel("Chapter2-3 Prebattle", true, GoToBattle);
                 }
@@ -83,7 +83,7 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Drone 2");
                     BattleSetup.AddEnemy("Tank");
-                    BattleSetup.SetBattleBGM("Cyber45");
+                    BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
                     BattleSetup.SetReward(650, 75);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
@@ -92,7 +92,7 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Drone 2");
                     BattleSetup.AddEnemy("Tank");
-                    BattleSetup.SetBattleBGM("Cyber45");
+                    BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
                     BattleSetup.SetReward(700, 75);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
@@ -100,7 +100,7 @@ public class StoryManager : MonoBehaviour
             case 9:
                 {
                     BattleSetup.AddEnemy("Erena_Enemy");
-                    BattleSetup.SetBattleBGM("ErenaBattle");
+                    BattleSetup.SetBattleBGM("Loop 5 (ErenaBattle)");
                     BattleSetup.SetReward(2500, 300);
                     NovelSingletone.Instance.PlayNovel("Chapter3-3 Prebattle", true, GoToBattle);
                 }
