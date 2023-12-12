@@ -11,6 +11,7 @@ public class ScenarioDebuggerUI : MonoBehaviour
     [SerializeField] NovelData data;
 
     private bool isPlaying = false;
+    private int screenshotNumber = 0;
 
     public void PlayScript()
     {
@@ -31,6 +32,14 @@ public class ScenarioDebuggerUI : MonoBehaviour
                 isPlaying = false;
                 UICanvas.enabled = true;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F2))
+        {
+            screenshotNumber++;
+            string fileName = screenshotNumber.ToString() + ".png";
+            Debug.Log("output " + fileName);
+            ScreenCapture.CaptureScreenshot(fileName, 1);
         }
     }
 }
