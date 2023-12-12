@@ -61,27 +61,29 @@ public class BattleLog : MonoBehaviour
         }
         var canvasGrp = obj.GetComponent<CanvasGroup>();
         canvasGrp.alpha = 0.0f;
-        canvasGrp.DOFade(1.0f, animSpeed);
+        canvasGrp.DOFade(1.0f, animSpeed * 2.0f);
 
         // resize
         float y_deltaSize = obj.GetComponent<RectTransform>().sizeDelta.y;
         obj.GetComponent<RectTransform>().sizeDelta = new Vector2(textComponent.GetRenderedValues().x + 40.0f, y_deltaSize);
         obj.GetComponent<RectTransform>().localPosition = Vector2.zero;
+        obj.GetComponent<RectTransform>().localScale = Vector3.zero;
+        obj.GetComponent<RectTransform>().DOScale(Vector3.one, animSpeed);
 
-        logObjects.Add(new Pair<GameObject, float>(obj, displayTime));
+        logObjects.Insert(0, new Pair<GameObject, float>(obj, displayTime));
 
         // move older logs upward
         float alphaPerCnt = 1.0f / maxLogDisplay;
         for (int i = 0; i < logObjects.Count; i++)
         {
-            logObjects[i].First.GetComponent<RectTransform>().DOLocalMoveY(-y_deltaSize * (i - logObjects.Count), animSpeed);
-            logObjects[i].First.GetComponent<CanvasGroup>().DOFade(1.0f - (alphaPerCnt * i), animSpeed);
+            logObjects[i].First.GetComponent<RectTransform>().DOLocalMoveY(i * y_deltaSize, animSpeed);
+            logObjects[i].First.GetComponent<CanvasGroup>().DOFade(1.0f - (i * alphaPerCnt), animSpeed);
         }
 
         if (logObjects.Count > maxLogDisplay)
         {
-            RemoveLog(logObjects[0].First);
-            logObjects.RemoveAt(0);
+            RemoveLog(logObjects[logObjects.Count-1].First);
+            logObjects.RemoveAt(logObjects.Count - 1);
         }
     }
 
@@ -107,7 +109,7 @@ public class BattleLog : MonoBehaviour
             if (logObjects[i].Second == 0.0f)
             {
                 RemoveLog(logObjects[i].First);
-                logObjects.RemoveAt(0);
+                logObjects.RemoveAt(i);
                 i--;
             }
         }

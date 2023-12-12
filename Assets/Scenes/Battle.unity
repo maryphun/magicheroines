@@ -5935,6 +5935,7 @@ MonoBehaviour:
   floatingTextOrigin: {fileID: 6598968398884241739, guid: 466ba757e9a3b7049bf17c5291a3b1c3, type: 3}
   battleSceneTutorial: {fileID: 1925851522}
   characterInfoPanel: {fileID: 859521357}
+  battleLogScript: {fileID: 1595009054}
   canvas: {fileID: 1458978426}
   escapeButton: {fileID: 839053959}
   escapePopup: {fileID: 2011791730}
@@ -6945,7 +6946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -325}
+  m_AnchoredPosition: {x: 0, y: -225}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1595009054
@@ -6961,10 +6962,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLogDisplay: 4
-  displayTime: 5
+  displayTime: 53.48
   animSpeed: 0.25
-  parentObj: {fileID: 0}
-  logObjectOrigin: {fileID: 0}
+  fadeTime: 0.25
+  parentObj: {fileID: 1595009053}
+  logObjectOrigin: {fileID: 847355664}
 --- !u!1 &1601643805
 GameObject:
   m_ObjectHideFlags: 0

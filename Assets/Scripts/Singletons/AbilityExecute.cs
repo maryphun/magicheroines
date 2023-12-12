@@ -929,6 +929,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             });
     }
 
+    // タンクのデフォルト攻撃
     public void TankAttack()
     {
         var self = battleManager.GetCurrentBattler();
@@ -938,6 +939,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         const float ChargeTime = 0.75f;
         self.Shake(ChargeTime);
         AudioManager.Instance.PlaySFX("TankStandby");
+
+        // ログ
+        battleManager.AddBattleLog(self.character_name + " がビームを発射！");
 
         var originalPosition = selfRect.localPosition.x;
         DOTween.Sequence().AppendInterval(ChargeTime)
@@ -968,6 +972,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 // animation
                 target.Shake(0.75f);
                 target.PlayAnimation(BattlerAnimationType.attacked);
+
+
+                // ログ
+                battleManager.AddBattleLog(target.character_name + " に" + realDamage.ToString() + "のダメージを与えた！");
 
                 // VFX
                 self.SpawnAttackVFX(target);

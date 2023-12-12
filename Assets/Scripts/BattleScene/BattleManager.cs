@@ -436,6 +436,9 @@ public class Battle : MonoBehaviour
 
             // SE再生
             AudioManager.Instance.PlaySFX("SystemActionPanel");
+
+            // ログ
+            AddBattleLog(battler.character_name + " が待機する。");
             return;
         }
 
@@ -455,6 +458,9 @@ public class Battle : MonoBehaviour
 
                     // effect
                     battler.AddSP(healAmount);
+
+                    // ログ
+                    AddBattleLog(battler.character_name + " が休憩する。SP" + healAmount.ToString() + " 回復した");
                 })
                 .AppendInterval(0.25f)
                 .AppendCallback(() =>
@@ -475,6 +481,9 @@ public class Battle : MonoBehaviour
         targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.5f, targetPos.y);
         var originalPos = attacker.GetComponent<RectTransform>().position;
         attacker.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
+
+        // ログ
+        AddBattleLog(attacker.character_name + "の攻撃！");
 
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
@@ -508,7 +517,7 @@ public class Battle : MonoBehaviour
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
             // ログ
-            AddBattleLog(attacker.character_name + "の攻撃！ " + target.character_name + " に " + realDamage.ToString() + " のダメージを与えた！");
+            AddBattleLog("　" + target.character_name + " に " + realDamage.ToString() + " のダメージを与えた！");
         }
         else
         {
@@ -529,6 +538,9 @@ public class Battle : MonoBehaviour
             // create floating text
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), "MISS", 32, CustomColor.miss());
+
+            // ログ
+            AddBattleLog(attacker.character_name + "の攻撃！ " + target.character_name + " に避けられた！");
         }
 
         yield return new WaitForSeconds(attackAnimPlayTime);
