@@ -161,6 +161,13 @@ public class Battle : MonoBehaviour
     /// </summary>
     public void NextTurn(bool isFirstTurn)
     {
+        // 戦闘ログ　再起不能の告知
+        for (int i = 0; i < turnBaseManager.DeathBattler.Count; i++)
+        {
+            AddBattleLog(System.String.Format(Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("BattleLog.Retire"), turnBaseManager.DeathBattler[i].CharacterNameColored));
+        }
+        turnBaseManager.DeathBattler.Clear();
+
         // ターンを始める前に戦闘が終わっているかをチェック
         if (IsVictory())
         {

@@ -262,7 +262,7 @@ Ability.SuckingTentacle,吸収触手
 Ability.SuckingTentacle_Info,相手のSPを半分吸収する
 Ability.TentacleService,触手サービス
 Ability.TentacleService_Info,SPを全部仲間単体に分け与える。女性相手のみ効果有る
-Ability.Capture,丸呑み
+Ability.Capture,媚薬ガス
 Ability.Capture_Info,敵単体の攻撃力・スピードを一時25%ダウン
 Ability.SelfRepair,自己修復
 Ability.SelfRepair_Info,25% HP 回復
@@ -324,3 +324,4 @@ BattleLog.AbilityExecute,{0}　からの {1}！
 BattleLog.AbilityExecuteSelf,{0}　が{1}する。
 BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
 BattleLog.SPDrain,{0}　のSP {1} 吸収した！ 
+BattleLog.Retire,{0}　が再起不能となった。

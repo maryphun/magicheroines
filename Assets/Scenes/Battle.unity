@@ -5467,6 +5467,7 @@ MonoBehaviour:
   gapSpace: 5
   originIcon: {fileID: 1122966180}
   battlerList: []
+  deathBattler: []
   iconList: []
 --- !u!1 &1201443499
 GameObject:
@@ -6530,8 +6531,8 @@ RectTransform:
   - {fileID: 1925851519}
   - {fileID: 839053960}
   - {fileID: 2011791727}
-  - {fileID: 1999713338}
   - {fileID: 1595009053}
+  - {fileID: 1999713338}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

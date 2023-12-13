@@ -19,8 +19,11 @@ public class TurnBase : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private List<Battler> battlerList;
+    [SerializeField] private List<Battler> deathBattler;
     [SerializeField] private List<Image> iconList;
     [SerializeField] private List<Tuple<Battler, Image>> characterInOrder;
+
+    [HideInInspector] public List<Battler> DeathBattler { get { return deathBattler; } }
 
     public void Initialization(List<Battler> playerCharacters, List<Battler> enemies)
     {
@@ -29,6 +32,7 @@ public class TurnBase : MonoBehaviour
 
         // Listを合成する
         battlerList = new List<Battler>(playerCharacters); // 元のデータを影響しないためにコピーを作っとく
+        deathBattler = new List<Battler>();
         battlerList = battlerList.Concat(enemies).ToList();
 
         // 死亡したものを排除
@@ -76,6 +80,9 @@ public class TurnBase : MonoBehaviour
             {
                 // アイコンを非表示に
                 characterInOrder[i].Item2.DOColor(new Color(0,0,0,0), rearrangeAnimationTime);
+
+                // 戦闘ログ用　再起不能の告知
+                deathBattler.Add(characterInOrder[i].Item1);
 
                 characterInOrder.RemoveAt(i);
                 i--;
