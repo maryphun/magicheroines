@@ -7,6 +7,7 @@ using System;
 using System.Linq;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Assets.SimpleLocalization.Scripts;
 
 public class Battle : MonoBehaviour
 {
@@ -437,8 +438,8 @@ public class Battle : MonoBehaviour
             // SE再生
             AudioManager.Instance.PlaySFX("SystemActionPanel");
 
-            // ログ
-            AddBattleLog(battler.character_name + " が待機する。");
+            // ログ ({0}　が待機する。！)
+            AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Idle"), battler.CharacterNameColored));
             return;
         }
 
@@ -459,8 +460,8 @@ public class Battle : MonoBehaviour
                     // effect
                     battler.AddSP(healAmount);
 
-                    // ログ
-                    AddBattleLog(battler.character_name + " が休憩する。SP" + healAmount.ToString() + " 回復した");
+                    // ログ ({0}　が休憩をとった。SP　{1}　回復した。)
+                    AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.IdleSP"), battler.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.SP())));
                 })
                 .AppendInterval(0.25f)
                 .AppendCallback(() =>
@@ -482,8 +483,8 @@ public class Battle : MonoBehaviour
         var originalPos = attacker.GetComponent<RectTransform>().position;
         attacker.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
 
-        // ログ
-        AddBattleLog(attacker.character_name + "の攻撃！");
+        // ログ (xxx　の攻撃！)
+        AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Attack"), attacker.CharacterNameColored));
 
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
@@ -516,8 +517,8 @@ public class Battle : MonoBehaviour
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-            // ログ
-            AddBattleLog("　" + target.character_name + " に " + realDamage.ToString() + " のダメージを与えた！");
+            // ログ ({0}　に　{1}　のダメージを与えた！)
+            AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
         }
         else
         {
@@ -539,8 +540,8 @@ public class Battle : MonoBehaviour
             var floatingText = Instantiate(floatingTextOrigin, target.transform);
             floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), "MISS", 32, CustomColor.miss());
 
-            // ログ
-            AddBattleLog(attacker.character_name + "の攻撃！ " + target.character_name + " に避けられた！");
+            // ログ ({0}　に避けられた！)
+            AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.MissAttack"), target.CharacterNameColored));
         }
 
         yield return new WaitForSeconds(attackAnimPlayTime);
@@ -620,6 +621,17 @@ public class Battle : MonoBehaviour
 
         _buff.data.start.Invoke(target, value);
 
+        // 戦闘ログ出力する
+        if (_buff.data.battleLogStart != string.Empty)
+        {
+            string log = _buff.data.battleLogStart;
+            // {0}はキャラ名、{1}は数値
+            if (log.Contains("{0}")) log.Replace("{0}", target.CharacterNameColored);
+            if (log.Contains("{1}")) log.Replace("{1}", _buff.value.ToString());
+            // ログ追加
+            AddBattleLog(log);
+        }
+
         // Graphic
         // create icon
         _buff.graphic = new GameObject(_buff.data.name + "[" + turn.ToString() + "]");
@@ -665,6 +677,17 @@ public class Battle : MonoBehaviour
             buff.remainingTurn--;
             buff.data.update.Invoke(buff.target, buff.value);
             buff.text.text = buff.remainingTurn.ToString();
+            
+            // 戦闘ログ出力する
+            if (buff.data.battleLogUpdate != string.Empty)
+            {
+                string log = buff.data.battleLogUpdate;
+                // {0}はキャラ名、{1}は数値
+                if (log.Contains("{0}")) log.Replace("{0}", target.CharacterNameColored);
+                if (log.Contains("{1}")) log.Replace("{1}", buff.value.ToString());
+                // ログ追加
+                AddBattleLog(log);
+            }
 
             if (buff.remainingTurn <= 0)
             {
@@ -685,6 +708,17 @@ public class Battle : MonoBehaviour
         Destroy(instance.graphic, 0.5f);
         buffedCharacters.Remove(instance);
         ArrangeBuffIcon(instance.target);
+        
+        // 戦闘ログ出力する
+        if (instance.data.battleLogEnd != string.Empty)
+        {
+            string log = instance.data.battleLogEnd;
+            // {0}はキャラ名、{1}は数値
+            if (log.Contains("{0}")) log.Replace("{0}", instance.target.CharacterNameColored);
+            if (log.Contains("{1}")) log.Replace("{1}", instance.value.ToString());
+            // ログ追加
+            AddBattleLog(log);
+        }
     }
 
     /// <summary>

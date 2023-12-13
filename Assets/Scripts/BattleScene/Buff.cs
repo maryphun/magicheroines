@@ -14,6 +14,11 @@ public struct BuffData
     public Action<Battler, int> update;
     public Action<Battler, int> end;
     public bool isBad;
+
+    // êÌì¨ÉçÉOèoóÕóp
+    public string battleLogStart;
+    public string battleLogUpdate;
+    public string battleLogEnd;
 }
 
 [System.Serializable]
@@ -64,6 +69,9 @@ public static class BuffManager
             data.end = StunEnd;
             data.update = StunUpdate;
             data.isBad = true;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.StunStart");
+            data.battleLogUpdate = LocalizationManager.Localize("BattleLog.StunUpdate");
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.StunEnd");
             BuffList.Add(BuffType.stun, data);
         }
         // hurt
@@ -75,6 +83,9 @@ public static class BuffManager
             data.end = HurtEnd;
             data.update = HurtUpdate;
             data.isBad = true;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.HurtStart");
+            data.battleLogUpdate = LocalizationManager.Localize("BattleLog.HurtUpdate").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.damage()));
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.HurtEnd");
             BuffList.Add(BuffType.hurt, data);
         }
         // heal
@@ -86,6 +97,9 @@ public static class BuffManager
             data.end = HealEnd;
             data.update = HealUpdate;
             data.isBad = false;
+            data.battleLogStart = string.Empty;
+            data.battleLogUpdate = LocalizationManager.Localize("BattleLog.HealUpdate").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.heal()));
+            data.battleLogStart = string.Empty;
             BuffList.Add(BuffType.heal, data);
         }
         // shield up
@@ -97,6 +111,9 @@ public static class BuffManager
             data.end = ShieldUpEnd;
             data.update = ShieldUpUpdate;
             data.isBad = false;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.ShieldUpStart");
+            data.battleLogUpdate = string.Empty;
+            data.battleLogStart = string.Empty;
             BuffList.Add(BuffType.shield_up, data);
         }
         // shield down
@@ -108,6 +125,9 @@ public static class BuffManager
             data.end = ShieldDownEnd;
             data.update = ShieldDownUpdate;
             data.isBad = true;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.ShieldDownStart");
+            data.battleLogUpdate = string.Empty;
+            data.battleLogStart = string.Empty;
             BuffList.Add(BuffType.shield_down, data);
         }
         // attack up
@@ -119,6 +139,9 @@ public static class BuffManager
             data.end = AttackUpEnd;
             data.update = AttackUpUpdate;
             data.isBad = false;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.AttackUpStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
+            data.battleLogUpdate = string.Empty;
+            data.battleLogStart = string.Empty;
             BuffList.Add(BuffType.attack_up, data);
         }
         // attack down
@@ -130,6 +153,9 @@ public static class BuffManager
             data.end = AttackDownEnd;
             data.update = AttackDownUpdate;
             data.isBad = true;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.AttackDownStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
+            data.battleLogUpdate = string.Empty;
+            data.battleLogStart = string.Empty;
             BuffList.Add(BuffType.attack_down, data);
         }
         // speed up
@@ -141,6 +167,9 @@ public static class BuffManager
             data.end = SpeedUpEnd;
             data.update = SpeedUpUpdate;
             data.isBad = false;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.SpeedUpStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
+            data.battleLogUpdate = string.Empty;
+            data.battleLogStart = string.Empty;
             BuffList.Add(BuffType.speed_up, data);
         }
         // speed down
@@ -152,6 +181,9 @@ public static class BuffManager
             data.end = SpeedDownEnd;
             data.update = SpeedDownUpdate;
             data.isBad = true;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.SpeedDownStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
+            data.battleLogUpdate = string.Empty;
+            data.battleLogStart = string.Empty;
             BuffList.Add(BuffType.speed_down, data);
         }
 

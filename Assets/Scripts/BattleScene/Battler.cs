@@ -53,6 +53,8 @@ public class Battler : MonoBehaviour
     private RectTransform graphicRect;
     private Image mpBarFill;
 
+    [HideInInspector] public string CharacterNameColored { get { return CustomColor.AddColor(character_name, character_color); } }
+
     private void Awake()
     {
         graphicRect = graphic.GetComponent<RectTransform>();

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using Assets.SimpleLocalization.Scripts;
 using System.Linq;
+using System;
 
 public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 {
@@ -118,6 +119,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         string abilityName = LocalizationManager.Localize("Ability.DeepBreath");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
+        // ログ ({0}　が{1}する)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecuteSelf"), target.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.DeepBreath"), CustomColor.abilityName())));
+
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -137,6 +142,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     vfx.GetComponent<Image>().color = CustomColor.invisible();
                     vfx.GetComponent<Image>().DOFade(1.0f, 0.2f);
                     vfx.GetComponent<Image>().DOFade(0.0f, 0.2f).SetDelay(0.5f);
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -158,6 +166,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var floatingText = CreateFloatingText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.PowerfulPunch");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.PowerfulPunch"), CustomColor.abilityName())));
 
         // キャラ移動の準備
         Transform originalParent = self.transform.parent;
@@ -228,6 +240,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // text
                     floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), dmg.ToString(), 64, CustomColor.damage());
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(dmg, CustomColor.damage())));
                 })
                 .AppendInterval(attackStayTime)
                 .AppendCallback(() =>
@@ -265,6 +280,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var floatingText = CreateFloatingText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Tackle");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Tackle"), CustomColor.abilityName())));
 
         // キャラ移動の準備
         Transform originalParent = self.transform.parent;
@@ -381,6 +400,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         string abilityName = LocalizationManager.Localize("Ability.SuckingTentacle");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
+        // ログ ({0}　が触手を {1} に伸ばすーー！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Tentacle"), self.CharacterNameColored, target.CharacterNameColored));
+
         // キャラ移動の準備
         Transform originalParent = self.transform.parent;
         int originalChildIndex = self.transform.GetSiblingIndex();
@@ -428,6 +450,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // text
                     floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, CustomColor.SP());
+
+                    // ログ ({1}　のSP {0} 吸収した！ )
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.SPDrain"), target.CharacterNameColored, CustomColor.AddColor(suckAmount, CustomColor.SP())));
                 })
                 .AppendInterval(animationTime)
                 .AppendCallback(() =>
@@ -477,6 +502,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         string abilityName = LocalizationManager.Localize("Ability.Capture");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
+        // ログ ({0}　が触手を {1} に伸ばすーー！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Tentacle"), self.CharacterNameColored, target.CharacterNameColored));
+
         // キャラ移動の準備
         Transform originalParent = self.transform.parent;
         int originalChildIndex = self.transform.GetSiblingIndex();
@@ -514,8 +542,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     target.Shake(animationTime);
 
                     // debuff
-                    battleManager.AddBuffToBattler(target, BuffType.attack_down, Random.Range(2, 4), attackDownAmount);
-                    battleManager.AddBuffToBattler(target, BuffType.speed_down, Random.Range(2, 4), speedDownAmount);
+                    battleManager.AddBuffToBattler(target, BuffType.attack_down, UnityEngine.Random.Range(2, 4), attackDownAmount);
+                    battleManager.AddBuffToBattler(target, BuffType.speed_down, UnityEngine.Random.Range(2, 4), speedDownAmount);
 
                     // SE
                     audio = AudioManager.Instance.PlaySFX("Tentacle");
@@ -554,6 +582,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         string abilityName = LocalizationManager.Localize("Ability.SelfRepair");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
+        // ログ ({0}　が{1}する)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecuteSelf"), target.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.SelfRepair"), CustomColor.abilityName())));
+
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -570,6 +602,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // VFX
                     VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -603,6 +638,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // Audio
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.HealAttack"), CustomColor.abilityName())));
 
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
@@ -643,7 +682,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        float percentage = Random.Range(0.05f, 0.15f);
+        float percentage = UnityEngine.Random.Range(0.05f, 0.15f);
         int hpHealAmount = Mathf.RoundToInt((float)target.max_hp * percentage);
         int spHealAmount = Mathf.RoundToInt((float)target.max_mp * 0.8f);
         
@@ -662,6 +701,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // Audio
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
 
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.GreatRegen"), CustomColor.abilityName())));
+
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -673,7 +716,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     for (int i = 0; i < 5; i ++)
                     {
                         Vector2 move = Vector2.zero;
-                        move += Vector2.MoveTowards(move, move + new Vector2(Random.Range(-100, 100), Random.Range(-100, 100)), Random.Range(0.0f, 300.0f));
+                        move += Vector2.MoveTowards(move, move + new Vector2(UnityEngine.Random.Range(-100, 100), UnityEngine.Random.Range(-100, 100)), UnityEngine.Random.Range(0.0f, 300.0f));
                         VFXSpawner.SpawnVFX("Recovery", target.transform, target.GetMiddleGlobalPosition() + move);
                     }
 
@@ -717,9 +760,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         const int numOfTarget = 3;
         var targets = new Battler[numOfTarget];
-        targets[0] = targetBattlers[Random.Range(0, targetBattlers.Count)];
-        targets[1] = targetBattlers[Random.Range(0, targetBattlers.Count)];
-        targets[2] = targetBattlers[Random.Range(0, targetBattlers.Count)];
+        targets[0] = targetBattlers[UnityEngine.Random.Range(0, targetBattlers.Count)];
+        targets[1] = targetBattlers[UnityEngine.Random.Range(0, targetBattlers.Count)];
+        targets[2] = targetBattlers[UnityEngine.Random.Range(0, targetBattlers.Count)];
 
         // 元データを記録
         Transform originalParent = self.transform.parent;
@@ -741,6 +784,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // 残像生成コンポネント
         FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(4.0f, 0.05f, self.GetGraphicRectTransform().GetComponent<Image>());
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.QuickAttack"), CustomColor.abilityName())));
 
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
@@ -909,6 +956,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // SE
         AudioManager.Instance.PlaySFX("GunShoot");
 
+        // ログ ({0}　から {1} を放つ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Stungun"), self.CharacterNameColored, 
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Equipment.Stungun"), CustomColor.itemName())));
+        
         CreateProjectile("Stungun Projectile", startPoint, endPoint, projectileTime, true);
         DOTween.Sequence().AppendInterval(projectileTime)
             .AppendCallback(() => 
@@ -940,8 +991,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         self.Shake(ChargeTime);
         AudioManager.Instance.PlaySFX("TankStandby");
 
-        // ログ
-        battleManager.AddBattleLog(self.character_name + " がビームを発射！");
+        // ログ (xxx　のビーム攻撃！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.TankAttack"), self.CharacterNameColored));
 
         var originalPosition = selfRect.localPosition.x;
         DOTween.Sequence().AppendInterval(ChargeTime)
@@ -973,9 +1024,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 target.Shake(0.75f);
                 target.PlayAnimation(BattlerAnimationType.attacked);
 
-
-                // ログ
-                battleManager.AddBattleLog(target.character_name + " に" + realDamage.ToString() + "のダメージを与えた！");
+                // ログ ({0}　に　{1}　のダメージを与えた！)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                 // VFX
                 self.SpawnAttackVFX(target);

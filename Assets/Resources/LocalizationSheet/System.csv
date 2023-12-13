@@ -262,8 +262,8 @@ Ability.SuckingTentacle,吸収触手
 Ability.SuckingTentacle_Info,相手のSPを半分吸収する
 Ability.TentacleService,触手サービス
 Ability.TentacleService_Info,SPを全部仲間単体に分け与える。女性相手のみ効果有る
-Ability.Capture,捕縛
-Ability.Capture_Info,敵単体を2ターン行動不能にする
+Ability.Capture,丸呑み
+Ability.Capture_Info,敵単体の攻撃力・スピードを一時25%ダウン
 Ability.SelfRepair,自己修復
 Ability.SelfRepair_Info,25% HP 回復
 Ability.SelfEnchant,自己強化
@@ -293,3 +293,34 @@ HomeChar.No72_3-4,「私に感情はプログラムされていません。他�
 ,
 WorldScene,ワールド画面台詞
 World.Chapter2-3,「次の作戦には「笹谷 明穂」という戦力が必要です。先に調教のほうを進みましょう。」
+,
+BattleLog,戦闘ログ
+BattleLog.Attack,{0}　の攻撃！
+BattleLog.Damage,{0}　に　{1}　のダメージを与えた！
+BattleLog.HealHP,{0}　の HP {1} 回復した！
+BattleLog.HealSP,{0}　の SP {1} 回復した！
+BattleLog.MissAttack,{0}　に避けられた！
+BattleLog.ItemSelf,{0}　が {1} を使った。
+BattleLog.ItemSelfToSelf,{0}　が自分に {1} を使った。
+BattleLog.ItemOther,{0}　が {1} に {2} を使った。
+BattleLog.Idle,{0}　が待機する。
+BattleLog.IdleSP,{0}　が休憩をとった。SP　{1}　回復した。
+BattleLog.TankAttack,{0}　のビーム攻撃！
+BattleLog.StunStart,{0}　が行動不能となった！
+BattleLog.StunUpdate,{0}　はまだ動けない。
+BattleLog.StunEnd,{0}　が動けるようになった！
+BattleLog.HurtStart,{0}　が怪我をした！
+BattleLog.HurtUpdate,{0}　の怪我が痛む！　{1}　のダメージを受けた。
+BattleLog.HurtEnd,{0}　の怪我が治った。
+BattleLog.HealUpdate,{0}　の HP {1} 回復した。
+BattleLog.ShieldUpStart,{0}　の防御が固くなった。
+BattleLog.ShieldDownStart,{0}　の防御が弱くなった。
+BattleLog.AttackUpStart,{0}　の攻撃力が {1} 上がった！
+BattleLog.AttackDownStart,{0}　の攻撃力が {1} 下がった！
+BattleLog.SpeedUpStart,{0}　の動きが {1} 速くなった。
+BattleLog.SpeedDownStart,{0}　の動きが {1} 鈍くなった。
+BattleLog.Stungun,{0}　から {1} を放つ！
+BattleLog.AbilityExecute,{0}　からの {1}！
+BattleLog.AbilityExecuteSelf,{0}　が{1}する。
+BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
+BattleLog.SPDrain,{0}　のSP {1} 吸収した！ 

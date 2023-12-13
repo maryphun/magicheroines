@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Assets.SimpleLocalization.Scripts;
 
 public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 {
@@ -103,13 +104,16 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
                     // text
                     var floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + SPAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + SPAmount.ToString(), 64, CustomColor.SP());
 
                     // effect
                     target.Heal(SPAmount);
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Heal");
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealSP"), target.CharacterNameColored, CustomColor.AddColor(SPAmount, CustomColor.SP())));
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -136,13 +140,16 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
                     // text
                     var floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+"+healAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+"+healAmount.ToString(), 64, CustomColor.heal());
 
                     // effect
                     target.Heal(healAmount);
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Heal");
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -170,7 +177,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                 {
                     // text
                     var floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - battleManager.GetCurrentBattler().GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, new Color(1f, 0.75f, 0.33f));
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - battleManager.GetCurrentBattler().GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
 
                     // effect
                     target.DeductHP(damage);
@@ -186,6 +193,9 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
                     // VFX
                     VFXSpawner.SpawnVFX("Explode", target.transform, target.GetMiddleGlobalPosition());
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(damage, CustomColor.damage())));
                 })
                 .AppendInterval(0.2f)
                 .AppendCallback(() =>
@@ -235,13 +245,16 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                 {
                     // text
                     var floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, new Color(0.33f, 1f, 0.5f));
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
 
                     // effect
                     target.Heal(healAmount);
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Heal");
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.2f)
                 .AppendCallback(() =>

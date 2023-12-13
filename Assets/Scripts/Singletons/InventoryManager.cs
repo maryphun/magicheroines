@@ -356,6 +356,9 @@ public class InventoryManager : MonoBehaviour
                     // カーソルを戻す
                     Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
                     battleManager.UnPointArrow(0.25f);
+
+                    // ログ出力
+                    GenerateBattleLog(CustomColor.AddColor(LocalizationManager.Localize(selectingItem.itemNameID), CustomColor.itemName()), targetBattler.CharacterNameColored);
                 }
             }
             else if (isSelectingTarget)
@@ -394,6 +397,7 @@ public class InventoryManager : MonoBehaviour
                 ItemExecute.Instance.Invoke(item.Item2.functionName, 0);
                 ProgressManager.Instance.RemoveItemFromInventory(item.Item2);
                 CloseInventory(true);
+                GenerateBattleLog(CustomColor.AddColor(LocalizationManager.Localize(item.Item2.itemNameID), CustomColor.itemName()), string.Empty);
                 break;
             case CastType.Teammate:
                 HideInventory();
@@ -453,5 +457,32 @@ public class InventoryManager : MonoBehaviour
     {
         isDescriptionShowing = false;
         itemDescription.GetComponent<CanvasGroup>().DOFade(0.0f, 0.1f);
+    }
+
+    /// <summary>
+    /// 戦闘ログを出力
+    /// </summary>
+    private void GenerateBattleLog(string itemName, string targetName)
+    {
+        var battleManager = FindObjectOfType<Battle>(); // lazy implementation...
+        if (ReferenceEquals(battleManager, null)) return;
+        string self = battleManager.GetCurrentBattler().CharacterNameColored;
+        string output = string.Empty;
+        if (targetName == string.Empty) // 自身に使う系
+        {
+            output = String.Format(LocalizationManager.Localize("BattleLog.ItemSelf"), self, itemName);
+        }
+        else if (targetName == self) // 他人に使えるアイテムだが自分に使ったパターン
+        {
+            output = String.Format(LocalizationManager.Localize("BattleLog.ItemSelfToSelf"), self, itemName);
+        }
+        else if (targetName != self) // 他人に使った
+        {
+            output = String.Format(LocalizationManager.Localize("BattleLog.ItemOther"), self, targetName, itemName);
+        }
+        if (output != string.Empty)
+        {
+            battleManager.AddBattleLog(output);
+        }
     }
 }
