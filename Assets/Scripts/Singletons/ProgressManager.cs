@@ -199,10 +199,11 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 新しい仲間追加
     /// </summary>
-    public void AddPlayerCharacter(PlayerCharacterDefine newCharacter)
+    public Character AddPlayerCharacter(PlayerCharacterDefine newCharacter)
     {
         Character obj = ConvertCharacterDefine(newCharacter);
         playerData.characters.Add(obj);
+        return obj;
     }
 
     private Character ConvertCharacterDefine(PlayerCharacterDefine newCharacter)
@@ -490,7 +491,12 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         // 調教できるヒロインを追加
         PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
         AddPlayerCharacter(Rikka);
-        //Resources.UnloadAsset(Rikka);
+
+        PlayerCharacterDefine Kei = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
+        AddPlayerCharacter(Kei).is_corrupted = true;
+
+        // フォーメーション編成
+        playerData.formationCharacters[1].characterID = Kei.detail.characterID;
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
