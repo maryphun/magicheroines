@@ -17,6 +17,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private BattlerSoundEffect soundEffects;
     [SerializeField] private VFX attackVFX;
     [SerializeField] private float breathScale = 0.005f; // キャラのアニメション
+    [SerializeField] private bool enableNormalAttack = true; // 普通攻撃出来るか
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -47,6 +48,7 @@ public class Battler : MonoBehaviour
 
     [HideInInspector] public float Ease { get { return ease; } }
     [HideInInspector] public Image Graphic { get { return graphic; } }
+    [HideInInspector] public bool EnableNormalAttack { get { return enableNormalAttack; } }
 
     private Vector3 originalScale;
     private float ease = 0.0f;

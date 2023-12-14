@@ -171,6 +171,7 @@ Battle.Defeat,敗北
 Battle.SkipTutorial,スキップ
 Battle.EscapeConfirm,撤退しますか？
 Battle.Escape,撤退
+Battle.CannotAttack,{0}は普通攻撃行えない
 Buff,状態
 Buff.Stun,行動不能
 Buff.Hurt,継続ダメージ
@@ -325,3 +326,4 @@ BattleLog.AbilityExecuteSelf,{0}　が{1}する。
 BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
 BattleLog.SPDrain,{0}　のSP {1} 吸収した！ 
 BattleLog.Retire,{0}　が再起不能となった。
+BattleLog.Defeat,{0}　が再起不能となった。

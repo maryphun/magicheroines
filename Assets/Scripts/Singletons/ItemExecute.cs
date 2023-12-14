@@ -89,6 +89,9 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
     public void OnUseCroissant()
     {
         const int SPAmount = 50;
+        
+        var self = battleManager.GetCurrentBattler();
+        self.PlayAnimation(BattlerAnimationType.item);
 
         var sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
@@ -99,21 +102,21 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
-                    // hp+40
-                    var target = battleManager.GetCurrentBattler();
-
                     // text
-                    var floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + SPAmount.ToString(), 64, CustomColor.SP());
+                    var floatingText = CreateFloatingText(self.transform);
+                    floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + SPAmount.ToString(), 64, CustomColor.SP());
 
                     // effect
-                    target.Heal(SPAmount);
+                    self.Heal(SPAmount);
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Heal");
 
+                    // animation
+                    self.PlayAnimation(BattlerAnimationType.idle);
+
                     // êÌì¨ÉçÉO
-                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealSP"), target.CharacterNameColored, CustomColor.AddColor(SPAmount, CustomColor.SP())));
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealSP"), self.CharacterNameColored, CustomColor.AddColor(SPAmount, CustomColor.SP())));
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
@@ -124,7 +127,11 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
     public void OnUseBread()
     {
+        // hp+40
         const int healAmount = 40;
+
+        var target = battleManager.GetCurrentBattler();
+        target.PlayAnimation(BattlerAnimationType.item);
 
         var sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
@@ -135,8 +142,6 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
-                    // hp+40
-                    var target = battleManager.GetCurrentBattler();
 
                     // text
                     var floatingText = CreateFloatingText(target.transform);
@@ -147,6 +152,9 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Heal");
+
+                    // animation
+                    target.PlayAnimation(BattlerAnimationType.idle);
 
                     // êÌì¨ÉçÉO
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
@@ -162,6 +170,8 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
     {
         const int damage = 50;
         var target = targetBattlers[0];
+        var self = battleManager.GetCurrentBattler();
+        self.PlayAnimation(BattlerAnimationType.item);
 
         var sequence = DOTween.Sequence();
         sequence.AppendCallback(() =>
@@ -177,7 +187,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                 {
                     // text
                     var floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - battleManager.GetCurrentBattler().GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
 
                     // effect
                     target.DeductHP(damage);
@@ -190,6 +200,9 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Explode");
+
+                    // animation
+                    self.PlayAnimation(BattlerAnimationType.idle);
 
                     // VFX
                     VFXSpawner.SpawnVFX("Explode", target.transform, target.GetMiddleGlobalPosition());
@@ -215,6 +228,8 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
         // HP 10~100
         int healAmount = SeriouslyRandom.Next(10, 100);
         var target = targetBattlers[0];
+
+        battleManager.GetCurrentBattler().PlayAnimation(BattlerAnimationType.item);
 
         float animTime = 0.8f;
 
@@ -253,16 +268,13 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     // play SE
                     AudioManager.Instance.PlaySFX("Heal");
 
+                    // animation
+                    battleManager.GetCurrentBattler().PlayAnimation(BattlerAnimationType.idle);
+
                     // êÌì¨ÉçÉO
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
                 })
-                .AppendInterval(0.2f)
-                .AppendCallback(() =>
-                {
-                    // animation
-                    target.PlayAnimation(BattlerAnimationType.idle);
-                })
-                .AppendInterval(0.3f)
+                .AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
                     battleManager.NextTurn(false);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using DG.Tweening;
 
 [System.Serializable]
@@ -25,11 +26,15 @@ public class ActionPanel : MonoBehaviour
     [SerializeField] private TMPro.TMP_Text tipsText;
     [SerializeField] private Canvas mainCanvas;
     [SerializeField] private AbilityPanel abilityPanel;
+    [SerializeField] private Button attackBtn;
+    [SerializeField] private TMPro.TMP_Text cannotAttackText; // 攻撃できないテキスト
+    [SerializeField] private EventSystem eventSystem;
 
     [Header("Debug")]
     [SerializeField] private bool isSelectingTarget;
     [SerializeField] private bool isSelectedTarget;
     [SerializeField] private CommandType commandType;
+    [SerializeField] private bool isCannotAttackTextShowing;
 
     private void Awake()
     {
@@ -38,6 +43,8 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.blocksRaycasts = false;
 
         isSelectingTarget = false;
+        isCannotAttackTextShowing = false;
+        cannotAttackText.gameObject.SetActive(false);
     }
 
     public void SetEnablePanel(bool boolean)
@@ -51,6 +58,17 @@ public class ActionPanel : MonoBehaviour
         if (boolean) // 入力待ち
         {
             commandType = CommandType.Waiting;
+
+            // 普通攻撃が出来ないBattlerならボタンを無効にする
+            attackBtn.interactable = battleManager.GetCurrentBattler().EnableNormalAttack;
+            cannotAttackText.gameObject.SetActive(!attackBtn.interactable);
+            cannotAttackText.color = CustomColor.invisible();
+            cannotAttackText.rectTransform.anchoredPosition = Vector3.zero;
+            isCannotAttackTextShowing = false;
+        }
+        else if (!attackBtn.interactable)
+        {
+            cannotAttackText.DOFade(0.0f, animTime);
         }
     }
 
@@ -206,6 +224,27 @@ public class ActionPanel : MonoBehaviour
                 {
                     battleManager.UnPointArrow(0.25f);
                 }
+            }
+        }
+
+        // 攻撃できないメッセージ
+        if (!attackBtn.interactable)
+        {
+            var evtSystem = (CustomStandaloneInputModule)eventSystem.currentInputModule;
+            var hovering = evtSystem.GetPointerData().hovered;
+            const float animationTime = 0.5f;
+            if (hovering.Contains(attackBtn.gameObject) && !isCannotAttackTextShowing)
+            {
+                isCannotAttackTextShowing = true;
+                cannotAttackText.DOColor(Color.white, animationTime);
+                cannotAttackText.rectTransform.DOAnchorPosY(cannotAttackText.fontSize * 2.0f, animationTime);
+                cannotAttackText.text = System.String.Format(Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("Battle.CannotAttack"), battleManager.GetCurrentBattler().CharacterNameColored);
+            }
+            else if (!hovering.Contains(attackBtn.gameObject) && isCannotAttackTextShowing)
+            {
+                isCannotAttackTextShowing = false;
+                cannotAttackText.DOColor(CustomColor.invisible(), animationTime);
+                cannotAttackText.rectTransform.DOAnchorPosY(0.0f, animationTime);
             }
         }
     }
