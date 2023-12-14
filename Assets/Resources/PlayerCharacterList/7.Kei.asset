@@ -23,7 +23,7 @@ MonoBehaviour:
       item: {fileID: 0}
       attacked: {fileID: 0}
       retire: {fileID: 0}
-    color: {r: 0.3066038, g: 1, b: 0.9009254, a: 1}
+    color: {r: 0.6745283, g: 1, b: 0.9540294, a: 1}
     nameID: Name.Kei
     starting_level: 25
     base_hp: 250
@@ -46,5 +46,6 @@ MonoBehaviour:
       requiredCorruptionEpisode: 0
       requiredHornyEpisode: 0
     corruptedName: Name.Kei_Corrupted
-    abilities: []
+    abilities:
+    - {fileID: 11400000, guid: e40f228ebf4177e4c8295b65af7991bd, type: 2}
   battler: {fileID: 6784901170540971542, guid: c9441c52ccbec044b8547e6d29bea473, type: 3}

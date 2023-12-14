@@ -130,27 +130,27 @@ public class TurnBase : MonoBehaviour
     }
 
     // プレイヤーキャラクターをランダムに獲得
-    public Battler GetRandomPlayerCharacter()
+    public Battler GetRandomPlayerCharacter(bool mustBeTargettable)
     {
         Battler randomPlayer = characterInOrder[UnityEngine.Random.Range(0, characterInOrder.Count)].Item1;
-        if (!randomPlayer.isEnemy)
+        if (!randomPlayer.isEnemy && (randomPlayer.isTargettable || !mustBeTargettable))
         {
             return randomPlayer;
         }
 
-        return GetRandomPlayerCharacter();
+        return GetRandomPlayerCharacter(mustBeTargettable);
     }
 
     // 敵キャラをランダムに取得
-    public Battler GetRandomEnemyCharacter()
+    public Battler GetRandomEnemyCharacter(bool mustBeTargettable)
     {
-        Battler randomPlayer = characterInOrder[UnityEngine.Random.Range(0, characterInOrder.Count)].Item1;
-        if (randomPlayer.isEnemy)
+        Battler randomEnemy = characterInOrder[UnityEngine.Random.Range(0, characterInOrder.Count)].Item1;
+        if (randomEnemy.isEnemy && (randomEnemy.isTargettable || !mustBeTargettable))
         {
-            return randomPlayer;
+            return randomEnemy;
         }
 
-        return GetRandomPlayerCharacter();
+        return GetRandomEnemyCharacter(mustBeTargettable);
     }
 
 

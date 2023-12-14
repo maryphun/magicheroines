@@ -14,6 +14,9 @@ public class KeiWeaponSprite : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private RectTransform graphic;
     [SerializeField] private Vector2 origin;
+    [SerializeField] private bool isActive = false;
+
+    [HideInInspector] public RectTransform Graphic { get { return graphic; } }
 
     private void Start()
     {
@@ -23,6 +26,8 @@ public class KeiWeaponSprite : MonoBehaviour
 
     private void Update()
     {
+        if (!isActive) return;
+
         float ease = mainScript.Ease; 
         
         Mathf.PingPong(ease, 1.0f);
@@ -35,5 +40,10 @@ public class KeiWeaponSprite : MonoBehaviour
     private float EaseInOutSine(float x)
     {
         return -(Mathf.Cos(Mathf.PI * x) - 1.0f) / 2.0f;
+    }
+
+    public void SetEnableMovement(bool boolean)
+    {
+        isActive = boolean;
     }
 }

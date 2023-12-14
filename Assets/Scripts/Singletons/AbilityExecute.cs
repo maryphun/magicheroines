@@ -1042,5 +1042,49 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 battleManager.NextTurn(false);
             });
     }
+
+    /// <summary>
+    /// 闇落ち京のハッキング特殊技
+    /// </summary>
+    public void Hacking()
+    {
+        // 京の武器を取得
+        var kei = battleManager.GetCurrentBattler();
+        var weapons = kei.GetComponent<KeiWeaponController>();
+
+        // 相手の資料を取得
+        var target = targetBattlers[0];
+
+        // 成功率を計算
+        float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.07f * (kei.currentLevel - target.currentLevel);
+        successRate = UnityEngine.Mathf.Clamp(successRate, 0.0f, 1.0f);
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(kei.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Hacking");
+        floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
+
+        // ログ ({0}　がハッキングを挑む！成功確率は {1})
+        var successRatePercentage = String.Format("{0:0.##\\%}", successRate); 
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking"), kei.CharacterNameColored, CustomColor.AddColor(successRatePercentage, Color.cyan)));
+
+        // 武器の動きを一旦止める
+        weapons.leftWeapon.SetEnableMovement(false);
+        weapons.rightWeapon.SetEnableMovement(false);
+
+        weapons.leftWeapon.Graphic.DOMove(target.GetMiddleGlobalPosition(), 0.5f);
+        weapons.rightWeapon.Graphic.DOMove(target.GetMiddleGlobalPosition(), 0.5f);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+
+                })
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
+    }
     #endregion abilities
 }

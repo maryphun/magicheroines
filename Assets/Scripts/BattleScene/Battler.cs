@@ -18,6 +18,8 @@ public class Battler : MonoBehaviour
     [SerializeField] private VFX attackVFX;
     [SerializeField] private float breathScale = 0.005f; // キャラのアニメション
     [SerializeField] private bool enableNormalAttack = true; // 普通攻撃出来るか
+    [SerializeField] private bool isFemale = false; // 女なのか
+    [SerializeField] private bool isMachine = false; // 機械なのか
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -34,6 +36,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public int speed;
     [SerializeField] public int currentLevel;
     [SerializeField] public bool isAlive;
+    [SerializeField] public bool isTargettable; // 目標に出来るか
     [SerializeField] public List<Ability> abilities;
     [SerializeField] public EquipmentDefine equipment;
     [SerializeField] public List<EnemyActionPattern> actionPattern; // 敵AI作成用
@@ -196,6 +199,7 @@ public class Battler : MonoBehaviour
         name_UI.color = character_color;
         UpdateHPBar();
         isAlive = current_hp > 0;   // 最初からリタイア状態のもありかもしれない
+        isTargettable = true;
 
         if (max_mp > 0)
         {

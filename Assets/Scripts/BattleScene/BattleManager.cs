@@ -237,7 +237,7 @@ public class Battle : MonoBehaviour
             {
                 Vector2 size = enemyList[i].GetCharacterSize() * new Vector2(0.5f, 1.0f);
                 Vector2 position = (enemyList[i].GetGraphicRectTransform().position / canvas.scaleFactor) + new Vector3(0.0f, size.y * 0.5f);
-                if ((enemyList[i].isAlive || !aliveOnly)
+                if ((enemyList[i].isAlive || !aliveOnly) && enemyList[i].isTargettable
                     && mousePosition.x > position.x - size.x * 0.5f
                     && mousePosition.x < position.x + size.x * 0.5f
                     && mousePosition.y > position.y - size.y * 0.5f
@@ -305,7 +305,7 @@ public class Battle : MonoBehaviour
                 {
                     case EnemyActionType.NormalAttack:
                         {
-                            targetCharacter = turnBaseManager.GetRandomPlayerCharacter();
+                            targetCharacter = turnBaseManager.GetRandomPlayerCharacter(true);
                             StartCoroutine(AttackAnimation(currentCharacter, targetCharacter, NextTurn));
                         }
                         break;
@@ -321,7 +321,7 @@ public class Battle : MonoBehaviour
                                 else
                                 {
                                     // プレイヤーキャラをランダムに選択する
-                                    targetCharacter = turnBaseManager.GetRandomPlayerCharacter();
+                                    targetCharacter = turnBaseManager.GetRandomPlayerCharacter(true);
                                 }
                             }
                             else if (action.ability.castType == CastType.Teammate)
@@ -333,7 +333,7 @@ public class Battle : MonoBehaviour
                                 }
                                 else
                                 {
-                                    targetCharacter = turnBaseManager.GetRandomEnemyCharacter();
+                                    targetCharacter = turnBaseManager.GetRandomEnemyCharacter(false);
                                 }
                             }
                             else // CastType.Self

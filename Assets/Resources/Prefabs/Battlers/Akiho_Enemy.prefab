@@ -436,6 +436,9 @@ MonoBehaviour:
     retire: {fileID: 0}
   attackVFX: {fileID: 1343633729508638609, guid: 50e1eebc5a9297944bd413cedb616ae1, type: 3}
   breathScale: 0.005
+  enableNormalAttack: 1
+  isFemale: 1
+  isMachine: 0
   character_name: "\u660E\u7A42"
   characterID: 0
   icon: {fileID: 0}

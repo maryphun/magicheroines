@@ -252,7 +252,7 @@ Item.M24,柄付手榴弾
 Item.M24_Info,手投げ弾を投げてダメージを与える。
 Item.FirstAid,救急箱
 Item.FirstAid_Info,効果が不安定だが、緊急時には仕方ない。
-Ability,特殊技名とその説明文
+Ability,特殊技名とその説明文 (背景色でキャラを分ける)
 Ability.DeepBreath,深呼吸
 Ability.DeepBreath_Info,体力回復20%
 Ability.PowerfulPunch,パワフルパンチ
@@ -262,7 +262,7 @@ Ability.Tackle_Info,敵単体と共に1ターン行動不能になる
 Ability.SuckingTentacle,吸収触手
 Ability.SuckingTentacle_Info,相手のSPを半分吸収する
 Ability.TentacleService,触手サービス
-Ability.TentacleService_Info,SPを全部仲間単体に分け与える。女性相手のみ効果有る
+Ability.TentacleService_Info,SPを全部仲間単体に分け与える。(女性相手のみ有効)
 Ability.Capture,媚薬ガス
 Ability.Capture_Info,敵単体の攻撃力・スピードを一時25%ダウン
 Ability.SelfRepair,自己修復
@@ -276,6 +276,9 @@ Ability.GreatRegen_Info,HPとSPを回復。HPは持続的回復する
 Ability.QuickAttack,連続攻撃
 Ability.QuickAttack_Info,
 Ability.Stungun_Info,スタンガンで目標を1ターン行動不能にする。
+Ability.Hacking,ハッキング
+Ability.Hacking_Info,"目標をハッキングしてバトル終了までに内傀儡として操る。京に向けた攻撃がすべて傀儡が代わりに受けることになる (機械類の敵のみ有効)
+目標とのレベル差と目標の残りHPが成功確率を左右する"
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」
@@ -327,3 +330,6 @@ BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cs
 BattleLog.SPDrain,{0}　のSP {1} 吸収した！ 
 BattleLog.Retire,{0}　が再起不能となった。
 BattleLog.Defeat,{0}　が再起不能となった。
+BattleLog.Hacking,{0}　がハッキングを挑む！成功確率は {1}
+BattleLog.Hacking_Success,成功した！ {0}　が傀儡となった。
+BattleLog.Hacking_Fail,ハッキングが失敗した。

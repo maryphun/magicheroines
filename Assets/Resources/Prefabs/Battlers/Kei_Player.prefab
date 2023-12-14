@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1926541894300733026}
   - component: {fileID: 7823514319533270746}
   m_Layer: 5
-  m_Name: Weapon
+  m_Name: Weapon_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   mainScript: {fileID: 5935660325007964706}
   graphic: {fileID: 3059475654770755356}
   origin: {x: 0, y: 0}
+  isActive: 0
 --- !u!1 &3169304727182833257
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u30B1\u30A4"
+  m_text: "\u8B58\u5BAE \u4EAC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93f23378213356944b52c827fd0e09f9, type: 2}
   m_sharedMaterial: {fileID: 6193186823750436286, guid: 93f23378213356944b52c827fd0e09f9, type: 2}
@@ -464,8 +465,9 @@ GameObject:
   - component: {fileID: 6223807227573502313}
   - component: {fileID: 5935660325007964706}
   - component: {fileID: 8869202411606451813}
+  - component: {fileID: 8142845507242615465}
   m_Layer: 5
-  m_Name: Kei_Dark
+  m_Name: Kei_Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +533,9 @@ MonoBehaviour:
   attackVFX: {fileID: 1343633729508638609, guid: 70f6957b9546fb448a9775b42739d195, type: 3}
   breathScale: 0.005
   enableNormalAttack: 0
-  character_name: "\u30B1\u30A4"
+  isFemale: 1
+  isMachine: 0
+  character_name: "\u8B58\u5BAE \u4EAC"
   characterID: 0
   icon: {fileID: 0}
   isEnemy: 1
@@ -545,6 +549,7 @@ MonoBehaviour:
   speed: 0
   currentLevel: 0
   isAlive: 0
+  isTargettable: 0
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []
@@ -577,6 +582,20 @@ Canvas:
   m_SortingLayerID: 300505305
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &8142845507242615465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784901170540971542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd3c8966ae8ec542821578cacde284d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftWeapon: {fileID: 7823514319533270746}
+  rightWeapon: {fileID: 7747650190377502116}
 --- !u!1 &7356119342888050826
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +609,7 @@ GameObject:
   - component: {fileID: 487205338250127503}
   - component: {fileID: 7747650190377502116}
   m_Layer: 5
-  m_Name: Weapon
+  m_Name: Weapon_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -669,6 +688,7 @@ MonoBehaviour:
   mainScript: {fileID: 5935660325007964706}
   graphic: {fileID: 3059475654770755356}
   origin: {x: 0, y: 0}
+  isActive: 0
 --- !u!1 &8000974946794807433
 GameObject:
   m_ObjectHideFlags: 0

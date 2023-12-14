@@ -31,7 +31,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2386691925044928524}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -108,7 +107,6 @@ RectTransform:
   m_Children:
   - {fileID: 1139226903765122022}
   m_Father: {fileID: 4510566049509213858}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -184,7 +182,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4510566049509213858}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -319,7 +316,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4510566049509213858}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -395,7 +391,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4510566049509213858}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -476,7 +471,6 @@ RectTransform:
   - {fileID: 7035941566546584725}
   - {fileID: 2386691925044928524}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -503,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b0615ffce14b2649b33df5bac3287b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoInit: 0
   animations:
     idle: {fileID: 21300000, guid: 4512238b6cb7cf44b9f92bb8f059e4d3, type: 3}
     attack: {fileID: 21300000, guid: 4512238b6cb7cf44b9f92bb8f059e4d3, type: 3}
@@ -510,8 +505,17 @@ MonoBehaviour:
     item: {fileID: 21300000, guid: 4512238b6cb7cf44b9f92bb8f059e4d3, type: 3}
     attacked: {fileID: 21300000, guid: 4512238b6cb7cf44b9f92bb8f059e4d3, type: 3}
     retire: {fileID: 21300000, guid: 4512238b6cb7cf44b9f92bb8f059e4d3, type: 3}
+  soundEffects:
+    attack: {fileID: 0}
+    attacked: {fileID: 0}
+    retire: {fileID: 0}
   attackVFX: {fileID: 1343633729508638609, guid: 50e1eebc5a9297944bd413cedb616ae1, type: 3}
+  breathScale: 0.005
+  enableNormalAttack: 1
+  isFemale: 0
+  isMachine: 1
   character_name: "\u660E\u7A42"
+  characterID: 0
   icon: {fileID: 0}
   isEnemy: 1
   character_color: {r: 0.92549026, g: 0.83921576, b: 0.882353, a: 1}
@@ -525,6 +529,8 @@ MonoBehaviour:
   currentLevel: 0
   isAlive: 0
   abilities: []
+  equipment: {fileID: 0}
+  actionPattern: []
   graphic: {fileID: 7327100276064734370}
   name_UI: {fileID: 1324361431165308280}
   hpBarFill: {fileID: 1269340118051516418}
