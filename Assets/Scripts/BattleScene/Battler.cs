@@ -342,6 +342,9 @@ public class Battler : MonoBehaviour
                 isAlive = false;
                 graphic.rectTransform.localScale = originalScale;
                 PlayAnimation(BattlerAnimationType.retire);
+                
+                onDeathEvent.Invoke();
+                onDeathEvent.RemoveAllListeners();
 
                 var sequence = DOTween.Sequence();
                 sequence.AppendInterval(0.2f)

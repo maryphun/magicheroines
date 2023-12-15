@@ -1121,10 +1121,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     .AppendCallback(() =>
                     {
                         // Œ³‚ÌŠ‚É–ß‚·
-                        weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1.0f).SetEase(Ease.Linear);
-                        weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1.0f).SetEase(Ease.Linear);
+                        weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), animtionTime * 0.25f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), animtionTime * 0.25f).SetEase(Ease.Linear);
                     })
-                    .AppendInterval(animtionTime * 0.5f)
+                    .AppendInterval(animtionTime * 0.25f)
                     .AppendCallback(() =>
                     {
                         weapons.leftWeapon.Rect.DOKill(false);
@@ -1136,10 +1136,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         weapons.rightWeapon.transform.SetParent(targetSprite.parent);
                         weapons.rightWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex());
 
-                        weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
-                        weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                        weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.25f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.25f).SetEase(Ease.Linear);
                     })
-                    .AppendInterval(0.5f)
+                    .AppendInterval(0.25f)
                     .AppendCallback(() =>
                     {
                         weapons.leftWeapon.SetEnableMovement(true);
