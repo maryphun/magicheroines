@@ -16,9 +16,9 @@ public class KeiWeaponSprite : MonoBehaviour
     [SerializeField] private Vector2 origin;
     [SerializeField] private bool isActive = false;
 
-    [HideInInspector] public RectTransform Graphic { get { return graphic; } }
+    [HideInInspector] public RectTransform Rect { get { return graphic; } }
 
-    private void Start()
+    public void Init()
     {
         graphic = GetComponent<RectTransform>();
         origin = graphic.localPosition;

@@ -1068,23 +1068,138 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var successRatePercentage = String.Format("{0:0.##\\%}", successRate); 
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking"), kei.CharacterNameColored, CustomColor.AddColor(successRatePercentage, Color.cyan)));
 
+        // ê¨å˜Ç©
+        bool isSuccess = true;// UnityEngine.Random.Range(0.0f, 1.0f) < successRate;
+
         // ïêäÌÇÃìÆÇ´ÇàÍíUé~ÇﬂÇÈ
         weapons.leftWeapon.SetEnableMovement(false);
         weapons.rightWeapon.SetEnableMovement(false);
 
-        weapons.leftWeapon.Graphic.DOMove(target.GetMiddleGlobalPosition(), 0.5f);
-        weapons.rightWeapon.Graphic.DOMove(target.GetMiddleGlobalPosition(), 0.5f);
+        weapons.leftWeapon.Rect.DOMove(target.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
+        weapons.rightWeapon.Rect.DOMove(target.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
 
-        var sequence = DOTween.Sequence();
-        sequence.AppendInterval(0.5f)
-                .AppendCallback(() =>
-                {
+        // ÉAÉjÉÅÉVÉáÉì
+        const float animtionTime = 1.0f;
+        kei.PlayAnimation(BattlerAnimationType.magic);
 
-                })
-                .AppendCallback(() =>
-                {
-                    battleManager.NextTurn(false);
-                });
+        if (isSuccess)
+        {
+            // ãûÇçUåÇÇ≈Ç´Ç»Ç≠Ç»ÇÈ
+            kei.isTargettable = false;
+
+            // Ç±ÇÃì¡éÍãZÇçÌèú
+            kei.RemoveAbilityFromCharacter("Hacking");
+
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(animtionTime * 0.5f)
+                    .AppendCallback(() =>
+                    {
+                        weapons.leftWeapon.Rect.DOKill(false);
+                        weapons.rightWeapon.Rect.DOKill(false);
+
+                        var targetSprite = target.GetGraphicRectTransform();
+                        weapons.leftWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.leftWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex() + 1);
+                        weapons.rightWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.rightWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex());
+
+                        weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+
+                        // ÉAÉjÉÅÉVÉáÉì
+                        kei.PlayAnimation(BattlerAnimationType.idle);
+                    })
+                    .AppendInterval((animtionTime * 0.5f) + 0.25f)
+                    .AppendCallback(() =>
+                    {
+                        battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.Hacking_Success"));
+                        
+                        var puppet = target.gameObject.AddComponent<KeiControlledUnit>();
+                        puppet.StartControl(kei, 0);
+                    })
+                    .AppendInterval(animtionTime * 0.5f) // ìGÇà⁄ìÆíÜ
+                    .AppendCallback(() =>
+                    {
+                        // å≥ÇÃèäÇ…ñﬂÇ∑
+                        weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1.0f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1.0f).SetEase(Ease.Linear);
+                    })
+                    .AppendInterval(animtionTime * 0.5f)
+                    .AppendCallback(() =>
+                    {
+                        weapons.leftWeapon.Rect.DOKill(false);
+                        weapons.rightWeapon.Rect.DOKill(false);
+
+                        var targetSprite = kei.GetGraphicRectTransform();
+                        weapons.leftWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.leftWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex() + 1);
+                        weapons.rightWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.rightWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex());
+
+                        weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                    })
+                    .AppendInterval(0.5f)
+                    .AppendCallback(() =>
+                    {
+                        weapons.leftWeapon.SetEnableMovement(true);
+                        weapons.rightWeapon.SetEnableMovement(true);
+                        battleManager.NextTurn(false);
+                    });
+        }
+        else
+        {
+            var sequence = DOTween.Sequence();
+            sequence.AppendInterval(animtionTime * 0.5f)
+                    .AppendCallback(() =>
+                    {
+                        weapons.leftWeapon.Rect.DOKill(false);
+                        weapons.rightWeapon.Rect.DOKill(false);
+
+                        var targetSprite = target.GetGraphicRectTransform();
+                        weapons.leftWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.leftWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex() + 1);
+                        weapons.rightWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.rightWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex());
+
+                        weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                        
+                        // ÉAÉjÉÅÉVÉáÉì
+                        kei.PlayAnimation(BattlerAnimationType.idle);
+                    })
+                    .AppendInterval((animtionTime * 0.5f) + 0.25f)
+                    .AppendCallback(() =>
+                    {
+                        battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.Hacking_Fail"));
+
+                        // å≥ÇÃèäÇ…ñﬂÇ∑
+                        weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
+                    })
+                    .AppendInterval(animtionTime * 0.5f)
+                    .AppendCallback(() =>
+                    {
+                        weapons.leftWeapon.Rect.DOKill(false);
+                        weapons.rightWeapon.Rect.DOKill(false);
+
+                        var targetSprite = kei.GetGraphicRectTransform();
+                        weapons.leftWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.leftWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex() + 1);
+                        weapons.rightWeapon.transform.SetParent(targetSprite.parent);
+                        weapons.rightWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex());
+
+                        weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                        weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                    })
+                    .AppendInterval(0.5f)
+                    .AppendCallback(() =>
+                    {
+                        weapons.leftWeapon.SetEnableMovement(true);
+                        weapons.rightWeapon.SetEnableMovement(true);
+                        battleManager.NextTurn(false);
+                    });
+        }
     }
     #endregion abilities
 }

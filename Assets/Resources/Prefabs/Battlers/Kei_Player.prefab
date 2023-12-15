@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveValue: {x: 0, y: 2}
   mainScript: {fileID: 5935660325007964706}
-  graphic: {fileID: 3059475654770755356}
+  graphic: {fileID: 0}
   origin: {x: 0, y: 0}
   isActive: 0
 --- !u!1 &3169304727182833257
@@ -596,6 +596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftWeapon: {fileID: 7823514319533270746}
   rightWeapon: {fileID: 7747650190377502116}
+  leftWeaponLocalPosition: {x: 0, y: 0}
+  rightWeaponLocalPosition: {x: 0, y: 0}
 --- !u!1 &7356119342888050826
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveValue: {x: 0, y: 2}
   mainScript: {fileID: 5935660325007964706}
-  graphic: {fileID: 3059475654770755356}
+  graphic: {fileID: 0}
   origin: {x: 0, y: 0}
   isActive: 0
 --- !u!1 &8000974946794807433

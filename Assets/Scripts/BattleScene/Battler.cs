@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -37,6 +38,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public int currentLevel;
     [SerializeField] public bool isAlive;
     [SerializeField] public bool isTargettable; // –Ú•W‚Éo—ˆ‚é‚©
+    [SerializeField] public UnityEvent onDeathEvent;
     [SerializeField] public List<Ability> abilities;
     [SerializeField] public EquipmentDefine equipment;
     [SerializeField] public List<EnemyActionPattern> actionPattern; // “GAIì¬—p
@@ -182,6 +184,23 @@ public class Battler : MonoBehaviour
     public void AddAbilityToCharacter(Ability ability)
     {
         abilities.Add(ability);
+    }
+
+    public void RemoveAbilityFromCharacter(Ability ability)
+    {
+        abilities.Remove(ability);
+    }
+
+    public void RemoveAbilityFromCharacter(string abilityfunctionName)
+    {
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            if (abilities[i].functionName == abilityfunctionName)
+            {
+                abilities.RemoveAt(i);
+                i--;
+            }
+        }
     }
 
     /// <summary>
@@ -538,6 +557,14 @@ public class Battler : MonoBehaviour
         // This should never happen, but just in case
         Debug.LogError("Error in GetRandomElement(). Returning the last element.");
         return posibleActionPattern[posibleActionPattern.Count - 1];
+    }
+
+    /// <summary>
+    /// Œü‚«‚ğ•Ï‚¦‚é
+    /// </summary>
+    public void ReverseFacing()
+    {
+        originalScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
     }
 
     #endregion EnemyAI

@@ -800,7 +800,7 @@ public class Battle : MonoBehaviour
     private bool IsVictory()
     {
         // ìGëSñ≈Ç©
-        Battler result = enemyList.Find(s => s.isAlive);
+        Battler result = enemyList.Find(s => s.isAlive && s.isEnemy);
         if (result == null)
         {
             // ê∂ë∂é“Ç¢Ç»Ç¢
@@ -817,7 +817,7 @@ public class Battle : MonoBehaviour
     private bool IsDefeat()
     {
         // ñ°ï˚ëSñ≈Ç©
-        Battler result = characterList.Find(s => s.isAlive);
+        Battler result = characterList.Find(s => s.isAlive && !s.isEnemy);
         if (result == null)
         {
             // ê∂ë∂é“Ç¢Ç»Ç¢
