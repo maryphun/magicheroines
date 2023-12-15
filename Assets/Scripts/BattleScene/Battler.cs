@@ -54,13 +54,14 @@ public class Battler : MonoBehaviour
     [HideInInspector] public float Ease { get { return ease; } }
     [HideInInspector] public Image Graphic { get { return graphic; } }
     [HideInInspector] public bool EnableNormalAttack { get { return enableNormalAttack; } }
+    [HideInInspector] public bool IsMachine { get { return isMachine; } }
+    [HideInInspector] public bool IsFemale { get { return isFemale; } }
+    [HideInInspector] public string CharacterNameColored { get { return CustomColor.AddColor(character_name, character_color); } }
 
     private Vector3 originalScale;
     private float ease = 0.0f;
     private RectTransform graphicRect;
     private Image mpBarFill;
-
-    [HideInInspector] public string CharacterNameColored { get { return CustomColor.AddColor(character_name, character_color); } }
 
     private void Awake()
     {

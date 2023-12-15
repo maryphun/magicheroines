@@ -1057,6 +1057,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // ¬Œ÷—¦‚ğŒvZ
         float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.07f * (kei.currentLevel - target.currentLevel);
+
+        if (!target.IsMachine) successRate = 0.0f; // ‹@ŠB—ŞˆÈŠO‚Í¬Œ÷—¦@0%@
+        if (target.gameObject.name == "Tank_Enemy") successRate = 0.01f; // “Á’è‚Ì“G‚Í¬Œ÷‚µ‚È‚¢
+
         successRate = UnityEngine.Mathf.Clamp(successRate, 0.0f, 1.0f);
 
         // ‹Z–¼‚ğ•\¦
@@ -1069,7 +1073,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking"), kei.CharacterNameColored, CustomColor.AddColor(successRatePercentage, Color.cyan)));
 
         // ¬Œ÷‚©
-        bool isSuccess = true;// UnityEngine.Random.Range(0.0f, 1.0f) < successRate;
+        bool isSuccess = UnityEngine.Random.Range(0.0f, 1.0f) < successRate;
+
+        // ‹­§¸”s
+        if (target.gameObject.name == "Tank_Enemy") isSuccess = false;
 
         // •Ší‚Ì“®‚«‚ğˆê’U~‚ß‚é
         weapons.leftWeapon.SetEnableMovement(false);
