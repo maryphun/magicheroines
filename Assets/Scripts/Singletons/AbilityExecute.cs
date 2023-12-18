@@ -1059,7 +1059,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.07f * (kei.currentLevel - target.currentLevel);
 
         if (!target.IsMachine) successRate = 0.0f; // 機械類以外は成功率　0%　
-        if (target.gameObject.name == "Tank_Enemy") successRate = 0.01f; // 特定の敵は成功しない
+        if (target.character_name == LocalizationManager.Localize("Name.Tank")) successRate = 0.01f; // 特定の敵は成功しない
 
         successRate = UnityEngine.Mathf.Clamp(successRate, 0.0f, 1.0f);
 
@@ -1069,7 +1069,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
 
         // ログ ({0}　がハッキングを挑む！成功確率は {1})
-        var successRatePercentage = String.Format("{0:0.##\\%}", successRate); 
+        var successRatePercentage = String.Format("{0:0.##\\%}", (successRate * 100.0f)); 
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking"), kei.CharacterNameColored, CustomColor.AddColor(successRatePercentage, Color.cyan)));
 
         // 成功か
@@ -1089,11 +1089,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         const float animtionTime = 1.0f;
         kei.PlayAnimation(BattlerAnimationType.magic);
 
+        // 残像
+        FadeEffect fadeEffect = weapons.leftWeapon.Rect.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(animtionTime, 0.05f, weapons.leftWeapon.GetComponent<Image>());
+        fadeEffect = weapons.rightWeapon.Rect.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(animtionTime, 0.05f, weapons.rightWeapon.GetComponent<Image>());
+
         if (isSuccess)
         {
-            // 京を攻撃できなくなる
-            kei.isTargettable = false;
-
             // この特殊技を削除
             kei.RemoveAbilityFromCharacter("Hacking");
 
