@@ -17,7 +17,10 @@ MonoBehaviour:
   descriptionID: Ability.Capture_Info
   functionName: Capture
   consumeSP: 0
+  cooldown: 0
   requiredLevel: 10
   requiredHornyness: 0
   castType: 1
   abilityType: 1
+  isAOE: 0
+  canTargetSelf: 0
