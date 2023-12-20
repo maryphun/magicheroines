@@ -21,9 +21,11 @@ public class Ability : ScriptableObject
     public string descriptionID;
     public string functionName;
     public int consumeSP;
+    public int cooldown;
     public int requiredLevel;
     public int requiredHornyness; // ˆú—“x—v‹
     public CastType castType;
     public AbilityType abilityType;
     public bool isAOE;
+    public bool canTargetSelf;
 }

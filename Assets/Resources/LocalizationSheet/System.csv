@@ -32,7 +32,7 @@ System.Attack,攻撃力：
 System.Level,LV：
 System.HP,体力：
 System.MP,SP：
-System.Defense,防衛力：
+System.Defense,防御力：
 System.Speed,素早さ：
 System.Skill,特殊技：
 System.Equipment,装備
@@ -158,7 +158,7 @@ Option.WindowedScreen,ウィンドウモード
 BattleScene,戦闘シーン
 Battle.Attack,攻撃
 Battle.Skill,特殊技
-Battle.Item,アイテム
+Battle.Item,道具
 Battle.Idle,待機
 Battle.Level,Lv.
 Battle.HP,HP
@@ -253,32 +253,78 @@ Item.M24_Info,手投げ弾を投げてダメージを与える。
 Item.FirstAid,救急箱
 Item.FirstAid_Info,効果が不安定だが、緊急時には仕方ない。
 Ability,特殊技名とその説明文 (背景色でキャラを分ける)
-Ability.DeepBreath,深呼吸
-Ability.DeepBreath_Info,体力回復20%
+Ability.DeepBreath,緊急回復
+Ability.DeepBreath_Info,"自身のHPを回復
+残りHPが少ないほど回復量が多くなる"
 Ability.PowerfulPunch,パワフルパンチ
-Ability.PowerfulPunch_Info,敵単体に普通攻撃の2倍ダメージを与える。使用者がその後の1ターン行動不能になる
-Ability.Tackle,全力タックル
-Ability.Tackle_Info,敵単体と共に1ターン行動不能になる
+Ability.PowerfulPunch_Info,"敵１体に普通攻撃の2倍ダメージを与える。
+
+使用者がその後の1ターン行動不能になる"
+Ability.Tackle,共倒れ
+Ability.Tackle_Info,敵１体と共に1ターン行動不能になる
 Ability.SuckingTentacle,吸収触手
-Ability.SuckingTentacle_Info,相手のSPを半分吸収する
+Ability.SuckingTentacle_Info,"相手のSPを半分吸収する
+
+女性相手ならHPも吸収する"
 Ability.TentacleService,触手サービス
-Ability.TentacleService_Info,SPを全部仲間単体に分け与える。(女性相手のみ有効)
+Ability.TentacleService_Info,SPを全部味方に分け与える。(女性相手のみ有効)
 Ability.Capture,媚薬ガス
-Ability.Capture_Info,敵単体の攻撃力・スピードを一時25%ダウン
+Ability.Capture_Info,"敵１体の攻撃力・スピードを一時25%ダウン
+
+女性相手なら防御力と攻撃力をダウンさせる"
 Ability.SelfRepair,自己修復
 Ability.SelfRepair_Info,25% HP 回復
-Ability.SelfEnchant,自己強化
-Ability.SelfEnchant_Info,ランダムのバフを獲得
+Ability.SelfEnchant,自己改造
+Ability.SelfEnchant_Info,ランダムのバフを獲得する
 Ability.HealAttack,エナジーレーザー
 Ability.HealAttack_Info,相手に30ダメージを与える
 Ability.GreatRegen,ヒーリング
 Ability.GreatRegen_Info,HPとSPを回復。HPは持続的回復する
-Ability.QuickAttack,連続攻撃
-Ability.QuickAttack_Info,
-Ability.Stungun_Info,スタンガンで目標を1ターン行動不能にする。
+Ability.Milk,ミルク補給
+Ability.Milk_Info,味方1体 HP 20~30 回復させる。
+Ability.MilkOverdrive,ミルク補給オバードライブ
+Ability.MilkOverdrive_Info,"過度にミルク搾って味方全員に分ける。
+明穂以外の味方全員が全回復する。
+使用後 ミルク補給 と ミルク補給オバードライブ が今回のバトルで使用不可となる。"
+Ability.MilkCookie,授乳クッキー
+Ability.MilkCookie_Info,行動不能以外のデバフをすべて解除する。
+Ability.Overdrive,オバードライブ
+Ability.Overdrive_Info,"３ターン連続行動することができる。
+その後３ターン行動不能となる。"
+Ability.QuickAttack,連撃
+Ability.QuickAttack_Info,ランダム攻撃x3
+Ability.Fist,正拳突き
+Ability.Fist_Info,ターンを消耗せずに敵単体を攻撃する。
+Ability.Guardian,鉄壁
+Ability.Guardian_Info,"味方の前に立って、ダメージを肩代りする。
+守護対象がその間攻撃と特殊技を使用できなくなる。"
+Ability.GuardUp,絶対防御
+Ability.GuardUp_Info,2 ターン間防御力99アップ
+Ability.GuardianAngel,加護
+Ability.GuardianAngel_Info,１ターン間味方全員が受けたダメージを無効にする。
 Ability.Hacking,ハッキング
-Ability.Hacking_Info,"目標をハッキングしてバトル終了までに内傀儡として操る。京に向けた攻撃がすべて傀儡が代わりに受けることになる (機械類の敵のみ有効)
-目標とのレベル差と目標の残りHPが成功確率を左右する"
+Ability.Hacking_Info,"ターゲットをハッキングしてバトル終了までに内傀儡として操る。京に向けた攻撃がすべて傀儡が代わりに受けることになる (機械類の敵のみ有効)
+ターゲットとのレベル差と目標の残りHPが成功確率を左右する
+
+成功するとこの特殊技を再度使えなくなる"
+Ability.SuicideAttack,自爆攻撃
+Ability.SuicideAttack_Info,"ハッキングした傀儡を自爆攻撃を行わせる。
+傀儡の残りHPがダメージとする。"
+Ability.Reprogram,リファクタリング
+Ability.Reprogram_Info,ターゲットのプログラムを再作成し、攻撃力と速度を上昇させる。(機械類の目標のみ有効)
+Ability.EffeciencyBoost,システム修復
+Ability.EffeciencyBoost_Info,ターゲットのプログラムを最適化し、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効)
+Ability.PowerMode,火力モード
+Ability.PowerMode_Info,"有効にすると常時 HPが 30 減る。
+攻撃が50%アップ。
+
+スキルを有効・無効にするときターンを消耗しない"
+Ability.ChargeAttack,チャージアタック
+Ability.ChargeAttack_Info,"次の攻撃のために力を貯めて、攻撃力を150%上げる。
+連続使用でバフを重ねることができる。"
+Ability.Ultimate,ハイブースト
+Ability.Ultimate_Info,敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
+Ability.Stungun_Info,スタンガンでターゲットを1ターン行動不能にする。
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」
@@ -333,3 +379,4 @@ BattleLog.Defeat,{0}　が再起不能となった。
 BattleLog.Hacking,{0}　がハッキングを挑む！成功確率は {1}
 BattleLog.Hacking_Success,成功した！ {0}　が傀儡となった。
 BattleLog.Hacking_Fail,ハッキングが失敗した。
+BattleLog.Hacking_End,{0}　のシステム故障が直った。

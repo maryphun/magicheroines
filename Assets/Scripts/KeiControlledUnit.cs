@@ -34,6 +34,10 @@ public class KeiControlledUnit : MonoBehaviour
             // 向きを反転
             battlerScript.ReverseFacing();
 
+            // 京の状態更新
+            master.isTargettable = false;
+            master.EnableNormalAttack = false;
+
             // 元の位置を記録
             originalParent = transform.parent;
             originalSiblingIndex = transform.GetSiblingIndex();
@@ -54,6 +58,7 @@ public class KeiControlledUnit : MonoBehaviour
     {
         // 京を攻撃できるようにする
         master.isTargettable = true;
+        master.EnableNormalAttack = true;
 
         // 元の位置に戻す
         transform.SetParent(originalParent);
@@ -81,7 +86,8 @@ public class KeiControlledUnit : MonoBehaviour
 
             // 京を攻撃できるようにする
             master.isTargettable = true;
-            
+            master.EnableNormalAttack = true;
+
             // このスクリプトを削除
             Destroy(this, 1.0f);
         }

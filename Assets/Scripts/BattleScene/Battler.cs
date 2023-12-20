@@ -37,7 +37,9 @@ public class Battler : MonoBehaviour
     [SerializeField] public int speed;
     [SerializeField] public int currentLevel;
     [SerializeField] public bool isAlive;
+    [SerializeField] public bool isBreathing;
     [SerializeField] public bool isTargettable; // 目標に出来るか
+    [SerializeField] public BattlerAnimationType currentAnimation;
     [SerializeField] public UnityEvent onDeathEvent;
     [SerializeField] public List<Ability> abilities;
     [SerializeField] public EquipmentDefine equipment;
@@ -53,7 +55,7 @@ public class Battler : MonoBehaviour
 
     [HideInInspector] public float Ease { get { return ease; } }
     [HideInInspector] public Image Graphic { get { return graphic; } }
-    [HideInInspector] public bool EnableNormalAttack { get { return enableNormalAttack; } }
+    [HideInInspector] public bool EnableNormalAttack { get { return enableNormalAttack; } set { enableNormalAttack = value; } }
     [HideInInspector] public bool IsMachine { get { return isMachine; } }
     [HideInInspector] public bool IsFemale { get { return isFemale; } }
     [HideInInspector] public string CharacterNameColored { get { return CustomColor.AddColor(character_name, character_color); } }
@@ -93,6 +95,7 @@ public class Battler : MonoBehaviour
         defense = enemy.defense;
         speed = enemy.speed;
         currentLevel = enemy.level;
+        currentAnimation = BattlerAnimationType.idle;
         abilities = new List<Ability>();
         actionPattern = new List<EnemyActionPattern>();
 
@@ -134,6 +137,7 @@ public class Battler : MonoBehaviour
         defense = character.current_defense;
         speed = character.current_speed;
         currentLevel = character.current_level;
+        currentAnimation = BattlerAnimationType.idle;
 
         abilities = new List<Ability>();
         if (character.characterData.abilities.Count > 0)
@@ -220,6 +224,7 @@ public class Battler : MonoBehaviour
         UpdateHPBar();
         isAlive = current_hp > 0;   // 最初からリタイア状態のもありかもしれない
         isTargettable = true;
+        isBreathing = true;
 
         if (max_mp > 0)
         {
@@ -268,6 +273,7 @@ public class Battler : MonoBehaviour
     private void Update()
     {
         if (!isAlive) return;
+        if (!isBreathing) return;
 
         ease = (ease + Time.deltaTime);
 
@@ -289,9 +295,34 @@ public class Battler : MonoBehaviour
         {
             // 死亡状態はリタイアアニメションしか流れない
             graphic.sprite = animations.retire;
+            currentAnimation = BattlerAnimationType.retire;
             return;
         }
 
+        // アニメション再生時に画像をぽにゅぽにゅにする
+        if (currentAnimation != type && isBreathing && breathScale > 0.001f)
+        {
+            const float animTime = 0.6f;
+            Vector3 localScale = GetGraphicRectTransform().localScale;
+            DOTween.Sequence()
+                .AppendCallback(() =>
+                {
+                    isBreathing = false;
+                    GetGraphicRectTransform().DOScale(localScale * 0.98f, animTime / 6f).SetEase(DG.Tweening.Ease.OutCubic);
+                })
+                .AppendInterval(animTime / 6f)
+                .AppendCallback(() =>
+                {
+                    GetGraphicRectTransform().DOScale(localScale, animTime - (animTime / 6f)).SetEase(DG.Tweening.Ease.OutElastic);
+                })
+                .AppendInterval(animTime / 6f)
+                .AppendCallback(() =>
+                {
+                    isBreathing = true;
+                });
+        }
+
+        currentAnimation = type;
         switch (type)
         {
             case BattlerAnimationType.attack:

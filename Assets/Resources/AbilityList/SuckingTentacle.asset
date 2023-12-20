@@ -17,7 +17,10 @@ MonoBehaviour:
   descriptionID: Ability.SuckingTentacle_Info
   functionName: SuckingTentacle
   consumeSP: 0
+  cooldown: 2
   requiredLevel: 1
   requiredHornyness: 0
   castType: 1
   abilityType: 0
+  isAOE: 0
+  canTargetSelf: 0
