@@ -1181,7 +1181,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     .AppendInterval((animtionTime * 0.5f) + 0.25f)
                     .AppendCallback(() =>
                     {
-                        battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.Hacking_Fail"));
+                        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking_Fail"), target.CharacterNameColored));
 
                         // å≥ÇÃèäÇ…ñﬂÇ∑
                         weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
