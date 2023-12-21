@@ -119,8 +119,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 7f3ce7c4c1cb49543958010e0ae16549, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -2375,7 +2375,7 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 13, y: 6, z: 0}
+  graphScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  graphPosition: {x: -101, y: 92, z: 0}
   havePreLocations: 0
   newLocations: []
