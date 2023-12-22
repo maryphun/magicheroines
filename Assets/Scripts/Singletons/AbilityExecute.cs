@@ -107,12 +107,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
     #region abilities
     /// <summary>
-    /// 深呼吸 (戦闘員)
+    /// 緊急回復 (戦闘員)
     /// </summary>
     public void DeepBreath()
     {
         var target = battleManager.GetCurrentBattler();
-        int healAmount = (int)((float)target.max_hp * 0.20f);
+
+        // 残りHPが少ないほど回復量が多くなる
+        int healAmount = (int)((float)target.max_hp * 0.40f * (1.0f - (target.current_hp/target.max_hp)));
 
         // 技名を表示
         var floatingText = CreateFloatingText(target.transform);
@@ -269,7 +271,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// 全力タックル (戦闘員)
+    /// 共倒れ (戦闘員)
     /// </summary>
     public void Tackle()
     {
@@ -443,7 +445,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // suck sp
                     self.AddSP(suckAmount);
                     target.DeductSP(suckAmount);
-
+                    
                     // SE
                     audio = AudioManager.Instance.PlaySFX("Tentacle");
 
@@ -454,7 +456,22 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // ログ ({1}　のSP {0} 吸収した！ )
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.SPDrain"), target.CharacterNameColored, CustomColor.AddColor(suckAmount, CustomColor.SP())));
                 })
-                .AppendInterval(animationTime)
+                .AppendInterval(animationTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    if (target.IsFemale)
+                    {
+                        int hpSuckAmount = (int)((float)suckAmount * UnityEngine.Random.Range(0.5f, 0.9f));
+
+                        // text
+                        floatingText = CreateFloatingText(target.transform);
+                        floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, CustomColor.heal());
+                        
+                        // ログ ({1}　のHP {0} 吸収した！ )
+                        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.HPDrain"), target.CharacterNameColored, CustomColor.AddColor(suckAmount, CustomColor.heal())));
+                    }
+                })
+                .AppendInterval(animationTime * 0.5f)
                 .AppendCallback(() =>
                 {
                     self.PlayAnimation(BattlerAnimationType.idle);
@@ -483,11 +500,99 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     /// </summary>
     public void TentacleService()
     {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+        int spAmount = self.current_mp;
 
+        Transform originalParent = self.RectTransform.parent;
+        Vector3 originalPosition = self.RectTransform.position;
+
+        // ログ ({0}　が触手を {1} に伸ばすーー！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Tentacle"), self.CharacterNameColored, target.CharacterNameColored));
+        
+        // キャラ移動
+        self.RectTransform.DOLocalMoveX(self.RectTransform.localPosition.x + 200.0f, 0.15f);
+        self.Graphic.DOFade(0.0f, 0.15f);
+
+        // play SE
+        AudioSource audio = AudioManager.Instance.GetSFXSource();
+        AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.2f)
+            .AppendCallback(()=> 
+            {
+                self.RectTransform.SetParent(target.RectTransform);
+                self.RectTransform.localPosition = new Vector3(200.0f, 0.0f, 0.0f);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+                // 襲撃
+                self.ReverseFacing();
+                self.RectTransform.DOLocalMoveX(target.GetCharacterSize().x * 0.25f, 0.15f);
+                self.Graphic.DOFade(1.0f, 0.15f);
+            })
+            .AppendInterval(0.15f)
+            .AppendCallback(() =>
+            {
+                if (target.IsFemale)
+                {
+                    self.PlayAnimation(BattlerAnimationType.magic);
+                    target.PlayAnimation(BattlerAnimationType.attacked);
+
+                    self.Shake(1.0f);
+                    target.Shake(1.0f);
+
+                    // give sp
+                    target.AddSP(spAmount);
+                    self.DeductSP(spAmount);
+
+                    // SE
+                    audio = AudioManager.Instance.PlaySFX("Tentacle");
+
+                    // ログ (SP {0} を {1} に分け与えた！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.GiveSP"), CustomColor.AddColor(spAmount, CustomColor.SP()), target.CharacterNameColored));
+                }
+                else
+                {
+                    // ログ (効果はなかった。)
+                    battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.NoEffect"));
+                }
+            })
+            .AppendInterval(1.0f)
+            .AppendCallback(() =>
+            {
+                if (target.IsFemale)
+                {
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    target.PlayAnimation(BattlerAnimationType.idle);
+
+                    if (audio) audio.Stop();
+                }
+
+                // 戻る
+                self.RectTransform.DOLocalMoveX(self.RectTransform.localPosition.x + 200.0f, 0.15f);
+                self.Graphic.DOFade(0.0f, 0.15f);
+            })
+            .AppendInterval(0.2f)
+            .AppendCallback(() =>
+            {
+                self.ReverseFacing();
+                self.RectTransform.SetParent(originalParent);
+
+                self.RectTransform.DOMove(originalPosition, 0.15f);
+                self.Graphic.DOFade(1.0f, 0.15f);
+            })
+            .AppendInterval(0.15f)
+            .AppendCallback(() =>
+            {
+                battleManager.NextTurn(false);
+            });
     }
 
     /// <summary>
-    /// 丸呑み (触手怪人)
+    /// 媚薬ガス (触手怪人)
     /// </summary>
     public void Capture()
     {
@@ -572,6 +677,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 });
     }
 
+    /// <summary>
+    /// 自己修復
+    /// </summary>
     public void SelfRepair()
     {
         var target = battleManager.GetCurrentBattler();
@@ -605,6 +713,53 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // 戦闘ログ
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// 自己強化
+    /// </summary>
+    public void SelfEnchant()
+    {
+        var target = battleManager.GetCurrentBattler();
+
+        // buff, value
+        List<Tuple<BuffType, int>> possibleBuff = new List<Tuple<BuffType, int>>();
+        possibleBuff.Add(new Tuple<BuffType, int>(BuffType.attack_up, (int)UnityEngine.Random.Range(target.attack * 0.1f, target.attack * 0.5f)));
+        possibleBuff.Add(new Tuple<BuffType, int>(BuffType.heal, (int)UnityEngine.Random.Range(target.max_hp * 0.1f, target.max_hp * 0.2f)));
+        possibleBuff.Add(new Tuple<BuffType, int>(BuffType.shield_up, (int)UnityEngine.Random.Range(3, 10)));
+        possibleBuff.Add(new Tuple<BuffType, int>(BuffType.speed_up, (int)UnityEngine.Random.Range(4, 20)));
+
+        // バフを選択
+        Tuple<BuffType, int> buff = possibleBuff[UnityEngine.Random.Range(0, possibleBuff.Count)];
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(target.transform);
+        string abilityName = LocalizationManager.Localize("Ability.SelfEnchant");
+        floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
+
+        // ログ ({0}　が{1}する)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecuteSelf"), target.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.SelfEnchant"), CustomColor.abilityName())));
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // effect
+                    battleManager.AddBuffToBattler(target, buff.Item1, UnityEngine.Random.Range(2, 5), buff.Item2);
+
+                    // TODO: change effect
+                    // play SE
+                    AudioManager.Instance.PlaySFX("SelfRepair");
+
+                    // VFX
+                    VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
                 })
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>

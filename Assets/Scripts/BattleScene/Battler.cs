@@ -54,6 +54,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private GameObject deadVFX;
 
     [HideInInspector] public float Ease { get { return ease; } }
+    [HideInInspector] public RectTransform RectTransform { get { return GetComponent<RectTransform>(); } }
     [HideInInspector] public Image Graphic { get { return graphic; } }
     [HideInInspector] public bool EnableNormalAttack { get { return enableNormalAttack; } set { enableNormalAttack = value; } }
     [HideInInspector] public bool IsMachine { get { return isMachine; } }
@@ -95,7 +96,7 @@ public class Battler : MonoBehaviour
         defense = enemy.defense;
         speed = enemy.speed;
         currentLevel = enemy.level;
-        currentAnimation = BattlerAnimationType.idle;
+        PlayAnimation(BattlerAnimationType.idle);
         abilities = new List<Ability>();
         actionPattern = new List<EnemyActionPattern>();
 
@@ -137,7 +138,7 @@ public class Battler : MonoBehaviour
         defense = character.current_defense;
         speed = character.current_speed;
         currentLevel = character.current_level;
-        currentAnimation = BattlerAnimationType.idle;
+        PlayAnimation(BattlerAnimationType.idle);
 
         abilities = new List<Ability>();
         if (character.characterData.abilities.Count > 0)

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 254c85eaabb080f48a1342a94d9c7d05, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f01f2e84d571ef469cb3a6b043fd605, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -273,12 +273,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoInit: 0
   animations:
-    idle: {fileID: 21300000, guid: 254c85eaabb080f48a1342a94d9c7d05, type: 3}
-    attack: {fileID: 21300000, guid: 254c85eaabb080f48a1342a94d9c7d05, type: 3}
-    magic: {fileID: 21300000, guid: 254c85eaabb080f48a1342a94d9c7d05, type: 3}
-    item: {fileID: 21300000, guid: 254c85eaabb080f48a1342a94d9c7d05, type: 3}
-    attacked: {fileID: 21300000, guid: 254c85eaabb080f48a1342a94d9c7d05, type: 3}
-    retire: {fileID: 21300000, guid: 254c85eaabb080f48a1342a94d9c7d05, type: 3}
+    idle: {fileID: 21300000, guid: 9f01f2e84d571ef469cb3a6b043fd605, type: 3}
+    attack: {fileID: 21300000, guid: d022d000593f4444fbb7ed362d2badae, type: 3}
+    magic: {fileID: 21300000, guid: d022d000593f4444fbb7ed362d2badae, type: 3}
+    item: {fileID: 21300000, guid: 9f01f2e84d571ef469cb3a6b043fd605, type: 3}
+    attacked: {fileID: 21300000, guid: 9f01f2e84d571ef469cb3a6b043fd605, type: 3}
+    retire: {fileID: 21300000, guid: 9f01f2e84d571ef469cb3a6b043fd605, type: 3}
   soundEffects:
     attack: {fileID: 0}
     attacked: {fileID: 0}
@@ -302,6 +302,12 @@ MonoBehaviour:
   speed: 0
   currentLevel: 0
   isAlive: 0
+  isBreathing: 0
+  isTargettable: 0
+  currentAnimation: 0
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []

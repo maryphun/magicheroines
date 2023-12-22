@@ -436,6 +436,9 @@ MonoBehaviour:
     retire: {fileID: 0}
   attackVFX: {fileID: 1343633729508638609, guid: 50e1eebc5a9297944bd413cedb616ae1, type: 3}
   breathScale: 0.005
+  enableNormalAttack: 1
+  isFemale: 0
+  isMachine: 0
   character_name: "\u6226\u95D8\u54E1"
   characterID: 0
   icon: {fileID: 0}
@@ -450,6 +453,12 @@ MonoBehaviour:
   speed: 0
   currentLevel: 0
   isAlive: 0
+  isBreathing: 0
+  isTargettable: 0
+  currentAnimation: 0
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls: []
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []
