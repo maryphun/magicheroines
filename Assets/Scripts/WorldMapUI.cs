@@ -80,11 +80,27 @@ public class WorldMapUI : MonoBehaviour
     private bool CheckCondition()
     {
         // 条件が満たされていない?
-        if (ProgressManager.Instance.GetCurrentStageProgress() == 6) // 立花敗北Chapter
+        if (ProgressManager.Instance.GetCurrentStageProgress() == 6) // 2ｰ3(六花編最終話)←明穂闇堕ち最終段階が必要
         {
-            if (!ProgressManager.Instance.HasCharacter(3))
+            if (!ProgressManager.Instance.HasCharacter(3, true))
             {
                 NovelSingletone.Instance.PlayNovel("Condition Chapter2-3", true);
+                return false;
+            }
+        }
+        else if (ProgressManager.Instance.GetCurrentStageProgress() == 9) // 3-3(エレナ編最終話)←六花闇堕ち最終段階が必要
+        {
+            if (!ProgressManager.Instance.HasCharacter(4, true))
+            {
+                NovelSingletone.Instance.PlayNovel("Condition Chapter3-3", true);
+                return false;
+            }
+        }
+        else if (ProgressManager.Instance.GetCurrentStageProgress() == 15) // 5‐3(那由多編最終話)←エレナ闇堕ち最終段階が必要
+        {
+            if (!ProgressManager.Instance.HasCharacter(5, true))
+            {
+                NovelSingletone.Instance.PlayNovel("Condition Chapter5-3", true);
                 return false;
             }
         }

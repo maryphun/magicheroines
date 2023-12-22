@@ -4944,6 +4944,8 @@ MonoBehaviour:
     alertLevel: 1
   - enemy: {fileID: 11400000, guid: b328b770d72df7c40b1e828482fda818, type: 2}
     alertLevel: 1
+  - enemy: {fileID: 11400000, guid: ef8a220f948dc1647961abaf4bc1920d, type: 2}
+    alertLevel: 2
   - enemy: {fileID: 11400000, guid: 862289a47bccb5b46b1ef1d788c92cc9, type: 2}
     alertLevel: 2
   - enemy: {fileID: 11400000, guid: 2cc38c13e48ddde4e98f714a368cd621, type: 2}

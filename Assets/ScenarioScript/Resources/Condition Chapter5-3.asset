@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
-  m_Name: Condition Chapter3-3
+  m_Name: Condition Chapter5-3
   m_EditorClassIdentifier: 
   _locations:
   - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
@@ -27,16 +27,17 @@ MonoBehaviour:
     nodeName: 
     _dialogueList:
     - open: 0
-      Name: Name.Akiho_Corrupted
-      text: "\u300C\u5148\u65E5\u6355\u7372\u3057\u305F\u7ACB\u82B1\u3092\u653E\u7F6E\u305B\u305A\u306B\u65E9\u304F\u5E78\u305B\u306B\u3057\u3066\u6B32\u3057\u3044\u306A\u3041...\u300D"
-      localizationID: World.Chapter3-3
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u516B\u96F2 \u90A3\u7531\u591A\u306F\u307E\u3055\u306B\u5F37\u6575\u3067\u3059\u3002\n\u3000\u300C\u6E05\u85E4
+        \u30A8\u30EC\u30CA\u300D\u3092\u5815\u3068\u3057\u3066\u304B\u3089\u521D\u3081\u3066\u52DD\u7B97\u304C\u3042\u308B\u304B\u3068\u300D"
+      localizationID: World.Chapter5-3
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 02000000
       charas:
-      - {fileID: 21300000, guid: f4d3a6f799b2ae145816562333462261, type: 3}
+      - {fileID: 21300000, guid: b4027fb1cfbeb3543b8cb423b904a2e0, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
@@ -76,7 +77,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 00000000
       charas:
-      - {fileID: 21300000, guid: f4d3a6f799b2ae145816562333462261, type: 3}
+      - {fileID: 21300000, guid: b4027fb1cfbeb3543b8cb423b904a2e0, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
