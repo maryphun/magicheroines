@@ -382,9 +382,9 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 00000000
+      howCharas: 01000000
       charas:
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
@@ -424,7 +424,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 00000000
       charas:
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
@@ -458,11 +458,11 @@ MonoBehaviour:
       Name: 
       text: "\u6697\u95C7\u306E\u4E2D\u3001\u66F4\u306B\u8907\u96D1\u306A\u9053\u3092\u901A\u308A5\u53F7\u306E\u80CC\u4E2D\u306B\u3064\u3044\u3066\u3044\u304F"
       localizationID: Dialog.Tutorial-1-10
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
-      howCharas: 00000000
+      howCharas: 01000000
       charas:
       - {fileID: 0}
       charaFadeColor:
@@ -481,13 +481,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: d1208a9a0bf1aa24983ed6d572708274, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 00000000
@@ -502,9 +502,9 @@ MonoBehaviour:
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
-      howCharas: 00000000
+      howCharas: 01000000
       charas:
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 6e4933831e4cfd1469077e622cbd41ed, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 00000000
       charas:
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 6e4933831e4cfd1469077e622cbd41ed, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0

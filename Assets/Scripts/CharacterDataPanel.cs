@@ -32,6 +32,7 @@ public class CharacterDataPanel : MonoBehaviour
     [SerializeField] private TMP_Text abilityName;
     [SerializeField] private TMP_Text abilitySPCost;
     [SerializeField] private TMP_Text abilityType;
+    [SerializeField] private TMP_Text abilityCooldown;
     [SerializeField] private TMP_Text abilityCastType;
     [SerializeField] private TMP_Text abilityDescription;
 
@@ -138,6 +139,8 @@ public class CharacterDataPanel : MonoBehaviour
         abilityName.text = LocalizationManager.Localize(ability.abilityNameID);
         abilitySPCost.text = LocalizationManager.Localize("System.SPCost") + ability.consumeSP;
         abilityType.text = LocalizationManager.Localize("System.AbilityType") + "ÅF" + AbilityTypeToString(ability.abilityType);
+        abilityCooldown.text = LocalizationManager.Localize("System.Cooldown") + "ÅF" + ability.cooldown + LocalizationManager.Localize("System.Turn");
+        abilityCooldown.alpha = ability.cooldown == 0 ? 0 : 1; // only show cooldown if cooldown is longer than 0
         abilityCastType.text = LocalizationManager.Localize("System.EffectTarget") + CastTypeToString(ability.castType);
         abilityDescription.text = LocalizationManager.Localize(ability.descriptionID);
 

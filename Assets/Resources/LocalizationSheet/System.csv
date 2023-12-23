@@ -55,6 +55,8 @@ System.AbilityAttack,攻撃
 System.AbilityHeal,回復
 System.AbilityBuff,状態
 System.AbilitySpecial,特殊
+System.Turn,ターン
+System.Cooldown,チャージ
 System.AbilityAbsent,特殊技持っていない
 System.FileCorrupted,データ異常
 System.Save,セーブ

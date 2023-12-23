@@ -29,7 +29,7 @@ public class ButtonHotkey : MonoBehaviour
 
     private void Update()
     {
-        if (ReferenceEquals(button, null))
+        if (button == null) // null check
         {
             enabled = false;
             return;
