@@ -23,7 +23,7 @@ MonoBehaviour:
   actionPattern:
   - actionType: 0
     ability: {fileID: 0}
-    chance: 0.5
+    chance: 0.3
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0

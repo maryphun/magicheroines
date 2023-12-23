@@ -628,13 +628,13 @@ public class Battle : MonoBehaviour
 
         _buff.data.start.Invoke(target, value);
 
-        // 戦闘ログ出力する
+        // 戦闘ログを出力する
         if (_buff.data.battleLogStart != string.Empty)
         {
             string log = _buff.data.battleLogStart;
             // {0}はキャラ名、{1}は数値
-            if (log.Contains("{0}")) log.Replace("{0}", target.CharacterNameColored);
-            if (log.Contains("{1}")) log.Replace("{1}", _buff.value.ToString());
+            if (log.Contains("{0}")) log = log.Replace("{0}", target.CharacterNameColored);
+            if (log.Contains("{1}")) log = log.Replace("{1}", _buff.value.ToString());
             // ログ追加
             AddBattleLog(log);
         }
@@ -685,13 +685,13 @@ public class Battle : MonoBehaviour
             buff.data.update.Invoke(buff.target, buff.value);
             buff.text.text = buff.remainingTurn.ToString();
             
-            // 戦闘ログ出力する
+            // 戦闘ログを出力する
             if (buff.data.battleLogUpdate != string.Empty)
             {
                 string log = buff.data.battleLogUpdate;
                 // {0}はキャラ名、{1}は数値
-                if (log.Contains("{0}")) log.Replace("{0}", target.CharacterNameColored);
-                if (log.Contains("{1}")) log.Replace("{1}", buff.value.ToString());
+                if (log.Contains("{0}")) log = log.Replace("{0}", target.CharacterNameColored);
+                if (log.Contains("{1}")) log = log.Replace("{1}", buff.value.ToString());
                 // ログ追加
                 AddBattleLog(log);
             }
@@ -716,13 +716,13 @@ public class Battle : MonoBehaviour
         buffedCharacters.Remove(instance);
         ArrangeBuffIcon(instance.target);
         
-        // 戦闘ログ出力する
+        // 戦闘ログを出力する
         if (instance.data.battleLogEnd != string.Empty)
         {
             string log = instance.data.battleLogEnd;
             // {0}はキャラ名、{1}は数値
-            if (log.Contains("{0}")) log.Replace("{0}", instance.target.CharacterNameColored);
-            if (log.Contains("{1}")) log.Replace("{1}", instance.value.ToString());
+            if (log.Contains("{0}")) log = log.Replace("{0}", instance.target.CharacterNameColored);
+            if (log.Contains("{1}")) log = log.Replace("{1}", instance.value.ToString());
             // ログ追加
             AddBattleLog(log);
         }

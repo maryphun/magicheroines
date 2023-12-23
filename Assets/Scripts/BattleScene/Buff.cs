@@ -71,7 +71,7 @@ public static class BuffManager
             data.isBad = true;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.StunStart");
             data.battleLogUpdate = LocalizationManager.Localize("BattleLog.StunUpdate");
-            data.battleLogStart = LocalizationManager.Localize("BattleLog.StunEnd");
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.stun, data);
         }
         // hurt
@@ -85,7 +85,7 @@ public static class BuffManager
             data.isBad = true;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.HurtStart");
             data.battleLogUpdate = LocalizationManager.Localize("BattleLog.HurtUpdate").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.damage()));
-            data.battleLogStart = LocalizationManager.Localize("BattleLog.HurtEnd");
+            data.battleLogEnd = LocalizationManager.Localize("BattleLog.HurtEnd");
             BuffList.Add(BuffType.hurt, data);
         }
         // heal
@@ -99,7 +99,7 @@ public static class BuffManager
             data.isBad = false;
             data.battleLogStart = string.Empty;
             data.battleLogUpdate = LocalizationManager.Localize("BattleLog.HealUpdate").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.heal()));
-            data.battleLogStart = string.Empty;
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.heal, data);
         }
         // shield up
@@ -113,7 +113,7 @@ public static class BuffManager
             data.isBad = false;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.ShieldUpStart");
             data.battleLogUpdate = string.Empty;
-            data.battleLogStart = string.Empty;
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.shield_up, data);
         }
         // shield down
@@ -127,7 +127,7 @@ public static class BuffManager
             data.isBad = true;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.ShieldDownStart");
             data.battleLogUpdate = string.Empty;
-            data.battleLogStart = string.Empty;
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.shield_down, data);
         }
         // attack up
@@ -141,7 +141,7 @@ public static class BuffManager
             data.isBad = false;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.AttackUpStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
             data.battleLogUpdate = string.Empty;
-            data.battleLogStart = string.Empty;
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.attack_up, data);
         }
         // attack down
@@ -155,7 +155,7 @@ public static class BuffManager
             data.isBad = true;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.AttackDownStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
             data.battleLogUpdate = string.Empty;
-            data.battleLogStart = string.Empty;
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.attack_down, data);
         }
         // speed up
@@ -169,7 +169,7 @@ public static class BuffManager
             data.isBad = false;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.SpeedUpStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
             data.battleLogUpdate = string.Empty;
-            data.battleLogStart = string.Empty;
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.speed_up, data);
         }
         // speed down
@@ -183,7 +183,7 @@ public static class BuffManager
             data.isBad = true;
             data.battleLogStart = LocalizationManager.Localize("BattleLog.SpeedDownStart").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.buffvalue()));
             data.battleLogUpdate = string.Empty;
-            data.battleLogStart = string.Empty;
+            data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.speed_down, data);
         }
 

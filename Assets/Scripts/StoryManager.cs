@@ -56,7 +56,7 @@ public class StoryManager : MonoBehaviour
             case 4:
                 {
                     BattleSetup.AddEnemy("Drone");
-                    BattleSetup.AddEnemy("Android");
+                    BattleSetup.AddEnemy("GoldAndroid");
                     BattleSetup.SetBattleBGM("AkihoBattle");
                     BattleSetup.SetReward(550, 50);
                     StartCoroutine(SceneTransition("Battle", 0));

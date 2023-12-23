@@ -448,6 +448,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     
                     // SE
                     audio = AudioManager.Instance.PlaySFX("Tentacle");
+                    AudioManager.Instance.PlaySFX("TentacleDrain");
 
                     // text
                     floatingText = CreateFloatingText(target.transform);
@@ -466,9 +467,16 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         // text
                         floatingText = CreateFloatingText(target.transform);
                         floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, CustomColor.heal());
-                        
+
+                        // suck hp
+                        self.Heal(hpSuckAmount);
+                        target.DeductHP(hpSuckAmount);
+
                         // ログ ({1}　のHP {0} 吸収した！ )
                         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.HPDrain"), target.CharacterNameColored, CustomColor.AddColor(suckAmount, CustomColor.heal())));
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("TentacleDrain");
                     }
                 })
                 .AppendInterval(animationTime * 0.5f)
@@ -512,7 +520,6 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         
         // キャラ移動
         self.RectTransform.DOLocalMoveX(self.RectTransform.localPosition.x + 200.0f, 0.15f);
-        self.Graphic.DOFade(0.0f, 0.15f);
 
         // play SE
         AudioSource audio = AudioManager.Instance.GetSFXSource();
@@ -520,18 +527,23 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.2f)
-            .AppendCallback(()=> 
+            .AppendCallback(() =>
             {
                 self.RectTransform.SetParent(target.RectTransform);
-                self.RectTransform.localPosition = new Vector3(200.0f, 0.0f, 0.0f);
+                self.RectTransform.DOLocalMove(new Vector3(200.0f, 0.0f, 0.0f), 0.2f);
 
                 // play SE
                 AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
-
+            })
+            .AppendInterval(0.2f)
+            .AppendCallback(()=> 
+            {
                 // 襲撃
                 self.ReverseFacing();
                 self.RectTransform.DOLocalMoveX(target.GetCharacterSize().x * 0.25f, 0.15f);
-                self.Graphic.DOFade(1.0f, 0.15f);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
             })
             .AppendInterval(0.15f)
             .AppendCallback(() =>
@@ -550,6 +562,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // SE
                     audio = AudioManager.Instance.PlaySFX("Tentacle");
+                    AudioManager.Instance.PlaySFX("TentacleDrain");
 
                     // ログ (SP {0} を {1} に分け与えた！)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.GiveSP"), CustomColor.AddColor(spAmount, CustomColor.SP()), target.CharacterNameColored));
@@ -573,20 +586,31 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                 // 戻る
                 self.RectTransform.DOLocalMoveX(self.RectTransform.localPosition.x + 200.0f, 0.15f);
-                self.Graphic.DOFade(0.0f, 0.15f);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
             })
             .AppendInterval(0.2f)
             .AppendCallback(() =>
             {
-                self.ReverseFacing();
                 self.RectTransform.SetParent(originalParent);
+                self.RectTransform.DOMove(new Vector3(self.RectTransform.position.x, originalPosition.y, 0.0f), 0.2f);
 
+                // play SE
+                AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+            })
+            .AppendInterval(0.2f)
+            .AppendCallback(() =>
+            {
                 self.RectTransform.DOMove(originalPosition, 0.15f);
-                self.Graphic.DOFade(1.0f, 0.15f);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
             })
             .AppendInterval(0.15f)
             .AppendCallback(() =>
             {
+                self.ReverseFacing();
                 battleManager.NextTurn(false);
             });
     }
@@ -811,7 +835,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     
                     // effect
                     target.DeductHP(damage);
-                    
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(damage, CustomColor.damage())));
+
                     // animation
                     target.Shake(0.75f);
                     self.PlayAnimation(BattlerAnimationType.idle);
@@ -969,6 +996,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(targets[0].transform);
                     floatingText.Init(2.0f, targets[0].GetMiddleGlobalPosition(), (targets[0].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), targets[0].CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+                    
                     // play SE
                     AudioManager.Instance.PlaySFX("Attacked", 0.8f);
 
@@ -1013,6 +1043,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(targets[1].transform);
                     floatingText.Init(2.0f, targets[1].GetMiddleGlobalPosition(), (targets[1].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), targets[1].CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
                     // play SE
                     AudioManager.Instance.PlaySFX("Attacked", 0.8f);
 
@@ -1056,6 +1089,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // text
                     floatingText = CreateFloatingText(targets[2].transform);
                     floatingText.Init(2.0f, targets[2].GetMiddleGlobalPosition(), (targets[2].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), targets[2].CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Attacked", 0.8f);
