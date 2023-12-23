@@ -20,6 +20,7 @@ public class TurnBaseInformation : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private bool isDisplay = false;
+    [SerializeField] private Battler battler;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,11 +29,12 @@ public class TurnBaseInformation : MonoBehaviour
         isDisplay = false;
     }
 
-    public void Initialize(Color characterColor, string name, string speed)
+    public void Initialize(Color characterColor, string name, Battler target)
     {
+        battler = target;
         characterName.text = name;
         characterName.color = new Color(characterColor.r * colorBrightness, characterColor.g * colorBrightness, characterColor.b * colorBrightness, 1.0f);
-        characterSpeed.text = LocalizationManager.Localize("System.Speed") + speed;
+        characterSpeed.text = LocalizationManager.Localize("System.Speed") + target.speed.ToString();
 
         // update UI length
         characterName.ForceMeshUpdate();
@@ -50,6 +52,9 @@ public class TurnBaseInformation : MonoBehaviour
         isDisplay = true;
         canvasGroup.DOComplete();
         canvasGroup.DOFade(1.0f, animationSpeed);
+
+        // update text
+        characterSpeed.text = LocalizationManager.Localize("System.Speed") + battler.speed.ToString();
     }
 
     public void UnHover()

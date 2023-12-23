@@ -44,7 +44,7 @@ public class TurnBase : MonoBehaviour
             iconList.Add(Instantiate(originIcon, transform));
             iconList[i].color = Color.white;
             iconList[i].sprite = battlerList[i].icon;
-            iconList[i].GetComponent<TurnBaseInformation>().Initialize(battlerList[i].character_color, battlerList[i].character_name, battlerList[i].speed.ToString());
+            iconList[i].GetComponent<TurnBaseInformation>().Initialize(battlerList[i].character_color, battlerList[i].character_name, battlerList[i]);
             characterInOrder.Add(new Tuple<Battler, Image>(battlerList[i], iconList[i]));
         }
 

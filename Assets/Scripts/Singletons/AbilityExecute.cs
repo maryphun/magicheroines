@@ -232,19 +232,21 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(strikeTime)
                 .AppendCallback(() =>
                 {
+                    var realDmg = Battle.CalculateDamage(dmg, target.defense, self.currentLevel, target.currentLevel, false);
+
                     // attack
                     self.PlayAnimation(BattlerAnimationType.attacked);
                     self.SpawnAttackVFX(target);
                     AudioManager.Instance.PlaySFX("PowerfulPunch", 1f);
                     target.Shake(0.75f);
-                    target.DeductHP(dmg);
+                    target.DeductHP(realDmg);
 
                     // text
                     floatingText = CreateFloatingText(target.transform);
-                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), dmg.ToString(), 64, CustomColor.damage());
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDmg.ToString(), 64, CustomColor.damage());
 
                     // í“¬ƒƒO
-                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(dmg, CustomColor.damage())));
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDmg, CustomColor.damage())));
                 })
                 .AppendInterval(attackStayTime)
                 .AppendCallback(() =>
@@ -707,7 +709,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     public void SelfRepair()
     {
         var target = battleManager.GetCurrentBattler();
-        int healAmount = (int)((float)target.max_hp * 0.25f);
+        int healAmount = (int)((float)target.max_hp * 0.35f);
 
         // ‹Z–¼‚ð•\Ž¦
         var floatingText = CreateFloatingText(target.transform);

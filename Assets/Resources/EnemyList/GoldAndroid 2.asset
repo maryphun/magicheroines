@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa65797a759a6b45bc6f990676fa51d, type: 3}
-  m_Name: GoldAndroid
+  m_Name: GoldAndroid 2
   m_EditorClassIdentifier: 
   enemyName: Name.GoldAndroid
-  maxHP: 55
+  maxHP: 80
   maxMP: 40
-  attack: 25
-  defense: 10
-  speed: 5
-  level: 6
+  attack: 40
+  defense: 20
+  speed: 6
+  level: 8
   character_color: {r: 0.98472905, g: 1, b: 0.7688679, a: 1}
   actionPattern:
   - actionType: 0

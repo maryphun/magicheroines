@@ -97,7 +97,7 @@ public static class BuffManager
             data.end = HealEnd;
             data.update = HealUpdate;
             data.isBad = false;
-            data.battleLogStart = string.Empty;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.HealStart");
             data.battleLogUpdate = LocalizationManager.Localize("BattleLog.HealUpdate").Replace("{1}", CustomColor.AddColor("{1}", CustomColor.heal()));
             data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.heal, data);

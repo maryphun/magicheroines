@@ -264,7 +264,6 @@ Ability.DeepBreath_Info,"自身のHPを回復
 残りHPが少ないほど回復量が多くなる"
 Ability.PowerfulPunch,パワフルパンチ
 Ability.PowerfulPunch_Info,"敵１体に普通攻撃の2倍ダメージを与える。
-
 使用者がその後の1ターン行動不能になる"
 Ability.Tackle,共倒れ
 Ability.Tackle_Info,敵１体と共に1ターン行動不能になる
@@ -279,7 +278,7 @@ Ability.Capture_Info,"敵１体の攻撃力・スピードを一時25%ダウン
 
 女性相手なら防御力と攻撃力をダウンさせる"
 Ability.SelfRepair,自己修復
-Ability.SelfRepair_Info,25% HP 回復
+Ability.SelfRepair_Info,35% HP 回復
 Ability.SelfEnchant,自己改造
 Ability.SelfEnchant_Info,ランダムのバフを獲得する
 Ability.Booster,ブースト
@@ -368,10 +367,10 @@ BattleLog.IdleSP,{0}　が休憩をとった。SP　{1}　回復した。
 BattleLog.TankAttack,{0}　のビーム攻撃！
 BattleLog.StunStart,{0}　が行動不能となった！
 BattleLog.StunUpdate,{0}　はまだ動けない。
-BattleLog.StunEnd,{0}　が動けるようになった！
 BattleLog.HurtStart,{0}　が怪我をした！
 BattleLog.HurtUpdate,{0}　の怪我が痛む！　{1}　のダメージを受けた。
 BattleLog.HurtEnd,{0}　の怪我が治った。
+BattleLog.HealStart,{0}　は継続的にHPを回復される。
 BattleLog.HealUpdate,{0}　の HP {1} 回復した。
 BattleLog.ShieldUpStart,{0}　の防御が固くなった。
 BattleLog.ShieldDownStart,{0}　の防御が弱くなった。

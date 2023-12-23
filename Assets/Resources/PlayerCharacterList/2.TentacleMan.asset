@@ -33,8 +33,8 @@ MonoBehaviour:
     base_speed: 15
     hp_growth: 5
     mp_growth: 5
-    attack_growth: 4
-    defense_growth: 2
+    attack_growth: 2
+    defense_growth: 1
     speed_growth: 4
     levelUp_base_cost: 200
     levelUp_cost_increment: 75

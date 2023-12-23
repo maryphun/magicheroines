@@ -570,10 +570,14 @@ public class Battle : MonoBehaviour
     // UŒ‚—ÍŒvZŒö®
     public static int CalculateDamage(Battler attacker, Battler target, bool randomizeDamage = true)
     {
+        return CalculateDamage(attacker.attack, target.defense, attacker.currentLevel, target.currentLevel, randomizeDamage);
+    }
+    public static int CalculateDamage(int damage, int defense, int attackerLevel, int defenderLevel, bool randomizeDamage = true)
+    {
         // randomize damage
-        int multiplier = UnityEngine.Random.Range(0, 7);
+        int multiplier = randomizeDamage ? UnityEngine.Random.Range(0, 7) : 0;
         // calculate damage ([a.ATK \ *0.5F] - [b.DEF * 0.25F]) * Clamp.(a.LVL / b.LVL, 0.5F, 1.5F)
-        return Mathf.RoundToInt(((float)attacker.attack * 0.5f) - ((float)target.defense * 0.25f) * Mathf.Clamp((float)attacker.currentLevel / (float)target.currentLevel, 0.5f, 1.5f)) + multiplier;
+        return Mathf.RoundToInt(((float)damage * 0.5f) - ((float)defense * 0.25f) * Mathf.Clamp((float)attackerLevel / (float)defenderLevel, 0.5f, 1.5f)) + multiplier;
     }
 
     /// <summary>
