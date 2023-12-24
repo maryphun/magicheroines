@@ -56,8 +56,9 @@ System.AbilityHeal,回復
 System.AbilityBuff,状態
 System.AbilitySpecial,特殊
 System.Turn,ターン
+System.None,なし
 System.Cooldown,チャージ
-System.AbilityAbsent,特殊技持っていない
+System.AbilityAbsent,特殊技を持っていない
 System.FileCorrupted,データ異常
 System.Save,セーブ
 System.AutoSave,オートセーブ
@@ -178,6 +179,8 @@ Battle.SkipTutorial,スキップ
 Battle.EscapeConfirm,撤退しますか？
 Battle.Escape,撤退
 Battle.CannotAttack,{0}は普通攻撃行えない
+Battle.OnCooldown,チャージ中 ({0}ターン)
+Battle.NotEnoughSP,SP不足 ({0})
 Buff,状態
 Buff.Stun,行動不能
 Buff.Hurt,継続ダメージ
@@ -349,7 +352,7 @@ HomeChar.No72_3-4,「私に感情はプログラムされていません。他�
 ,
 ,
 WorldScene,ワールド画面台詞
-World.Chapter2-3,「次の作戦には「笹谷 明穂」という戦力が必要です。先に調教のほうを進みましょう。」
+World.Chapter2-3,「今回の作戦には「笹谷 明穂」という存在が鍵となっています。取り急ぎで調教のほうを進みましょう。」
 World.Chapter3-3,「先日捕獲した立花を放置せずに早く幸せにして欲しいなぁ...」
 World.Chapter5-3,「八雲 那由多はまさに強敵です。「清藤 エレナ」を堕としてから初めて勝算があるかと」
 ,

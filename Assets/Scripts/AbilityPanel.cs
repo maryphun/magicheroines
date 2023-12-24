@@ -24,6 +24,7 @@ public class AbilityPanel : MonoBehaviour
     [SerializeField] private ActionPanel actionPanel;
     [SerializeField] private TMP_Text description_Name;   //<　技名
     [SerializeField] private TMP_Text description_SPCost; //<　SP消耗
+    [SerializeField] private TMP_Text description_Cooldown; //<　SP消耗
     [SerializeField] private TMP_Text description_Target; //<　効果対象
     [SerializeField] private TMP_Text description_Type;   //<　機能
     [SerializeField] private TMP_Text description_Info;   //<　技説明
@@ -32,7 +33,7 @@ public class AbilityPanel : MonoBehaviour
     [SerializeField] private bool isOpen = false;
     [SerializeField] private bool isHiding = false;
     [SerializeField] private Action onCloseCallback;
-    [SerializeField] private Tuple<Ability, Button>[] buttonList;
+    [SerializeField] private Tuple<Ability, ActionPanelAbilityButton>[] buttonList;
     [SerializeField] private bool isDescriptionShowing = false;
 
     // Start is called before the first frame update
@@ -64,25 +65,50 @@ public class AbilityPanel : MonoBehaviour
         }
         text.gameObject.SetActive(false);
 
-        const float spacePerAbility = 100.0f;
-        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, abilities.Count * spacePerAbility);
+        const float spacePerAbility = 105.0f;
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, (abilities.Count+1) * spacePerAbility);
         
-        buttonList = new Tuple<Ability, Button>[abilities.Count];
+        buttonList = new Tuple<Ability, ActionPanelAbilityButton>[abilities.Count];
         for (int i = 0; i < buttonList.Length; i++)
         {
-            buttonList[i] = new Tuple<Ability, Button>(abilities[i], GameObject.Instantiate(abilityButton.gameObject, abilityButton.transform.parent).GetComponent<Button>());
+            buttonList[i] = new Tuple<Ability, ActionPanelAbilityButton>(abilities[i], GameObject.Instantiate(abilityButton.gameObject, abilityButton.transform.parent).GetComponent<ActionPanelAbilityButton>());
 
             string abilityName = LocalizationManager.Localize(abilities[i].abilityNameID);
             buttonList[i].Item2.gameObject.name = abilityName;
-            buttonList[i].Item2.GetComponent<RectTransform>().localPosition = new Vector3(0.0f, 50.0f + (i * spacePerAbility), 0.0f);
-            buttonList[i].Item2.transform.GetChild(0).GetComponent<TMP_Text>().text = abilityName;
+            buttonList[i].Item2.GetComponent<RectTransform>().localPosition = new Vector3(0.0f, spacePerAbility + (i * spacePerAbility), 0.0f);
+            buttonList[i].Item2.abilityName.text = abilityName;
+            buttonList[i].Item2.abilityIcon.sprite = abilities[i].icon;
+            if (abilities[i].icon == null) buttonList[i].Item2.abilityIcon.color = CustomColor.invisible();
             buttonList[i].Item2.gameObject.SetActive(true);
             Ability ability = buttonList[i].Item1;
-            buttonList[i].Item2.onClick.RemoveAllListeners();
-            buttonList[i].Item2.onClick.AddListener(delegate { OnClickAbility(ability); });
+            buttonList[i].Item2.abilityButton.onClick.RemoveAllListeners();
+            buttonList[i].Item2.abilityButton.onClick.AddListener(delegate { OnClickAbility(ability); });
 
             // 使用できるかをチェック
-            buttonList[i].Item2.interactable = battleManager.GetCurrentBattler().current_mp >= buttonList[i].Item1.consumeSP;
+            buttonList[i].Item2.abilityButton.interactable = true;
+            if (battleManager.GetCurrentBattler().current_mp < buttonList[i].Item1.consumeSP)
+            {
+                // SP 不足
+                buttonList[i].Item2.abilityButton.interactable = false;
+                buttonList[i].Item2.abilityContextText.color = Color.red;
+                buttonList[i].Item2.abilityContextText.text = System.String.Format(LocalizationManager.Localize("Battle.NotEnoughSP"), buttonList[i].Item1.consumeSP);
+            }
+            if (battleManager.GetCurrentBattler().IsAbilityOnCooldown(abilities[i]) > 0)
+            {
+                // チャージ中
+                buttonList[i].Item2.abilityButton.interactable = false;
+                buttonList[i].Item2.abilityContextText.color = Color.red;
+                buttonList[i].Item2.abilityContextText.text = System.String.Format(LocalizationManager.Localize("Battle.OnCooldown"), battleManager.GetCurrentBattler().IsAbilityOnCooldown(abilities[i]));
+            }
+            // 追加説明
+            if (buttonList[i].Item2.abilityButton.interactable)
+            {
+                buttonList[i].Item2.abilityContextText.color = Color.black;
+                string context = string.Empty;
+                if (buttonList[i].Item1.consumeSP > 0) context = context + LocalizationManager.Localize("System.SPCost") + buttonList[i].Item1.consumeSP.ToString() + "　　";
+                if (buttonList[i].Item1.cooldown > 0) context = context + LocalizationManager.Localize("System.Cooldown") + "：" + buttonList[i].Item1.cooldown.ToString() + LocalizationManager.Localize("System.Turn");
+                buttonList[i].Item2.abilityContextText.text = context;
+            }
         }
 
         // setup close button
@@ -97,7 +123,8 @@ public class AbilityPanel : MonoBehaviour
         {
             case CastType.SelfCast:
                 AbilityExecute.Instance.Invoke(ability.functionName, 0);
-                battleManager.GetCurrentBattler().DeductSP(ability.consumeSP);
+                battleManager.GetCurrentBattler().DeductSP(ability.consumeSP); // SP消耗
+                if (ability.cooldown > 0) battleManager.GetCurrentBattler().SetAbilityOnCooldown(ability, ability.cooldown); // チャージ
                 ClosePanel();
                 actionPanel.SetEnablePanel(false);
                 break;
@@ -224,7 +251,7 @@ public class AbilityPanel : MonoBehaviour
         }
     }
 
-    private void ShowDescription(Tuple<Ability, Button> ability)
+    private void ShowDescription(Tuple<Ability, ActionPanelAbilityButton> ability)
     {
         // レファレンス所得
         RectTransform buttonRect = ability.Item2.GetComponent<RectTransform>();
@@ -239,6 +266,8 @@ public class AbilityPanel : MonoBehaviour
 
         // データ読み込み
         description_SPCost.text = LocalizationManager.Localize("System.SPCost") + ability.Item1.consumeSP + "/" + battleManager.GetCurrentBattler().current_mp;
+        string cooldown = ability.Item1.cooldown > 0 ? ability.Item1.cooldown + LocalizationManager.Localize("System.Turn") : LocalizationManager.Localize("System.None");
+        description_Cooldown.text = LocalizationManager.Localize("System.Cooldown") + "：" + cooldown;
 
         description_Name.text = LocalizationManager.Localize(ability.Item1.abilityNameID);
         string effectTargetText = string.Empty;
@@ -283,6 +312,7 @@ public class AbilityPanel : MonoBehaviour
         // 強制更新
         description_Name.ForceMeshUpdate();
         description_SPCost.ForceMeshUpdate();
+        description_Cooldown.ForceMeshUpdate();
         description_Target.ForceMeshUpdate();
         description_Type.ForceMeshUpdate();
         description_Info.ForceMeshUpdate();
@@ -290,7 +320,8 @@ public class AbilityPanel : MonoBehaviour
         // Resize UI
         descriptionPanelRect.sizeDelta = new Vector2(descriptionPanelRect.sizeDelta.x,
             (description_Name.rectTransform.rect.height +
-             description_SPCost.rectTransform.rect.height + 
+             description_SPCost.rectTransform.rect.height +
+             description_Cooldown.rectTransform.rect.height + 
              description_Target.rectTransform.rect.height + 
              description_Type.rectTransform.rect.height + 
             (description_Info.GetRenderedValues(false).y) + description_Info.fontSize));
@@ -342,6 +373,12 @@ public class AbilityPanel : MonoBehaviour
                     // カーソルを戻す
                     Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
                     battleManager.UnPointArrow(0.25f);
+
+                    // チャージ
+                    if (ability.cooldown > 0)
+                    {
+                        battleManager.GetCurrentBattler().SetAbilityOnCooldown(ability, ability.cooldown);
+                    }
                 }
             }
             else if (isSelectingTarget)

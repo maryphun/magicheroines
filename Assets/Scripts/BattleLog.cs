@@ -5,26 +5,27 @@ using System;
 using DG.Tweening;
 using TMPro;
 
+
+// Custom Type that's like a mutable tuple type variable.
+public class Pair<T, U>
+{
+    public Pair()
+    {
+    }
+
+    public Pair(T first, U second)
+    {
+        this.First = first;
+        this.Second = second;
+    }
+
+    public T First { get; set; }
+    public U Second { get; set; }
+};
+
 [RequireComponent(typeof(RectTransform))]
 public class BattleLog : MonoBehaviour
 {
-    // Custom Type that's like a mutable tuple type variable.
-    public class Pair<T, U>
-    {
-        public Pair()
-        {
-        }
-
-        public Pair(T first, U second)
-        {
-            this.First = first;
-            this.Second = second;
-        }
-
-        public T First { get; set; }
-        public U Second { get; set; }
-    };
-
     [Header("Setting")]
     [SerializeField] int maxLogDisplay = 4; // 同時に表示できるログ行数
     [SerializeField] float displayTime = 5.0f; // 表示時間

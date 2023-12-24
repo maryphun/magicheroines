@@ -44,6 +44,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public List<Ability> abilities;
     [SerializeField] public EquipmentDefine equipment;
     [SerializeField] public List<EnemyActionPattern> actionPattern; // 敵AI作成用
+    [SerializeField] public List<Pair<Ability, int>> abilityOnCooldown; // チャージ中の特殊技
 
     [Header("References")]
     [SerializeField] private Image graphic;
@@ -99,6 +100,7 @@ public class Battler : MonoBehaviour
         PlayAnimation(BattlerAnimationType.idle);
         abilities = new List<Ability>();
         actionPattern = new List<EnemyActionPattern>();
+        abilityOnCooldown = new List<Pair<Ability, int>>();
 
         foreach (var action in enemy.actionPattern)
         {
@@ -139,6 +141,7 @@ public class Battler : MonoBehaviour
         speed = character.current_speed;
         currentLevel = character.current_level;
         PlayAnimation(BattlerAnimationType.idle);
+        abilityOnCooldown = new List<Pair<Ability, int>>();
 
         abilities = new List<Ability>();
         if (character.characterData.abilities.Count > 0)
@@ -446,6 +449,63 @@ public class Battler : MonoBehaviour
     public bool CheckDead()
     {
         return current_hp <= 0;
+    }
+
+    /// <summary>
+    /// 特殊技をチャージ状態にする
+    /// </summary>
+    /// <param name="ability"></param>
+    public void SetAbilityOnCooldown(Ability ability, int turn)
+    {
+        if (IsAbilityOnCooldown(ability) > 0)
+        {
+            // 重ね追加を防止
+            for (int i = 0; i < abilityOnCooldown.Count; i++)
+            {
+                if (abilityOnCooldown[i].First == ability) abilityOnCooldown[i].Second = turn+1;
+            }
+        }
+        else
+        {
+            abilityOnCooldown.Add(new Pair<Ability, int>(ability, turn+1));
+        }
+    }
+
+    /// <summary>
+    /// 特殊技チャージを更新
+    /// </summary>
+    public void UpdateAbilityCooldown()
+    {
+        if (abilityOnCooldown.Count > 0)
+        {
+            for (int i = 0; i < abilityOnCooldown.Count; i++)
+            {
+                abilityOnCooldown[i].Second--;
+                if (abilityOnCooldown[i].Second <= 0)
+                {
+                    // remove element
+                    abilityOnCooldown.RemoveAt(i);
+                    i--;
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 残りチャージ時間を返す
+    /// </summary>
+    /// <param name="ability"></param>
+    /// <returns></returns>
+    public int IsAbilityOnCooldown(Ability ability)
+    {
+        if (abilityOnCooldown.Count > 0)
+        {
+            for (int i = 0; i < abilityOnCooldown.Count; i++)
+            {
+                if (abilityOnCooldown[i].First == ability) return abilityOnCooldown[i].Second;
+            }
+        }
+        return -1;
     }
 
     /// <summary>

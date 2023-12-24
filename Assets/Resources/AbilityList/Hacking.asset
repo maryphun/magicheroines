@@ -17,8 +17,10 @@ MonoBehaviour:
   descriptionID: Ability.Hacking_Info
   functionName: Hacking
   consumeSP: 40
+  cooldown: 1
   requiredLevel: 0
   requiredHornyness: 0
   castType: 1
   abilityType: 3
   isAOE: 0
+  canTargetSelf: 0

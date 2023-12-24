@@ -1315,7 +1315,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     .AppendInterval((animtionTime * 0.5f) + 0.25f)
                     .AppendCallback(() =>
                     {
-                        battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.Hacking_Success"));
+                        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking_Success"), target.CharacterNameColored));
                         
                         var puppet = target.gameObject.AddComponent<KeiControlledUnit>();
                         puppet.StartControl(kei, 0);

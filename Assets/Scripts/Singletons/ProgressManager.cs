@@ -496,6 +496,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         AddPlayerCharacter(Kei).is_corrupted = true;
 
         // フォーメーション編成
+        playerData.formationCharacters[0].characterID = 2; // clone
         playerData.formationCharacters[1].characterID = Kei.detail.characterID;
 
         // アイテムをいくつかついかする

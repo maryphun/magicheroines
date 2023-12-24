@@ -17,7 +17,10 @@ MonoBehaviour:
   descriptionID: Ability.PowerfulPunch_Info
   functionName: PowerfulPunch
   consumeSP: 0
+  cooldown: 4
   requiredLevel: 5
   requiredHornyness: 0
   castType: 1
   abilityType: 0
+  isAOE: 0
+  canTargetSelf: 0

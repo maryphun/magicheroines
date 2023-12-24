@@ -205,6 +205,7 @@ public class Battle : MonoBehaviour
         }
 
         Battler currentTurnCharacter = turnBaseManager.GetCurrentTurnBattler();
+        currentTurnCharacter.UpdateAbilityCooldown(); // 特殊技のチャージ状態を更新
 
         if (currentTurnCharacter.isEnemy)
         {
