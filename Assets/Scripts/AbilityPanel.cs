@@ -362,7 +362,16 @@ public class AbilityPanel : MonoBehaviour
                     isFinished = true;
 
                     // 選択した敵
-                    AbilityExecute.Instance.SetTargetBattler(targetBattler);
+                    if (ability.isAOE)
+                    {
+                        // 全体
+                        AbilityExecute.Instance.SetTargetBattlers(battleManager.GetAllEnemy());
+                    }
+                    else
+                    {
+                        // 単体
+                        AbilityExecute.Instance.SetTargetBattler(targetBattler);
+                    }
 
                     // 技を使用
                     AbilityExecute.Instance.Invoke(ability.functionName, 0);

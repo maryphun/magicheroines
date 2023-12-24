@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
-  m_Name: Tackle
+  m_Name: Milk
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 66cc0be90e00bb640867003dabccda1d, type: 3}
-  abilityNameID: Ability.Tackle
-  descriptionID: Ability.Tackle_Info
-  functionName: Tackle
-  consumeSP: 0
-  cooldown: 2
-  requiredLevel: 10
+  icon: {fileID: 21300000, guid: 61288bff0411fae459bf8bce72ac8ad6, type: 3}
+  abilityNameID: Ability.Milk
+  descriptionID: Ability.Milk_Info
+  functionName: Milk
+  consumeSP: 27
+  cooldown: 0
+  requiredLevel: 8
   requiredHornyness: 0
-  castType: 1
-  abilityType: 1
+  castType: 2
+  abilityType: 2
   isAOE: 0
   canTargetSelf: 0

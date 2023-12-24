@@ -25,17 +25,17 @@ MonoBehaviour:
       retire: {fileID: 0}
     color: {r: 0.96966964, g: 0.6961997, b: 0.990566, a: 1}
     nameID: Name.Akiho
-    starting_level: 10
-    base_hp: 700
-    base_mp: 0
-    base_attack: 0
-    base_defense: 0
-    base_speed: 0
-    hp_growth: 0
-    mp_growth: 0
-    attack_growth: 0
+    starting_level: 8
+    base_hp: 130
+    base_mp: 110
+    base_attack: 3
+    base_defense: 1
+    base_speed: 2
+    hp_growth: 15
+    mp_growth: 25
+    attack_growth: 2
     defense_growth: 2
-    speed_growth: 3
+    speed_growth: 2
     levelUp_base_cost: 300
     levelUp_cost_increment: 75
     is_heroin: 1
@@ -51,5 +51,8 @@ MonoBehaviour:
       requiredCorruptionEpisode: 3
       requiredHornyEpisode: 0
     corruptedName: Name.Akiho_Corrupted
-    abilities: []
+    abilities:
+    - {fileID: 11400000, guid: d3ecd1130cb83d640ab6728d7989464c, type: 2}
+    - {fileID: 11400000, guid: 5ca5e16cf3466dc4e9a5fb11a7a7842a, type: 2}
+    - {fileID: 11400000, guid: 1a970f37f7b45444aab5ca1c17023467, type: 2}
   battler: {fileID: 6784901170540971542, guid: c80cc566d1047404c8d40e1e9e29663d, type: 3}

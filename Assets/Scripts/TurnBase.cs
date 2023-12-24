@@ -114,7 +114,7 @@ public class TurnBase : MonoBehaviour
         return null;
     }
 
-    // 次に順番が回ってくるプレイヤーキャラクターを獲得
+    // 全プレイヤーキャラを取得
     public List<Battler> GetAllPlayerCharacters()
     {
         var rtn = new List<Battler>();

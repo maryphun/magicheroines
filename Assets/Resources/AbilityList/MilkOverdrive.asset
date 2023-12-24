@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
-  m_Name: Tackle
+  m_Name: MilkOverdrive
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 66cc0be90e00bb640867003dabccda1d, type: 3}
-  abilityNameID: Ability.Tackle
-  descriptionID: Ability.Tackle_Info
-  functionName: Tackle
-  consumeSP: 0
-  cooldown: 2
-  requiredLevel: 10
+  icon: {fileID: 21300000, guid: 7145bbf71907ceb4db5a5fb9cab3f08b, type: 3}
+  abilityNameID: Ability.MilkOverdrive
+  descriptionID: Ability.MilkOverdrive_Info
+  functionName: MilkOverdrive
+  consumeSP: 60
+  cooldown: 0
+  requiredLevel: 0
   requiredHornyness: 0
-  castType: 1
-  abilityType: 1
-  isAOE: 0
+  castType: 0
+  abilityType: 2
+  isAOE: 1
   canTargetSelf: 0

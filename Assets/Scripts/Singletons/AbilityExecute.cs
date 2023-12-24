@@ -913,6 +913,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // Audio
                     AudioManager.Instance.PlaySFX("Heal");
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(hpHealAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.25f)
                 .AppendCallback(() =>
@@ -932,7 +935,86 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// 立花戦特殊技
+    /// ミルク補給
+    /// </summary>
+    public void Milk()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+        int hpHealAmount = UnityEngine.Random.Range(20, 31);
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Milk");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Milk"), CustomColor.abilityName())));
+
+
+        var selfPos = self.GetMiddleGlobalPosition();
+        var startPoint = self.isEnemy ? new Vector2(selfPos.x - self.GetCharacterSize().x * 0.25f, selfPos.y) : new Vector2(selfPos.x + self.GetCharacterSize().x * 0.5f, selfPos.y);
+        var endPoint = target.GetMiddleGlobalPosition();
+
+        self.PlayAnimation(BattlerAnimationType.magic);
+        target.ColorTint(Color.grey, 0.15f);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+
+        // calculate projectile time base on range
+        float projectileTime = 1.0f;
+        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+
+        DOTween.Sequence().AppendInterval(projectileTime)
+           .AppendCallback(() =>
+           {
+               self.PlayAnimation(BattlerAnimationType.idle);
+               target.PlayAnimation(BattlerAnimationType.idle);
+               target.ColorTint(Color.grey, 0.15f);
+
+               // vfx
+               VFXSpawner.SpawnVFX("Recovery", target.transform, target.GetMiddleGlobalPosition());
+
+               // heal target
+               target.Heal(hpHealAmount);
+
+               // text
+               floatingText = CreateFloatingText(target.transform);
+               floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + hpHealAmount.ToString(), 64, CustomColor.heal());
+               
+               // SE
+               AudioManager.Instance.PlaySFX("Heal", 0.75f);
+
+               // 戦闘ログ
+               battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(hpHealAmount, CustomColor.heal())));
+           })
+           .AppendInterval(0.5f)
+           .AppendCallback(() =>
+           {
+               battleManager.NextTurn(false);
+           });
+    }
+
+    /// <summary>
+    /// 特濃ミルク
+    /// </summary>
+    public void MilkCookie()
+    {
+
+    }
+
+    /// <summary>
+    /// ミルク補給オーバードライブ
+    /// </summary>
+    public void MilkOverdrive()
+    {
+
+    }
+
+    /// <summary>
+    /// 立花戦特殊技  / 005号 / 072号
     /// </summary>
     public void QuickAttack()
     {
@@ -1128,6 +1210,146 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 {
                     // next turn
                     battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// オーバードライブ   / 005号 / 072号
+    /// </summary>
+    public void Overdrive()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        const int ComboTurn = 3;
+        const int StunTurn = 3;
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Overdrive");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}！ {1} がこれから{2}回連続行動する。)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Overdrive"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Overdrive"), CustomColor.abilityName()), self.CharacterNameColored, ComboTurn));
+
+        battleManager.AddBuffToBattler(self, BuffType.continuous_action, ComboTurn, 0);
+        var overdrive = self.gameObject.AddComponent<AbilityOverdrive>();
+        overdrive.Init(battleManager, self, StunTurn);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("Heartbeat", 1.5f);
+
+        // 残像を作成
+        Image img = new GameObject("FadingImage[" + gameObject.name + "]").AddComponent<Image>();
+        img.transform.SetParent(self.transform);
+        img.transform.SetSiblingIndex(self.Graphic.transform.GetSiblingIndex()+1);
+        img.sprite = self.Graphic.sprite;
+        img.raycastTarget = false;
+        img.rectTransform.pivot = new Vector2(0.5f, 0.5f); ;
+        img.rectTransform.position = self.Graphic.rectTransform.position + new Vector3(0.0f, self.GetCharacterSize().y * 0.5f, 0.0f);
+        img.rectTransform.localScale = self.Graphic.rectTransform.localScale;
+        img.rectTransform.sizeDelta = self.Graphic.rectTransform.sizeDelta;
+
+        const float fadeTime = 1.0f;
+        img.color = new Color(0.5f, 0.5f, 0.5f, fadeTime);
+        img.DOFade(0.0f, fadeTime);
+        img.rectTransform.DOScale(0.3f, fadeTime);
+        Destroy(img.gameObject, fadeTime + Time.deltaTime);
+
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(fadeTime)
+                .AppendCallback(() =>
+                {
+                    battleManager.SetDisplayActionPanel(true);
+
+                    // ログ (また{0}のターン！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.ContinueTurn"), self.CharacterNameColored));
+                });
+    }
+
+    /// <summary>
+    /// 正拳突き   / 005号 / 072号
+    /// </summary>
+    public void Fist()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Fist");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Fist"), CustomColor.abilityName())));
+
+        Transform originalParent = self.transform.parent;
+        int originalChildIndex = self.transform.GetSiblingIndex();
+
+        var targetPos = target.GetComponent<RectTransform>().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.5f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.5f, targetPos.y);
+        var originalPos = self.GetComponent<RectTransform>().position;
+        self.GetComponent<RectTransform>().DOMove(targetPos, battleManager.CharacterMoveTime);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(battleManager.CharacterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // change character hirachy temporary
+                    self.transform.SetParent(target.transform);
+                })
+                .AppendInterval(battleManager.CharacterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+
+                    self.SpawnAttackVFX(target);
+
+                    // 攻撃計算
+                    int levelAdjustedDamage = Battle.CalculateDamage(self, target);
+                    int realDamage = target.DeductHP(levelAdjustedDamage);
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("Attacked", 0.8f);
+
+                    // animation
+                    target.Shake(battleManager.AttackAnimPlayTime + battleManager.CharacterMoveTime);
+                    self.PlayAnimation(BattlerAnimationType.attack);
+                    target.PlayAnimation(BattlerAnimationType.attacked);
+
+                    // create floating text
+                    floatingText = CreateFloatingText(self.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                    // ログ ({0}　に　{1}　のダメージを与えた！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+                })
+                .AppendInterval(battleManager.AttackAnimPlayTime)
+                .AppendCallback(() =>
+                {
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    target.PlayAnimation(BattlerAnimationType.idle);
+
+                    self.GetComponent<RectTransform>().DOMove(originalPos, battleManager.CharacterMoveTime);
+                })
+                .AppendInterval(battleManager.CharacterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // return to original parent
+                    self.transform.SetParent(originalParent);
+                    self.transform.SetSiblingIndex(originalChildIndex);
+                })
+                .AppendInterval(battleManager.CharacterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.SetDisplayActionPanel(true);
+
+                    // ログ (また{0}のターン！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.ContinueTurn"), self.CharacterNameColored));
                 });
     }
 

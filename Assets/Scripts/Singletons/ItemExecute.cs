@@ -107,7 +107,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + SPAmount.ToString(), 64, CustomColor.SP());
 
                     // effect
-                    self.Heal(SPAmount);
+                    self.AddSP(SPAmount);
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Heal");

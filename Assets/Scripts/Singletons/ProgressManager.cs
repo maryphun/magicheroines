@@ -492,12 +492,12 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
         AddPlayerCharacter(Rikka);
 
-        PlayerCharacterDefine Kei = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
-        AddPlayerCharacter(Kei).is_corrupted = true;
+        PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
+        AddPlayerCharacter(Akiho).is_corrupted = true;
 
         // フォーメーション編成
         playerData.formationCharacters[0].characterID = 2; // clone
-        playerData.formationCharacters[1].characterID = Kei.detail.characterID;
+        playerData.formationCharacters[1].characterID = Akiho.detail.characterID;
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");

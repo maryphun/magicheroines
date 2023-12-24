@@ -33,6 +33,7 @@ public enum BuffType
     attack_down,
     speed_up,
     speed_down,
+    continuous_action,
 }
 
 [System.Serializable]
@@ -186,6 +187,20 @@ public static class BuffManager
             data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.speed_down, data);
         }
+        // continuous action
+        {
+            BuffData data = new BuffData();
+            data.icon = Resources.Load<Sprite>("Icon/continuous_action");
+            data.name = LocalizationManager.Localize("Buff.ContinuousAction");
+            data.start = ContinuousActionStart;
+            data.end = ContinuousActionEnd;
+            data.update = ContinuousActionUpdate;
+            data.isBad = true;
+            data.battleLogStart = string.Empty;
+            data.battleLogUpdate = string.Empty;
+            data.battleLogEnd = string.Empty;
+            BuffList.Add(BuffType.continuous_action, data);
+        }
 
         floatingTextOrigin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
         isInitialized = true;
@@ -248,4 +263,15 @@ public static class BuffManager
     public static void SpeedDownStart(Battler target, int value) { target.speed -= value; }
     public static void SpeedDownUpdate(Battler target, int value) { }
     public static void SpeedDownEnd(Battler target, int value) { target.speed += value; }
+
+    public static void ContinuousActionStart(Battler target, int value) { }
+    public static void ContinuousActionUpdate(Battler target, int value) { }
+    public static void ContinuousActionEnd(Battler target, int value) 
+    {
+        AbilityOverdrive overdrive;
+        if (target.TryGetComponent<AbilityOverdrive>(out overdrive))
+        {
+            overdrive.Trigger();
+        }
+    }
 }

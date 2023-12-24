@@ -191,6 +191,7 @@ Buff.Attack_up,攻撃力上昇
 Buff.Attack_down,攻撃力下降
 Buff.Speed_up,素早さ上昇
 Buff.Speed_down,素早さ下降
+Buff.ContinuousAction,連続行動
 Equipment,アイテム名とその説明文
 Equipment.NiceT-Shirt,気持ち良いTシャツ
 Equipment.NiceT-Shirt_Info,気持ちよすぎるTシャツ、すごく動きやすい。
@@ -395,3 +396,5 @@ BattleLog.Hacking,{0}　がハッキングを挑む！成功確率は {1}
 BattleLog.Hacking_Success,成功した！ {0}　が傀儡となった。
 BattleLog.Hacking_Fail,ハッキングが失敗した。
 BattleLog.Hacking_End,{0}　のシステム故障が直った。
+BattleLog.Overdrive,{0}！ {1} がこれから{2}回連続行動する。
+BattleLog.ContinueTurn,また{0}のターン！

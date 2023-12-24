@@ -48,6 +48,9 @@ public class Battle : MonoBehaviour
     [SerializeField] private Battler arrowPointingTarget = null;
     [SerializeField] private List<Buff> buffedCharacters = new List<Buff>();
 
+    public float CharacterMoveTime { get { return characterMoveTime; } }
+    public float AttackAnimPlayTime { get { return attackAnimPlayTime; } }
+
     private void Awake()
     {
         AlphaFadeManager.Instance.FadeIn(5.0f);
@@ -183,7 +186,10 @@ public class Battle : MonoBehaviour
 
         if (!isFirstTurn)
         {
-            turnBaseManager.NextBattler();
+            if (!IsCharacterInBuff(GetCurrentBattler(), BuffType.continuous_action)) // 連続行動
+            {
+                turnBaseManager.NextBattler();
+            }
         }
         else
         {
@@ -269,6 +275,11 @@ public class Battle : MonoBehaviour
         return null;
     }
 
+    public List<Battler> GetAllEnemy()
+    {
+        return enemyList;
+    }
+
     IEnumerator EnemyAI()
     {
         Battler currentCharacter = turnBaseManager.GetCurrentTurnBattler();
@@ -282,7 +293,7 @@ public class Battle : MonoBehaviour
 
         // 攻撃目標を選択
         // is character stunned
-        if (isCharacterStunned)
+        if (isCharacterStunned || IsCharacterInBuff(currentCharacter, BuffType.stun))
         {
             yield return new WaitForSeconds(stunWaitDelay);
             NextTurn(false);
@@ -368,7 +379,11 @@ public class Battle : MonoBehaviour
     IEnumerator TurnEndDelay()
     {
         actionPanel.SetEnablePanel(false);
-        yield return new WaitForSeconds(turnEndDelay);
+
+        if (!IsCharacterInBuff(GetCurrentBattler(), BuffType.continuous_action)) // 連続行動
+        {
+            yield return new WaitForSeconds(turnEndDelay);
+        }
 
         Battler currentCharacter = turnBaseManager.GetCurrentTurnBattler();
         characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
@@ -383,7 +398,7 @@ public class Battle : MonoBehaviour
         UpdateBuffForCharacter(GetCurrentBattler());
 
         // is character stunned
-        if (isCharacterStunned)
+        if (isCharacterStunned || IsCharacterInBuff(currentCharacter, BuffType.stun))
         {
             yield return new WaitForSeconds(stunWaitDelay);
             NextTurn(false);
@@ -797,6 +812,14 @@ public class Battle : MonoBehaviour
         Vector3 addition = new Vector3(50.0f, 0.0f, 0.0f);
 
         return addition;
+    }
+
+    /// <summary>
+    /// 行動パネルを表示・非表示
+    /// </summary>
+    public void SetDisplayActionPanel(bool enable)
+    {
+        actionPanel.SetEnablePanel(enable);
     }
 
     /// <summary>
