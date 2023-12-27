@@ -37,7 +37,7 @@ MonoBehaviour:
     defense_growth: 1
     speed_growth: 4
     levelUp_base_cost: 200
-    levelUp_cost_increment: 75
+    levelUp_cost_increment: 35
     is_heroin: 0
     characterStatus:
     - moodNameID: 

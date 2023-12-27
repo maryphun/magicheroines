@@ -37,7 +37,7 @@ MonoBehaviour:
     defense_growth: 2
     speed_growth: 2
     levelUp_base_cost: 300
-    levelUp_cost_increment: 75
+    levelUp_cost_increment: 50
     is_heroin: 1
     characterStatus:
     - moodNameID: Mood.Disgust

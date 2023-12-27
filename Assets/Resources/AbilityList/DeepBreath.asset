@@ -17,7 +17,10 @@ MonoBehaviour:
   descriptionID: Ability.DeepBreath_Info
   functionName: DeepBreath
   consumeSP: 0
+  cooldown: 1
   requiredLevel: 1
   requiredHornyness: 0
   castType: 0
   abilityType: 2
+  isAOE: 0
+  canTargetSelf: 0

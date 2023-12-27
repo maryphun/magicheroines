@@ -114,7 +114,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = battleManager.GetCurrentBattler();
 
         // c‚èHP‚ª­‚È‚¢‚Ù‚Ç‰ñ•œ—Ê‚ª‘½‚­‚È‚é
-        int healAmount = (int)((float)target.max_hp * 0.40f * (1.0f - (target.current_hp/target.max_hp)));
+        float percentage = (1.0f - ((float)target.current_hp / (float)target.max_hp));
+        int healAmount = (int)(((float)target.max_hp * 0.40f) * percentage);
 
         // ‹Z–¼‚ğ•\¦
         var floatingText = CreateFloatingText(target.transform);

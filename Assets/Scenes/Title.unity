@@ -1999,6 +1999,7 @@ MonoBehaviour:
   abilityName: {fileID: 0}
   abilitySPCost: {fileID: 0}
   abilityType: {fileID: 0}
+  abilityCooldown: {fileID: 0}
   abilityCastType: {fileID: 0}
   abilityDescription: {fileID: 0}
   lockIcon: {fileID: 0}
@@ -4031,7 +4032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7feca9d95a2d7454e9b387bb76b7e81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LocalizationKey: System.Load
+  LocalizationKey: System.LoadFile
   Extra: 
 --- !u!114 &778922335
 MonoBehaviour:

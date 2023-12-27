@@ -37,7 +37,7 @@ MonoBehaviour:
     defense_growth: 0
     speed_growth: 0
     levelUp_base_cost: 300
-    levelUp_cost_increment: 75
+    levelUp_cost_increment: 50
     is_heroin: 1
     characterStatus:
     - moodNameID: Mood.Rebel
@@ -51,5 +51,8 @@ MonoBehaviour:
       requiredCorruptionEpisode: 3
       requiredHornyEpisode: 0
     corruptedName: Name.Rikka_Corrupted
-    abilities: []
+    abilities:
+    - {fileID: 11400000, guid: 06e0bb439bc19a34aaae60e9a5cac0f3, type: 2}
+    - {fileID: 11400000, guid: 32d96c13a9fa5844cba8874447f04d32, type: 2}
+    - {fileID: 11400000, guid: b41b7f89ea164214b96481f02b426e11, type: 2}
   battler: {fileID: 6784901170540971542, guid: 8981f8961ceda88448178b7169641a2d, type: 3}

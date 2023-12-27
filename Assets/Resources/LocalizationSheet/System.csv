@@ -61,6 +61,7 @@ System.Cooldown,チャージ
 System.AbilityAbsent,特殊技を持っていない
 System.FileCorrupted,データ異常
 System.Save,セーブ
+System.LoadFile,ロード
 System.AutoSave,オートセーブ
 System.Cancel,キャンセル
 System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？
@@ -89,6 +90,7 @@ System.NovelSkip,スキップ
 System.NovelHide,UI非表示
 System.NewBattler,{s}をチームに編入することが可能となりました
 System.Storage,収納庫
+Systeｍ.Requirement,解放条件:
 Memory,回想
 Memory.Akiho_1,明穂 - 痴漢
 Memory.Akiho_2,明穂 - 敗北
@@ -293,12 +295,12 @@ Ability.GreatRegen,ヒーリング
 Ability.GreatRegen_Info,HPとSPを回復。HPは持続的回復する
 Ability.Milk,ミルク補給
 Ability.Milk_Info,味方1体 HP 20~30 回復させる。
+Ability.MilkCookie,特濃ミルク
+Ability.MilkCookie_Info,行動不能以外のデバフをすべて解除する。
 Ability.MilkOverdrive,ミルク補給オーバードライブ
 Ability.MilkOverdrive_Info,"過度にミルク搾って味方全員に分ける。
 明穂以外の味方全員が全回復する。
 使用後 ミルク補給 と ミルク補給オバードライブ が今回のバトルで使用不可となる。"
-Ability.MilkCookie,特濃ミルク
-Ability.MilkCookie_Info,行動不能以外のデバフをすべて解除する。
 Ability.Overdrive,オーバードライブ
 Ability.Overdrive_Info,"３ターン連続行動することができる。
 その後３ターン行動不能となる。"

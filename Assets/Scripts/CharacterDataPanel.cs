@@ -24,8 +24,13 @@ public class CharacterDataPanel : MonoBehaviour
     [SerializeField] private Button[] skillButtonList = new Button[4];
     [SerializeField] private Image[] skillImageList = new Image[4];
     [SerializeField] private bool[] skillAvailable = new bool[4];
+    [SerializeField] private SkillRequirement[] requirement = new SkillRequirement[4];
     [SerializeField] private CharacterBuildingPanel mainPanel;
     [SerializeField] private EquipmentPanel equipmentPanel;
+
+    // abilities
+    [SerializeField] private CanvasGroup abilityRequirement;
+    [SerializeField] private TMP_Text abilityRequirementText;
 
     // pop up
     [SerializeField] private CanvasGroup popup;
@@ -40,7 +45,7 @@ public class CharacterDataPanel : MonoBehaviour
     [SerializeField] private Sprite lockIcon;
 
     /// <summary>
-    /// •\¦‚·‚éƒLƒƒƒ‰ƒNƒ^[‚ğXV
+    /// è¡¨ç¤ºã™ã‚‹ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼ã‚’æ›´æ–°
     /// </summary>
     public void InitializeCharacterData(Character character)
     {
@@ -71,7 +76,7 @@ public class CharacterDataPanel : MonoBehaviour
         // setup ability
         List<Ability> abilities = new List<Ability>(character.characterData.abilities);
 
-        // ‡”Ô•À‚×
+        // é †ç•ªä¸¦ã¹
         if (abilities.Count > 0)
         {
             abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
@@ -87,7 +92,7 @@ public class CharacterDataPanel : MonoBehaviour
             skillAvailable = skillAvailable.Select(_ => false).ToArray();
         }
 
-        // ƒ{ƒ^ƒ“‚ğ‰Šú‰»
+        // ãƒœã‚¿ãƒ³ã‚’åˆæœŸåŒ–
         for (int i = 0; i < skillButtonList.Length; i++)
         {
             if (skillAvailable[i])
@@ -99,6 +104,7 @@ public class CharacterDataPanel : MonoBehaviour
                 skillButtonList[i].onClick.AddListener(delegate { OnClickAbility(abilityInfo); });
                 skillImageList[i].color = new Color(1, 1, 1, 1);
                 skillImageList[i].sprite = abilities[i].icon;
+                requirement[i].enabled = false;
             }
             else
             {
@@ -106,22 +112,25 @@ public class CharacterDataPanel : MonoBehaviour
 
                 if (abilities.Count > i)
                 {
-                    // ‹Z‚ª‘¶İ‚µ‚Ä‚¢‚é‚ªŠJ•úğŒ‚Ü‚¾–‚½‚µ‚Ä‚¢‚È‚¢
+                    // æŠ€ãŒå­˜åœ¨ã—ã¦ã„ã‚‹ãŒé–‹æ”¾æ¡ä»¶ã¾ã æº€ãŸã—ã¦ã„ãªã„
                     skillButtonList[i].image.color = new Color(1, 1, 1, 1);
                     skillImageList[i].color = new Color(1, 1, 1, 1);
 
                     skillImageList[i].sprite = lockIcon;
+                    requirement[i].enabled = true;
+                    requirement[i].Initialization(abilities[i].requiredLevel);
                 }
                 else
                 {
-                    // ‚»‚à‚»‚à‹Z‘¶İ‚µ‚Ä‚¢‚È‚¢
+                    // ãã‚‚ãã‚‚æŠ€å­˜åœ¨ã—ã¦ã„ãªã„
                     skillButtonList[i].image.color = new Color(1, 1, 1, 0);
                     skillImageList[i].color = new Color(1, 1, 1, 0);
+                    requirement[i].enabled = false;
                 }
             }
         }
 
-        // ‹Zà–¾pop up‚ğ‰Šú‰»
+        // æŠ€èª¬æ˜pop upã‚’åˆæœŸåŒ–
         popup.alpha = 0.0f;
         popup.interactable = false;
         popup.blocksRaycasts = false;
@@ -131,20 +140,20 @@ public class CharacterDataPanel : MonoBehaviour
 
     public void OnClickAbility(Ability ability)
     {
-        // ‹Zà–¾pop up‚ğ‰Šú‰»
+        // æŠ€èª¬æ˜pop upã‚’åˆæœŸåŒ–
         popup.DOFade(1.0f, 0.2f);
         popup.interactable = true;
         popup.blocksRaycasts = true;
 
         abilityName.text = LocalizationManager.Localize(ability.abilityNameID);
         abilitySPCost.text = LocalizationManager.Localize("System.SPCost") + ability.consumeSP;
-        abilityType.text = LocalizationManager.Localize("System.AbilityType") + "F" + AbilityTypeToString(ability.abilityType);
-        abilityCooldown.text = LocalizationManager.Localize("System.Cooldown") + "F" + ability.cooldown + LocalizationManager.Localize("System.Turn");
+        abilityType.text = LocalizationManager.Localize("System.AbilityType") + "ï¼š" + AbilityTypeToString(ability.abilityType);
+        abilityCooldown.text = LocalizationManager.Localize("System.Cooldown") + "ï¼š" + ability.cooldown + LocalizationManager.Localize("System.Turn");
         abilityCooldown.alpha = ability.cooldown == 0 ? 0 : 1; // only show cooldown if cooldown is longer than 0
         abilityCastType.text = LocalizationManager.Localize("System.EffectTarget") + CastTypeToString(ability.castType);
         abilityDescription.text = LocalizationManager.Localize(ability.descriptionID);
 
-        // SE Ä¶
+        // SE å†ç”Ÿ
         AudioManager.Instance.PlaySFX("SystemOpen");
     }
 
@@ -155,7 +164,7 @@ public class CharacterDataPanel : MonoBehaviour
             popup.blocksRaycasts = false;
         });
 
-        // SE Ä¶
+        // SE å†ç”Ÿ
         AudioManager.Instance.PlaySFX("SystemCancel");
     }
 
