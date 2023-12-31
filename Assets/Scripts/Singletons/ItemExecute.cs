@@ -190,7 +190,7 @@ public class ItemExecute : SingletonMonoBehaviour<ItemExecute>
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
 
                     // effect
-                    target.DeductHP(damage);
+                    target.DeductHP(self, damage);
 
                     // animation
                     target.PlayAnimation(BattlerAnimationType.attacked);

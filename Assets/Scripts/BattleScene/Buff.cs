@@ -225,7 +225,7 @@ public static class BuffManager
     public static void HurtStart(Battler target, int value) { }
     public static void HurtUpdate(Battler target, int value) 
     { 
-        target.DeductHP(value);
+        target.DeductHP(target, value);
         CreateFloatingText(value.ToString(), new Color(1f, 0.75f, 0.33f), 32, target);
         AudioManager.Instance.PlaySFX("Damage");
     }

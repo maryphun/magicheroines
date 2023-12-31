@@ -367,6 +367,7 @@ public class Battle : MonoBehaviour
                             }
                             AbilityExecute.Instance.Invoke(action.ability.functionName, 0);
                             currentCharacter.DeductSP(action.ability.consumeSP);
+                            currentCharacter.SetAbilityOnCooldown(action.ability, action.ability.cooldown);
                         }
                         break;
                     case EnemyActionType.Idle:
@@ -541,7 +542,7 @@ public class Battle : MonoBehaviour
         {
             // çUåÇåvéZ
             int levelAdjustedDamage = CalculateDamage(attacker, target);
-            int realDamage = target.DeductHP(levelAdjustedDamage);
+            int realDamage = target.DeductHP(attacker, levelAdjustedDamage);
 
             // play SE
             if (target.GetAttackedSEName() != string.Empty)

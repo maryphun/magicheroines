@@ -240,7 +240,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.SpawnAttackVFX(target);
                     AudioManager.Instance.PlaySFX("PowerfulPunch", 1f);
                     target.Shake(0.75f);
-                    target.DeductHP(realDmg);
+                    target.DeductHP(self, realDmg);
 
                     // text
                     floatingText = CreateFloatingText(target.transform);
@@ -473,7 +473,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                         // suck hp
                         self.Heal(hpSuckAmount);
-                        target.DeductHP(hpSuckAmount);
+                        target.DeductHP(self, hpSuckAmount);
 
                         // ログ ({1}　のHP {0} 吸収した！ )
                         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.HPDrain"), target.CharacterNameColored, CustomColor.AddColor(suckAmount, CustomColor.heal())));
@@ -837,7 +837,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
                     
                     // effect
-                    target.DeductHP(damage);
+                    target.DeductHP(self, damage);
 
                     // 戦闘ログ
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(damage, CustomColor.damage())));
@@ -1334,7 +1334,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     // deal damage
-                    int realDamage = targets[0].DeductHP(Battle.CalculateDamage(self, targets[0]));
+                    int realDamage = targets[0].DeductHP(self, Battle.CalculateDamage(self, targets[0]));
 
                     // text
                     floatingText = CreateFloatingText(targets[0].transform);
@@ -1381,7 +1381,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     // deal damage
-                    int realDamage = targets[1].DeductHP(Battle.CalculateDamage(self, targets[1]));
+                    int realDamage = targets[1].DeductHP(self, Battle.CalculateDamage(self, targets[1]));
 
                     // text
                     floatingText = CreateFloatingText(targets[1].transform);
@@ -1428,7 +1428,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     // deal damage
-                    int realDamage = targets[2].DeductHP(Battle.CalculateDamage(self, targets[2]));
+                    int realDamage = targets[2].DeductHP(self, Battle.CalculateDamage(self, targets[2]));
 
                     // text
                     floatingText = CreateFloatingText(targets[2].transform);
@@ -1571,7 +1571,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // 攻撃計算
                     int levelAdjustedDamage = Battle.CalculateDamage(self, target);
-                    int realDamage = target.DeductHP(levelAdjustedDamage);
+                    int realDamage = target.DeductHP(self, levelAdjustedDamage);
 
                     // play SE
                     AudioManager.Instance.PlaySFX("Attacked", 0.8f);
@@ -1685,7 +1685,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             .AppendCallback(() =>
             {
                 // deal damage
-                int realDamage = target.DeductHP(Battle.CalculateDamage(self, target));
+                int realDamage = target.DeductHP(self, Battle.CalculateDamage(self, target));
 
                 // text
                 var floatingText = CreateFloatingText(target.transform);
@@ -1770,7 +1770,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         shield.transform.localScale = new Vector3(3f, 3f, 3f);
         shield.transform.DOScale(1.0f, 1.5f);
         var shieldScript = shield.GetComponent<ErenaShield>();
-        shieldScript.Init(self, shield.GetComponent<RectTransform>(), ErenaShield.EventType.DivineShield);
+        shieldScript.Init(battleManager, self, shield.GetComponent<RectTransform>(), ErenaShield.EventType.DivineShield);
 
         float delayTime = 0.75f;
         DOTween.Sequence().AppendInterval(delayTime)
@@ -1877,7 +1877,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                battleManager.AddBattleLog(string.Format(LocalizationManager.Localize("BattleLog.ShieldDownValue"), target.CharacterNameColored, CustomColor.AddColor(defAmt, CustomColor.SP())));
 
                // deal damage
-               int realDamage = target.DeductHP(Battle.CalculateDamage(self, target));
+               int realDamage = target.DeductHP(self, Battle.CalculateDamage(self, target));
 
                // 戦闘ログ
                battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
@@ -1952,7 +1952,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         shield.transform.localScale = new Vector3(3f, 3f, 3f);
         shield.transform.DOScale(1.0f, 1.5f);
         var shieldScript = shield.GetComponent<ErenaShield>();
-        shieldScript.Init(self, shield.GetComponent<RectTransform>(), ErenaShield.EventType.DivineShield);
+        shieldScript.Init(battleManager, self, shield.GetComponent<RectTransform>(), ErenaShield.EventType.StunShield);
 
         float delayTime = 0.75f;
         DOTween.Sequence().AppendInterval(delayTime)
@@ -1962,7 +1962,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                AudioManager.Instance.PlaySFX("NewAbility", 0.5f); // shield
 
                // ログ (次の攻撃を完全防御！)
-               battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.StunShield"));
+               battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.StunShield"), self.CharacterNameColored));
 
                // アニメション
                self.PlayAnimation(BattlerAnimationType.idle);

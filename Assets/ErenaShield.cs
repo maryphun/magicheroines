@@ -11,6 +11,7 @@ public class ErenaShield : MonoBehaviour
     private RectTransform rect;
     private Image img;
     private EventType type;
+    private Battle battleManager;
 
     public enum EventType
     {
@@ -18,12 +19,13 @@ public class ErenaShield : MonoBehaviour
         StunShield,
     }
 
-    public void Init(Battler battler, RectTransform rect, EventType type)
+    public void Init(Battle battleManager, Battler battler, RectTransform rect, EventType type)
     {
         this.battler = battler;
         this.rect = rect;
         img = rect.GetComponent<Image>();
         this.type = type;
+        this.battleManager = battleManager;
 
         if (this.type == EventType.DivineShield)
         {
@@ -35,7 +37,7 @@ public class ErenaShield : MonoBehaviour
         }
     }
 
-    public void OnAttackDivineShield(int damage)
+    public void OnAttackDivineShield(Battler source, int damage)
     {
         battler.onAttackedEvent.RemoveListener(OnAttackDivineShield);
         AudioManager.Instance.PlaySFX("NewAbility"); // shield break
@@ -46,10 +48,18 @@ public class ErenaShield : MonoBehaviour
         Destroy(gameObject, animTime + Time.deltaTime);
     }
 
-    public void OnAttackStunShield(int damage)
+    public void OnAttackStunShield(Battler source, int damage)
     {
         battler.onAttackedEvent.RemoveListener(OnAttackStunShield);
         AudioManager.Instance.PlaySFX("NewAbility"); // shield break
+
+        if (battleManager != null)
+        {
+            battleManager.AddBuffToBattler(source, BuffType.stun, 2, 0);
+        }
+
+        // É_ÉÅÅ[ÉWÇÕÇ∑ÇÈ
+        battler.DeductHP(source, damage);
 
         const float animTime = 0.5f;
         rect.DOScale(3.0f, animTime);
@@ -67,6 +77,7 @@ public class ErenaShield : MonoBehaviour
         {
             battler.onAttackedEvent.RemoveListener(OnAttackStunShield);
         }
+
         Destroy(gameObject);
     }
 }

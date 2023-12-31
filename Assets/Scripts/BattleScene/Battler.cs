@@ -68,24 +68,25 @@ public class Battler : MonoBehaviour
     private RectTransform graphicRect;
     private Image mpBarFill;
 
+    [Serializable]
     public class CountableUnityEvent
     {
-        private UnityEvent<int> evt;
-        public int EventCount { get; private set; }
+        [SerializeField] private UnityEvent<Battler, int> evt;
+        [SerializeField] public int EventCount { get; private set; }
 
         public CountableUnityEvent()
         {
-            evt = new UnityEvent<int>();
+            evt = new UnityEvent<Battler, int>();
             EventCount = 0;
         }
 
-        public void AddListener(UnityAction<int> call)
+        public void AddListener(UnityAction<Battler, int> call)
         {
             evt.AddListener(call);
             EventCount++;
         }
 
-        public void RemoveListener(UnityAction<int> call)
+        public void RemoveListener(UnityAction<Battler, int> call)
         {
             evt.RemoveListener(call);
             EventCount--;
@@ -97,9 +98,9 @@ public class Battler : MonoBehaviour
             EventCount = 0;
         }
 
-        public void Invoke(int value)
+        public void Invoke(Battler battler, int value)
         {
-            evt.Invoke(value);
+            evt.Invoke(battler, value);
         }
     }
 
@@ -403,12 +404,12 @@ public class Battler : MonoBehaviour
     /// <summary>
     /// ダメージを食らった
     /// </summary>
-    public int DeductHP(int damage)
+    public int DeductHP(Battler source, int damage)
     {
         if (onAttackedEvent.EventCount > 0)
         {
             int oldHP = current_hp;
-            onAttackedEvent.Invoke(damage);
+            onAttackedEvent.Invoke(source, damage);
             return oldHP - current_hp; // HP を計算
         }
 
