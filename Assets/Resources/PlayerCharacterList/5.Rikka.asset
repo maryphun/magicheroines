@@ -42,8 +42,13 @@ MonoBehaviour:
     characterStatus:
     - moodNameID: Mood.Rebel
       textColor: {r: 0.8396226, g: 0, b: 0, a: 1}
-      character: {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      character: {fileID: 21300000, guid: 115bcdad8fedbb84fae28dadddba3f30, type: 3}
       requiredCorruptionEpisode: 0
+      requiredHornyEpisode: 0
+    - moodNameID: Mood.Resist
+      textColor: {r: 1, g: 0.5518868, b: 0.5651861, a: 1}
+      character: {fileID: 21300000, guid: 72e76469332a33d418f2f39993534f37, type: 3}
+      requiredCorruptionEpisode: 1
       requiredHornyEpisode: 0
     - moodNameID: Mood.Loyal
       textColor: {r: 0.7216981, g: 0.9970637, b: 1, a: 1}

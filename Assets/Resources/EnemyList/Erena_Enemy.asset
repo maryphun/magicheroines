@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Erena_Enemy
   m_EditorClassIdentifier: 
   enemyName: Name.Erena
-  maxHP: 400
+  maxHP: 350
   maxMP: 120
   attack: 65
-  defense: 10
-  speed: 10
+  defense: 12
+  speed: 1
   level: 18
   character_color: {r: 1, g: 0.94869184, b: 0.5518868, a: 1}
   actionPattern:
