@@ -41,6 +41,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public bool isTargettable; // 目標に出来るか
     [SerializeField] public BattlerAnimationType currentAnimation;
     [SerializeField] public UnityEvent onDeathEvent;
+    [SerializeField] public CountableUnityEvent onAttackedEvent;
     [SerializeField] public List<Ability> abilities;
     [SerializeField] public EquipmentDefine equipment;
     [SerializeField] public List<EnemyActionPattern> actionPattern; // 敵AI作成用
@@ -67,9 +68,49 @@ public class Battler : MonoBehaviour
     private RectTransform graphicRect;
     private Image mpBarFill;
 
+    public class CountableUnityEvent
+    {
+        private UnityEvent<int> evt;
+        public int EventCount { get; private set; }
+
+        public CountableUnityEvent()
+        {
+            evt = new UnityEvent<int>();
+            EventCount = 0;
+        }
+
+        public void AddListener(UnityAction<int> call)
+        {
+            evt.AddListener(call);
+            EventCount++;
+        }
+
+        public void RemoveListener(UnityAction<int> call)
+        {
+            evt.RemoveListener(call);
+            EventCount--;
+        }
+
+        public void RemoveAllListeners()
+        {
+            evt.RemoveAllListeners();
+            EventCount = 0;
+        }
+
+        public void Invoke(int value)
+        {
+            evt.Invoke(value);
+        }
+    }
+
     private void Awake()
     {
         graphicRect = graphic.GetComponent<RectTransform>();
+
+        onDeathEvent = new UnityEvent();
+        onDeathEvent.RemoveAllListeners();
+        onAttackedEvent = new CountableUnityEvent();
+        onAttackedEvent.RemoveAllListeners();
 
         if (autoInit)
         {
@@ -364,6 +405,13 @@ public class Battler : MonoBehaviour
     /// </summary>
     public int DeductHP(int damage)
     {
+        if (onAttackedEvent.EventCount > 0)
+        {
+            int oldHP = current_hp;
+            onAttackedEvent.Invoke(damage);
+            return oldHP - current_hp; // HP を計算
+        }
+
         int realDamage = damage;
 
         // 少なくても1ダメージは保証される
@@ -405,6 +453,7 @@ public class Battler : MonoBehaviour
 
                             // play SE
                             AudioManager.Instance.PlaySFX("Retired");
+                            if (soundEffects.retire != null) AudioManager.Instance.PlaySFX(soundEffects.retire.name);
                         });
             }
 
@@ -509,6 +558,22 @@ public class Battler : MonoBehaviour
     }
 
     /// <summary>
+    /// 技名で技を取得
+    /// </summary>
+    public Ability GetAbility(string abilityfunctionName)
+    {
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            if (abilities[i].functionName == abilityfunctionName)
+            {
+                return abilities[i];
+            }
+        }
+
+        return null;
+    }
+
+    /// <summary>
     /// HP Barを更新
     /// </summary>
     /// <returns></returns>
@@ -588,6 +653,23 @@ public class Battler : MonoBehaviour
         graphic.DOColor(originalColor, time);
     }
 
+    public string GetAttackSEName()
+    {
+        if (soundEffects.attack == null)
+        {
+            return string.Empty;
+        }
+        return soundEffects.attack.name;
+    }
+    public string GetAttackedSEName()
+    {
+        if (soundEffects.attacked == null)
+        {
+            return string.Empty;
+        }
+        return soundEffects.attacked.name;
+    }
+
     #region EnemyAI
 
     public List<EnemyActionPattern> GetAllPossibleAction()
@@ -610,6 +692,12 @@ public class Battler : MonoBehaviour
             {
                 // SP 不足
                 if (current_mp < action.ability.consumeSP)
+                {
+                    continue;
+                }
+
+                // チャージ中
+                if (IsAbilityOnCooldown(action.ability) > 0)
                 {
                     continue;
                 }

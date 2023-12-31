@@ -21,6 +21,10 @@ public class AbilityOverdrive : MonoBehaviour
         // stun the target
         battleManager.AddBuffToBattler(target, BuffType.stun, turn, 0);
         //battleManager.NextTurn(false);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Sleep", 0.75f);
+
         Destroy(this);
     }
 }

@@ -959,7 +959,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var endPoint = target.GetMiddleGlobalPosition();
 
         self.PlayAnimation(BattlerAnimationType.magic);
-        target.ColorTint(Color.grey, 0.15f);
+        self.ColorTint(Color.grey, 0.15f);
 
         // SE
         AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
@@ -1003,7 +1003,68 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     /// </summary>
     public void MilkCookie()
     {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
 
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.MilkCookie");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.MilkCookie"), CustomColor.abilityName())));
+
+
+        var selfPos = self.GetMiddleGlobalPosition();
+        var startPoint = self.isEnemy ? new Vector2(selfPos.x - self.GetCharacterSize().x * 0.25f, selfPos.y) : new Vector2(selfPos.x + self.GetCharacterSize().x * 0.5f, selfPos.y);
+        var endPoint = target.GetMiddleGlobalPosition();
+
+        self.PlayAnimation(BattlerAnimationType.magic);
+        self.ColorTint(Color.grey, 0.15f);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+
+        // calculate projectile time base on range
+        float projectileTime = 1.0f;
+        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+
+        DOTween.Sequence().AppendInterval(projectileTime)
+           .AppendCallback(() =>
+           {
+               self.PlayAnimation(BattlerAnimationType.idle);
+               target.PlayAnimation(BattlerAnimationType.idle);
+               target.ColorTint(Color.grey, 0.15f);
+
+               // vfx
+               VFXSpawner.SpawnVFX("Recovery", target.transform, target.GetMiddleGlobalPosition());
+
+               // SE
+               AudioManager.Instance.PlaySFX("Heal", 0.75f);
+
+               // remove
+               bool isSuccess = 
+               battleManager.RemoveBuffForCharacter(target, BuffType.attack_down) || 
+               battleManager.RemoveBuffForCharacter(target, BuffType.hurt) ||
+               battleManager.RemoveBuffForCharacter(target, BuffType.shield_down) ||
+               battleManager.RemoveBuffForCharacter(target, BuffType.speed_down);
+
+               // 戦闘ログ
+               if (isSuccess)
+               {
+
+               }
+               else
+               {
+                   battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.NoEffect"));
+               }
+           })
+           .AppendInterval(0.5f)
+           .AppendCallback(() =>
+           {
+               battleManager.NextTurn(false);
+           });
     }
 
     /// <summary>
@@ -1011,8 +1072,206 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     /// </summary>
     public void MilkOverdrive()
     {
+        var self = battleManager.GetCurrentBattler();
+        targetBattlers = battleManager.GetAllTeammate();
+        targetBattlers.Remove(self);
 
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.MilkOverdrive");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.MilkOverdrive"), CustomColor.abilityName())));
+
+
+        float projectileTime = 1.0f;
+        var rectTransform = self.GetComponent<RectTransform>();
+        var originalPos = rectTransform.position;
+        var selfPos = self.GetMiddleGlobalPosition();
+        var startPoint = self.isEnemy ? new Vector2(selfPos.x - self.GetCharacterSize().x * 0.25f, selfPos.y) : new Vector2(selfPos.x + self.GetCharacterSize().x * 0.5f, selfPos.y);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+
+        rectTransform.DOMoveX(originalPos.x - 150.0f, 0.75f);
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.75f)
+                .AppendCallback(() =>
+                {
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        var endPoint = targetBattlers[i].GetMiddleGlobalPosition();
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+
+                        // calculate projectile time base on range
+                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                    }
+                })
+                .AppendInterval(projectileTime)
+                .AppendCallback(() =>
+                {
+                    // SE
+                    AudioManager.Instance.PlaySFX("Heal", 0.75f);
+                    self.PlayAnimation(BattlerAnimationType.idle);
+
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        targetBattlers[i].PlayAnimation(BattlerAnimationType.idle);
+
+                        // vfx
+                        VFXSpawner.SpawnVFX("Recovery", targetBattlers[i].transform, targetBattlers[i].GetMiddleGlobalPosition());
+
+                        if (targetBattlers[i].current_hp < targetBattlers[i].max_hp)
+                        {
+                            // heal target
+                            int healAmount = Mathf.Min((int)((float)targetBattlers[i].max_hp * 0.25f), targetBattlers[i].max_hp - targetBattlers[i].current_hp);
+                            targetBattlers[i].Heal(healAmount);
+
+                            // text
+                            floatingText = CreateFloatingText(targetBattlers[i].transform);
+                            floatingText.Init(2.0f, targetBattlers[i].GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
+                        }
+                    }
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        var endPoint = targetBattlers[i].GetMiddleGlobalPosition();
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+
+                        // calculate projectile time base on range
+                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                    }
+                })
+                .AppendInterval(projectileTime)
+                .AppendCallback(() =>
+                {
+                    // SE
+                    AudioManager.Instance.PlaySFX("Heal", 0.75f);
+                    self.PlayAnimation(BattlerAnimationType.idle);
+
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        targetBattlers[i].PlayAnimation(BattlerAnimationType.idle);
+
+                        // vfx
+                        VFXSpawner.SpawnVFX("Recovery", targetBattlers[i].transform, targetBattlers[i].GetMiddleGlobalPosition());
+
+                        if (targetBattlers[i].current_hp < targetBattlers[i].max_hp)
+                        {
+                            // heal target
+                            int healAmount = Mathf.Min((int)((float)targetBattlers[i].max_hp * 0.25f), targetBattlers[i].max_hp - targetBattlers[i].current_hp);
+                            targetBattlers[i].Heal(healAmount);
+
+                            // text
+                            floatingText = CreateFloatingText(targetBattlers[i].transform);
+                            floatingText.Init(2.0f, targetBattlers[i].GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
+                        }
+                    }
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        var endPoint = targetBattlers[i].GetMiddleGlobalPosition();
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+
+                        // calculate projectile time base on range
+                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                    }
+                })
+                .AppendInterval(projectileTime)
+                .AppendCallback(() =>
+                {
+                    // SE
+                    AudioManager.Instance.PlaySFX("Heal", 0.75f);
+                    self.PlayAnimation(BattlerAnimationType.idle);
+
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        targetBattlers[i].PlayAnimation(BattlerAnimationType.idle);
+
+                        // vfx
+                        VFXSpawner.SpawnVFX("Recovery", targetBattlers[i].transform, targetBattlers[i].GetMiddleGlobalPosition());
+
+                        if (targetBattlers[i].current_hp < targetBattlers[i].max_hp)
+                        {
+                            // heal target
+                            int healAmount = Mathf.Min((int)((float)targetBattlers[i].max_hp * 0.25f), targetBattlers[i].max_hp - targetBattlers[i].current_hp);
+                            targetBattlers[i].Heal(healAmount);
+
+                            // text
+                            floatingText = CreateFloatingText(targetBattlers[i].transform);
+                            floatingText.Init(2.0f, targetBattlers[i].GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
+                        }
+                    }
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        var endPoint = targetBattlers[i].GetMiddleGlobalPosition();
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+
+                        // calculate projectile time base on range
+                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                    }
+                })
+                .AppendInterval(projectileTime)
+                .AppendCallback(() =>
+                {
+                    // SE
+                    AudioManager.Instance.PlaySFX("Heal", 0.75f);
+                    self.PlayAnimation(BattlerAnimationType.idle);
+
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        targetBattlers[i].PlayAnimation(BattlerAnimationType.idle);
+
+                        // vfx
+                        VFXSpawner.SpawnVFX("Recovery", targetBattlers[i].transform, targetBattlers[i].GetMiddleGlobalPosition());
+
+                        if (targetBattlers[i].current_hp < targetBattlers[i].max_hp)
+                        {
+                            // heal target
+                            int healAmount = targetBattlers[i].max_hp - targetBattlers[i].current_hp;
+                            targetBattlers[i].Heal(healAmount);
+
+                            // text
+                            floatingText = CreateFloatingText(targetBattlers[i].transform);
+                            floatingText.Init(2.0f, targetBattlers[i].GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
+                        }
+                    }
+
+                    // ログ ({0}　からの {1} ！)
+                    battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.TeamHeal"));
+
+                    rectTransform.DOMove(originalPos, 0.5f);
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
     }
+                
 
     /// <summary>
     /// 立花戦特殊技  / 005号 / 072号
@@ -1457,6 +1716,260 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             {
                 battleManager.NextTurn(false);
             });
+    }
+
+    /// <summary>
+    /// 聖なる盾　エレナボス戦
+    /// </summary>
+    public void DivineShield()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.DivineShield");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.DivineShield"), CustomColor.abilityName())));
+
+        // アニメション
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Magic2", 1f);
+
+        const string ObjName = "ErenaShield";
+
+
+        try
+        {
+            // 前のシールドが存在していたら置き換え
+            var obj = self.transform.Find(ObjName);
+            if (obj != null)
+            {
+                obj.GetComponent<ErenaShield>().Destroy();
+            }
+
+            // ともにチャージさせる
+            Ability stunshield = self.GetAbility("StunShield");
+            if (stunshield != null)
+            {
+                self.SetAbilityOnCooldown(stunshield, stunshield.cooldown);
+            }
+        }
+        catch
+        {
+
+        }
+
+        // VFX
+        var shield = VFXSpawner.SpawnVFX("Erena Shield", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, 150.0f, 0.0f));
+        shield.name = ObjName;
+        shield.transform.localScale = new Vector3(3f, 3f, 3f);
+        shield.transform.DOScale(1.0f, 1.5f);
+        var shieldScript = shield.GetComponent<ErenaShield>();
+        shieldScript.Init(self, shield.GetComponent<RectTransform>(), ErenaShield.EventType.DivineShield);
+
+        float delayTime = 0.75f;
+        DOTween.Sequence().AppendInterval(delayTime)
+           .AppendCallback(() =>
+           {
+               // SE
+               AudioManager.Instance.PlaySFX("NewAbility", 0.5f); // shield
+
+               // ログ (次の攻撃を完全防御！)
+               battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.DivineShield"));
+
+               // アニメション
+               self.PlayAnimation(BattlerAnimationType.idle);
+
+               battleManager.NextTurn(false);
+           }
+        );
+    }
+
+    /// <summary>
+    /// 聖なる剣　エレナボス戦
+    /// </summary>
+    public void DivineRapier()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.DivineRapier");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.DivineRapier"), CustomColor.abilityName())));
+
+        // アニメション
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        // 残像を作成
+        Image img = new GameObject("FadingImage[" + gameObject.name + "]").AddComponent<Image>();
+        img.transform.SetParent(self.transform);
+        img.transform.SetSiblingIndex(self.Graphic.transform.GetSiblingIndex() + 1);
+        img.sprite = self.Graphic.sprite;
+        img.raycastTarget = false;
+        img.rectTransform.pivot = new Vector2(0.5f, 0.5f); ;
+        img.rectTransform.position = self.Graphic.rectTransform.position + new Vector3(0.0f, self.GetCharacterSize().y * 0.5f, 0.0f);
+        img.rectTransform.localScale = self.Graphic.rectTransform.localScale;
+        img.rectTransform.sizeDelta = self.Graphic.rectTransform.sizeDelta;
+
+        const float fadeTime = 1.0f;
+        img.color = new Color(0.5f, 0.5f, 0.5f, fadeTime);
+        img.DOFade(0.0f, fadeTime);
+        img.rectTransform.DOScale(new Vector3(-0.3f, 0.3f, 1.0f), fadeTime);
+        Destroy(img.gameObject, fadeTime + Time.deltaTime);
+
+        // VFX
+        var obj = VFXSpawner.SpawnVFX("Erena_HolySword", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, 100.0f, 0.0f));
+
+        // SE
+        AudioManager.Instance.PlaySFX("Magic2", 1f);
+
+        var selfPos = self.GetMiddleGlobalPosition() + new Vector2(0.0f, 100.0f);
+        var startPoint = self.isEnemy ? new Vector2(selfPos.x - self.GetCharacterSize().x * 0.25f, selfPos.y) : new Vector2(selfPos.x + self.GetCharacterSize().x * 0.5f, selfPos.y);
+        var endPoint = target.GetMiddleGlobalPosition();
+
+        // calculate projectile time base on range
+        float delayTime = 0.75f;
+
+        float projectileTime = 0.4f;
+        DOTween.Sequence().AppendInterval(delayTime)
+           .AppendCallback(() =>
+           {
+               var projectile = CreateProjectile("Erena Projectile", startPoint, endPoint, projectileTime, true);
+
+               // 残像生成コンポネント
+               FadeEffect fadeEffect = projectile.gameObject.AddComponent<FadeEffect>();
+               fadeEffect.Initialize(projectileTime, 0.05f, projectile.GetComponent<Image>());
+
+               // SE
+               AudioManager.Instance.PlaySFX("Throw", 0.75f);
+
+               // 回転
+               self.GetGraphicRectTransform().DORotate(new Vector3(0, 0, 15.0f), 0.25f, RotateMode.Fast);
+           })
+           .AppendInterval(projectileTime - 0.1f)
+           .AppendCallback(() =>
+           {
+               self.PlayAnimation(BattlerAnimationType.idle);
+               target.PlayAnimation(BattlerAnimationType.attacked);
+
+               target.ColorTint(Color.yellow, 0.5f);
+
+               // vfx
+               VFXSpawner.SpawnVFX("Recovery", target.transform, target.GetMiddleGlobalPosition());
+
+               // SE
+               AudioManager.Instance.PlaySFX("Damage4", 0.75f);
+
+               int defAmt = target.defense / 2;
+               battleManager.AddBuffToBattler(target, BuffType.shield_down, 4, defAmt);
+
+               // ログ （{0}　の防御力が {1} 点下げた。）
+               battleManager.AddBattleLog(string.Format(LocalizationManager.Localize("BattleLog.ShieldDownValue"), target.CharacterNameColored, CustomColor.AddColor(defAmt, CustomColor.SP())));
+
+               // deal damage
+               int realDamage = target.DeductHP(Battle.CalculateDamage(self, target));
+
+               // 戦闘ログ
+               battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
+               // text
+               floatingText = CreateFloatingText(target.transform);
+               floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+               // play SE
+               AudioManager.Instance.PlaySFX("Holy", 0.7f);
+
+               // 回転
+               self.GetGraphicRectTransform().DORotate(Vector3.zero, 0.25f, RotateMode.Fast);
+           })
+           .AppendInterval(0.5f)
+           .AppendCallback(() =>
+           {
+               target.PlayAnimation(BattlerAnimationType.idle);
+               battleManager.NextTurn(false);
+           });
+    }
+
+    /// <summary>
+    /// スタンシールド　エレナボス戦
+    /// </summary>
+    public void StunShield()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.StunShield");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.StunShield"), CustomColor.abilityName())));
+
+        // アニメション
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Magic2", 1f);
+
+        const string ObjName = "ErenaShield";
+
+
+        try
+        {
+            // 前のシールドが存在していたら置き換え
+            var obj = self.transform.Find(ObjName);
+            if (obj != null)
+            {
+                obj.GetComponent<ErenaShield>().Destroy();
+            }
+
+            // ともにチャージさせる
+            Ability divineshield = self.GetAbility("DivineShield");
+            if (divineshield != null)
+            {
+                self.SetAbilityOnCooldown(divineshield, divineshield.cooldown);
+            }
+        }
+        catch
+        {
+
+        }
+
+        // VFX
+        var shield = VFXSpawner.SpawnVFX("Erena Shield", self.transform, self.GetGraphicRectTransform().position + new Vector3(0.0f, 150.0f, 0.0f));
+        shield.name = ObjName;
+        shield.transform.localScale = new Vector3(3f, 3f, 3f);
+        shield.transform.DOScale(1.0f, 1.5f);
+        var shieldScript = shield.GetComponent<ErenaShield>();
+        shieldScript.Init(self, shield.GetComponent<RectTransform>(), ErenaShield.EventType.DivineShield);
+
+        float delayTime = 0.75f;
+        DOTween.Sequence().AppendInterval(delayTime)
+           .AppendCallback(() =>
+           {
+               // SE
+               AudioManager.Instance.PlaySFX("NewAbility", 0.5f); // shield
+
+               // ログ (次の攻撃を完全防御！)
+               battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.StunShield"));
+
+               // アニメション
+               self.PlayAnimation(BattlerAnimationType.idle);
+
+               battleManager.NextTurn(false);
+           }
+        );
     }
 
     /// <summary>

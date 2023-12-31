@@ -36,8 +36,8 @@ MonoBehaviour:
     attack_growth: 0
     defense_growth: 0
     speed_growth: 0
-    levelUp_base_cost: 300
-    levelUp_cost_increment: 50
+    levelUp_base_cost: 135
+    levelUp_cost_increment: 45
     is_heroin: 1
     characterStatus:
     - moodNameID: Mood.Rebel

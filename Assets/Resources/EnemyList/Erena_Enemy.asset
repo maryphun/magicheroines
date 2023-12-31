@@ -13,19 +13,43 @@ MonoBehaviour:
   m_Name: Erena_Enemy
   m_EditorClassIdentifier: 
   enemyName: Name.Erena
-  maxHP: 600
-  maxMP: 100
+  maxHP: 400
+  maxMP: 120
   attack: 65
   defense: 10
   speed: 10
-  level: 20
+  level: 18
   character_color: {r: 1, g: 0.94869184, b: 0.5518868, a: 1}
   actionPattern:
-  - actionType: 0
-    ability: {fileID: 0}
+  - actionType: 1
+    ability: {fileID: 11400000, guid: 1ad7279ba0261ca4ba09e47e009aab49, type: 2}
+    chance: 0.7
+    hasThresholdCondition: 0
+    HpThreshold: 0
+    SpThreshold: 0
+  - actionType: 1
+    ability: {fileID: 11400000, guid: 2d47065d03ace8f4d845023eae70519d, type: 2}
     chance: 1
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0
+  - actionType: 1
+    ability: {fileID: 11400000, guid: eeb95dde5c8d17a45b3576601562a8c6, type: 2}
+    chance: 0.7
+    hasThresholdCondition: 1
+    HpThreshold: 0.7
+    SpThreshold: 0
+  - actionType: 0
+    ability: {fileID: 0}
+    chance: 0.2
+    hasThresholdCondition: 0
+    HpThreshold: 0
+    SpThreshold: 0
+  - actionType: 2
+    ability: {fileID: 0}
+    chance: 1
+    hasThresholdCondition: 1
+    HpThreshold: 0
+    SpThreshold: 0.2
   icon: {fileID: 644697127, guid: 0f4c4dbea7e7a1c4da0c02f12798160b, type: 3}
   battler: {fileID: 7739895556670267509, guid: a75cadbd5c0f5c949b56db209ccce1be, type: 3}

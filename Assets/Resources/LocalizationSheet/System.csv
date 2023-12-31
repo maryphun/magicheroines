@@ -1,4 +1,4 @@
-.,Japanese
+Key,Japanese
 TitleScene,タイトル画面
 System.NewGame,New Game
 System.Load,Load
@@ -338,26 +338,50 @@ Ability.ChargeAttack_Info,"次の攻撃のために力を貯めて、攻撃力�
 Ability.Ultimate,絶命破斬
 Ability.Ultimate_Info,敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
 Ability.Stungun_Info,スタンガンでターゲットを1ターン行動不能にする。
+Ability.DivineShield,聖なる盾
+Ability.DivineShield_Info,次に受けたダメージを無効にする
+Ability.DivineRapier,聖なる剣
+Ability.DivineRapier_Info,敵単体を攻撃し、同時に防御力を極端まで低下させる
+Ability.StunShield,スタンシールド
+Ability.StunShield_Info,次にエレナを攻撃するものは一時行動不能になる。
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」
 HomeChar.No5_1-3,「準備は万全です。いつでも出撃できます。」
-HomeChar.No5_1-4,「組織の状況は非常に悪いです。聖核戦姫を何とかしないと...」
-HomeChar.No5_2-3,「先日捕らえたオリジナルの研究開発はどうなっているのでしょうか」
-HomeChar.Akiho_2-1,「こんにちはっ♥♥、おっぱい搾ってくれるんですか？！」
-HomeChar.Akiho_2-2,「今は幸せだなぁ... 六花にもこの幸せを体験させたい」
-HomeChar.Akiho_2-3,「飼育員様ぁ♥、毎日たくさん精液飲んで毎日おっぱいビュービューさせていただきまぁす♥♥」
-HomeChar.Akiho_2-4,「飼育員の皆さんっ♥、もう一回だけっ♥♥、明穂の乳首一回絞ってくださいっ♥」
+HomeChar.No5_1-4,「状況は非常に悪いです。聖核戦姫を何とかしないと...」
+HomeChar.No5_2-3,「オリジナルの研究開発は順調ですか？」
+HomeChar.Akiho_2-1,「なんですか？おっぱい搾ってくれるんですか？」
+HomeChar.Akiho_2-2,「どうせなら六花も一緒に…」
+HomeChar.Akiho_2-3,「おっぱいが張って来ちゃった…搾ってもらわなきゃ」
+HomeChar.Akiho_2-4,「……？私のミルク飲みますか？」
 HomeChar.No72_3-1,「こんにちは、何かご用はありますか？」
 HomeChar.No72_3-2,「…そのデータは私の中に存在していません」
 HomeChar.No72_3-3,「何かご命令ですか？」
 HomeChar.No72_3-4,「私に感情はプログラムされていません。他のクローンと同様です」
+HomeChar.Erena_1-1,「愚かな私ですが、存分にお使いください」
+HomeChar.Erena_1-2,「聖核戦姫に聖月生徒会…今はただの殲滅対象に過ぎません」
+HomeChar.Erena_1-3,
+HomeChar.Erena_1-4,
+HomeChar.Kei_1-1,「暇だね…なんか楽しいことない？」
+HomeChar.Kei_1-2,「」
+HomeChar.Kei_1-3,
+HomeChar.Kei_1-4,
+HomeChar.Nayuta_1-1,「財団にすべてを捧げます…♥」
+HomeChar.Nayuta_1-2,「聖核戦姫は私が一匹残らず捕獲します」
+HomeChar.Nayuta_1-3,
+HomeChar.Nayuta_1-4,
+,
+,
+,
+,
+,
+,
 ,
 ,
 WorldScene,ワールド画面台詞
-World.Chapter2-3,「今回の作戦には「笹谷 明穂」という存在が鍵となっています。取り急ぎで調教のほうを進みましょう。」
-World.Chapter3-3,「先日捕獲した立花を放置せずに早く幸せにして欲しいなぁ...」
-World.Chapter5-3,「八雲 那由多はまさに強敵です。「清藤 エレナ」を堕としてから初めて勝算があるかと」
+World.Chapter2-3,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」
+World.Chapter3-3,「六花の調教は進んでますか？とっとと堕としちゃってください！」
+World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
 ,
 BattleLog,戦闘ログ
 BattleLog.Attack,{0}　の攻撃！
@@ -400,3 +424,7 @@ BattleLog.Hacking_Fail,ハッキングが失敗した。
 BattleLog.Hacking_End,{0}　のシステム故障が直った。
 BattleLog.Overdrive,{0}！ {1} がこれから{2}回連続行動する。
 BattleLog.ContinueTurn,また{0}のターン！
+BattleLog.TeamHeal,仲間全員を全回復した！
+BattleLog.Usage,{0}　の　{1}！
+BattleLog.ShieldDownValue,{0}　の防御力が {1} 点下げた。
+BattleLog.DivineShield,次のダメージを完全防御する！

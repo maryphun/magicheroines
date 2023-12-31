@@ -47,6 +47,7 @@ public class FadeEffect : MonoBehaviour
             img.rectTransform.position = targetImgComponent.rectTransform.position;
             img.rectTransform.localScale = targetImgComponent.rectTransform.localScale;
             img.rectTransform.sizeDelta = targetImgComponent.rectTransform.sizeDelta;
+            img.rectTransform.rotation = targetImgComponent.rectTransform.rotation;
 
             img.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
             img.DOFade(0.0f, fadeTime);

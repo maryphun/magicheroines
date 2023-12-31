@@ -279,6 +279,10 @@ public class Battle : MonoBehaviour
     {
         return enemyList;
     }
+    public List<Battler> GetAllTeammate()
+    {
+        return characterList;
+    }
 
     IEnumerator EnemyAI()
     {
@@ -469,6 +473,13 @@ public class Battle : MonoBehaviour
         // 総SPの15%~20%を回復する
         int healAmount = Mathf.RoundToInt((float)battler.max_mp * UnityEngine.Random.Range(0.15f, 0.2f));
 
+        // 敵の聖核戦姫は回復値を倍にする
+        if (battler.isEnemy && battler.IsFemale)
+        {
+            healAmount = healAmount * 2;
+        }
+
+        // アニメション
         var sequence = DOTween.Sequence();
                 sequence
                 .AppendCallback(() =>
@@ -515,9 +526,13 @@ public class Battle : MonoBehaviour
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
         // change character hirachy temporary
         attacker.transform.SetParent(target.transform);
+        attacker.PlayAnimation(BattlerAnimationType.attack);
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
 
         attacker.SpawnAttackVFX(target);
+
+        // play SE
+        AudioManager.Instance.PlaySFX(attacker.GetAttackSEName(), 0.8f);
 
         // attack miss?
         bool isMiss = (UnityEngine.Random.Range(0, 100) > CalculateHitChance(attacker.speed - target.speed));
@@ -529,19 +544,33 @@ public class Battle : MonoBehaviour
             int realDamage = target.DeductHP(levelAdjustedDamage);
 
             // play SE
-            AudioManager.Instance.PlaySFX("Attacked", 0.8f);
+            if (target.GetAttackedSEName() != string.Empty)
+            {
+                AudioManager.Instance.PlaySFX(target.GetAttackSEName(), 0.8f);
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("Attacked", 0.8f);
+            }
 
             // animation
             target.Shake(attackAnimPlayTime + characterMoveTime);
-            attacker.PlayAnimation(BattlerAnimationType.attack);
             target.PlayAnimation(BattlerAnimationType.attacked);
 
-            // create floating text
-            var floatingText = Instantiate(floatingTextOrigin, target.transform);
-            floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+            if (realDamage > 0)
+            {
+                // create floating text
+                var floatingText = Instantiate(floatingTextOrigin, target.transform);
+                floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - attacker.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-            // ログ ({0}　に　{1}　のダメージを与えた！)
-            AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+                // ログ ({0}　に　{1}　のダメージを与えた！)
+                AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+            }
+            else
+            {
+                // ログ (効果はなかった。)
+                AddBattleLog(LocalizationManager.Localize("BattleLog.NoEffect"));
+            }
         }
         else
         {
@@ -689,6 +718,25 @@ public class Battle : MonoBehaviour
 
         ArrangeBuffIcon(target);
         characterInfoPanel.UpdateIcons(target);
+    }
+
+    /// <summary>
+    /// キャラのバフを強制終了
+    /// </summary>
+    public bool RemoveBuffForCharacter(Battler target, BuffType buff)
+    {
+        if (IsCharacterInBuff(target, buff))
+        {
+            // 既にこのバフ持っている
+            var instance = buffedCharacters.FirstOrDefault(x => x.target == target && x.type == buff);
+
+            // 終了させる
+            RemoveBuffInstance(instance);
+
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>

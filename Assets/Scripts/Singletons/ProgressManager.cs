@@ -529,9 +529,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             BattleSetup.Reset(false);
             BattleSetup.SetAllowEscape(true);
-            //BattleSetup.AddEnemy("Akiho_Enemy");
-            BattleSetup.AddEnemy("Tank");
-            BattleSetup.AddEnemy("Drone");
+            BattleSetup.AddEnemy("Erena_Enemy");
         }
     }
 #else
