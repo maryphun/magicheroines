@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Tank
   m_EditorClassIdentifier: 
   enemyName: Name.Tank
-  maxHP: 200
+  maxHP: 185
   maxMP: 150
-  attack: 37
+  attack: 45
   defense: 9
   speed: 1
   level: 6

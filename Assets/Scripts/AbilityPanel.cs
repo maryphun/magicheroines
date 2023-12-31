@@ -353,7 +353,7 @@ public class AbilityPanel : MonoBehaviour
             Vector3 mousePosition = Input.mousePosition / canvas.scaleFactor;
             var targetBattler = battleManager.GetBattlerByPosition(mousePosition, isTeammateAllowed, isEnemyAllowed, isAliveOnly);
 
-            if (!ReferenceEquals(targetBattler, null))
+            if (!ReferenceEquals(targetBattler, null) && (ability.canTargetSelf || targetBattler != battleManager.GetCurrentBattler()))
             {
                 isSelectingTarget = true;
                 battleManager.PointTargetWithArrow(targetBattler, 0.25f);

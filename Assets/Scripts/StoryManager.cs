@@ -81,7 +81,6 @@ public class StoryManager : MonoBehaviour
                 break;
             case 7:
                 {
-                    BattleSetup.AddEnemy("Drone 2");
                     BattleSetup.AddEnemy("Tank");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
                     BattleSetup.SetReward(650, 75);
@@ -90,8 +89,9 @@ public class StoryManager : MonoBehaviour
                 break;
             case 8:
                 {
-                    BattleSetup.AddEnemy("Drone 2");
-                    BattleSetup.AddEnemy("Tank");
+                    BattleSetup.AddEnemy("GoldDrone");
+                    BattleSetup.AddEnemy("DarkAndroid");
+                    BattleSetup.AddEnemy("GoldDrone");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
                     BattleSetup.SetReward(700, 75);
                     StartCoroutine(SceneTransition("Battle", 0));

@@ -796,6 +796,46 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
+    /// ブースト
+    /// </summary>
+    public void Booster()
+    {
+        var target = battleManager.GetCurrentBattler();
+        int attackAddAmount = (int)((float)target.attack * 0.15f);
+
+        // 技名を表示
+        var floatingText = CreateFloatingText(target.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Booster");
+        floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
+
+        // ログ ({0}　が{1}する)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), target.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Booster"), CustomColor.abilityName())));
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // effect
+                    target.attack = target.attack + attackAddAmount;
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("SelfRepair");
+
+                    // VFX
+                    VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
+
+                    // 戦闘ログ
+                    battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.AttackUpStart"), target.CharacterNameColored, CustomColor.AddColor(attackAddAmount, CustomColor.damage())));
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
     /// 明穂戦特殊技
     /// </summary>
     public void HealAttack()
@@ -1271,7 +1311,6 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     battleManager.NextTurn(false);
                 });
     }
-                
 
     /// <summary>
     /// 立花戦特殊技  / 005号 / 072号
@@ -1655,7 +1694,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             });
     }
 
-    // タンクのデフォルト攻撃
+    /// タンクのデフォルト攻撃
     public void TankAttack()
     {
         var self = battleManager.GetCurrentBattler();
