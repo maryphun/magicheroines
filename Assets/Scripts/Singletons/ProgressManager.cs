@@ -21,6 +21,27 @@ public struct PlayerData
     public List<EquipmentData> equipment;   //< 所持装備
     public List<HomeDialogue> homeDialogue;   //< ホームシーンのセリフを管理する
     public int formationSlotUnlocked;    //< 解放されたスロット
+    public TutorialData tutorialData;    //< チュートリアルを見たかを管理
+}
+
+/// <summary>
+/// 見たチュートリアルを管理
+/// </summary>
+[System.Serializable]
+public struct TutorialData
+{
+    public bool worldscene;
+    public bool formationPanel;
+    public bool characterbuildingPanel;
+    public bool trainPanel;
+
+    public TutorialData(bool value)
+    {
+        worldscene = value;
+        formationPanel = value;
+        characterbuildingPanel = value;
+        trainPanel = value;
+    }
 }
 
 public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
@@ -52,6 +73,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.equipment = new List<EquipmentData>();
         playerData.homeDialogue = new List<HomeDialogue>();
         playerData.formationSlotUnlocked = 2;
+        playerData.tutorialData = new TutorialData(false);
 
         // 初期ホームシーンキャラ
         HomeDialogue no5 = Resources.Load<HomeDialogue>("HomeDialogue/No5");
@@ -476,6 +498,16 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     public SideQuestData GetSideQuestData()
     {
         return playerData.sideQuestData;
+    }
+
+    public void SetTutorialData(TutorialData data)
+    {
+        playerData.tutorialData = data;
+    }
+
+    public TutorialData GetTutorialData()
+    {
+        return playerData.tutorialData;
     }
 
 #if DEBUG_MODE

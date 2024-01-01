@@ -125,6 +125,7 @@ public static class SaveDataManager
         data.formationCharacters = pd.formationCharacters;
         data.sideQuestData = pd.sideQuestData;
         data.date = System.DateTime.Now;
+        data.tutorialData = pd.tutorialData;
 
         // Serializeしきれないデータ
         {
@@ -198,6 +199,7 @@ public static class SaveDataManager
         playerData.formationSlotUnlocked = serializableData.formationSlotUnlocked;
         playerData.formationCharacters = serializableData.formationCharacters;
         playerData.sideQuestData = serializableData.sideQuestData;
+        playerData.tutorialData = serializableData.tutorialData;
 
         // Serializeしきれないデータ
         {
@@ -277,6 +279,7 @@ public struct SerializablePlayerData
     public List<string> inventory; 
     public int formationSlotUnlocked;
     public FormationSlotData[] formationCharacters;
+    public TutorialData tutorialData;
 
     public List<SaveLoad.SerializedEquipment> equipment;
     public List<SaveLoad.SerializedCharacter> characters;

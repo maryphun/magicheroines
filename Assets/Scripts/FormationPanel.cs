@@ -19,6 +19,7 @@ public class FormationPanel : MonoBehaviour
     [SerializeField] private CanvasGroup FormationSelectionPanel;
     [SerializeField] private FormationSlot[] slots = new FormationSlot[5];
     [SerializeField] private Button[] formationSelectIcon = new Button[8];
+    [SerializeField] private FormationTutorial tutorial;
 
     [Header("Debug")]
     [SerializeField] private int formationSelectionPanelIndex = 0;  // ï“èWíÜÇÃÉLÉÉÉâà íuî‘çÜ
@@ -41,6 +42,20 @@ public class FormationPanel : MonoBehaviour
         formationSelectionPanelIndex = -1;
 
         InitializeFormation();
+
+        // Enter tutorial
+        var tutorialData = ProgressManager.Instance.GetTutorialData();
+        if (tutorialData.formationPanel == false)
+        {
+            tutorialData.formationPanel = true;
+            ProgressManager.Instance.SetTutorialData(tutorialData);
+
+            tutorial.StartTutorial();
+        }
+        else
+        {
+            tutorial.gameObject.SetActive(false);
+        }
     }
 
     public void QuitFormationPanel()

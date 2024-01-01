@@ -25,26 +25,36 @@ MonoBehaviour:
       retire: {fileID: 0}
     color: {r: 1, g: 0.97815585, b: 0.5801887, a: 1}
     nameID: Name.Erena
-    starting_level: 21
-    base_hp: 0
-    base_mp: 0
-    base_attack: 0
-    base_defense: 0
-    base_speed: 0
-    hp_growth: 0
-    mp_growth: 0
-    attack_growth: 0
-    defense_growth: 0
-    speed_growth: 0
-    levelUp_base_cost: 300
-    levelUp_cost_increment: 75
+    starting_level: 12
+    base_hp: 180
+    base_mp: 50
+    base_attack: 30
+    base_defense: 15
+    base_speed: 15
+    hp_growth: 17
+    mp_growth: 15
+    attack_growth: 4
+    defense_growth: 3
+    speed_growth: 3
+    levelUp_base_cost: 150
+    levelUp_cost_increment: 52
     is_heroin: 1
     characterStatus:
     - moodNameID: Mood.Disgust
       textColor: {r: 0.8018868, g: 0, b: 0, a: 1}
-      character: {fileID: 21300000, guid: ca788abd92e8c3d4296b7f07982137a0, type: 3}
+      character: {fileID: 21300000, guid: 86641f8e974730140b63387b6bd70ccf, type: 3}
       requiredCorruptionEpisode: 0
+      requiredHornyEpisode: 0
+    - moodNameID: Mood.Despair
+      textColor: {r: 1, g: 0.48584908, b: 0.98638225, a: 1}
+      character: {fileID: 21300000, guid: cbc6acf5011a94043bff61739e07cb69, type: 3}
+      requiredCorruptionEpisode: 2
+      requiredHornyEpisode: 0
+    - moodNameID: Mood.Deprave
+      textColor: {r: 1, g: 0.48584908, b: 0.98638225, a: 1}
+      character: {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      requiredCorruptionEpisode: 3
       requiredHornyEpisode: 0
     corruptedName: Name.Erena_Corrupted
     abilities: []
-  battler: {fileID: 0}
+  battler: {fileID: 6784901170540971542, guid: 99dc37abf6b70d242a2a5d6682f49a0c, type: 3}

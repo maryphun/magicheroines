@@ -50,6 +50,11 @@ MonoBehaviour:
       character: {fileID: 21300000, guid: 72e76469332a33d418f2f39993534f37, type: 3}
       requiredCorruptionEpisode: 1
       requiredHornyEpisode: 0
+    - moodNameID: Mood.Despair
+      textColor: {r: 1, g: 0.5529412, b: 0.5647059, a: 1}
+      character: {fileID: 21300000, guid: 72e76469332a33d418f2f39993534f37, type: 3}
+      requiredCorruptionEpisode: 2
+      requiredHornyEpisode: 0
     - moodNameID: Mood.Loyal
       textColor: {r: 0.7216981, g: 0.9970637, b: 1, a: 1}
       character: {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
