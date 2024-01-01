@@ -21,27 +21,35 @@ public class SkillRequirement : MonoBehaviour
     [SerializeField] private int requiredLevel;
     [SerializeField] private bool isHovering;
     [SerializeField] private Vector3 rectPosition;
+    [SerializeField] private Vector3 sizeDelta;
 
     public void Initialization(int requiredLevel)
     {
         this.requiredLevel = requiredLevel;
         isHovering = false;
-        rectPosition = rect.position + new Vector3(rect.sizeDelta.x * (rect.pivot.x + 0.5f), -rect.sizeDelta.y * (rect.pivot.y-0.5f), 0.0f);
+        sizeDelta = rect.sizeDelta * mainCanvas.scaleFactor;
+        rectPosition = rect.position + new Vector3(sizeDelta.x * 0.5f, -sizeDelta.y * 0.5f, 0.0f);
+        Debug.Log(rectPosition + ", " + transform.position);
     }
 
     private void Update()
     {
         Vector3 mousePosition = Input.mousePosition / mainCanvas.scaleFactor;
+        bool isHover = (   mousePosition.x > (rectPosition.x / mainCanvas.scaleFactor - sizeDelta.x * 0.5f)
+                        && mousePosition.x < (rectPosition.x / mainCanvas.scaleFactor + sizeDelta.x * 0.5f)
+                        && mousePosition.y > (rectPosition.y / mainCanvas.scaleFactor - sizeDelta.y * 0.5f)
+                        && mousePosition.y < (rectPosition.y / mainCanvas.scaleFactor + sizeDelta.y * 0.5f));
+        
         if (isHovering)
         {
-            if (Vector2.Distance(rectPosition, mousePosition) > rect.sizeDelta.x * 0.5f)
+            if (!isHover)
             {
                 OnUnhover();
             }
         }
         else
         {
-            if (Vector2.Distance(rectPosition, mousePosition) < rect.sizeDelta.x * 0.5f)
+            if (isHover)
             {
                 OnHover();
             }
