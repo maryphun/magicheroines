@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: StunShield
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 60d736ca82e723f4895adf2efdf8bdab, type: 3}
+  icon: {fileID: 1189377974, guid: 17209232aa5e2e94082c1dff3302082c, type: 3}
   abilityNameID: Ability.StunShield
   descriptionID: Ability.StunShield_Info
   functionName: StunShield

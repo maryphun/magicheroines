@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: Stungun
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 286cbd1fa5a1e634b9da8612e2b872e3, type: 3}
+  icon: {fileID: 1544291323, guid: 17209232aa5e2e94082c1dff3302082c, type: 3}
   abilityNameID: Equipment.Stungun
   descriptionID: Ability.Stungun_Info
   functionName: Stungun
   consumeSP: 15
+  cooldown: 0
   requiredLevel: 0
   requiredHornyness: 0
   castType: 1
   abilityType: 0
   isAOE: 0
+  canTargetSelf: 0

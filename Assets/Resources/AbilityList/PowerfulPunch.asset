@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: PowerfulPunch
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: b56de19e05d8e9e42bfa767efc721470, type: 3}
+  icon: {fileID: -1678971492, guid: 17209232aa5e2e94082c1dff3302082c, type: 3}
   abilityNameID: Ability.PowerfulPunch
   descriptionID: Ability.PowerfulPunch_Info
   functionName: PowerfulPunch

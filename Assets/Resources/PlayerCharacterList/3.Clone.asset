@@ -26,12 +26,12 @@ MonoBehaviour:
     color: {r: 0.3443396, g: 0.6905151, b: 1, a: 1}
     nameID: Name.Clone
     starting_level: 1
-    base_hp: 50
+    base_hp: 45
     base_mp: 50
     base_attack: 9
     base_defense: 2
     base_speed: 17
-    hp_growth: 15
+    hp_growth: 13
     mp_growth: 5
     attack_growth: 4
     defense_growth: 2

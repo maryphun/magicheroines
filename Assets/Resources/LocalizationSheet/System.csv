@@ -338,11 +338,11 @@ Ability.ChargeAttack_Info,"次の攻撃のために力を貯めて、攻撃力�
 Ability.Ultimate,絶命破斬
 Ability.Ultimate_Info,敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
 Ability.Stungun_Info,スタンガンでターゲットを1ターン行動不能にする。
-Ability.DivineShield,聖なる盾
+Ability.DivineShield,エナジーシールド
 Ability.DivineShield_Info,次に受けたダメージを無効にする
-Ability.DivineRapier,聖なる剣
+Ability.DivineRapier,ディバインキャリバー
 Ability.DivineRapier_Info,敵単体を攻撃し、同時に防御力を極端まで低下させる
-Ability.StunShield,スタンシールド
+Ability.StunShield,トラップシールド
 Ability.StunShield_Info,次にエレナを攻撃するものは一時行動不能になる。
 HomeCharacter,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
@@ -428,4 +428,4 @@ BattleLog.TeamHeal,仲間全員を全回復した！
 BattleLog.Usage,{0}　の　{1}！
 BattleLog.ShieldDownValue,{0}　の防御力が {1} 点下げた。
 BattleLog.DivineShield,次のダメージを完全防御する！
-BattleLog.StunShield,次に{0}を攻撃する者が反発されてしばらく行動不能となる。
+BattleLog.StunShield,次に{0}を攻撃する者が反発されてしばらく行動不能となる
