@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: SelfEnchant
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 1469203243, guid: 17209232aa5e2e94082c1dff3302082c, type: 3}
   abilityNameID: Ability.SelfEnchant
   descriptionID: Ability.SelfEnchant_Info
   functionName: SelfEnchant

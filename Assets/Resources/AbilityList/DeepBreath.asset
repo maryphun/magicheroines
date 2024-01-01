@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
   m_Name: DeepBreath
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 1cafa9602bde7b64387a2aab5b4e4e11, type: 3}
+  icon: {fileID: -1758454397, guid: 17209232aa5e2e94082c1dff3302082c, type: 3}
   abilityNameID: Ability.DeepBreath
   descriptionID: Ability.DeepBreath_Info
   functionName: DeepBreath

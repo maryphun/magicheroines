@@ -516,6 +516,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int spAmount = self.current_mp;
 
         Transform originalParent = self.RectTransform.parent;
+        int siblingIndex = self.RectTransform.GetSiblingIndex();
         Vector3 originalPosition = self.RectTransform.position;
 
         // ログ ({0}　が触手を {1} に伸ばすーー！)
@@ -597,6 +598,8 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             .AppendCallback(() =>
             {
                 self.RectTransform.SetParent(originalParent);
+                self.RectTransform.SetSiblingIndex(siblingIndex);
+
                 self.RectTransform.DOMove(new Vector3(self.RectTransform.position.x, originalPosition.y, 0.0f), 0.2f);
 
                 // play SE
@@ -1916,7 +1919,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                battleManager.AddBattleLog(string.Format(LocalizationManager.Localize("BattleLog.ShieldDownValue"), target.CharacterNameColored, CustomColor.AddColor(defAmt, CustomColor.SP())));
 
                // deal damage
-               int realDamage = target.DeductHP(self, Battle.CalculateDamage(self, target));
+               int realDamage = target.DeductHP(self, Battle.CalculateDamage(self, target) * 2);
 
                // 戦闘ログ
                battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));

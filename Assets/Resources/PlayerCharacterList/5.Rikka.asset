@@ -25,19 +25,19 @@ MonoBehaviour:
       retire: {fileID: 0}
     color: {r: 0.3443396, g: 0.6905151, b: 1, a: 1}
     nameID: Name.Rikka
-    starting_level: 18
-    base_hp: 0
-    base_mp: 0
-    base_attack: 0
-    base_defense: 0
-    base_speed: 0
-    hp_growth: 0
-    mp_growth: 0
-    attack_growth: 0
-    defense_growth: 0
-    speed_growth: 0
-    levelUp_base_cost: 135
-    levelUp_cost_increment: 45
+    starting_level: 10
+    base_hp: 135
+    base_mp: 80
+    base_attack: 30
+    base_defense: 10
+    base_speed: 20
+    hp_growth: 15
+    mp_growth: 15
+    attack_growth: 6
+    defense_growth: 2
+    speed_growth: 6
+    levelUp_base_cost: 100
+    levelUp_cost_increment: 35
     is_heroin: 1
     characterStatus:
     - moodNameID: Mood.Rebel
