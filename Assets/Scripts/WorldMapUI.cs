@@ -13,7 +13,7 @@ public class WorldMapUI : MonoBehaviour
     private void Start()
     {
         // BGMÄ¶
-        AudioManager.Instance.PlayMusicWithFade("WorldMap", 6.0f);
+        AudioManager.Instance.PlayMusicWithFade("Specification", 6.0f);
 
         // ‰æ–Ê‘JˆÚ
         AlphaFadeManager.Instance.FadeIn(1.0f);

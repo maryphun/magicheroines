@@ -68,7 +68,7 @@ public class TitleSelectUI : MonoBehaviour
         currentSelection = defaultSelection;
         UpdateSelectionText();
         // テーマソング再生
-        AudioManager.Instance.PlayMusic("ThemeSong");
+        AudioManager.Instance.PlayMusic("The Dark Eternal Night");
     }
 
     private void UpdateSelectionText()
