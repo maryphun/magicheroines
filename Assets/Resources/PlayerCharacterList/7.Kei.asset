@@ -25,7 +25,7 @@ MonoBehaviour:
       retire: {fileID: 0}
     color: {r: 0.6745283, g: 1, b: 0.9540294, a: 1}
     nameID: Name.Kei
-    starting_level: 25
+    starting_level: 13
     base_hp: 250
     base_mp: 200
     base_attack: 30
@@ -48,4 +48,7 @@ MonoBehaviour:
     corruptedName: Name.Kei_Corrupted
     abilities:
     - {fileID: 11400000, guid: e40f228ebf4177e4c8295b65af7991bd, type: 2}
+    - {fileID: 11400000, guid: 8b7d4f63dd407654dbe58148950b84cc, type: 2}
+    - {fileID: 11400000, guid: 8b74cbed08160e94895aa9048c1c898b, type: 2}
+    - {fileID: 11400000, guid: 6ff2cb7809195134ea88ceeb6dc56bc3, type: 2}
   battler: {fileID: 6784901170540971542, guid: c9441c52ccbec044b8547e6d29bea473, type: 3}

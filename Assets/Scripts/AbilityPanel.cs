@@ -100,6 +100,13 @@ public class AbilityPanel : MonoBehaviour
                 buttonList[i].Item2.abilityContextText.color = Color.red;
                 buttonList[i].Item2.abilityContextText.text = System.String.Format(LocalizationManager.Localize("Battle.OnCooldown"), battleManager.GetCurrentBattler().IsAbilityOnCooldown(abilities[i]));
             }
+            if (!battleManager.GetCurrentBattler().IsAbilityActive(abilities[i]))
+            {
+                // 使用不可
+                buttonList[i].Item2.abilityButton.interactable = false;
+                buttonList[i].Item2.abilityContextText.color = Color.red;
+                buttonList[i].Item2.abilityContextText.text = LocalizationManager.Localize("Battle.AbilityDisabled");
+            }
             // 追加説明
             if (buttonList[i].Item2.abilityButton.interactable)
             {
@@ -108,6 +115,10 @@ public class AbilityPanel : MonoBehaviour
                 if (buttonList[i].Item1.consumeSP > 0) context = context + LocalizationManager.Localize("System.SPCost") + buttonList[i].Item1.consumeSP.ToString() + "　　";
                 if (buttonList[i].Item1.cooldown > 0) context = context + LocalizationManager.Localize("System.Cooldown") + "：" + buttonList[i].Item1.cooldown.ToString() + LocalizationManager.Localize("System.Turn");
                 buttonList[i].Item2.abilityContextText.text = context;
+
+                // 追加説明がない場合は技名を真ん中に移動
+                if (buttonList[i].Item2.abilityContextText.text == string.Empty) 
+                    buttonList[i].Item2.abilityName.rectTransform.anchoredPosition = new Vector2(buttonList[i].Item2.abilityName.rectTransform.anchoredPosition.x, -22f);
             }
         }
 
@@ -275,12 +286,14 @@ public class AbilityPanel : MonoBehaviour
         {
             case CastType.SelfCast:
                 effectTargetText = LocalizationManager.Localize("System.EffectSelf");
+                if (ability.Item1.isAOE) effectTargetText = LocalizationManager.Localize("System.EffectSelfAoE");
                 break;
             case CastType.Teammate:
                 effectTargetText = LocalizationManager.Localize("System.EffectTeam");
                 break;
             case CastType.Enemy:
                 effectTargetText = LocalizationManager.Localize("System.EffectEnemy");
+                if (ability.Item1.isAOE) effectTargetText = LocalizationManager.Localize("System.EffectEnemyAoE");
                 break;
             default:
                 break;

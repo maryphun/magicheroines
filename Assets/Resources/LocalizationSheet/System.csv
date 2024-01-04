@@ -48,7 +48,9 @@ System.Inventory,インベントリ
 System.SPCost,SP消耗：
 System.EffectTarget,効果対象：
 System.EffectEnemy,敵単体
+System.EffectEnemyAoE,敵(複数)
 System.EffectSelf,使用者
+System.EffectSelfAoE,味方全体
 System.EffectTeam,味方
 System.AbilityType,種類
 System.AbilityAttack,攻撃
@@ -182,9 +184,10 @@ Battle.Defeat,敗北
 Battle.SkipTutorial,スキップ
 Battle.EscapeConfirm,撤退しますか？
 Battle.Escape,撤退
-Battle.CannotAttack,{0}は普通攻撃行えない
+Battle.CannotAttack,普通攻撃を行えない
 Battle.OnCooldown,チャージ中 ({0}ターン)
 Battle.NotEnoughSP,SP不足 ({0})
+Battle.AbilityDisabled,使用不可
 Buff,状態
 Buff.Stun,行動不能
 Buff.Hurt,継続ダメージ
@@ -196,6 +199,7 @@ Buff.Attack_down,攻撃力下降
 Buff.Speed_up,素早さ上昇
 Buff.Speed_down,素早さ下降
 Buff.ContinuousAction,連続行動
+Buff.Repel,反撃
 Equipment,アイテム名とその説明文
 Equipment.NiceT-Shirt,気持ち良いTシャツ
 Equipment.NiceT-Shirt_Info,気持ちよすぎるTシャツ、すごく動きやすい。
@@ -310,25 +314,25 @@ Ability.QuickAttack,連撃
 Ability.QuickAttack_Info,ランダム攻撃x3
 Ability.Fist,正拳突き
 Ability.Fist_Info,ターンを消耗せずに敵単体を攻撃する。
-Ability.Guardian,犠牲の意思
-Ability.Guardian_Info,"味方の前に立って、ダメージを肩代りする。
-守護対象がその間攻撃と特殊技を使用できなくなる。"
+Ability.Repel,反撃の意思
+Ability.Repel_Info,一定時間内、攻撃されるたびに自身の防御力の割合に基づく反射ダメージを与える
 Ability.GuardUp,不動のオーラ
 Ability.GuardUp_Info,2 ターン間防御力99アップ
 Ability.GuardianAngel,不滅の加護
 Ability.GuardianAngel_Info,１ターンの間味方全員が受けるダメージを無効にする。
 Ability.Hacking,ハッキング
 Ability.Hacking_Info,"ターゲットをハッキングしてバトル終了までの間傀儡として操る。京への攻撃をすべて傀儡が代わりに受ける (機械類の敵のみ有効)
-ターゲットとのレベル差と目標の残りHPが成功確率を左右する
-
-成功するとこの特殊技を再度使えなくなる"
+ターゲットとのレベル差と目標の残りHPが成功確率を左右する"
 Ability.SuicideAttack,自爆指示
 Ability.SuicideAttack_Info,"ハッキングした傀儡を自爆攻撃を行わせる。
 傀儡の残りHPがダメージとする。"
+Ability.Suicide,自爆攻撃
+Ability.Suicide_Info,"自爆攻撃を行う。
+残りHPがダメージとする。"
 Ability.Reprogram,リファクタリング
-Ability.Reprogram_Info,ターゲットのプログラムを再作成し、攻撃力と速度を上昇させる。(機械類の目標のみ有効)
+Ability.Reprogram_Info,ターゲットのプログラムを再作成し、攻撃力と防御を上昇させる。(機械類の目標のみ有効)
 Ability.EffeciencyBoost,システム修復
-Ability.EffeciencyBoost_Info,ターゲットのプログラムを最適化し、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効)
+Ability.EffeciencyBoost_Info,ターゲットのプログラムを最適化し、HPを回復させ、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効)
 Ability.PowerMode,雷神之相
 Ability.PowerMode_Info,"有効にすると常時 HPが 30 減る。
 攻撃が50%アップ。
@@ -388,8 +392,8 @@ World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦
 BattleLog,戦闘ログ
 BattleLog.Attack,{0}　の攻撃！
 BattleLog.Damage,{0}　に　{1}　のダメージを与えた！
-BattleLog.HealHP,{0}　の HP {1} 回復した！
-BattleLog.HealSP,{0}　の SP {1} 回復した！
+BattleLog.HealHP,{0}　の HPが {1} 回復した！
+BattleLog.HealSP,{0}　の SPが {1} 回復した！
 BattleLog.MissAttack,{0}　に避けられた！
 BattleLog.ItemSelf,{0}　が {1} を使った。
 BattleLog.ItemSelfToSelf,{0}　が自分に {1} を使った。
@@ -431,3 +435,6 @@ BattleLog.Usage,{0}　の　{1}！
 BattleLog.ShieldDownValue,{0}　の防御力が {1} 点下げた。
 BattleLog.DivineShield,次のダメージを完全防御する！
 BattleLog.StunShield,次に{0}を攻撃する者が反発されてしばらく行動不能となる
+BatteLog.Repel,{0}　の反撃！ {1} ダメージを跳ね返った
+BattleLog.Suicide,{0}　が自爆する！{1} のダメージを与えた！
+BattleLog.Reprogram,{0}　の攻撃力が{1}点増加。防御力{2}点増加。

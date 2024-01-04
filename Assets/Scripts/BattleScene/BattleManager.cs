@@ -693,23 +693,14 @@ public class Battle : MonoBehaviour
         // create icon
         _buff.graphic = new GameObject(_buff.data.name + "[" + turn.ToString() + "]");
         var frame = _buff.graphic.AddComponent<Image>();
-        frame.sprite = buffIconFrame;
+        frame.sprite = _buff.data.icon;
         frame.raycastTarget = false;
         frame.rectTransform.SetParent(_buff.target.transform);
         frame.rectTransform.position =  GetPositionOfFirstBuff(_buff.target);
-        frame.rectTransform.sizeDelta = new Vector2(37.0f, 37.0f);
+        frame.rectTransform.sizeDelta = new Vector2(25.0f, 25.0f);
         frame.color = new Color(1f, 1f, 1f, 0.0f);
         frame.DOFade(1.0f, buffIconFadeTime);
         
-        Image icon = new GameObject(_buff.data.icon.name).AddComponent<Image>();
-        icon.sprite = _buff.data.icon;
-        icon.raycastTarget = false;
-        icon.rectTransform.SetParent(frame.transform);
-        icon.rectTransform.localPosition = Vector2.zero;
-        icon.rectTransform.sizeDelta = new Vector2(30.0f, 30.0f);
-        icon.color = new Color(1f, 1f, 1f, 0.0f);
-        icon.DOFade(1.0f, buffIconFadeTime);
-
         var countingText = Instantiate(buffCounterText, frame.transform);
         _buff.text = countingText.GetComponent<TMP_Text>();
         _buff.text.text = turn.ToString();
@@ -735,6 +726,29 @@ public class Battle : MonoBehaviour
             RemoveBuffInstance(instance);
 
             return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// キャラのバフを全部強制終了
+    /// </summary>
+    public bool RemoveAllBuffForCharacter(Battler target)
+    {
+        for (int i = 0; i < (int)BuffType.max; i++)
+        {
+            BuffType buff = (BuffType)i;
+            if (IsCharacterInBuff(target, buff))
+            {
+                // 既にこのバフ持っている
+                var instance = buffedCharacters.FirstOrDefault(x => x.target == target && x.type == buff);
+
+                // 終了させる
+                RemoveBuffInstance(instance);
+
+                return true;
+            }
         }
 
         return false;
@@ -955,6 +969,14 @@ public class Battle : MonoBehaviour
     public void AddBattleLog(string text)
     {
         battleLogScript.RegisterNewLog(text);
+    }
+
+    /// <summary>
+    /// 次にターンを回すキャラを指定キャラに変更
+    /// </summary>
+    public void ChangeBattlerTurnOrder(Battler battler)
+    {
+        turnBaseManager.SetNextCharacter(battler);
     }
 
     #region Escape

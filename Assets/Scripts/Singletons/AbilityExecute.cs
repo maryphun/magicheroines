@@ -43,6 +43,15 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         return floatingTextComponent;
     }
+    private FloatingText CreateFloatingAbilityText(Transform parent)
+    {
+        GameObject origin = Resources.Load<GameObject>("Prefabs/AbilityName");
+        var obj = Instantiate(origin);
+        obj.transform.SetParent(parent);
+        var floatingTextComponent = obj.GetComponent<FloatingText>();
+
+        return floatingTextComponent;
+    }
 
     private void CreateFadingImage(Sprite sprite, float fadeTime)
     {
@@ -118,7 +127,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int healAmount = (int)(((float)target.max_hp * 0.40f) * percentage);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(target.transform);
+        var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.DeepBreath");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
@@ -166,7 +175,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int dmg = (self.attack * 2);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.PowerfulPunch");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -282,7 +291,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Tackle");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -401,7 +410,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int suckAmount = (int)((float)target.current_mp * 0.50f);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.SuckingTentacle");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -633,7 +642,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int speedDownAmount = (int)((float)target.speed * 0.25f);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Capture");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -716,7 +725,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int healAmount = (int)((float)target.max_hp * 0.35f);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(target.transform);
+        var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.SelfRepair");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
@@ -769,7 +778,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         Tuple<BuffType, int> buff = possibleBuff[UnityEngine.Random.Range(0, possibleBuff.Count)];
 
         // 技名を表示
-        var floatingText = CreateFloatingText(target.transform);
+        var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.SelfEnchant");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
@@ -807,7 +816,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int attackAddAmount = (int)((float)target.attack * 0.15f);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(target.transform);
+        var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.Booster");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
@@ -849,7 +858,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.HealAttack");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
@@ -915,7 +924,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int spHealAmount = Mathf.RoundToInt((float)target.max_mp * 0.8f);
         
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.GreatRegen");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -988,7 +997,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int hpHealAmount = UnityEngine.Random.Range(20, 31);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Milk");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1050,7 +1059,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.MilkCookie");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1120,7 +1129,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         targetBattlers.Remove(self);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.MilkOverdrive");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1338,7 +1347,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var originalPos = self.GetComponent<RectTransform>().position;
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.QuickAttack");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1526,7 +1535,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         const int StunTurn = 3;
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Overdrive");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1579,7 +1588,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Fist");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1768,7 +1777,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var self = battleManager.GetCurrentBattler();
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.DivineShield");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1841,7 +1850,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.DivineRapier");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -1950,7 +1959,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var self = battleManager.GetCurrentBattler();
 
         // 技名を表示
-        var floatingText = CreateFloatingText(self.transform);
+        var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.StunShield");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
@@ -2015,6 +2024,142 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
+    /// 反撃の意思　エレナ技
+    /// </summary>
+    public void Repel()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Repel");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Repel"), CustomColor.abilityName())));
+
+        // SE
+        AudioManager.Instance.PlaySFX("Magic2", 1f);
+
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        battleManager.AddBuffToBattler(self, BuffType.repel, 3, 0);
+
+        // vfx
+        VFXSpawner.SpawnVFX("Recovery", self.transform, self.GetMiddleGlobalPosition());
+
+        // Next turn
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                self.PlayAnimation(BattlerAnimationType.idle);
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// 不動のオーラ　エレナ技
+    /// </summary>
+    public void GuardUp()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.GuardUp");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.GuardUp"), CustomColor.abilityName())));
+
+        // SE
+        AudioManager.Instance.PlaySFX("Magic2", 1f);
+
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        battleManager.AddBuffToBattler(self, BuffType.shield_up, 2, 99);
+
+        // vfx
+        VFXSpawner.SpawnVFX("Recovery", self.transform, self.GetMiddleGlobalPosition());
+
+        // Next turn
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                self.PlayAnimation(BattlerAnimationType.idle);
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// 不滅の加護　エレナ技
+    /// </summary>
+    public void GuardianAngel()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var targets = battleManager.GetAllTeammate();
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.GuardianAngel");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.GuardianAngel"), CustomColor.abilityName())));
+
+        // SE
+        AudioManager.Instance.PlaySFX("Magic2", 1f);
+
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        const string ObjName = "ErenaShield";
+        for (int i = 0; i < targets.Count; i++)
+        {
+            try
+            {
+                // 前のシールドが存在していたら置き換え
+                var obj = targets[i].transform.Find(ObjName);
+                if (obj != null)
+                {
+                    obj.GetComponent<ErenaShield>().Destroy();
+                }
+
+                // VFX
+                var shield = VFXSpawner.SpawnVFX("Erena Shield", targets[i].transform, targets[i].GetGraphicRectTransform().position + new Vector3(0.0f, 150.0f, 0.0f));
+                shield.name = ObjName;
+                shield.transform.localScale = new Vector3(3f, 3f, 3f);
+                shield.transform.DOScale(1.0f, 1.5f);
+                var shieldScript = shield.GetComponent<ErenaShield>();
+                shieldScript.Init(battleManager, targets[i], shield.GetComponent<RectTransform>(), ErenaShield.EventType.DivineShield);
+
+                // SE
+                AudioManager.Instance.PlaySFX("NewAbility", 0.5f); // shield
+            }
+            catch
+            {
+
+            }
+        };
+
+        // vfx
+        VFXSpawner.SpawnVFX("Recovery", self.transform, self.GetMiddleGlobalPosition());
+
+        // Next turn
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                self.PlayAnimation(BattlerAnimationType.idle);
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
     /// 闇落ち京のハッキング特殊技
     /// </summary>
     public void Hacking()
@@ -2027,7 +2172,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 成功率を計算
-        float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.07f * (kei.currentLevel - target.currentLevel);
+        float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.09f * (kei.currentLevel - target.currentLevel);
 
         if (!target.IsMachine) successRate = 0.0f; // 機械類以外は成功率　0%　
         if (target.character_name == LocalizationManager.Localize("Name.Tank")) successRate = 0.01f; // 特定の敵は成功しない
@@ -2035,7 +2180,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         successRate = UnityEngine.Mathf.Clamp(successRate, 0.0f, 1.0f);
 
         // 技名を表示
-        var floatingText = CreateFloatingText(kei.transform);
+        var floatingText = CreateFloatingAbilityText(kei.transform);
         string abilityName = LocalizationManager.Localize("Ability.Hacking");
         floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
 
@@ -2066,10 +2211,20 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         fadeEffect = weapons.rightWeapon.Rect.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(animtionTime, 0.05f, weapons.rightWeapon.GetComponent<Image>());
 
+        // SE
+        AudioManager.Instance.PlaySFX("Machine");
+
         if (isSuccess)
         {
             // この特殊技を削除
-            kei.RemoveAbilityFromCharacter("Hacking");
+            kei.SetAbilityActive("Hacking", false);
+            kei.SetAbilityActive("SuicideAttack", true);
+            kei.SetAbilityActive("Reprogram", true);
+            kei.SetAbilityActive("EffeciencyBoost", true);
+
+            // 自爆機能追加
+            var ability = Resources.Load<Ability>("AbilityList/Suicide");
+            target.AddAbilityToCharacter(ability);
 
             var sequence = DOTween.Sequence();
             sequence.AppendInterval(animtionTime * 0.5f)
@@ -2087,6 +2242,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
                         weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
 
+                        // SE
+                        AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
                         // アニメション
                         kei.PlayAnimation(BattlerAnimationType.idle);
                     })
@@ -2094,13 +2252,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     .AppendCallback(() =>
                     {
                         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking_Success"), target.CharacterNameColored));
-                        
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Notification");
                         var puppet = target.gameObject.AddComponent<KeiControlledUnit>();
+                        weapons.SetControlledUnit(puppet);
                         puppet.StartControl(kei, 0);
                     })
                     .AppendInterval(animtionTime * 0.5f) // 敵を移動中
                     .AppendCallback(() =>
                     {
+                        // SE
+                        AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
                         // 元の所に戻す
                         weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), animtionTime * 0.25f).SetEase(Ease.Linear);
                         weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), animtionTime * 0.25f).SetEase(Ease.Linear);
@@ -2145,7 +2309,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                         weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
                         weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
-                        
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
                         // アニメション
                         kei.PlayAnimation(BattlerAnimationType.idle);
                     })
@@ -2153,6 +2320,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     .AppendCallback(() =>
                     {
                         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking_Fail"), target.CharacterNameColored));
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Machine", 0.5f);
+                        AudioManager.Instance.PlaySFX("Miss");
 
                         // 元の所に戻す
                         weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
@@ -2181,6 +2352,256 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         battleManager.NextTurn(false);
                     });
         }
+    }
+
+    /// <summary>
+    /// 自爆指示 ケイ
+    /// </summary>
+    public void SuicideAttack()
+    {
+        var kei = battleManager.GetCurrentBattler();
+        var weapons = kei.GetComponent<KeiWeaponController>();
+        var target = targetBattlers[0];
+        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // 傀儡を取得
+
+        // この特殊技を削除
+        kei.SetAbilityActive("SuicideAttack", false);
+        kei.SetAbilityActive("Reprogram", false);
+        kei.SetAbilityActive("EffeciencyBoost", false);
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(kei.transform);
+        string abilityName = LocalizationManager.Localize("Ability.SuicideAttack");
+        floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), kei.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.SuicideAttack"), CustomColor.abilityName())));
+
+        const float chargeTime = 0.5f;
+
+        // 残像生成コンポネント
+        FadeEffect fadeEffect = puppet.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(chargeTime, 0.05f, puppet.Graphic);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+        AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
+        var targetPos = target.GetComponent<RectTransform>().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.15f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.15f, targetPos.y);
+
+        puppet.RectTransform.DOMove(targetPos, chargeTime).SetEase(Ease.InOutQuint);
+        kei.PlayAnimation(BattlerAnimationType.magic);
+        puppet.ColorTint(Color.red, chargeTime);
+
+        DOTween.Sequence()
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                // change character hirachy temporary
+                puppet.transform.SetParent(target.transform);
+            })
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                kei.PlayAnimation(BattlerAnimationType.idle);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("Explode");
+
+                // VFX
+                var VFXPosition = puppet.GetMiddleGlobalPosition() + ((puppet.GetMiddleGlobalPosition() - target.GetMiddleGlobalPosition()) / 2);
+                VFXSpawner.SpawnVFX("Explode", target.transform, VFXPosition);
+
+                var realDamage = Battle.CalculateDamage(puppet.current_hp, target.defense, kei.currentLevel, target.currentLevel, false);
+                target.DeductHP(puppet, realDamage);
+
+                // text
+                var floatingText = CreateFloatingText(target.transform);
+                floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - puppet.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                // ログ ({0}　が自爆する！{1} のダメージを与えた！)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Suicide"), puppet.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
+                // 即死
+                puppet.DeductHP(puppet, 99999, true);
+            })
+            .AppendInterval(1.2f)
+            .AppendCallback(() =>
+            {
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// ハッキングしたキャラが発動できる技
+    /// </summary>
+    public void Suicide()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Suicide");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Suicide"), CustomColor.abilityName())));
+
+        const float chargeTime = 0.5f;
+
+        // 残像生成コンポネント
+        FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(chargeTime, 0.05f, self.Graphic);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+        AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
+        var targetPos = target.GetComponent<RectTransform>().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.15f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.15f, targetPos.y);
+
+        self.RectTransform.DOMove(targetPos, chargeTime).SetEase(Ease.InOutQuint);
+        self.ColorTint(Color.red, chargeTime);
+
+        DOTween.Sequence()
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                // change character hirachy temporary
+                self.transform.SetParent(target.transform);
+            })
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                // play SE
+                AudioManager.Instance.PlaySFX("Explode");
+
+                // VFX
+                var VFXPosition = self.GetMiddleGlobalPosition() + ((self.GetMiddleGlobalPosition() - target.GetMiddleGlobalPosition()) / 2);
+                VFXSpawner.SpawnVFX("Explode", target.transform, VFXPosition);
+
+                var realDamage = Battle.CalculateDamage(self.current_hp, target.defense, self.currentLevel, target.currentLevel, false);
+                target.DeductHP(self, realDamage);
+
+                // text
+                var floatingText = CreateFloatingText(target.transform);
+                floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                // ログ ({0}　が自爆する！{1} のダメージを与えた！)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Suicide"), self.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
+                // 即死
+                self.DeductHP(self, 99999, true);
+            })
+            .AppendInterval(1.2f)
+            .AppendCallback(() =>
+            {
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// 京 リファクタリング
+    /// </summary>
+    public void Reprogram()
+    {
+        var kei = battleManager.GetCurrentBattler();
+        var weapons = kei.GetComponent<KeiWeaponController>();
+        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // 傀儡を取得
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(kei.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Reprogram");
+        floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), kei.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Reprogram"), CustomColor.abilityName())));
+
+        // play SE
+        AudioManager.Instance.PlaySFX("Machine");
+
+        kei.PlayAnimation(BattlerAnimationType.magic);
+
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                kei.PlayAnimation(BattlerAnimationType.idle);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("SelfRepair");
+
+                // VFX
+                VFXSpawner.SpawnVFX("SelfRepair", puppet.transform, puppet.GetGraphicRectTransform().position);
+
+                // effect
+                int attackAmt = Mathf.FloorToInt((float)puppet.attack * 0.33f);
+                puppet.attack += attackAmt;
+                int defenseAmt = Mathf.FloorToInt((float)puppet.defense * 0.33f);
+                puppet.defense += defenseAmt;
+
+                // ログ ({0}　の攻撃力が{1}点増加。防御力{2}点増加。)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Reprogram"), puppet.CharacterNameColored, 
+                    CustomColor.AddColor(attackAmt, CustomColor.damage()), CustomColor.AddColor(defenseAmt, CustomColor.SP())));
+
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// 京 システム修復
+    /// </summary>
+    public void EffeciencyBoost()
+    {
+
+        var kei = battleManager.GetCurrentBattler();
+        var weapons = kei.GetComponent<KeiWeaponController>();
+        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // 傀儡を取得
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(kei.transform);
+        string abilityName = LocalizationManager.Localize("Ability.EffeciencyBoost");
+        floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), kei.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.EffeciencyBoost"), CustomColor.abilityName())));
+
+        // play SE
+        AudioManager.Instance.PlaySFX("Machine");
+
+        kei.PlayAnimation(BattlerAnimationType.magic);
+
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                kei.PlayAnimation(BattlerAnimationType.idle);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("SelfRepair");
+
+                // VFX
+                VFXSpawner.SpawnVFX("SelfRepair", puppet.transform, puppet.GetGraphicRectTransform().position);
+
+                // effect
+                int healAmt = Mathf.FloorToInt((float)puppet.max_hp * 0.33f);
+                puppet.Heal(healAmt);
+
+                battleManager.ChangeBattlerTurnOrder(puppet);
+
+                // ログ ({0}　の HPが {1} 回復した！)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.HealHP"), puppet.CharacterNameColored, CustomColor.AddColor(healAmt, CustomColor.heal())));
+
+
+
+                battleManager.NextTurn(false);
+            });
     }
     #endregion abilities
 }

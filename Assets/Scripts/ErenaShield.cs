@@ -37,7 +37,7 @@ public class ErenaShield : MonoBehaviour
         }
     }
 
-    public void OnAttackDivineShield(Battler source, int damage)
+    public void OnAttackDivineShield(Battler attacked, Battler source, int damage)
     {
         battler.onAttackedEvent.RemoveListener(OnAttackDivineShield);
         AudioManager.Instance.PlaySFX("NewAbility"); // shield break
@@ -48,7 +48,7 @@ public class ErenaShield : MonoBehaviour
         Destroy(gameObject, animTime + Time.deltaTime);
     }
 
-    public void OnAttackStunShield(Battler source, int damage)
+    public void OnAttackStunShield(Battler attacked, Battler source, int damage)
     {
         battler.onAttackedEvent.RemoveListener(OnAttackStunShield);
         AudioManager.Instance.PlaySFX("NewAbility"); // shield break
@@ -59,7 +59,7 @@ public class ErenaShield : MonoBehaviour
         }
 
         // É_ÉÅÅ[ÉWÇÕÇ∑ÇÈ
-        battler.DeductHP(source, damage);
+        battler.DeductHP(source, damage, true);
 
         const float animTime = 0.5f;
         rect.DOScale(3.0f, animTime);

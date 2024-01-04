@@ -59,14 +59,25 @@ public class KeiControlledUnit : MonoBehaviour
         // 京を攻撃できるようにする
         master.isTargettable = true;
         master.EnableNormalAttack = true;
+        master.GetComponent<KeiWeaponController>().ResetControlledUnit();
 
-        // 元の位置に戻す
-        transform.SetParent(originalParent);
-        transform.SetSiblingIndex(originalSiblingIndex);
-        GetComponent<RectTransform>().DOMove(originalPosition, 0.5f);
+        master.SetAbilityActive("Hacking", true);
+        master.SetAbilityOnCooldown(master.GetAbility("Hacking"), master.GetAbility("Hacking").cooldown);
+        master.SetAbilityActive("SuicideAttack", false);
+        master.SetAbilityActive("Reprogram", false);
+        master.SetAbilityActive("EffeciencyBoost", false);
+
+        const float delay = 1.0f;
+        DOTween.Sequence().AppendInterval(delay).AppendCallback(() =>
+        {
+            // 元の位置に戻す
+            transform.SetParent(originalParent);
+            transform.SetSiblingIndex(originalSiblingIndex);
+            GetComponent<RectTransform>().DOMove(originalPosition, 0.5f);
+        });
 
         // このスクリプトを削除
-        Destroy(this, 1.0f);
+        Destroy(this, delay + 0.5f);
     }
 
     public void OnTurnEnd()
@@ -88,8 +99,9 @@ public class KeiControlledUnit : MonoBehaviour
             master.isTargettable = true;
             master.EnableNormalAttack = true;
 
+            const float delay = 1.0f;
             // このスクリプトを削除
-            Destroy(this, 1.0f);
+            Destroy(this, delay);
         }
     }
 }

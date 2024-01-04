@@ -114,6 +114,20 @@ public class TurnBase : MonoBehaviour
         return null;
     }
 
+    public void SetNextCharacter(Battler character)
+    {
+        for (int i = 0; i < characterInOrder.Count; i++)
+        {
+            if (characterInOrder[i].Item1 == character)
+            {
+                Tuple<Battler, Image> item = characterInOrder[i];
+                characterInOrder.RemoveAt(i);
+                characterInOrder.Insert(1, item);
+                return;
+            }
+        }
+    }
+
     // 全プレイヤーキャラを取得
     public List<Battler> GetAllPlayerCharacters()
     {

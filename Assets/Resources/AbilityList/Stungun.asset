@@ -16,8 +16,8 @@ MonoBehaviour:
   abilityNameID: Equipment.Stungun
   descriptionID: Ability.Stungun_Info
   functionName: Stungun
-  consumeSP: 15
-  cooldown: 0
+  consumeSP: 35
+  cooldown: 2
   requiredLevel: 0
   requiredHornyness: 0
   castType: 1

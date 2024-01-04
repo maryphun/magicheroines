@@ -521,15 +521,16 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         isDebugModeInitialized = true;
 
         // 調教できるヒロインを追加
-        PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
-        AddPlayerCharacter(Rikka);
+        PlayerCharacterDefine Kei = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
+        AddPlayerCharacter(Kei).is_corrupted = true;
+        playerData.characters[playerData.characters.Count - 1].current_level = 16;
 
         PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
-        AddPlayerCharacter(Akiho).is_corrupted = true;
+        AddPlayerCharacter(Akiho);
 
         // フォーメーション編成
-        playerData.formationCharacters[0].characterID = 2; // clone
-        playerData.formationCharacters[1].characterID = Akiho.detail.characterID;
+        playerData.formationCharacters[0].characterID = -1; // clone
+        playerData.formationCharacters[1].characterID = Kei.detail.characterID;
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
@@ -561,7 +562,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             BattleSetup.Reset(false);
             BattleSetup.SetAllowEscape(true);
-            BattleSetup.AddEnemy("Erena_Enemy");
+            BattleSetup.AddEnemy("GoldAndroid");
+            BattleSetup.AddEnemy("GoldAndroid");
         }
     }
 #else

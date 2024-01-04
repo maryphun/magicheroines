@@ -141,6 +141,7 @@ public class CharacterInfoPanel : MonoBehaviour
             var newObj = Instantiate(buff.graphic);
             newObj.transform.SetParent(buffHandler);
             newObj.GetComponent<RectTransform>().localPosition = iconPosition;
+            newObj.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
             Destroy(newObj.GetComponentInChildren<TMP_Text>());
             iconPosition += addition;
             buffIcons.Add(newObj);

@@ -238,7 +238,7 @@ public class ActionPanel : MonoBehaviour
                 isCannotAttackTextShowing = true;
                 cannotAttackText.DOColor(Color.white, animationTime);
                 cannotAttackText.rectTransform.DOAnchorPosY(cannotAttackText.fontSize * 2.0f, animationTime);
-                cannotAttackText.text = System.String.Format(Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("Battle.CannotAttack"), battleManager.GetCurrentBattler().CharacterNameColored);
+                cannotAttackText.text = Assets.SimpleLocalization.Scripts.LocalizationManager.Localize("Battle.CannotAttack");
             }
             else if (!hovering.Contains(attackBtn.gameObject) && isCannotAttackTextShowing)
             {

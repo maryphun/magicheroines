@@ -46,6 +46,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public EquipmentDefine equipment;
     [SerializeField] public List<EnemyActionPattern> actionPattern; // 敵AI作成用
     [SerializeField] public List<Pair<Ability, int>> abilityOnCooldown; // チャージ中の特殊技
+    [SerializeField] public List<Ability> disabledAbilities; // 使用不可の特殊技
 
     [Header("References")]
     [SerializeField] private Image graphic;
@@ -71,22 +72,22 @@ public class Battler : MonoBehaviour
     [Serializable]
     public class CountableUnityEvent
     {
-        [SerializeField] private UnityEvent<Battler, int> evt;
+        [SerializeField] private UnityEvent<Battler, Battler, int> evt;
         [SerializeField] public int EventCount { get; private set; }
 
         public CountableUnityEvent()
         {
-            evt = new UnityEvent<Battler, int>();
+            evt = new UnityEvent<Battler, Battler, int>();
             EventCount = 0;
         }
 
-        public void AddListener(UnityAction<Battler, int> call)
+        public void AddListener(UnityAction<Battler, Battler, int> call)
         {
             evt.AddListener(call);
             EventCount++;
         }
 
-        public void RemoveListener(UnityAction<Battler, int> call)
+        public void RemoveListener(UnityAction<Battler, Battler, int> call)
         {
             evt.RemoveListener(call);
             EventCount--;
@@ -98,9 +99,9 @@ public class Battler : MonoBehaviour
             EventCount = 0;
         }
 
-        public void Invoke(Battler battler, int value)
+        public void Invoke(Battler attacked, Battler attacker, int value)
         {
-            evt.Invoke(battler, value);
+            evt.Invoke(attacked, attacker, value);
         }
     }
 
@@ -159,6 +160,11 @@ public class Battler : MonoBehaviour
             }
 
             actionPattern.Add(action);
+            if (action.actionType == EnemyActionType.SpecialAbility)
+            {
+                abilities.Add(action.ability);
+                if (action.ability.disableOnDefault) disabledAbilities.Add(action.ability);
+            }
         }
 
         Initialize();
@@ -194,6 +200,7 @@ public class Battler : MonoBehaviour
                     && character.hornyEpisode >= character.characterData.abilities[i].requiredHornyness)
                 {
                     abilities.Add(character.characterData.abilities[i]);
+                    if (character.characterData.abilities[i].disableOnDefault) disabledAbilities.Add(character.characterData.abilities[i]);
                 }
             }
             abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
@@ -235,6 +242,7 @@ public class Battler : MonoBehaviour
     public void AddAbilityToCharacter(Ability ability)
     {
         abilities.Add(ability);
+        abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
     }
 
     public void RemoveAbilityFromCharacter(Ability ability)
@@ -404,12 +412,12 @@ public class Battler : MonoBehaviour
     /// <summary>
     /// ダメージを食らった
     /// </summary>
-    public int DeductHP(Battler source, int damage)
+    public int DeductHP(Battler source, int damage, bool ignoreBuff = false)
     {
-        if (onAttackedEvent.EventCount > 0)
+        if (!ignoreBuff && onAttackedEvent.EventCount > 0)
         {
             int oldHP = current_hp;
-            onAttackedEvent.Invoke(source, damage);
+            onAttackedEvent.Invoke(this, source, damage);
             return oldHP - current_hp; // HP を計算
         }
 
@@ -424,38 +432,7 @@ public class Battler : MonoBehaviour
             UpdateHPBar();
             if (CheckDead())
             {
-                isAlive = false;
-                graphic.rectTransform.localScale = originalScale;
-                PlayAnimation(BattlerAnimationType.retire);
-                
-                onDeathEvent.Invoke();
-                onDeathEvent.RemoveAllListeners();
-
-                var sequence = DOTween.Sequence();
-                sequence.AppendInterval(0.2f)
-                        .AppendCallback(() =>
-                        {
-                            HideBars();
-                            graphic.DOFade(0.0f, 1.0f);
-                            shadow.DOFade(0.0f, 1.0f);
-                            name_UI.DOFade(0.0f, 1.0f);
-
-                            var obj = Instantiate(deadVFX, graphic.transform);
-                            obj.GetComponent<RectTransform>().position = GetMiddleGlobalPosition();
-
-                            // create icon
-                            Image img = new GameObject("DeadIcon").AddComponent<Image>();
-                            img.sprite = Resources.Load<Sprite>("Icon/Dead");
-                            img.raycastTarget = false;
-                            img.rectTransform.SetParent(graphicRect);
-                            img.rectTransform.position = GetMiddleGlobalPosition();
-                            img.color = new Color(0.58f, 0.58f, 0.58f, 0.0f);
-                            img.DOFade(1.0f, 0.75f);
-
-                            // play SE
-                            AudioManager.Instance.PlaySFX("Retired");
-                            if (soundEffects.retire != null) AudioManager.Instance.PlaySFX(soundEffects.retire.name);
-                        });
+                KillBattler();
             }
 
             FindObjectOfType<Battle>().UpdateTurnBaseManager(false);
@@ -464,6 +441,47 @@ public class Battler : MonoBehaviour
 
         // dealt no damage
         return 0;
+    }
+
+    /// <summary>
+    /// 死亡
+    /// </summary>
+    public void KillBattler()
+    {
+        isAlive = false;
+        graphic.rectTransform.localScale = originalScale;
+        PlayAnimation(BattlerAnimationType.retire);
+
+        onDeathEvent.Invoke();
+        onDeathEvent.RemoveAllListeners();
+
+        FindObjectOfType<Battle>().RemoveAllBuffForCharacter(this);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.2f)
+                .AppendCallback(() =>
+                {
+                    HideBars();
+                    graphic.DOFade(0.0f, 1.0f);
+                    shadow.DOFade(0.0f, 1.0f);
+                    name_UI.DOFade(0.0f, 1.0f);
+
+                    var obj = Instantiate(deadVFX, graphic.transform);
+                    obj.GetComponent<RectTransform>().position = GetMiddleGlobalPosition();
+
+                            // create icon
+                            Image img = new GameObject("DeadIcon").AddComponent<Image>();
+                    img.sprite = Resources.Load<Sprite>("Icon/Dead");
+                    img.raycastTarget = false;
+                    img.rectTransform.SetParent(graphicRect);
+                    img.rectTransform.position = GetMiddleGlobalPosition();
+                    img.color = new Color(0.58f, 0.58f, 0.58f, 0.0f);
+                    img.DOFade(1.0f, 0.75f);
+
+                            // play SE
+                            AudioManager.Instance.PlaySFX("Retired");
+                    if (soundEffects.retire != null) AudioManager.Instance.PlaySFX(soundEffects.retire.name);
+                });
     }
 
     /// <summary>
@@ -556,6 +574,51 @@ public class Battler : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    /// <summary>
+    ///  使用可・不可の切り替え
+    /// </summary>
+    public void SetAbilityActive(string abilityfunctionName, bool active)
+    {
+        if (active)
+        {
+            var ability = GetAbility(abilityfunctionName);
+            if (ability != null)
+            {
+                disabledAbilities.Remove(ability);
+            }
+            else
+            {
+                Debug.Log("Ability absent. (" + abilityfunctionName + ")");
+            }
+        }
+        else
+        {
+            for (int i = 0; i < abilities.Count; i++)
+            {
+                if (abilities[i].functionName == abilityfunctionName && !disabledAbilities.Contains(abilities[i]))
+                {
+                    disabledAbilities.Add(abilities[i]);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 使用可能か
+    /// </summary>
+    public bool IsAbilityActive(Ability ability)
+    {
+        for (int i = 0; i < disabledAbilities.Count; i++)
+        {
+            if (disabledAbilities[i] == ability)
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /// <summary>
@@ -699,6 +762,12 @@ public class Battler : MonoBehaviour
 
                 // チャージ中
                 if (IsAbilityOnCooldown(action.ability) > 0)
+                {
+                    continue;
+                }
+
+                // 使用不可
+                if (!IsAbilityActive(action.ability))
                 {
                     continue;
                 }

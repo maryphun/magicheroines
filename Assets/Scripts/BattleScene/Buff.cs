@@ -34,6 +34,9 @@ public enum BuffType
     speed_up,
     speed_down,
     continuous_action,
+    repel,
+
+    max,
 }
 
 [System.Serializable]
@@ -64,7 +67,7 @@ public static class BuffManager
         // stun
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/stunned");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_12");
             data.name = LocalizationManager.Localize("Buff.Stun");
             data.start = StunStart;
             data.end = StunEnd;
@@ -78,7 +81,7 @@ public static class BuffManager
         // hurt
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/hurt");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_23");
             data.name = LocalizationManager.Localize("Buff.Hurt");
             data.start = HurtStart;
             data.end = HurtEnd;
@@ -92,7 +95,7 @@ public static class BuffManager
         // heal
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/heal");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_40");
             data.name = LocalizationManager.Localize("Buff.Heal");
             data.start = HealStart;
             data.end = HealEnd;
@@ -106,7 +109,7 @@ public static class BuffManager
         // shield up
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/shield_up");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_31");
             data.name = LocalizationManager.Localize("Buff.Shield_up");
             data.start = ShieldUpStart;
             data.end = ShieldUpEnd;
@@ -120,7 +123,7 @@ public static class BuffManager
         // shield down
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/shield_down");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_31");
             data.name = LocalizationManager.Localize("Buff.Shield_down");
             data.start = ShieldDownStart;
             data.end = ShieldDownEnd;
@@ -134,7 +137,7 @@ public static class BuffManager
         // attack up
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/attack_up");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_32");
             data.name = LocalizationManager.Localize("Buff.Attack_up");
             data.start = AttackUpStart;
             data.end = AttackUpEnd;
@@ -148,7 +151,7 @@ public static class BuffManager
         // attack down
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/attack_down");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_34");
             data.name = LocalizationManager.Localize("Buff.Attack_down");
             data.start = AttackDownStart;
             data.end = AttackDownEnd;
@@ -162,7 +165,7 @@ public static class BuffManager
         // speed up
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/speed_up");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_1");
             data.name = LocalizationManager.Localize("Buff.Speed_up");
             data.start = SpeedUpStart;
             data.end = SpeedUpEnd;
@@ -176,7 +179,7 @@ public static class BuffManager
         // speed down
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/speed_down");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_2");
             data.name = LocalizationManager.Localize("Buff.Speed_down");
             data.start = SpeedDownStart;
             data.end = SpeedDownEnd;
@@ -190,20 +193,48 @@ public static class BuffManager
         // continuous action
         {
             BuffData data = new BuffData();
-            data.icon = Resources.Load<Sprite>("Icon/continuous_action");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_24");
             data.name = LocalizationManager.Localize("Buff.ContinuousAction");
             data.start = ContinuousActionStart;
             data.end = ContinuousActionEnd;
             data.update = ContinuousActionUpdate;
-            data.isBad = true;
+            data.isBad = false;
             data.battleLogStart = string.Empty;
             data.battleLogUpdate = string.Empty;
             data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.continuous_action, data);
         }
+        // repel
+        {
+            BuffData data = new BuffData();
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_55");
+            data.name = LocalizationManager.Localize("Buff.Repel");
+            data.start = RepelStart;
+            data.end = RepelUpdate;
+            data.update = RepelEnd;
+            data.isBad = false;
+            data.battleLogStart = string.Empty;
+            data.battleLogUpdate = string.Empty;
+            data.battleLogEnd = string.Empty;
+            BuffList.Add(BuffType.repel, data);
+        }
 
         floatingTextOrigin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
         isInitialized = true;
+    }
+
+    public static Sprite LoadSubSprite(string imageName, string spriteName)
+    {
+        Sprite[] all = Resources.LoadAll<Sprite>(imageName);
+
+        foreach (var s in all)
+        {
+            if (s.name == spriteName)
+            {
+                return s;
+            }
+        }
+        return null;
     }
 
     public static void CurrentTurn(Battler battler)
@@ -226,7 +257,7 @@ public static class BuffManager
     public static void HurtUpdate(Battler target, int value) 
     { 
         target.DeductHP(target, value);
-        CreateFloatingText(value.ToString(), new Color(1f, 0.75f, 0.33f), 32, target);
+        CreateFloatingText(value.ToString(), CustomColor.damage(), 32, target);
         AudioManager.Instance.PlaySFX("Damage");
     }
     public static void HurtEnd(Battler target, int value) { }
@@ -235,7 +266,7 @@ public static class BuffManager
     public static void HealUpdate(Battler target, int value) 
     {  
         target.Heal(value);
-        CreateFloatingText(value.ToString(), new Color(0.33f, 1f, 0.5f), 32, target);
+        CreateFloatingText(value.ToString(), CustomColor.heal(), 32, target); ;
         AudioManager.Instance.PlaySFX("Heal2");
     }
     public static void HealEnd(Battler target, int value) { }
@@ -273,5 +304,25 @@ public static class BuffManager
         {
             overdrive.Trigger();
         }
+    }
+
+    public static void RepelStart(Battler target, int value) 
+    {
+        target.onAttackedEvent.AddListener(BuffManager.RepelAttacked);
+    }
+
+    public static void RepelUpdate(Battler target, int value) { }
+    public static void RepelEnd(Battler target, int value)
+    {
+        target.onAttackedEvent.RemoveListener(BuffManager.RepelAttacked);
+    }
+
+    public static void RepelAttacked(Battler attacked, Battler attacker, int damage)
+    {
+        int returnDamage = Mathf.FloorToInt(((float)attacked.defense * 1.5f));
+        GameObject.FindObjectOfType<Battle>().AddBattleLog(String.Format(LocalizationManager.Localize("BatteLog.Repel"), attacked.CharacterNameColored, CustomColor.AddColor(returnDamage, CustomColor.damage())));
+        attacked.DeductHP(attacker, returnDamage, true);
+        attacker.DeductHP(attacked, damage, true);
+        CreateFloatingText(returnDamage.ToString(), CustomColor.damage(), 32, attacker);
     }
 }

@@ -11,9 +11,11 @@ public class KeiWeaponController : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private Vector2 leftWeaponLocalPosition;
     [SerializeField] private Vector2 rightWeaponLocalPosition;
+    [SerializeField] private KeiControlledUnit controlledUnit;
 
     [HideInInspector] public Vector2 LeftWeaponLocalPosition { get { return leftWeaponLocalPosition; } }
     [HideInInspector] public Vector2 RightWeaponLocalPosition { get { return rightWeaponLocalPosition; } }
+    [HideInInspector] public KeiControlledUnit ControlledUnit { get { return controlledUnit; } } // ˜ø™S
 
     private void Start()
     {
@@ -25,5 +27,17 @@ public class KeiWeaponController : MonoBehaviour
         
         leftWeapon.SetEnableMovement(true);
         rightWeapon.SetEnableMovement(true);
+
+        ResetControlledUnit();
+    }
+
+    public void SetControlledUnit(KeiControlledUnit battler)
+    {
+        controlledUnit = battler;
+    }
+
+    public void ResetControlledUnit()
+    {
+        controlledUnit = null;
     }
 }

@@ -28,4 +28,5 @@ public class Ability : ScriptableObject
     public AbilityType abilityType;
     public bool isAOE;
     public bool canTargetSelf;
+    public bool disableOnDefault;
 }

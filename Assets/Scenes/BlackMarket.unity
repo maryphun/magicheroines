@@ -4997,26 +4997,32 @@ MonoBehaviour:
   ItemList:
   - item: {fileID: 11400000, guid: 27cf8e477bea5c54f969fc234ea899da, type: 2}
     equipment: {fileID: 0}
-    cost: 75
+    cost: 100
     requirementProgress: 0
     isUnique: 0
     isEquipment: 0
   - item: {fileID: 11400000, guid: e26cd163db4a3d44097e0e2d28c38ef5, type: 2}
     equipment: {fileID: 0}
-    cost: 25
+    cost: 100
     requirementProgress: 0
     isUnique: 0
     isEquipment: 0
   - item: {fileID: 0}
     equipment: {fileID: 11400000, guid: 3214e94b27c20a94d9e0cf74252352bf, type: 2}
-    cost: 150
+    cost: 250
     requirementProgress: 0
     isUnique: 1
     isEquipment: 1
   - item: {fileID: 0}
     equipment: {fileID: 11400000, guid: f8fb8603ab15de44abec02cfa352a864, type: 2}
-    cost: 0
+    cost: 1000
     requirementProgress: 0
+    isUnique: 1
+    isEquipment: 1
+  - item: {fileID: 0}
+    equipment: {fileID: 11400000, guid: 7ca8345203d5a2042b27f48e1cdd73ff, type: 2}
+    cost: 400
+    requirementProgress: 4
     isUnique: 1
     isEquipment: 1
   ShopItemList:
