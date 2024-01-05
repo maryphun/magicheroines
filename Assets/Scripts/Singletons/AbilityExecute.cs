@@ -2172,7 +2172,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
 
         // 成功率を計算
-        float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.09f * (kei.currentLevel - target.currentLevel);
+        float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.40f + (0.064f * (kei.currentLevel - target.currentLevel));
 
         if (!target.IsMachine) successRate = 0.0f; // 機械類以外は成功率　0%　
         if (target.character_name == LocalizationManager.Localize("Name.Tank")) successRate = 0.01f; // 特定の敵は成功しない
@@ -2412,13 +2412,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                 // VFX
                 var VFXPosition = puppet.GetMiddleGlobalPosition() + ((puppet.GetMiddleGlobalPosition() - target.GetMiddleGlobalPosition()) / 2);
-                VFXSpawner.SpawnVFX("Explode", target.transform, VFXPosition);
+                VFXSpawner.SpawnVFX("Suicide", target.transform, VFXPosition);
 
                 var realDamage = Battle.CalculateDamage(puppet.current_hp, target.defense, kei.currentLevel, target.currentLevel, false);
                 target.DeductHP(puppet, realDamage);
 
                 // text
-                var floatingText = CreateFloatingText(target.transform);
+                floatingText = CreateFloatingText(target.transform);
                 floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - puppet.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
                 // ログ ({0}　が自爆する！{1} のダメージを与えた！)
@@ -2482,13 +2482,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                 // VFX
                 var VFXPosition = self.GetMiddleGlobalPosition() + ((self.GetMiddleGlobalPosition() - target.GetMiddleGlobalPosition()) / 2);
-                VFXSpawner.SpawnVFX("Explode", target.transform, VFXPosition);
+                VFXSpawner.SpawnVFX("Suicide", target.transform, VFXPosition);
 
                 var realDamage = Battle.CalculateDamage(self.current_hp, target.defense, self.currentLevel, target.currentLevel, false);
                 target.DeductHP(self, realDamage);
 
                 // text
-                var floatingText = CreateFloatingText(target.transform);
+                floatingText = CreateFloatingText(target.transform);
                 floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
                 // ログ ({0}　が自爆する！{1} のダメージを与えた！)
@@ -2600,6 +2600,125 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
 
 
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// 京のデフォルト攻撃
+    public void KeiAttack()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var weapons = self.GetComponent<KeiWeaponController>();
+        bool left = UnityEngine.Random.Range(0, 10) >= 5;
+        var weapon = left ? weapons.leftWeapon : weapons.rightWeapon;
+        var originalPosition = weapon.transform.position;
+        int originalSiblingIndex = weapon.transform.GetSiblingIndex();
+        var target = targetBattlers[0];
+        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // 傀儡を取得
+        
+        // 武器の動きを一旦止める
+        if (left)
+        {
+            weapons.leftWeapon.SetEnableMovement(false);
+        }
+        else
+        {
+            weapons.rightWeapon.SetEnableMovement(false);
+        }
+        self.PlayAnimation(BattlerAnimationType.attack);
+
+
+        const float ChargeTime = 0.25f;
+        const float StayTime = 0.25f;
+        const float ReturnTime = 0.5f;
+
+        // 残像生成コンポネント
+        FadeEffect fadeEffect = weapon.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(ChargeTime, 0.02f, weapon.GetComponent<Image>());
+
+        // 傀儡を非表示
+        if (puppet != null)
+        {
+            puppet.SetTransparent(0.1f, ChargeTime * 0.5f);
+        }
+
+        // ログ (xxx　の攻撃！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Attack"), self.CharacterNameColored));
+        
+        DOTween.Sequence().AppendInterval(ChargeTime)
+            .AppendCallback(() =>
+            {
+                // shoot
+                weapon.transform.DOMove(target.GetMiddleGlobalPosition(), ChargeTime).SetEase(Ease.InOutQuint);
+                AudioManager.Instance.PlaySFX("CharacterMove");
+            })
+            .AppendInterval(ChargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                weapon.transform.SetParent(target.transform);
+            })
+            .AppendInterval(ChargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                // deal damage
+                int realDamage = target.DeductHP(self, Battle.CalculateDamage(self, target));
+
+                // text
+                var floatingText = CreateFloatingText(target.transform);
+                floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                // play SE
+                AudioManager.Instance.PlaySFX("Attacked", 0.8f);
+                AudioManager.Instance.PlaySFX("Damage5", 1f);
+
+                // animation
+                target.Shake(0.75f);
+                target.PlayAnimation(BattlerAnimationType.attacked);
+
+                // ログ ({0}　に　{1}　のダメージを与えた！)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
+                // VFX
+                self.SpawnAttackVFX(target);
+            })
+            .AppendInterval(StayTime)
+            .AppendCallback(() =>
+            {
+                weapon.transform.DOMove(originalPosition, ReturnTime).SetEase(Ease.Linear);
+                target.PlayAnimation(BattlerAnimationType.idle);
+            })
+            .AppendInterval(ReturnTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                weapon.transform.SetParent(self.transform);
+                weapon.transform.SetSiblingIndex(originalSiblingIndex);
+                weapon.transform.DOKill(false);
+                if (left)
+                {
+                    weapon.transform.DOLocalMove(weapons.LeftWeaponLocalPosition, ReturnTime * 0.5f).SetEase(Ease.Linear);
+                }
+                else
+                {
+                    weapon.transform.DOLocalMove(weapons.RightWeaponLocalPosition, ReturnTime * 0.5f).SetEase(Ease.Linear);
+                }
+            })
+            .AppendInterval(ReturnTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                if (left)
+                {
+                    weapons.leftWeapon.SetEnableMovement(true);
+                }
+                else
+                {
+                    weapons.rightWeapon.SetEnableMovement(true);
+                }
+
+                if (puppet != null)
+                {
+                    puppet.SetTransparent(1.0f, ReturnTime * 0.5f);
+                }
+                self.PlayAnimation(BattlerAnimationType.idle);
                 battleManager.NextTurn(false);
             });
     }

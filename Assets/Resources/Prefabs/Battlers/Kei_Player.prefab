@@ -535,6 +535,7 @@ MonoBehaviour:
   enableNormalAttack: 1
   isFemale: 1
   isMachine: 0
+  attackCallback: KeiAttack
   character_name: "\u8B58\u5BAE \u4EAC"
   characterID: 0
   icon: {fileID: 0}
@@ -562,6 +563,7 @@ MonoBehaviour:
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []
+  disabledAbilities: []
   graphic: {fileID: 2732321730057990796}
   name_UI: {fileID: 7029439265376434276}
   hpBarFill: {fileID: 6452825025544831300}
@@ -607,6 +609,7 @@ MonoBehaviour:
   rightWeapon: {fileID: 7747650190377502116}
   leftWeaponLocalPosition: {x: 0, y: 0}
   rightWeaponLocalPosition: {x: 0, y: 0}
+  controlledUnit: {fileID: 0}
 --- !u!1 &7356119342888050826
 GameObject:
   m_ObjectHideFlags: 0

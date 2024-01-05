@@ -36,7 +36,7 @@ public class KeiControlledUnit : MonoBehaviour
 
             // 京の状態更新
             master.isTargettable = false;
-            master.EnableNormalAttack = false;
+            //master.EnableNormalAttack = false;
 
             // 元の位置を記録
             originalParent = transform.parent;
@@ -97,7 +97,7 @@ public class KeiControlledUnit : MonoBehaviour
 
             // 京を攻撃できるようにする
             master.isTargettable = true;
-            master.EnableNormalAttack = true;
+            //master.EnableNormalAttack = true;
 
             const float delay = 1.0f;
             // このスクリプトを削除

@@ -511,9 +511,10 @@ MonoBehaviour:
     retire: {fileID: 0}
   attackVFX: {fileID: 1343633729508638609, guid: 7f432de0fd457e14d8accbe3936e0925, type: 3}
   breathScale: 0.001
-  enableNormalAttack: 0
+  enableNormalAttack: 1
   isFemale: 0
   isMachine: 1
+  attackCallback: TankAttack
   character_name: "\u660E\u7A42"
   characterID: 0
   icon: {fileID: 0}
@@ -534,9 +535,14 @@ MonoBehaviour:
   onDeathEvent:
     m_PersistentCalls:
       m_Calls: []
+  onAttackedEvent:
+    evt:
+      m_PersistentCalls:
+        m_Calls: []
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []
+  disabledAbilities: []
   graphic: {fileID: 7327100276064734370}
   name_UI: {fileID: 1324361431165308280}
   hpBarFill: {fileID: 4731874433723829874}

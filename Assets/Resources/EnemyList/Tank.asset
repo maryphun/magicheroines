@@ -21,7 +21,7 @@ MonoBehaviour:
   level: 6
   character_color: {r: 0.759434, g: 0.95707625, b: 1, a: 1}
   actionPattern:
-  - actionType: 1
+  - actionType: 0
     ability: {fileID: 11400000, guid: 546c2c1a152c95a48bc7f5693a061977, type: 2}
     chance: 1
     hasThresholdCondition: 0

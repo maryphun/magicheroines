@@ -510,6 +510,14 @@ public class Battle : MonoBehaviour
     /// </summary>
     IEnumerator AttackAnimation(Battler attacker, Battler target, Action<bool> callback)
     {
+        // ãﬂãóó£çUåÇÇ∂Ç·Ç»Ç¢
+        if (attacker.AttackCallback != string.Empty)
+        {
+            AbilityExecute.Instance.SetTargetBattler(target);
+            AbilityExecute.Instance.Invoke(attacker.AttackCallback, 0);
+            yield break;
+        }
+
         Transform originalParent = attacker.transform.parent;
         int originalChildIndex = attacker.transform.GetSiblingIndex();
 

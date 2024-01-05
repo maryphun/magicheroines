@@ -21,6 +21,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private bool enableNormalAttack = true; // 普通攻撃出来るか
     [SerializeField] private bool isFemale = false; // 女なのか
     [SerializeField] private bool isMachine = false; // 機械なのか
+    [SerializeField] private string attackCallback; // 特殊攻撃アニメーション
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -63,6 +64,7 @@ public class Battler : MonoBehaviour
     [HideInInspector] public bool IsMachine { get { return isMachine; } }
     [HideInInspector] public bool IsFemale { get { return isFemale; } }
     [HideInInspector] public string CharacterNameColored { get { return CustomColor.AddColor(character_name, character_color); } }
+    [HideInInspector] public string AttackCallback { get { return attackCallback; } }
 
     private Vector3 originalScale;
     private float ease = 0.0f;
@@ -732,6 +734,13 @@ public class Battler : MonoBehaviour
             return string.Empty;
         }
         return soundEffects.attacked.name;
+    }
+
+    public void SetTransparent(float alpha, float time)
+    {
+        Graphic.DOFade(alpha, time);
+        hpBarFill.transform.parent.gameObject.SetActive(alpha == 1.0f);
+        if (mpBarFill != null) mpBarFill.transform.parent.gameObject.SetActive(alpha == 1.0f);
     }
 
     #region EnemyAI
