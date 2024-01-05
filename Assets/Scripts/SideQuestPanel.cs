@@ -97,13 +97,15 @@ public class SideQuestPanel : MonoBehaviour
         GenerateEnemy(ProgressManager.Instance.GetSideQuestData().food);
         BattleSetup.SetBattleBGM("BattleTutorial");
         BattleSetup.SetSideQuestIncrement(1, -1, -1);
-        BattleSetup.SetReward(Random.Range(100, 200), Random.Range(10, 50));
+        BattleSetup.SetReward(Random.Range(1, 50), Random.Range(1, 10));
         CheckEquipmentDrop();
-
-        BattleSetup.AddItemReward("ã~ã}î†");
+        
         BattleSetup.AddItemReward("êHÉpÉì");
-        BattleSetup.AddItemReward("ÉNÉçÉèÉbÉTÉì");
-
+        if (ProgressManager.Instance.GetSideQuestData().food >= 2) BattleSetup.AddItemReward("ÉNÉçÉèÉbÉTÉì");
+        if (ProgressManager.Instance.GetSideQuestData().food >= 3) BattleSetup.AddItemReward("ã~ã}î†");
+        if (ProgressManager.Instance.GetSideQuestData().food >= 4) BattleSetup.AddItemReward("êHÉpÉì");
+        if (ProgressManager.Instance.GetSideQuestData().food >= 5) BattleSetup.AddItemReward("ã~ã}î†");
+        
         const float animationTime = 1.0f;
 
         // ÉVÅ[ÉìëJà⁄
@@ -128,7 +130,7 @@ public class SideQuestPanel : MonoBehaviour
         GenerateEnemy(ProgressManager.Instance.GetSideQuestData().bank);
         BattleSetup.SetBattleBGM("BattleTutorial");
         BattleSetup.SetSideQuestIncrement(-1, 1, -1);
-        BattleSetup.SetReward(Random.Range(300 + (75 * ProgressManager.Instance.GetSideQuestData().bank), 900 + (75 * ProgressManager.Instance.GetSideQuestData().bank)), Random.Range(10, 50));
+        BattleSetup.SetReward(Random.Range(300 + (75 * ProgressManager.Instance.GetSideQuestData().bank), 900 + (75 * ProgressManager.Instance.GetSideQuestData().bank)), Random.Range(5, 10));
         CheckEquipmentDrop();
 
         const float animationTime = 1.0f;
@@ -155,7 +157,7 @@ public class SideQuestPanel : MonoBehaviour
         GenerateEnemy(ProgressManager.Instance.GetSideQuestData().research);
         BattleSetup.SetBattleBGM("BattleTutorial");
         BattleSetup.SetSideQuestIncrement(-1, -1, 1);
-        BattleSetup.SetReward(Random.Range(100, 300), Random.Range(100 + (30 * ProgressManager.Instance.GetSideQuestData().research), 300 + (30 * ProgressManager.Instance.GetSideQuestData().research)));
+        BattleSetup.SetReward(Random.Range(50, 150), Random.Range(100 + (30 * ProgressManager.Instance.GetSideQuestData().research), 75 + (30 * ProgressManager.Instance.GetSideQuestData().research)));
         CheckEquipmentDrop();
 
         const float animationTime = 1.0f;

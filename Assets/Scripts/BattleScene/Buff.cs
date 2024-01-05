@@ -35,6 +35,7 @@ public enum BuffType
     speed_down,
     continuous_action,
     repel,
+    disarm,
 
     max,
 }
@@ -109,7 +110,7 @@ public static class BuffManager
         // shield up
         {
             BuffData data = new BuffData();
-            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_31");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Green", "CuteRPG_Icons_Green_106");
             data.name = LocalizationManager.Localize("Buff.Shield_up");
             data.start = ShieldUpStart;
             data.end = ShieldUpEnd;
@@ -123,7 +124,7 @@ public static class BuffManager
         // shield down
         {
             BuffData data = new BuffData();
-            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_31");
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_106");
             data.name = LocalizationManager.Localize("Buff.Shield_down");
             data.start = ShieldDownStart;
             data.end = ShieldDownEnd;
@@ -217,6 +218,20 @@ public static class BuffManager
             data.battleLogUpdate = string.Empty;
             data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.repel, data);
+        }
+        // disarm
+        {
+            BuffData data = new BuffData();
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_15");
+            data.name = LocalizationManager.Localize("Buff.Disarm");
+            data.start = DisarmStart;
+            data.end = DisarmUpdate;
+            data.update = DisarmEnd;
+            data.isBad = true;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.Disarm");
+            data.battleLogUpdate = string.Empty;
+            data.battleLogEnd = string.Empty;
+            BuffList.Add(BuffType.disarm, data);
         }
 
         floatingTextOrigin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
@@ -325,4 +340,8 @@ public static class BuffManager
         attacker.DeductHP(attacked, damage, true);
         CreateFloatingText(returnDamage.ToString(), CustomColor.damage(), 32, attacker);
     }
+    
+    public static void DisarmStart(Battler target, int value) { target.EnableNormalAttack = false; }
+    public static void DisarmUpdate(Battler target, int value) { }
+    public static void DisarmEnd(Battler target, int value) { target.EnableNormalAttack = true; }
 }

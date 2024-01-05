@@ -17,10 +17,11 @@ MonoBehaviour:
   descriptionID: Ability.SelfRepair_Info
   functionName: SelfRepair
   consumeSP: 10
-  cooldown: 0
+  cooldown: 1
   requiredLevel: 0
   requiredHornyness: 0
   castType: 0
   abilityType: 2
   isAOE: 0
   canTargetSelf: 0
+  disableOnDefault: 0

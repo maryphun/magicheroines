@@ -803,7 +803,8 @@ public class Battle : MonoBehaviour
     {
         instance.data.end.Invoke(instance.target, instance.value);
         instance.graphic.GetComponent<Image>().DOFade(0.0f, buffIconFadeTime);
-        Destroy(instance.graphic, 0.5f);
+        instance.text.DOFade(0.0f, buffIconFadeTime);
+        Destroy(instance.graphic, buffIconFadeTime + 0.1f);
         buffedCharacters.Remove(instance);
         ArrangeBuffIcon(instance.target);
         

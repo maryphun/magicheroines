@@ -41,7 +41,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Drone");
                     BattleSetup.AddEnemy("Android");
                     BattleSetup.SetBattleBGM("BattleTutorial");
-                    BattleSetup.SetReward(500, 25);
+                    BattleSetup.SetReward(350, 25);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -49,7 +49,7 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Akiho_Enemy");
                     BattleSetup.SetBattleBGM("AkihoBattle");
-                    BattleSetup.SetReward(1500, 150);
+                    BattleSetup.SetReward(1250, 150);
                     NovelSingletone.Instance.PlayNovel("Chapter1-2 Prebattle", true, GoToBattle);
                 }
                 break;
@@ -58,7 +58,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Drone");
                     BattleSetup.AddEnemy("GoldAndroid");
                     BattleSetup.SetBattleBGM("AkihoBattle");
-                    BattleSetup.SetReward(550, 50);
+                    BattleSetup.SetReward(400, 50);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -67,7 +67,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("GoldAndroid");
                     BattleSetup.AddEnemy("GoldAndroid 2");
                     BattleSetup.SetBattleBGM("AkihoBattle");
-                    BattleSetup.SetReward(600, 50);
+                    BattleSetup.SetReward(450, 50);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -75,7 +75,7 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Rikka_Enemy");
                     BattleSetup.SetBattleBGM("Loop 37 (RikkaBattle)");
-                    BattleSetup.SetReward(2000, 300);
+                    BattleSetup.SetReward(1500, 300);
                     NovelSingletone.Instance.PlayNovel("Chapter2-3 Prebattle", true, GoToBattle);
                 }
                 break;
@@ -83,7 +83,7 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Tank");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
-                    BattleSetup.SetReward(650, 75);
+                    BattleSetup.SetReward(500, 75);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -93,15 +93,39 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("DarkAndroid");
                     BattleSetup.AddEnemy("GoldDrone");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
-                    BattleSetup.SetReward(700, 75);
+                    BattleSetup.SetReward(550, 75);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
             case 9:
                 {
                     BattleSetup.AddEnemy("Erena_Enemy");
-                    BattleSetup.SetBattleBGM("Loop 5 (ErenaBattle)");
-                    BattleSetup.SetReward(2500, 300);
+                    BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
+                    BattleSetup.SetReward(1750, 300);
+                    NovelSingletone.Instance.PlayNovel("Chapter3-3 Prebattle", true, GoToBattle);
+                }
+                break;
+            case 10:
+                {
+                    BattleSetup.AddEnemy("DarkTank");
+                    BattleSetup.SetBattleBGM("Loop (Battle3)");
+                    BattleSetup.SetReward(600, 100);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 11:
+                {
+                    BattleSetup.AddEnemy("DarkTank");
+                    BattleSetup.SetBattleBGM("Loop (Battle3)");
+                    BattleSetup.SetReward(650, 100);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 12:
+                {
+                    BattleSetup.AddEnemy("Kei_Enemy");
+                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    BattleSetup.SetReward(2000, 300);
                     NovelSingletone.Instance.PlayNovel("Chapter3-3 Prebattle", true, GoToBattle);
                 }
                 break;
@@ -169,6 +193,18 @@ public class StoryManager : MonoBehaviour
 
                     PlayerCharacterDefine Erena = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/6.Erena");
                     ProgressManager.Instance.AddPlayerCharacter(Erena);
+                }
+                break;
+            case 10:
+                {
+                    // ƒGƒŒƒi”s–k
+                    NovelSingletone.Instance.PlayNovel("Chapter4-1", true, GoToRewardScreen);
+                }
+                break;
+            case 11:
+                {
+                    // ƒGƒŒƒi”s–k
+                    NovelSingletone.Instance.PlayNovel("Chapter4-2", true, GoToRewardScreen);
                 }
                 break;
             default:

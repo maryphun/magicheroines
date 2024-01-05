@@ -140,6 +140,7 @@ Name.GuardMan,駅員
 Name.Clones,072号＆他のクローン
 Name.No5_Call,005号(通信)
 Name.Battler_Call,戦闘員(通信)
+Name.Kei_Call,猫宮京(通信)
 Name.Akiho_Corrupted,笹谷 明穂
 Name.Rikka_Corrupted,072号
 Name.Kei_Corrupted,識宮 京
@@ -200,6 +201,7 @@ Buff.Speed_up,素早さ上昇
 Buff.Speed_down,素早さ下降
 Buff.ContinuousAction,連続行動
 Buff.Repel,反撃
+Buff.Disarm,無力化
 Equipment,アイテム名とその説明文
 Equipment.NiceT-Shirt,気持ち良いTシャツ
 Equipment.NiceT-Shirt_Info,気持ちよすぎるTシャツ、すごく動きやすい。
@@ -414,6 +416,7 @@ BattleLog.AttackUpStart,{0}　の攻撃力が {1} 上がった！
 BattleLog.AttackDownStart,{0}　の攻撃力が {1} 下がった！
 BattleLog.SpeedUpStart,{0}　の動きが {1} 速くなった。
 BattleLog.SpeedDownStart,{0}　の動きが {1} 鈍くなった。
+BattleLog.Disarm,{0}　は攻撃できなくなった
 BattleLog.Stungun,{0}　から {1} を放つ！
 BattleLog.AbilityExecute,{0}　からの {1}！
 BattleLog.AbilityExecuteSelf,{0}　が{1}する。

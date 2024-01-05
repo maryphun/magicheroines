@@ -1769,6 +1769,79 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             });
     }
 
+    /// 軍用歩行型タンクのデフォルト攻撃
+    public void DarkTankAttack()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var selfRect = self.GetComponent<RectTransform>();
+        var targets = battleManager.GetAllTeammate();
+
+        const float ChargeTime = 0.75f;
+        self.Shake(ChargeTime);
+        AudioManager.Instance.PlaySFX("TankStandby");
+
+        // ログ (xxx　のビーム攻撃！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.TankAttack"), self.CharacterNameColored));
+
+        var originalPosition = selfRect.localPosition.x;
+        DOTween.Sequence().AppendInterval(ChargeTime)
+            .AppendCallback(() =>
+            {
+                // shoot
+                selfRect.DOLocalMoveX(originalPosition + 50.0f, 0.05f).SetEase(Ease.Linear);
+                AudioManager.Instance.PlaySFX("TankBeam");
+                self.ColorTint(Color.red, 0.5f);
+
+                // VFX
+                VFXSpawner.SpawnVFX("SparkExplode", self.transform.parent, self.GetMiddleGlobalPosition() + new Vector2(-105f, 150.0f));
+            })
+            .AppendInterval(0.075f)
+            .AppendCallback(() =>
+            {
+                // 全体攻撃
+                for (int i = 0; i < targets.Count; i++)
+                {
+                    var target = targets[i];
+
+                    // deal damage
+                    int realDamage = target.DeductHP(self, Battle.CalculateDamage(self, target));
+
+                    // text
+                    var floatingText = CreateFloatingText(target.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                    // play SE
+                    AudioManager.Instance.PlaySFX("Attacked", 0.8f);
+                    AudioManager.Instance.PlaySFX("Explode", 1f);
+
+                    // animation
+                    target.Shake(0.75f);
+                    target.PlayAnimation(BattlerAnimationType.attacked);
+
+                    // ログ ({0}　に　{1}　のダメージを与えた！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
+                    // VFX
+                    self.SpawnAttackVFX(target);
+                }
+            })
+            .AppendInterval(0.075f)
+            .AppendCallback(() =>
+            {
+                selfRect.DOLocalMoveX(originalPosition, 0.5f);
+
+                for (int i = 0; i < targets.Count; i++)
+                {
+                    targets[i].PlayAnimation(BattlerAnimationType.idle);
+                }
+            })
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                battleManager.NextTurn(false);
+            });
+    }
+
     /// <summary>
     /// 聖なる盾　エレナボス戦
     /// </summary>
@@ -1923,6 +1996,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                int defAmt = target.defense / 2;
                battleManager.AddBuffToBattler(target, BuffType.shield_down, 4, defAmt);
+               battleManager.AddBuffToBattler(target, BuffType.disarm, 2, 0);
 
                // ログ （{0}　の防御力が {1} 点下げた。）
                battleManager.AddBattleLog(string.Format(LocalizationManager.Localize("BattleLog.ShieldDownValue"), target.CharacterNameColored, CustomColor.AddColor(defAmt, CustomColor.SP())));
@@ -2190,9 +2264,6 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // 成功か
         bool isSuccess = UnityEngine.Random.Range(0.0f, 1.0f) < successRate;
-
-        // 強制失敗
-        if (target.gameObject.name == "Tank_Enemy") isSuccess = false;
 
         // 武器の動きを一旦止める
         weapons.leftWeapon.SetEnableMovement(false);
