@@ -184,6 +184,9 @@ public class Battle : MonoBehaviour
             return;
         }
 
+        // åƒÇ—èoÇµ
+        GetCurrentBattler().OnTurnEnd();
+
         if (!isFirstTurn)
         {
             if (!IsCharacterInBuff(GetCurrentBattler(), BuffType.continuous_action)) // òAë±çsìÆ
@@ -618,6 +621,7 @@ public class Battle : MonoBehaviour
         attacker.transform.SetSiblingIndex(originalChildIndex);
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
 
+        attacker.afterAttackEvent.Invoke();
         callback?.Invoke(false);
     }
 

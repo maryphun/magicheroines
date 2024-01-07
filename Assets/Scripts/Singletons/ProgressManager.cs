@@ -521,16 +521,15 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         isDebugModeInitialized = true;
 
         // 調教できるヒロインを追加
-        PlayerCharacterDefine Kei = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
-        AddPlayerCharacter(Kei).is_corrupted = true;
-        playerData.characters[playerData.characters.Count - 1].current_level = 16;
+        PlayerCharacterDefine Nayuta = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/8.Nayuta");
+        AddPlayerCharacter(Nayuta).is_corrupted = true;
 
         PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
         AddPlayerCharacter(Akiho);
 
         // フォーメーション編成
-        playerData.formationCharacters[0].characterID = -1; // clone
-        playerData.formationCharacters[1].characterID = Kei.detail.characterID;
+        playerData.formationCharacters[0].characterID = -1;
+        playerData.formationCharacters[1].characterID = Nayuta.detail.characterID;
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");

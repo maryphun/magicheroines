@@ -23,19 +23,19 @@ MonoBehaviour:
       item: {fileID: 0}
       attacked: {fileID: 0}
       retire: {fileID: 0}
-    color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+    color: {r: 0.6117647, g: 0.14509805, b: 0.6666667, a: 1}
     nameID: Name.Nayuta
-    starting_level: 35
-    base_hp: 0
-    base_mp: 0
-    base_attack: 0
-    base_defense: 0
-    base_speed: 0
-    hp_growth: 0
-    mp_growth: 0
-    attack_growth: 0
-    defense_growth: 0
-    speed_growth: 0
+    starting_level: 15
+    base_hp: 175
+    base_mp: 100
+    base_attack: 40
+    base_defense: 12
+    base_speed: 19
+    hp_growth: 11
+    mp_growth: 28
+    attack_growth: 19
+    defense_growth: 6
+    speed_growth: 6
     levelUp_base_cost: 300
     levelUp_cost_increment: 75
     is_heroin: 1
@@ -46,5 +46,8 @@ MonoBehaviour:
       requiredCorruptionEpisode: 0
       requiredHornyEpisode: 0
     corruptedName: Name.Nayuta_Corrupted
-    abilities: []
+    abilities:
+    - {fileID: 11400000, guid: 1c479d706a5651945bd2d20eb2485462, type: 2}
+    - {fileID: 11400000, guid: a174c17565aee0544b9e622410f1c6a3, type: 2}
+    - {fileID: 11400000, guid: 1d8edfbfd0993aa4f94f7b15a14d682b, type: 2}
   battler: {fileID: 6784901170540971542, guid: f89ae767fd50c6b4e9020bef331ab99f, type: 3}

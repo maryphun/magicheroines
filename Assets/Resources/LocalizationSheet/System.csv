@@ -337,15 +337,18 @@ Ability.Reprogram_Info,ターゲットのプログラムを再作成し、攻撃
 Ability.EffeciencyBoost,システム修復
 Ability.EffeciencyBoost_Info,ターゲットのプログラムを最適化し、HPを回復させ、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効)
 Ability.PowerMode,雷神之相
-Ability.PowerMode_Info,"有効にすると常時 HPが 30 減る。
-攻撃が50%アップ。
+Ability.PowerMode_On,雷神之相 (入)
+Ability.PowerMode_Off,雷神之相 (切)
+Ability.PowerMode_Info,"有効にすると攻撃が70%アップ。
+常時 20 ダメージ受ける。
 
 スキルを有効・無効にするときターンを消耗しない"
 Ability.ChargeAttack,明鏡止水
 Ability.ChargeAttack_Info,"次の攻撃のために力を貯めて、攻撃力を150%上げる。
 連続使用でバフを重ねることができる。"
 Ability.Ultimate,絶命破斬
-Ability.Ultimate_Info,敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
+Ability.Ultimate_Info,"敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
+与えたダメージを吸収してHPを回復する。"
 Ability.Stungun_Info,スタンガンでターゲットを1ターン行動不能にする。
 Ability.DivineShield,エナジーシールド
 Ability.DivineShield_Info,次に受けたダメージを無効にする
@@ -442,3 +445,5 @@ BattleLog.StunShield,次に{0}を攻撃する者が反発されてしばらく�
 BatteLog.Repel,{0}　の反撃！ {1} ダメージを跳ね返った
 BattleLog.Suicide,{0}　が自爆する！{1} のダメージを与えた！
 BattleLog.Reprogram,{0}　の攻撃力が{1}点増加。防御力{2}点増加。
+BattleLog.PowerMode,雷神之相の代償！{0}が{1}ダメージを受けた。
+BattleLog.ChargeAttack,攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック)

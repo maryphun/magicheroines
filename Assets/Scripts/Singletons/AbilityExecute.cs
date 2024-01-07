@@ -34,7 +34,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         targetBattlers.Add(target);
     }
 
-    private FloatingText CreateFloatingText(Transform parent)
+    static public FloatingText CreateFloatingText(Transform parent)
     {
         GameObject origin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
         var obj = Instantiate(origin);
@@ -2798,6 +2798,204 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     puppet.SetTransparent(1.0f, ReturnTime * 0.5f);
                 }
                 self.PlayAnimation(BattlerAnimationType.idle);
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// 那由多　雷神の相
+    /// </summary>
+    public void PowerMode()
+    {
+        var nayuta = battleManager.GetCurrentBattler();
+        var powermodeScript = nayuta.GetComponent<Nayuta_Powermode>();
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(nayuta.transform);
+        string abilityName = LocalizationManager.Localize("Ability.PowerMode");
+        floatingText.Init(2.0f, nayuta.GetMiddleGlobalPosition() + new Vector2(0.0f, nayuta.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, nayuta.character_color);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("NayutaPowermode");
+
+        nayuta.PlayAnimation(BattlerAnimationType.magic);
+
+        // VFX
+        var obj = VFXSpawner.SpawnVFX("Holy", nayuta.transform, nayuta.GetGraphicRectTransform().position);
+        obj.transform.SetSiblingIndex(0);
+        VFXSpawner.SpawnVFX("Recovery", nayuta.transform, nayuta.GetGraphicRectTransform().position + new Vector3(0.0f, nayuta.GetCharacterSize().y * 0.5f));
+        nayuta.ColorTint(Color.magenta, 1.0f);
+
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                nayuta.PlayAnimation(BattlerAnimationType.idle);
+
+                // effect
+                int extraDamage = powermodeScript.ExtraDamage;
+                powermodeScript.SetActive(!powermodeScript.IsActive);
+
+                // 技を切り替え
+                var ability = nayuta.GetAbility("PowerMode");
+
+                if (powermodeScript.IsActive)
+                {
+                    // ログ ({0}　の攻撃力が {1} 上がった！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AttackUpStart"), nayuta.CharacterNameColored, CustomColor.AddColor(powermodeScript.ExtraDamage, CustomColor.damage())));
+
+                    ability.abilityNameID = LocalizationManager.Localize("Ability.PowerMode_Off");
+                }
+                else
+                {
+                    // ログ ({0}　の攻撃力が {1} 下がった！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AttackDownStart"), nayuta.CharacterNameColored, CustomColor.AddColor(extraDamage, CustomColor.damage())));
+
+                    ability.abilityNameID = LocalizationManager.Localize("Ability.PowerMode_On");
+                }
+
+                battleManager.SetDisplayActionPanel(true);
+            });
+    }
+
+    /// <summary>
+    /// 那由多　明鏡止水
+    /// </summary>
+    public void ChargeAttack()
+    {
+        var nayuta = battleManager.GetCurrentBattler();
+        var powermodeScript = nayuta.GetComponent<Nayuta_Powermode>();
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(nayuta.transform);
+        string abilityName = LocalizationManager.Localize("Ability.ChargeAttack");
+        floatingText.Init(2.0f, nayuta.GetMiddleGlobalPosition() + new Vector2(0.0f, nayuta.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, nayuta.character_color);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("NayutaPowermode");
+
+        nayuta.PlayAnimation(BattlerAnimationType.magic);
+
+        // VFX
+        var obj = VFXSpawner.SpawnVFX("Holy", nayuta.transform, nayuta.GetGraphicRectTransform().position);
+        obj.transform.SetSiblingIndex(0);
+        VFXSpawner.SpawnVFX("Recovery", nayuta.transform, nayuta.GetGraphicRectTransform().position + new Vector3(0.0f, nayuta.GetCharacterSize().y * 0.5f));
+        nayuta.ColorTint(Color.magenta, 1.0f);
+
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                nayuta.PlayAnimation(BattlerAnimationType.idle);
+
+                nayuta.Shake(0.5f);
+
+                // effect
+                int extraDamage =  Mathf.FloorToInt((float)nayuta.attack * 0.50f);
+                powermodeScript.ChargeAttack(extraDamage);
+
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// 那由多　絶命破斬
+    /// </summary>
+    public void Ultimate()
+    {
+        var nayuta = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+        var powermodeScript = nayuta.GetComponent<Nayuta_Powermode>();
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(nayuta.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Ultimate");
+        floatingText.Init(2.0f, nayuta.GetMiddleGlobalPosition() + new Vector2(0.0f, nayuta.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, nayuta.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), nayuta.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Ultimate"), CustomColor.abilityName())));
+
+        // play SE
+        AudioManager.Instance.PlaySFX("NayutaPowermode");
+
+        nayuta.PlayAnimation(BattlerAnimationType.magic);
+
+        // VFX
+        var obj = VFXSpawner.SpawnVFX("Holy", nayuta.transform, nayuta.GetGraphicRectTransform().position);
+        obj.transform.SetSiblingIndex(0);
+        nayuta.ColorTint(Color.magenta, 1.0f);
+        nayuta.Shake(0.5f);
+
+        // キャラ移動の準備
+        Transform originalParent = nayuta.transform.parent;
+        int originalChildIndex = nayuta.transform.GetSiblingIndex();
+        var originalPos = nayuta.RectTransform.position;
+
+        const float chargeTime = 0.5f;
+
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                var obj = VFXSpawner.SpawnVFX("Recovery", nayuta.transform, nayuta.GetGraphicRectTransform().position + new Vector3(0.0f, nayuta.GetCharacterSize().y * 0.5f));
+                obj.transform.SetParent(nayuta.transform.parent, true);
+                nayuta.SetTransparent(0.0f, 1.0f);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("Flee");
+            })
+            .AppendInterval(1f)
+            .AppendCallback(() =>
+            {
+                // relocate
+                nayuta.SetTransparent(1.0f, 0.01f);
+                nayuta.RectTransform.position = new Vector3(target.RectTransform.position.x + 1000.0f, target.RectTransform.position.y, target.RectTransform.position.z);
+
+                // 残像生成コンポネント
+                FadeEffect fadeEffect = nayuta.gameObject.AddComponent<FadeEffect>();
+                fadeEffect.Initialize(1.0f, 0.05f, nayuta.Graphic);
+
+                nayuta.ReverseFacing();
+                nayuta.RectTransform.DOMoveX(target.RectTransform.position.x, chargeTime * 0.5f).SetEase(Ease.Linear);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("Flee");
+            })
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                // calculate damage
+                int damage = Mathf.FloorToInt(nayuta.attack * (1.0f + (1.0f - (float)nayuta.current_hp / nayuta.max_hp))) * 2;
+                damage = Battle.CalculateDamage(damage, target.defense, nayuta.currentLevel, target.currentLevel, true);
+
+                nayuta.Heal(damage);
+                target.DeductHP(nayuta, damage, false);
+
+                // count as an attack
+                nayuta.afterAttackEvent.Invoke();
+
+                nayuta.SpawnAttackVFX(target);
+                target.Shake(0.5f);
+                target.ColorTint(Color.red, 0.5f);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("Slash");
+
+                nayuta.RectTransform.DOMove(originalPos, chargeTime * 0.5f).SetEase(Ease.Linear);
+
+                // text
+                var floatingText = AbilityExecute.CreateFloatingText(target.transform);
+                floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), target.GetMiddleGlobalPosition() + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
+
+                // ログ ({0}　に　{1}　のダメージを与えた！)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(damage, CustomColor.damage())));
+            })
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                nayuta.ReverseFacing();
+                nayuta.PlayAnimation(BattlerAnimationType.idle);
                 battleManager.NextTurn(false);
             });
     }
