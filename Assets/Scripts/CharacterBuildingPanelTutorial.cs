@@ -6,28 +6,28 @@ using DG.Tweening;
 using TMPro;
 using Assets.SimpleLocalization.Scripts;
 
-public class FormationTutorial : MonoBehaviour
+public class CharacterBuildingPanelTutorial : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] public Image img;
     [SerializeField] public RectTransform textPanel;
     [SerializeField] public TMP_Text tutorialText;
-    [SerializeField] private GameObject formationSlots, unlockButton, regenButton;
+    [SerializeField] private GameObject equipmentButton, abilityButtons;
 
     [Header("Debug")]
+    [SerializeField] private GameObject displayingObj;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private TutorialStep step;
     [SerializeField] private bool isPlayingTutorial = false;
-    [SerializeField] private GameObject displayingObj;
     [SerializeField] private Tween currentTween;
 
     enum TutorialStep
     {
-        FormationPanel, // キャラクター編成画面は出征前の準備を行うところです。
-        SwapCharacter,  // スロットを選択してフォーメーションを変えることができます。
-        UnlockSlot,     // 資金があれば、パーティ人数を増やせます。
+        Start,          // {0}はキャラクターのステータスの確認、レベルアップ、装備を行うところです。
+        Equipment,      // ここで装備を確認・変更でます。
+        Ability,        // キャラの特殊技も確認できます！
         Regenerate,     // 戦闘後に資金を使用してキャラクターを治療できます。
-        End, 
+        End,
     }
 
     const float textInterval = 0.05f;
@@ -36,19 +36,19 @@ public class FormationTutorial : MonoBehaviour
     {
         gameObject.SetActive(true);
         img.DOFade(0.95f, 1.0f);
-        step = TutorialStep.FormationPanel;
+        step = TutorialStep.Start;
         isPlayingTutorial = true;
 
-        textPanel.anchoredPosition = new Vector3(0.0f, -55f, 0.0f);
-        textPanel.sizeDelta = new Vector2(1100.0f, 200.0f);
+        textPanel.anchoredPosition = new Vector3(0.0f, 0f, 0.0f);
+        textPanel.sizeDelta = new Vector2(1250.0f, 200.0f);
 
         var sequence = DOTween.Sequence();
-        sequence.AppendInterval(0.5f)
+        sequence.AppendInterval(0.75f)
                 .AppendCallback(() =>
                 {
-                    currentTween = tutorialText.DOText(string.Format(LocalizationManager.Localize("Tutorial.FormationPanel-1"), LocalizationManager.Localize("System.Formation")), 1.0f);
+                    currentTween = tutorialText.DOText(string.Format(LocalizationManager.Localize("Tutorial.CharacterBuildingPanel-1"), LocalizationManager.Localize("System.CharacterBuilding")), 2.0f);
                     StartCoroutine(WaitForInput());
-                    step = TutorialStep.FormationPanel;
+                    step = TutorialStep.Start;
 
                     // SE
                     audioSource = AudioManager.Instance.PlaySFX("TextDisplay");
@@ -75,33 +75,30 @@ public class FormationTutorial : MonoBehaviour
             // next
             switch (step)
             {
-                case TutorialStep.FormationPanel:
-                    currentTween = SequenceText("Tutorial.FormationPanel-2");
-                    textPanel.DOSizeDelta(new Vector2(1300.0f, 220.0f), 1.0f);
-                    textPanel.DOAnchorPosY(-165f, 1.0f);
-                    displayingObj = Instantiate(formationSlots, transform);
-                    //displayingObj.transform.SetParent(transform);
-                    displayingObj.transform.SetAsFirstSibling();
-                    step = TutorialStep.SwapCharacter;
+                case TutorialStep.Start:
+                    currentTween = SequenceText("Tutorial.CharacterBuildingPanel-2");
+                    textPanel.DOSizeDelta(new Vector2(458.1858f, 150.0f), 1.0f);
+                    textPanel.DOAnchorPos(new Vector3(200f, -449f, 0.0f), 1.0f);
+                    step = TutorialStep.Equipment;
+
+                    displayingObj = Instantiate(equipmentButton, transform, true);
+                    displayingObj.transform.SetSiblingIndex(0);
                     break;
-                case TutorialStep.SwapCharacter:
-                    currentTween = SequenceText("Tutorial.FormationPanel-3");
-                    textPanel.DOAnchorPosY(-230f, 1.0f);
+                case TutorialStep.Equipment:
+                    currentTween = SequenceText("Tutorial.CharacterBuildingPanel-3");
+                    textPanel.DOSizeDelta(new Vector2(470.0f, 150.0f), 1.0f);
+                    textPanel.DOAnchorPosX(550.0f, 1.0f);
+                    step = TutorialStep.Ability;
+
                     Destroy(displayingObj);
-                    displayingObj = null;
-                    unlockButton.SetActive(true);
-                    step = TutorialStep.UnlockSlot;
+                    displayingObj = Instantiate(abilityButtons, transform, true);
+                    displayingObj.transform.SetSiblingIndex(0);
                     break;
-                case TutorialStep.UnlockSlot:
-                    currentTween = SequenceText("Tutorial.FormationPanel-4");
-                    unlockButton.SetActive(false);
-                    regenButton.SetActive(true);
-                    step = TutorialStep.Regenerate;
-                    break;
-                case TutorialStep.Regenerate:
+                case TutorialStep.Ability:
                     {
-                        regenButton.SetActive(false);
                         step = TutorialStep.End;
+
+                        Destroy(displayingObj);
 
                         // End Battle Tutorial
                         img.DOFade(0.0f, 0.5f);

@@ -19,6 +19,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     [SerializeField] private GameObject characterUpgradeButton;
     [SerializeField] private Image[] characterIconSlots;
     [SerializeField] private RectTransform pinkPanel;
+    [SerializeField] private CharacterBuildingPanelTutorial tutorial;
 
     [Header("Debug")]
     [SerializeField] List<Character> characters;
@@ -66,6 +67,20 @@ public class CharacterBuildingPanel : MonoBehaviour
             characterIconSlots[i].transform.Find("Selection Highlight").GetComponent<Image>().color = tmp;
         }
         SwitchToCharacterDataTab(false);
+
+        // Enter tutorial
+        var tutorialData = ProgressManager.Instance.GetTutorialData();
+        if (tutorialData.characterbuildingPanel == false)
+        {
+            tutorialData.characterbuildingPanel = true;
+            ProgressManager.Instance.SetTutorialData(tutorialData);
+
+            tutorial.StartTutorial();
+        }
+        else
+        {
+            tutorial.gameObject.SetActive(false);
+        }
     }
 
     /// <summary>

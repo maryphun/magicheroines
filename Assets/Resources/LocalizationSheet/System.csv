@@ -132,6 +132,7 @@ Name.Android,警備ドロイド
 Name.GoldAndroid,進化型ドロイド
 Name.DarkAndroid,攻撃特化型ドロイド
 Name.Tank,四脚タンク
+Name.DarkTank,軍用歩行型タンク
 Name.Battler+Tentacle,触手怪人、戦闘員
 Name.Man,男
 Name.Chairman,理事長
@@ -349,7 +350,7 @@ Ability.Stungun_Info,スタンガンでターゲットを1ターン行動不能�
 Ability.DivineShield,エナジーシールド
 Ability.DivineShield_Info,次に受けたダメージを無効にする
 Ability.DivineRapier,ディバインキャリバー
-Ability.DivineRapier_Info,敵単体を攻撃し、同時に防御力を極端まで低下させる
+Ability.DivineRapier_Info,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。
 Ability.StunShield,トラップシールド
 Ability.StunShield_Info,次にエレナを攻撃するものは一時行動不能になる。
 HomeCharacter,ホーム台詞

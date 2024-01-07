@@ -739,6 +739,7 @@ public class Battler : MonoBehaviour
     public void SetTransparent(float alpha, float time)
     {
         Graphic.DOFade(alpha, time);
+        name_UI.DOFade(alpha, time);
         hpBarFill.transform.parent.gameObject.SetActive(alpha == 1.0f);
         if (mpBarFill != null) mpBarFill.transform.parent.gameObject.SetActive(alpha == 1.0f);
     }

@@ -132,6 +132,9 @@ public class BlackMarketManager : MonoBehaviour
 
         // Scene Transit
         StartCoroutine(SceneTransition("Home", 1.0f));
+
+        // オートセーブを実行する
+        AutoSave.ExecuteAutoSave();
     }
 
 
