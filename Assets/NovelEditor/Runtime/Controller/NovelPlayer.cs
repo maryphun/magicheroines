@@ -91,6 +91,10 @@ namespace NovelEditor
         /// </summary>
         public bool IsPlaying => _isPlaying;
         /// <summary>
+        /// 自動再生中か
+        /// </summary>
+        public bool IsAutoPlaying => _isAutoPlay;
+        /// <summary>
         /// 選択肢が表示されているか
         /// </summary>
         public bool IsChoicing => _isChoicing;
@@ -534,6 +538,15 @@ namespace NovelEditor
             }
 
             return _isAutoPlay;
+        }
+
+        public void StopAutoPlay()
+        {
+            if (_isAutoPlay)
+            {
+                _isAutoPlay = false;
+                StopCoroutine(_autoPlay);
+            }
         }
 
         // スキップ機能用

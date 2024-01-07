@@ -26,4 +26,12 @@ public class ToggleAutoButton : MonoBehaviour
             GetComponent<Button>().image.sprite = toggleOFFIcon;
         }
     }
+
+    public void ForceStopAutoPlay()
+    {
+        if (references.IsAutoPlaying)
+        {
+            OnClick();
+        }
+    }
 }

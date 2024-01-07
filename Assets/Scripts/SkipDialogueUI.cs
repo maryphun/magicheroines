@@ -54,6 +54,14 @@ public class SkipDialogueUI : MonoBehaviour
         buttonIcon.sprite = toggleOFFButton;
     }
 
+    public void ForceStopSkipping()
+    {
+        if (isSkipping)
+        {
+            StopSkipping();
+        }
+    }
+
     private void Update()
     {
         if (isSkipping)

@@ -17,17 +17,24 @@ public class LogPanel : MonoBehaviour
     [SerializeField] private CanvasGroup logPanelCanvas;
     [SerializeField] private RectTransform scrollSize;
     [SerializeField] private ScrollRect scrollView;
+    [SerializeField] private ToggleAutoButton autoplayer;
+    [SerializeField] private SkipDialogueUI skipDialogue;
+    [SerializeField] private OptionPanel optionPanel;
 
     [Header("Debug")]
     [SerializeField] private List<LogDialogField> logObjs;
 
     public void OpenPanel()
     {
+        if (optionPanel.IsOpen()) return;
+
         logPanelCanvas.DOFade(1.0f, fadeAnimationTime);
         logPanelCanvas.interactable = true;
         logPanelCanvas.blocksRaycasts = true;
 
         SetupLogPanel();
+        autoplayer.ForceStopAutoPlay();
+        skipDialogue.ForceStopSkipping();
     }
 
     public void ClosePanel()
@@ -88,5 +95,24 @@ public class LogPanel : MonoBehaviour
 
         // Reset into the bottom
         scrollView.verticalNormalizedPosition = 0;
+    }
+
+    // Hotkey
+    private void Update()
+    {
+        if (!logPanelCanvas.interactable)
+        {
+            if (Input.mouseScrollDelta.y > 0)
+            {
+                OpenPanel();
+            }
+        }
+        else
+        {
+            if (Input.mouseScrollDelta.y < 0 && scrollView.verticalNormalizedPosition == 0)
+            {
+                ClosePanel();
+            }
+        }
     }
 }

@@ -327,6 +327,9 @@ MonoBehaviour:
   logPanelCanvas: {fileID: 5238019515015691384}
   scrollSize: {fileID: 6021332657751321467}
   scrollView: {fileID: 422568614354457873}
+  autoplayer: {fileID: 2729100340605908161}
+  skipDialogue: {fileID: 8973443365521194584}
+  optionPanel: {fileID: 6241242236051955695}
   logObjs: []
 --- !u!225 &5238019515015691384
 CanvasGroup:
