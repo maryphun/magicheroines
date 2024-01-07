@@ -2685,21 +2685,27 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var originalPosition = weapon.transform.position;
         int originalSiblingIndex = weapon.transform.GetSiblingIndex();
         var target = targetBattlers[0];
-        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // ˜ø™S‚ğæ“¾
-        
+        Battler puppet = null; 
+        if (weapons.ControlledUnit != null)
+        {
+            puppet = weapons.ControlledUnit.GetComponent<Battler>(); // ˜ø™S‚ğæ“¾
+        }
+
         // •Ší‚Ì“®‚«‚ğˆê’U~‚ß‚é
         if (left)
         {
             weapons.leftWeapon.SetEnableMovement(false);
+            weapons.leftWeapon.SetAnimationAttack();
         }
         else
         {
             weapons.rightWeapon.SetEnableMovement(false);
+            weapons.rightWeapon.SetAnimationAttack();
         }
         self.PlayAnimation(BattlerAnimationType.attack);
 
 
-        const float ChargeTime = 0.25f;
+        const float ChargeTime = 0.3f;
         const float StayTime = 0.25f;
         const float ReturnTime = 0.5f;
 
@@ -2766,10 +2772,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 weapon.transform.DOKill(false);
                 if (left)
                 {
+                    weapons.leftWeapon.SetAnimationNormal();
                     weapon.transform.DOLocalMove(weapons.LeftWeaponLocalPosition, ReturnTime * 0.5f).SetEase(Ease.Linear);
                 }
                 else
                 {
+                    weapons.rightWeapon.SetAnimationNormal();
                     weapon.transform.DOLocalMove(weapons.RightWeaponLocalPosition, ReturnTime * 0.5f).SetEase(Ease.Linear);
                 }
             })

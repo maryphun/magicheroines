@@ -7,6 +7,8 @@ public class KeiWeaponSprite : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField] private Vector2 moveValue = new Vector2(0.0f, 10.0f);
+    [SerializeField] private Sprite normal;
+    [SerializeField] private Sprite attack;
 
     [Header("References")]
     [SerializeField] private Battler mainScript;
@@ -22,6 +24,7 @@ public class KeiWeaponSprite : MonoBehaviour
     {
         graphic = GetComponent<RectTransform>();
         origin = graphic.localPosition;
+        SetAnimationNormal();
     }
 
     private void Update()
@@ -45,5 +48,14 @@ public class KeiWeaponSprite : MonoBehaviour
     public void SetEnableMovement(bool boolean)
     {
         isActive = boolean;
+    }
+
+    public void SetAnimationNormal()
+    {
+        GetComponent<Image>().sprite = normal;
+    }
+    public void SetAnimationAttack()
+    {
+        GetComponent<Image>().sprite = attack;
     }
 }

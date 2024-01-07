@@ -372,6 +372,9 @@ public class TrainPanel : MonoBehaviour
 
         // Play home music
         AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 4.0f);
+
+        // オートセーブを実行する
+        AutoSave.ExecuteAutoSave();
     }
 
     public void CloseUnderDevelopmentPopup()

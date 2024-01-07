@@ -70,6 +70,9 @@ public class WorldMapUI : MonoBehaviour
 
         // Switch BGM
         AudioManager.Instance.StopMusicWithFade(animationTime);
+
+        // オートセーブを実行する
+        AutoSave.ExecuteAutoSave();
     }
 
     private string GetChapterName(int progress)

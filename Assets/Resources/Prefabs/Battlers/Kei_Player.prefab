@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveValue: {x: 0, y: 2}
+  normal: {fileID: 21300000, guid: 225e83fdf16932c4bb5e518eb27e709e, type: 3}
+  attack: {fileID: 21300000, guid: 5863c86d6717191449ae08e0788df93e, type: 3}
   mainScript: {fileID: 5935660325007964706}
   graphic: {fileID: 0}
   origin: {x: 0, y: 0}
@@ -699,6 +701,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveValue: {x: 0, y: 2}
+  normal: {fileID: 21300000, guid: 225e83fdf16932c4bb5e518eb27e709e, type: 3}
+  attack: {fileID: 21300000, guid: 5863c86d6717191449ae08e0788df93e, type: 3}
   mainScript: {fileID: 5935660325007964706}
   graphic: {fileID: 0}
   origin: {x: 0, y: 0}
