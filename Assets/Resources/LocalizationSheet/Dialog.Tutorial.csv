@@ -99,8 +99,11 @@ Dialog.Tutorial-4-13,005号,「……承知しました。上にはそのよう�
 Dialog.Tutorial-4-14,,「それではドクター、貴方の活躍を期待しています。」
 ,,
 ホームシーンUI初回説明,注釈,
-Tutorial.FormationPanel-1,,キャラクター編成画面は出征前の準備を行うところです。
+Tutorial.FormationPanel-1,,{0}は出征前の準備を行うところです。
 Tutorial.FormationPanel-2,,スロットを選択してフォーメーションを変えることができます。
 Tutorial.FormationPanel-3,,資金があれば、パーティ人数上限を増やせます。
 Tutorial.FormationPanel-4,,戦闘後に資金を使用してキャラクターを治療できます。
 Tutorial.TrainPanel-Enabled,,調教画面が解放されました。
+Tutorial.CharacterBuildingPanel-1,,{0}はキャラクターのステータスの確認、レベルアップ、装備を行うところです。
+Tutorial.CharacterBuildingPanel-2,,ここで装備を確認・変更でます。
+Tutorial.CharacterBuildingPanel-3,,キャラの特殊技も確認できます！
