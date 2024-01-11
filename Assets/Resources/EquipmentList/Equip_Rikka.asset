@@ -17,8 +17,8 @@ MonoBehaviour:
   descriptionID: Equipment.Rikka_Info
   equipmentType: 2
   effectText: +25 SPD
-  battleStartFunctionName: 
-  battleEndFunctionName: 
+  battleStartFunctionName: Equip_RikkaStart
+  battleEndFunctionName: Equip_RikkaEnd
   hp: 0
   sp: 0
   atk: 0

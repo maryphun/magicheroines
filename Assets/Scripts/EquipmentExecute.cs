@@ -59,6 +59,7 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
         battler.onTurnBeginEvent.RemoveListener(EquipmentMethods.StolenUndieExecute);
         yield return null;
     }
+
     public IEnumerator Equip_AkihoStart(Battler battler)
     {
         battler.onTurnBeginEvent.AddListener(EquipmentMethods.AkihoSeikakuExecute);
@@ -69,6 +70,18 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
         battler.onTurnBeginEvent.RemoveListener(EquipmentMethods.AkihoSeikakuExecute);
         yield return null;
     }
+
+    public IEnumerator Equip_RikkaStart(Battler battler)
+    {
+        battler.onAttackedEvent.AddListener(EquipmentMethods.RikkaSeikakuExecute);
+        yield return null;
+    }
+    public IEnumerator Equip_RikkaEnd(Battler battler)
+    {
+        battler.onAttackedEvent.RemoveListener(EquipmentMethods.RikkaSeikakuExecute);
+        yield return null;
+    }
+
     public IEnumerator Equip_NayutaStart(Battler battler)
     {
         battler.onTurnBeginEvent.AddListener(EquipmentMethods.NayutaSeikakuExecute);
@@ -124,17 +137,6 @@ public static class EquipmentMethods
         battler.Heal(healAmount);
     }
 
-    public static void NayutaSeikakuExecute()
-    {
-        if (battleManager == null) return;
-        Battler battler = battleManager.GetCurrentBattler();
-
-        int amount = UnityEngine.Random.Range(5, 16);
-        battler.attack += amount;
-
-        string log = string.Format(LocalizationManager.Localize("BattleLog.NayutaEquip"), LocalizationManager.Localize(battler.equipment.equipNameID), battler.CharacterNameColored, CustomColor.AddColor(amount, CustomColor.damage()));
-        battleManager.AddBattleLog(log);
-    }
     public static void AkihoSeikakuExecute()
     {
         if (battleManager == null) return;
@@ -155,5 +157,37 @@ public static class EquipmentMethods
             CreateFloatingText(amountHP.ToString(), CustomColor.heal(), 32, battler);
             AudioManager.Instance.PlaySFX("Heal2", 0.5f);
         });
+    }
+    public static void RikkaSeikakuExecute(Battler attacked, Battler attacker, int value)
+    {
+        attacked.DeductHP(attacker, value, true);
+
+        // ”½Œ‚
+        attacked.PlayAnimation(BattlerAnimationType.attack);
+
+        int damage = Battle.CalculateDamage(attacked, attacker, true);
+        attacker.DeductHP(attacked, damage, true);
+        CreateFloatingText(damage.ToString(), CustomColor.damage(), 32, attacked);
+    }
+    public static void ErenaSeikakuExecute(Battler target)
+    {
+        if (battleManager == null) return;
+        const float chance = 0.2f;
+
+        if (UnityEngine.Random.Range(0.0f, 1.0f) <= chance)
+        {
+            battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
+        }
+    }
+    public static void NayutaSeikakuExecute()
+    {
+        if (battleManager == null) return;
+        Battler battler = battleManager.GetCurrentBattler();
+
+        int amount = UnityEngine.Random.Range(5, 16);
+        battler.attack += amount;
+
+        string log = string.Format(LocalizationManager.Localize("BattleLog.NayutaEquip"), LocalizationManager.Localize(battler.equipment.equipNameID), battler.CharacterNameColored, CustomColor.AddColor(amount, CustomColor.damage()));
+        battleManager.AddBattleLog(log);
     }
 }

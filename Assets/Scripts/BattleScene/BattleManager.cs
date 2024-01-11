@@ -588,6 +588,9 @@ public class Battle : MonoBehaviour
 
                 // ログ ({0}　に　{1}　のダメージを与えた！)
                 AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
+                // 装備特殊処理 (エレナの聖核)
+                if (attacker.equipment.pathName == "Equip_Erena") EquipmentMethods.ErenaSeikakuExecute(target);
             }
             else
             {
