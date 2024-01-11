@@ -17,8 +17,8 @@ MonoBehaviour:
   descriptionID: Equipment.StolenUndie_Info
   equipmentType: 1
   effectText: 
-  battleStartFunctionName: 
-  battleEndFunctionName: 
+  battleStartFunctionName: StolenUndieStart
+  battleEndFunctionName: StolenUndieEnd
   hp: 0
   sp: 0
   atk: 0

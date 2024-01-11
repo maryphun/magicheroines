@@ -43,6 +43,7 @@ public class Battler : MonoBehaviour
     [SerializeField] public BattlerAnimationType currentAnimation;
     [SerializeField] public UnityEvent onDeathEvent;
     [SerializeField] public CountableUnityEvent onAttackedEvent;
+    [SerializeField] public UnityEvent onTurnBeginEvent;
     [SerializeField] public UnityEvent onTurnEndEvent;
     [SerializeField] public UnityEvent afterAttackEvent;
     [SerializeField] public List<Ability> abilities;
@@ -115,6 +116,8 @@ public class Battler : MonoBehaviour
 
         onDeathEvent = new UnityEvent();
         onDeathEvent.RemoveAllListeners();
+        onTurnBeginEvent = new UnityEvent();
+        onTurnBeginEvent.RemoveAllListeners();
         onTurnEndEvent = new UnityEvent();
         onTurnEndEvent.RemoveAllListeners();
         afterAttackEvent = new UnityEvent();
@@ -748,6 +751,11 @@ public class Battler : MonoBehaviour
         name_UI.DOFade(alpha, time);
         hpBarFill.transform.parent.gameObject.SetActive(alpha == 1.0f);
         if (mpBarFill != null) mpBarFill.transform.parent.gameObject.SetActive(alpha == 1.0f);
+    }
+
+    public void OnTurnBegin()
+    {
+        onTurnBeginEvent.Invoke();
     }
 
     public void OnTurnEnd()

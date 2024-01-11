@@ -88,6 +88,7 @@ public class Battle : MonoBehaviour
         // Send references
         ItemExecute.Instance.Initialize(this);
         AbilityExecute.Instance.Initialize(this);
+        EquipmentMethods.Initialization(this);
         BuffManager.Init();
     }
 
@@ -215,6 +216,9 @@ public class Battle : MonoBehaviour
 
         Battler currentTurnCharacter = turnBaseManager.GetCurrentTurnBattler();
         currentTurnCharacter.UpdateAbilityCooldown(); // 特殊技のチャージ状態を更新
+
+        // 呼び出し
+        GetCurrentBattler().OnTurnBegin();
 
         if (currentTurnCharacter.isEnemy)
         {
@@ -504,6 +508,13 @@ public class Battle : MonoBehaviour
                 .AppendInterval(0.25f)
                 .AppendCallback(() =>
                 {
+                    // 装備特殊処理
+                    if (battler.equipment.pathName == "Cushion")
+                    {
+                        EquipmentMethods.CushionExecute(healAmount);
+                    }
+
+                    // ターン終了
                     NextTurn(false);
                 });
     }
@@ -973,6 +984,10 @@ public class Battle : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        // シーンが終了する前にやるべき処理
+        EquipmentMethods.battleManager = null;
+
+        // シーンロード
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
