@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.SimpleLocalization.Scripts;
+using DG.Tweening;
 
 public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
 {
@@ -49,12 +51,32 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
     }
     public IEnumerator StolenUndieStart(Battler battler)
     {
-        battler.onTurnBeginEvent.AddListener(EquipmentMethods.StolenUndie);
+        battler.onTurnBeginEvent.AddListener(EquipmentMethods.StolenUndieExecute);
         yield return null;
     }
     public IEnumerator StolenUndieEnd(Battler battler)
     {
-        battler.onTurnBeginEvent.RemoveListener(EquipmentMethods.StolenUndie);
+        battler.onTurnBeginEvent.RemoveListener(EquipmentMethods.StolenUndieExecute);
+        yield return null;
+    }
+    public IEnumerator Equip_AkihoStart(Battler battler)
+    {
+        battler.onTurnBeginEvent.AddListener(EquipmentMethods.AkihoSeikakuExecute);
+        yield return null;
+    }
+    public IEnumerator Equip_AkihoEnd(Battler battler)
+    {
+        battler.onTurnBeginEvent.RemoveListener(EquipmentMethods.AkihoSeikakuExecute);
+        yield return null;
+    }
+    public IEnumerator Equip_NayutaStart(Battler battler)
+    {
+        battler.onTurnBeginEvent.AddListener(EquipmentMethods.NayutaSeikakuExecute);
+        yield return null;
+    }
+    public IEnumerator Equip_NayutaEnd(Battler battler)
+    {
+        battler.onTurnBeginEvent.RemoveListener(EquipmentMethods.NayutaSeikakuExecute);
         yield return null;
     }
 }
@@ -79,7 +101,7 @@ public static class EquipmentMethods
         floatingText.GetComponent<FloatingText>().Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.35f), new Vector2(0.0f, 100.0f), text, size, color);
     }
 
-    public static void StolenUndie()
+    public static void StolenUndieExecute()
     {
         if (battleManager == null) return;
         Battler battler = battleManager.GetCurrentBattler();
@@ -90,7 +112,7 @@ public static class EquipmentMethods
         int healAmount = Mathf.FloorToInt((float)battler.max_mp * percentage);
 
         battler.AddSP(healAmount);
-        CreateFloatingText(healAmount.ToString(), CustomColor.heal(), 32, battler); ;
+        CreateFloatingText(healAmount.ToString(), CustomColor.heal(), 32, battler);
         AudioManager.Instance.PlaySFX("Heal2");
     }
 
@@ -100,5 +122,38 @@ public static class EquipmentMethods
         Battler battler = battleManager.GetCurrentBattler();
 
         battler.Heal(healAmount);
+    }
+
+    public static void NayutaSeikakuExecute()
+    {
+        if (battleManager == null) return;
+        Battler battler = battleManager.GetCurrentBattler();
+
+        int amount = UnityEngine.Random.Range(5, 16);
+        battler.attack += amount;
+
+        string log = string.Format(LocalizationManager.Localize("BattleLog.NayutaEquip"), LocalizationManager.Localize(battler.equipment.equipNameID), battler.CharacterNameColored, CustomColor.AddColor(amount, CustomColor.damage()));
+        battleManager.AddBattleLog(log);
+    }
+    public static void AkihoSeikakuExecute()
+    {
+        if (battleManager == null) return;
+        Battler battler = battleManager.GetCurrentBattler();
+
+        // ‰ñ•œ—Ê
+        const float percentage = 0.15f;
+        int amountHP = Mathf.FloorToInt((float)battler.max_hp * percentage);
+        int amountSP = Mathf.FloorToInt((float)battler.max_mp * percentage);
+
+        battler.AddSP(amountSP);
+        CreateFloatingText(amountSP.ToString(), CustomColor.SP(), 32, battler);
+        AudioManager.Instance.PlaySFX("Heal2", 0.5f);
+
+        DOTween.Sequence().AppendInterval(0.25f).AppendCallback(() =>
+        {
+            battler.Heal(amountHP);
+            CreateFloatingText(amountHP.ToString(), CustomColor.heal(), 32, battler);
+            AudioManager.Instance.PlaySFX("Heal2", 0.5f);
+        });
     }
 }
