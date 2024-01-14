@@ -105,6 +105,12 @@ public static class EquipmentMethods
         floatingTextOrigin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
     }
 
+    public static void Finalize()
+    {
+        battleManager = null;
+        floatingTextOrigin = null;
+    }
+
     public static void CreateFloatingText(string text, Color color, float size, Battler target)
     {
         if (floatingTextOrigin == null) return;

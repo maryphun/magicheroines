@@ -988,7 +988,7 @@ public class Battle : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         // シーンが終了する前にやるべき処理
-        EquipmentMethods.battleManager = null;
+        EquipmentMethods.Finalize();
 
         // シーンロード
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
