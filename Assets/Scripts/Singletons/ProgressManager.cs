@@ -561,8 +561,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             BattleSetup.Reset(false);
             BattleSetup.SetAllowEscape(true);
-            BattleSetup.AddEnemy("Tank");
-            BattleSetup.AddEnemy("GoldAndroid");
+            BattleSetup.AddEnemy("Kei_Enemy");
         }
     }
 #else
