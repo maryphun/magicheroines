@@ -509,7 +509,7 @@ public class Battle : MonoBehaviour
                 .AppendCallback(() =>
                 {
                     // ‘•”õ“Áêˆ—
-                    if (battler.equipment.pathName == "Cushion")
+                    if (battler.equipment != null && battler.equipment.pathName == "Cushion")
                     {
                         EquipmentMethods.CushionExecute(healAmount);
                     }
@@ -590,7 +590,7 @@ public class Battle : MonoBehaviour
                 AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                 // ‘•”õ“Áêˆ— (ƒGƒŒƒi‚Ì¹Šj)
-                if (attacker.equipment.pathName == "Equip_Erena") EquipmentMethods.ErenaSeikakuExecute(target);
+                if (attacker.equipment != null && attacker.equipment.pathName == "Equip_Erena") EquipmentMethods.ErenaSeikakuExecute(target);
             }
             else
             {

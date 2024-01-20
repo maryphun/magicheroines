@@ -48,6 +48,7 @@ public class TurnBaseInformation : MonoBehaviour
     public void OnHover()
     {
         if (isDisplay) return;
+        if (characterSpeed == null) return;
 
         isDisplay = true;
         canvasGroup.DOComplete();
