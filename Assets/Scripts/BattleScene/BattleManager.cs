@@ -982,6 +982,13 @@ public class Battle : MonoBehaviour
                 // ”s–kƒCƒxƒ“ƒg(“ß—R‘½í)
                 DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter2-3 AfterEvent", true, sceneTransition.EndScene); });
             }
+            else if (ProgressManager.Instance.GetCurrentStageProgress() == 12)
+            {
+                AudioManager.Instance.StopMusicWithFade();
+
+                // ”s–kƒCƒxƒ“ƒg(“ß—R‘½“oê)
+                DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter4-3 AfterEvent", true, sceneTransition.EndScene); });
+            }
         }
     }
 

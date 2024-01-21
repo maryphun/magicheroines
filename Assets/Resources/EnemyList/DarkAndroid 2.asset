@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa65797a759a6b45bc6f990676fa51d, type: 3}
-  m_Name: DarkAndroid
+  m_Name: DarkAndroid 2
   m_EditorClassIdentifier: 
   enemyName: Name.DarkAndroid
-  maxHP: 100
+  maxHP: 150
   maxMP: 40
-  attack: 60
+  attack: 80
   defense: 15
   speed: 10
-  level: 13
+  level: 15
   character_color: {r: 0.5849056, g: 0.0027589954, b: 0.3458614, a: 1}
   actionPattern:
   - actionType: 0
