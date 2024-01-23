@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43b1c0590c3a05a449be16b7a076744a, type: 3}
-  m_Name: 9.Battler(Event)
+  m_Name: 10.No5(Event)
   m_EditorClassIdentifier: 
   detail:
-    characterID: 8
+    characterID: 9
     icon: {fileID: 499111351, guid: ddfb2c5889060414988df1c56b2521e9, type: 3}
-    sprite: {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
+    sprite: {fileID: 21300000, guid: 6e4933831e4cfd1469077e622cbd41ed, type: 3}
     animations:
       idle: {fileID: 0}
       attack: {fileID: 0}
@@ -23,14 +23,14 @@ MonoBehaviour:
       item: {fileID: 0}
       attacked: {fileID: 0}
       retire: {fileID: 0}
-    color: {r: 0.8396226, g: 0.629717, b: 0.7481253, a: 1}
-    nameID: Name.Battler
-    starting_level: 5
-    base_hp: 100
+    color: {r: 0.34509805, g: 0.6901961, b: 1, a: 1}
+    nameID: Name.No5
+    starting_level: 8
+    base_hp: 165
     base_mp: 0
-    base_attack: 15
-    base_defense: 7
-    base_speed: 7
+    base_attack: 30
+    base_defense: 8
+    base_speed: 10
     hp_growth: 0
     mp_growth: 0
     attack_growth: 0
@@ -47,4 +47,4 @@ MonoBehaviour:
       requiredHornyEpisode: 0
     corruptedName: Name.Battler
     abilities: []
-  battler: {fileID: 6784901170540971542, guid: f077bee3bb870d7498a72b18c5774ccc, type: 3}
+  battler: {fileID: 6784901170540971542, guid: 471f4f6d45afb1e43af475fdb260a439, type: 3}

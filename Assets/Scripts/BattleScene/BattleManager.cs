@@ -509,7 +509,7 @@ public class Battle : MonoBehaviour
                 .AppendCallback(() =>
                 {
                     // ‘•”õ“ÁŽêˆ—
-                    if (battler.equipment.pathName == "Cushion")
+                    if (battler.equipment != null && battler.equipment.pathName == "Cushion")
                     {
                         EquipmentMethods.CushionExecute(healAmount);
                     }
@@ -590,7 +590,7 @@ public class Battle : MonoBehaviour
                 AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                 // ‘•”õ“ÁŽêˆ— (ƒGƒŒƒi‚Ì¹Šj)
-                if (attacker.equipment.pathName == "Equip_Erena") EquipmentMethods.ErenaSeikakuExecute(target);
+                if (attacker.equipment != null && attacker.equipment.pathName == "Equip_Erena") EquipmentMethods.ErenaSeikakuExecute(target);
             }
             else
             {
@@ -981,6 +981,13 @@ public class Battle : MonoBehaviour
 
                 // ”s–kƒCƒxƒ“ƒg(“ß—R‘½í)
                 DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter2-3 AfterEvent", true, sceneTransition.EndScene); });
+            }
+            else if (ProgressManager.Instance.GetCurrentStageProgress() == 12)
+            {
+                AudioManager.Instance.StopMusicWithFade();
+
+                // ”s–kƒCƒxƒ“ƒg(“ß—R‘½“oê)
+                DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter4-3 AfterEvent", true, sceneTransition.EndScene); });
             }
         }
     }

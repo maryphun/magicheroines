@@ -157,7 +157,7 @@ public class AbilityPanel : MonoBehaviour
         if (isOpen) return;
 
         onCloseCallback = callbackWhenClose;
-        rectTransform.DOAnchorPosY(0.0f, animationTime);
+        rectTransform.DOAnchorPosY(0, animationTime);
         DOTween.Sequence().AppendInterval(animationTime * 0.75f).AppendCallback(() => { isOpen = true; }); // Š®‘S‚ÉŠJ‚¢‚Ä‚©‚çŸ‚Ì‚ğ‘€ìó‚¯•t‚¯‚é
         isHiding = false;
 

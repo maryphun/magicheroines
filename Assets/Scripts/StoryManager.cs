@@ -115,9 +115,12 @@ public class StoryManager : MonoBehaviour
                 break;
             case 11:
                 {
-                    BattleSetup.AddEnemy("DarkTank");
+                    BattleSetup.AddEnemy("Drone 4");
+                    BattleSetup.AddEnemy("DarkAndroid");
+                    BattleSetup.AddEnemy("DarkAndroid 2");
+                    BattleSetup.AddEnemy("Drone 4");
                     BattleSetup.SetBattleBGM("Loop (Battle3)");
-                    BattleSetup.SetReward(650, 100);
+                    BattleSetup.SetReward(600, 100);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -125,8 +128,17 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Kei_Enemy");
                     BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    NovelSingletone.Instance.PlayNovel("Chapter4-3 Prebattle", true, GoToBattle);
+                }
+                break;
+            case 13:
+                {
+                    // êÌì¨Ç»Çµ
                     BattleSetup.SetReward(2000, 300);
-                    NovelSingletone.Instance.PlayNovel("Chapter3-3 Prebattle", true, GoToBattle);
+                    NovelSingletone.Instance.PlayNovel("Chapter5-1", true, GoToRewardScreen);
+
+                    PlayerCharacterDefine Kei = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
+                    ProgressManager.Instance.AddPlayerCharacter(Kei);
                 }
                 break;
             default:
@@ -197,14 +209,32 @@ public class StoryManager : MonoBehaviour
                 break;
             case 10:
                 {
-                    // ÉGÉåÉiîsñk
                     NovelSingletone.Instance.PlayNovel("Chapter4-1", true, GoToRewardScreen);
                 }
                 break;
             case 11:
                 {
-                    // ÉGÉåÉiîsñk
                     NovelSingletone.Instance.PlayNovel("Chapter4-2", true, GoToRewardScreen);
+                }
+                break;
+            case 12:
+                {
+                    // ãûîsñk
+                    NovelSingletone.Instance.PlayNovel("Chapter4-3 AfterBattle", true, GoToBattle);
+
+                    // setup event battle
+                    BattleSetup.Reset(false);
+                    BattleSetup.SetAllowEscape(false);
+                    BattleSetup.SetEventBattle(true);
+                    BattleSetup.SetReward(0, 0);
+                    BattleSetup.AddTeammate("10.No5(Event)");
+                    BattleSetup.AddTeammate("11.No72(Event)");
+                    BattleSetup.AddEnemy("Nayuta_Enemy");
+                    BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
+                }
+                break;
+            case 13:
+                {
                 }
                 break;
             default:

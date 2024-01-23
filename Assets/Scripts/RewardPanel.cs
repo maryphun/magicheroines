@@ -174,7 +174,7 @@ public class RewardPanel : MonoBehaviour
                 s = "<color=#F1E5AC>" + LocalizationManager.Localize("Name.Erena") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
-            case 12: // ‹ž
+            case 13: // ‹ž (‹ž‚Ì•ßŠl‚Í5-1)
                 newHeroin.sprite = heroinSprite[3];
                 s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Kei") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);

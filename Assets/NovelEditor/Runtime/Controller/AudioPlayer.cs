@@ -117,7 +117,7 @@ namespace NovelEditor
                     var t = PlaySE(soundData, _SEVolume, _SE, SEcancellation.Token);
                     break;
                 case SoundStyle.Stop:
-                    Stop(_SE, SEcancellation);
+                    var s = FadeStop(_SE, SEcancellation.Token);
                     break;
             }
         }
@@ -131,6 +131,13 @@ namespace NovelEditor
         {
             cancel.Cancel();
             player.Stop();
+        }
+
+        async UniTask<bool> FadeStop(AudioSource player, CancellationToken token)
+        {
+            await FadeVolume(player.volume, 0, 0.5f, player, token);
+            Stop(player, SEcancellation);
+            return true;
         }
 
         /// <summary>

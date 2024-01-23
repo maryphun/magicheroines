@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa65797a759a6b45bc6f990676fa51d, type: 3}
+  m_Name: Drone 4
+  m_EditorClassIdentifier: 
+  enemyName: Name.Drone
+  maxHP: 85
+  maxMP: 0
+  attack: 40
+  defense: 10
+  speed: 12
+  level: 10
+  character_color: {r: 1, g: 1, b: 1, a: 1}
+  actionPattern:
+  - actionType: 0
+    ability: {fileID: 0}
+    chance: 1
+    hasThresholdCondition: 0
+    HpThreshold: 0
+    SpThreshold: 0
+  icon: {fileID: 627639012, guid: 0f4c4dbea7e7a1c4da0c02f12798160b, type: 3}
+  battler: {fileID: 7739895556670267509, guid: e4504644182f95f4a8e5d8912deae49b, type: 3}

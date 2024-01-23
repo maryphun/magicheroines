@@ -521,15 +521,15 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         isDebugModeInitialized = true;
 
         // 調教できるヒロインを追加
-        PlayerCharacterDefine Nayuta = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/8.Nayuta");
-        AddPlayerCharacter(Nayuta).is_corrupted = true;
+        PlayerCharacterDefine Erena = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/6.Erena");
+        AddPlayerCharacter(Erena).is_corrupted = true;
 
         PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
         AddPlayerCharacter(Akiho);
 
         // フォーメーション編成
         playerData.formationCharacters[0].characterID = -1;
-        playerData.formationCharacters[1].characterID = Nayuta.detail.characterID;
+        playerData.formationCharacters[1].characterID = Erena.detail.characterID;
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
@@ -561,7 +561,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             BattleSetup.Reset(false);
             BattleSetup.SetAllowEscape(true);
-            BattleSetup.AddEnemy("Kei_Enemy");
+            BattleSetup.AddEnemy("Nayuta_Enemy");
         }
     }
 #else
