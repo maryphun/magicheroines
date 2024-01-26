@@ -18,6 +18,7 @@ public class HomeCharacter : MonoBehaviour
     [SerializeField] RectTransform dialogueBack;
     [SerializeField] TMP_Text dialogueText;
     [SerializeField] Image characterSprite;
+    [SerializeField] AudioSource audioSource;
 
     [Header("Debug")]
     [SerializeField] private HomeDialogue[] dialogues;
@@ -138,6 +139,9 @@ public class HomeCharacter : MonoBehaviour
         dialogueText.text = string.Empty;
         dialogueText.alpha = 0.0f;
 
+        // stop audio
+        audioSource.Stop();
+
         float clipLength = 0.0f;
         if (dialogue.clip != null)
         {
@@ -162,10 +166,12 @@ public class HomeCharacter : MonoBehaviour
             .AppendInterval(0.25f)
             .AppendCallback(() => {
                 dialogueText.DOFade(1.0f, 0.25f);
-                dialogueText.DOText(LocalizationManager.Localize(dialogue.dialogueID), Mathf.Clamp(clipLength, 1.0f, 3.0f)).SetEase(Ease.Linear);
+                string text = LocalizationManager.Localize(dialogue.dialogueID);
+                dialogueText.DOText(text, Mathf.Clamp(text.Length * 0.05f, 1.0f, 3.0f)).SetEase(Ease.Linear);
                 if (dialogue.clip != null)
                 {
-                    AudioManager.Instance.PlayClip(dialogue.clip);
+                    audioSource.volume = 1.5f;
+                    audioSource.PlayOneShot(dialogue.clip);
                 }
                 if (dialogue.sprite != null)
                 {

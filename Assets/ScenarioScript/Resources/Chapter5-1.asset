@@ -12,10 +12,786 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
   m_Name: Chapter5-1
   m_EditorClassIdentifier: 
-  _locations: []
-  _paragraphList: []
-  _choiceList: []
+  _locations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: -12
+      y: -9
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u2015\u2015\u2015\u2015\u3053\u306E\u5730\u4E0B\u30A2\u30B8\u30C8\u306F\u5236\u5727\u3057\u307E\u3057\u305F\u3002\u7121\u99C4\u306A\u62B5\u6297\u306F\u305B\u305A\u76F4\u3061\u306B\u6295\u964D\u3057\u306A\u3055\u3044\u300D"
+      localizationID: Dialog.Chapter5-1-1
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000100000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d71134f33928c91468e80d08f4534b85, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3053\u306E\u30A2\u30B8\u30C8\u306E\u6700\u9AD8\u8CAC\u4EFB\u8005\u306F\u3042\u306A\u305F\u306E\u3088\u3046\u3067\u3059\u306E\u3067\u79C1\u304C\u9023\u884C\u3057\u307E\u3059\u300D"
+      localizationID: Dialog.Chapter5-1-2
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d71134f33928c91468e80d08f4534b85, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d71134f33928c91468e80d08f4534b85, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 1
+    _nextChoiceIndexes: 00000000
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 156
+      y: 204
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u8A71\u304C\u5206\u304B\u308B\u3088\u3046\u3067\u52A9\u304B\u308A\u307E\u3059\u300D"
+      localizationID: Dialog.Chapter5-1-4
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000100000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: b0bd88528c734ad43b03fbe01fc8629e, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u2026\u2026\u305D\u3046\u3044\u3048\u3070\u30A8\u30EC\u30CA\u306F\u4F55\u3092\u3084\u3063\u3066\u3044\u308B\u306E\u3067\u3057\u3087\u3046\u304B\uFF1F\u3053\u3053\u306F\u672C\u6765\u5F7C\u5973\u306E\u7BA1\u8F44\u306A\u306F\u305A\u3067\u3059\u304C\u300D"
+      localizationID: Dialog.Chapter5-1-5
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000100000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 1d9bd68c71e06f843a34a2d82437a3c9, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei
+      text: "\u300C\u3042\u2015\u2015\u2026\u3002\u30A8\u30EC\u30CA\u306F\u6355\u307E\u3063\u3061\u3083\u3063\u3066\u306D\u2026\u307E\u3042\u3001\u6CB9\u65AD\u3057\u3066\u305F\u3093\u3058\u3083\u306A\u3044\u304B\u306A\u300D"
+      localizationID: Dialog.Chapter5-1-6
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000002000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 1d9bd68c71e06f843a34a2d82437a3c9, type: 3}
+      - {fileID: 21300000, guid: 0ca6a3f1b297c2b4899b9da783f96f7d, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000400000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u30A8\u30EC\u30CA\u304C\uFF1F\uFF1F\u307E\u3063\u305F\u304F\u2026\u3042\u306E\u5973\u306F\u3044\u3063\u305F\u3044\u4F55\u3092\u3057\u3066\u308B\u3093\u3067\u3059\u304B\u2026\u5E30\u3063\u305F\u3089\u304A\u8AAC\u6559\u3067\u3059\u306D\u300D"
+      localizationID: Dialog.Chapter5-1-7
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000100000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 6d1b99a6b0d340e4abb9ea95e07e6bad, type: 3}
+      - {fileID: 21300000, guid: 0ca6a3f1b297c2b4899b9da783f96f7d, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000100000004000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei
+      text: "\u300C\u3042\u3001\u305D\u3046\u3060\u3002\u3053\u3053\u306B\u3042\u3063\u305F\u30C7\u30FC\u30BF\u306F\u541B\u304C\u7814\u7A76\u3057\u305F\u3084\u3064\u304B\u306A\uFF1F\u7D50\u69CB\u975E\u502B\u7406\u7684\u306A\u7814\u7A76\u3082\u3042\u3063\u305F\u3051\u3069\u300D"
+      localizationID: Dialog.Chapter5-1-8
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 6d1b99a6b0d340e4abb9ea95e07e6bad, type: 3}
+      - {fileID: 21300000, guid: 0ca6a3f1b297c2b4899b9da783f96f7d, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000400000001000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u2026\u2026\u305D\u3046\u3044\u3048\u3070\u8A98\u62D0\u3057\u305F\u751F\u5F92\u9054\u306F\u3069\u3046\u3044\u3046\u6271\u3044\u3092\u3055\u308C\u3066\u3044\u308B\u306E\u3067\u3057\u3087\u3046\u304B\uFF1F\u8FD4\u7B54\u306B\u3088\u3063\u3066\u306F\u2015\u2015\u2015\u2015\u300D"
+      localizationID: Dialog.Chapter5-1-9
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 6d1b99a6b0d340e4abb9ea95e07e6bad, type: 3}
+      - {fileID: 21300000, guid: 0ca6a3f1b297c2b4899b9da783f96f7d, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000100000004000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler_Call
+      text: "\u300C\u2015\u2015\u2015\u7DCA\u6025\u3067\u9023\u7D61\u3057\u307E\u3059\uFF01\u300D"
+      localizationID: Dialog.Chapter5-1-10
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 020000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 10bd7a2c8309cf6468c9967ba4a8d245, type: 3}
+      - {fileID: 21300000, guid: 6d1b99a6b0d340e4abb9ea95e07e6bad, type: 3}
+      - {fileID: 21300000, guid: 0ca6a3f1b297c2b4899b9da783f96f7d, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: c999db8d7a90257478c4de020b3c612f, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000400000004000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 10bd7a2c8309cf6468c9967ba4a8d245, type: 3}
+      - {fileID: 21300000, guid: 6d1b99a6b0d340e4abb9ea95e07e6bad, type: 3}
+      - {fileID: 21300000, guid: 0ca6a3f1b297c2b4899b9da783f96f7d, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 1
+    _nextChoiceIndexes: 01000000
+  - _enabled: 1
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 451
+      y: 215
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Battler_Call
+      text: "\u300C\u73FE\u5728\u3001\u8972\u6483\u306B\u3088\u308A\u9694\u58C1\u304C\u7834\u640D\u3057\u53B3\u91CD\u4FDD\u7BA1\u5BFE\u8C61\u304C\u8131\u8D70\uFF01\u65E2\u306B\u6211\u3005\u306E\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u4E0B\u304B\u3089\u96E2\u308C\u3066\u3044\u307E\u3059\uFF01\u300D"
+      localizationID: Dialog.Chapter5-1-11
+      back: {fileID: 21300000, guid: 9a6e7b42bd87c7f41a066ed1fc75be07, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0.6462264, g: 1, b: 0.9796532, a: 1}
+      backFadeSpeed: 1
+      howCharas: 010000000100000001000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: ???
+      text: "\u30BA\u30EB\u30C3\u3001\u30BA\u30EB\u30C3\u2026"
+      localizationID: Dialog.Chapter5-1-12
+      back: {fileID: 21300000, guid: 9a6e7b42bd87c7f41a066ed1fc75be07, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: b9ca873c1e32b42449368a826da3cc03, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler_Call
+      text: "\u300C\u6211\u3005\u306B\u306F\u3069\u3046\u3057\u3088\u3046\u3082\u3042\u308A\u307E\u305B\u3093\uFF01\u300D"
+      localizationID: Dialog.Chapter5-1-13
+      back: {fileID: 21300000, guid: 9a6e7b42bd87c7f41a066ed1fc75be07, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler_Call
+      text: "\u300C\u3046\u3001\u3046\u308F\u3042\u3042\u3042\u3042\u3063\uFF01\u300D"
+      localizationID: Dialog.Chapter5-1-13-1
+      back: {fileID: 21300000, guid: 9a6e7b42bd87c7f41a066ed1fc75be07, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000200000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 1, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 654740c7a1ffb48428e05935cf0262e3, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 9a6e7b42bd87c7f41a066ed1fc75be07, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  _choiceList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 23
+      y: 127
+      width: 100
+      height: 100
+    _nextParagraphIndex: 1
+    nodeName: 
+    text: "\u2026\u2026\u308F\u304B\u3063\u305F\u3001\u5F93\u3046"
+    localizeID: Dialog.Chapter5-1-3
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 331
+      y: 215
+      width: 120
+      height: 77
+    _nextParagraphIndex: 2
+    nodeName: 
+    text: "\u2026\u306A\u3093\u3060"
+    localizeID: Dialog.Chapter5-1-10(1)
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 0, y: 0, z: 0}
+  graphPosition: {x: -520, y: 150, z: 0}
   havePreLocations: 0
-  newLocations: []
+  newLocations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
