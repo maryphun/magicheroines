@@ -31,6 +31,7 @@ namespace NovelEditor
 
         [SerializeField, HideInInspector] private float _BGMVolume = 1;
         [SerializeField, HideInInspector] private float _SEVolume = 1;
+        [SerializeField, HideInInspector] private float _VOICEVolume = 1;
 
         [SerializeField, HideInInspector] private HowInput _inputSystem;
         [SerializeField] private KeyCode[] _nextButton;
@@ -205,6 +206,24 @@ namespace NovelEditor
             {
                 _SEVolume = Mathf.Clamp(value, 0, 1);
                 _audioPlayer.SetSEVolume(_SEVolume);
+            }
+        }
+
+        /// <summary>
+        /// SEの大きさを変えられます
+        /// </summary>
+        /// <value>SEの大きさ</value>
+        public float VOICEVolume
+        {
+            get
+            {
+                return _VOICEVolume;
+            }
+
+            set
+            {
+                _VOICEVolume = Mathf.Clamp(value, 0, 1);
+                _audioPlayer.SetVoiceVolume(_VOICEVolume);
             }
         }
 
@@ -585,7 +604,7 @@ namespace NovelEditor
 
             //初期化処理
             _audioPlayer = gameObject.AddComponent<AudioPlayer>();
-            _audioPlayer.Init(_BGMVolume, _SEVolume);
+            _audioPlayer.Init(_BGMVolume, _SEVolume, _VOICEVolume);
 
             _choiceManager = GetComponentInChildren<ChoiceManager>();
             _choiceManager.Init(_choiceButton);
@@ -786,6 +805,9 @@ namespace NovelEditor
             _imageCTS = new CancellationTokenSource();
             _isImageChangeing = !await _novelUI.SetNextImage(newData, _imageCTS.Token);
 
+            // ボイス
+            _audioPlayer.SetVoiceData(newData);
+
             //テキストを1文字ずつ再生
             _textCTS = new CancellationTokenSource();
             _isReading = true;
@@ -883,6 +905,7 @@ namespace NovelEditor
             {
                 _audioPlayer.SetSEVolume(_SEVolume);
                 _audioPlayer.SetBGMVolume(_BGMVolume);
+                _audioPlayer.SetVoiceVolume(_VOICEVolume);
             }
 
             if (_novelUI == null)

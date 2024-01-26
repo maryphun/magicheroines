@@ -15,12 +15,15 @@ namespace NovelEditor
     {
         AudioSource _BGM;
         AudioSource _SE;
+        AudioSource _VOICE;
 
         private float _SEVolume;
         private float _BGMVolume;
+        private float _VOICEVolume;
 
         CancellationTokenSource BGMcancellation = new CancellationTokenSource();
         CancellationTokenSource SEcancellation = new CancellationTokenSource();
+        CancellationTokenSource VOICEcancellation = new CancellationTokenSource();
 
         bool _isFading = false;
 
@@ -29,7 +32,7 @@ namespace NovelEditor
         /// </summary>
         /// <param name="bgmVolume">BGMの初期音量</param>
         /// <param name="seVolume">SEの初期音量</param>
-        internal void Init(float bgmVolume, float seVolume)
+        internal void Init(float bgmVolume, float seVolume, float voiceVolume)
         {
             _BGM = gameObject.AddComponent<AudioSource>();
             _BGM.playOnAwake = false;
@@ -39,9 +42,14 @@ namespace NovelEditor
             _SE.playOnAwake = false;
             _SE.loop = true;
 
+            _VOICE = gameObject.AddComponent<AudioSource>();
+            _VOICE.playOnAwake = false;
+            _VOICE.loop = false;
+
 
             SetSEVolume(seVolume);
             SetBGMVolume(bgmVolume);
+            SetVoiceVolume(voiceVolume);
         }
 
         /// <summary>
@@ -59,6 +67,21 @@ namespace NovelEditor
             {
                 SetSE(data);
             }
+
+            // fade voice if playing
+            var s = FadeStop(_VOICE, VOICEcancellation.Token);
+        }
+
+        /// <summary>
+        /// Dialogueに応じてボイスを設定する
+        /// </summary>
+        /// <param name="data">次のセリフのデータ</param>
+        internal void SetVoiceData(Dialogue data)
+        {
+            if (!string.IsNullOrEmpty(data.localizationID))
+            {
+                SetVoice(data);
+            }
         }
 
         /// <summary>
@@ -69,6 +92,7 @@ namespace NovelEditor
         {
             _BGM.mute = flag;
             _SE.mute = flag;
+            _VOICE.mute = flag;
         }
 
         /// <summary>
@@ -78,8 +102,10 @@ namespace NovelEditor
         {
             BGMcancellation.Cancel();
             SEcancellation.Cancel();
+            VOICEcancellation.Cancel();
             _BGM.Stop();
             _SE.Stop();
+            _VOICE.Stop();
         }
 
         /// <summary>
@@ -122,6 +148,26 @@ namespace NovelEditor
             }
         }
 
+        void SetVoice(Dialogue data)
+        {
+            // try to load
+            AudioClip clip = Resources.Load<AudioClip>("Audio/VOICE/" + data.localizationID);
+
+            if (clip != null)
+            {
+                Stop(_VOICE, VOICEcancellation);
+                VOICEcancellation = new CancellationTokenSource();
+
+                SoundData soundData = new SoundData(clip, LoopMode.Count, 1, clip.length, 0.0f, 0.0f);
+                var t = PlaySE(soundData, _VOICEVolume, _VOICE, VOICEcancellation.Token);
+            }
+            else
+            {
+                // no voice
+                var s = FadeStop(_VOICE, VOICEcancellation.Token);
+            }
+        }
+
         /// <summary>
         /// 指定したAudioSourceの再生を停止する
         /// </summary>
@@ -135,6 +181,8 @@ namespace NovelEditor
 
         async UniTask<bool> FadeStop(AudioSource player, CancellationToken token)
         {
+            if (!player.isPlaying) return false;
+
             await FadeVolume(player.volume, 0, 0.5f, player, token);
             Stop(player, SEcancellation);
             return true;
@@ -221,6 +269,18 @@ namespace NovelEditor
                 await UniTask.WaitWhile(() => _isFading);
             _BGMVolume = bgmVolume;
             _BGM.volume = _BGMVolume;
+        }
+
+        /// <summary>
+        /// ボイスの音量を変更する
+        /// </summary>
+        /// <param name="voiceVolume">BGMの新しい音量</param>
+        internal async void SetVoiceVolume(float voiceVolume)
+        {
+            if (_isFading)
+                await UniTask.WaitWhile(() => _isFading);
+            _VOICEVolume = voiceVolume;
+            _VOICE.volume = _VOICEVolume;
         }
 
         /// <summary>
