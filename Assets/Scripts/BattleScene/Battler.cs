@@ -16,6 +16,7 @@ public class Battler : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private BattlerAnimation animations;
     [SerializeField] private BattlerSoundEffect soundEffects;
+    [SerializeField] private BattlerSoundEffect characterVoices;
     [SerializeField] private VFX attackVFX;
     [SerializeField] private float breathScale = 0.005f; // キャラのアニメション
     [SerializeField] private bool enableNormalAttack = true; // 普通攻撃出来るか
@@ -455,7 +456,7 @@ public class Battler : MonoBehaviour
     }
 
     /// <summary>
-    /// 死亡
+    /// リタイア
     /// </summary>
     public void KillBattler()
     {
@@ -491,7 +492,8 @@ public class Battler : MonoBehaviour
 
                             // play SE
                             AudioManager.Instance.PlaySFX("Retired");
-                    if (soundEffects.retire != null) AudioManager.Instance.PlaySFX(soundEffects.retire.name);
+                    AudioManager.Instance.PlaySFX(GetSoundEffects(BattlerSoundEffectType.Retire));
+                    AudioManager.Instance.PlaySFX(GetCharacterVoiceName(BattlerSoundEffectType.Retire));
                 });
     }
 
@@ -728,21 +730,34 @@ public class Battler : MonoBehaviour
         graphic.DOColor(originalColor, time);
     }
 
-    public string GetAttackSEName()
+
+    public string GetSoundEffects(BattlerSoundEffectType type)
     {
-        if (soundEffects.attack == null)
+        switch (type)
         {
-            return string.Empty;
+            case BattlerSoundEffectType.Attack:
+                return soundEffects.attack.name;
+            case BattlerSoundEffectType.Attacked:
+                return soundEffects.attacked.name;
+            case BattlerSoundEffectType.Retire:
+                return soundEffects.retire.name;
+            default:
+                return string.Empty;
         }
-        return soundEffects.attack.name;
     }
-    public string GetAttackedSEName()
+    public string GetCharacterVoiceName(BattlerSoundEffectType type)
     {
-        if (soundEffects.attacked == null)
+        switch (type)
         {
-            return string.Empty;
+            case BattlerSoundEffectType.Attack:
+                return characterVoices.attack.name;
+            case BattlerSoundEffectType.Attacked:
+                return characterVoices.attacked.name;
+            case BattlerSoundEffectType.Retire:
+                return characterVoices.retire.name;
+            default:
+                return string.Empty;
         }
-        return soundEffects.attacked.name;
     }
 
     public void SetTransparent(float alpha, float time)

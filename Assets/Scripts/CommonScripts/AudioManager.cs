@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class AudioManager : MonoBehaviour
 {
@@ -66,6 +67,10 @@ public class AudioManager : MonoBehaviour
         // Load all audio Resources
         seClips = Resources.LoadAll<AudioClip>("Audio/SE");
         bgmClips = Resources.LoadAll<AudioClip>("Audio/BGM");
+
+        // Load all voice acting
+        AudioClip[] voiceActing = Resources.LoadAll<AudioClip>("Audio/BATTLE_SE");
+        seClips.Union(voiceActing).ToArray();
     }
 
     public void SetSEMasterVolume(float value)
@@ -194,6 +199,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource PlaySFX(string clipname)
     {
+        if (string.IsNullOrEmpty(clipname)) return sfxSource;
+
         AudioClip clipToPlay = NameToSEClip(clipname);
 
         if (clipToPlay != null)

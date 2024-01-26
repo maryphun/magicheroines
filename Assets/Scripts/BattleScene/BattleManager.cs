@@ -545,6 +545,7 @@ public class Battle : MonoBehaviour
 
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+        AudioManager.Instance.PlaySFX(attacker.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         yield return new WaitForSeconds(characterMoveTime * 0.5f);
         // change character hirachy temporary
@@ -555,7 +556,7 @@ public class Battle : MonoBehaviour
         attacker.SpawnAttackVFX(target);
 
         // play SE
-        AudioManager.Instance.PlaySFX(attacker.GetAttackSEName(), 0.8f);
+        AudioManager.Instance.PlaySFX(attacker.GetSoundEffects(BattlerSoundEffectType.Attack), 0.8f);
 
         // attack miss?
         bool isMiss = (UnityEngine.Random.Range(0, 100) > CalculateHitChance(attacker.speed - target.speed));
@@ -567,14 +568,15 @@ public class Battle : MonoBehaviour
             int realDamage = target.DeductHP(attacker, levelAdjustedDamage);
 
             // play SE
-            if (target.GetAttackedSEName() != string.Empty)
+            if (!string.IsNullOrEmpty(target.GetSoundEffects(BattlerSoundEffectType.Attacked)))
             {
-                AudioManager.Instance.PlaySFX(target.GetAttackSEName(), 0.8f);
+                AudioManager.Instance.PlaySFX(target.GetSoundEffects(BattlerSoundEffectType.Attacked), 0.8f);
             }
             else
             {
                 AudioManager.Instance.PlaySFX("Attacked", 0.8f);
             }
+            AudioManager.Instance.PlaySFX(target.GetCharacterVoiceName(BattlerSoundEffectType.Attacked));
 
             // animation
             target.Shake(attackAnimPlayTime + characterMoveTime);

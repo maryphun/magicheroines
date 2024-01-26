@@ -16,6 +16,11 @@ public struct BattlerSoundEffect
     public AudioClip attack, attacked, retire;
 }
 
+public enum BattlerSoundEffectType
+{
+    Attack, Attacked, Retire,
+}
+
 [System.Serializable]
 public enum BattlerAnimationType
 {
