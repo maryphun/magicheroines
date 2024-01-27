@@ -151,6 +151,13 @@ public class StoryManager : MonoBehaviour
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
+            case 15:
+                {
+                    BattleSetup.AddEnemy("Nayuta_Enemy");
+                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    NovelSingletone.Instance.PlayNovel("Chapter5-3 Prebattle", true, GoToBattle);
+                }
+                break;
             default:
                 // –¢ŠJ”­’n‘Ñ
                 underdevelopment.SetActive(true);
@@ -251,6 +258,11 @@ public class StoryManager : MonoBehaviour
             case 14:
                 {
                     NovelSingletone.Instance.PlayNovel("Chapter5-2", true, GoToRewardScreen);
+                }
+                break;
+            case 15:
+                {
+                    NovelSingletone.Instance.PlayNovel("Chapter5-3 AfterBattle", true, GoToRewardScreen);
                 }
                 break;
             default:
