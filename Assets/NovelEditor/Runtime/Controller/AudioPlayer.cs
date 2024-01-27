@@ -23,9 +23,11 @@ namespace NovelEditor
 
         CancellationTokenSource BGMcancellation = new CancellationTokenSource();
         CancellationTokenSource SEcancellation = new CancellationTokenSource();
+        CancellationTokenSource SELoopCancellation = new CancellationTokenSource();
         CancellationTokenSource VOICEcancellation = new CancellationTokenSource();
 
         bool _isFading = false;
+        bool _isLoopingSE = false;
 
         /// <summary>
         /// 初期化用関数
@@ -144,6 +146,8 @@ namespace NovelEditor
                     break;
                 case SoundStyle.Stop:
                     var s = FadeStop(_SE, SEcancellation.Token);
+                    SELoopCancellation.Cancel();
+                    _isLoopingSE = false;
                     break;
             }
         }
@@ -155,16 +159,16 @@ namespace NovelEditor
 
             if (clip != null)
             {
-                Stop(_VOICE, VOICEcancellation);
-                VOICEcancellation = new CancellationTokenSource();
-
-                SoundData soundData = new SoundData(clip, LoopMode.Count, 1, clip.length, 0.0f, 0.0f);
-                var t = PlaySE(soundData, _VOICEVolume, _VOICE, VOICEcancellation.Token);
+                //Stop(_VOICE, VOICEcancellation);
+                //VOICEcancellation = new CancellationTokenSource();
+                _VOICE.volume = _VOICEVolume;
+                _VOICE.clip = clip;
+                _VOICE.Play();
             }
-            else
+            else if (_VOICE.clip != null)
             {
                 // no voice
-                var s = FadeStop(_VOICE, VOICEcancellation.Token);
+                Stop(_VOICE, VOICEcancellation);
             }
         }
 
@@ -181,8 +185,6 @@ namespace NovelEditor
 
         async UniTask<bool> FadeStop(AudioSource player, CancellationToken token)
         {
-            if (!player.isPlaying) return false;
-
             await FadeVolume(player.volume, 0, 0.5f, player, token);
             Stop(player, SEcancellation);
             return true;
@@ -239,8 +241,13 @@ namespace NovelEditor
             {
                 case LoopMode.Endless:
                     // TODO: 機能していなさそう。要確認
-                    await UniTask.Delay((int)(data.clip.length * 1000), cancellationToken: token);
-                    await Play(data, defaultVolume, player, token);
+                    _isLoopingSE = true;
+                    SELoopCancellation = new CancellationTokenSource();
+                    await UniTask.Delay((int)(data.clip.length * 1000), true, PlayerLoopTiming.Update, SELoopCancellation.Token);
+                    if (_isLoopingSE)
+                    {
+                        await PlaySE(data, defaultVolume, player, token);
+                    }
                     break;
             }
 
@@ -274,7 +281,7 @@ namespace NovelEditor
         /// <summary>
         /// ボイスの音量を変更する
         /// </summary>
-        /// <param name="voiceVolume">BGMの新しい音量</param>
+        /// <param name="voiceVolume">ボイスの新しい音量</param>
         internal async void SetVoiceVolume(float voiceVolume)
         {
             if (_isFading)
