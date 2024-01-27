@@ -70,7 +70,7 @@ public class AudioManager : MonoBehaviour
 
         // Load all voice acting
         AudioClip[] voiceActing = Resources.LoadAll<AudioClip>("Audio/BATTLE_SE");
-        seClips.Union(voiceActing).ToArray();
+        seClips = seClips.Union(voiceActing).ToArray();
     }
 
     public void SetSEMasterVolume(float value)

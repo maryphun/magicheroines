@@ -736,10 +736,13 @@ public class Battler : MonoBehaviour
         switch (type)
         {
             case BattlerSoundEffectType.Attack:
+                if (soundEffects.attack == null) return string.Empty;
                 return soundEffects.attack.name;
             case BattlerSoundEffectType.Attacked:
+                if (soundEffects.attacked == null) return string.Empty;
                 return soundEffects.attacked.name;
             case BattlerSoundEffectType.Retire:
+                if (soundEffects.retire == null) return string.Empty;
                 return soundEffects.retire.name;
             default:
                 return string.Empty;
@@ -750,10 +753,13 @@ public class Battler : MonoBehaviour
         switch (type)
         {
             case BattlerSoundEffectType.Attack:
+                if (characterVoices.attack == null) return string.Empty;
                 return characterVoices.attack.name;
             case BattlerSoundEffectType.Attacked:
+                if (characterVoices.attacked == null) return string.Empty;
                 return characterVoices.attacked.name;
             case BattlerSoundEffectType.Retire:
+                if (characterVoices.retire == null) return string.Empty;
                 return characterVoices.retire.name;
             default:
                 return string.Empty;

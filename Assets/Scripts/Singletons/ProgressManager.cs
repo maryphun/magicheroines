@@ -561,7 +561,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         {
             BattleSetup.Reset(false);
             BattleSetup.SetAllowEscape(true);
-            BattleSetup.AddEnemy("Nayuta_Enemy");
+            BattleSetup.AddEnemy("Rikka_Enemy");
         }
     }
 #else

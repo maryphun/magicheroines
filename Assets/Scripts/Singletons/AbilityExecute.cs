@@ -1366,6 +1366,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.QuickAttack"), CustomColor.abilityName())));
 
+        // play SE
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
+
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)
                 .AppendCallback(() =>
