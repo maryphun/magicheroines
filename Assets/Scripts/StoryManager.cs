@@ -141,6 +141,16 @@ public class StoryManager : MonoBehaviour
                     ProgressManager.Instance.AddPlayerCharacter(Kei);
                 }
                 break;
+            case 14:
+                {
+                    BattleSetup.AddEnemy("GoldDrone");
+                    BattleSetup.AddEnemy("DarkAndroid");
+                    BattleSetup.AddEnemy("GoldDrone");
+                    BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
+                    BattleSetup.SetReward(650, 115);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
             default:
                 // ñ¢äJî≠ínë—
                 underdevelopment.SetActive(true);
@@ -235,6 +245,12 @@ public class StoryManager : MonoBehaviour
                 break;
             case 13:
                 {
+                    // 5-1ÇÕêÌì¨Ç™Ç»Ç¢ÇÃÇ≈Ç±Ç±Ç…íHÇÁÇ»Ç¢
+                }
+                break;
+            case 14:
+                {
+                    NovelSingletone.Instance.PlayNovel("Chapter5-2", true, GoToRewardScreen);
                 }
                 break;
             default:
