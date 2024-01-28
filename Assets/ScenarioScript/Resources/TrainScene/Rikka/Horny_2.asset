@@ -1,0 +1,1797 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
+  m_Name: Horny_2
+  m_EditorClassIdentifier: 
+  _locations: []
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    _nextParagraphIndex: 1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u516D\u82B1\u304C\u5730\u4E0B\u30AB\u30B8\u30CE\u3067\u30B7\u30E7\u30FC\u3092\u3059\u308B\u3088\u3046\u306B\u306A\u3063\u3066\u304B\u3089\u3057\u3070\u3089\u304F\u3057\u3066\u2015\u2015\u2015\u2015\u2015"
+      localizationID: Rikka.Debauchery2-1
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B8\u30E5\u30DD\u30C3\u3001\u30B8\u30E5\u30DD\u30C3\u3001\u30B0\u30DD\u30C3\u3001\u30B0\u30DD\u30C3"
+      localizationID: Rikka.Debauchery2-2
+      back: {fileID: 21300000, guid: e61d93476db444f4598370fb249cabcf, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30AB\u30B8\u30CE\u306B\u6FC0\u3057\u3044\u6C34\u97F3\u304C\u97FF\u304F"
+      localizationID: Rikka.Debauchery2-3
+      back: {fileID: 21300000, guid: e61d93476db444f4598370fb249cabcf, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u304A\u3063\u2665\u3001\u3093\u309B\u3063\u2665\u3001\u89B3\u5BA2\u306E\u7686\u3055\u3093\u3063\u2665\uFF01\u516D\u82B1\u306E\u30C7\u30A3\u30EB\u30C9\u30AA\u30CA\u30CB\u30FC\u30B7\u30E7\u30FC\u306B\u304A\u96C6\u307E\u308A\u3044\u305F\u3060\u304D\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\uFF01\u300D"
+      localizationID: Rikka.Debauchery2-4
+      back: {fileID: 21300000, guid: e61d93476db444f4598370fb249cabcf, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u7686\u3055\u3093\u306E\u304A\u304B\u3052\u3067\u3063\u2665\u3001\u516D\u82B1\u306E\u304A\u5C3B\u3053\u3093\u306A\u5927\u304D\u306A\u30C7\u30A3\u30EB\u30C9\u307E\u3067\u5165\u308B\u3088\u3046\u306B\u306A\u3063\u3061\u3083\u3044\u307E\u3057\u305F\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-5
+      back: {fileID: 21300000, guid: e61d93476db444f4598370fb249cabcf, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3067\u306F\u79C1\u304C\u30A4\u30AF\u307E\u3067\u516D\u82B1\u306E\u30C7\u30A3\u30EB\u30C9\u30AA\u30CA\u30CB\u30FC\u3054\u89A7\u304F\u3060\u3055\u3044\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-6
+      back: {fileID: 21300000, guid: e61d93476db444f4598370fb249cabcf, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u516D\u82B1\u306F\u8155\u307B\u3069\u306E\u592A\u3055\u3082\u3042\u308B\u30C7\u30A3\u30EB\u30C9\u3092\u54A5\u3048\u3053\u307F\u306A\u304C\u3089\u3001\u8170\u306E\u52D5\u304D\u3092\u6FC0\u3057\u304F\u3057\u3066\u3044\u304F"
+      localizationID: Rikka.Debauchery2-7
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B0\u30DD\u30C3\u30C3\u3001\u30B0\u30DD\u30C3\u3001\u30B0\u30DD\u30C3\u3001\u30B0\u30DD\u30C3\uFF01\uFF01"
+      localizationID: Rikka.Debauchery2-8
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u304A\u309B\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-9
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Audience
+      text: "\u300C\u516D\u82B1\u3061\u3083\u3093\u9811\u5F35\u308C\u30FC\uFF01\u300D"
+      localizationID: Rikka.Debauchery2-10
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u3063\u2665\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\u2665\u3001\u9811\u5F35\u308A\u307E\u3059\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-11
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Audience
+      text: "\u300C\u3057\u304B\u3057\u3042\u306E\u8056\u6838\u6226\u59EB\u304C\u307E\u3055\u304B\u3053\u3093\u306A\u9038\u6750\u3060\u3063\u305F\u3068\u306F\u306A\u300D"
+      localizationID: Rikka.Debauchery2-12
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Audience
+      text: "\u300C\u521D\u3081\u3066\u898B\u305F\u6642\u306F\u771F\u9762\u76EE\u306A\u611F\u3058\u306A\u306E\u304B\u3068\u601D\u3063\u305F\u304C\u2026\u300D"
+      localizationID: Rikka.Debauchery2-13
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u3063\u2665\u3001\u3054\u3081\u3093\u306A\u3055\u3044\u3063\u2665\u3001\u516D\u82B1\u306F\u30B1\u30C4\u7A74\u3067\u30A4\u30AF\u5909\u614B\u8056\u6838\u6226\u59EB\u3067\u3057\u305F\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-14
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B0\u30DD\u30C3\u2665\u3001\u30B0\u30DD\u30C3\u2665\u3001\u30B0\u30DD\u30C3\u2665\u3001\u30B0\u30DD\u30C3\u2665"
+      localizationID: Rikka.Debauchery2-15
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u309B\u3063\u2665\u3001\u304A\u309B\u304A\u3063\u2665\u3001\u7686\u3055\u3093\u3063\u2665\u3001\u516D\u82B1\u304C\u30A4\u30AF\u6240\u307F\u3066\u3066\u304F\u3060\u3055\u3044\u3063\u2665\uFF01\u300D"
+      localizationID: Rikka.Debauchery2-16
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u516D\u82B1\u306F\u66F4\u306B\u8170\u3092\u632F\u308B\u901F\u5EA6\u3092\u4E0A\u3052\u3066\u3044\u304F"
+      localizationID: Rikka.Debauchery2-17
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B0\u30DD\u30C3\u2665\u3001\u30B0\u30DD\u30C3\u2665\u3001\u30B0\u30DD\u30C3\u2665\u3001\u30B0\u30DD\u30C3\u2665"
+      localizationID: Rikka.Debauchery2-18
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u309B\u3063\u2665\u3001\u3093\u304A\u309B\u3063\u2665\u3001\u3075\u3046\u3063\u2665\u3001\u3093\u309B\u3093\u3063\u2665\uFF01\u300D"
+      localizationID: Rikka.Debauchery2-19
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u309B\u3063\u2665\u3001\u3093\u3042\u3063\u2665\uFF01\uFF1F\u3001\u3084\u3070\u3063\u3001\u30C7\u30A3\u30EB\u30C9\u304C\u629C\u3051\u2015\u2015\u2015\u2015\u300D"
+      localizationID: Rikka.Debauchery2-20
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 3cf1a0130a9908c4a85e71b8ef33224c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 153
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u30AE\u30E5\u30DD\u30F3\u30C3\uFF01\u3001\u30B0\u30EA\u30E5\u30EA\u30E5\u30EA\u30E5\u30C3\uFF01"
+      localizationID: Rikka.Debauchery2-21
+      back: {fileID: 21300000, guid: 43f5faeb79251d14da014cc3884a3a4f, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3072\u3063\u304E\u3085\u3046\u3046\u3046\u3046\u3063\u2665\uFF01\uFF1F\u3001\u3093\u3042\u3063\u2665\u3001\u3093\u3042\u3042\u309B\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-22
+      back: {fileID: 21300000, guid: 43f5faeb79251d14da014cc3884a3a4f, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u610F\u56F3\u305B\u305A\u30C7\u30A3\u30EB\u30C9\u304C\u629C\u3051\u305F\u885D\u6483\u3067\u3001\u516D\u82B1\u306F\u6FC0\u3057\u304F\u7D76\u9802\u3092\u611F\u3058\u3066\u3057\u307E\u3046"
+      localizationID: Rikka.Debauchery2-23
+      back: {fileID: 21300000, guid: 43f5faeb79251d14da014cc3884a3a4f, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u3001\u3093\u309B\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-24
+      back: {fileID: 21300000, guid: 43f5faeb79251d14da014cc3884a3a4f, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u309B\u3046\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u306F\u3042\u3063\u2665\u2026\u300D"
+      localizationID: Rikka.Debauchery2-25
+      back: {fileID: 21300000, guid: 5d5caac14e70b5e46aa4da858e7f88bc, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3061\u3087\u3063\u3068\u3057\u305F\u30CF\u30D7\u30CB\u30F3\u30B0\u306F\u3042\u308A\u307E\u3057\u305F\u304C\u2026\u516D\u82B1\u306E\u30C7\u30A3\u30EB\u30C9\u30AA\u30CA\u30CB\u30FC\u30B7\u30E7\u30FC\u3067\u3057\u305F\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-26
+      back: {fileID: 21300000, guid: 5d5caac14e70b5e46aa4da858e7f88bc, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u89B3\u5BA2\u304B\u3089\u306F\u62CD\u624B\u304C\u4E0A\u304C\u308B"
+      localizationID: Rikka.Debauchery2-27
+      back: {fileID: 21300000, guid: 5d5caac14e70b5e46aa4da858e7f88bc, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u309B\u3063\u2665\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\u2665\u2026\u3067\u306F\u7D9A\u3044\u3066\u3063\uFF01\u300D"
+      localizationID: Rikka.Debauchery2-28
+      back: {fileID: 21300000, guid: 5d5caac14e70b5e46aa4da858e7f88bc, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u516D\u82B1\u306F\u30D4\u30EA\u30D4\u30EA\u3068\u81EA\u5206\u306E\u80A1\u9593\u306E\u524D\u5F35\u308A\u3092\u306F\u304C\u3059"
+      localizationID: Rikka.Debauchery2-29
+      back: {fileID: 21300000, guid: 5d5caac14e70b5e46aa4da858e7f88bc, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3058\u3083\u30FC\u3093\u3063\u2665\u3001\u30AA\u30CA\u30CB\u30FC\u3067\u30C8\u30ED\u30C8\u30ED\u306B\u51FA\u6765\u4E0A\u304C\u3063\u305F\u304A\u30DE\u30F3\u30B3\u3067\u3059\u3063\u2665\u2665\u300D"
+      localizationID: Rikka.Debauchery2-30
+      back: {fileID: 21300000, guid: 4866d37420452454ebc5006630a6ed2d, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3067\u306F\u2026\u9811\u5F35\u3063\u305F\u516D\u82B1\u3061\u3083\u3093\u306B\u304A\u3072\u306D\u308A\u306E\u4EE3\u308F\u308A\u306B\u7686\u69D8\u306E\u30B6\u30FC\u30E1\u30F3\u3076\u3063\u304B\u3051\u3066\u304F\u3060\u3055\u3044\u3063\u2665\uFF01\u300D"
+      localizationID: Rikka.Debauchery2-31
+      back: {fileID: 21300000, guid: 4866d37420452454ebc5006630a6ed2d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3042\u3001\u307E\u3060\u30B7\u30E7\u30FC\u306E\u9014\u4E2D\u306A\u306E\u3067\u304A\u3055\u308F\u308A\u306F\u99C4\u76EE\u3067\u3059\u3088\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-32
+      back: {fileID: 21300000, guid: 4866d37420452454ebc5006630a6ed2d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u89B3\u5BA2\u305F\u3061\u306F\u30B9\u30C6\u30FC\u30B8\u4E0A\u306E\u516D\u82B1\u306B\u5411\u304B\u3063\u3066\u5404\u3005\u7CBE\u6DB2\u3092\u5410\u304D\u51FA\u3057\u3066\u3044\u304F"
+      localizationID: Rikka.Debauchery2-33
+      back: {fileID: 21300000, guid: e63ade3ad6f97364d939ed1af2c5691a, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u309B\u3063\u2665\u3001\u7686\u69D8\u306E\u7CBE\u6DB2\u3063\u2665\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-34
+      back: {fileID: 21300000, guid: e63ade3ad6f97364d939ed1af2c5691a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Audience
+      text: "\u300C\u826F\u304B\u3063\u305F\u3088\u516D\u82B1\u3061\u3083\u3093\uFF01\u6BCE\u56DE\u898B\u3066\u308B\u3051\u3069\u3059\u3063\u304B\u308A\u30AC\u30D0\u30AC\u30D0\u30A2\u30CA\u30EB\u3060\u306D\u3063\u300D"
+      localizationID: Rikka.Debauchery2-35
+      back: {fileID: 21300000, guid: c68fa29bf5cae8746ac70c900c15b8d4, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3093\u3042\u3063\u2665\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\u2665\u304A\u5144\u3055\u3093\u306E\u7CBE\u6DB2\u3063\u3001\u304A\u30DE\u30F3\u30B3\u306E\u826F\u3044\u6240\u306B\u304B\u304B\u3063\u3066\u308B\u3063\u2026\u2665\u300D"
+      localizationID: Rikka.Debauchery2-36
+      back: {fileID: 21300000, guid: c68fa29bf5cae8746ac70c900c15b8d4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u516D\u82B1\u306E\u4E0B\u534A\u8EAB\u304C\u6027\u6DB2\u307E\u307F\u308C\u306B\u306A\u3063\u305F\u5F8C\u2015\u2015\u2015\u2015"
+      localizationID: Rikka.Debauchery2-37
+      back: {fileID: 21300000, guid: c68fa29bf5cae8746ac70c900c15b8d4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u2026\u305D\u308C\u3067\u306F\u7686\u3055\u3093\u3063\u2665\u3001\u3053\u308C\u304B\u3089\u516D\u82B1\u3061\u3083\u3093\u30CF\u30E1\u30CF\u30E1\u30BF\u30A4\u30E0\u3067\u3059\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-38
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u7686\u69D8\u306B\u30AA\u30CA\u30CB\u30FC\u3059\u308B\u6240\u898B\u3089\u308C\u3066\u3063\u2665\u3001\u30B6\u30FC\u30E1\u30F3\u3076\u3063\u304B\u3051\u3089\u308C\u3066\u3063\u2665\u3001\u516D\u82B1\u6211\u6162\u3067\u304D\u306A\u304F\u306A\u3063\u3061\u3083\u3044\u307E\u3057\u305F\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-39
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u8ABF\u6559\u3055\u308C\u3066\u7DE9\u304F\u306A\u3063\u3061\u3083\u3063\u305F\u516D\u82B1\u306E\u30A2\u30CA\u30EB\u3068\u304A\u30DE\u30F3\u30B3\u2026\u7686\u3055\u3093\u3067\u53EF\u611B\u304C\u3063\u3066\u304F\u3060\u3055\u3044\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-40
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u89B3\u5BA2\u304B\u3089\u6B53\u58F0\u304C\u4E0A\u304C\u308A\u3001\u89B3\u5BA2\u306F\u516D\u82B1\u306E\u30DE\u30F3\u30B3\u306B\u7167\u6E96\u3092\u5408\u308F\u305B\u308B"
+      localizationID: Rikka.Debauchery2-41
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u3053\u3093\u306A\u306B\u6CA2\u5C71\u306E\u304A\u30C1\u30F3\u30DD\u304C\u79C1\u3092\u3063\u2026\u2665\u300D"
+      localizationID: Rikka.Debauchery2-42
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u3053\u3053\u307E\u3067\u6765\u305F\u3089\u8056\u6838\u6226\u59EB\u306B\u306F\u623B\u308C\u306A\u3044\u2026\u3051\u3069\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-43
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka
+      text: "\u300C\u6CA2\u5C71\u304A\u30C1\u30F3\u30DD\u306B\u5FC5\u8981\u3068\u3055\u308C\u3066\u3063\u2665\u516D\u82B1\u5E78\u305B\u3067\u3059\u3063\u2665\u300D"
+      localizationID: Rikka.Debauchery2-44
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: a64abea88873d044dacac6d9bb5e59c9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  _choiceList: []
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: 151, y: 154, z: 0}
+  havePreLocations: 0
+  newLocations: []
