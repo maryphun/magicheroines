@@ -521,15 +521,13 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         isDebugModeInitialized = true;
 
         // 調教できるヒロインを追加
-        PlayerCharacterDefine Erena = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/6.Erena");
-        AddPlayerCharacter(Erena).is_corrupted = true;
+        PlayerCharacterDefine First = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/1.Battler");
 
-        PlayerCharacterDefine Akiho = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/4.Akiho");
-        AddPlayerCharacter(Akiho);
+        PlayerCharacterDefine Second = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/2.TentacleMan");
 
         // フォーメーション編成
-        playerData.formationCharacters[0].characterID = -1;
-        playerData.formationCharacters[1].characterID = Erena.detail.characterID;
+        playerData.formationCharacters[0].characterID = First.detail.characterID;
+        playerData.formationCharacters[1].characterID = Second.detail.characterID;
 
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
