@@ -12,8 +12,9 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: "\u30D5\u30A9\u30FC\u30EC\u30F3\u8CA1\u56E3"
-  productName: "\u8056\u6838\u6226\u59EB"
+  companyName: "\u30C0\u30FC\u30AF\u30CD\u30B9LAB"
+  productName: "\u30AA\u30DA\u30EC\u30FC\u30B7\u30E7\u30F3\u30C0\u30FC\u30AF\u30B5\u30A4\u30C9
+    -\u8056\u6838\u6226\u59EB\u58CA\u6EC5\u4F5C\u6226-"
   defaultCursor: {fileID: 2800000, guid: 17c6fc89c26fca64ea4236efab09ac28, type: 3}
   cursorHotspot: {x: 73, y: 5}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -280,7 +281,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4fccbe85dd3442b4ca858a81ef55ccf2, type: 3}
+      m_Icon: {fileID: 2800000, guid: 7458a355cfacb31408eff89c8f5c75e9, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -609,7 +610,7 @@ PlayerSettings:
     QNX: UNITY_VISUAL_SCRIPTING
     Server: UNITY_VISUAL_SCRIPTING
     Stadia: UNITY_VISUAL_SCRIPTING
-    Standalone: MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;UNITY_VISUAL_SCRIPTING;DEBUG_MODE
+    Standalone: MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;UNITY_VISUAL_SCRIPTING;DEMO
     WebGL: UNITY_VISUAL_SCRIPTING
     Windows Store Apps: UNITY_VISUAL_SCRIPTING
     XboxOne: UNITY_VISUAL_SCRIPTING

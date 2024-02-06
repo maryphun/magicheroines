@@ -78,6 +78,7 @@ System.EquipmentRare,逸品
 System.EquipmentHoly,聖核装備
 System.ReturnToTitle,タイトルメニューに戻る
 System.Retry,リトライ
+System.Understood,了解
 System.PanelUnavailable,"未開放
 聖核戦姫を捕獲せよ"
 System.RewardItem,アイテム獲得
@@ -443,3 +444,9 @@ BattleLog.Reprogram,{0}　の攻撃力が{1}点増加。防御力{2}点増加。
 BattleLog.PowerMode,雷神之相の代償！{0}が{1}ダメージを受けた。
 BattleLog.ChargeAttack,攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック)
 BattleLog.NayutaEquip,[{0}] {1}　の攻撃力が {2} 上がった！
+Demo,体験版
+Demo.Start,"本ソフトウェアは体験版になります。
+一部機能が制限されており、声優の声あてがまだ全部実装されておりません。
+ゲームの途中までしか遊べません。"
+Demo.End,体験版を遊んでいただき、ありがとうございます！体験版の気に入ったところ、そうでなかったところ、完全版を改良する提案などあれば、ぜひ教えてください！
+Demo.LockedFeature,正式版のみ使えます_(・ω・_)⌒)_ 
