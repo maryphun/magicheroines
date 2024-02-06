@@ -16,6 +16,15 @@ public class HomeSceneUI : MonoBehaviour
 
     private void Start()
     {
+#if DEMO
+        if (ProgressManager.Instance.GetCurrentStageProgress() == DemoParameter.EndChapter)
+        {
+            DemoParameter.isDemoEnded = true;
+            NovelSingletone.Instance.PlayNovel("TrainScene/Akiho/BrainWash_1", true, EndDemo);
+            return;
+        }
+#endif
+
         AlphaFadeManager.Instance.FadeIn(1.0f);
 
         AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 2.0f);
@@ -51,4 +60,12 @@ public class HomeSceneUI : MonoBehaviour
         while (asyncLoad.progress < 0.9f) yield return null; // wait until the scene is completely loaded 
         asyncLoad.allowSceneActivation = true;
     }
+
+#if DEMO
+    // ‘ÌŒ±”ÅI—¹
+    public void EndDemo()
+    {
+        SceneManager.LoadScene("Demo", LoadSceneMode.Single);
+    }
+#endif
 }
