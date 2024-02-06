@@ -330,6 +330,7 @@ MonoBehaviour:
   autoplayer: {fileID: 2729100340605908161}
   skipDialogue: {fileID: 8973443365521194584}
   optionPanel: {fileID: 6241242236051955695}
+  novelplayer: {fileID: 2248004457913512207}
   logObjs: []
 --- !u!225 &5238019515015691384
 CanvasGroup:
@@ -3431,6 +3432,7 @@ MonoBehaviour:
   _autoSpeed: 1
   _BGMVolume: 0.466
   _SEVolume: 0.468
+  _VOICEVolume: 1
   _inputSystem: 0
   _nextButton: 
   _skipButton: 

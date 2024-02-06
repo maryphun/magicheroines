@@ -12,6 +12,7 @@ public class MemoryPanel : MonoBehaviour
     [Header("References")]
     [SerializeField] private CanvasGroup canvasGrp;
     [SerializeField] private Transform memoryHandle;
+    [SerializeField] private CanvasGroup demoOnlyPanel;
 
     public void OpenMemoryPanel()
     {
@@ -25,6 +26,12 @@ public class MemoryPanel : MonoBehaviour
 
         // èâä˙âª
         SetupMemories();
+
+#if DEMO
+        demoOnlyPanel.alpha = 1.0f;
+        demoOnlyPanel.interactable = true;
+        demoOnlyPanel.blocksRaycasts = true;
+#endif
     }
 
     public void CloseMemoryPanel()

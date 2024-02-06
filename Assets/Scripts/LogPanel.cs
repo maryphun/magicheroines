@@ -20,6 +20,7 @@ public class LogPanel : MonoBehaviour
     [SerializeField] private ToggleAutoButton autoplayer;
     [SerializeField] private SkipDialogueUI skipDialogue;
     [SerializeField] private OptionPanel optionPanel;
+    [SerializeField] private NovelEditor.NovelPlayer novelplayer;
 
     [Header("Debug")]
     [SerializeField] private List<LogDialogField> logObjs;
@@ -27,6 +28,7 @@ public class LogPanel : MonoBehaviour
     public void OpenPanel()
     {
         if (optionPanel.IsOpen()) return;
+        if (!novelplayer.IsPlaying) return;
 
         logPanelCanvas.DOFade(1.0f, fadeAnimationTime);
         logPanelCanvas.interactable = true;
@@ -39,6 +41,8 @@ public class LogPanel : MonoBehaviour
 
     public void ClosePanel()
     {
+        if (!novelplayer.IsPlaying) return;
+
         logPanelCanvas.interactable = false;
         logPanelCanvas.blocksRaycasts = false;
 
@@ -109,7 +113,7 @@ public class LogPanel : MonoBehaviour
         }
         else
         {
-            if (Input.mouseScrollDelta.y < 0 && scrollView.verticalNormalizedPosition == 0)
+            if (Input.mouseScrollDelta.y < 0 && scrollView.verticalNormalizedPosition <= 0)
             {
                 ClosePanel();
             }

@@ -25,6 +25,7 @@ public class OptionPanel : MonoBehaviour
     [SerializeField] private TMP_Text autoSpeedValue;
     [SerializeField] private Toggle fullScreenToggle;
     [SerializeField] private Toggle windowScreenToggle;
+    [SerializeField] private Button backButton;
 
     public static float defaultBGMVolume = 0.5f;
     public static float defaultSEVolume = 0.5f;
@@ -195,7 +196,7 @@ public class OptionPanel : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            QuitOptionPanel();
+            backButton.onClick.Invoke();
         }
     }
 }
