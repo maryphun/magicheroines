@@ -20,7 +20,11 @@ public class TitleSelectUI : MonoBehaviour
 
     Dictionary<TitleSelection, string> titleSelectionText = new Dictionary<TitleSelection, string>
     {
+#if DEMO
+        [TitleSelection.NewGame] = "Demo.StartDemo",
+#else
         [TitleSelection.NewGame] = "System.NewGame",
+#endif
         [TitleSelection.Load] = "System.Load",
         [TitleSelection.Gallery] = "System.Gallery",
         [TitleSelection.Option] = "System.Option",
@@ -39,6 +43,8 @@ public class TitleSelectUI : MonoBehaviour
     [SerializeField] private TMP_Text dummyText;
     [SerializeField] private OptionPanel optionPanel;
     [SerializeField] private SaveLoadPanel saveloadPanel;
+    [SerializeField] private CanvasGroup demoOnly;
+    [SerializeField] private RectTransform blackbar_top, blackbar_btm;
 
     [Header("Debug")]
     [SerializeField] private TitleSelection currentSelection;
@@ -277,6 +283,7 @@ public class TitleSelectUI : MonoBehaviour
     {
         if (optionPanel.IsOpen()) return;
         if (saveloadPanel.IsOpen) return;
+        if (demoOnly.blocksRaycasts) return;
 
         // Todo: Use Input manager instead
         if (Input.GetKeyDown(KeyCode.UpArrow)) keyPrepressed = KeyCode.UpArrow;
@@ -335,12 +342,20 @@ public class TitleSelectUI : MonoBehaviour
                 Application.Quit();
                 return string.Empty;
             case TitleSelection.Gallery:
+#if DEMO
+                demoOnly.DOFade(1.0f, animationTime);
+                demoOnly.interactable = true;
+                demoOnly.blocksRaycasts = true;
+#else
                 Init();
+#endif
                 return string.Empty;
             case TitleSelection.Load:
                 saveloadPanel.OpenSaveLoadPanel(true);
                 return string.Empty;
             case TitleSelection.NewGame:
+                blackbar_top.DOAnchorPosY(blackbar_top.rect.height, 1.0f);
+                blackbar_btm.DOAnchorPosY(-blackbar_btm.rect.height, 1.0f);
                 return "Tutorial";
             case TitleSelection.Option:
                 optionPanel.OpenOptionPanel();
@@ -348,5 +363,15 @@ public class TitleSelectUI : MonoBehaviour
             default:
                 return string.Empty;
         }
+    }
+
+    public void CloseDemoOnlyPanel()
+    {
+        AudioManager.Instance.PlaySFX("SystemCancel");
+        demoOnly.DOFade(0.0f, animationTime);
+        DOTween.Sequence().AppendInterval(animationTime).AppendCallback(() => {
+            demoOnly.interactable = false;
+            demoOnly.blocksRaycasts = false;
+        });
     }
 }
