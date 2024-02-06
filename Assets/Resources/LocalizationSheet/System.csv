@@ -284,7 +284,7 @@ Ability.DeepBreath,緊急回復
 Ability.DeepBreath_Info,"自身のHPを回復
 残りHPが少ないほど回復量が多くなる"
 Ability.PowerfulPunch,パワフルパンチ
-Ability.PowerfulPunch_Info,"敵１体に普通攻撃の2倍ダメージを与える。
+Ability.PowerfulPunch_Info,"敵１体に普通攻撃の2.5倍ダメージを与える。
 使用者がその後の1ターン行動不能になる"
 Ability.Tackle,共倒れ
 Ability.Tackle_Info,敵１体と共に1ターン行動不能になる
@@ -447,8 +447,11 @@ BattleLog.NayutaEquip,[{0}] {1}　の攻撃力が {2} 上がった！
 Demo,体験版
 Demo.Start,"本ソフトウェアは体験版になります。
 一部機能が制限されており、声優の声あてがまだ全部実装されておりません。
-ゲームの途中までしか遊べません。"
-Demo.End,体験版を遊んでいただき、ありがとうございます！体験版の気に入ったところ、そうでなかったところ、完全版を改良する提案などあれば、ぜひ教えてください！
+ゲームの途中までしか遊べません。
+正式リリース版では仕様変更、機能追加・不具合対応のバージョンアップの可能性があります。"
+Demo.End,"体験版を遊んでいただき、ありがとうございます！
+
+体験版の気に入ったところ、そうでなかったところ、完全版を改良する提案などあれば、ぜひ教えてください！"
 Demo.LockedFeature,"正式版のみ使えます
 _(・ω・_)⌒)_ "
 Demo.StartDemo,Start Demo

@@ -126,6 +126,7 @@ public class SideQuestPanel : MonoBehaviour
         
         // 敵キャラを設置
         BattleSetup.Reset(false);
+        BattleSetup.SetBattleBack(BattleBack.CentreTower);
         BattleSetup.SetAllowEscape(true);
         GenerateEnemy(ProgressManager.Instance.GetSideQuestData().bank);
         BattleSetup.SetBattleBGM("BattleTutorial");
@@ -153,6 +154,7 @@ public class SideQuestPanel : MonoBehaviour
         
         // 敵キャラを設置
         BattleSetup.Reset(false);
+        BattleSetup.SetBattleBack(BattleBack.CentreTower);
         BattleSetup.SetAllowEscape(true);
         GenerateEnemy(ProgressManager.Instance.GetSideQuestData().research);
         BattleSetup.SetBattleBGM("BattleTutorial");

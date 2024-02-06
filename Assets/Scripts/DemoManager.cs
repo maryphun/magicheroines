@@ -18,6 +18,9 @@ public class DemoManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        // ƒQ[ƒ€İ’è‚ğƒ[ƒh
+        PlayerPrefsManager.LoadPlayerPrefs();
+
         if (DemoParameter.isDemoEnded)
         {
             label.text = LocalizationManager.Localize(DemoParameter.DemoEndTextID);

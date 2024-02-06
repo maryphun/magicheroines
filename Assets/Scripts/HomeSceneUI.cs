@@ -16,6 +16,8 @@ public class HomeSceneUI : MonoBehaviour
 
     private void Start()
     {
+        AlphaFadeManager.Instance.FadeIn(1.0f);
+
 #if DEMO
         if (ProgressManager.Instance.GetCurrentStageProgress() == DemoParameter.EndChapter)
         {
@@ -24,8 +26,6 @@ public class HomeSceneUI : MonoBehaviour
             return;
         }
 #endif
-
-        AlphaFadeManager.Instance.FadeIn(1.0f);
 
         AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 2.0f);
     }

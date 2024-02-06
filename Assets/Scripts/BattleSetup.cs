@@ -3,12 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+public enum BattleBack
+{
+    Default,
+    Basement,
+    CentreTower,
+    Council,
+}
+
 public class BattleSetup
 {
     static List<Character> teammates; // insert characterID
     static List<EnemyDefine> enemies;
     public static bool isStoryMode = false;
     public static bool isEventBattle = false;
+    public static BattleBack background = BattleBack.Default;
 
     public static string BattleBGM { get { return battleBGM; } }
     private static string battleBGM = string.Empty;
@@ -63,6 +72,7 @@ public class BattleSetup
         teammates = new List<Character>();
         enemies = new List<EnemyDefine>();
         isStoryMode = isStory;
+        background = BattleBack.Default;
         battleBGM = string.Empty;
         equipmentReward = new List<EquipmentDefine>();
         itemReward = new List<ItemDefine>();
@@ -136,6 +146,11 @@ public class BattleSetup
         researchPointReward = researchPoint;
     }
 
+    // êÌì¨îwåiê›íË
+    public static void SetBattleBack(BattleBack background)
+    {
+        BattleSetup.background = background;
+    }
 
     public static void AddItemReward(string itemName)
     {

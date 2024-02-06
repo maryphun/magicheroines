@@ -343,9 +343,11 @@ public class TitleSelectUI : MonoBehaviour
                 return string.Empty;
             case TitleSelection.Gallery:
 #if DEMO
-                demoOnly.DOFade(1.0f, animationTime);
-                demoOnly.interactable = true;
+                demoOnly.DOFade(1.0f, 0.5f);
                 demoOnly.blocksRaycasts = true;
+                DOTween.Sequence().AppendInterval(0.25f).AppendCallback(() => {
+                    demoOnly.interactable = true;
+                });
 #else
                 Init();
 #endif

@@ -172,7 +172,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        int dmg = (self.attack * 2);
+        int dmg = Mathf.FloorToInt((float)self.attack * 2.5f);
 
         // ‹Z–¼‚ð•\Ž¦
         var floatingText = CreateFloatingAbilityText(self.transform);

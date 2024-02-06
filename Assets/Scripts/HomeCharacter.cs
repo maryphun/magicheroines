@@ -28,6 +28,14 @@ public class HomeCharacter : MonoBehaviour
 
     public void Start()
     {
+#if DEMO
+        if (ProgressManager.Instance.GetCurrentStageProgress() == DemoParameter.EndChapter)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+#endif
+
         characterSprite.alphaHitTestMinimumThreshold = 0.5f;
         dialogueBack.localScale = new Vector3(1, 0, 1);
         dialogueText.text = string.Empty;

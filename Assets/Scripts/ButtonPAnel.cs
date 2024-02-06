@@ -25,6 +25,13 @@ public class ButtonPAnel : MonoBehaviour
         rect = GetComponent<RectTransform>();
         isDisplaying = false;
         isEnabled = true;
+
+#if DEMO
+        if (ProgressManager.Instance.GetCurrentStageProgress() == DemoParameter.EndChapter)
+        {
+            this.SetEnabled(false);
+        }
+#endif
     }
 
     public void StartDisplay()

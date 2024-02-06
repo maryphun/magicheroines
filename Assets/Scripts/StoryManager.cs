@@ -50,6 +50,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Akiho_Enemy");
                     BattleSetup.SetBattleBGM("AkihoBattle");
                     BattleSetup.SetReward(1250, 150);
+                    BattleSetup.SetBattleBack(BattleBack.Basement);
                     NovelSingletone.Instance.PlayNovel("Chapter1-2 Prebattle", true, GoToBattle);
                 }
                 break;

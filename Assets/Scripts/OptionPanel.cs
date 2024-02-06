@@ -31,8 +31,8 @@ public class OptionPanel : MonoBehaviour
     public static float defaultSEVolume = 0.5f;
     public static int defaultTextSpeed = 6;
     public static float defaultAutoSpeed = 1.0f;
-    public static bool defaultFullScreenToggle = true;
-    public static bool defaultWindowScreenToggle = false;
+    public static bool defaultFullScreenToggle = false;
+    public static bool defaultWindowScreenToggle = true;
     public static Vector2Int defaultResolutionSizeWindowed = new Vector2Int(1280, 720);
     public static Vector2Int defaultResolutionSizeFull = new Vector2Int(1920, 1080);
 

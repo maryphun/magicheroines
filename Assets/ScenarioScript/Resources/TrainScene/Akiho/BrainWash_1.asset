@@ -52,7 +52,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 7f3ce7c4c1cb49543958010e0ae16549, type: 3}
+      BGM: {fileID: 8300000, guid: 6a14eccef1bc88a44ac01de3ac3ffa1c, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -587,13 +587,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 8576c6e53d49e4e4ba4f286059366887, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 000000000000000000000000
@@ -968,7 +968,7 @@ MonoBehaviour:
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u660E\u7A42\u306E\u4F53\u304B\u3089\u30D4\u30F3\u30AF\u8272\u306E\u5149\u304C\u7ACB\u3061\u4E0A\u308A\u3001\u6B63\u78BA\u6226\u59EB\u306B\u5909\u8EAB\u3057\u305F\u59FF\u306B\u306A\u308B"
+      text: "\u660E\u7A42\u306E\u4F53\u304B\u3089\u30D4\u30F3\u30AF\u8272\u306E\u5149\u304C\u7ACB\u3061\u4E0A\u308A\u3001\u8056\u6838\u6226\u59EB\u306B\u5909\u8EAB\u3057\u305F\u59FF\u306B\u306A\u308B"
       localizationID: Akiho.Fallen1-21
       back: {fileID: 21300000, guid: 59da8daf5f20acd40a196871b446310f, type: 3}
       howBack: 0
@@ -3313,13 +3313,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: a770d7b586e4ad448bd9feccffc474a1, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 000000000000000000000000
@@ -3946,8 +3946,8 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 0.43232757, y: 0.43232757, z: 1}
-  graphPosition: {x: 273, y: 303, z: 0}
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: 394, y: 180, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
