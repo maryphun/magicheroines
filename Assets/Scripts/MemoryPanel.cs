@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class MemoryPanel : MonoBehaviour
@@ -13,6 +14,8 @@ public class MemoryPanel : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGrp;
     [SerializeField] private Transform memoryHandle;
     [SerializeField] private CanvasGroup demoOnlyPanel;
+    [SerializeField] private Image verticalScrollbar;
+    [SerializeField] private Image verticalScrollbarHandle;
 
     public void OpenMemoryPanel()
     {
@@ -31,6 +34,9 @@ public class MemoryPanel : MonoBehaviour
         demoOnlyPanel.alpha = 1.0f;
         demoOnlyPanel.interactable = true;
         demoOnlyPanel.blocksRaycasts = true;
+
+        verticalScrollbar.color = CustomColor.invisible();
+        verticalScrollbarHandle.color = CustomColor.invisible();
 #endif
     }
 
