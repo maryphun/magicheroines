@@ -72,7 +72,7 @@ public class SaveLoadPanel : MonoBehaviour
         UpdateSlotInfo();
 
         // デフォルトタブ
-        SwapToLoadTab(false);
+        SwapToSaveTab(false);
     }
 
     public void CloseSaveLoadPanel()

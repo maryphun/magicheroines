@@ -15862,10 +15862,10 @@ MonoBehaviour:
   nextCharacterBtn: {fileID: 1584619853}
   hornyActionBtn: {fileID: 973767768}
   corruptActionBtn: {fileID: 846995151}
-  researchBtn: {fileID: 407765733}
+  coreBtn: {fileID: 0}
   hornyActionCost: {fileID: 463348372}
   corruptActionCost: {fileID: 5839571}
-  researchCost: {fileID: 891545667}
+  coreCost: {fileID: 0}
   unavailablePanel: {fileID: 936173352}
   underDevelopmentPopUp: {fileID: 1815785960}
   newBattlerPopup: {fileID: 1652802482}

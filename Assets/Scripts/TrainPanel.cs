@@ -19,8 +19,8 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private TMP_Text currentMood;
     [SerializeField] private Image darkGaugeFill, holyCoreGaugeFill;
     [SerializeField] private RectTransform previousCharacterBtn, nextCharacterBtn;
-    [SerializeField] private Button hornyActionBtn, corruptActionBtn, researchBtn;
-    [SerializeField] private TMP_Text hornyActionCost, corruptActionCost, researchCost;
+    [SerializeField] private Button hornyActionBtn, corruptActionBtn, coreBtn;
+    [SerializeField] private TMP_Text hornyActionCost, corruptActionCost, coreCost;
     [SerializeField] private GameObject unavailablePanel;
     [SerializeField] private CanvasGroup underDevelopmentPopUp;
     [SerializeField] private CanvasGroup newBattlerPopup;
@@ -38,7 +38,7 @@ public class TrainPanel : MonoBehaviour
     // 闇落ちシーン
     [SerializeField] public Dictionary<int, List<string>> CharacterID_To_HornyNovelNameList = new Dictionary<int, List<string>>();     // 淫乱化
     [SerializeField] public Dictionary<int, List<string>> CharacterID_To_BrainwashNovelNameList = new Dictionary<int, List<string>>(); // 洗脳
-    [SerializeField] public Dictionary<int, List<string>> CharacterID_To_ResearchNovelNameList = new Dictionary<int, List<string>>(); // 聖核研究
+    [SerializeField] public Dictionary<int, List<string>> CharacterID_To_CoreNovelNameList = new Dictionary<int, List<string>>(); // 聖核研究
 
     void InitList()
     {
@@ -55,11 +55,11 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_BrainwashNovelNameList.Add(6, new List<string> { "Kei/BrainWash_1", "Kei/BrainWash_2", "Kei/BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(7, new List<string> { "Nayuta/BrainWash_1", "Nayuta/BrainWash_2", "Nayuta/BrainWash_3" });
         // 聖核研究シナリオリスト
-        CharacterID_To_ResearchNovelNameList.Add(3, new List<string> { "Akiho/Research_1", "Akiho/Research_2", "Akiho/Research_3" });
-        CharacterID_To_ResearchNovelNameList.Add(4, new List<string> { "Rikka/Research_1", "Rikka/Research_2", "Rikka/Research_3" });
-        CharacterID_To_ResearchNovelNameList.Add(5, new List<string> { "Erena/Research_1", "Erena/Research_2", "Erena/Research_3" });
-        CharacterID_To_ResearchNovelNameList.Add(6, new List<string> { "Kei/Research_1", "Kei/Research_2", "Kei/Research_3" });
-        CharacterID_To_ResearchNovelNameList.Add(7, new List<string> { "Nayuta/Research_1", "Nayuta/Research_2", "Nayuta/Research_3" });
+        CharacterID_To_CoreNovelNameList.Add(3, new List<string> { "Akiho/Core_1", "Akiho/Core_2", "Akiho/Core_3" });
+        CharacterID_To_CoreNovelNameList.Add(4, new List<string> { "Rikka/Core_1", "Rikka/Core_2", "Rikka/Core_3" });
+        CharacterID_To_CoreNovelNameList.Add(5, new List<string> { "Erena/Core_1", "Erena/Core_2", "Erena/Core_3" });
+        CharacterID_To_CoreNovelNameList.Add(6, new List<string> { "Kei/Core_1", "Kei/Core_2", "Kei/Core_3" });
+        CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/Core_1", "Nayuta/Core_2", "Nayuta/Core_3" });
     }
 
     private void Awake()
@@ -193,12 +193,12 @@ public class TrainPanel : MonoBehaviour
         characterImg.sprite = characterStatus.character;
 
         darkGaugeFill.fillAmount = ((float)characters[currentIndex].corruptionEpisode) / (float)CharacterID_To_BrainwashNovelNameList[characters[currentIndex].characterData.characterID].Count;
-        holyCoreGaugeFill.fillAmount = ((float)characters[currentIndex].holyCoreEpisode) / (float)CharacterID_To_ResearchNovelNameList[characters[currentIndex].characterData.characterID].Count;
+        holyCoreGaugeFill.fillAmount = ((float)characters[currentIndex].holyCoreEpisode) / (float)CharacterID_To_CoreNovelNameList[characters[currentIndex].characterData.characterID].Count;
 
         // ボタンを更新 (Has next scenario?)
         hornyActionBtn.interactable = characters[currentIndex].hornyEpisode < CharacterID_To_HornyNovelNameList[characters[currentIndex].characterData.characterID].Count;
         corruptActionBtn.interactable = characters[currentIndex].corruptionEpisode < CharacterID_To_BrainwashNovelNameList[characters[currentIndex].characterData.characterID].Count;
-        researchBtn.interactable = characters[currentIndex].holyCoreEpisode < CharacterID_To_ResearchNovelNameList[characters[currentIndex].characterData.characterID].Count;
+        coreBtn.interactable = characters[currentIndex].holyCoreEpisode < CharacterID_To_CoreNovelNameList[characters[currentIndex].characterData.characterID].Count;
 
         // 淫乱化
         if (!hornyActionBtn.interactable)
@@ -231,18 +231,18 @@ public class TrainPanel : MonoBehaviour
         }
 
         // 聖核研究
-        if (!researchBtn.interactable)
+        if (!coreBtn.interactable)
         {
             // (調教完了)
-            researchCost.text = "<color=#d400ff><size=25>" + LocalizationManager.Localize("System.ResearchComplete");
+            coreCost.text = "<color=#d400ff><size=25>" + LocalizationManager.Localize("System.ResearchComplete");
         }
         else
         {
             cost[2] = (characters[currentIndex].holyCoreEpisode * 50) + 50;
-            researchCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[2];
+            coreCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[2];
 
             // ポイント不足
-            if (ProgressManager.Instance.GetCurrentResearchPoint() < cost[2]) researchBtn.interactable = false;
+            if (ProgressManager.Instance.GetCurrentResearchPoint() < cost[2]) coreBtn.interactable = false;
         }
     }
 
@@ -337,7 +337,7 @@ public class TrainPanel : MonoBehaviour
         // BGM 停止
         AudioManager.Instance.PauseMusic();
 
-        List<string> episodeList = CharacterID_To_ResearchNovelNameList[characters[currentIndex].characterData.characterID];
+        List<string> episodeList = CharacterID_To_CoreNovelNameList[characters[currentIndex].characterData.characterID];
 
         // シナリオ再生
         AlphaFadeManager.Instance.FadeOut(1.0f);
