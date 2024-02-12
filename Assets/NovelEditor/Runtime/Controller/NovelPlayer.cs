@@ -782,6 +782,8 @@ namespace NovelEditor
             var ans = await _choiceManager.WaitChoice(list, _choiceCTS.Token);
             if (ans != null)
             {
+                _audioPlayer.PlayOneShot(Resources.Load<AudioClip>("Audio/SE/SystemCuteClick"));
+
                 _choiceName.Add(ans.nodeName);
                 if (OnChoiced != null)
                     OnChoiced(ans.nodeName);

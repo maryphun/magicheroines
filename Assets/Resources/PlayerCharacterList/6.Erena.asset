@@ -56,6 +56,7 @@ MonoBehaviour:
       requiredCorruptionEpisode: 3
       requiredHornyEpisode: 0
     corruptedName: Name.Erena_Corrupted
+    coreEquipment: {fileID: 11400000, guid: f8db96181cdd38942989eab16f979424, type: 2}
     abilities:
     - {fileID: 11400000, guid: 9255af745dd95154f845684c987699dd, type: 2}
     - {fileID: 11400000, guid: 90b61e754e861b947aa3e2ecf2f0158c, type: 2}

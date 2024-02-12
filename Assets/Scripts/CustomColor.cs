@@ -15,6 +15,11 @@ public class CustomColor
     public static Color buffvalue() { return new Color(0.996f, 0.87f, 1.00f); }
     public static Color itemName() { return new Color(0.996f, 1.0f, 0.9607f); }
     public static Color abilityName() { return new Color(0.967f, 0.8705f, 1f); }
+    public static Color akiho() { return new Color(1f, 0.753f, 0.796f); }
+    public static Color rikka() { return new Color(0.678f, 0.847f, 0.902f); }
+    public static Color erena() { return new Color(0.945f, 0.898f, 0.675f); }
+    public static Color kei() { return new Color(0.678f, 0.847f, 0.902f); }
+    public static Color nayuta() { return new Color(0.545f, 0f, 0f); }
 
 
     public static string AddColor(int integerString, Color color) { return AddColor(integerString.ToString(), color); }

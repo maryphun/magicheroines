@@ -56,6 +56,7 @@ MonoBehaviour:
       requiredCorruptionEpisode: 3
       requiredHornyEpisode: 0
     corruptedName: Name.Akiho_Corrupted
+    coreEquipment: {fileID: 11400000, guid: d62eeaf82e7e1f84fa9bbc4e7466f924, type: 2}
     abilities:
     - {fileID: 11400000, guid: d3ecd1130cb83d640ab6728d7989464c, type: 2}
     - {fileID: 11400000, guid: 5ca5e16cf3466dc4e9a5fb11a7a7842a, type: 2}

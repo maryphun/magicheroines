@@ -61,6 +61,7 @@ MonoBehaviour:
       requiredCorruptionEpisode: 3
       requiredHornyEpisode: 0
     corruptedName: Name.Rikka_Corrupted
+    coreEquipment: {fileID: 11400000, guid: c0126f088070454418a3249bf49f3d1c, type: 2}
     abilities:
     - {fileID: 11400000, guid: 06e0bb439bc19a34aaae60e9a5cac0f3, type: 2}
     - {fileID: 11400000, guid: 32d96c13a9fa5844cba8874447f04d32, type: 2}

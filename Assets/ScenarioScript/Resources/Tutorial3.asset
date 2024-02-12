@@ -41,8 +41,8 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: 3e9a62c21df8d6b4ca13c0e46501498a, type: 3}
       - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
-      - {fileID: 21300000, guid: ae1c9f9c05663b34dac45d9bb7b8d520, type: 3}
-      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      - {fileID: 21300000, guid: e2613a5f6fbb7224d9192447961d4ea1, type: 3}
+      - {fileID: 21300000, guid: 115bcdad8fedbb84fae28dadddba3f30, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -87,8 +87,8 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: 3e9a62c21df8d6b4ca13c0e46501498a, type: 3}
       - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
-      - {fileID: 21300000, guid: ae1c9f9c05663b34dac45d9bb7b8d520, type: 3}
-      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      - {fileID: 21300000, guid: e2613a5f6fbb7224d9192447961d4ea1, type: 3}
+      - {fileID: 21300000, guid: 115bcdad8fedbb84fae28dadddba3f30, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -129,12 +129,12 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 00000000000000000000000000000000
+      howCharas: 00000000000000000000000001000000
       charas:
       - {fileID: 21300000, guid: 3e9a62c21df8d6b4ca13c0e46501498a, type: 3}
       - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
-      - {fileID: 21300000, guid: ae1c9f9c05663b34dac45d9bb7b8d520, type: 3}
-      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      - {fileID: 21300000, guid: e2613a5f6fbb7224d9192447961d4ea1, type: 3}
+      - {fileID: 21300000, guid: 085e83187cd4f6a478a3b9a5b1c2cd58, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -179,8 +179,8 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: 3e9a62c21df8d6b4ca13c0e46501498a, type: 3}
       - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
-      - {fileID: 21300000, guid: ae1c9f9c05663b34dac45d9bb7b8d520, type: 3}
-      - {fileID: 21300000, guid: 48692ccc74b98414e9ef0866d237be15, type: 3}
+      - {fileID: 21300000, guid: e2613a5f6fbb7224d9192447961d4ea1, type: 3}
+      - {fileID: 21300000, guid: 085e83187cd4f6a478a3b9a5b1c2cd58, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -225,13 +225,13 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: 3e9a62c21df8d6b4ca13c0e46501498a, type: 3}
       - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
-      - {fileID: 21300000, guid: ae1c9f9c05663b34dac45d9bb7b8d520, type: 3}
+      - {fileID: 21300000, guid: e2613a5f6fbb7224d9192447961d4ea1, type: 3}
       - {fileID: 21300000, guid: ac1b86a8afd95e549b3a71fe26e60a67, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0.504717, g: 0.8669323, b: 1, a: 1}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -246,7 +246,7 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 6e33556fd4d5d0041ad08c8de46a9854, type: 3}
+      SE: {fileID: 8300000, guid: af9ebf568b9ddaf49bdc08e88fe81d85, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1
@@ -276,7 +276,7 @@ MonoBehaviour:
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 1, g: 0.5565285, b: 0.5235849, a: 1}
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
@@ -292,7 +292,7 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 6e33556fd4d5d0041ad08c8de46a9854, type: 3}
+      SE: {fileID: 8300000, guid: af9ebf568b9ddaf49bdc08e88fe81d85, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1

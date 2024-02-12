@@ -290,6 +290,11 @@ namespace NovelEditor
             _VOICE.volume = _VOICEVolume;
         }
 
+        internal void PlayOneShot(AudioClip clip)
+        {
+            _SE.PlayOneShot(clip);
+        }
+
         /// <summary>
         /// サウンドにフェードをかける
         /// </summary>

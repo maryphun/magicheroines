@@ -46,6 +46,7 @@ MonoBehaviour:
       requiredCorruptionEpisode: 0
       requiredHornyEpisode: 0
     corruptedName: Name.Kei_Corrupted
+    coreEquipment: {fileID: 11400000, guid: 55e45b4f0b7c6b649b7b89d012d8d62e, type: 2}
     abilities:
     - {fileID: 11400000, guid: e40f228ebf4177e4c8295b65af7991bd, type: 2}
     - {fileID: 11400000, guid: 8b7d4f63dd407654dbe58148950b84cc, type: 2}

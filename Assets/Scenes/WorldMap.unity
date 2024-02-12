@@ -378,7 +378,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {x: 10, y: 10}
   moveSpeed: 2
+  basementSprite: {fileID: 0}
+  centreTowerSprite: {fileID: 0}
+  councilSprite: {fileID: 0}
   mainCanvas: {fileID: 1737923946}
+  battleback: {fileID: 0}
+  battlemid: {fileID: 0}
+  battlefront: {fileID: 0}
 --- !u!1 &249315759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1202,7 @@ GameObject:
   - component: {fileID: 436908052}
   - component: {fileID: 436908051}
   - component: {fileID: 436908050}
+  - component: {fileID: 436908053}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1317,6 +1324,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436908048}
   m_CullTransparentMesh: 1
+--- !u!114 &436908053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436908048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c9346d9eca225479c76a30e7317f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: -300, y: 0}
+  animationTime: 0.5
+  startDelay: 0.25
 --- !u!1 &444643712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2213,7 @@ GameObject:
   - component: {fileID: 716163713}
   - component: {fileID: 716163712}
   - component: {fileID: 716163711}
+  - component: {fileID: 716163714}
   m_Layer: 5
   m_Name: ResourcesGathering
   m_TagString: Untagged
@@ -2312,6 +2335,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716163709}
   m_CullTransparentMesh: 1
+--- !u!114 &716163714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716163709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c9346d9eca225479c76a30e7317f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: -300, y: 0}
+  animationTime: 0.5
+  startDelay: 0.25
 --- !u!1 &724732068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3910,6 +3948,7 @@ GameObject:
   - component: {fileID: 1189037868}
   - component: {fileID: 1189037867}
   - component: {fileID: 1189037866}
+  - component: {fileID: 1189037869}
   m_Layer: 5
   m_Name: Story
   m_TagString: Untagged
@@ -4031,6 +4070,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189037864}
   m_CullTransparentMesh: 1
+--- !u!114 &1189037869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189037864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c9346d9eca225479c76a30e7317f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: -300}
+  animationTime: 0.5
+  startDelay: 0.25
 --- !u!1 &1216608906
 GameObject:
   m_ObjectHideFlags: 0

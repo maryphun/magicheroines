@@ -55,10 +55,12 @@ public class DemoManager : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX("SystemDecide");
 
+#if DEMO
         if (DemoParameter.isDemoEnded)
         {
             DemoParameter.isDemoEnded = false;
         }
+#endif
 
         StartCoroutine(SceneTransition("Title", 1.0f));
     }

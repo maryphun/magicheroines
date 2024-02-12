@@ -9,6 +9,14 @@ using Assets.SimpleLocalization.Scripts;
 [RequireComponent(typeof(CanvasGroup))]
 public class TrainPanel : MonoBehaviour
 {
+    // シナリオ種類
+    private enum ScenarioType
+    {
+        Horny, // 淫乱化
+        Corruption, // 闇落ち
+        CoreResearch, // 聖核研究
+    }
+
     [Header("Setting")]
     [SerializeField, Range(0.0f, 1.0f)] private float animationTime = 0.5f;
 
@@ -25,6 +33,9 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private CanvasGroup underDevelopmentPopUp;
     [SerializeField] private CanvasGroup newBattlerPopup;
     [SerializeField] private TMPro.TMP_Text newBattlerPopupText;
+    [SerializeField] private CanvasGroup newCoreEquipmentPopup;
+    [SerializeField] private TMPro.TMP_Text newCoreEquipmentText;
+    [SerializeField] private Image newCoreEquipmentIcon;
     [SerializeField] private CanvasGroup researchPointPanel;
     [SerializeField] private HomeCharacter homeCharacterScript;
 
@@ -33,6 +44,7 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private List<Character> characters;
     [SerializeField] private int currentIndex;
     [SerializeField] private int[] cost = new int[3];
+    [SerializeField] private ScenarioType currentScenarioType;
 
     [Header("調教シーン内容管理")]
     // 闇落ちシーン
@@ -254,18 +266,11 @@ public class TrainPanel : MonoBehaviour
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
 
-        // 暫定
-        {
-            underDevelopmentPopUp.DOFade(1.0f, 0.5f);
-            underDevelopmentPopUp.interactable = true;
-            underDevelopmentPopUp.blocksRaycasts = true;
-            return; // 開発中
-        }
-
         // BGM 停止
         AudioManager.Instance.PauseMusic();
 
         List<string> episodeList = CharacterID_To_HornyNovelNameList[characters[currentIndex].characterData.characterID];
+        currentScenarioType = ScenarioType.Horny;
 
         // シナリオ再生
         canvasGroup.interactable = false;
@@ -294,6 +299,7 @@ public class TrainPanel : MonoBehaviour
         AudioManager.Instance.PauseMusic();
 
         List<string> episodeList = CharacterID_To_BrainwashNovelNameList[characters[currentIndex].characterData.characterID];
+        currentScenarioType = ScenarioType.Corruption;
 
         // シナリオ再生
         AlphaFadeManager.Instance.FadeOut(1.0f);
@@ -326,18 +332,11 @@ public class TrainPanel : MonoBehaviour
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
 
-        // 暫定
-        {
-            underDevelopmentPopUp.DOFade(1.0f, 0.5f);
-            underDevelopmentPopUp.interactable = true;
-            underDevelopmentPopUp.blocksRaycasts = true;
-            return; // 開発中
-        }
-
         // BGM 停止
         AudioManager.Instance.PauseMusic();
 
         List<string> episodeList = CharacterID_To_CoreNovelNameList[characters[currentIndex].characterData.characterID];
+        currentScenarioType = ScenarioType.CoreResearch;
 
         // シナリオ再生
         AlphaFadeManager.Instance.FadeOut(1.0f);
@@ -357,14 +356,39 @@ public class TrainPanel : MonoBehaviour
 
     private void ReturnFromEpisode()
     {
-        // update heroin data
-        if (characters[currentIndex].is_corrupted)
+        switch (currentScenarioType)
         {
-            CallNewBattlerPopUp();
-            AddNewHomeCharacter(characters[currentIndex].characterData.characterID);
+            case ScenarioType.Horny:
+                // 淫乱化
+                if (characters[currentIndex].hornyEpisode >= CharacterID_To_HornyNovelNameList[characters[currentIndex].characterData.characterID].Count - 1)
+                {
+                    // 特殊技獲得
 
-            // update character name
-            characters[currentIndex].localizedName = LocalizationManager.Localize(characters[currentIndex].characterData.corruptedName);
+                }
+                break;
+            case ScenarioType.Corruption:
+                // update heroin data
+                if (characters[currentIndex].is_corrupted)
+                {
+                    CallNewBattlerPopUp();
+                    AddNewHomeCharacter(characters[currentIndex].characterData.characterID);
+
+                    // update character name
+                    characters[currentIndex].localizedName = LocalizationManager.Localize(characters[currentIndex].characterData.corruptedName);
+                }
+                break;
+            case ScenarioType.CoreResearch:
+                // 淫乱化
+                if (characters[currentIndex].holyCoreEpisode >= CharacterID_To_CoreNovelNameList[characters[currentIndex].characterData.characterID].Count - 1)
+                {
+                    // 聖核装備獲得
+                    EquipmentDefine newEquipment = characters[currentIndex].characterData.coreEquipment;
+                    CallNewCoreEquipmentPopup(newEquipment);
+                    ProgressManager.Instance.AddNewEquipment(newEquipment);
+                }
+                break;
+            default:
+                break;
         }
 
         canvasGroup.interactable = true;
@@ -411,6 +435,31 @@ public class TrainPanel : MonoBehaviour
         });
     }
 
+    public void CallNewCoreEquipmentPopup(EquipmentDefine newEquipment)
+    {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemEquip");
+
+        // Update Text
+        newCoreEquipmentText.text = CoreEquipmentMessage(characters[currentIndex].characterData.characterID, newEquipment);
+        newCoreEquipmentIcon.sprite = newEquipment.Icon;
+
+        // UI
+        newCoreEquipmentPopup.DOKill(false);
+        newCoreEquipmentPopup.DOFade(1.0f, 0.5f);
+        newCoreEquipmentPopup.interactable = true;
+        newCoreEquipmentPopup.blocksRaycasts = true;
+    }
+    public void CloseNewCoreEquipmentPopup()
+    {
+        newCoreEquipmentPopup.DOKill(false);
+        newCoreEquipmentPopup.DOFade(0.0f, 0.1f).OnComplete(() =>
+        {
+            newCoreEquipmentPopup.interactable = false;
+            newCoreEquipmentPopup.blocksRaycasts = false;
+        });
+    }
+
     /// <summary>
     /// 闇落ち成功のシステムメッセージ
     /// </summary>
@@ -420,20 +469,48 @@ public class TrainPanel : MonoBehaviour
         switch ((PlayerCharacerID)characterID)
         {
             case PlayerCharacerID.Akiho: // 明穂
-                s = "<color=#FFC0CB>" + LocalizationManager.Localize("Name.Akiho") + "</color>";
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Akiho"), CustomColor.akiho());
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
             case PlayerCharacerID.Rikka: // 立花
-                s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Rikka") + "</color>";
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Rikka"), CustomColor.rikka());
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
             case PlayerCharacerID.Erena: // エレナ
-                s = "<color=#F1E5AC>" + LocalizationManager.Localize("Name.Erena") + "</color>";
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Erena"), CustomColor.erena());
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
             case PlayerCharacerID.Kei: // 京
-                s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Kei") + "</color>";
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Kei"), CustomColor.kei());
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
             case PlayerCharacerID.Nayuta: // 那由多
-                s = "<color=#8b0000>" + LocalizationManager.Localize("Name.Nayuta") + "</color>";
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Nayuta"), CustomColor.nayuta());
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            default:
+                return string.Empty;
+        }
+    }
+
+    /// <summary>
+    /// 聖核装備獲得システムメッセージ
+    /// </summary>
+    public string CoreEquipmentMessage(int characterID, EquipmentDefine equipment)
+    {
+        string s = string.Empty;
+        switch ((PlayerCharacerID)characterID)
+        {
+            case PlayerCharacerID.Akiho: // 明穂
+                s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.akiho());
+                return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
+            case PlayerCharacerID.Rikka: // 立花
+                s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.rikka());
+                return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
+            case PlayerCharacerID.Erena: // エレナ
+                s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.erena());
+                return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
+            case PlayerCharacerID.Kei: // 京
+                s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.kei());
+                return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
+            case PlayerCharacerID.Nayuta: // 那由多
+                s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.nayuta());
+                return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
             default:
                 return string.Empty;
         }
