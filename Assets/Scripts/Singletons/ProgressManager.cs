@@ -250,6 +250,14 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         return obj;
     }
 
+    public void RelocalizeCharactersName()
+    {
+        foreach (Character character in playerData.characters)
+        {
+            character.localizedName = LocalizationManager.Localize(character.characterData.nameID);
+        }
+    }
+
     /// <summary>
     /// Œ»İ‘‹à—Ê‚ğæ“¾
     /// </summary>

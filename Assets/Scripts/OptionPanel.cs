@@ -7,6 +7,14 @@ using NovelEditor;
 using TMPro;
 using Assets.SimpleLocalization.Scripts;
 
+public enum SystemLanguage
+{
+    JP,
+    EN,
+    SCN,
+    TCN,
+}
+
 [RequireComponent(typeof(CanvasGroup))]
 public class OptionPanel : MonoBehaviour
 {
@@ -25,6 +33,7 @@ public class OptionPanel : MonoBehaviour
     [SerializeField] private TMP_Text autoSpeedValue;
     [SerializeField] private Toggle fullScreenToggle;
     [SerializeField] private Toggle windowScreenToggle;
+    [SerializeField] private Toggle JPToggle, ENToggle, SCNToggle, TCNToggle;
     [SerializeField] private Button backButton;
 
     public static float defaultBGMVolume = 0.5f;
@@ -35,6 +44,7 @@ public class OptionPanel : MonoBehaviour
     public static bool defaultWindowScreenToggle = true;
     public static Vector2Int defaultResolutionSizeWindowed = new Vector2Int(1280, 720);
     public static Vector2Int defaultResolutionSizeFull = new Vector2Int(1920, 1080);
+    public static SystemLanguage defaultLanguage = SystemLanguage.JP;
 
 
     private float tempBGMVolume = 0.5f;
@@ -42,6 +52,7 @@ public class OptionPanel : MonoBehaviour
     private int tempTextSpeed = 6;
     private float tempAutoSpeed = 1.0f;
 
+    private bool isChangingLanguge = false;
     private bool isOpen = false;
     
     public bool IsOpen()
@@ -69,7 +80,12 @@ public class OptionPanel : MonoBehaviour
         autoSpeedSlider.value = tempAutoSpeed;
         fullScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen;
         windowScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.Windowed;
-        
+        Debug.Log(LocalizationManager.Language);
+        JPToggle.isOn = LocalizationManager.Language == "Japanese";
+        ENToggle.isOn = LocalizationManager.Language == "English";
+        SCNToggle.isOn = LocalizationManager.Language == "Simplified Chinese";
+        TCNToggle.isOn = LocalizationManager.Language == "Traditional Chinese";
+
         // Update value texts
         ChangeBGMVolume();
         ChangeSEVolume();
@@ -175,6 +191,35 @@ public class OptionPanel : MonoBehaviour
             }
         }
 
+        string lastLanguage = LocalizationManager.Language;
+        if (JPToggle.isOn && lastLanguage != "Japanese")
+        {
+            LocalizationManager.Language = "Japanese";
+            PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.Language, (int)SystemLanguage.JP);
+        }
+        else if (ENToggle.isOn && lastLanguage != "English")
+        {
+            LocalizationManager.Language = "English";
+            PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.Language, (int)SystemLanguage.EN);
+        }
+        else if (SCNToggle.isOn && lastLanguage != "Simplified Chinese")
+        {
+            LocalizationManager.Language = "Simplified Chinese";
+            PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.Language, (int)SystemLanguage.SCN);
+        }
+        else if (TCNToggle.isOn && lastLanguage != "Traditional Chinese")
+        {
+            LocalizationManager.Language = "Traditional Chinese";
+            PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.Language, (int)SystemLanguage.TCN);
+        }
+
+        // åæåÍïœçX
+        if (lastLanguage != LocalizationManager.Language)
+        {
+            ProgressManager.Instance.RelocalizeCharactersName();
+            AudioManager.Instance.PlaySFX("SystemButton");
+        }
+
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemSelect");
     }
@@ -188,6 +233,39 @@ public class OptionPanel : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX("SystemCursor");
         fullScreenToggle.isOn = !windowScreenToggle.isOn;
+    }
+
+    public void OnToggleLanguage(int lang)
+    {
+        if (isChangingLanguge) return;
+        AudioManager.Instance.PlaySFX("SystemCursor");
+        isChangingLanguge = true;
+        switch ((SystemLanguage)lang)
+        {
+            case SystemLanguage.JP:
+                ENToggle.isOn = false;
+                SCNToggle.isOn = false;
+                TCNToggle.isOn = false;
+                break;
+            case SystemLanguage.EN:
+                JPToggle.isOn = false;
+                SCNToggle.isOn = false;
+                TCNToggle.isOn = false;
+                break;
+            case SystemLanguage.SCN:
+                JPToggle.isOn = false;
+                ENToggle.isOn = false;
+                TCNToggle.isOn = false;
+                break;
+            case SystemLanguage.TCN:
+                JPToggle.isOn = false;
+                ENToggle.isOn = false;
+                SCNToggle.isOn = false;
+                break;
+            default:
+                break;
+        }
+        isChangingLanguge = false;
     }
 
     private void Update()

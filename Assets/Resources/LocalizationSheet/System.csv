@@ -1,461 +1,542 @@
-Key,Japanese
-TitleScene,タイトル画面
-System.NewGame,New Game
-System.Load,Load
-System.Gallery,Gallery
-System.Option,Option
-System.Credit,Credit
-System.Exit,Exit
-HomeScene,ホーム画面
-System.Memory,回想
-System.SwitchCharacter,画面キャラ変更
-System.BlackMarket,闇市
-System.Action,活動
-System.Training,調教
-System.CharacterBuilding,キャラクター育成
-System.Formation,キャラクター編成
-System.ResearchPoint,研究ポイント
-System.Money,資金
-System.Mood,心情：
-System.Dark,闇落ち
-System.CoreResearch,聖核研究進度
-System.PickTraining,調教方法を選択：
-System.HornyTraining,淫乱調教
-System.BrainwashTraining,洗脳調教
-System.HolyCoreTraining,聖核研究
-System.ResearchPointCost,研究ポイント消耗：
-System.ResearchComplete,調教完了
-System.Back,戻る
-System.Confirm,確定
-System.OptionPanel,設定
-System.Attack,攻撃力：
-System.Level,LV：
-System.HP,体力：
-System.MP,SP：
-System.Defense,防御力：
-System.Speed,素早さ：
-System.Skill,特殊技：
-System.Equipment,装備
-System.CharacterData,資料
-System.CharacterUpgrade,育成
-System.LevelUp,レベルアップ
-System.Cost,資金コスト
-System.Locked,未開放
-System.Unlock,解放
-System.Regenerate,回復
-System.RegenerateCost,回復コスト
-System.Inventory,インベントリ
-System.SPCost,SP消耗：
-System.EffectTarget,効果対象：
-System.EffectEnemy,敵単体
-System.EffectEnemyAoE,敵(複数)
-System.EffectSelf,使用者
-System.EffectSelfAoE,味方全体
-System.EffectTeam,味方
-System.AbilityType,種類
-System.AbilityAttack,攻撃
-System.AbilityHeal,回復
-System.AbilityBuff,状態
-System.AbilitySpecial,特殊
-System.Turn,ターン
-System.None,なし
-System.Cooldown,チャージ
-System.AbilityAbsent,特殊技を持っていない
-System.FileCorrupted,データ異常
-System.Save,セーブ
-System.LoadFile,ロード
-System.AutoSave,オートセーブ
-System.Cancel,キャンセル
-System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？
-System.ConfirmReplace,スロット<color=yellow>{0}</color>のデータを上書きしますか？
-System.ConfirmLoad,スロット<color=yellow>{0}</color>をロードしますか？
-System.InsertComment,注釈を付ける...
-System.Close,閉じる
-System.NewAbility,特殊技習得！
-System.EquipmentType,品質
-System.EquipmentNormal,普通
-System.EquipmentRare,逸品
-System.EquipmentHoly,聖核装備
-System.ReturnToTitle,タイトルメニューに戻る
-System.Retry,リトライ
-System.Understood,了解
+Key,Japanese,English,Traditional Chinese,Simplified Chinese
+TitleScene,タイトル画面,TitleScene,タイトル画面,タイトル画面
+System.NewGame,New Game,New Game,New Game,New Game
+System.Load,Load,Load,Load,Load
+System.Gallery,Gallery,Gallery,Gallery,Gallery
+System.Option,Option,Option,Option,Option
+System.Credit,Credit,Credit,Credit,Credit
+System.Exit,Exit,Exit,Exit,Exit
+HomeScene,ホーム画面,HomeScene,ホーム画面,ホーム画面
+System.Memory,回想,Memory,回想,回想
+System.SwitchCharacter,画面キャラ変更,Change Character,画面キャラ変更,画面キャラ変更
+System.BlackMarket,闇市,Black Market,闇市,闇市
+System.Action,活動,Operation,活動,活動
+System.Training,調教,Training,調教,調教
+System.CharacterBuilding,キャラクター育成,Character Building,キャラクター育成,キャラクター育成
+System.Formation,キャラクター編成,Formation,キャラクター編成,キャラクター編成
+System.ResearchPoint,研究ポイント,Research Pts,研究ポイント,研究ポイント
+System.Money,資金,Money,資金,資金
+System.Mood,心情：,Mood:,心情：,心情：
+System.Dark,闇落ち,Corrupt,闇落ち,闇落ち
+System.CoreResearch,聖核研究進度,Core Research,聖核研究進度,聖核研究進度
+System.PickTraining,調教方法を選択：,Pick your training:,調教方法を選択：,調教方法を選択：
+System.HornyTraining,淫乱調教,Horniness,淫乱調教,淫乱調教
+System.BrainwashTraining,洗脳調教,Brainwash,洗脳調教,洗脳調教
+System.HolyCoreTraining,聖核研究,Seikaku Research,聖核研究,聖核研究
+System.ResearchPointCost,研究ポイント消耗：,Research Pts Cost:,研究ポイント消耗：,研究ポイント消耗：
+System.ResearchComplete,調教完了,Training Complete,調教完了,調教完了
+System.Back,戻る,Back,戻る,戻る
+System.Confirm,確定,Confirm,確定,確定
+System.OptionPanel,設定,Option,設定,設定
+System.Attack,攻撃力：,ATK: ,攻撃力：,攻撃力：
+System.Level,LV：,LV: ,LV：,LV：
+System.HP,体力：,HP: ,体力：,体力：
+System.MP,SP：,SP: ,SP：,SP：
+System.Defense,防御力：,DEF: ,防御力：,防御力：
+System.Speed,素早さ：,SPD: ,素早さ：,素早さ：
+System.Skill,特殊技：,Skill: ,特殊技：,特殊技：
+System.Equipment,装備,Equipment,装備,装備
+System.CharacterData,資料,Info,資料,資料
+System.CharacterUpgrade,育成,Upgrade,育成,育成
+System.LevelUp,レベルアップ,Level up,レベルアップ,レベルアップ
+System.Cost,資金コスト,Cost,資金コスト,資金コスト
+System.Locked,未開放,Locked,未開放,未開放
+System.Unlock,解放,Unlock,解放,解放
+System.Regenerate,回復,Regenerate,回復,回復
+System.RegenerateCost,回復コスト,Cost,回復コスト,回復コスト
+System.Inventory,インベントリ,Inventory,インベントリ,インベントリ
+System.SPCost,SP消耗：,SP Cost: ,SP消耗：,SP消耗：
+System.EffectTarget,効果対象：,Target: ,効果対象：,効果対象：
+System.EffectEnemy,敵単体,Single,敵単体,敵単体
+System.EffectEnemyAoE,敵(複数),AoE,敵(複数),敵(複数)
+System.EffectSelf,使用者,Self,使用者,使用者
+System.EffectSelfAoE,味方全体,Teammate (AoE),味方全体,味方全体
+System.EffectTeam,味方,Teammate,味方,味方
+System.AbilityType,種類,Category,種類,種類
+System.AbilityAttack,攻撃,Attack,攻撃,攻撃
+System.AbilityHeal,回復,Heal,回復,回復
+System.AbilityBuff,状態,Buff,状態,状態
+System.AbilitySpecial,特殊,Special,特殊,特殊
+System.Turn,ターン,Turn,ターン,ターン
+System.None,なし,None,なし,なし
+System.Cooldown,チャージ,Charge,チャージ,チャージ
+System.AbilityAbsent,特殊技を持っていない,No usable skill.,特殊技を持っていない,特殊技を持っていない
+System.FileCorrupted,データ異常,File corrupted,データ異常,データ異常
+System.Save,セーブ,Save,セーブ,セーブ
+System.LoadFile,ロード,Load,ロード,ロード
+System.AutoSave,オートセーブ,Auto Save,オートセーブ,オートセーブ
+System.Cancel,キャンセル,Cancel,キャンセル,キャンセル
+System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？,Save to file <color=yellow>{0}</color>?,スロット<color=yellow>{0}</color>にセーブしますか？,スロット<color=yellow>{0}</color>にセーブしますか？
+System.ConfirmReplace,スロット<color=yellow>{0}</color>のデータを上書きしますか？,Replace the save file on slot <color=yellow>{0}</color>?,スロット<color=yellow>{0}</color>のデータを上書きしますか？,スロット<color=yellow>{0}</color>のデータを上書きしますか？
+System.ConfirmLoad,スロット<color=yellow>{0}</color>をロードしますか？,Load data <color=yellow>{0}</color>?,スロット<color=yellow>{0}</color>をロードしますか？,スロット<color=yellow>{0}</color>をロードしますか？
+System.InsertComment,注釈を付ける...,Add note...,注釈を付ける...,注釈を付ける...
+System.Close,閉じる,Close,閉じる,閉じる
+System.NewAbility,特殊技習得！,New ability learned!,特殊技習得！,特殊技習得！
+System.EquipmentType,品質,Quality,品質,品質
+System.EquipmentNormal,普通,Normal,普通,普通
+System.EquipmentRare,逸品,Rare,逸品,逸品
+System.EquipmentHoly,聖核装備,Seikaku Equipment,聖核装備,聖核装備
+System.ReturnToTitle,タイトルメニューに戻る,Return to title,タイトルメニューに戻る,タイトルメニューに戻る
+System.Retry,リトライ,Retry,リトライ,リトライ
+System.Understood,了解,Understood,了解,了解
 System.PanelUnavailable,"未開放
+聖核戦姫を捕獲せよ","Not available
+Go capture a Seikaku-princess!","未開放
+聖核戦姫を捕獲せよ","未開放
 聖核戦姫を捕獲せよ"
-System.RewardItem,アイテム獲得
-System.Reward,成果報酬
-System.Receive,受取
-System.Heroin,聖核戦姫
-System.Trapped,{s}を捕獲完了！
-System.TrainPanelUpdate,調教画面がアップデートされました
-System.NovelLog,ログ
-System.NovelAuto,オート開始・停止
-System.NovelSkip,スキップ
-System.NovelHide,UI非表示
-System.NewBattler,{s}をチームに編入することが可能となりました
+System.RewardItem,アイテム獲得,Item reward,アイテム獲得,アイテム獲得
+System.Reward,成果報酬,Reward,成果報酬,成果報酬
+System.Receive,受取,Accept,受取,受取
+System.Heroin,聖核戦姫,Seikaku-princess,聖核戦姫,聖核戦姫
+System.Trapped,{s}を捕獲完了！,{s} captured!,{s}を捕獲完了！,{s}を捕獲完了！
+System.TrainPanelUpdate,調教画面がアップデートされました,Training panel have been updated.,調教画面がアップデートされました,調教画面がアップデートされました
+System.NovelLog,ログ,Log,ログ,ログ
+System.NovelAuto,オート開始・停止,Auto (ON/OFF),オート開始・停止,オート開始・停止
+System.NovelSkip,スキップ,Skip,スキップ,スキップ
+System.NovelHide,UI非表示,Hide UI,UI非表示,UI非表示
+System.NewBattler,{s}をチームに編入することが可能となりました,You can now include {s} into party! ,{s}をチームに編入することが可能となりました,{s}をチームに編入することが可能となりました
 System.NewCoreEquipment,"{s}を獲得しました！
+キャラクター育成画面でアイテムを装備できます。","Get new item {s}!
+Equip item at Character Building Panel.","{s}を獲得しました！
+キャラクター育成画面でアイテムを装備できます。","{s}を獲得しました！
 キャラクター育成画面でアイテムを装備できます。"
-System.Storage,収納庫
-Systeｍ.Requirement,解放条件:
-Memory,回想
-Memory.Akiho_1,明穂 - 痴漢
-Memory.Akiho_2,明穂 - 敗北
-Memory.Rikka_1,立花 - 身体検査
-Memory.Erena_1,エレナ - オナニー
-Memory.Erena_2,エレナ - 性奉仕 I
-Memory.Erena_3,エレナ - 性奉仕 II
-Memory.Kei_1,京 - ハッキング
-Memory.Kei_2,京 - 捕獲
-Memory.Nayuta_1,那由多 - 捕獲
-WorldMapScene,ワールドマップ
-System.Story,ストーリーを進む
-System.SideMission,資源調達クエスト
-System.QuestList,クエスト一覧
-System.FoodQuest,[食料調達]
-System.BankQuest,[銀行強盗]
-System.ResearchQuest,[戦闘研究]
-System.RewardQuest,報酬
-System.AlertLevel,警戒度
-System.Star,★
-Names,名詞/名称
-Name.Akiho,笹谷 明穂
-Name.Rikka,水無瀬 六花
-Name.Kei,猫宮 京
-Name.Erena,清藤 エレナ
-Name.Nayuta,八雲 那由多
-Name.No5,005号
-Name.No23,023号
-Name.Battler,戦闘員
-Name.Tentacle,触手怪人
-Name.Clone,005号
-Name.RikkaDisguise,水無瀬 六花？
-Name.Drone,パトロールドローン
-Name.GoldDrone,進化型ドローン
-Name.DarkDrone,攻撃特化型ドローン
-Name.Android,警備ドロイド
-Name.GoldAndroid,進化型ドロイド
-Name.DarkAndroid,攻撃特化型ドロイド
-Name.Tank,四脚タンク
-Name.DarkTank,軍用歩行型タンク
-Name.Battler+Tentacle,触手怪人、戦闘員
-Name.Man,男
-Name.Chairman,理事長
-Name.Tentacle_Human,触手怪人(人間体)
-Name.Director,監督
-Name.FemaleStudent,女生徒
-Name.GuardMan,駅員
-Name.Host,司会者
-Name.Audience,観客
-Name.Assistant,助手
-Name.Goblin,ゴブリン型怪人
-Name.Mutant,怪人
-Name.Audience1,観客１
-Name.Audience2,観客２
-Name.Audience3,観客３
-Name.Researcher,研究員
-Name.Slime,スライム
-Name.Rikka_Core,立花？？
-Name.Tentacle_Monster,触手怪獣
-Name.Clones,072号＆他のクローン
-Name.No5_Call,005号(通信)
-Name.Battler_Call,戦闘員(通信)
-Name.Kei_Call,猫宮京(通信)
-Name.Akiho_Corrupted,笹谷 明穂
-Name.Rikka_Corrupted,072号
-Name.Kei_Corrupted,猫宮 京
-Name.Erena_Corrupted,清藤 エレナ
-Name.Nayuta_Corrupted,八雲 那由多
-Mood,心情
-Mood.Rebel,反抗的
-Mood.Pleasure,享楽
-Mood.Despair,絶望
-Mood.Submissive,従順
-Mood.Resist,忍耐
-Mood.Contempt,軽蔑
-Mood.Deprave,堕落
-Mood.Angry,憤怒
-Mood.Expect,期待
-Mood.Disgust,嫌悪
-Mood.Loyal,忠実
-OptionSetting,オプション設定
-Option.BGM,BGM音量
-Option.SE,効果音音量
-Option.TextSpeed,テキスト速度
-Option.AutoSpeed,オート速度
-Option.Apply,適用
-Option.Default,デフォルト
-Option.Second,秒
-Option.WindowMode,画面設定
-Option.FullScreen,フルスクリーン
-Option.WindowedScreen,ウィンドウモード
-BattleScene,戦闘シーン
-Battle.Attack,攻撃
-Battle.Skill,特殊技
-Battle.Item,道具
-Battle.Idle,待機
-Battle.Level,Lv.
-Battle.HP,HP
-Battle.MP,SP
-Battle.ActionOrder,行動順序
-Battle.Cancel,右クリックで取り消し
-Battle.Start,任務開始
-Battle.Victory,任務クリア
-Battle.Defeat,敗北
-Battle.SkipTutorial,スキップ
-Battle.EscapeConfirm,撤退しますか？
-Battle.Escape,撤退
-Battle.CannotAttack,普通攻撃を行えない
-Battle.OnCooldown,チャージ中 ({0}ターン)
-Battle.NotEnoughSP,SP不足 ({0})
-Battle.AbilityDisabled,使用不可
-Buff,状態
-Buff.Stun,行動不能
-Buff.Hurt,継続ダメージ
-Buff.Heal,継続回復
-Buff.Shield_up,防御力上昇
-Buff.Shield_down,防御力下降
-Buff.Attack_up,攻撃力上昇
-Buff.Attack_down,攻撃力下降
-Buff.Speed_up,素早さ上昇
-Buff.Speed_down,素早さ下降
-Buff.ContinuousAction,連続行動
-Buff.Repel,反撃
-Buff.Disarm,無力化
-Equipment,アイテム名とその説明文
-Equipment.NiceT-Shirt,気持ち良いTシャツ
-Equipment.NiceT-Shirt_Info,気持ちよすぎるTシャツ、すごく動きやすい。
-Equipment.Helmet,スマートヘッドギア
+System.Storage,収納庫,Storage,収納庫,収納庫
+Systeｍ.Requirement,解放条件:,Requirement: ,解放条件:,解放条件:
+Memory,回想,Memory,回想,回想
+Memory.Akiho_1,明穂 - 痴漢,Akiho - Chikan,明穂 - 痴漢,明穂 - 痴漢
+Memory.Akiho_2,明穂 - 敗北,Akiho - Defeat,明穂 - 敗北,明穂 - 敗北
+Memory.Rikka_1,立花 - 身体検査,Rikka - Body check,立花 - 身体検査,立花 - 身体検査
+Memory.Erena_1,エレナ - オナニー,Erena - Masturbation,エレナ - オナニー,エレナ - オナニー
+Memory.Erena_2,エレナ - 性奉仕 I,Erena - Sex service I,エレナ - 性奉仕 I,エレナ - 性奉仕 I
+Memory.Erena_3,エレナ - 性奉仕 II,Erena - Sex service II,エレナ - 性奉仕 II,エレナ - 性奉仕 II
+Memory.Kei_1,京 - ハッキング,Kei - Hacking,京 - ハッキング,京 - ハッキング
+Memory.Kei_2,京 - 捕獲,Kei - Captured,京 - 捕獲,京 - 捕獲
+Memory.Nayuta_1,那由多 - 捕獲,Nayuta - Captured,那由多 - 捕獲,那由多 - 捕獲
+WorldMapScene,ワールドマップ,World Map,ワールドマップ,ワールドマップ
+System.Story,ストーリーを進む,Continue story,ストーリーを進む,ストーリーを進む
+System.SideMission,資源調達クエスト,Resource Gathering,資源調達クエスト,資源調達クエスト
+System.QuestList,クエスト一覧,Operation List,クエスト一覧,クエスト一覧
+System.FoodQuest,[食料調達],[Food Gather],[食料調達],[食料調達]
+System.BankQuest,[銀行強盗],[Bank Robe],[銀行強盗],[銀行強盗]
+System.ResearchQuest,[戦闘研究],[Battle Research],[戦闘研究],[戦闘研究]
+System.RewardQuest,報酬,Reward,報酬,報酬
+System.AlertLevel,警戒度,Security Level,警戒度,警戒度
+System.Star,★,★,★,★
+Names,名詞/名称,名詞/名称,名詞/名称,名詞/名称
+Name.Akiho,笹谷 明穂,Sasaya Akiho,笹谷 明穂,笹谷 明穂
+Name.Rikka,水無瀬 六花,Minase Rikka,水無瀬 六花,水無瀬 六花
+Name.Kei,猫宮 京,Nekomiya Kei,猫宮 京,猫宮 京
+Name.Erena,清藤 エレナ,Seidō Erena,清藤 エレナ,清藤 エレナ
+Name.Nayuta,八雲 那由多,Yakumo Nayuta,八雲 那由多,八雲 那由多
+Name.No5,005号,No.005,005号,005号
+Name.No23,023号,No.023,023号,023号
+Name.Battler,戦闘員,Battler,戦闘員,戦闘員
+Name.Tentacle,触手怪人,TentacleMan,触手怪人,触手怪人
+Name.Clone,005号,No.005,005号,005号
+Name.RikkaDisguise,水無瀬 六花？,Minase Rikka??,水無瀬 六花？,水無瀬 六花？
+Name.Drone,パトロールドローン,Patrol Drone,パトロールドローン,パトロールドローン
+Name.GoldDrone,進化型ドローン,Improved Drone,進化型ドローン,進化型ドローン
+Name.DarkDrone,攻撃特化型ドローン,Attacker Drone,攻撃特化型ドローン,攻撃特化型ドローン
+Name.Android,警備ドロイド,Patrol Android,警備ドロイド,警備ドロイド
+Name.GoldAndroid,進化型ドロイド,Improved Android,進化型ドロイド,進化型ドロイド
+Name.DarkAndroid,攻撃特化型ドロイド,Attacker Android,攻撃特化型ドロイド,攻撃特化型ドロイド
+Name.Tank,四脚タンク,Quad Leg Tank,四脚タンク,四脚タンク
+Name.DarkTank,軍用歩行型タンク,Military Tank,軍用歩行型タンク,軍用歩行型タンク
+Name.Battler+Tentacle,触手怪人、戦闘員,"Battler, TentacleMan",触手怪人、戦闘員,触手怪人、戦闘員
+Name.Man,男,Man,男,男
+Name.Chairman,理事長,Chairman,理事長,理事長
+Name.Tentacle_Human,触手怪人(人間体),Tentacle (HumanForm),触手怪人(人間体),触手怪人(人間体)
+Name.Director,監督,Director,監督,監督
+Name.FemaleStudent,女生徒,Female Student,女生徒,女生徒
+Name.GuardMan,駅員,Station Staff,駅員,駅員
+Name.Host,司会者,Host,司会者,司会者
+Name.Audience,観客,Audience,観客,観客
+Name.Assistant,助手,Assistant,助手,助手
+Name.Goblin,ゴブリン型怪人,Goblin,ゴブリン型怪人,ゴブリン型怪人
+Name.Mutant,怪人,Mutant,怪人,怪人
+Name.Audience1,観客１,Audience1,観客１,観客１
+Name.Audience2,観客２,Audience2,観客２,観客２
+Name.Audience3,観客３,Audience3,観客３,観客３
+Name.Researcher,研究員,Researcher,研究員,研究員
+Name.Slime,スライム,Slime,スライム,スライム
+Name.Rikka_Core,立花？？,Rikka??,立花？？,立花？？
+Name.Tentacle_Monster,触手怪獣,Tentacle Monster,触手怪獣,触手怪獣
+Name.Clones,072号＆他のクローン,No.072 and others,072号＆他のクローン,072号＆他のクローン
+Name.No5_Call,005号(通信),No.005 (Call),005号(通信),005号(通信)
+Name.Battler_Call,戦闘員(通信),Battler (Call),戦闘員(通信),戦闘員(通信)
+Name.Kei_Call,猫宮京(通信),Nekomiya Kei (Call),猫宮京(通信),猫宮京(通信)
+Name.Akiho_Corrupted,笹谷 明穂,Sasaya Akiho,笹谷 明穂,笹谷 明穂
+Name.Rikka_Corrupted,072号,No.072,072号,072号
+Name.Kei_Corrupted,猫宮 京,Nekomiya Kei,猫宮 京,猫宮 京
+Name.Erena_Corrupted,清藤 エレナ,Seidō Erena,清藤 エレナ,清藤 エレナ
+Name.Nayuta_Corrupted,八雲 那由多,Yakumo Nayuta,八雲 那由多,八雲 那由多
+Mood,心情,Mood,心情,心情
+Mood.Rebel,反抗的,Rebel,反抗的,反抗的
+Mood.Pleasure,享楽,Pleasure,享楽,享楽
+Mood.Despair,絶望,Despair,絶望,絶望
+Mood.Submissive,従順,Submissive,従順,従順
+Mood.Resist,忍耐,Resist,忍耐,忍耐
+Mood.Contempt,軽蔑,Contempt,軽蔑,軽蔑
+Mood.Deprave,堕落,Deprave,堕落,堕落
+Mood.Angry,憤怒,Angry,憤怒,憤怒
+Mood.Expect,期待,Expecting,期待,期待
+Mood.Disgust,嫌悪,Disgust,嫌悪,嫌悪
+Mood.Loyal,忠実,Loyal,忠実,忠実
+OptionSetting,オプション設定,Option,オプション設定,オプション設定
+Option.BGM,BGM音量,BGM Volume,BGM音量,BGM音量
+Option.SE,効果音音量,SE Volume,効果音音量,効果音音量
+Option.TextSpeed,テキスト速度,Text Spd,テキスト速度,テキスト速度
+Option.AutoSpeed,オート速度,Auto Spd,オート速度,オート速度
+Option.Apply,適用,Apply,適用,適用
+Option.Default,デフォルト,Default,デフォルト,デフォルト
+Option.Second,秒,Sec,秒,秒
+Option.WindowMode,画面設定,Window Mode,画面設定,画面設定
+Option.FullScreen,フルスクリーン,Fullscreen,フルスクリーン,フルスクリーン
+Option.WindowedScreen,ウィンドウモード,Windowed Screen,ウィンドウモード,ウィンドウモード
+BattleScene,戦闘シーン,Battle Scene,戦闘シーン,戦闘シーン
+Battle.Attack,攻撃,Attack,攻撃,攻撃
+Battle.Skill,特殊技,Skill,特殊技,特殊技
+Battle.Item,道具,Item,道具,道具
+Battle.Idle,待機,Idle,待機,待機
+Battle.Level,Lv.,Lv.,Lv.,Lv.
+Battle.HP,HP,HP,HP,HP
+Battle.MP,SP,SP,SP,SP
+Battle.ActionOrder,行動順序,Order,行動順序,行動順序
+Battle.Cancel,右クリックで取り消し,Right click to cancel action,右クリックで取り消し,右クリックで取り消し
+Battle.Start,任務開始,Operation Start,任務開始,任務開始
+Battle.Victory,任務クリア,Operation Success,任務クリア,任務クリア
+Battle.Defeat,敗北,Defeat,敗北,敗北
+Battle.SkipTutorial,スキップ,Skip,スキップ,スキップ
+Battle.EscapeConfirm,撤退しますか？,Sure to escape?,撤退しますか？,撤退しますか？
+Battle.Escape,撤退,Run,撤退,撤退
+Battle.CannotAttack,普通攻撃を行えない,Can not attack,普通攻撃を行えない,普通攻撃を行えない
+Battle.OnCooldown,チャージ中 ({0}ターン),On cooldown ({0}turn),チャージ中 ({0}ターン),チャージ中 ({0}ターン)
+Battle.NotEnoughSP,SP不足 ({0}),Not enough SP ({0}),SP不足 ({0}),SP不足 ({0})
+Battle.AbilityDisabled,使用不可,Disabled,使用不可,使用不可
+Buff,状態,Buff,状態,状態
+Buff.Stun,行動不能,Stunned,行動不能,行動不能
+Buff.Hurt,継続ダメージ,Hurt,継続ダメージ,継続ダメージ
+Buff.Heal,継続回復,Heal,継続回復,継続回復
+Buff.Shield_up,防御力上昇,DEF UP,防御力上昇,防御力上昇
+Buff.Shield_down,防御力下降,DEF DOWN,防御力下降,防御力下降
+Buff.Attack_up,攻撃力上昇,ATK UP,攻撃力上昇,攻撃力上昇
+Buff.Attack_down,攻撃力下降,ATK DOWN,攻撃力下降,攻撃力下降
+Buff.Speed_up,素早さ上昇,SPD UP,素早さ上昇,素早さ上昇
+Buff.Speed_down,素早さ下降,SPD DOWN,素早さ下降,素早さ下降
+Buff.ContinuousAction,連続行動,Continuous Action,連続行動,連続行動
+Buff.Repel,反撃,Return damage,反撃,反撃
+Buff.Disarm,無力化,Disarm,無力化,無力化
+Equipment,アイテム名とその説明文,Items,アイテム名とその説明文,アイテム名とその説明文
+Equipment.NiceT-Shirt,気持ち良いTシャツ,気持ち良いTシャツ,気持ち良いTシャツ,気持ち良いTシャツ
+Equipment.NiceT-Shirt_Info,気持ちよすぎるTシャツ、すごく動きやすい。,気持ちよすぎるTシャツ、すごく動きやすい。,気持ちよすぎるTシャツ、すごく動きやすい。,気持ちよすぎるTシャツ、すごく動きやすい。
+Equipment.Helmet,スマートヘッドギア,スマートヘッドギア,スマートヘッドギア,スマートヘッドギア
 Equipment.Helmet_Info,"頭部の守りだけでなく、情報のリアルタイム表示も可能な最新型ヘルメット。
+かの過酷な戦場「クォンタム戦役」での生存率を確実に向上させてきたアイテム。","頭部の守りだけでなく、情報のリアルタイム表示も可能な最新型ヘルメット。
+かの過酷な戦場「クォンタム戦役」での生存率を確実に向上させてきたアイテム。","頭部の守りだけでなく、情報のリアルタイム表示も可能な最新型ヘルメット。
+かの過酷な戦場「クォンタム戦役」での生存率を確実に向上させてきたアイテム。","頭部の守りだけでなく、情報のリアルタイム表示も可能な最新型ヘルメット。
 かの過酷な戦場「クォンタム戦役」での生存率を確実に向上させてきたアイテム。"
-Equipment.Collar,忠誠の首輪
-Equipment.Collar_Info,組織への忠誠の証明として着用する首輪。
-Equipment.Stick,鉄パイプ
-Equipment.Sitck_Info,道端に偶然良い棒に出会ったら本能的に拾いたいのは男だ。名付けてナイスステック。
-Equipment.Umbrella,高強度繊維傘
-Equipment.Umbrella_Info,最新のナノテクノロジーを駆使した日本製の傘。攻撃と防御の二面性を持ち、まさに武器としての芸術品。
-Equipment.Stungun,ショックウェーブ・パルサー
+Equipment.Collar,忠誠の首輪,忠誠の首輪,忠誠の首輪,忠誠の首輪
+Equipment.Collar_Info,組織への忠誠の証明として着用する首輪。,組織への忠誠の証明として着用する首輪。,組織への忠誠の証明として着用する首輪。,組織への忠誠の証明として着用する首輪。
+Equipment.Stick,鉄パイプ,鉄パイプ,鉄パイプ,鉄パイプ
+Equipment.Sitck_Info,道端に偶然良い棒に出会ったら本能的に拾いたいのは男だ。名付けてナイスステック。,道端に偶然良い棒に出会ったら本能的に拾いたいのは男だ。名付けてナイスステック。,道端に偶然良い棒に出会ったら本能的に拾いたいのは男だ。名付けてナイスステック。,道端に偶然良い棒に出会ったら本能的に拾いたいのは男だ。名付けてナイスステック。
+Equipment.Umbrella,高強度繊維傘,高強度繊維傘,高強度繊維傘,高強度繊維傘
+Equipment.Umbrella_Info,最新のナノテクノロジーを駆使した日本製の傘。攻撃と防御の二面性を持ち、まさに武器としての芸術品。,最新のナノテクノロジーを駆使した日本製の傘。攻撃と防御の二面性を持ち、まさに武器としての芸術品。,最新のナノテクノロジーを駆使した日本製の傘。攻撃と防御の二面性を持ち、まさに武器としての芸術品。,最新のナノテクノロジーを駆使した日本製の傘。攻撃と防御の二面性を持ち、まさに武器としての芸術品。
+Equipment.Stungun,ショックウェーブ・パルサー,ショックウェーブ・パルサー,ショックウェーブ・パルサー,ショックウェーブ・パルサー
 Equipment.Stungun_Info,"都市伝説として語り継がれるスタンガン、名が囁かれるだけで、敵対者を感電させてしまうという噂が立つ。
+敵を行動不能にする特殊技を使えるようになる。","都市伝説として語り継がれるスタンガン、名が囁かれるだけで、敵対者を感電させてしまうという噂が立つ。
+敵を行動不能にする特殊技を使えるようになる。","都市伝説として語り継がれるスタンガン、名が囁かれるだけで、敵対者を感電させてしまうという噂が立つ。
+敵を行動不能にする特殊技を使えるようになる。","都市伝説として語り継がれるスタンガン、名が囁かれるだけで、敵対者を感電させてしまうという噂が立つ。
 敵を行動不能にする特殊技を使えるようになる。"
-Equipment.Glove,雷鋼製の手袋
+Equipment.Glove,雷鋼製の手袋,雷鋼製の手袋,雷鋼製の手袋,雷鋼製の手袋
 Equipment.Glove_Info,"新しく発明された「雷鋼」で作った手袋。
+変形可能で攻撃力が向上しますが、非常に重く、実用性が課題となっている。","新しく発明された「雷鋼」で作った手袋。
+変形可能で攻撃力が向上しますが、非常に重く、実用性が課題となっている。","新しく発明された「雷鋼」で作った手袋。
+変形可能で攻撃力が向上しますが、非常に重く、実用性が課題となっている。","新しく発明された「雷鋼」で作った手袋。
 変形可能で攻撃力が向上しますが、非常に重く、実用性が課題となっている。"
-Equipment.StolenUndie,聖核戦姫から盗んだパンティ
+Equipment.StolenUndie,聖核戦姫から盗んだパンティ,聖核戦姫から盗んだパンティ,聖核戦姫から盗んだパンティ,聖核戦姫から盗んだパンティ
 Equipment.StolenUndie_Info,"身につけた者には、神秘の輝きが満ち、疲れた心と体を癒す力を持っている。
+装備者は毎ターンSPを少量回復する。","身につけた者には、神秘の輝きが満ち、疲れた心と体を癒す力を持っている。
+装備者は毎ターンSPを少量回復する。","身につけた者には、神秘の輝きが満ち、疲れた心と体を癒す力を持っている。
+装備者は毎ターンSPを少量回復する。","身につけた者には、神秘の輝きが満ち、疲れた心と体を癒す力を持っている。
 装備者は毎ターンSPを少量回復する。"
-Equipment.Cushion,フワフワクッション
+Equipment.Cushion,フワフワクッション,フワフワクッション,フワフワクッション,フワフワクッション
 Equipment.Cushion_Info,"触れると心地よい柔らかさが広がり、まるで空気そのものが抱擁しているよう。
+装備者は待機時にＳＰとＨＰも回復される。","触れると心地よい柔らかさが広がり、まるで空気そのものが抱擁しているよう。
+装備者は待機時にＳＰとＨＰも回復される。","触れると心地よい柔らかさが広がり、まるで空気そのものが抱擁しているよう。
+装備者は待機時にＳＰとＨＰも回復される。","触れると心地よい柔らかさが広がり、まるで空気そのものが抱擁しているよう。
 装備者は待機時にＳＰとＨＰも回復される。"
-Equipment.Shoes,スプリントシューズ
-Equipment.Shoes_Info,ただの運動靴、しかし企業が何年もかけたその科学の粋は侮れない。
-Equipment.Akiho,明穂の聖核
-Equipment.Akiho_Info,装備者は毎ターンHPとSPを回復する。
-Equipment.Rikka,立花の聖核
-Equipment.Rikka_Info,ダメージ受けた時に自動的に反撃する。
-Equipment.Erena,エレナの聖核
-Equipment.Erena_Info,攻撃でたまに敵を行動不能にする。
-Equipment.Kei,京の聖核
-Equipment.Kei_Info,装備者以外のパーティーメンバーが全員15点攻撃力増加。
-Equipment.Nayuta,那由多の聖核
-Equipment.Nayuta_Info,装備者は毎ターン攻撃力を5~15点増加する。
-Items,アイテム名とその説明文
-Item.Croissant,クロワッサン
-Item.Croissant_Info,エレガントな味覚を楽しむための特別な軽食。
-Item.Bread,食パン
-Item.Bread_Info,一切の準備が必要なく、どこでも手軽に摂取できるため、忙しい人々に力強い支えを提供している。
-Item.Melonpan,メロンパン
-Item.Melonpan_Info,甘さとふんわりとした食感が特徴の美味しい軽食。
-Item.Pancake,パンケーキ
-Item.Pancake_Info,人気のある朝食料理。
-Item.Baguette,バゲット
-Item.Baguette_Info,棒状の形をしているパン。
-Item.Hotdog,ホットドッグ
-Item.Hotdog_Info,ソーセージを長いバンに挟んだファーストフード。
-Item.Spegetti,スパゲッティ
-Item.Spegetti_Info,
-Item.Omelette,オムライス
-Item.Omelette_Info,
-Item.SteakSet,ステーキ定食
-Item.SteakSet_Info,ジューシーなステーキ肉と付け合わせを組み合わせた、満足感のある食事セット。
-Item.Sandwich,サンドイッチ
-Item.Sandwich_Info,
-Item.Coffee,コーヒー
-Item.Coffee_Info,
-Item.Tea,紅茶
-Item.Tea_Info,
-Item.Cola,コーラ
-Item.Cola_Info,
-Item.Parfait,パフェ
-Item.Parfait_Info,
-Item.M24,柄付手榴弾
-Item.M24_Info,手投げ弾を投げてダメージを与える。
-Item.FirstAid,救急箱
-Item.FirstAid_Info,効果が不安定だが、緊急時には仕方ない。
-Ability,特殊技名とその説明文 (背景色でキャラを分ける)
-Ability.DeepBreath,緊急回復
+Equipment.Shoes,スプリントシューズ,スプリントシューズ,スプリントシューズ,スプリントシューズ
+Equipment.Shoes_Info,ただの運動靴、しかし企業が何年もかけたその科学の粋は侮れない。,ただの運動靴、しかし企業が何年もかけたその科学の粋は侮れない。,ただの運動靴、しかし企業が何年もかけたその科学の粋は侮れない。,ただの運動靴、しかし企業が何年もかけたその科学の粋は侮れない。
+Equipment.Akiho,明穂の聖核,明穂の聖核,明穂の聖核,明穂の聖核
+Equipment.Akiho_Info,装備者は毎ターンHPとSPを回復する。,装備者は毎ターンHPとSPを回復する。,装備者は毎ターンHPとSPを回復する。,装備者は毎ターンHPとSPを回復する。
+Equipment.Rikka,立花の聖核,立花の聖核,立花の聖核,立花の聖核
+Equipment.Rikka_Info,ダメージ受けた時に自動的に反撃する。,ダメージ受けた時に自動的に反撃する。,ダメージ受けた時に自動的に反撃する。,ダメージ受けた時に自動的に反撃する。
+Equipment.Erena,エレナの聖核,エレナの聖核,エレナの聖核,エレナの聖核
+Equipment.Erena_Info,攻撃でたまに敵を行動不能にする。,攻撃でたまに敵を行動不能にする。,攻撃でたまに敵を行動不能にする。,攻撃でたまに敵を行動不能にする。
+Equipment.Kei,京の聖核,京の聖核,京の聖核,京の聖核
+Equipment.Kei_Info,装備者以外のパーティーメンバーが全員15点攻撃力増加。,装備者以外のパーティーメンバーが全員15点攻撃力増加。,装備者以外のパーティーメンバーが全員15点攻撃力増加。,装備者以外のパーティーメンバーが全員15点攻撃力増加。
+Equipment.Nayuta,那由多の聖核,那由多の聖核,那由多の聖核,那由多の聖核
+Equipment.Nayuta_Info,装備者は毎ターン攻撃力を5~15点増加する。,装備者は毎ターン攻撃力を5~15点増加する。,装備者は毎ターン攻撃力を5~15点増加する。,装備者は毎ターン攻撃力を5~15点増加する。
+Items,アイテム名とその説明文,アイテム名とその説明文,アイテム名とその説明文,アイテム名とその説明文
+Item.Croissant,クロワッサン,クロワッサン,クロワッサン,クロワッサン
+Item.Croissant_Info,エレガントな味覚を楽しむための特別な軽食。,エレガントな味覚を楽しむための特別な軽食。,エレガントな味覚を楽しむための特別な軽食。,エレガントな味覚を楽しむための特別な軽食。
+Item.Bread,食パン,食パン,食パン,食パン
+Item.Bread_Info,一切の準備が必要なく、どこでも手軽に摂取できるため、忙しい人々に力強い支えを提供している。,一切の準備が必要なく、どこでも手軽に摂取できるため、忙しい人々に力強い支えを提供している。,一切の準備が必要なく、どこでも手軽に摂取できるため、忙しい人々に力強い支えを提供している。,一切の準備が必要なく、どこでも手軽に摂取できるため、忙しい人々に力強い支えを提供している。
+Item.Melonpan,メロンパン,メロンパン,メロンパン,メロンパン
+Item.Melonpan_Info,甘さとふんわりとした食感が特徴の美味しい軽食。,甘さとふんわりとした食感が特徴の美味しい軽食。,甘さとふんわりとした食感が特徴の美味しい軽食。,甘さとふんわりとした食感が特徴の美味しい軽食。
+Item.Pancake,パンケーキ,パンケーキ,パンケーキ,パンケーキ
+Item.Pancake_Info,人気のある朝食料理。,人気のある朝食料理。,人気のある朝食料理。,人気のある朝食料理。
+Item.Baguette,バゲット,バゲット,バゲット,バゲット
+Item.Baguette_Info,棒状の形をしているパン。,棒状の形をしているパン。,棒状の形をしているパン。,棒状の形をしているパン。
+Item.Hotdog,ホットドッグ,ホットドッグ,ホットドッグ,ホットドッグ
+Item.Hotdog_Info,ソーセージを長いバンに挟んだファーストフード。,ソーセージを長いバンに挟んだファーストフード。,ソーセージを長いバンに挟んだファーストフード。,ソーセージを長いバンに挟んだファーストフード。
+Item.Spegetti,スパゲッティ,スパゲッティ,スパゲッティ,スパゲッティ
+Item.Spegetti_Info,,,,
+Item.Omelette,オムライス,オムライス,オムライス,オムライス
+Item.Omelette_Info,,,,
+Item.SteakSet,ステーキ定食,ステーキ定食,ステーキ定食,ステーキ定食
+Item.SteakSet_Info,ジューシーなステーキ肉と付け合わせを組み合わせた、満足感のある食事セット。,ジューシーなステーキ肉と付け合わせを組み合わせた、満足感のある食事セット。,ジューシーなステーキ肉と付け合わせを組み合わせた、満足感のある食事セット。,ジューシーなステーキ肉と付け合わせを組み合わせた、満足感のある食事セット。
+Item.Sandwich,サンドイッチ,サンドイッチ,サンドイッチ,サンドイッチ
+Item.Sandwich_Info,,,,
+Item.Coffee,コーヒー,コーヒー,コーヒー,コーヒー
+Item.Coffee_Info,,,,
+Item.Tea,紅茶,紅茶,紅茶,紅茶
+Item.Tea_Info,,,,
+Item.Cola,コーラ,コーラ,コーラ,コーラ
+Item.Cola_Info,,,,
+Item.Parfait,パフェ,パフェ,パフェ,パフェ
+Item.Parfait_Info,,,,
+Item.M24,柄付手榴弾,柄付手榴弾,柄付手榴弾,柄付手榴弾
+Item.M24_Info,手投げ弾を投げてダメージを与える。,手投げ弾を投げてダメージを与える。,手投げ弾を投げてダメージを与える。,手投げ弾を投げてダメージを与える。
+Item.FirstAid,救急箱,救急箱,救急箱,救急箱
+Item.FirstAid_Info,効果が不安定だが、緊急時には仕方ない。,効果が不安定だが、緊急時には仕方ない。,効果が不安定だが、緊急時には仕方ない。,効果が不安定だが、緊急時には仕方ない。
+Ability,特殊技名とその説明文 (背景色でキャラを分ける),特殊技名とその説明文 (背景色でキャラを分ける),特殊技名とその説明文 (背景色でキャラを分ける),特殊技名とその説明文 (背景色でキャラを分ける)
+Ability.DeepBreath,緊急回復,緊急回復,緊急回復,緊急回復
 Ability.DeepBreath_Info,"自身のHPを回復
+残りHPが少ないほど回復量が多くなる","自身のHPを回復
+残りHPが少ないほど回復量が多くなる","自身のHPを回復
+残りHPが少ないほど回復量が多くなる","自身のHPを回復
 残りHPが少ないほど回復量が多くなる"
-Ability.PowerfulPunch,パワフルパンチ
+Ability.PowerfulPunch,パワフルパンチ,パワフルパンチ,パワフルパンチ,パワフルパンチ
 Ability.PowerfulPunch_Info,"敵１体に普通攻撃の2.5倍ダメージを与える。
+使用者がその後の1ターン行動不能になる","敵１体に普通攻撃の2.5倍ダメージを与える。
+使用者がその後の1ターン行動不能になる","敵１体に普通攻撃の2.5倍ダメージを与える。
+使用者がその後の1ターン行動不能になる","敵１体に普通攻撃の2.5倍ダメージを与える。
 使用者がその後の1ターン行動不能になる"
-Ability.Tackle,共倒れ
-Ability.Tackle_Info,敵１体と共に1ターン行動不能になる
-Ability.SuckingTentacle,吸収触手
+Ability.Tackle,共倒れ,共倒れ,共倒れ,共倒れ
+Ability.Tackle_Info,敵１体と共に1ターン行動不能になる,敵１体と共に1ターン行動不能になる,敵１体と共に1ターン行動不能になる,敵１体と共に1ターン行動不能になる
+Ability.SuckingTentacle,吸収触手,吸収触手,吸収触手,吸収触手
 Ability.SuckingTentacle_Info,"相手のSPを半分吸収する
 
+女性相手ならHPも吸収する","相手のSPを半分吸収する
+
+女性相手ならHPも吸収する","相手のSPを半分吸収する
+
+女性相手ならHPも吸収する","相手のSPを半分吸収する
+
 女性相手ならHPも吸収する"
-Ability.TentacleService,触手サービス
-Ability.TentacleService_Info,SPを全部味方に分け与える。(女性相手のみ有効)
-Ability.Capture,媚薬ガス
+Ability.TentacleService,触手サービス,触手サービス,触手サービス,触手サービス
+Ability.TentacleService_Info,SPを全部味方に分け与える。(女性相手のみ有効),SPを全部味方に分け与える。(女性相手のみ有効),SPを全部味方に分け与える。(女性相手のみ有効),SPを全部味方に分け与える。(女性相手のみ有効)
+Ability.Capture,媚薬ガス,媚薬ガス,媚薬ガス,媚薬ガス
 Ability.Capture_Info,"敵１体の攻撃力・スピードを一時25%ダウン
 
+女性相手なら防御力と攻撃力をダウンさせる","敵１体の攻撃力・スピードを一時25%ダウン
+
+女性相手なら防御力と攻撃力をダウンさせる","敵１体の攻撃力・スピードを一時25%ダウン
+
+女性相手なら防御力と攻撃力をダウンさせる","敵１体の攻撃力・スピードを一時25%ダウン
+
 女性相手なら防御力と攻撃力をダウンさせる"
-Ability.SelfRepair,自己修復
-Ability.SelfRepair_Info,35% HP 回復
-Ability.SelfEnchant,自己改造
-Ability.SelfEnchant_Info,ランダムのバフを獲得する
-Ability.Booster,ブースト
-Ability.Booster_Info,攻撃力 15% アップ
-Ability.HealAttack,エナジーレーザー
-Ability.HealAttack_Info,相手に30ダメージを与える
-Ability.GreatRegen,ヒーリング
-Ability.GreatRegen_Info,HPとSPを回復。HPは持続的回復する
-Ability.Milk,ミルク補給
-Ability.Milk_Info,味方1体 HP 20~30 回復させる。
-Ability.MilkCookie,特濃ミルク
-Ability.MilkCookie_Info,行動不能以外のデバフをすべて解除する。
-Ability.MilkOverdrive,ミルク補給オーバードライブ
+Ability.SelfRepair,自己修復,自己修復,自己修復,自己修復
+Ability.SelfRepair_Info,35% HP 回復,35% HP 回復,35% HP 回復,35% HP 回復
+Ability.SelfEnchant,自己改造,自己改造,自己改造,自己改造
+Ability.SelfEnchant_Info,ランダムのバフを獲得する,ランダムのバフを獲得する,ランダムのバフを獲得する,ランダムのバフを獲得する
+Ability.Booster,ブースト,ブースト,ブースト,ブースト
+Ability.Booster_Info,攻撃力 15% アップ,攻撃力 15% アップ,攻撃力 15% アップ,攻撃力 15% アップ
+Ability.HealAttack,エナジーレーザー,エナジーレーザー,エナジーレーザー,エナジーレーザー
+Ability.HealAttack_Info,相手に30ダメージを与える,相手に30ダメージを与える,相手に30ダメージを与える,相手に30ダメージを与える
+Ability.GreatRegen,ヒーリング,ヒーリング,ヒーリング,ヒーリング
+Ability.GreatRegen_Info,HPとSPを回復。HPは持続的回復する,HPとSPを回復。HPは持続的回復する,HPとSPを回復。HPは持続的回復する,HPとSPを回復。HPは持続的回復する
+Ability.Milk,ミルク補給,ミルク補給,ミルク補給,ミルク補給
+Ability.Milk_Info,味方1体 HP 20~30 回復させる。,味方1体 HP 20~30 回復させる。,味方1体 HP 20~30 回復させる。,味方1体 HP 20~30 回復させる。
+Ability.MilkCookie,特濃ミルク,特濃ミルク,特濃ミルク,特濃ミルク
+Ability.MilkCookie_Info,行動不能以外のデバフをすべて解除する。,行動不能以外のデバフをすべて解除する。,行動不能以外のデバフをすべて解除する。,行動不能以外のデバフをすべて解除する。
+Ability.MilkOverdrive,ミルク補給オーバードライブ,ミルク補給オーバードライブ,ミルク補給オーバードライブ,ミルク補給オーバードライブ
 Ability.MilkOverdrive_Info,"過度にミルク搾って味方全員に分ける。
 明穂以外の味方全員が全回復する。
+使用後 ミルク補給 と ミルク補給オバードライブ が今回のバトルで使用不可となる。","過度にミルク搾って味方全員に分ける。
+明穂以外の味方全員が全回復する。
+使用後 ミルク補給 と ミルク補給オバードライブ が今回のバトルで使用不可となる。","過度にミルク搾って味方全員に分ける。
+明穂以外の味方全員が全回復する。
+使用後 ミルク補給 と ミルク補給オバードライブ が今回のバトルで使用不可となる。","過度にミルク搾って味方全員に分ける。
+明穂以外の味方全員が全回復する。
 使用後 ミルク補給 と ミルク補給オバードライブ が今回のバトルで使用不可となる。"
-Ability.Overdrive,オーバードライブ
+Ability.Overdrive,オーバードライブ,オーバードライブ,オーバードライブ,オーバードライブ
 Ability.Overdrive_Info,"３ターン連続行動することができる。
+その後３ターン行動不能となる。","３ターン連続行動することができる。
+その後３ターン行動不能となる。","３ターン連続行動することができる。
+その後３ターン行動不能となる。","３ターン連続行動することができる。
 その後３ターン行動不能となる。"
-Ability.QuickAttack,連撃
-Ability.QuickAttack_Info,ランダム攻撃x3
-Ability.Fist,正拳突き
-Ability.Fist_Info,ターンを消耗せずに敵単体を攻撃する。
-Ability.Repel,反撃の意思
-Ability.Repel_Info,一定時間内、攻撃されるたびに自身の防御力の割合に基づく反射ダメージを与える
-Ability.GuardUp,不動のオーラ
-Ability.GuardUp_Info,2 ターン間防御力99アップ
-Ability.GuardianAngel,不滅の加護
-Ability.GuardianAngel_Info,１ターンの間味方全員が受けるダメージを無効にする。
-Ability.Hacking,ハッキング
+Ability.QuickAttack,連撃,連撃,連撃,連撃
+Ability.QuickAttack_Info,ランダム攻撃x3,ランダム攻撃x3,ランダム攻撃x3,ランダム攻撃x3
+Ability.Fist,正拳突き,正拳突き,正拳突き,正拳突き
+Ability.Fist_Info,ターンを消耗せずに敵単体を攻撃する。,ターンを消耗せずに敵単体を攻撃する。,ターンを消耗せずに敵単体を攻撃する。,ターンを消耗せずに敵単体を攻撃する。
+Ability.Repel,反撃の意思,反撃の意思,反撃の意思,反撃の意思
+Ability.Repel_Info,一定時間内、攻撃されるたびに自身の防御力の割合に基づく反射ダメージを与える,一定時間内、攻撃されるたびに自身の防御力の割合に基づく反射ダメージを与える,一定時間内、攻撃されるたびに自身の防御力の割合に基づく反射ダメージを与える,一定時間内、攻撃されるたびに自身の防御力の割合に基づく反射ダメージを与える
+Ability.GuardUp,不動のオーラ,不動のオーラ,不動のオーラ,不動のオーラ
+Ability.GuardUp_Info,2 ターン間防御力99アップ,2 ターン間防御力99アップ,2 ターン間防御力99アップ,2 ターン間防御力99アップ
+Ability.GuardianAngel,不滅の加護,不滅の加護,不滅の加護,不滅の加護
+Ability.GuardianAngel_Info,１ターンの間味方全員が受けるダメージを無効にする。,１ターンの間味方全員が受けるダメージを無効にする。,１ターンの間味方全員が受けるダメージを無効にする。,１ターンの間味方全員が受けるダメージを無効にする。
+Ability.Hacking,ハッキング,ハッキング,ハッキング,ハッキング
 Ability.Hacking_Info,"ターゲットをハッキングしてバトル終了までの間傀儡として操る。京への攻撃をすべて傀儡が代わりに受ける (機械類の敵のみ有効)
+ターゲットとのレベル差と目標の残りHPが成功確率を左右する","ターゲットをハッキングしてバトル終了までの間傀儡として操る。京への攻撃をすべて傀儡が代わりに受ける (機械類の敵のみ有効)
+ターゲットとのレベル差と目標の残りHPが成功確率を左右する","ターゲットをハッキングしてバトル終了までの間傀儡として操る。京への攻撃をすべて傀儡が代わりに受ける (機械類の敵のみ有効)
+ターゲットとのレベル差と目標の残りHPが成功確率を左右する","ターゲットをハッキングしてバトル終了までの間傀儡として操る。京への攻撃をすべて傀儡が代わりに受ける (機械類の敵のみ有効)
 ターゲットとのレベル差と目標の残りHPが成功確率を左右する"
-Ability.SuicideAttack,自爆指示
+Ability.SuicideAttack,自爆指示,自爆指示,自爆指示,自爆指示
 Ability.SuicideAttack_Info,"ハッキングした傀儡を自爆攻撃を行わせる。
+傀儡の残りHPがダメージとする。","ハッキングした傀儡を自爆攻撃を行わせる。
+傀儡の残りHPがダメージとする。","ハッキングした傀儡を自爆攻撃を行わせる。
+傀儡の残りHPがダメージとする。","ハッキングした傀儡を自爆攻撃を行わせる。
 傀儡の残りHPがダメージとする。"
-Ability.Suicide,自爆攻撃
+Ability.Suicide,自爆攻撃,自爆攻撃,自爆攻撃,自爆攻撃
 Ability.Suicide_Info,"自爆攻撃を行う。
+残りHPがダメージとする。","自爆攻撃を行う。
+残りHPがダメージとする。","自爆攻撃を行う。
+残りHPがダメージとする。","自爆攻撃を行う。
 残りHPがダメージとする。"
-Ability.Reprogram,リファクタリング
-Ability.Reprogram_Info,ターゲットのプログラムを再作成し、攻撃力と防御を上昇させる。(機械類の目標のみ有効)
-Ability.EffeciencyBoost,システム修復
-Ability.EffeciencyBoost_Info,ターゲットのプログラムを最適化し、HPを回復させ、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効)
-Ability.PowerMode,雷神之相
-Ability.PowerMode_On,雷神之相 (入)
-Ability.PowerMode_Off,雷神之相 (切)
+Ability.Reprogram,リファクタリング,リファクタリング,リファクタリング,リファクタリング
+Ability.Reprogram_Info,ターゲットのプログラムを再作成し、攻撃力と防御を上昇させる。(機械類の目標のみ有効),ターゲットのプログラムを再作成し、攻撃力と防御を上昇させる。(機械類の目標のみ有効),ターゲットのプログラムを再作成し、攻撃力と防御を上昇させる。(機械類の目標のみ有効),ターゲットのプログラムを再作成し、攻撃力と防御を上昇させる。(機械類の目標のみ有効)
+Ability.EffeciencyBoost,システム修復,システム修復,システム修復,システム修復
+Ability.EffeciencyBoost_Info,ターゲットのプログラムを最適化し、HPを回復させ、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効),ターゲットのプログラムを最適化し、HPを回復させ、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効),ターゲットのプログラムを最適化し、HPを回復させ、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効),ターゲットのプログラムを最適化し、HPを回復させ、すぐに次の行動をとることができるようにする。(機械類の目標のみ有効)
+Ability.PowerMode,雷神之相,雷神之相,雷神之相,雷神之相
+Ability.PowerMode_On,雷神之相 (入),雷神之相 (入),雷神之相 (入),雷神之相 (入)
+Ability.PowerMode_Off,雷神之相 (切),雷神之相 (切),雷神之相 (切),雷神之相 (切)
 Ability.PowerMode_Info,"有効にすると攻撃が70%アップ。
 常時 20 ダメージ受ける。
 
+スキルを有効・無効にするときターンを消耗しない","有効にすると攻撃が70%アップ。
+常時 20 ダメージ受ける。
+
+スキルを有効・無効にするときターンを消耗しない","有効にすると攻撃が70%アップ。
+常時 20 ダメージ受ける。
+
+スキルを有効・無効にするときターンを消耗しない","有効にすると攻撃が70%アップ。
+常時 20 ダメージ受ける。
+
 スキルを有効・無効にするときターンを消耗しない"
-Ability.ChargeAttack,明鏡止水
+Ability.ChargeAttack,明鏡止水,明鏡止水,明鏡止水,明鏡止水
 Ability.ChargeAttack_Info,"次の攻撃のために力を貯めて、攻撃力を150%上げる。
+連続使用でバフを重ねることができる。","次の攻撃のために力を貯めて、攻撃力を150%上げる。
+連続使用でバフを重ねることができる。","次の攻撃のために力を貯めて、攻撃力を150%上げる。
+連続使用でバフを重ねることができる。","次の攻撃のために力を貯めて、攻撃力を150%上げる。
 連続使用でバフを重ねることができる。"
-Ability.Ultimate,絶命破斬
+Ability.Ultimate,絶命破斬,絶命破斬,絶命破斬,絶命破斬
 Ability.Ultimate_Info,"敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
+与えたダメージを吸収してHPを回復する。","敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
+与えたダメージを吸収してHPを回復する。","敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
+与えたダメージを吸収してHPを回復する。","敵１体に大量のダメージを与える。HPが少ないほどダメージが高くなる。
 与えたダメージを吸収してHPを回復する。"
-Ability.Stungun_Info,スタンガンでターゲットを1ターン行動不能にする。
-Ability.DivineShield,エナジーシールド
-Ability.DivineShield_Info,次に受けたダメージを無効にする
-Ability.DivineRapier,ディバインキャリバー
-Ability.DivineRapier_Info,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。
-Ability.StunShield,トラップシールド
-Ability.StunShield_Info,次にエレナを攻撃するものは一時行動不能になる。
-HomeCharacter,ホーム台詞
-HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」
-HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」
-HomeChar.No5_1-3,「準備は万全です。いつでも出撃できます。」
-HomeChar.No5_1-4,「状況は非常に悪いです。聖核戦姫を何とかしないと...」
-HomeChar.No5_2-3,「オリジナルの研究開発は順調ですか？」
-HomeChar.Akiho_2-1,「なんですか？おっぱい搾ってくれるんですか？」
-HomeChar.Akiho_2-2,「どうせなら六花も一緒に…」
-HomeChar.Akiho_2-3,「おっぱいが張って来ちゃった…搾ってもらわなきゃ」
-HomeChar.Akiho_2-4,「……？私のミルク飲みますか？」
-HomeChar.No72_3-1,「こんにちは、何かご用はありますか？」
-HomeChar.No72_3-2,「…そのデータは私の中に存在していません」
-HomeChar.No72_3-3,「何かご命令ですか？」
-HomeChar.No72_3-4,「私に感情はプログラムされていません。他のクローンと同様です」
-HomeChar.Erena_5-1,「愚かな私ですが、存分にお使いください」
-HomeChar.Erena_5-2,「聖核戦姫に聖月生徒会…今はただの殲滅対象に過ぎません」
-HomeChar.Erena_5-3,「そろそろご主人様にご奉仕する時間です」
-HomeChar.Erena_5-4,「那由多…？その話はちょっと…」
-HomeChar.Kei_5-1,「暇だね…なんか楽しいことない？」
-HomeChar.Kei_5-2,「なんか用？実験なら付き合うよ」
-HomeChar.Kei_5-3,「…ちょっと精液欲しくなってきたかも」
-HomeChar.Kei_5-4,「聖核戦姫狩りに行ってこようかな」
-HomeChar.Nayuta_F-1,「私の力…その全てを捧げます…♥」
-HomeChar.Nayuta_F-2,「聖核戦姫…私が一匹残らず捕獲します」
-HomeChar.Nayuta_F-3,「…弱者は強者に従うのみです」
-WorldScene,ワールド画面台詞
-World.Chapter2-3,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」
-World.Chapter3-3,「六花の調教は進んでますか？とっとと堕としちゃってください！」
-World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
-BattleLog,戦闘ログ
-BattleLog.Attack,{0}　の攻撃！
-BattleLog.Damage,{0}　に　{1}　のダメージを与えた！
-BattleLog.HealHP,{0}　の HPが {1} 回復した！
-BattleLog.HealSP,{0}　の SPが {1} 回復した！
-BattleLog.MissAttack,{0}　に避けられた！
-BattleLog.ItemSelf,{0}　が {1} を使った。
-BattleLog.ItemSelfToSelf,{0}　が自分に {1} を使った。
-BattleLog.ItemOther,{0}　が {1} に {2} を使った。
-BattleLog.Idle,{0}　が待機する。
-BattleLog.IdleSP,{0}　が休憩をとった。SP　{1}　回復した。
-BattleLog.TankAttack,{0}　のビーム攻撃！
-BattleLog.StunStart,{0}　が行動不能となった！
-BattleLog.StunUpdate,{0}　はまだ動けない。
-BattleLog.HurtStart,{0}　が怪我をした！
-BattleLog.HurtUpdate,{0}　の怪我が痛む！　{1}　のダメージを受けた。
-BattleLog.HurtEnd,{0}　の怪我が治った。
-BattleLog.HealStart,{0}　は継続的にHPを回復される。
-BattleLog.HealUpdate,{0}　の HP {1} 回復した。
-BattleLog.ShieldUpStart,{0}　の防御が固くなった。
-BattleLog.ShieldDownStart,{0}　の防御が弱くなった。
-BattleLog.AttackUpStart,{0}　の攻撃力が {1} 上がった！
-BattleLog.AttackDownStart,{0}　の攻撃力が {1} 下がった！
-BattleLog.SpeedUpStart,{0}　の動きが {1} 速くなった。
-BattleLog.SpeedDownStart,{0}　の動きが {1} 鈍くなった。
-BattleLog.Disarm,{0}　は攻撃できなくなった
-BattleLog.Stungun,{0}　から {1} を放つ！
-BattleLog.AbilityExecute,{0}　からの {1}！
-BattleLog.AbilityExecuteSelf,{0}　が{1}する。
-BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
-BattleLog.NoEffect,効果はなかった。
-BattleLog.GiveSP,SP {0} を {1} に分け与えた！
-BattleLog.SPDrain,{0}　のSP {1} 吸収した！ 
-BattleLog.HPDrain,{0}　のHP {1} 吸収した！
-BattleLog.Retire,{0}　が再起不能となった。
-BattleLog.Defeat,{0}　が再起不能となった。
-BattleLog.Hacking,{0}　がハッキングを挑む！成功確率は {1}
-BattleLog.Hacking_Success,成功した！ {0}　が傀儡となった。
-BattleLog.Hacking_Fail,ハッキングが失敗した。
-BattleLog.Hacking_End,{0}　のシステム故障が直った。
-BattleLog.Overdrive,{0}！ {1} がこれから{2}回連続行動する。
-BattleLog.ContinueTurn,また{0}のターン！
-BattleLog.TeamHeal,仲間全員を全回復した！
-BattleLog.Usage,{0}　の　{1}！
-BattleLog.ShieldDownValue,{0}　の防御力が {1} 点下げた。
-BattleLog.DivineShield,次のダメージを完全防御する！
-BattleLog.StunShield,次に{0}を攻撃する者が反発されてしばらく行動不能となる
-BatteLog.Repel,{0}　の反撃！ {1} ダメージを跳ね返った
-BattleLog.Suicide,{0}　が自爆する！{1} のダメージを与えた！
-BattleLog.Reprogram,{0}　の攻撃力が{1}点増加。防御力{2}点増加。
-BattleLog.PowerMode,雷神之相の代償！{0}が{1}ダメージを受けた。
-BattleLog.ChargeAttack,攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック)
-BattleLog.NayutaEquip,[{0}] {1}　の攻撃力が {2} 上がった！
-Demo,体験版
+Ability.Stungun_Info,スタンガンでターゲットを1ターン行動不能にする。,スタンガンでターゲットを1ターン行動不能にする。,スタンガンでターゲットを1ターン行動不能にする。,スタンガンでターゲットを1ターン行動不能にする。
+Ability.DivineShield,エナジーシールド,エナジーシールド,エナジーシールド,エナジーシールド
+Ability.DivineShield_Info,次に受けたダメージを無効にする,次に受けたダメージを無効にする,次に受けたダメージを無効にする,次に受けたダメージを無効にする
+Ability.DivineRapier,ディバインキャリバー,ディバインキャリバー,ディバインキャリバー,ディバインキャリバー
+Ability.DivineRapier_Info,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。
+Ability.StunShield,トラップシールド,トラップシールド,トラップシールド,トラップシールド
+Ability.StunShield_Info,次にエレナを攻撃するものは一時行動不能になる。,次にエレナを攻撃するものは一時行動不能になる。,次にエレナを攻撃するものは一時行動不能になる。,次にエレナを攻撃するものは一時行動不能になる。
+HomeCharacter,ホーム台詞,ホーム台詞,ホーム台詞,ホーム台詞
+HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」,"「Hello, how can I help you?」",「こんにちは、何かご用はありますか？」,「こんにちは、何かご用はありますか？」
+HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」,"「Docter, we look forward to seeing you in action.」",「ドクター、貴方の活躍を期待しています。」,「ドクター、貴方の活躍を期待しています。」
+HomeChar.No5_1-3,「準備は万全です。いつでも出撃できます。」,「All set. We're ready to action.」,「準備は万全です。いつでも出撃できます。」,「準備は万全です。いつでも出撃できます。」
+HomeChar.No5_1-4,「状況は非常に悪いです。聖核戦姫を何とかしないと...」,「The situation is very bad. We have to do something about the Seikaku Princess...」,「状況は非常に悪いです。聖核戦姫を何とかしないと...」,「状況は非常に悪いです。聖核戦姫を何とかしないと...」
+HomeChar.No5_2-3,「オリジナルの研究開発は順調ですか？」,「How's the research of my 'original' doing?」,「オリジナルの研究開発は順調ですか？」,「オリジナルの研究開発は順調ですか？」
+HomeChar.Akiho_2-1,「なんですか？おっぱい搾ってくれるんですか？」,「What is it? Are you going to squeeze my tits?」,「なんですか？おっぱい搾ってくれるんですか？」,「なんですか？おっぱい搾ってくれるんですか？」
+HomeChar.Akiho_2-2,「どうせなら六花も一緒に…」,「Hope Rikka is here with me…」,「どうせなら六花も一緒に…」,「どうせなら六花も一緒に…」
+HomeChar.Akiho_2-3,「おっぱいが張って来ちゃった…搾ってもらわなきゃ」,「My tits are getting so tight... I need to have them squeezed」,「おっぱいが張って来ちゃった…搾ってもらわなきゃ」,「おっぱいが張って来ちゃった…搾ってもらわなきゃ」
+HomeChar.Akiho_2-4,「……？私のミルク飲みますか？」,「……? Want to drink my milk?」,「……？私のミルク飲みますか？」,「……？私のミルク飲みますか？」
+HomeChar.No72_3-1,「こんにちは、何かご用はありますか？」,"「Hello, how can I help you?」",「こんにちは、何かご用はありますか？」,「こんにちは、何かご用はありますか？」
+HomeChar.No72_3-2,「…そのデータは私の中に存在していません」,「…That data doesn't exist in my memory」,「…そのデータは私の中に存在していません」,「…そのデータは私の中に存在していません」
+HomeChar.No72_3-3,「何かご命令ですか？」,「Any order?」,「何かご命令ですか？」,「何かご命令ですか？」
+HomeChar.No72_3-4,「私に感情はプログラムされていません。他のクローンと同様です」,「I am not programmed with emotions. I am like any other clone.」,「私に感情はプログラムされていません。他のクローンと同様です」,「私に感情はプログラムされていません。他のクローンと同様です」
+HomeChar.Erena_5-1,「愚かな私ですが、存分にお使いください」,"「I am a fool, but use me to your heart's content」",「愚かな私ですが、存分にお使いください」,「愚かな私ですが、存分にお使いください」
+HomeChar.Erena_5-2,「聖核戦姫に聖月生徒会…今はただの殲滅対象に過ぎません」,"「The Seikaku Princess, and the Student Council behind them... now they are merely targets for annihilation.」",「聖核戦姫に聖月生徒会…今はただの殲滅対象に過ぎません」,「聖核戦姫に聖月生徒会…今はただの殲滅対象に過ぎません」
+HomeChar.Erena_5-3,「そろそろご主人様にご奉仕する時間です」,「It's about time of the day to serve my master」,「そろそろご主人様にご奉仕する時間です」,「そろそろご主人様にご奉仕する時間です」
+HomeChar.Erena_5-4,「那由多…？その話はちょっと…」,「Nayuta…? I wouldn't like to talk about that now…」,「那由多…？その話はちょっと…」,「那由多…？その話はちょっと…」
+HomeChar.Kei_5-1,「暇だね…なんか楽しいことない？」,「I'm bored…Anything fun to do?」,「暇だね…なんか楽しいことない？」,「暇だね…なんか楽しいことない？」
+HomeChar.Kei_5-2,「なんか用？実験なら付き合うよ」,「What's up? I'd like to be part of your experiment」,「なんか用？実験なら付き合うよ」,「なんか用？実験なら付き合うよ」
+HomeChar.Kei_5-3,「…ちょっと精液欲しくなってきたかも」,「…I think I might be craving for semen」,「…ちょっと精液欲しくなってきたかも」,「…ちょっと精液欲しくなってきたかも」
+HomeChar.Kei_5-4,「聖核戦姫狩りに行ってこようかな」,「I'm feeling like to hunt the Seikaku Princess」,「聖核戦姫狩りに行ってこようかな」,「聖核戦姫狩りに行ってこようかな」
+HomeChar.Nayuta_F-1,「私の力…その全てを捧げます…♥」,「I'd happy to devote my power... all of it.…♥」,「私の力…その全てを捧げます…♥」,「私の力…その全てを捧げます…♥」
+HomeChar.Nayuta_F-2,「聖核戦姫…私が一匹残らず捕獲します」,「The Seikaku Princess I will capture every last one of them」,「聖核戦姫…私が一匹残らず捕獲します」,「聖核戦姫…私が一匹残らず捕獲します」
+HomeChar.Nayuta_F-3,「…弱者は強者に従うのみです」,「...the weak follow the strong. That's all I need to do」,「…弱者は強者に従うのみです」,「…弱者は強者に従うのみです」
+WorldScene,ワールド画面台詞,WorldMap Dialogue,ワールド画面台詞,ワールド画面台詞
+World.Chapter2-3,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,"「We need ""Sasaya Akiho"" for this mission. Let's hurry up and proceed with the training.」",「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」
+World.Chapter3-3,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「How is Rikka's training going? Please take Rikka down quickly!」,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「六花の調教は進んでますか？とっとと堕としちゃってください！」
+World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,"「Yakumo Nayuta is a formidable opponent. I hope we can use Seidō Erena as an asset...""」",「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
+BattleLog,戦闘ログ,Battlelog,戦闘ログ,戦闘ログ
+BattleLog.Attack,{0}　の攻撃！,{0}'s attack!,{0}　の攻撃！,{0}　の攻撃！
+BattleLog.Damage,{0}　に　{1}　のダメージを与えた！,Deals {1} damage to {0}!,{0}　に　{1}　のダメージを与えた！,{0}　に　{1}　のダメージを与えた！
+BattleLog.HealHP,{0}　の HPが {1} 回復した！,{0}'s HP is healed by {1}!,{0}　の HPが {1} 回復した！,{0}　の HPが {1} 回復した！
+BattleLog.HealSP,{0}　の SPが {1} 回復した！,{0}'s SP is healed by {1}!,{0}　の SPが {1} 回復した！,{0}　の SPが {1} 回復した！
+BattleLog.MissAttack,{0}　に避けられた！,{0} evades the attack!,{0}　に避けられた！,{0}　に避けられた！
+BattleLog.ItemSelf,{0}　が {1} を使った。,{0} uses {1}.,{0}　が {1} を使った。,{0}　が {1} を使った。
+BattleLog.ItemSelfToSelf,{0}　が自分に {1} を使った。,{0} uses {1}.,{0}　が自分に {1} を使った。,{0}　が自分に {1} を使った。
+BattleLog.ItemOther,{0}　が {1} に {2} を使った。,{0} uses {1} to {2}.,{0}　が {1} に {2} を使った。,{0}　が {1} に {2} を使った。
+BattleLog.Idle,{0}　が待機する。,{0} idles.,{0}　が待機する。,{0}　が待機する。
+BattleLog.IdleSP,{0}　が休憩をとった。SP　{1}　回復した。,{0} rested abit. SP is healed by {1}.,{0}　が休憩をとった。SP　{1}　回復した。,{0}　が休憩をとった。SP　{1}　回復した。
+BattleLog.TankAttack,{0}　のビーム攻撃！,{0}'s beam attack!,{0}　のビーム攻撃！,{0}　のビーム攻撃！
+BattleLog.StunStart,{0}　が行動不能となった！,{0} became incapable of action!,{0}　が行動不能となった！,{0}　が行動不能となった！
+BattleLog.StunUpdate,{0}　はまだ動けない。,{0} is still stuck.,{0}　はまだ動けない。,{0}　はまだ動けない。
+BattleLog.HurtStart,{0}　が怪我をした！,{0} was injured!,{0}　が怪我をした！,{0}　が怪我をした！
+BattleLog.HurtUpdate,{0}　の怪我が痛む！　{1}　のダメージを受けた。,{0} injuries hurt!　{1} injuries hurt!,{0}　の怪我が痛む！　{1}　のダメージを受けた。,{0}　の怪我が痛む！　{1}　のダメージを受けた。
+BattleLog.HurtEnd,{0}　の怪我が治った。,{0} injuries were healed.,{0}　の怪我が治った。,{0}　の怪我が治った。
+BattleLog.HealStart,{0}　は継続的にHPを回復される。,{0} is continuously restored HP.,{0}　は継続的にHPを回復される。,{0}　は継続的にHPを回復される。
+BattleLog.HealUpdate,{0}　の HP {1} 回復した。,{0} HP {1} recovered.,{0}　の HP {1} 回復した。,{0}　の HP {1} 回復した。
+BattleLog.ShieldUpStart,{0}　の防御が固くなった。,{0} defenses have hardened.,{0}　の防御が固くなった。,{0}　の防御が固くなった。
+BattleLog.ShieldDownStart,{0}　の防御が弱くなった。,{0} defense weakened.,{0}　の防御が弱くなった。,{0}　の防御が弱くなった。
+BattleLog.AttackUpStart,{0}　の攻撃力が {1} 上がった！,{0}'s attack power was increased by {1}!,{0}　の攻撃力が {1} 上がった！,{0}　の攻撃力が {1} 上がった！
+BattleLog.AttackDownStart,{0}　の攻撃力が {1} 下がった！,{0}'s attack power was reduced by {1}!,{0}　の攻撃力が {1} 下がった！,{0}　の攻撃力が {1} 下がった！
+BattleLog.SpeedUpStart,{0}　の動きが {1} 速くなった。,{0} moved {1} faster.,{0}　の動きが {1} 速くなった。,{0}　の動きが {1} 速くなった。
+BattleLog.SpeedDownStart,{0}　の動きが {1} 鈍くなった。,{0} movement {1} slowed down.,{0}　の動きが {1} 鈍くなった。,{0}　の動きが {1} 鈍くなった。
+BattleLog.Disarm,{0}　は攻撃できなくなった,{0} can no longer attack,{0}　は攻撃できなくなった,{0}　は攻撃できなくなった
+BattleLog.Stungun,{0}　から {1} を放つ！,{0} to {1}!,{0}　から {1} を放つ！,{0}　から {1} を放つ！
+BattleLog.AbilityExecute,{0}　からの {1}！,{1} from {0},{0}　からの {1}！,{0}　からの {1}！
+BattleLog.AbilityExecuteSelf,{0}　が{1}する。,{0} does {1}.,{0}　が{1}する。,{0}　が{1}する。
+BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0} extends its tentacles to {1} <cspace=-0.18em>-</cspace>!,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
+BattleLog.NoEffect,効果はなかった。,There was no effect.,効果はなかった。,効果はなかった。
+BattleLog.GiveSP,SP {0} を {1} に分け与えた！,SP {0} was shared with {1}!,SP {0} を {1} に分け与えた！,SP {0} を {1} に分け与えた！
+BattleLog.SPDrain,{0}　のSP {1} 吸収した！ ,{0} of SP {1} was absorbed!,{0}　のSP {1} 吸収した！ ,{0}　のSP {1} 吸収した！ 
+BattleLog.HPDrain,{0}　のHP {1} 吸収した！,{0} of HP {1} was absorbed!,{0}　のHP {1} 吸収した！,{0}　のHP {1} 吸収した！
+BattleLog.Retire,{0}　が再起不能となった。,{0} was not able to reoccur.,{0}　が再起不能となった。,{0}　が再起不能となった。
+BattleLog.Defeat,{0}　が再起不能となった。,{0} was not able to reoccur.,{0}　が再起不能となった。,{0}　が再起不能となった。
+BattleLog.Hacking,{0}　がハッキングを挑む！成功確率は {1},{0} challenges the hack! Chance of success {1},{0}　がハッキングを挑む！成功確率は {1},{0}　がハッキングを挑む！成功確率は {1}
+BattleLog.Hacking_Success,成功した！ {0}　が傀儡となった。,Success! {0} became a puppet.,成功した！ {0}　が傀儡となった。,成功した！ {0}　が傀儡となった。
+BattleLog.Hacking_Fail,ハッキングが失敗した。,The hack failed.,ハッキングが失敗した。,ハッキングが失敗した。
+BattleLog.Hacking_End,{0}　のシステム故障が直った。,{0} system failure was fixed.,{0}　のシステム故障が直った。,{0}　のシステム故障が直った。
+BattleLog.Overdrive,{0}！ {1} がこれから{2}回連続行動する。,{0} {1} will now act {2} times in succession.,{0}！ {1} がこれから{2}回連続行動する。,{0}！ {1} がこれから{2}回連続行動する。
+BattleLog.ContinueTurn,また{0}のターン！,Another {0} turn!,また{0}のターン！,また{0}のターン！
+BattleLog.TeamHeal,仲間全員を全回復した！,All of his friends were restored to full health!,仲間全員を全回復した！,仲間全員を全回復した！
+BattleLog.Usage,{0}　の　{1}！,{1} of {0},{0}　の　{1}！,{0}　の　{1}！
+BattleLog.ShieldDownValue,{0}　の防御力が {1} 点下げた。,{0}'s defense was lowered by {1} point.,{0}　の防御力が {1} 点下げた。,{0}　の防御力が {1} 点下げた。
+BattleLog.DivineShield,次のダメージを完全防御する！,Complete protection against the following damage!,次のダメージを完全防御する！,次のダメージを完全防御する！
+BattleLog.StunShield,次に{0}を攻撃する者が反発されてしばらく行動不能となる,The next person to attack {0} will be repulsed and become incapable of action for a while.,次に{0}を攻撃する者が反発されてしばらく行動不能となる,次に{0}を攻撃する者が反発されてしばらく行動不能となる
+BatteLog.Repel,{0}　の反撃！ {1} ダメージを跳ね返った,{0} counterattack! {1} bouncing back from the damage!,{0}　の反撃！ {1} ダメージを跳ね返った,{0}　の反撃！ {1} ダメージを跳ね返った
+BattleLog.Suicide,{0}　が自爆する！{1} のダメージを与えた！,{0} self-destructs! {1} damage!,{0}　が自爆する！{1} のダメージを与えた！,{0}　が自爆する！{1} のダメージを与えた！
+BattleLog.Reprogram,{0}　の攻撃力が{1}点増加。防御力{2}点増加。,{0} attack power increased by {1} points. Defense increased by {2} points.,{0}　の攻撃力が{1}点増加。防御力{2}点増加。,{0}　の攻撃力が{1}点増加。防御力{2}点増加。
+BattleLog.PowerMode,雷神之相の代償！{0}が{1}ダメージを受けた。,The price of the thunder god no phase! {0} took {1} damage.,雷神之相の代償！{0}が{1}ダメージを受けた。,雷神之相の代償！{0}が{1}ダメージを受けた。
+BattleLog.ChargeAttack,攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック),Charge Attack - {0} Damage Stacks ({1} Stacks),攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック),攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック)
+BattleLog.NayutaEquip,[{0}] {1}　の攻撃力が {2} 上がった！,[{0}] {1}'s attack power was increased by {2}!,[{0}] {1}　の攻撃力が {2} 上がった！,[{0}] {1}　の攻撃力が {2} 上がった！
+Demo,体験版,Trial,体験版,体験版
 Demo.Start,"本ソフトウェアは体験版になります。
+一部機能が制限されており、キャラクターボイスがまだ全部実装されておりません。
+ゲームの途中までしか遊べません。
+正式リリース版では仕様変更、機能追加・不具合対応のバージョンアップの可能性があります。","This software is a trial version.
+Some functions are limited and not all character voices have been implemented yet.
+You can only play up to the middle of the game.
+The official release version may be upgraded to change specifications, add functions, or deal with problems.","本ソフトウェアは体験版になります。
+一部機能が制限されており、キャラクターボイスがまだ全部実装されておりません。
+ゲームの途中までしか遊べません。
+正式リリース版では仕様変更、機能追加・不具合対応のバージョンアップの可能性があります。","本ソフトウェアは体験版になります。
 一部機能が制限されており、キャラクターボイスがまだ全部実装されておりません。
 ゲームの途中までしか遊べません。
 正式リリース版では仕様変更、機能追加・不具合対応のバージョンアップの可能性があります。"
@@ -463,7 +544,22 @@ Demo.End,"体験版を遊んでいただき、ありがとうございます！
 これからは、強くてプライドの高い変身ヒロイン達が敗北し、調教され、改造され堕ちていきます。
 正式版には部分的にキャラクターボイスが実装されます。
 
+体験版の気に入ったところ、そうでなかったところ、完全版を改良する提案などあれば、ぜひ教えてください！","Thank you for playing the trial version!
+From now on, our strong and proud transformed heroines will be defeated, trained, remodeled and fallen.
+Partial character voices will be implemented in the official version.
+
+Please let us know what you liked about the trial version, what you didn't, and any suggestions for improving the full version!","体験版を遊んでいただき、ありがとうございます！
+これからは、強くてプライドの高い変身ヒロイン達が敗北し、調教され、改造され堕ちていきます。
+正式版には部分的にキャラクターボイスが実装されます。
+
+体験版の気に入ったところ、そうでなかったところ、完全版を改良する提案などあれば、ぜひ教えてください！","体験版を遊んでいただき、ありがとうございます！
+これからは、強くてプライドの高い変身ヒロイン達が敗北し、調教され、改造され堕ちていきます。
+正式版には部分的にキャラクターボイスが実装されます。
+
 体験版の気に入ったところ、そうでなかったところ、完全版を改良する提案などあれば、ぜひ教えてください！"
 Demo.LockedFeature,"正式版のみ使えます
+_(・ω・_)⌒)_ ","Only the official version can be used.
+_(ω・⌒)_","正式版のみ使えます
+_(・ω・_)⌒)_ ","正式版のみ使えます
 _(・ω・_)⌒)_ "
-Demo.StartDemo,Start Demo
+Demo.StartDemo,Start Demo,Start Demo,Start Demo,Start Demo

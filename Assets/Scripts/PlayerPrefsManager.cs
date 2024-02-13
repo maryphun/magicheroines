@@ -26,6 +26,7 @@ public static class PlayerPrefsManager
         SE_Volume,
         TextSpeed,
         AutoSpeed,
+        Language,
     }
 
     public static void LoadPlayerPrefs()
@@ -53,6 +54,25 @@ public static class PlayerPrefsManager
 
         float autoSpd = PlayerPrefs.GetFloat(PlayerPrefsSave.AutoSpeed.ToString(), OptionPanel.defaultAutoSpeed);
         NovelSingletone.Instance.SetAutoSpeed(autoSpd);
+
+        SystemLanguage lang = (SystemLanguage)PlayerPrefs.GetInt(PlayerPrefsSave.Language.ToString(), (int)OptionPanel.defaultLanguage);
+        switch (lang)
+        {
+            case SystemLanguage.JP:
+                Assets.SimpleLocalization.Scripts.LocalizationManager.Language = "Japanese";
+                break;
+            case SystemLanguage.EN:
+                Assets.SimpleLocalization.Scripts.LocalizationManager.Language = "English";
+                break;
+            case SystemLanguage.SCN:
+                Assets.SimpleLocalization.Scripts.LocalizationManager.Language = "Simplified Chinese";
+                break;
+            case SystemLanguage.TCN:
+                Assets.SimpleLocalization.Scripts.LocalizationManager.Language = "Traditional Chinese";
+                break;
+            default:
+                break;
+        }
     }
 
     public static void SetPlayerPrefs(PlayerPrefsSave name, int value)
