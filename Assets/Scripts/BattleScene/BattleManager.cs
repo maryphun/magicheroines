@@ -1040,12 +1040,6 @@ public class Battle : MonoBehaviour
 
     public void ConfirmEscape()
     {
-        // データ更新
-        foreach (Battler battler in characterList)
-        {
-            ProgressManager.Instance.UpdateCharacterByBattler(battler.characterID, battler);
-        }
-
         AudioManager.Instance.PlaySFX("Escape");
 
         const float AnimTime = 1.0f;
