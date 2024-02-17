@@ -79,7 +79,7 @@ public class BattleSetup
         sideQuestIncrement = new SideQuestData(0,0,0);
         moneyReward = 0;
         researchPointReward = 0;
-        isAllowEscape = false;
+        isAllowEscape = true;
         isEventBattle = false;
     }
 

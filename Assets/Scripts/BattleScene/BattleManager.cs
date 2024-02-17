@@ -83,7 +83,7 @@ public class Battle : MonoBehaviour
         InitializeBattleScene(actors, enemyList);
 
         // 撤退ボタン
-        escapeButton.SetActive(BattleSetup.isAllowEscape);
+        escapeButton.SetActive(BattleSetup.isAllowEscape && !BattleSetup.isEventBattle);
 
         // Send references
         ItemExecute.Instance.Initialize(this);
@@ -955,7 +955,7 @@ public class Battle : MonoBehaviour
         actionPanel.SetEnablePanel(false);
 
         // キャラの状態をデータに更新
-        if ((isVictory || !BattleSetup.isStoryMode) && !BattleSetup.isEventBattle) // story modeで負けた時はリトライされるかもしれないので、データ更新しない
+        if (isVictory && !BattleSetup.isEventBattle) // story modeで負けた時はリトライされるかもしれないので、データ更新しない
         {
             foreach (Battler battler in characterList)
             {

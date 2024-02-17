@@ -112,6 +112,7 @@ public class OptionPanel : MonoBehaviour
 
         AudioManager.Instance.SetMusicVolume(tempBGMVolume);
         AudioManager.Instance.SetSEMasterVolume(tempSEVolume);
+        NovelSingletone.Instance.SetVoiceVolume(tempVoiceVolume);
         NovelSingletone.Instance.SetTextSpeed(tempTextSpeed);
         NovelSingletone.Instance.SetAutoSpeed(tempAutoSpeed);
 
@@ -180,6 +181,8 @@ public class OptionPanel : MonoBehaviour
         PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.BGM_Volume, tempBGMVolume);
         tempSEVolume = AudioManager.Instance.GetSEMasterVolume();
         PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.SE_Volume, tempSEVolume);
+        tempVoiceVolume = NovelSingletone.Instance.GetVoiceVolume();
+        PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.VOICE_Volume, tempVoiceVolume);
         tempTextSpeed = NovelSingletone.Instance.GetTextSpeed();
         PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.TextSpeed, tempTextSpeed);
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
