@@ -765,6 +765,26 @@ PrefabInstance:
       propertyPath: m_VerticalAlignment
       value: 4096
       objectReference: {fileID: 0}
+    - target: {fileID: 3892705544773835958, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892705544773835958, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006362214568256279, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006362214568256279, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4006362214568256279, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4136222465992873665, guid: 0e24e542c0dd3474b83907871d86503f, type: 3}
       propertyPath: m_VerticalAlignment
       value: 4096

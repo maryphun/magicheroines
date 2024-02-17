@@ -1,4 +1,4 @@
-Key,Japanese,English,Traditional Chinese,Simplified Chinese
+Key,Japanese,English,Traditional Chinese,Simplified chinese
 TitleScene,タイトル画面,TitleScene,タイトル画面,タイトル画面
 System.NewGame,New Game,New Game,New Game,New Game
 System.Load,Load,Load,Load,Load
@@ -8,114 +8,114 @@ System.Credit,Credit,Credit,Credit,Credit
 System.Exit,Exit,Exit,Exit,Exit
 HomeScene,ホーム画面,HomeScene,ホーム画面,ホーム画面
 System.Memory,回想,Memory,回想,回想
-System.SwitchCharacter,画面キャラ変更,Change Character,画面キャラ変更,画面キャラ変更
-System.BlackMarket,闇市,Black Market,闇市,闇市
+System.SwitchCharacter,画面キャラ変更,Change Character,更換角色,画面キャラ変更
+System.BlackMarket,闇市,Black Market,黑市,闇市
 System.Action,活動,Operation,活動,活動
 System.Training,調教,Training,調教,調教
-System.CharacterBuilding,キャラクター育成,Character Building,キャラクター育成,キャラクター育成
-System.Formation,キャラクター編成,Formation,キャラクター編成,キャラクター編成
-System.ResearchPoint,研究ポイント,Research Pts,研究ポイント,研究ポイント
+System.CharacterBuilding,キャラクター育成,Character Building,角色育成,キャラクター育成
+System.Formation,キャラクター編成,Formation,角色編成,キャラクター編成
+System.ResearchPoint,研究ポイント,Research Pts,研究點數,研究ポイント
 System.Money,資金,Money,資金,資金
 System.Mood,心情：,Mood:,心情：,心情：
-System.Dark,闇落ち,Corrupt,闇落ち,闇落ち
+System.Dark,闇落ち,Corrupt,惡墮,闇落ち
 System.CoreResearch,聖核研究進度,Core Research,聖核研究進度,聖核研究進度
-System.PickTraining,調教方法を選択：,Pick your training:,調教方法を選択：,調教方法を選択：
-System.HornyTraining,淫乱調教,Horniness,淫乱調教,淫乱調教
-System.BrainwashTraining,洗脳調教,Brainwash,洗脳調教,洗脳調教
+System.PickTraining,調教方法を選択：,Pick your training:,選擇調教方法：,調教方法を選択：
+System.HornyTraining,淫乱調教,Horniness,淫亂調教,淫乱調教
+System.BrainwashTraining,洗脳調教,Brainwash,洗腦調教,洗脳調教
 System.HolyCoreTraining,聖核研究,Seikaku Research,聖核研究,聖核研究
-System.ResearchPointCost,研究ポイント消耗：,Research Pts Cost:,研究ポイント消耗：,研究ポイント消耗：
-System.ResearchComplete,調教完了,Training Complete,調教完了,調教完了
-System.Back,戻る,Back,戻る,戻る
+System.ResearchPointCost,研究ポイント消耗：,Research Pts Cost:,消耗研究點數：,研究ポイント消耗：
+System.ResearchComplete,調教完了,Training Complete,調教結束,調教完了
+System.Back,戻る,Back,退後,戻る
 System.Confirm,確定,Confirm,確定,確定
 System.OptionPanel,設定,Option,設定,設定
 System.Attack,攻撃力：,ATK: ,攻撃力：,攻撃力：
 System.Level,LV：,LV: ,LV：,LV：
-System.HP,体力：,HP: ,体力：,体力：
+System.HP,体力：,HP: ,HP：,体力：
 System.MP,SP：,SP: ,SP：,SP：
-System.Defense,防御力：,DEF: ,防御力：,防御力：
-System.Speed,素早さ：,SPD: ,素早さ：,素早さ：
-System.Skill,特殊技：,Skill: ,特殊技：,特殊技：
+System.Defense,防御力：,DEF: ,防御：,防御力：
+System.Speed,素早さ：,SPD: ,速度：,素早さ：
+System.Skill,特殊技：,Skill: ,技能：,特殊技：
 System.Equipment,装備,Equipment,装備,装備
 System.CharacterData,資料,Info,資料,資料
 System.CharacterUpgrade,育成,Upgrade,育成,育成
-System.LevelUp,レベルアップ,Level up,レベルアップ,レベルアップ
-System.Cost,資金コスト,Cost,資金コスト,資金コスト
+System.LevelUp,レベルアップ,Level up,升級,レベルアップ
+System.Cost,資金コスト,Cost,資金消耗,資金コスト
 System.Locked,未開放,Locked,未開放,未開放
 System.Unlock,解放,Unlock,解放,解放
 System.Regenerate,回復,Regenerate,回復,回復
-System.RegenerateCost,回復コスト,Cost,回復コスト,回復コスト
-System.Inventory,インベントリ,Inventory,インベントリ,インベントリ
+System.RegenerateCost,回復コスト,Cost,所需資金,回復コスト
+System.Inventory,インベントリ,Inventory,物品欄,インベントリ
 System.SPCost,SP消耗：,SP Cost: ,SP消耗：,SP消耗：
 System.EffectTarget,効果対象：,Target: ,効果対象：,効果対象：
 System.EffectEnemy,敵単体,Single,敵単体,敵単体
 System.EffectEnemyAoE,敵(複数),AoE,敵(複数),敵(複数)
 System.EffectSelf,使用者,Self,使用者,使用者
-System.EffectSelfAoE,味方全体,Teammate (AoE),味方全体,味方全体
-System.EffectTeam,味方,Teammate,味方,味方
+System.EffectSelfAoE,味方全体,Teammate (AoE),隊友全体,味方全体
+System.EffectTeam,味方,Teammate,隊友,味方
 System.AbilityType,種類,Category,種類,種類
 System.AbilityAttack,攻撃,Attack,攻撃,攻撃
 System.AbilityHeal,回復,Heal,回復,回復
 System.AbilityBuff,状態,Buff,状態,状態
 System.AbilitySpecial,特殊,Special,特殊,特殊
-System.Turn,ターン,Turn,ターン,ターン
-System.None,なし,None,なし,なし
-System.Cooldown,チャージ,Charge,チャージ,チャージ
-System.AbilityAbsent,特殊技を持っていない,No usable skill.,特殊技を持っていない,特殊技を持っていない
-System.FileCorrupted,データ異常,File corrupted,データ異常,データ異常
-System.Save,セーブ,Save,セーブ,セーブ
-System.LoadFile,ロード,Load,ロード,ロード
-System.AutoSave,オートセーブ,Auto Save,オートセーブ,オートセーブ
-System.Cancel,キャンセル,Cancel,キャンセル,キャンセル
-System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？,Save to file <color=yellow>{0}</color>?,スロット<color=yellow>{0}</color>にセーブしますか？,スロット<color=yellow>{0}</color>にセーブしますか？
-System.ConfirmReplace,スロット<color=yellow>{0}</color>のデータを上書きしますか？,Replace the save file on slot <color=yellow>{0}</color>?,スロット<color=yellow>{0}</color>のデータを上書きしますか？,スロット<color=yellow>{0}</color>のデータを上書きしますか？
-System.ConfirmLoad,スロット<color=yellow>{0}</color>をロードしますか？,Load data <color=yellow>{0}</color>?,スロット<color=yellow>{0}</color>をロードしますか？,スロット<color=yellow>{0}</color>をロードしますか？
-System.InsertComment,注釈を付ける...,Add note...,注釈を付ける...,注釈を付ける...
-System.Close,閉じる,Close,閉じる,閉じる
-System.NewAbility,特殊技習得！,New ability learned!,特殊技習得！,特殊技習得！
+System.Turn,ターン,Turn,回合,ターン
+System.None,なし,None,無,なし
+System.Cooldown,チャージ,Charge,冷卻,チャージ
+System.AbilityAbsent,特殊技を持っていない,No usable skill,沒有可以用的技能,特殊技を持っていない
+System.FileCorrupted,データ異常,File corrupted,資料異常,データ異常
+System.Save,セーブ,Save,保存,セーブ
+System.LoadFile,ロード,Load,讀取,ロード
+System.AutoSave,オートセーブ,Auto Save,自動存檔,オートセーブ
+System.Cancel,キャンセル,Cancel,取消,キャンセル
+System.ConfirmSave,スロット<color=yellow>{0}</color>にセーブしますか？,Save to file <color=yellow>{0}</color>?,保存到位置<color=yellow>{0}</color>嗎？,スロット<color=yellow>{0}</color>にセーブしますか？
+System.ConfirmReplace,スロット<color=yellow>{0}</color>のデータを上書きしますか？,Replace the save file on slot <color=yellow>{0}</color>?,確定要覆蓋掉位置<color=yellow>{0}</color>的存檔嗎？,スロット<color=yellow>{0}</color>のデータを上書きしますか？
+System.ConfirmLoad,スロット<color=yellow>{0}</color>をロードしますか？,Load data <color=yellow>{0}</color>?,讀取位置<color=yellow>{0}</color>的存檔？,スロット<color=yellow>{0}</color>をロードしますか？
+System.InsertComment,注釈を付ける...,Add note...,加上注釋...,注釈を付ける...
+System.Close,閉じる,Close,關閉,閉じる
+System.NewAbility,特殊技習得！,New ability learned!,獲取新技能！,特殊技習得！
 System.EquipmentType,品質,Quality,品質,品質
 System.EquipmentNormal,普通,Normal,普通,普通
 System.EquipmentRare,逸品,Rare,逸品,逸品
 System.EquipmentHoly,聖核装備,Seikaku Equipment,聖核装備,聖核装備
-System.ReturnToTitle,タイトルメニューに戻る,Return to title,タイトルメニューに戻る,タイトルメニューに戻る
-System.Retry,リトライ,Retry,リトライ,リトライ
+System.ReturnToTitle,タイトルメニューに戻る,Return to title,回到主菜單,タイトルメニューに戻る
+System.Retry,リトライ,Retry,重試,リトライ
 System.Understood,了解,Understood,了解,了解
 System.PanelUnavailable,"未開放
 聖核戦姫を捕獲せよ","Not available
 Go capture a Seikaku-princess!","未開放
-聖核戦姫を捕獲せよ","未開放
+請去抓捕聖核戦姫","未開放
 聖核戦姫を捕獲せよ"
-System.RewardItem,アイテム獲得,Item reward,アイテム獲得,アイテム獲得
-System.Reward,成果報酬,Reward,成果報酬,成果報酬
+System.RewardItem,アイテム獲得,Item reward,獲得物品,アイテム獲得
+System.Reward,成果報酬,Reward,報酬,成果報酬
 System.Receive,受取,Accept,受取,受取
 System.Heroin,聖核戦姫,Seikaku-princess,聖核戦姫,聖核戦姫
-System.Trapped,{s}を捕獲完了！,{s} captured!,{s}を捕獲完了！,{s}を捕獲完了！
-System.TrainPanelUpdate,調教画面がアップデートされました,Training panel have been updated.,調教画面がアップデートされました,調教画面がアップデートされました
-System.NovelLog,ログ,Log,ログ,ログ
-System.NovelAuto,オート開始・停止,Auto (ON/OFF),オート開始・停止,オート開始・停止
-System.NovelSkip,スキップ,Skip,スキップ,スキップ
-System.NovelHide,UI非表示,Hide UI,UI非表示,UI非表示
-System.NewBattler,{s}をチームに編入することが可能となりました,You can now include {s} into party! ,{s}をチームに編入することが可能となりました,{s}をチームに編入することが可能となりました
+System.Trapped,{s}を捕獲完了！,{s} captured!,成功捕獲{s}！,{s}を捕獲完了！
+System.TrainPanelUpdate,調教画面がアップデートされました,Training panel have been updated.,調教画面的內容更新了。,調教画面がアップデートされました
+System.NovelLog,ログ,Log,記錄,ログ
+System.NovelAuto,オート開始・停止,Auto (ON/OFF),自動播放 (ON/OFF),オート開始・停止
+System.NovelSkip,スキップ,Skip,跳過,スキップ
+System.NovelHide,UI非表示,Hide UI,隱藏UI,UI非表示
+System.NewBattler,{s}をチームに編入することが可能となりました,You can now include {s} into party! ,現在可以把{s}編入進隊伍裡了！,{s}をチームに編入することが可能となりました
 System.NewCoreEquipment,"{s}を獲得しました！
 キャラクター育成画面でアイテムを装備できます。","Get new item {s}!
-Equip item at Character Building Panel.","{s}を獲得しました！
-キャラクター育成画面でアイテムを装備できます。","{s}を獲得しました！
+Equip item at Character Building Panel.","獲得裝備: {s}！
+可以到角色育成畫面裝備到角色上。","{s}を獲得しました！
 キャラクター育成画面でアイテムを装備できます。"
-System.Storage,収納庫,Storage,収納庫,収納庫
+System.Storage,収納庫,Storage,收納庫,収納庫
 Systeｍ.Requirement,解放条件:,Requirement: ,解放条件:,解放条件:
 Memory,回想,Memory,回想,回想
 Memory.Akiho_1,明穂 - 痴漢,Akiho - Chikan,明穂 - 痴漢,明穂 - 痴漢
 Memory.Akiho_2,明穂 - 敗北,Akiho - Defeat,明穂 - 敗北,明穂 - 敗北
 Memory.Rikka_1,立花 - 身体検査,Rikka - Body check,立花 - 身体検査,立花 - 身体検査
-Memory.Erena_1,エレナ - オナニー,Erena - Masturbation,エレナ - オナニー,エレナ - オナニー
-Memory.Erena_2,エレナ - 性奉仕 I,Erena - Sex service I,エレナ - 性奉仕 I,エレナ - 性奉仕 I
-Memory.Erena_3,エレナ - 性奉仕 II,Erena - Sex service II,エレナ - 性奉仕 II,エレナ - 性奉仕 II
-Memory.Kei_1,京 - ハッキング,Kei - Hacking,京 - ハッキング,京 - ハッキング
+Memory.Erena_1,エレナ - オナニー,Erena - Masturbation,艾蓮娜 - 自慰,エレナ - オナニー
+Memory.Erena_2,エレナ - 性奉仕 I,Erena - Sex service I,艾蓮娜 - 性奉仕 I,エレナ - 性奉仕 I
+Memory.Erena_3,エレナ - 性奉仕 II,Erena - Sex service II,艾蓮娜 - 性奉仕 II,エレナ - 性奉仕 II
+Memory.Kei_1,京 - ハッキング,Kei - Hacking,京 - 黑客,京 - ハッキング
 Memory.Kei_2,京 - 捕獲,Kei - Captured,京 - 捕獲,京 - 捕獲
 Memory.Nayuta_1,那由多 - 捕獲,Nayuta - Captured,那由多 - 捕獲,那由多 - 捕獲
 WorldMapScene,ワールドマップ,World Map,ワールドマップ,ワールドマップ
-System.Story,ストーリーを進む,Continue story,ストーリーを進む,ストーリーを進む
-System.SideMission,資源調達クエスト,Resource Gathering,資源調達クエスト,資源調達クエスト
-System.QuestList,クエスト一覧,Operation List,クエスト一覧,クエスト一覧
+System.Story,ストーリーを進む,Continue story,繼續故事,ストーリーを進む
+System.SideMission,資源調達クエスト,Resource Gathering,其他任務,資源調達クエスト
+System.QuestList,クエスト一覧,Operation List,任務一覧,クエスト一覧
 System.FoodQuest,[食料調達],[Food Gather],[食料調達],[食料調達]
 System.BankQuest,[銀行強盗],[Bank Robe],[銀行強盗],[銀行強盗]
 System.ResearchQuest,[戦闘研究],[Battle Research],[戦闘研究],[戦闘研究]
@@ -126,7 +126,7 @@ Names,名詞/名称,名詞/名称,名詞/名称,名詞/名称
 Name.Akiho,笹谷 明穂,Sasaya Akiho,笹谷 明穂,笹谷 明穂
 Name.Rikka,水無瀬 六花,Minase Rikka,水無瀬 六花,水無瀬 六花
 Name.Kei,猫宮 京,Nekomiya Kei,猫宮 京,猫宮 京
-Name.Erena,清藤 エレナ,Seidō Erena,清藤 エレナ,清藤 エレナ
+Name.Erena,清藤 エレナ,Seidō Erena,清藤 艾蓮娜,清藤 エレナ
 Name.Nayuta,八雲 那由多,Yakumo Nayuta,八雲 那由多,八雲 那由多
 Name.No5,005号,No.005,005号,005号
 Name.No23,023号,No.023,023号,023号
@@ -134,47 +134,47 @@ Name.Battler,戦闘員,Battler,戦闘員,戦闘員
 Name.Tentacle,触手怪人,TentacleMan,触手怪人,触手怪人
 Name.Clone,005号,No.005,005号,005号
 Name.RikkaDisguise,水無瀬 六花？,Minase Rikka??,水無瀬 六花？,水無瀬 六花？
-Name.Drone,パトロールドローン,Patrol Drone,パトロールドローン,パトロールドローン
-Name.GoldDrone,進化型ドローン,Improved Drone,進化型ドローン,進化型ドローン
-Name.DarkDrone,攻撃特化型ドローン,Attacker Drone,攻撃特化型ドローン,攻撃特化型ドローン
-Name.Android,警備ドロイド,Patrol Android,警備ドロイド,警備ドロイド
-Name.GoldAndroid,進化型ドロイド,Improved Android,進化型ドロイド,進化型ドロイド
-Name.DarkAndroid,攻撃特化型ドロイド,Attacker Android,攻撃特化型ドロイド,攻撃特化型ドロイド
-Name.Tank,四脚タンク,Quad Leg Tank,四脚タンク,四脚タンク
-Name.DarkTank,軍用歩行型タンク,Military Tank,軍用歩行型タンク,軍用歩行型タンク
+Name.Drone,パトロールドローン,Patrol Drone,巡邏無人機,パトロールドローン
+Name.GoldDrone,進化型ドローン,Improved Drone,進化型無人機,進化型ドローン
+Name.DarkDrone,攻撃特化型ドローン,Attacker Drone,攻撃特化型無人機,攻撃特化型ドローン
+Name.Android,警備ドロイド,Patrol Android,警備機器人,警備ドロイド
+Name.GoldAndroid,進化型ドロイド,Improved Android,進化型機器人,進化型ドロイド
+Name.DarkAndroid,攻撃特化型ドロイド,Attacker Android,攻撃特化型機器人,攻撃特化型ドロイド
+Name.Tank,四脚タンク,Quad Leg Tank,四脚坦克,四脚タンク
+Name.DarkTank,軍用歩行型タンク,Military Tank,軍用歩行型坦克,軍用歩行型タンク
 Name.Battler+Tentacle,触手怪人、戦闘員,"Battler, TentacleMan",触手怪人、戦闘員,触手怪人、戦闘員
 Name.Man,男,Man,男,男
 Name.Chairman,理事長,Chairman,理事長,理事長
-Name.Tentacle_Human,触手怪人(人間体),Tentacle (HumanForm),触手怪人(人間体),触手怪人(人間体)
+Name.Tentacle_Human,触手怪人(人間体),Tentacle (HumanForm),触手怪人(人類形態),触手怪人(人間体)
 Name.Director,監督,Director,監督,監督
-Name.FemaleStudent,女生徒,Female Student,女生徒,女生徒
+Name.FemaleStudent,女生徒,Female Student,女學生,女生徒
 Name.GuardMan,駅員,Station Staff,駅員,駅員
-Name.Host,司会者,Host,司会者,司会者
-Name.Audience,観客,Audience,観客,観客
+Name.Host,司会者,Host,主持人,司会者
+Name.Audience,観客,Audience,觀眾,観客
 Name.Assistant,助手,Assistant,助手,助手
-Name.Goblin,ゴブリン型怪人,Goblin,ゴブリン型怪人,ゴブリン型怪人
-Name.Mutant,怪人,Mutant,怪人,怪人
-Name.Audience1,観客１,Audience1,観客１,観客１
-Name.Audience2,観客２,Audience2,観客２,観客２
-Name.Audience3,観客３,Audience3,観客３,観客３
+Name.Goblin,ゴブリン型怪人,Goblin,哥布林型怪物,ゴブリン型怪人
+Name.Mutant,怪人,Mutant,怪物,怪人
+Name.Audience1,観客１,Audience1,觀眾１,観客１
+Name.Audience2,観客２,Audience2,觀眾２,観客２
+Name.Audience3,観客３,Audience3,觀眾３,観客３
 Name.Researcher,研究員,Researcher,研究員,研究員
-Name.Slime,スライム,Slime,スライム,スライム
+Name.Slime,スライム,Slime,史萊姆,スライム
 Name.Rikka_Core,立花？？,Rikka??,立花？？,立花？？
 Name.Tentacle_Monster,触手怪獣,Tentacle Monster,触手怪獣,触手怪獣
-Name.Clones,072号＆他のクローン,No.072 and others,072号＆他のクローン,072号＆他のクローン
+Name.Clones,072号＆他のクローン,No.072 and others,072号＆其他克隆體,072号＆他のクローン
 Name.No5_Call,005号(通信),No.005 (Call),005号(通信),005号(通信)
 Name.Battler_Call,戦闘員(通信),Battler (Call),戦闘員(通信),戦闘員(通信)
 Name.Kei_Call,猫宮京(通信),Nekomiya Kei (Call),猫宮京(通信),猫宮京(通信)
 Name.Akiho_Corrupted,笹谷 明穂,Sasaya Akiho,笹谷 明穂,笹谷 明穂
 Name.Rikka_Corrupted,072号,No.072,072号,072号
 Name.Kei_Corrupted,猫宮 京,Nekomiya Kei,猫宮 京,猫宮 京
-Name.Erena_Corrupted,清藤 エレナ,Seidō Erena,清藤 エレナ,清藤 エレナ
+Name.Erena_Corrupted,清藤 エレナ,Seidō Erena,清藤 艾蓮娜,清藤 エレナ
 Name.Nayuta_Corrupted,八雲 那由多,Yakumo Nayuta,八雲 那由多,八雲 那由多
 Mood,心情,Mood,心情,心情
-Mood.Rebel,反抗的,Rebel,反抗的,反抗的
-Mood.Pleasure,享楽,Pleasure,享楽,享楽
+Mood.Rebel,反抗的,Rebel,反抗,反抗的
+Mood.Pleasure,享楽,Pleasure,享樂,享楽
 Mood.Despair,絶望,Despair,絶望,絶望
-Mood.Submissive,従順,Submissive,従順,従順
+Mood.Submissive,従順,Submissive,順從,従順
 Mood.Resist,忍耐,Resist,忍耐,忍耐
 Mood.Contempt,軽蔑,Contempt,軽蔑,軽蔑
 Mood.Deprave,堕落,Deprave,堕落,堕落
@@ -183,36 +183,37 @@ Mood.Expect,期待,Expecting,期待,期待
 Mood.Disgust,嫌悪,Disgust,嫌悪,嫌悪
 Mood.Loyal,忠実,Loyal,忠実,忠実
 OptionSetting,オプション設定,Option,オプション設定,オプション設定
-Option.BGM,BGM音量,BGM Volume,BGM音量,BGM音量
-Option.SE,効果音音量,SE Volume,効果音音量,効果音音量
-Option.TextSpeed,テキスト速度,Text Spd,テキスト速度,テキスト速度
-Option.AutoSpeed,オート速度,Auto Spd,オート速度,オート速度
+Option.BGM,BGM音量,BGM Volume,背景音量,BGM音量
+Option.SE,効果音音量,SE Volume,音效音量,効果音音量
+Option.Voice,ボイス音量,Voice Volume,人物配音音量,人物配音音量
+Option.TextSpeed,テキスト速度,Text Spd,文本速度,テキスト速度
+Option.AutoSpeed,オート速度,Auto Spd,自動播放速度,オート速度
 Option.Apply,適用,Apply,適用,適用
-Option.Default,デフォルト,Default,デフォルト,デフォルト
+Option.Default,デフォルト,Default,預設值,デフォルト
 Option.Second,秒,Sec,秒,秒
 Option.WindowMode,画面設定,Window Mode,画面設定,画面設定
-Option.FullScreen,フルスクリーン,Fullscreen,フルスクリーン,フルスクリーン
-Option.WindowedScreen,ウィンドウモード,Windowed Screen,ウィンドウモード,ウィンドウモード
+Option.FullScreen,フルスクリーン,Fullscreen,全屏,フルスクリーン
+Option.WindowedScreen,ウィンドウモード,Windowed Screen,窗口模式,ウィンドウモード
 BattleScene,戦闘シーン,Battle Scene,戦闘シーン,戦闘シーン
 Battle.Attack,攻撃,Attack,攻撃,攻撃
-Battle.Skill,特殊技,Skill,特殊技,特殊技
+Battle.Skill,特殊技,Skill,技能,特殊技
 Battle.Item,道具,Item,道具,道具
 Battle.Idle,待機,Idle,待機,待機
 Battle.Level,Lv.,Lv.,Lv.,Lv.
 Battle.HP,HP,HP,HP,HP
 Battle.MP,SP,SP,SP,SP
 Battle.ActionOrder,行動順序,Order,行動順序,行動順序
-Battle.Cancel,右クリックで取り消し,Right click to cancel action,右クリックで取り消し,右クリックで取り消し
+Battle.Cancel,右クリックで取り消し,Right click to cancel action,右鍵取消行動,右クリックで取り消し
 Battle.Start,任務開始,Operation Start,任務開始,任務開始
-Battle.Victory,任務クリア,Operation Success,任務クリア,任務クリア
+Battle.Victory,任務クリア,Operation Success,任務完成,任務クリア
 Battle.Defeat,敗北,Defeat,敗北,敗北
-Battle.SkipTutorial,スキップ,Skip,スキップ,スキップ
-Battle.EscapeConfirm,撤退しますか？,Sure to escape?,撤退しますか？,撤退しますか？
+Battle.SkipTutorial,スキップ,Skip,跳過,スキップ
+Battle.EscapeConfirm,撤退しますか？,Sure to escape?,確定要撤退嗎？,撤退しますか？
 Battle.Escape,撤退,Run,撤退,撤退
-Battle.CannotAttack,普通攻撃を行えない,Can not attack,普通攻撃を行えない,普通攻撃を行えない
-Battle.OnCooldown,チャージ中 ({0}ターン),On cooldown ({0}turn),チャージ中 ({0}ターン),チャージ中 ({0}ターン)
+Battle.CannotAttack,普通攻撃を行えない,Can not attack,不能普通攻撃,普通攻撃を行えない
+Battle.OnCooldown,チャージ中 ({0}ターン),On cooldown ({0}turn),冷卻中 ({0}回合),チャージ中 ({0}ターン)
 Battle.NotEnoughSP,SP不足 ({0}),Not enough SP ({0}),SP不足 ({0}),SP不足 ({0})
-Battle.AbilityDisabled,使用不可,Disabled,使用不可,使用不可
+Battle.AbilityDisabled,使用不可,Disabled,不能使用,使用不可
 Buff,状態,Buff,状態,状態
 Buff.Stun,行動不能,Stunned,行動不能,行動不能
 Buff.Hurt,継続ダメージ,Hurt,継続ダメージ,継続ダメージ
@@ -445,10 +446,10 @@ Ability.DivineRapier_Info,敵単体を攻撃し、防御力を極端まで低下
 Ability.StunShield,トラップシールド,トラップシールド,トラップシールド,トラップシールド
 Ability.StunShield_Info,次にエレナを攻撃するものは一時行動不能になる。,次にエレナを攻撃するものは一時行動不能になる。,次にエレナを攻撃するものは一時行動不能になる。,次にエレナを攻撃するものは一時行動不能になる。
 HomeCharacter,ホーム台詞,ホーム台詞,ホーム台詞,ホーム台詞
-HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」,"「Hello, how can I help you?」",「こんにちは、何かご用はありますか？」,「こんにちは、何かご用はありますか？」
-HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」,"「Docter, we look forward to seeing you in action.」",「ドクター、貴方の活躍を期待しています。」,「ドクター、貴方の活躍を期待しています。」
-HomeChar.No5_1-3,「準備は万全です。いつでも出撃できます。」,「All set. We're ready to action.」,「準備は万全です。いつでも出撃できます。」,「準備は万全です。いつでも出撃できます。」
-HomeChar.No5_1-4,「状況は非常に悪いです。聖核戦姫を何とかしないと...」,「The situation is very bad. We have to do something about the Seikaku Princess...」,「状況は非常に悪いです。聖核戦姫を何とかしないと...」,「状況は非常に悪いです。聖核戦姫を何とかしないと...」
+HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」,"「Hello, how can I help you?」",「您好，找我有什麼事嗎？」,「こんにちは、何かご用はありますか？」
+HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」,"「Docter, we look forward to seeing you in action.」",「博士，我很期待你的活躍。」,「ドクター、貴方の活躍を期待しています。」
+HomeChar.No5_1-3,「準備は万全です。いつでも出撃できます。」,「All set. We're ready to action.」,「已經準備就緒，隨時可以出撃。」,「準備は万全です。いつでも出撃できます。」
+HomeChar.No5_1-4,「状況は非常に悪いです。聖核戦姫を何とかしないと...」,「The situation is very bad. We have to do something about the Seikaku Princess...」,「財團的情況非常糟糕。必須對聖核戦姫做點什麼...」,「状況は非常に悪いです。聖核戦姫を何とかしないと...」
 HomeChar.No5_2-3,「オリジナルの研究開発は順調ですか？」,「How's the research of my 'original' doing?」,「オリジナルの研究開発は順調ですか？」,「オリジナルの研究開発は順調ですか？」
 HomeChar.Akiho_2-1,「なんですか？おっぱい搾ってくれるんですか？」,「What is it? Are you going to squeeze my tits?」,「なんですか？おっぱい搾ってくれるんですか？」,「なんですか？おっぱい搾ってくれるんですか？」
 HomeChar.Akiho_2-2,「どうせなら六花も一緒に…」,「Hope Rikka is here with me…」,「どうせなら六花も一緒に…」,「どうせなら六花も一緒に…」
@@ -471,8 +472,8 @@ HomeChar.Nayuta_F-2,「聖核戦姫…私が一匹残らず捕獲します」,�
 HomeChar.Nayuta_F-3,「…弱者は強者に従うのみです」,「...the weak follow the strong. That's all I need to do」,「…弱者は強者に従うのみです」,「…弱者は強者に従うのみです」
 WorldScene,ワールド画面台詞,WorldMap Dialogue,ワールド画面台詞,ワールド画面台詞
 World.Chapter2-3,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,"「We need ""Sasaya Akiho"" for this mission. Let's hurry up and proceed with the training.」",「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」
-World.Chapter3-3,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「How is Rikka's training going? Please take Rikka down quickly!」,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「六花の調教は進んでますか？とっとと堕としちゃってください！」
-World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,"「Yakumo Nayuta is a formidable opponent. I hope we can use Seidō Erena as an asset...""」",「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
+World.Chapter3-3,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「How is Rikka's training going? Just take her down already!」,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「六花の調教は進んでますか？とっとと堕としちゃってください！」
+World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,"「Yakumo Nayuta is a formidable opponent. I hope we can make use of Seidō Erena here...""」",「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
 BattleLog,戦闘ログ,Battlelog,戦闘ログ,戦闘ログ
 BattleLog.Attack,{0}　の攻撃！,{0}'s attack!,{0}　の攻撃！,{0}　の攻撃！
 BattleLog.Damage,{0}　に　{1}　のダメージを与えた！,Deals {1} damage to {0}!,{0}　に　{1}　のダメージを与えた！,{0}　に　{1}　のダメージを与えた！
@@ -502,13 +503,13 @@ BattleLog.Disarm,{0}　は攻撃できなくなった,{0} can no longer attack,{
 BattleLog.Stungun,{0}　から {1} を放つ！,{0} to {1}!,{0}　から {1} を放つ！,{0}　から {1} を放つ！
 BattleLog.AbilityExecute,{0}　からの {1}！,{1} from {0},{0}　からの {1}！,{0}　からの {1}！
 BattleLog.AbilityExecuteSelf,{0}　が{1}する。,{0} does {1}.,{0}　が{1}する。,{0}　が{1}する。
-BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0} extends its tentacles to {1} <cspace=-0.18em>-</cspace>!,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
+BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0} extends its tentacles to {1} <cspace=-0.18em>ーー</cspace>!,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
 BattleLog.NoEffect,効果はなかった。,There was no effect.,効果はなかった。,効果はなかった。
 BattleLog.GiveSP,SP {0} を {1} に分け与えた！,SP {0} was shared with {1}!,SP {0} を {1} に分け与えた！,SP {0} を {1} に分け与えた！
 BattleLog.SPDrain,{0}　のSP {1} 吸収した！ ,{0} of SP {1} was absorbed!,{0}　のSP {1} 吸収した！ ,{0}　のSP {1} 吸収した！ 
 BattleLog.HPDrain,{0}　のHP {1} 吸収した！,{0} of HP {1} was absorbed!,{0}　のHP {1} 吸収した！,{0}　のHP {1} 吸収した！
-BattleLog.Retire,{0}　が再起不能となった。,{0} was not able to reoccur.,{0}　が再起不能となった。,{0}　が再起不能となった。
-BattleLog.Defeat,{0}　が再起不能となった。,{0} was not able to reoccur.,{0}　が再起不能となった。,{0}　が再起不能となった。
+BattleLog.Retire,{0}　が再起不能となった。,{0} is defeated.,{0}　が再起不能となった。,{0}　が再起不能となった。
+BattleLog.Defeat,{0}　が再起不能となった。,{0} is defeated.,{0}　が再起不能となった。,{0}　が再起不能となった。
 BattleLog.Hacking,{0}　がハッキングを挑む！成功確率は {1},{0} challenges the hack! Chance of success {1},{0}　がハッキングを挑む！成功確率は {1},{0}　がハッキングを挑む！成功確率は {1}
 BattleLog.Hacking_Success,成功した！ {0}　が傀儡となった。,Success! {0} became a puppet.,成功した！ {0}　が傀儡となった。,成功した！ {0}　が傀儡となった。
 BattleLog.Hacking_Fail,ハッキングが失敗した。,The hack failed.,ハッキングが失敗した。,ハッキングが失敗した。
@@ -559,7 +560,7 @@ Please let us know what you liked about the trial version, what you didn't, and 
 体験版の気に入ったところ、そうでなかったところ、完全版を改良する提案などあれば、ぜひ教えてください！"
 Demo.LockedFeature,"正式版のみ使えます
 _(・ω・_)⌒)_ ","Only the official version can be used.
-_(ω・⌒)_","正式版のみ使えます
+_(・ω・_)⌒)_ ","正式版才可以用
 _(・ω・_)⌒)_ ","正式版のみ使えます
 _(・ω・_)⌒)_ "
 Demo.StartDemo,Start Demo,Start Demo,Start Demo,Start Demo

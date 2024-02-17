@@ -24,6 +24,7 @@ public static class PlayerPrefsManager
         IsFullScreen,
         BGM_Volume,
         SE_Volume,
+        VOICE_Volume,
         TextSpeed,
         AutoSpeed,
         Language,
@@ -49,11 +50,15 @@ public static class PlayerPrefsManager
         float seVolume = PlayerPrefs.GetFloat(PlayerPrefsSave.SE_Volume.ToString(), OptionPanel.defaultSEVolume);
         AudioManager.Instance.SetSEMasterVolume(seVolume);
 
+        float voiceVolume = PlayerPrefs.GetFloat(PlayerPrefsSave.VOICE_Volume.ToString(), OptionPanel.defaultVoiceVolume);
+        NovelSingletone.Instance.SetVoiceVolume(voiceVolume);
+
         int textSpd = PlayerPrefs.GetInt(PlayerPrefsSave.TextSpeed.ToString(), OptionPanel.defaultTextSpeed);
         NovelSingletone.Instance.SetTextSpeed(textSpd);
 
         float autoSpd = PlayerPrefs.GetFloat(PlayerPrefsSave.AutoSpeed.ToString(), OptionPanel.defaultAutoSpeed);
         NovelSingletone.Instance.SetAutoSpeed(autoSpd);
+
 
         SystemLanguage lang = (SystemLanguage)PlayerPrefs.GetInt(PlayerPrefsSave.Language.ToString(), (int)OptionPanel.defaultLanguage);
         switch (lang)

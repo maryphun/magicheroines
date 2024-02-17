@@ -31,7 +31,7 @@ namespace NovelEditor
 
         [SerializeField, HideInInspector] private float _BGMVolume = 1;
         [SerializeField, HideInInspector] private float _SEVolume = 1;
-        [SerializeField, HideInInspector] private float _VOICEVolume = 1;
+        [SerializeField, HideInInspector] private float _VOICEVolume = 0.5f;
 
         [SerializeField, HideInInspector] private HowInput _inputSystem;
         [SerializeField] private KeyCode[] _nextButton;
@@ -223,6 +223,7 @@ namespace NovelEditor
             set
             {
                 _VOICEVolume = Mathf.Clamp(value, 0, 1);
+                Debug.Log("Set voice volume to " + _VOICEVolume);
                 _audioPlayer.SetVoiceVolume(_VOICEVolume);
             }
         }
@@ -907,7 +908,7 @@ namespace NovelEditor
             {
                 _audioPlayer.SetSEVolume(_SEVolume);
                 _audioPlayer.SetBGMVolume(_BGMVolume);
-                _audioPlayer.SetVoiceVolume(_VOICEVolume);
+                _audioPlayer.SetVoiceVolume(VOICEVolume);
             }
 
             if (_novelUI == null)

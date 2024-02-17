@@ -14,7 +14,6 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
     List<GraphicRaycaster> disabledCanvas = new List<GraphicRaycaster>();
     Action callbackWhenFinish;
     public float defaultHidePlayTime;
-    const int defaultTextSpeed = 10;
 
     public void CreateNovelPlayer()
     {
@@ -33,7 +32,8 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
         novelplayer = spawnedObj.GetComponentInChildren<NovelPlayer>();
         defaultHidePlayTime = novelplayer._hideFadeTime;
-        novelplayer.textSpeed = defaultTextSpeed;
+        novelplayer.textSpeed = OptionPanel.defaultTextSpeed;
+        novelplayer.VOICEVolume = OptionPanel.defaultVoiceVolume;
 
         if (ReferenceEquals(novelplayer, null))
         {
@@ -112,6 +112,7 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         return novelplayer.IsEnded && !novelplayer.IsImageChanging;
     }
 
+    // Set
     public void SetBGMVolume(float value)
     {
         if (!isNovelCreated) CreateNovelPlayer();
@@ -136,6 +137,14 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
 
         novelplayer.autoSpeed = value;
     }
+    public void SetVoiceVolume(float value)
+    {
+        if (!isNovelCreated) CreateNovelPlayer();
+
+        novelplayer.VOICEVolume = value;
+    }
+
+    // Get
     public int GetTextSpeed()
     {
         if (!isNovelCreated) CreateNovelPlayer();
@@ -147,6 +156,12 @@ public class NovelSingletone : SingletonMonoBehaviour<NovelSingletone>
         if (!isNovelCreated) CreateNovelPlayer();
 
         return novelplayer.autoSpeed;
+    }
+    public float GetVoiceVolume()
+    {
+        if (!isNovelCreated) CreateNovelPlayer();
+
+        return novelplayer.VOICEVolume;
     }
 
     private void Update()

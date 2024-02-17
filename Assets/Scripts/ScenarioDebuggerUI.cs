@@ -13,6 +13,11 @@ public class ScenarioDebuggerUI : MonoBehaviour
     private bool isPlaying = false;
     private int screenshotNumber = 0;
 
+    private void Start()
+    {
+        PlayerPrefsManager.LoadPlayerPrefs();
+    }
+
     public void PlayScript()
     {
         UICanvas.enabled = false;

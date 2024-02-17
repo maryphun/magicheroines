@@ -178,7 +178,7 @@ public class HomeCharacter : MonoBehaviour
                 dialogueText.DOText(text, Mathf.Clamp(text.Length * 0.05f, 1.0f, 3.0f)).SetEase(Ease.Linear);
                 if (dialogue.clip != null)
                 {
-                    audioSource.volume = 1.5f;
+                    audioSource.volume = NovelSingletone.Instance.GetVoiceVolume();
                     audioSource.PlayOneShot(dialogue.clip);
                 }
                 if (dialogue.sprite != null)

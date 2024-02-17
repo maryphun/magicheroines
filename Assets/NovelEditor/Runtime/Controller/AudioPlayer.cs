@@ -13,9 +13,9 @@ namespace NovelEditor
     /// </summary>
     internal class AudioPlayer : MonoBehaviour
     {
-        AudioSource _BGM;
-        AudioSource _SE;
-        AudioSource _VOICE;
+        [SerializeField] private AudioSource _BGM;
+        [SerializeField] private AudioSource _SE;
+        [SerializeField] private AudioSource _VOICE;
 
         private float _SEVolume;
         private float _BGMVolume;
@@ -28,6 +28,8 @@ namespace NovelEditor
 
         bool _isFading = false;
         bool _isLoopingSE = false;
+
+        AudioClip voiceToPlay = null;
 
         /// <summary>
         /// 初期化用関数
@@ -70,8 +72,10 @@ namespace NovelEditor
                 SetSE(data);
             }
 
-            // fade voice if playing
-            var s = FadeStop(_VOICE, VOICEcancellation.Token);
+            // try to load character voice
+            voiceToPlay = Resources.Load<AudioClip>("Audio/VOICE/" + data.localizationID);
+
+            _VOICE.Stop();
         }
 
         /// <summary>
@@ -154,21 +158,11 @@ namespace NovelEditor
 
         void SetVoice(Dialogue data)
         {
-            // try to load
-            AudioClip clip = Resources.Load<AudioClip>("Audio/VOICE/" + data.localizationID);
-
-            if (clip != null)
+            if (voiceToPlay != null)
             {
-                //Stop(_VOICE, VOICEcancellation);
-                //VOICEcancellation = new CancellationTokenSource();
                 _VOICE.volume = _VOICEVolume;
-                _VOICE.clip = clip;
+                _VOICE.clip = voiceToPlay;
                 _VOICE.Play();
-            }
-            else if (_VOICE.clip != null)
-            {
-                // no voice
-                Stop(_VOICE, VOICEcancellation);
             }
         }
 
@@ -282,10 +276,9 @@ namespace NovelEditor
         /// ボイスの音量を変更する
         /// </summary>
         /// <param name="voiceVolume">ボイスの新しい音量</param>
-        internal async void SetVoiceVolume(float voiceVolume)
+        internal void SetVoiceVolume(float voiceVolume)
         {
-            if (_isFading)
-                await UniTask.WaitWhile(() => _isFading);
+            Debug.Log("voice volume in audio player set to " + voiceVolume);
             _VOICEVolume = voiceVolume;
             _VOICE.volume = _VOICEVolume;
         }

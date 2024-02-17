@@ -25,10 +25,12 @@ public class OptionPanel : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private Slider bgmVolumeSlider;
     [SerializeField] private Slider seVolumeSlider;
+    [SerializeField] private Slider voiceVolumeSlider;
     [SerializeField] private Slider textSpeedSlider;
     [SerializeField] private Slider autoSpeedSlider;
     [SerializeField] private TMP_Text bgmVolumeValue;
     [SerializeField] private TMP_Text seVolumeValue;
+    [SerializeField] private TMP_Text voiceVolumeValue;
     [SerializeField] private TMP_Text textSpeedValue;
     [SerializeField] private TMP_Text autoSpeedValue;
     [SerializeField] private Toggle fullScreenToggle;
@@ -38,6 +40,7 @@ public class OptionPanel : MonoBehaviour
 
     public static float defaultBGMVolume = 0.5f;
     public static float defaultSEVolume = 0.5f;
+    public static float defaultVoiceVolume = 0.5f;
     public static int defaultTextSpeed = 6;
     public static float defaultAutoSpeed = 1.0f;
     public static bool defaultFullScreenToggle = false;
@@ -49,6 +52,7 @@ public class OptionPanel : MonoBehaviour
 
     private float tempBGMVolume = 0.5f;
     private float tempSEVolume = 0.5f;
+    private float tempVoiceVolume = 0.5f;
     private int tempTextSpeed = 6;
     private float tempAutoSpeed = 1.0f;
 
@@ -71,16 +75,17 @@ public class OptionPanel : MonoBehaviour
 
         tempBGMVolume = AudioManager.Instance.GetMusicVolume();
         tempSEVolume = AudioManager.Instance.GetSEMasterVolume();
+        tempVoiceVolume = NovelSingletone.Instance.GetVoiceVolume();
         tempTextSpeed = NovelSingletone.Instance.GetTextSpeed();
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
 
         bgmVolumeSlider.value = tempBGMVolume;
         seVolumeSlider.value = tempSEVolume;
+        voiceVolumeSlider.value = tempVoiceVolume;
         textSpeedSlider.value = tempTextSpeed;
         autoSpeedSlider.value = tempAutoSpeed;
         fullScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen;
         windowScreenToggle.isOn = Screen.fullScreenMode == FullScreenMode.Windowed;
-        Debug.Log(LocalizationManager.Language);
         JPToggle.isOn = LocalizationManager.Language == "Japanese";
         ENToggle.isOn = LocalizationManager.Language == "English";
         SCNToggle.isOn = LocalizationManager.Language == "Simplified Chinese";
@@ -89,6 +94,7 @@ public class OptionPanel : MonoBehaviour
         // Update value texts
         ChangeBGMVolume();
         ChangeSEVolume();
+        ChangeVoiceVolume();
         TextSpeedVolume();
         AutoSpeedVolume();
 
@@ -128,6 +134,13 @@ public class OptionPanel : MonoBehaviour
         string percentValue = (seVolumeSlider.value * 100).ToString("0") + "%";
         seVolumeValue.SetText(percentValue);
     }
+    public void ChangeVoiceVolume()
+    {
+        NovelSingletone.Instance.SetVoiceVolume(voiceVolumeSlider.value);
+
+        string percentValue = (voiceVolumeSlider.value * 100).ToString("0") + "%";
+        voiceVolumeValue.SetText(percentValue);
+    }
     public void EndSEVolumeDrag()
     {
         // SE çƒê∂
@@ -151,6 +164,7 @@ public class OptionPanel : MonoBehaviour
     {
         bgmVolumeSlider.DOValue(defaultBGMVolume, 0.25f);
         seVolumeSlider.DOValue(defaultSEVolume, 0.25f);
+        voiceVolumeSlider.DOValue(defaultVoiceVolume, 0.25f);
         textSpeedSlider.DOValue(defaultTextSpeed, 0.25f);
         autoSpeedSlider.DOValue(defaultAutoSpeed, 0.25f);
         fullScreenToggle.isOn = defaultFullScreenToggle;
