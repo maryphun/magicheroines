@@ -79,7 +79,17 @@ public class CharacterDataPanel : MonoBehaviour
         // 順番並べ
         if (abilities.Count > 0)
         {
-            abilities.Sort((x, y) => x.requiredLevel.CompareTo(y.requiredLevel));
+            abilities.Sort((x, y) =>
+            {
+                int powerComparison = x.requiredHornyness.CompareTo(y.requiredHornyness);
+
+                if (powerComparison == 0) // If requiredHornyness is equal, compare by requiredLevel
+                {
+                    return x.requiredLevel.CompareTo(y.requiredLevel);
+                }
+
+                return powerComparison;
+            });
 
             for (int i = 0; i < abilities.Count; i++)
             {
@@ -118,7 +128,7 @@ public class CharacterDataPanel : MonoBehaviour
 
                     skillImageList[i].sprite = lockIcon;
                     requirement[i].enabled = true;
-                    requirement[i].Initialization(abilities[i].requiredLevel);
+                    requirement[i].Initialization(abilities[i].requiredLevel, abilities[i].requiredHornyness);
                 }
                 else
                 {

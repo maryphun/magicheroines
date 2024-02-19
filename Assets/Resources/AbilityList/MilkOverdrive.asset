@@ -18,9 +18,10 @@ MonoBehaviour:
   functionName: MilkOverdrive
   consumeSP: 60
   cooldown: 0
-  requiredLevel: 15
-  requiredHornyness: 0
+  requiredLevel: 0
+  requiredHornyness: 2
   castType: 0
   abilityType: 2
   isAOE: 1
   canTargetSelf: 0
+  disableOnDefault: 0

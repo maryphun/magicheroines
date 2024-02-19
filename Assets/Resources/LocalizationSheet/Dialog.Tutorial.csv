@@ -55,13 +55,14 @@ Dialog.Tutorial-3-1,,戦闘の基本の説明します。,The basics of combat a
 Dialog.Tutorial-3-2,,本作の戦闘システムは、ターン制のコマンドバトルとなっています。,The combat system in this work is a turn―based command battle.,本作の戦闘システムは、ターン制のコマンドバトルとなっています。
 Dialog.Tutorial-3-3,,順番は行動速度によって決まり、行動速度が高いキャラから行動を選択できます。,"The order is determined by the speed of action, and the action can be selected from the character with the highest speed of action.",順番は行動速度によって決まり、行動速度が高いキャラから行動を選択できます。
 Dialog.Tutorial-3-4,,キャラクターが取れる行動は4種類あります。,There are four types of actions a character can take.,キャラクターが取れる行動は4種類あります。
-Dialog.Tutorial-3-5,,「攻撃」基本的な攻撃手段です。攻撃者と相手のレベルでダメージが影響されます。,"""[Attack] is the basic means of attack. Damage is affected by the level of the attacker and the opponent.",「攻撃」基本的な攻撃手段です。攻撃者と相手のレベルでダメージが影響されます。
+Dialog.Tutorial-3-5,,「攻撃」基本的な攻撃手段です。攻撃者と相手のレベルでダメージが影響されます。,[Attack] is the basic means of attack. Damage is affected by the level of the attacker and the opponent.,「攻撃」基本的な攻撃手段です。攻撃者と相手のレベルでダメージが影響されます。
 Dialog.Tutorial-3-6,,今回は相手の方が圧倒的にレベルが上なので、あまりダメージを与えられないでしょう。,"This time, the opponent is much higher level than you, so you will not be able to do much damage.",今回は相手の方が圧倒的にレベルが上なので、あまりダメージを与えられないでしょう。
-Dialog.Tutorial-3-7,,「特殊技」SPを消費して、キャラクターの固有スキルを発動できます。,"""[Unique Skill] SP can be consumed to activate a character's unique skills.",「特殊技」SPを消費して、キャラクターの固有スキルを発動できます。
+Dialog.Tutorial-3-7,,「特殊技」SPを消費して、キャラクターの固有スキルを発動できます。,[Unique Skill] SP can be consumed to activate a character's unique skills.,「特殊技」SPを消費して、キャラクターの固有スキルを発動できます。
 Dialog.Tutorial-3-8,,特殊技はレベルアップなどで習得できます。,Unique Skill can be learned by leveling up and other means.,特殊技はレベルアップなどで習得できます。
-Dialog.Tutorial-3-9,,「アイテム」はキャラのターンを消費して使用できます。,"""[Items] can be used by consuming a character's turns.",「アイテム」はキャラのターンを消費して使用できます。
-Dialog.Tutorial-3-10,,「待機」でSPを回復できます。,"""SP can be recovered by [standby]",「待機」でSPを回復できます。
-Dialog.Tutorial-3-11,,では、実際に戦ってみましょう。,"Now, let's actually fight.",では、実際に戦ってみましょう。
+Dialog.Tutorial-3-9,,「アイテム」はキャラのターンを消費して使用できます。,[Items] can be used by consuming a character's turns.,「アイテム」はキャラのターンを消費して使用できます。
+Dialog.Tutorial-3-10,,「待機」でSPを回復できます。,SP can be recovered by [standby],「待機」でSPを回復できます。
+Dialog.Tutorial-3-11,,ショートカットキーはそれぞれ「Ｚ」「Ｘ」「Ｃ」「Ｖ」となります。,"The shortcut key for each command are [Z], [X], [C] and [V].",ショートカットキーはそれぞれ「Ｚ」「Ｘ」「Ｃ」「Ｖ」となります。
+Dialog.Tutorial-3-12,,では、実際に戦ってみましょう。,"Now, let's actually fight.",では、実際に戦ってみましょう。
 ,,【戦闘終了】,【戦闘終了】,【戦闘終了】
 ,,,,
 Dialog.Tutorial-4-1,【触手怪人】【戦闘員】,「「「ぐはっ」」」,"""""Gah!""""",「「「ぐはっ」」」

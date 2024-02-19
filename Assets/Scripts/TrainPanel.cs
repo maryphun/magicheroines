@@ -55,11 +55,11 @@ public class TrainPanel : MonoBehaviour
     void InitList()
     {
         // 淫乱化シナリオリスト
-        CharacterID_To_HornyNovelNameList.Add(3, new List<string> { "Akiho/Horny_1", "Akiho/Horny_2", "Akiho/Horny_3" });
-        CharacterID_To_HornyNovelNameList.Add(4, new List<string> { "Rikka/Horny_1", "Rikka/Horny_2", "Rikka/Horny_3" });
-        CharacterID_To_HornyNovelNameList.Add(5, new List<string> { "Erena/Horny_1", "Erena/Horny_2", "Erena/Horny_3" });
-        CharacterID_To_HornyNovelNameList.Add(6, new List<string> { "Kei/Horny_1", "Kei/Horny_2", "Kei/Horny_3" });
-        CharacterID_To_HornyNovelNameList.Add(7, new List<string> { "Nayuta/Horny_1", "Nayuta/Horny_2", "Nayuta/Horny_3" });
+        CharacterID_To_HornyNovelNameList.Add(3, new List<string> { "Akiho/Horny_1", "Akiho/Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(4, new List<string> { "Rikka/Horny_1", "Rikka/Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(5, new List<string> { "Erena/Horny_1", "Erena/Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(6, new List<string> { "Kei/Horny_1", "Kei/Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(7, new List<string> { "Nayuta/Horny_1", "Nayuta/Horny_2" });
         // 洗脳シナリオリスト
         CharacterID_To_BrainwashNovelNameList.Add(3, new List<string> { "Akiho/BrainWash_1", "Akiho/BrainWash_2", "Akiho/BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(4, new List<string> { "Rikka/BrainWash_1", "Rikka/BrainWash_2", "Rikka/BrainWash_3" });
@@ -67,11 +67,11 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_BrainwashNovelNameList.Add(6, new List<string> { "Kei/BrainWash_1", "Kei/BrainWash_2", "Kei/BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(7, new List<string> { "Nayuta/BrainWash_1", "Nayuta/BrainWash_2", "Nayuta/BrainWash_3" });
         // 聖核研究シナリオリスト
-        CharacterID_To_CoreNovelNameList.Add(3, new List<string> { "Akiho/Core_1", "Akiho/Core_2", "Akiho/Core_3" });
-        CharacterID_To_CoreNovelNameList.Add(4, new List<string> { "Rikka/Core_1", "Rikka/Core_2", "Rikka/Core_3" });
-        CharacterID_To_CoreNovelNameList.Add(5, new List<string> { "Erena/Core_1", "Erena/Core_2", "Erena/Core_3" });
-        CharacterID_To_CoreNovelNameList.Add(6, new List<string> { "Kei/Core_1", "Kei/Core_2", "Kei/Core_3" });
-        CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/Core_1", "Nayuta/Core_2", "Nayuta/Core_3" });
+        CharacterID_To_CoreNovelNameList.Add(3, new List<string> { "Akiho/Core_1", "Akiho/Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(4, new List<string> { "Rikka/Core_1", "Rikka/Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(5, new List<string> { "Erena/Core_1", "Erena/Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(6, new List<string> { "Kei/Core_1", "Kei/Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/Core_1", "Nayuta/Core_2" });
     }
 
     private void Awake()
@@ -265,6 +265,7 @@ public class TrainPanel : MonoBehaviour
     {
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
+        homeCharacterScript.StopVoice();
 
         // BGM 停止
         AudioManager.Instance.PauseMusic();
@@ -295,6 +296,8 @@ public class TrainPanel : MonoBehaviour
     {
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
+        homeCharacterScript.StopVoice();
+
         // BGM 停止
         AudioManager.Instance.PauseMusic();
 
@@ -331,6 +334,7 @@ public class TrainPanel : MonoBehaviour
     {
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
+        homeCharacterScript.StopVoice();
 
         // BGM 停止
         AudioManager.Instance.PauseMusic();
@@ -360,10 +364,10 @@ public class TrainPanel : MonoBehaviour
         {
             case ScenarioType.Horny:
                 // 淫乱化
-                if (characters[currentIndex].hornyEpisode >= CharacterID_To_HornyNovelNameList[characters[currentIndex].characterData.characterID].Count - 1)
+                if (characters[currentIndex].hornyEpisode >= CharacterID_To_HornyNovelNameList[characters[currentIndex].characterData.characterID].Count)
                 {
                     // 特殊技獲得
-
+                    CallNewSpecialAbilityPopUp();
                 }
                 break;
             case ScenarioType.Corruption:
@@ -379,7 +383,7 @@ public class TrainPanel : MonoBehaviour
                 break;
             case ScenarioType.CoreResearch:
                 // 淫乱化
-                if (characters[currentIndex].holyCoreEpisode >= CharacterID_To_CoreNovelNameList[characters[currentIndex].characterData.characterID].Count - 1)
+                if (characters[currentIndex].holyCoreEpisode >= CharacterID_To_CoreNovelNameList[characters[currentIndex].characterData.characterID].Count)
                 {
                     // 聖核装備獲得
                     EquipmentDefine newEquipment = characters[currentIndex].characterData.coreEquipment;
@@ -411,6 +415,20 @@ public class TrainPanel : MonoBehaviour
         });
     }
 
+    public void CallNewSpecialAbilityPopUp()
+    {
+        // SE
+        AudioManager.Instance.PlaySFX("NewAbility");
+
+        // Update Text
+        newBattlerPopupText.text = HornynessMessage(characters[currentIndex].characterData.characterID);
+
+        // UI
+        newBattlerPopup.DOKill(false);
+        newBattlerPopup.DOFade(1.0f, 0.5f);
+        newBattlerPopup.interactable = true;
+        newBattlerPopup.blocksRaycasts = true;
+    }
     public void CallNewBattlerPopUp()
     {
         // SE
@@ -458,6 +476,34 @@ public class TrainPanel : MonoBehaviour
             newCoreEquipmentPopup.interactable = false;
             newCoreEquipmentPopup.blocksRaycasts = false;
         });
+    }
+
+    /// <summary>
+    /// 淫乱化シナリオ　特殊技獲得メッセージ
+    /// </summary>
+    public string HornynessMessage(int characterID)
+    {
+        string s = string.Empty;
+        switch ((PlayerCharacerID)characterID)
+        {
+            case PlayerCharacerID.Akiho: // 明穂
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Akiho"), CustomColor.akiho());
+                return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
+            case PlayerCharacerID.Rikka: // 立花
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Rikka"), CustomColor.rikka());
+                return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
+            case PlayerCharacerID.Erena: // エレナ
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Erena"), CustomColor.erena());
+                return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
+            case PlayerCharacerID.Kei: // 京
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Kei"), CustomColor.kei());
+                return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
+            case PlayerCharacerID.Nayuta: // 那由多
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Nayuta"), CustomColor.nayuta());
+                return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
+            default:
+                return string.Empty;
+        }
     }
 
     /// <summary>

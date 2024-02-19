@@ -18,9 +18,10 @@ MonoBehaviour:
   functionName: GuardianAngel
   consumeSP: 60
   cooldown: 3
-  requiredLevel: 16
-  requiredHornyness: 0
+  requiredLevel: 0
+  requiredHornyness: 2
   castType: 0
   abilityType: 1
   isAOE: 1
   canTargetSelf: 0
+  disableOnDefault: 0

@@ -19,13 +19,15 @@ public class SkillRequirement : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private int requiredLevel;
+    [SerializeField] private int requiredHornyness;
     [SerializeField] private bool isHovering;
     [SerializeField] private Vector3 rectPosition;
     [SerializeField] private Vector3 sizeDelta;
 
-    public void Initialization(int requiredLevel)
+    public void Initialization(int requiredLevel, int requireHornyness)
     {
         this.requiredLevel = requiredLevel;
+        this.requiredHornyness = requireHornyness;
         isHovering = false;
         sizeDelta = rect.sizeDelta * mainCanvas.scaleFactor;
         rectPosition = rect.position + new Vector3(sizeDelta.x * 0.5f, -sizeDelta.y * 0.5f, 0.0f);
@@ -60,7 +62,9 @@ public class SkillRequirement : MonoBehaviour
     {
         isHovering = true;
         canvasGroup.DOFade(1, animTime);
-        text.text = LocalizationManager.Localize("SysteÇç.Requirement") + "\nLv" + requiredLevel;
+
+        string requirement = requiredLevel > requiredHornyness ? "Lv" + requiredLevel : LocalizationManager.Localize("System.HornyTrained");
+        text.text = LocalizationManager.Localize("SysteÇç.Requirement") + "\n" + requirement;
         var canvasRect = canvasGroup.GetComponent<RectTransform>();
         canvasRect.position = new Vector3(rectPosition.x, canvasRect.position.y, canvasRect.position.z);
     }

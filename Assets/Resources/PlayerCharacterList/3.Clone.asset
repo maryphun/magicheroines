@@ -46,8 +46,9 @@ MonoBehaviour:
       requiredCorruptionEpisode: 0
       requiredHornyEpisode: 0
     corruptedName: Name.Clone
+    coreEquipment: {fileID: 0}
     abilities:
     - {fileID: 11400000, guid: 06e0bb439bc19a34aaae60e9a5cac0f3, type: 2}
     - {fileID: 11400000, guid: 32d96c13a9fa5844cba8874447f04d32, type: 2}
-    - {fileID: 11400000, guid: b41b7f89ea164214b96481f02b426e11, type: 2}
+    - {fileID: 11400000, guid: 8e017c8e14573fb4887e347007b7c4bd, type: 2}
   battler: {fileID: 6784901170540971542, guid: 471f4f6d45afb1e43af475fdb260a439, type: 3}

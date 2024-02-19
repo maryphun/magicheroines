@@ -2663,7 +2663,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 4096
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -12932,7 +12932,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 4096
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -16690,10 +16690,10 @@ MonoBehaviour:
   nextCharacterBtn: {fileID: 1584619853}
   hornyActionBtn: {fileID: 973767768}
   corruptActionBtn: {fileID: 846995151}
-  coreBtn: {fileID: 0}
+  coreBtn: {fileID: 407765733}
   hornyActionCost: {fileID: 463348372}
   corruptActionCost: {fileID: 5839571}
-  coreCost: {fileID: 0}
+  coreCost: {fileID: 891545667}
   unavailablePanel: {fileID: 936173352}
   underDevelopmentPopUp: {fileID: 1815785960}
   newBattlerPopup: {fileID: 1652802482}
@@ -21550,6 +21550,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 1997077213}
   rect: {fileID: 725707577}
   requiredLevel: 0
+  requiredHornyness: 0
   isHovering: 0
   rectPosition: {x: 0, y: 0, z: 0}
   sizeDelta: {x: 0, y: 0, z: 0}
@@ -45400,6 +45401,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 1997077213}
   rect: {fileID: 1531775498}
   requiredLevel: 0
+  requiredHornyness: 0
   isHovering: 0
   rectPosition: {x: 0, y: 0, z: 0}
   sizeDelta: {x: 0, y: 0, z: 0}
@@ -48221,6 +48223,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 1997077213}
   rect: {fileID: 1618836702}
   requiredLevel: 0
+  requiredHornyness: 0
   isHovering: 0
   rectPosition: {x: 0, y: 0, z: 0}
   sizeDelta: {x: 0, y: 0, z: 0}
@@ -59494,6 +59497,7 @@ MonoBehaviour:
   mainCanvas: {fileID: 1997077213}
   rect: {fileID: 1990267280}
   requiredLevel: 0
+  requiredHornyness: 0
   isHovering: 0
   rectPosition: {x: 0, y: 0, z: 0}
   sizeDelta: {x: 0, y: 0, z: 0}

@@ -18,9 +18,10 @@ MonoBehaviour:
   functionName: Fist
   consumeSP: 35
   cooldown: 0
-  requiredLevel: 15
-  requiredHornyness: 0
+  requiredLevel: 0
+  requiredHornyness: 2
   castType: 1
   abilityType: 0
   isAOE: 0
   canTargetSelf: 0
+  disableOnDefault: 0

@@ -40,6 +40,7 @@ public class BattleSceneTutorial : MonoBehaviour
         SkillLearn, // 特殊技はレベルアップなどで習得できます。
         Item, // 「アイテム」はチーム全体で共有されますが、使用するキャラクターのターンを消耗します。
         Idle, // 「待機」何もせずターンを終了することになりますが、SPを回復することができます。
+        Hotkey, // ショートカットキーは「Ｚ」「Ｘ」「Ｃ」「Ｖ」となります。
         BattleStart,
         End, // では、実際に戦ってみましょう。
     }
@@ -150,6 +151,12 @@ public class BattleSceneTutorial : MonoBehaviour
                     break;
                 case TutorialStep.Idle:
                     currentTween = SequenceText("Dialog.Tutorial-3-11");
+                    textPanel.DOSizeDelta(new Vector2(1300.0f, 120.0f), 1.0f);
+                    step = TutorialStep.Hotkey;
+                    DisplayObject(actionPanel);
+                    break;
+                case TutorialStep.Hotkey:
+                    currentTween = SequenceText("Dialog.Tutorial-3-12");
                     textPanel.DOSizeDelta(new Vector2(700.0f, 300.0f), 1.0f);
                     textPanel.DOAnchorPosY(0.0f, 1.0f);
                     step = TutorialStep.BattleStart;

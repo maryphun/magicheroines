@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bc52c2a299acd94f86e31b43c7eebc6, type: 3}
-  m_Name: Ultimate
+  m_Name: Fist (For Clone)
   m_EditorClassIdentifier: 
-  icon: {fileID: 1093134712, guid: 17209232aa5e2e94082c1dff3302082c, type: 3}
-  abilityNameID: Ability.Ultimate
-  descriptionID: Ability.Ultimate_Info
-  functionName: Ultimate
-  consumeSP: 50
-  cooldown: 3
-  requiredLevel: 0
-  requiredHornyness: 2
+  icon: {fileID: -1766025346, guid: 17209232aa5e2e94082c1dff3302082c, type: 3}
+  abilityNameID: Ability.Fist
+  descriptionID: Ability.Fist_Info
+  functionName: Fist
+  consumeSP: 35
+  cooldown: 0
+  requiredLevel: 15
+  requiredHornyness: 0
   castType: 1
   abilityType: 0
   isAOE: 0

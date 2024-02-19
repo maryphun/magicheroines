@@ -225,4 +225,9 @@ public class HomeCharacter : MonoBehaviour
         characterSprite.DOFade(1.0f, 0.5f);
     }
 
+    // É{ÉCÉXÇÃã≠êßí‚é~
+    public void StopVoice()
+    {
+        audioSource.DOFade(0.0f, 0.25f);
+    }
 }
