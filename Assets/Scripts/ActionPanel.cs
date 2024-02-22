@@ -97,7 +97,7 @@ public class ActionPanel : MonoBehaviour
     public void OnClickItem()
     {
         // インベントリメニューを表示
-        Inventory.Instance.obj.OpenInventory(CloseInventory);
+        Inventory.Instance.obj.OpenInventory(true, CloseInventory);
 
         // ActionPanel操作禁止
         canvasGrp.alpha = 0.25f;

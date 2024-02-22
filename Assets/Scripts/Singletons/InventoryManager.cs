@@ -119,6 +119,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private bool isDescriptionShowing = false;
     [SerializeField] private bool isOpened = false;
     [SerializeField] private bool isHiding = false;
+    [SerializeField] private bool canUseItem = false;
     [SerializeField] private ItemDefine selectingItem;
     [SerializeField] private RectTransform[] itemSlots;
     [SerializeField] private Action onCloseCallback;
@@ -199,7 +200,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void OpenInventory(Action callbackWhenClose)
+    /// <summary>
+    /// インベントリUIを表示
+    /// </summary>
+    /// <param name="canUseItem">道具を使うシーンであるかどうか</param>
+    /// <param name="callbackWhenClose">UIが閉じるときのコールバック</param>
+    public void OpenInventory(bool canUseItem, Action callbackWhenClose)
     {
         if (!isInitialized) Initialize();
         if (isOpened) return;
@@ -214,6 +220,7 @@ public class InventoryManager : MonoBehaviour
         itemDescription.GetComponent<CanvasGroup>().alpha = 0.0f;
         isOpened = true;
         isHiding = false;
+        this.canUseItem = canUseItem;
     }
 
     public void CloseInventory(bool isUsingItem)
@@ -390,6 +397,8 @@ public class InventoryManager : MonoBehaviour
 
     private void UseItem(Tuple<RectTransform, ItemDefine> item)
     {
+        if (!canUseItem) return;
+
         ItemExecute.Instance.SetItemIcon(item.Item2.Icon);
         switch (item.Item2.itemType)
         {
