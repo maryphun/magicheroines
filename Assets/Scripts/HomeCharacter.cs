@@ -142,6 +142,8 @@ public class HomeCharacter : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        if (ProgressManager.Instance.HasUnnotifiedRecord()) return; // 侵食記録通知が出るのでキャラは喋らない
+
         // Display Dialogue
         var dialogue = GetDialogue();
         dialogueText.text = string.Empty;

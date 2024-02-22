@@ -22,6 +22,7 @@ public struct PlayerData
     public List<HomeDialogue> homeDialogue;   //< ホームシーンのセリフを管理する
     public int formationSlotUnlocked;    //< 解放されたスロット
     public TutorialData tutorialData;    //< チュートリアルを見たかを管理
+    public List<Record> records;         //< 侵食記録
 }
 
 /// <summary>
@@ -518,6 +519,62 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         return playerData.tutorialData;
     }
 
+    // 侵食記録追加
+    public void AddNewRecord(string recordNameID, string recordNovelID)
+    {
+        Record temp = new Record(recordNameID, recordNovelID);
+        playerData.records.Add(temp);
+    }
+
+    // まだ通知が届いていない侵食記録があるか
+    public bool HasUnnotifiedRecord()
+    {
+        return playerData.records.Any(x => x.isNotified == false);
+    }
+
+    // まだ通知が届いていない侵食記録があるか
+    public Record GetUnnotifiedRecord()
+    {
+        return playerData.records.First(x => x.isNotified == false);
+    }
+
+    // 侵食記録リストを獲得
+    public List<Record> GetRecordsList()
+    {
+        return playerData.records;
+    }
+
+    public void RecordNotified(string recordNameID)
+    {
+        var copy = playerData.records;
+
+        foreach (var record in copy)
+        {
+            if (record.recordNameID == recordNameID && record.isNotified == false)
+            {
+                record.isNotified = true;
+            }
+        }
+
+        // paste
+        playerData.records = copy;
+    }
+    public void RecordChecked(string recordNameID)
+    {
+        var copy = playerData.records;
+
+        foreach (var record in copy)
+        {
+            if (record.recordNameID == recordNameID && record.isChecked == false)
+            {
+                record.isChecked = true;
+            }
+        }
+
+        // paste
+        playerData.records = copy;
+    }
+
 #if DEBUG_MODE
     public void DebugModeInitialize(bool addEnemy = false)
     {
@@ -571,6 +628,6 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         }
     }
 #else
-public void DebugModeInitialize() { }
+    public void DebugModeInitialize() { }
 #endif
 }

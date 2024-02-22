@@ -10,6 +10,7 @@ HomeScene,ホーム画面,HomeScene,ホーム画面,ホーム画面
 System.Memory,回想,Memory,回想,回想
 System.SwitchCharacter,画面キャラ変更,Change Character,更換角色,画面キャラ変更
 System.BlackMarket,闇市,Black Market,黑市,闇市
+System.Record,侵食記録,Record,侵蝕記録,侵蚀记录
 System.Action,活動,Operation,活動,活動
 System.Training,調教,Training,調教,調教
 System.CharacterBuilding,キャラクター育成,Character Building,角色育成,キャラクター育成
@@ -104,6 +105,14 @@ System.Storage,収納庫,Storage,收納庫,収納庫
 Systeｍ.Requirement,解放条件:,Requirement: ,解放条件:,解放条件:
 System.HornyTrained,淫乱調教完了,Horniness Training,淫乱調教完成,淫乱調教完成
 System.NewAbilityTraining,{s}が新しい特殊技を覚えました。,{s} learnt new special ability.,{s}學到新特殊技能了。,{s}學到新特殊技能了。
+System.NewRecord,"オペレーションの間にアジトである起き事が発生しました
+今記録を見ますか？","During the operation, some event happened in the hideout.
+Check the record now?","行動中基地裡發生了一點事情。
+現在觀看記錄嗎？","行动中基地里发生了点事情。
+现在观看记录吗？"
+System.CheckRecordNow,今見る,Yes,現在觀看,现在观看
+System.CheckRecordLater,後にする,Later,等下才看,等下才看
+System.RecordTutorial,画面左側の「{s}」ボタンで記録を確認できます。,You can check records at [{s}] button.,您可以在左側的「{s}」查看記錄。,您可以在左侧的「{s}」查看记录。
 Memory,回想,Memory,回想,回想
 Memory.Akiho_1,明穂 - 痴漢,Akiho - Chikan,明穂 - 痴漢,明穂 - 痴漢
 Memory.Akiho_2,明穂 - 敗北,Akiho - Defeat,明穂 - 敗北,明穂 - 敗北
