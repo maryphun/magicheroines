@@ -251,7 +251,7 @@ public class BlackMarketManager : MonoBehaviour
     public void OpenInventory()
     {
         // インベントリメニューを表示
-        Inventory.Instance.obj.OpenInventory(OnCloseInventory);
+        Inventory.Instance.obj.OpenInventory(false, OnCloseInventory);
     }
 
     public void OnCloseInventory()
