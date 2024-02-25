@@ -56,7 +56,7 @@ public class RecordNotification : MonoBehaviour
 
         notificationPopup.gameObject.SetActive(true);
         AudioManager.Instance.PlaySFX("SystemAlert");
-        notificationPopup.DOScaleY(1.0f, 0.75f).SetEase(Ease.InElastic);
+        notificationPopup.DOScaleY(1.0f, 0.75f).SetEase(Ease.OutElastic);
     }
 
     public void OnClickStartRecord()
@@ -68,6 +68,9 @@ public class RecordNotification : MonoBehaviour
         ProgressManager.Instance.RecordChecked(record.recordNameID);
         
         notificationPopup.gameObject.SetActive(false);
+
+        // BGM停止
+        AudioManager.Instance.StopMusicWithFade();
     }
 
     public void OnClickCheckLater()
@@ -97,7 +100,7 @@ public class RecordNotification : MonoBehaviour
 
         // show cancel popup
         recordTutorialPopup.gameObject.SetActive(true);
-        recordTutorialPopup.DOScaleY(1.0f, 0.75f).SetEase(Ease.InElastic);
+        recordTutorialPopup.DOScaleY(1.0f, 0.75f).SetEase(Ease.OutElastic);
         recordButton.gameObject.SetActive(true);
 
         // 画面左側の「侵食記録」ボタンで記録を確認できます。
@@ -130,6 +133,9 @@ public class RecordNotification : MonoBehaviour
         {
             EndUI();
         }
+
+        // BGM再開
+        AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 2.0f);
     }
 
     // 終了

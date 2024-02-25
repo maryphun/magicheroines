@@ -75,6 +75,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.homeDialogue = new List<HomeDialogue>();
         playerData.formationSlotUnlocked = 2;
         playerData.tutorialData = new TutorialData(false);
+        playerData.records = new List<Record>();
 
         // 初期ホームシーンキャラ
         HomeDialogue no5 = Resources.Load<HomeDialogue>("HomeDialogue/No5");

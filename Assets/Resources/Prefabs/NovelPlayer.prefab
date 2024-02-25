@@ -3425,7 +3425,7 @@ MonoBehaviour:
   _nonameDialogueSprite: {fileID: 21300000, guid: e3324fc74fb0f4c4d9937c21998fd278, type: 3}
   _playOnAwake: 0
   _hideAfterPlay: 0
-  _hideFadeTime: 1
+  _hideFadeTime: 0.5
   _isDisplay: 0
   _charaFadeTime: 0.5
   _textSpeed: 5

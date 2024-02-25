@@ -204,6 +204,9 @@ public class StoryManager : MonoBehaviour
 
                     PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
                     ProgressManager.Instance.AddPlayerCharacter(Rikka);
+
+                    // ZH‹L˜^ŠJ•ú
+                    ProgressManager.Instance.AddNewRecord("Record.AkihoPaizuri", "AkihoPaizuri");
                 }
                 break;
             case 7:
