@@ -54289,6 +54289,11 @@ MonoBehaviour:
   recordText: {fileID: 2098347541}
   novelID: 
   nameID: 
+  slotRecord:
+    recordNameID: 
+    novelData: 
+    isNotified: 0
+    isChecked: 0
 --- !u!1 &1704088344
 GameObject:
   m_ObjectHideFlags: 0
