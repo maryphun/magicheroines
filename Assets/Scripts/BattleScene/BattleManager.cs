@@ -527,8 +527,22 @@ public class Battle : MonoBehaviour
         // ãﬂãóó£çUåÇÇ∂Ç·Ç»Ç¢
         if (attacker.AttackCallback != string.Empty)
         {
-            AbilityExecute.Instance.SetTargetBattler(target);
             AbilityExecute.Instance.Invoke(attacker.AttackCallback, 0);
+            if (attacker.IsAoENormalAttack)
+            {
+                if (attacker.isEnemy)
+                {
+                    AbilityExecute.Instance.SetTargetBattlers(turnBaseManager.GetAllPlayerCharacters());
+                }
+                else
+                {
+                    AbilityExecute.Instance.SetTargetBattlers(turnBaseManager.GetAllEnemyCharacters());
+                }
+            }
+            else
+            {
+                AbilityExecute.Instance.SetTargetBattler(target);
+            }
             yield break;
         }
 

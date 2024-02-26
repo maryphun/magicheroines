@@ -23,6 +23,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private bool isFemale = false; // 女なのか
     [SerializeField] private bool isMachine = false; // 機械なのか
     [SerializeField] private string attackCallback; // 特殊攻撃アニメーション
+    [SerializeField] private bool isAoENormalAttack = false; // 普通攻撃が範囲攻撃か
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -69,6 +70,7 @@ public class Battler : MonoBehaviour
     [HideInInspector] public bool IsFemale { get { return isFemale; } }
     [HideInInspector] public string CharacterNameColored { get { return CustomColor.AddColor(character_name, character_color); } }
     [HideInInspector] public string AttackCallback { get { return attackCallback; } }
+    [HideInInspector] public bool IsAoENormalAttack { get { return isAoENormalAttack; } }
 
     private Vector3 originalScale;
     private float ease = 0.0f;

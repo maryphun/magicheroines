@@ -4965,6 +4965,20 @@ MonoBehaviour:
   blackbar_btm: {fileID: 735745846}
   leftCharaccter: {fileID: 1284634631}
   rightCharacter: {fileID: 732052173}
+  leftCharacterSprite:
+  - {fileID: 21300000, guid: 115bcdad8fedbb84fae28dadddba3f30, type: 3}
+  - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+  - {fileID: 21300000, guid: 86641f8e974730140b63387b6bd70ccf, type: 3}
+  - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+  - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+  - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+  rightCharacterSprite:
+  - {fileID: 21300000, guid: e2613a5f6fbb7224d9192447961d4ea1, type: 3}
+  - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
+  - {fileID: 21300000, guid: f5d79f9e54d41bf4090d1ec465a2d431, type: 3}
+  - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+  - {fileID: 21300000, guid: b0bd88528c734ad43b03fbe01fc8629e, type: 3}
+  - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
   currentSelection: 0
   animationPlaying: 0
   keyPrepressed: 0

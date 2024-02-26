@@ -625,8 +625,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         if (addEnemy)
         {
             BattleSetup.Reset(false);
-            BattleSetup.SetAllowEscape(true);
-            BattleSetup.AddEnemy("Rikka_Enemy");
+            BattleSetup.AddEnemy("Kei_Enemy");
+            BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+            BattleSetup.SetBattleBack(BattleBack.CentreTower);
         }
     }
 #else

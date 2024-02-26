@@ -143,6 +143,21 @@ public class TurnBase : MonoBehaviour
         return rtn;
     }
 
+    // 全敵を取得
+    public List<Battler> GetAllEnemyCharacters()
+    {
+        var rtn = new List<Battler>();
+        foreach (var character in characterInOrder)
+        {
+            if (character.Item1.isEnemy)
+            {
+                rtn.Add(character.Item1);
+            }
+        }
+
+        return rtn;
+    }
+
     // プレイヤーキャラクターをランダムに獲得
     public Battler GetRandomPlayerCharacter(bool mustBeTargettable)
     {

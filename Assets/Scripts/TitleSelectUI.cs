@@ -394,8 +394,7 @@ public class TitleSelectUI : MonoBehaviour
         if (PlayerPrefsManager.GetLatestProgress() >= 15) possibleOutcome.Add(4); // エレナと京
         if (PlayerPrefsManager.GetLatestProgress() >= 15) possibleOutcome.Add(5); // エレナと那由多
 
-        System.Random r = new System.Random();
-        int index = r.Next(0, possibleOutcome.Count - 1);
+        int index = possibleOutcome[UnityEngine.Random.Range(0, possibleOutcome.Count)];
 
         leftCharaccter.sprite = leftCharacterSprite[index];
         rightCharacter.sprite = rightCharacterSprite[index];
