@@ -144,6 +144,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     public void StageProgress(int value = 1)
     {
         playerData.currentStage += value;
+        PlayerPrefsManager.UpdateCurrentProgress(playerData.currentStage);
     }
 
     /// <summary>

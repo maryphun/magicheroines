@@ -28,6 +28,7 @@ public static class PlayerPrefsManager
         TextSpeed,
         AutoSpeed,
         Language,
+        LastestProgress,
     }
 
     public static void LoadPlayerPrefs()
@@ -97,5 +98,15 @@ public static class PlayerPrefsManager
     public static void SetBool(string name, bool value)
     {
         PlayerPrefs.SetInt(name, BoolToInt(value));
+    }
+
+    // progress
+    public static void UpdateCurrentProgress(int progress)
+    {
+        PlayerPrefs.SetInt(PlayerPrefsSave.LastestProgress.ToString(), Mathf.Max(progress, GetLatestProgress()));
+    }
+    public static int GetLatestProgress()
+    {
+        return PlayerPrefs.GetInt(PlayerPrefsSave.LastestProgress.ToString(), 0);
     }
 }

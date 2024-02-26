@@ -5,6 +5,8 @@ using TMPro;
 using Assets.SimpleLocalization.Scripts;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class TitleSelectUI : MonoBehaviour
 {
@@ -45,6 +47,8 @@ public class TitleSelectUI : MonoBehaviour
     [SerializeField] private SaveLoadPanel saveloadPanel;
     [SerializeField] private CanvasGroup demoOnly;
     [SerializeField] private RectTransform blackbar_top, blackbar_btm;
+    [SerializeField] private Image leftCharaccter, rightCharacter;
+    [SerializeField] private List<Sprite> leftCharacterSprite, rightCharacterSprite;
 
     [Header("Debug")]
     [SerializeField] private TitleSelection currentSelection;
@@ -75,6 +79,8 @@ public class TitleSelectUI : MonoBehaviour
         UpdateSelectionText();
         // テーマソング再生
         AudioManager.Instance.PlayMusic("The Dark Eternal Night");
+        // キャラ変更
+        UpdateTitleCharacter();
     }
 
     private void UpdateSelectionText()
@@ -375,5 +381,23 @@ public class TitleSelectUI : MonoBehaviour
             demoOnly.interactable = false;
             demoOnly.blocksRaycasts = false;
         });
+    }
+
+    private void UpdateTitleCharacter()
+    {
+        List<int> possibleOutcome = new List<int>();
+
+        possibleOutcome.Add(0); // 立花と明穂
+        if (PlayerPrefsManager.GetLatestProgress() >= 10) possibleOutcome.Add(1); // 立花と明穂闇落ち
+        if (PlayerPrefsManager.GetLatestProgress() >= 5) possibleOutcome.Add(2); // エレナと京
+        if (PlayerPrefsManager.GetLatestProgress() >= 13) possibleOutcome.Add(3); // エレナと京闇落ち
+        if (PlayerPrefsManager.GetLatestProgress() >= 15) possibleOutcome.Add(4); // エレナと京
+        if (PlayerPrefsManager.GetLatestProgress() >= 15) possibleOutcome.Add(5); // エレナと那由多
+
+        System.Random r = new System.Random();
+        int index = r.Next(0, possibleOutcome.Count - 1);
+
+        leftCharaccter.sprite = leftCharacterSprite[index];
+        rightCharacter.sprite = rightCharacterSprite[index];
     }
 }

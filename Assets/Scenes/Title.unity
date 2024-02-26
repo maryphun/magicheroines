@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 468562748}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0
+  m_Size: 0.51
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2412,8 +2412,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 244816201}
-  - {fileID: 732052171}
   - {fileID: 1284634629}
+  - {fileID: 732052171}
   - {fileID: 727679222}
   - {fileID: 735745846}
   m_Father: {fileID: 1997077214}
@@ -3959,7 +3959,7 @@ GameObject:
   - component: {fileID: 732052173}
   - component: {fileID: 732052175}
   m_Layer: 5
-  m_Name: "\u660E\u7A42"
+  m_Name: Right Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4963,6 +4963,8 @@ MonoBehaviour:
   demoOnly: {fileID: 502766037}
   blackbar_top: {fileID: 727679222}
   blackbar_btm: {fileID: 735745846}
+  leftCharaccter: {fileID: 1284634631}
+  rightCharacter: {fileID: 732052173}
   currentSelection: 0
   animationPlaying: 0
   keyPrepressed: 0
@@ -5985,7 +5987,7 @@ GameObject:
   - component: {fileID: 1284634631}
   - component: {fileID: 1284634633}
   m_Layer: 5
-  m_Name: "\u7ACB\u82B1"
+  m_Name: Left Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
