@@ -1,0 +1,911 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
+  m_Name: ChapterFinal AfterBattle
+  m_EditorClassIdentifier: 
+  _locations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: 09af6c94e7d2d3f46b59aad0e763eedb, type: 3}
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
+  - {fileID: 3646998453675562630, guid: 528bfc3d5c504614792715299dcd2329, type: 3}
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: -223
+      y: -1
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "\u300C\u3046\u3042\u3063\u2026\u2026\u3048\u2026\u308C\u306A\u5148\u8F29\u2026\u2026\u2026\u2026\u2026\u300D"
+      localizationID: Dialog.Chapter6-65
+      back: {fileID: 21300000, guid: ab9c99bbe309f6f47bc6740dda00f783, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0100000000000000000000000100000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: eea72bc82bc3d984a830378da9e2b442, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 8300000, guid: 8ce71f6fd348b5b4e85b590d3a5a3e4a, type: 3}
+      BGMStyle: 1
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 6
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000000000000000000000100000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u6700\u671F\u306E\u4E00\u4EBA\u306E\u8056\u6838\u6226\u59EB\u304C\u5730\u9762\u306B\u5D29\u308C\u843D\u3061\u308B"
+      localizationID: Dialog.Chapter6-66
+      back: {fileID: 21300000, guid: ab9c99bbe309f6f47bc6740dda00f783, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000200000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3075\u3046\u2026\u2026\u3053\u308C\u3067\u5B66\u5712\u306B\u6B8B\u308B\u8056\u6838\u6226\u59EB\u306F\u5168\u3066\u5012\u3057\u307E\u3057\u305F\u306D\u300D"
+      localizationID: Dialog.Chapter6-67
+      back: {fileID: 21300000, guid: ab9c99bbe309f6f47bc6740dda00f783, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0100000000000000020000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u306E\u6642\u3001\u30A8\u30EC\u30CA\u306E\u7AEF\u672B\u306B\u9023\u7D61\u304C\u5165\u308B"
+      localizationID: Dialog.Chapter6-68
+      back: {fileID: 21300000, guid: ab9c99bbe309f6f47bc6740dda00f783, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 652d59187a4a4214385f995389100d5e, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000040000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: ab9c99bbe309f6f47bc6740dda00f783, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 1
+    _nextChoiceIndexes: 00000000
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 89
+      y: -1
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u2026\u306F\u3063\uFF01\u305F\u3060\u3044\u307E\u751F\u5F92\u4F1A\u3092\u5236\u5727\u3002\u8056\u6708\u5973\u5B66\u5712\u5236\u5727\u4F5C\u6226\u3092\u5B8C\u4E86\u3057\u307E\u3057\u305F\uFF01\u300D"
+      localizationID: Dialog.Chapter6-70
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000010000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 8a99acf0b7bc95647bc14ea7baf030b0, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u518D\u3073\u3001\u30A8\u30EC\u30CA\u306E\u5143\u306B\u901A\u4FE1\u304C\u5165\u308B"
+      localizationID: Dialog.Chapter6-71
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000010000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000040000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho_Corrupted
+      text: "\u300C\u3082\u3057\u3082\u3057\uFF5E\u3053\u3061\u3089\u660E\u7A42\uFF01\u305F\u3060\u3044\u307E\u90FD\u5E02\u4E2D\u5FC3\u90E8\u306E\u8056\u6838\u6226\u59EB\u3092\u5168\u54E1\u6355\u307E\u3048\u3066\u5236\u5727\u5B8C\u4E86\uFF01\u300D"
+      localizationID: Dialog.Chapter6-72
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000200000002000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 1}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000040000000100000001000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Akiho_Corrupted
+      text: "\u300C\u6D41\u77F3\u30AF\u30ED\u30FC\u30F3\u3061\u3083\u3093\u3060\u306D\u3001\u3042\u3063\u3068\u3044\u3046\u9593\u306B\u5012\u3057\u3061\u3083\u3063\u305F\uFF01\u300D"
+      localizationID: Dialog.Chapter6-73
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0200000000000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: b91411cfce8b09e4187fd022355df728, type: 3}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u3053\u3061\u3089\u4EAC\u3001\u76E3\u8996\u30AB\u30E1\u30E9\u306E\u60C5\u5831\u304B\u3089\u90FD\u5E02\u306E\u5168\u3066\u306E\u8056\u6838\u6226\u59EB\u306E\u6355\u7372\u6E08\u307F\u3092\u78BA\u8A8D\u3057\u305F\u3088\u300D"
+      localizationID: Dialog.Chapter6-74
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: b91411cfce8b09e4187fd022355df728, type: 3}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000001000000040000000400000004000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u3068\u308A\u3042\u3048\u305A\u3053\u3063\u3061\u306E\u4F5C\u6226\u306F\u5B8C\u4E86\u3060\u306D\u300D"
+      localizationID: Dialog.Chapter6-75
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: b91411cfce8b09e4187fd022355df728, type: 3}
+      - {fileID: 0}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta_Corrupted
+      text: "\u300C\u3053\u3061\u3089\u90A3\u7531\u591A\u2026\u62C5\u5F53\u5730\u57DF\u3067\u306E\u5168\u8056\u6838\u6226\u59EB\u306E\u62D8\u675F\u3001\u7121\u529B\u5316\u3092\u5B8C\u4E86\u3057\u307E\u3057\u305F\u300D"
+      localizationID: Dialog.Chapter6-76
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000002000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: b91411cfce8b09e4187fd022355df728, type: 3}
+      - {fileID: 21300000, guid: bf978b5a2e5295f4a855f14df972abbd, type: 3}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000000000000040000000400000004000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta_Corrupted
+      text: "\u300C\u3053\u308C\u3067\u6D77\u5916\u652F\u90E8\u306E\u8056\u6838\u6226\u59EB\u306F\u5168\u3066\u5236\u5727\u5B8C\u4E86\u3067\u3059\u3002\u53CE\u5BB9\u5F8C\u305D\u3061\u3089\u306B\u79FB\u9001\u3057\u307E\u3059\u300D"
+      localizationID: Dialog.Chapter6-77
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: b91411cfce8b09e4187fd022355df728, type: 3}
+      - {fileID: 21300000, guid: bf978b5a2e5295f4a855f14df972abbd, type: 3}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u2026\u2026\u3069\u3046\u3084\u3089\u5168\u3066\u306E\u8056\u6838\u6226\u59EB\u306E\u7121\u529B\u5316\u306B\u6210\u529F\u3057\u305F\u3088\u3046\u3067\u3059\u306D\u300D"
+      localizationID: Dialog.Chapter6-78
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: b91411cfce8b09e4187fd022355df728, type: 3}
+      - {fileID: 21300000, guid: bf978b5a2e5295f4a855f14df972abbd, type: 3}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000004000000010000000400000004000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3053\u306E\u6642\u3092\u6301\u3063\u3066\u8056\u6708\u751F\u5F92\u4F1A\u306E\u5B8C\u5168\u5236\u5727\u3001\u53CA\u3073\u5168\u8056\u6838\u6226\u59EB\u306E\u7121\u529B\u5316\u3092\u78BA\u8A8D\u3057\u305F\u3053\u3068\u3092\u5831\u544A\u3057\u307E\u3059\u300D"
+      localizationID: Dialog.Chapter6-79
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: b91411cfce8b09e4187fd022355df728, type: 3}
+      - {fileID: 21300000, guid: bf978b5a2e5295f4a855f14df972abbd, type: 3}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 374a14fdbd8b9ce4397f2e2cfea82cda, type: 3}
+      - {fileID: 21300000, guid: 2021d77f1b8c4524eae03545223173fc, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u6211\u3005\u306E\u52DD\u5229\u3067\u3059\uFF01\u300D"
+      localizationID: Dialog.Chapter6-80
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 4
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0200000002000000000000000200000002000000
+      charas:
+      - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+      - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      charaFadeColor:
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 1, g: 1, b: 1, a: 1}
+      - {r: 1, g: 1, b: 1, a: 1}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000001000000010000000100000001000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+      - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000000000000000000000000000
+      charaEffectStrength: 0000000000000000000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 1
+    _nextChoiceIndexes: 0100000002000000
+  _choiceList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: -57
+      y: -1
+      width: 120
+      height: 77
+    _nextParagraphIndex: 1
+    nodeName: 
+    text: "\u4F5C\u6226\u306E\u9032\u6357\u306F\u3069\u3046\u3060\uFF1F"
+    localizeID: Dialog.Chapter6-69
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 255
+      y: 23
+      width: 100
+      height: 100
+    _nextParagraphIndex: -1
+    nodeName: 
+    text: "\u2026\u2026\u305D\u3046\u304B\u3001\u3054\u82E6\u52B4"
+    localizeID: Dialog.Chapter6-81(1)
+  - _enabled: 1
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 254
+      y: 100
+      width: 121
+      height: 77
+    _nextParagraphIndex: -1
+    nodeName: 
+    text: "\u2026\u3053\u308C\u306B\u3066\u2026\u2026\u8056\u6838\u6226\u59EB\u58CA\u6EC5\u4F5C\u6226\u3092\u5B8C\u4E86\u3068\u3059\u308B\u2026\uFF01"
+    localizeID: Dialog.Chapter6-82(2)
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: 440, y: 279, z: 0}
+  havePreLocations: 0
+  newLocations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: 09af6c94e7d2d3f46b59aad0e763eedb, type: 3}
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
+  - {fileID: 3646998453675562630, guid: 528bfc3d5c504614792715299dcd2329, type: 3}

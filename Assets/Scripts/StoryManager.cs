@@ -69,6 +69,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("GoldAndroid 2");
                     BattleSetup.SetBattleBGM("AkihoBattle");
                     BattleSetup.SetReward(450, 50);
+                    BattleSetup.SetBattleBack(BattleBack.Basement);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -103,6 +104,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Erena_Enemy");
                     BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
                     BattleSetup.SetReward(1750, 300);
+                    BattleSetup.SetBattleBack(BattleBack.Council);
                     NovelSingletone.Instance.PlayNovel("Chapter3-3 Prebattle", true, GoToBattle);
                 }
                 break;
@@ -129,6 +131,7 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Kei_Enemy");
                     BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    BattleSetup.SetBattleBack(BattleBack.CentreTower);
                     NovelSingletone.Instance.PlayNovel("Chapter4-3 Prebattle", true, GoToBattle);
                 }
                 break;
@@ -162,8 +165,9 @@ public class StoryManager : MonoBehaviour
             case 16:
                 {
                     BattleSetup.AddEnemy("Nayuta_Enemy");
-                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
-                    NovelSingletone.Instance.PlayNovel("Chapter5-3 Prebattle", true, GoToBattle);
+                    BattleSetup.SetBattleBGM("finalbattle");
+                    BattleSetup.SetBattleBack(BattleBack.Council);
+                    NovelSingletone.Instance.PlayNovel("ChapterFinal Prebattle", true, GoToBattle);
                 }
                 break;
             default:
