@@ -2824,6 +2824,23 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
+    /// 京、アンドロイドを召喚するか、アンドロイドを強化
+    /// </summary>
+    public void KeiSpawnAndroid()
+    {
+        var self = battleManager.GetCurrentBattler();
+        KeiAndroidManagement androidManagement = self.GetComponent<KeiAndroidManagement>();
+
+        // 必須のコンポネントが無ければ作る
+        if (androidManagement == null)
+        {
+            androidManagement = self.gameObject.AddComponent<KeiAndroidManagement>();
+        }
+
+
+    }
+
+    /// <summary>
     /// 京　普通攻撃ｘ２
     /// </summary>
     public void KeiDoubleAttack(bool isLeftWeapon, Battler lastTarget)
@@ -3093,7 +3110,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             .AppendInterval(0.5f)
             .AppendCallback(() =>
             {
-                var obj = VFXSpawner.SpawnVFX("Recovery", nayuta.transform, nayuta.GetGraphicRectTransform().position + new Vector3(0.0f, nayuta.GetCharacterSize().y * 0.5f));
+                obj = VFXSpawner.SpawnVFX("Recovery", nayuta.transform, nayuta.GetGraphicRectTransform().position + new Vector3(0.0f, nayuta.GetCharacterSize().y * 0.5f));
                 obj.transform.SetParent(nayuta.transform.parent, true);
                 nayuta.SetTransparent(0.0f, 1.0f);
 
@@ -3140,7 +3157,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 nayuta.RectTransform.DOMove(originalPos, chargeTime * 0.5f).SetEase(Ease.Linear);
 
                 // text
-                var floatingText = AbilityExecute.CreateFloatingText(target.transform);
+                floatingText = AbilityExecute.CreateFloatingText(target.transform);
                 floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), target.GetMiddleGlobalPosition() + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
 
                 // ログ ({0}　に　{1}　のダメージを与えた！)

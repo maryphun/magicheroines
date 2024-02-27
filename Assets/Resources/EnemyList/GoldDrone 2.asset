@@ -10,34 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfa65797a759a6b45bc6f990676fa51d, type: 3}
-  m_Name: GoldAndroid 2
+  m_Name: GoldDrone 2
   m_EditorClassIdentifier: 
-  enemyName: Name.GoldAndroid
-  maxHP: 80
-  maxMP: 20
-  attack: 40
-  defense: 20
-  speed: 6
-  level: 8
-  character_color: {r: 0.98472905, g: 1, b: 0.7688679, a: 1}
+  enemyName: Name.GoldDrone
+  maxHP: 100
+  maxMP: 10
+  attack: 38
+  defense: 9
+  speed: 10
+  level: 13
+  character_color: {r: 1, g: 1, b: 1, a: 1}
   actionPattern:
   - actionType: 0
     ability: {fileID: 0}
-    chance: 0.4
+    chance: 1
+    hasThresholdCondition: 1
+    HpThreshold: 0
+    SpThreshold: 0.1
+  - actionType: 1
+    ability: {fileID: 11400000, guid: 5b316d6acc9dada449fc846eb74d6e9b, type: 2}
+    chance: 0.56
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0
-  - actionType: 1
-    ability: {fileID: 11400000, guid: a0dc5c96db9815c4995075ade38b6e1f, type: 2}
-    chance: 1
-    hasThresholdCondition: 1
-    HpThreshold: 0.5
-    SpThreshold: 0
-  - actionType: 1
-    ability: {fileID: 11400000, guid: 5b316d6acc9dada449fc846eb74d6e9b, type: 2}
-    chance: 1
-    hasThresholdCondition: 0
-    HpThreshold: 0.5
-    SpThreshold: 0
-  icon: {fileID: -722245859, guid: b46b2f83a9690dd47b3ee7d800bfa80c, type: 3}
-  battler: {fileID: 7736156368887138199, guid: e891797987f8437458cc4241c6e0752b, type: 3}
+  icon: {fileID: 439198399, guid: b46b2f83a9690dd47b3ee7d800bfa80c, type: 3}
+  battler: {fileID: 7739895556670267509, guid: 83262b0fa8ac43c44a470c83259dc074, type: 3}

@@ -68,6 +68,12 @@ public class TurnBase : MonoBehaviour
         IconArrangeInstant();
     }
 
+    // バトル途中から新規敵キャラを追加
+    public void AddEnemy(Battler newEnemy)
+    {
+
+    }
+
     /// <summary>
     /// 最初から更新
     /// </summary>

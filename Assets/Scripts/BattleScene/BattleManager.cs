@@ -160,6 +160,13 @@ public class Battle : MonoBehaviour
         enemyFormation.GetComponent<CanvasGroup>().alpha = 0.0f;
     }
 
+    // バトル途中から新規敵キャラを追加
+    public void AddEnemy(Battler newEnemy)
+    {
+        enemyList.Add(newEnemy);
+        turnBaseManager.AddEnemy(newEnemy);
+    }
+
     /// <summary>
     /// 次のターン
     /// </summary>
