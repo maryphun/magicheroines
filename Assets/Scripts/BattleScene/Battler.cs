@@ -483,8 +483,8 @@ public class Battler : MonoBehaviour
                     var obj = Instantiate(deadVFX, graphic.transform);
                     obj.GetComponent<RectTransform>().position = GetMiddleGlobalPosition();
 
-                            // create icon
-                            Image img = new GameObject("DeadIcon").AddComponent<Image>();
+                    // create icon
+                    Image img = new GameObject("DeadIcon").AddComponent<Image>();
                     img.sprite = Resources.Load<Sprite>("Icon/Dead");
                     img.raycastTarget = false;
                     img.rectTransform.SetParent(graphicRect);
@@ -492,8 +492,8 @@ public class Battler : MonoBehaviour
                     img.color = new Color(0.58f, 0.58f, 0.58f, 0.0f);
                     img.DOFade(1.0f, 0.75f);
 
-                            // play SE
-                            AudioManager.Instance.PlaySFX("Retired");
+                    // play SE
+                    AudioManager.Instance.PlaySFX("Retired");
                     AudioManager.Instance.PlaySFX(GetSoundEffects(BattlerSoundEffectType.Retire));
                     AudioManager.Instance.PlaySFX(GetCharacterVoiceName(BattlerSoundEffectType.Retire));
                 });

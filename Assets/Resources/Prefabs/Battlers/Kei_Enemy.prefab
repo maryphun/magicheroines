@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 5935660325007964706}
   - component: {fileID: 8869202411606451813}
   - component: {fileID: 8142845507242615465}
+  - component: {fileID: 5594429758707399979}
   m_Layer: 5
   m_Name: Kei_Enemy
   m_TagString: Untagged
@@ -626,6 +627,25 @@ MonoBehaviour:
   leftWeaponLocalPosition: {x: 0, y: 0}
   rightWeaponLocalPosition: {x: 0, y: 0}
   controlledUnit: {fileID: 0}
+--- !u!114 &5594429758707399979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784901170540971542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 553bdb6151c1b954c9fb1cca6d62f13f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kei: {fileID: 0}
+  spawnedAndroid:
+  - {fileID: 0}
+  - {fileID: 0}
+  battleManager: {fileID: 0}
+  possibleSpawn: []
+  spawnedAndroidCnt: 0
 --- !u!1 &7356119342888050826
 GameObject:
   m_ObjectHideFlags: 0

@@ -161,10 +161,10 @@ public class Battle : MonoBehaviour
     }
 
     // ƒoƒgƒ‹“r’†‚©‚çV‹K“GƒLƒƒƒ‰‚ğ’Ç‰Á
-    public void AddEnemy(Battler newEnemy)
+    public void AddEnemy(Battler newEnemy, EnemyDefine data)
     {
         enemyList.Add(newEnemy);
-        turnBaseManager.AddEnemy(newEnemy);
+        turnBaseManager.AddEnemy(newEnemy, data);
     }
 
     /// <summary>

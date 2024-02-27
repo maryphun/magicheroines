@@ -2824,23 +2824,6 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// 京、アンドロイドを召喚するか、アンドロイドを強化
-    /// </summary>
-    public void KeiSpawnAndroid()
-    {
-        var self = battleManager.GetCurrentBattler();
-        KeiAndroidManagement androidManagement = self.GetComponent<KeiAndroidManagement>();
-
-        // 必須のコンポネントが無ければ作る
-        if (androidManagement == null)
-        {
-            androidManagement = self.gameObject.AddComponent<KeiAndroidManagement>();
-        }
-
-
-    }
-
-    /// <summary>
     /// 京　普通攻撃ｘ２
     /// </summary>
     public void KeiDoubleAttack(bool isLeftWeapon, Battler lastTarget)
@@ -2970,6 +2953,125 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     puppet.SetTransparent(1.0f, ReturnTime * 0.5f);
                 }
                 self.PlayAnimation(BattlerAnimationType.idle);
+                battleManager.NextTurn(false);
+            });
+    }
+
+    /// <summary>
+    /// 京、アンドロイドを召喚するか、アンドロイドを強化
+    /// </summary>
+    public void KeiDroneSupport()
+    {
+        var self = battleManager.GetCurrentBattler();
+        KeiAndroidManagement androidManagement = self.GetComponent<KeiAndroidManagement>();
+
+        // 必須のコンポネントが無ければ作る
+        if (androidManagement == null)
+        {
+            androidManagement = self.gameObject.AddComponent<KeiAndroidManagement>();
+        }
+
+        FloatingText floatingText;
+        string abilityName;
+
+        // 上限数にたした
+        if (androidManagement.GetCurrentSummonCount() >= 2)
+        {
+            // 自爆攻撃を行う
+            var target = targetBattlers[0];
+            var puppet = androidManagement.GetRandomSummon();
+
+            // 技名を表示
+            floatingText = CreateFloatingAbilityText(self.transform);
+            abilityName = LocalizationManager.Localize("Ability.SuicideAttack");
+            floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+            const float chargeTime = 0.5f;
+
+            // 残像生成コンポネント
+            FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
+            fadeEffect.Initialize(chargeTime, 0.05f, self.Graphic);
+
+            // play SE
+            AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+            AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
+            var targetPos = target.GetComponent<RectTransform>().position;
+            targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.15f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.15f, targetPos.y);
+
+            puppet.RectTransform.DOMove(targetPos, chargeTime).SetEase(Ease.InOutQuint);
+            self.PlayAnimation(BattlerAnimationType.magic);
+            puppet.ColorTint(Color.red, chargeTime);
+
+            DOTween.Sequence()
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                // change character hirachy temporary
+                puppet.transform.SetParent(target.transform);
+            })
+            .AppendInterval(chargeTime * 0.5f)
+            .AppendCallback(() =>
+            {
+                self.PlayAnimation(BattlerAnimationType.idle);
+
+                // play SE
+                AudioManager.Instance.PlaySFX("Explode");
+
+                // VFX
+                var VFXPosition = puppet.GetMiddleGlobalPosition() + ((puppet.GetMiddleGlobalPosition() - target.GetMiddleGlobalPosition()) / 2);
+                VFXSpawner.SpawnVFX("Suicide", target.transform, VFXPosition);
+
+                var realDamage = Battle.CalculateDamage(puppet.current_hp, target.defense, self.currentLevel, target.currentLevel, false);
+                target.DeductHP(puppet, realDamage);
+
+                // text
+                floatingText = CreateFloatingText(target.transform);
+                floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - puppet.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
+
+                // ログ ({0}　が自爆する！{1} のダメージを与えた！)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Suicide"), puppet.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
+
+                // 即死
+                puppet.DeductHP(puppet, 99999, true);
+            })
+            .AppendInterval(1.2f)
+            .AppendCallback(() =>
+            {
+                battleManager.NextTurn(false);
+            });
+            return;
+        }
+
+        // 技名を表示
+        floatingText = CreateFloatingAbilityText(self.transform);
+        abilityName = LocalizationManager.Localize("Ability.DroneSupport");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // play SE
+        AudioManager.Instance.PlaySFX("SystemTrainPanel");
+        self.PlayAnimation(BattlerAnimationType.magic);
+
+        DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                AudioManager.Instance.PlaySFX("Unequip", 0.5f);
+                var droid = androidManagement.SpawnNewAndroid();
+                droid.ColorTint(CustomColor.invisible(), 0.5f);
+                var originalLocalPos = droid.RectTransform.localPosition;
+                droid.RectTransform.localPosition = new Vector3(droid.RectTransform.localPosition.x + 500.0f, droid.RectTransform.localPosition.y + 300.0f, droid.RectTransform.localPosition.z);
+                droid.RectTransform.DOLocalMove(originalLocalPos, 0.25f).SetEase(Ease.Linear);
+            })
+            .AppendInterval(0.25f)
+            .AppendCallback(() =>
+            {
+                self.PlayAnimation(BattlerAnimationType.idle);
+                AudioManager.Instance.PlaySFX("Machine", 1f);
+            })
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
                 battleManager.NextTurn(false);
             });
     }

@@ -13,16 +13,22 @@ MonoBehaviour:
   m_Name: Kei_Enemy
   m_EditorClassIdentifier: 
   enemyName: Name.Kei
-  maxHP: 140
-  maxMP: 100
-  attack: 15
-  defense: 3
-  speed: 9
+  maxHP: 400
+  maxMP: 120
+  attack: 1
+  defense: 13
+  speed: 17
   level: 24
   character_color: {r: 0.25, g: 0.8236648, b: 1, a: 1}
   actionPattern:
   - actionType: 0
     ability: {fileID: 11400000, guid: e35916a94f0c98d4badfc8964a9a72fd, type: 2}
+    chance: 1
+    hasThresholdCondition: 0
+    HpThreshold: 0
+    SpThreshold: 0
+  - actionType: 1
+    ability: {fileID: 11400000, guid: a2d1e5e7b82dafe4bae26ec8d559cf2d, type: 2}
     chance: 1
     hasThresholdCondition: 0
     HpThreshold: 0

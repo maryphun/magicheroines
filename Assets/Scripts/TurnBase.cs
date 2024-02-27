@@ -69,9 +69,15 @@ public class TurnBase : MonoBehaviour
     }
 
     // ƒoƒgƒ‹“r’†‚©‚çV‹K“GƒLƒƒƒ‰‚ğ’Ç‰Á
-    public void AddEnemy(Battler newEnemy)
+    public void AddEnemy(Battler newEnemy, EnemyDefine data)
     {
+        iconList.Add(Instantiate(originIcon, transform));
+        iconList[iconList.Count - 1].color = Color.white;
+        iconList[iconList.Count - 1].sprite = data.icon;
+        iconList[iconList.Count - 1].GetComponent<TurnBaseInformation>().Initialize(data.character_color, newEnemy.character_name, newEnemy);
 
+        characterInOrder.Add(new Tuple<Battler, Image>(newEnemy, iconList[iconList.Count - 1]));
+        IconArrangeInstant();
     }
 
     /// <summary>
