@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Nayuta_Enemy
   m_EditorClassIdentifier: 
   enemyName: Name.Nayuta
-  maxHP: 350
-  maxMP: 120
-  attack: 65
-  defense: 12
-  speed: 8
+  maxHP: 150
+  maxMP: 0
+  attack: 150
+  defense: 0
+  speed: 5
   level: 26
   character_color: {r: 0.86755973, g: 0.5529412, b: 1, a: 1}
   actionPattern:
-  - actionType: 0
-    ability: {fileID: 11400000, guid: 1ad7279ba0261ca4ba09e47e009aab49, type: 2}
-    chance: 0.7
+  - actionType: 1
+    ability: {fileID: 11400000, guid: ea2276bd2eb645c44b86189e153a3a1d, type: 2}
+    chance: 1
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0

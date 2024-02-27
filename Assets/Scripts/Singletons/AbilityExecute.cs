@@ -3273,5 +3273,46 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 battleManager.NextTurn(false);
             });
     }
+
+    /// <summary>
+    /// 那由多　(敵)攻撃
+    /// </summary>
+    public void NayutaAttack()
+    {
+        var nayuta = battleManager.GetCurrentBattler();
+        NayutaEnemyScript nayutaScript = nayuta.GetComponent<NayutaEnemyScript>();
+
+        // 必須のコンポネントが無ければ作る
+        if (nayutaScript == null)
+        {
+            nayutaScript = nayuta.gameObject.AddComponent<NayutaEnemyScript>();
+        }
+
+        if (nayutaScript.target == null || !nayutaScript.target.isAlive)
+        {
+            // find new target
+            nayutaScript.target = targetBattlers[0];
+
+            // VFX
+            VFXSpawner.SpawnVFX("LockOn", nayutaScript.target.transform, nayutaScript.target.GetGraphicRectTransform().position);
+
+            // SE
+            AudioManager.Instance.PlaySFX("Equip");
+
+            DOTween.Sequence()
+            .AppendInterval(0.5f)
+            .AppendCallback(() =>
+            {
+                // ログ ({0} が次の標的とされている。)
+                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.NayutaLockOn"), nayutaScript.target.CharacterNameColored));
+                battleManager.NextTurn(false);
+            });
+        }
+        else
+        {
+            // attack
+
+        }
+    }
     #endregion abilities
 }

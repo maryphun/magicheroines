@@ -159,6 +159,7 @@ public class StoryManager : MonoBehaviour
                 {
                     BattleSetup.AddEnemy("Nayuta_Enemy");
                     BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    BattleSetup.SetBattleBack(BattleBack.CentreTower);
                     NovelSingletone.Instance.PlayNovel("Chapter5-3 Prebattle", true, GoToBattle);
                 }
                 break;

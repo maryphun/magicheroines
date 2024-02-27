@@ -545,7 +545,8 @@ BattleLog.Reprogram,{0}　の攻撃力が{1}点増加。防御力{2}点増加。
 BattleLog.PowerMode,雷神之相の代償！{0}が{1}ダメージを受けた。,The price of the thunder god no phase! {0} took {1} damage.,雷神之相の代償！{0}が{1}ダメージを受けた。,雷神之相の代償！{0}が{1}ダメージを受けた。
 BattleLog.ChargeAttack,攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック),Charge Attack - {0} Damage Stacks ({1} Stacks),攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック),攻撃をチャージする ーー {0}ダメージをたくわえた ({1}スタック)
 BattleLog.NayutaEquip,[{0}] {1}　の攻撃力が {2} 上がった！,[{0}] {1}'s attack power was increased by {2}!,[{0}] {1}　の攻撃力が {2} 上がった！,[{0}] {1}　の攻撃力が {2} 上がった！
-BattleLog.KeiSpawn,{0} が {1} に呼び出された,{0} is summoned by {1},{1}把{0}給召喚過來了 ,{1}把{0}給召喚過來了 
+BattleLog.KeiSpawn,{0} が {1} に呼び出された。,{0} is summoned by {1}.,{1}把{0}給召喚過來了。,{1}把{0}給召喚過來了。
+BattleLog.NayutaLockOn,{0} が次の標的とされている。,{0} is the next target.,{0} 被鎖定爲目標了。,{0} 被鎖定爲目標了。
 Demo,体験版,Trial,体験版,体験版
 Demo.Start,"本ソフトウェアは体験版になります。
 一部機能が制限されており、キャラクターボイスがまだ全部実装されておりません。

@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 7234209627356902608}
   - component: {fileID: 5235309725233065212}
   - component: {fileID: 544500000650176807}
+  - component: {fileID: 5660183645953350567}
   m_Layer: 5
   m_Name: Nayuta_Enemy
   m_TagString: Untagged
@@ -434,12 +435,17 @@ MonoBehaviour:
     attack: {fileID: 8300000, guid: 395062c60dc538244a25c730b0049caf, type: 3}
     attacked: {fileID: 0}
     retire: {fileID: 0}
+  characterVoices:
+    attack: {fileID: 0}
+    attacked: {fileID: 0}
+    retire: {fileID: 0}
   attackVFX: {fileID: 1343633729508638609, guid: bb1e9db21d29bb5418d04a379950481f, type: 3}
-  breathScale: 0.005
+  breathScale: 0.002
   enableNormalAttack: 1
   isFemale: 1
   isMachine: 0
   attackCallback: 
+  isAoENormalAttack: 0
   character_name: 
   characterID: 0
   icon: {fileID: 0}
@@ -506,6 +512,18 @@ Canvas:
   m_SortingLayerID: 300505305
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &5660183645953350567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739895556670267509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a92a63e3d29b6642817af3cf6ce44ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8359243718822058473
 GameObject:
   m_ObjectHideFlags: 0
