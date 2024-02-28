@@ -1,0 +1,1645 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
+  m_Name: Nursery
+  m_EditorClassIdentifier: 
+  _locations: []
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    _nextParagraphIndex: 1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u8A18\u9332\uFF1A\u8056\u6838\u6226\u59EB\u80B2\u82D7\u7814\u7A76\u65BD\u8A2D\u306B\u3066"
+      localizationID: Record.Nursery-1
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u8CA1\u56E3\u3068\u306E\u6226\u3044\u306B\u6557\u5317\u3057\u305F\u8056\u6838\u6226\u59EB\u9054\u306F\u69D8\u3005\u306A\u7528\u9014\u306B\u5229\u7528\u3055\u308C\u3001\u5F37\u3044\u529B\u3092\u6301\u3063\u305F\u8005\u306F\u3088\u308A\u5F37\u3044\u602A\u4EBA\u3092\u7523\u3080\u82D7\u5E8A\u3068\u306A\u3063\u305F"
+      localizationID: Record.Nursery-2
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 2
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30BA\u30EB\u30EB\u30C3\uFF01\u3001\u30BA\u30EB\u30C3\u3001\u30B0\u30DD\u30C3"
+      localizationID: Record.Nursery-3
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "\u300C\u3093\u309B\u3093\u3063\uFF01\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u3063\uFF01\uFF01\uFF01\uFF01\u300D"
+      localizationID: Record.Nursery-4
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u90E8\u5C4B\u306B\u306F\u82D7\u5E8A\u3068\u306A\u3063\u305F\u8056\u6838\u6226\u59EB\u9054\u306E\u5FEB\u697D\u306B\u3088\u308B\u82E6\u60B6\u306E\u58F0\u304C\u5C0F\u3055\u304F\u97FF\u304D\u6E21\u308B"
+      localizationID: Record.Nursery-5
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u82D7\u5E8AS11\u304B\u3089S23\u307E\u3067\u306E\u72B6\u614B\u3092\u78BA\u8A8D\u3001\u5065\u5EB7\u72B6\u614B\u306B\u5927\u304D\u306A\u5909\u5316\u306F\u3042\u308A\u307E\u305B\u3093\u300D"
+      localizationID: Record.Nursery-6
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u672C\u65E5\u598A\u5A20\u3057\u305F\u89E6\u624B\u306E\u6570\u306F\u5E73\u574713\u3002\u305D\u306E\u3046\u3061\u4ECA\u65E5\u306F\u5E73\u57477\u5339\u3092\u51FA\u7523\u6E08\u307F\u3067\u3059\u300D"
+      localizationID: Record.Nursery-7
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u3053\u306E\u307E\u307E\u306A\u3089\u3053\u3053\u306E\u82D7\u5E8A\u7FA4\u30822\u9031\u9593\u5F8C\u306B\u306F\u30AF\u30E9\u30B93\u602A\u4EBA\u306E\u751F\u7523\u306B\u79FB\u884C\u3067\u304D\u308B\u3067\u3057\u3087\u3046\u300D"
+      localizationID: Record.Nursery-8
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Clone
+      text: "\u300C\u5831\u544A\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u300D"
+      localizationID: Record.Nursery-9
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u2026\u2026\u2026\u2026\u3057\u304B\u3057\u300D"
+      localizationID: Record.Nursery-10
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Clone
+      text: "\u300C\uFF1F\u3069\u3046\u3057\u307E\u3057\u305F\u304B\uFF1F\u300D"
+      localizationID: Record.Nursery-11
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u3044\u3048\u3001\u304B\u3064\u3066\u306F\u7686\u540D\u306E\u3042\u308B\u8056\u6838\u6226\u59EB\u3067\u3001\u79C1\u9054\u30AF\u30ED\u30FC\u30F3\u4F55\u4F53\u3067\u6226\u3063\u3066\u3082\u52DD\u3061\u76EE\u306F\u3042\u308A\u307E\u305B\u3093\u3067\u3057\u305F\u300D"
+      localizationID: Record.Nursery-12
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u2026\u2026\u2026\u2026\u2026\u305D\u308C\u304C\u4ECA\u3084\u3053\u306E\u6709\u69D8\u3067\u3059\u300D"
+      localizationID: Record.Nursery-13
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Clone
+      text: "\u300C\u2026\u2026\u3048\u3048\u3001\u3053\u3046\u306A\u3063\u3066\u3057\u307E\u3048\u3070\u8056\u6838\u6226\u59EB\u3082\u305F\u3060\u306E\u8089\u888B\u3067\u3059\u306D\u300D"
+      localizationID: Record.Nursery-14
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30BA\u30EB\u30C3\u3001\u30BA\u30EB\u30EB\u30C3\uFF01"
+      localizationID: Record.Nursery-15
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u7A81\u7136\u3001\u90E8\u5C4B\u5168\u4F53\u306E\u89E6\u624B\u3068\u8089\u584A\u304C\u53CE\u7E2E\u3068\u5F1B\u7DE9\u3092\u7E70\u308A\u8FD4\u3057\u59CB\u3081\u308B"
+      localizationID: Record.Nursery-16
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "\u300C\u300C\u300C\u3093\u309B\u3093\uFF5E\uFF5E\uFF5E\u3063\uFF01\uFF01\u300D\u300D\u300D"
+      localizationID: Record.Nursery-17
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u304A\u3084\u3001\u82D7\u5E8A\u306E\u51FA\u7523\u304C\u59CB\u307E\u308A\u307E\u3057\u305F\u306D\u300D"
+      localizationID: Record.Nursery-18
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u8056\u6838\u6226\u59EB\u9054\u306F\u4F53\u4E2D\u3092\u8089\u584A\u306B\u3088\u3063\u3066\u62BC\u3055\u308C\u3001\u51FA\u7523\u3092\u4FC3\u3055\u308C\u308B"
+      localizationID: Record.Nursery-19
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D3\u30AF\u30F3\u30C3\u3001\u30D3\u30AF\u30F3\u30C3\uFF01"
+      localizationID: Record.Nursery-20
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "\u300C\u300C\u300C\u3093\u309B\u3093\u3093\uFF5E\uFF5E\u3063\u2665\u2665\u2665\uFF01\uFF01\uFF01\u300D\u300D\u300D"
+      localizationID: Record.Nursery-21
+      back: {fileID: 21300000, guid: ae8a5797583347e40be53539860df35d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30D0\u30C3\uFF01\u30D6\u30EB\u30EB\u30EB\u30C3\uFF01\u30D3\u30B7\u30E3\u30C3\u2665\uFF01"
+      localizationID: Record.Nursery-22
+      back: {fileID: 21300000, guid: ba95484def31b72428b8cc6e64a3d5ef, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 0.3726415, b: 0.3726415, a: 1}
+      backFadeSpeed: 0.4
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "\u300C\u300C\u300C\u3093\u309B\u3093\u3093\u3063\u3063\u3063\uFF5E\uFF5E\u3063\u2665\u2665\uFF01\uFF01\u300D\u300D\u300D"
+      localizationID: Record.Nursery-23
+      back: {fileID: 21300000, guid: ba95484def31b72428b8cc6e64a3d5ef, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u81F3\u308B\u6240\u306E\u8056\u6838\u6226\u59EB\u9054\u306E\u80CE\u5185\u304B\u3089\u5927\u5C0F\u3055\u307E\u3056\u307E\u306A\u89E6\u624B\u304C\u98DB\u3073\u51FA\u3059"
+      localizationID: Record.Nursery-24
+      back: {fileID: 21300000, guid: ba95484def31b72428b8cc6e64a3d5ef, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B0\u30C1\u30E5\u30C3\uFF01\u30C9\u30D0\u30C3\uFF01\u30D3\u30AF\u30F3\u30C3\uFF01"
+      localizationID: Record.Nursery-25
+      back: {fileID: 21300000, guid: ba95484def31b72428b8cc6e64a3d5ef, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: ba95484def31b72428b8cc6e64a3d5ef, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 183
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u89E6\u624B\u306E\u51FA\u7523\u3092\u78BA\u8A8D\u3002\u4ECA\u56DE\u306F\u306A\u304B\u306A\u304B\u5927\u304D\u306A\u30B5\u30A4\u30BA\u304C\u751F\u307E\u308C\u3066\u3044\u307E\u3059\u306D\u300D"
+      localizationID: Record.Nursery-26
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "\u300C\u300C\u300C\u3093\u309B\u3093\u3093\uFF5E\uFF5E\u3063\u2665\u2665\u2665\uFF01\uFF01\uFF01\u300D\u300D\u300D"
+      localizationID: Record.Nursery-27
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D7\u30B7\u30E3\u30C3\u3001\u30D7\u30B7\u30E3\u30C3\u3001\u30D7\u30B7\u30E3\u30C3\uFF01"
+      localizationID: Record.Nursery-28
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u3075\u3046\u3001\u3042\u3089\u304B\u305F\u51FA\u7523\u306F\u843D\u3061\u7740\u304D\u307E\u3057\u305F\u304B\u306D\u300D"
+      localizationID: Record.Nursery-29
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u2026\u2026\u3068\u3053\u308D\u3067\u3053\u306E\u82D7\u5E8A\u9054\u306F\u4ECA\u5F8C\u3069\u3046\u306A\u308B\u306E\u3067\u3057\u3087\u3046\u304B\uFF1F\u300D"
+      localizationID: Record.Nursery-30
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Clone
+      text: "\u300C\u3042\u3042\u3001\u6700\u7D42\u7684\u306B\u306F\u8056\u6838\u304C\u89E6\u624B\u306B\u5B8C\u5168\u306B\u540C\u5316\u3057\u3066\u751F\u6B96\u5668\u5B98\u3001\u3053\u306E\u82D7\u5E8A\u306E\u4E00\u90E8\u3068\u306A\u308A\u307E\u3059\u300D"
+      localizationID: Record.Nursery-31
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u306A\u308B\u307B\u3069\u2026\u3057\u304B\u3057\u3053\u3053\u307E\u3067\u304F\u308B\u3068\u5C11\u3057\u53EF\u54C0\u305D\u3046\u3067\u3059\u306D\u300D"
+      localizationID: Record.Nursery-32
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Clone
+      text: "\u300C\u3044\u3048\u3001\u5B9F\u969B\u306F\u82D7\u5E8A\u9054\u306E\u30C9\u30FC\u30D1\u30DF\u30F3\u3001\u30AA\u30AD\u30B7\u30C8\u30B7\u30F3\u7684\u5E78\u798F\u5EA6\u306F\u975E\u5E38\u306B\u9AD8\u3044\u3067\u3059\u300D"
+      localizationID: Record.Nursery-33
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Clone
+      text: "\u300C\u751F\u6B96\u5668\u5B98\u3068\u306A\u308B\u6642\u307E\u3067\u5FEB\u697D\u306E\u6642\u9593\u3092\u904E\u3054\u305B\u308B\u306E\u3067\u3059\u3002\u5F7C\u5973\u9054\u3082\u5E78\u305B\u3067\u3057\u3087\u3046\u300D"
+      localizationID: Record.Nursery-34
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.CloneBattler
+      text: "\u300C\u306A\u308B\u307B\u3069\u3001\u5B89\u5FC3\u3057\u307E\u3057\u305F\u3002\u3067\u306F\u672C\u65E5\u306E\u89B3\u5BDF\u306F\u3053\u308C\u3067\u7D42\u4E86\u3068\u3044\u3046\u3053\u3068\u3067\u2026\u2026\u300D"
+      localizationID: Record.Nursery-35
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u82D7\u5E8A\u90E8\u5C4B\u304B\u3089\u4E8C\u4EBA\u306E\u30AF\u30ED\u30FC\u30F3\u6226\u95D8\u54E1\u304C\u51FA\u3066\u884C\u304D\u3001\u90E8\u5C4B\u306F\u6697\u95C7\u306B\u5305\u307E\u308C\u308B"
+      localizationID: Record.Nursery-36
+      back: {fileID: 21300000, guid: a5282bb624bb9f44b9fb97f71d5756d9, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 21e842699b920b146bee2335a025fb9c, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "\u300C\u300C\u300C\u3093\u309B\u3093\u3093\uFF5E\uFF5E\u3063\u2665\u2665\u2665\uFF01\uFF01\uFF01\u300D\u300D\u300D"
+      localizationID: Record.Nursery-37
+      back: {fileID: 21300000, guid: a5282bb624bb9f44b9fb97f71d5756d9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u51FA\u7523\u304C\u7D42\u308F\u3063\u305F\u8056\u6838\u6226\u59EB\u9054\u306F\u3059\u3050\u306B\u7CBE\u89E6\u624B\u306B\u3088\u3063\u3066\u7A2E\u4ED8\u3051\u304C\u884C\u308F\u308C\u308B"
+      localizationID: Record.Nursery-38
+      back: {fileID: 21300000, guid: a5282bb624bb9f44b9fb97f71d5756d9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30BA\u30EB\u30EB\u30C3\u3001\u30BA\u30C1\u30E5\u3001\u30BA\u30EB\u30EB\u30C3"
+      localizationID: Record.Nursery-39
+      back: {fileID: 21300000, guid: a5282bb624bb9f44b9fb97f71d5756d9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u8056\u6838\u6226\u59EB\u9054\u306F\u6697\u95C7\u306E\u4E2D\u51FA\u7523\u3092\u7E70\u308A\u8FD4\u3057\u3001\u5168\u8EAB\u304C\u540C\u5316\u3057\u3066\u5B8C\u5168\u306A\u82D7\u5E8A\u306B\u306A\u308B\u307E\u3067\u5FEB\u697D\u306E\u4E2D\u306B\u56DA\u308F\u308C\u308B\u306E\u3060\u3063\u305F"
+      localizationID: Record.Nursery-40
+      back: {fileID: 21300000, guid: a5282bb624bb9f44b9fb97f71d5756d9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: a5282bb624bb9f44b9fb97f71d5756d9, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  _choiceList: []
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: -35, y: 268, z: 0}
+  havePreLocations: 0
+  newLocations: []
