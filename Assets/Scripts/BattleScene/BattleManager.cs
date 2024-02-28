@@ -526,6 +526,11 @@ public class Battle : MonoBehaviour
                 });
     }
 
+    public void Attack(Battler attacker, Battler target)
+    {
+        StartCoroutine(AttackAnimation(attacker, target, NextTurn));
+    }
+
     /// <summary>
     /// 攻撃用シーケンス
     /// </summary>
@@ -672,7 +677,10 @@ public class Battle : MonoBehaviour
         // randomize damage
         int multiplier = randomizeDamage ? UnityEngine.Random.Range(0, 7) : 0;
         // calculate damage ([a.ATK \ *0.5F] - [b.DEF * 0.25F]) * Clamp.(a.LVL / b.LVL, 0.5F, 1.5F)
-        return Mathf.RoundToInt(((float)damage * 0.5f) - ((float)defense * 0.25f) * Mathf.Clamp((float)attackerLevel / (float)defenderLevel, 0.5f, 1.5f)) + multiplier;
+        int value = Mathf.RoundToInt(((float)damage * 0.5f) - ((float)defense * 0.25f) * Mathf.Clamp((float)attackerLevel / (float)defenderLevel, 0.5f, 1.5f)) + multiplier;
+
+        // 1~999
+        return Mathf.Clamp(value, 1, 999);
     }
 
     /// <summary>

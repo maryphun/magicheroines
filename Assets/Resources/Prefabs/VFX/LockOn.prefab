@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db9446edd518dd94dbd325de88e83c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOut: 1
+  fadeOut: 0
   fadeIn: 0
   delaySeconds: 0
   extraFrameBeforeDestruction: 0

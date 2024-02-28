@@ -3294,10 +3294,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             nayutaScript.target = targetBattlers[0];
 
             // VFX
-            VFXSpawner.SpawnVFX("LockOn", nayutaScript.target.transform, nayutaScript.target.GetGraphicRectTransform().position);
+            VFXSpawner.SpawnVFX("LockOn", nayutaScript.target.transform, nayutaScript.target.GetMiddleGlobalPosition());
 
             // SE
-            AudioManager.Instance.PlaySFX("Equip");
+            AudioManager.Instance.PlaySFX("Heartbeat", 1.5f);
 
             DOTween.Sequence()
             .AppendInterval(0.5f)
@@ -3311,7 +3311,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         else
         {
             // attack
+            // 残像生成コンポネント
+            FadeEffect fadeEffect = nayuta.gameObject.AddComponent<FadeEffect>();
+            fadeEffect.Initialize(0.4f, 0.01f, nayuta.GetGraphicRectTransform().GetComponent<Image>());
+            battleManager.Attack(nayuta, nayutaScript.target);
 
+            // リセット
+            nayutaScript.target = null;
         }
     }
     #endregion abilities
