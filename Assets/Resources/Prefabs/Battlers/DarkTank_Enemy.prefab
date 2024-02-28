@@ -506,15 +506,28 @@ MonoBehaviour:
     attacked: {fileID: 21300000, guid: 057d36ba6dfe76b45ac4020ed749185b, type: 3}
     retire: {fileID: 21300000, guid: 057d36ba6dfe76b45ac4020ed749185b, type: 3}
   soundEffects:
-    attack: {fileID: 0}
-    attacked: {fileID: 0}
-    retire: {fileID: 0}
+    attack:
+    - {fileID: 8300000, guid: 5528f56fa82d4da49a7c7efe709c5d9c, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: c917f4aa8fc109e42960f4bdcc4480a2, type: 3}
+    - {fileID: 8300000, guid: 5877fcec1260daf4e9f6ed8cc027b5b8, type: 3}
+    - {fileID: 8300000, guid: 1c9870f1854f5384f85d6e4cd773a495, type: 3}
+    - {fileID: 8300000, guid: 2130983556586984ba4fb0400814cf13, type: 3}
+    - {fileID: 8300000, guid: f4f8c6874e2e1704bb2ed51e7e78323f, type: 3}
+    - {fileID: 8300000, guid: 4c4349aec4ebdf04eab44bd235c2ca85, type: 3}
+    retire:
+    - {fileID: 8300000, guid: 687a1d06529de2f458d5aff92a31e457, type: 3}
+  characterVoices:
+    attack: []
+    attacked: []
+    retire: []
   attackVFX: {fileID: 1343633729508638609, guid: 7f432de0fd457e14d8accbe3936e0925, type: 3}
   breathScale: 0.001
   enableNormalAttack: 1
   isFemale: 0
   isMachine: 1
   attackCallback: DarkTankAttack
+  isAoENormalAttack: 0
   character_name: 
   characterID: 0
   icon: {fileID: 0}
@@ -539,6 +552,15 @@ MonoBehaviour:
     evt:
       m_PersistentCalls:
         m_Calls: []
+  onTurnBeginEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onTurnEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  afterAttackEvent:
+    m_PersistentCalls:
+      m_Calls: []
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []

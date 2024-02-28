@@ -431,19 +431,27 @@ MonoBehaviour:
     attacked: {fileID: 21300000, guid: 6d161728b109e144e89eb41a04c6a95d, type: 3}
     retire: {fileID: 21300000, guid: 8ccb032f3879b144db124bb8a017c047, type: 3}
   soundEffects:
-    attack: {fileID: 0}
-    attacked: {fileID: 0}
-    retire: {fileID: 0}
+    attack:
+    - {fileID: 8300000, guid: fe20b3e7ca7e574459dc4d990f43e86a, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: fe20b3e7ca7e574459dc4d990f43e86a, type: 3}
+    retire:
+    - {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
   characterVoices:
-    attack: {fileID: 8300000, guid: d43e14f4fdf507540b1ba71a1a83220a, type: 3}
-    attacked: {fileID: 8300000, guid: 6d0516b8acf12ce4e9c797446aeb4243, type: 3}
-    retire: {fileID: 8300000, guid: 840998b2acb20144f94f2dffed508b7e, type: 3}
+    attack:
+    - {fileID: 8300000, guid: d43e14f4fdf507540b1ba71a1a83220a, type: 3}
+    - {fileID: 8300000, guid: 6d83d8954d6d6bb41924ad6d207d069d, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: 6d0516b8acf12ce4e9c797446aeb4243, type: 3}
+    retire:
+    - {fileID: 8300000, guid: 840998b2acb20144f94f2dffed508b7e, type: 3}
   attackVFX: {fileID: 1343633729508638609, guid: 50e1eebc5a9297944bd413cedb616ae1, type: 3}
   breathScale: 0.005
   enableNormalAttack: 1
   isFemale: 1
   isMachine: 0
   attackCallback: 
+  isAoENormalAttack: 0
   character_name: "\u7ACB\u82B1"
   characterID: 0
   icon: {fileID: 0}

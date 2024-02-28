@@ -506,14 +506,23 @@ MonoBehaviour:
     attacked: {fileID: 21300000, guid: 3794c1e412228d84fb988dfa93d06ab8, type: 3}
     retire: {fileID: 21300000, guid: 3794c1e412228d84fb988dfa93d06ab8, type: 3}
   soundEffects:
-    attack: {fileID: 0}
-    attacked: {fileID: 0}
-    retire: {fileID: 0}
+    attack:
+    - {fileID: 8300000, guid: 3d98526f4dcf8424da316c87b9a0b470, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: c917f4aa8fc109e42960f4bdcc4480a2, type: 3}
+    retire:
+    - {fileID: 8300000, guid: 795dc3ec701676246aee0a45c11386b8, type: 3}
+  characterVoices:
+    attack: []
+    attacked: []
+    retire: []
   attackVFX: {fileID: 1343633729508638609, guid: 50e1eebc5a9297944bd413cedb616ae1, type: 3}
   breathScale: 0.005
   enableNormalAttack: 1
   isFemale: 0
   isMachine: 1
+  attackCallback: 
+  isAoENormalAttack: 0
   character_name: "\u660E\u7A42"
   characterID: 0
   icon: {fileID: 0}
@@ -534,9 +543,23 @@ MonoBehaviour:
   onDeathEvent:
     m_PersistentCalls:
       m_Calls: []
+  onAttackedEvent:
+    evt:
+      m_PersistentCalls:
+        m_Calls: []
+  onTurnBeginEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onTurnEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  afterAttackEvent:
+    m_PersistentCalls:
+      m_Calls: []
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []
+  disabledAbilities: []
   graphic: {fileID: 7327100276064734370}
   name_UI: {fileID: 1324361431165308280}
   hpBarFill: {fileID: 4731874433723829874}

@@ -739,13 +739,13 @@ public class Battler : MonoBehaviour
         {
             case BattlerSoundEffectType.Attack:
                 if (soundEffects.attack == null) return string.Empty;
-                return soundEffects.attack.name;
+                return soundEffects.attack[UnityEngine.Random.Range(0, soundEffects.attack.Count)].name;
             case BattlerSoundEffectType.Attacked:
                 if (soundEffects.attacked == null) return string.Empty;
-                return soundEffects.attacked.name;
+                return soundEffects.attacked[UnityEngine.Random.Range(0, soundEffects.attacked.Count)].name;
             case BattlerSoundEffectType.Retire:
                 if (soundEffects.retire == null) return string.Empty;
-                return soundEffects.retire.name;
+                return soundEffects.retire[UnityEngine.Random.Range(0, soundEffects.retire.Count)].name;
             default:
                 return string.Empty;
         }
@@ -756,13 +756,13 @@ public class Battler : MonoBehaviour
         {
             case BattlerSoundEffectType.Attack:
                 if (characterVoices.attack == null) return string.Empty;
-                return characterVoices.attack.name;
+                return characterVoices.attack[UnityEngine.Random.Range(0, characterVoices.attack.Count)].name;
             case BattlerSoundEffectType.Attacked:
                 if (characterVoices.attacked == null) return string.Empty;
-                return characterVoices.attacked.name;
+                return characterVoices.attacked[UnityEngine.Random.Range(0, characterVoices.attacked.Count)].name;
             case BattlerSoundEffectType.Retire:
                 if (characterVoices.retire == null) return string.Empty;
-                return characterVoices.retire.name;
+                return characterVoices.retire[UnityEngine.Random.Range(0, characterVoices.retire.Count)].name;
             default:
                 return string.Empty;
         }

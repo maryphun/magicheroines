@@ -281,15 +281,28 @@ MonoBehaviour:
     attacked: {fileID: 21300000, guid: 2edacf7b60419cc47a8daa58ff709318, type: 3}
     retire: {fileID: 21300000, guid: 2edacf7b60419cc47a8daa58ff709318, type: 3}
   soundEffects:
-    attack: {fileID: 8300000, guid: 2afa3ddc7112e1c4ca14f5cb4cc3063c, type: 3}
-    attacked: {fileID: 0}
-    retire: {fileID: 0}
+    attack:
+    - {fileID: 8300000, guid: 2afa3ddc7112e1c4ca14f5cb4cc3063c, type: 3}
+    - {fileID: 8300000, guid: 155f8ae63fd788c4385a9376d75dfdaa, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: fe20b3e7ca7e574459dc4d990f43e86a, type: 3}
+    retire:
+    - {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
+  characterVoices:
+    attack:
+    - {fileID: 8300000, guid: 901d57be4186068469f64a433b3275b0, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: a692403ecd88a8948b52b3fdbc98a74e, type: 3}
+    - {fileID: 8300000, guid: 1e4e5e16c0756814192883d2316d1351, type: 3}
+    - {fileID: 8300000, guid: 5098365e96062844c80ab68ab612005e, type: 3}
+    retire: []
   attackVFX: {fileID: 1343633729508638609, guid: a6753ca6f258e914b96162459ca96c63, type: 3}
   breathScale: 0.005
   enableNormalAttack: 1
   isFemale: 1
   isMachine: 0
   attackCallback: 
+  isAoENormalAttack: 0
   character_name: "\u30A8\u30EC\u30CA"
   characterID: 0
   icon: {fileID: 0}
@@ -314,6 +327,15 @@ MonoBehaviour:
     evt:
       m_PersistentCalls:
         m_Calls: []
+  onTurnBeginEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onTurnEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  afterAttackEvent:
+    m_PersistentCalls:
+      m_Calls: []
   abilities: []
   equipment: {fileID: 0}
   actionPattern: []
@@ -336,6 +358,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4847d4ead994d44b9079e15091a3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extraDamage: 0
+  chargedDamage: 0
+  chargedStack: 0
+  isEnabled: 0
+  nayuta: {fileID: 0}
 --- !u!223 &-8439261204993684773
 Canvas:
   m_ObjectHideFlags: 0
