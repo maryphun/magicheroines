@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
-  m_Name: CloneTask
+  m_Name: Kei
   m_EditorClassIdentifier: 
-  _locations: []
+  _locations:
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
   _paragraphList:
   - _enabled: 1
     _index: 0
@@ -27,15 +28,17 @@ MonoBehaviour:
     _dialogueList:
     - open: 0
       Name: 
-      text: "\u6C34\u7121\u702C\u516D\u82B1\u304C\u30AF\u30ED\u30FC\u30F3\u306E\u4E00\u54E1\u306B\u306A\u3063\u305F\u65E5\u304B\u3089\u3057\u3070\u3089\u304F\u3057\u3066\u2015\u2015\u2015\u2015"
-      localizationID: Record.CloneTask-1
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      text: "\u8CA1\u56E3\u30A2\u30B8\u30C8\u306B\u3066"
+      localizationID: Record.Kei-1
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 1
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -59,21 +62,223 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u90A3\u7531\u591A\u3092\u5815\u3068\u3057\u305F\u602A\u4EBA\u2026\u2026\uFF1F\u300D"
+      localizationID: Record.Kei-2
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 01000000
+      charas:
+      - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u3078\u3048\u3001\u3042\u306E\u751F\u5F92\u4F1A\u9577\u3092\u305F\u3063\u305F\u4E00\u4EBA\u3067\u5815\u3068\u3057\u305F\u602A\u4EBA\u304B\u2026\u8208\u5473\u6DF1\u3044\u306D\u300D"
+      localizationID: Record.Kei-3
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "072\u53F7\u542B\u3080\u65B0\u898F\u30ED\u30C3\u30C8\u306E\u30AF\u30ED\u30FC\u30F3\u9054\u306F\u7A74\u306E\u958B\u3044\u305F\u58C1\u306E\u524D\u306B\u7ACB\u305F\u3055\u308C\u3066\u3044\u305F"
-      localizationID: Record.CloneTask-2
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
+      text: "\u4EAC\u306F\u5996\u8276\u306A\u7B11\u307F\u3092\u6D6E\u304B\u3079\u3061\u3087\u308D\u3063\u3068\u820C\u3092\u51FA\u3059"
+      localizationID: Record.Kei-4
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u3075\u3075\u3063\u2665\u6700\u8FD1\u6226\u95D8\u54E1\u9054\u306E\u30C1\u30F3\u30DD\u3067\u904A\u3076\u306E\u3082\u98FD\u304D\u3066\u6765\u305F\u3093\u3060\u3088\u306D\u300D"
+      localizationID: Record.Kei-5
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u3069\u308C\u307B\u3069\u306E\u3082\u306E\u304B\u5206\u304B\u3089\u306A\u3044\u304C\u2026\u79C1\u3092\u3069\u308C\u3060\u3051\u6E80\u8DB3\u3055\u305B\u3089\u308C\u308B\u304B\u306A\u2026\uFF1F\u300D"
+      localizationID: Record.Kei-6
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01"
+      localizationID: Record.Kei-7
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 01000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -97,21 +302,63 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Mutant
+      text: "\u300C\u3069\u3046\u3057\u305F\uFF1F\u968F\u5206\u3068\u4F59\u88D5\u304C\u7121\u3055\u305D\u3046\u3060\u304C\uFF1F\u300D"
+      localizationID: Record.Kei-8
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 2
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 9
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u2026\u2026\u2026\u2026\u3053\u308C\u306F\uFF1F\u300D"
-      localizationID: Record.CloneTask-3
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u304A\u3063\u2665\uFF01\uFF1F\u300D"
+      localizationID: Record.Kei-9
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -135,173 +382,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Clone
-      text: "\u300C072\u53F7\u3001\u9759\u304B\u306B\u3002\u3053\u308C\u3088\u308A\u30AF\u30ED\u30FC\u30F3\u6226\u95D8\u54E1\u6027\u5949\u4ED5\u696D\u52D9\u3092\u958B\u59CB\u3057\u307E\u3059\u300D"
-      localizationID: Record.CloneTask-4
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Clone
-      text: "\u300C\u6211\u3005\u306E\u4ED5\u4E8B\u306F\u6226\u95D8\u3067\u3059\u304C\u2026\u2026\u5F85\u6A5F\u6642\u306B\u306F\u6226\u95D8\u54E1\u9054\u306E\u6027\u51E6\u7406\u3082\u884C\u3044\u307E\u3059\u300D"
-      localizationID: Record.CloneTask-5
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Clone
-      text: "\u300C\u307E\u3042\u6226\u95D8\u529B\u306F\u6211\u3005\u306E\u65B9\u304C\u9AD8\u3044\u306E\u3067\u3059\u304C\u2026\u6211\u3005\u306F\u30AF\u30ED\u30FC\u30F3\u3067\u3059\u306E\u3067\u300D"
-      localizationID: Record.CloneTask-6
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u2026\u2026\u4E86\u89E3\u3057\u307E\u3057\u305F\u300D"
-      localizationID: Record.CloneTask-7
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u305D\u306E\u6642\u3001\u58C1\u306E\u524D\u306B\u6226\u95D8\u54E1\u304C\u3084\u3063\u3066\u304F\u308B"
-      localizationID: Record.CloneTask-8
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
+      text: "\u4EAC\u306F\u5C0F\u67C4\u306A\u4F53\u3092\u5DE8\u5927\u306A\u602A\u4EBA\u306B\u6355\u307E\u308C\u3001\u7121\u7406\u3084\u308A\u81A3\u3067\u30C1\u30F3\u30DD\u3092\u6271\u304B\u308C\u3066\u3044\u305F"
+      localizationID: Record.Kei-10
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -325,21 +422,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Battler
-      text: "\u300C\u3088\u30FC\u3057\u3001\u4ECA\u65E5\u3082\u983C\u3093\u3060\u305C\u30AF\u30ED\u30FC\u30F3\u3061\u3083\u3093\u5171\u300D"
-      localizationID: Record.CloneTask-9
-      back: {fileID: 21300000, guid: 7c38cda28730cad4c9594a2e77cb8d0d, type: 3}
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u304A\u3063\u2665\u3001\u3053\u3093\u306A\u306E\u3063\u2665\u2665\u30C6\u30AF\u30CB\u30C3\u30AF\u4EE5\u524D\u306E\u554F\u984C\u3063\u2665\u2665\u2665\u300D"
+      localizationID: Record.Kei-11
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -363,21 +462,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
-      text: "\u58C1\u306B\u7A7A\u3044\u305F\u7A74\u306E\u4E2D\u306B\u6226\u95D8\u54E1\u306E\u30C1\u30F3\u30DD\u304C\u7A81\u3063\u8FBC\u307E\u308C\u3001072\u53F7\u306E\u76EE\u306E\u524D\u306B\u73FE\u308C\u308B"
-      localizationID: Record.CloneTask-10
-      back: {fileID: 21300000, guid: 94319bb29e7d27341be6c87553f8c979, type: 3}
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u30C1\u30F3\u30DD\u30C7\u30AB\u3059\u304E\u3066\u3063\u2665\u2665\u2665\u3001\u901D\u304F\u30C3\u2665\u2665\u2665\u3001\u30CF\u30E1\u6B7B\u3093\u3058\u3083\u3046\u3046\u3046\u3045\u3045\u30C3\u2665\u2665\u2665\u300D"
+      localizationID: Record.Kei-12
+      back: {fileID: 21300000, guid: a4b646318c8da1a44bff0b0416e58cb3, type: 3}
       howBack: 1
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -401,21 +502,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3063\u2026\u2026\u2026\uFF01\u300D"
-      localizationID: Record.CloneTask-11
-      back: {fileID: 21300000, guid: 94319bb29e7d27341be6c87553f8c979, type: 3}
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304D\u3085\u3046\u3051\u3044\u3063\u2665\u3001\u629C\u3044\u3066\u30C3\u2665\u2665\u3001\u629C\u3044\u3066\u304F\u3060\u3055\u3044\u3063\u2665\u2665\uFF01\uFF01\u300D"
+      localizationID: Record.Kei-13
+      back: {fileID: 21300000, guid: a4b646318c8da1a44bff0b0416e58cb3, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -439,21 +542,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Clone
-      text: "\u300C\u304A\u3084\u3001\u3069\u3046\u3057\u307E\u3057\u305F\u304B072\u53F7\uFF1F\u300D"
-      localizationID: Record.CloneTask-12
-      back: {fileID: 21300000, guid: 94319bb29e7d27341be6c87553f8c979, type: 3}
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u305D\u3046\u306F\u3044\u304B\u3093\u306A\u3002\u4E00\u56DE\u59CB\u3081\u305F\u4EE5\u4E0A\u6700\u671F\u307E\u3067\u4ED8\u304D\u5408\u3063\u3066\u3082\u3089\u304A\u3046\u300D"
+      localizationID: Record.Kei-14
+      back: {fileID: 21300000, guid: a4b646318c8da1a44bff0b0416e58cb3, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -477,135 +582,183 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u2026\u3044\u3048\u3001\u306A\u3093\u3067\u3082\u3042\u308A\u307E\u305B\u3093\u300D"
-      localizationID: Record.CloneTask-13
-      back: {fileID: 21300000, guid: 94319bb29e7d27341be6c87553f8c979, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Clone
-      text: "\u300C\u305D\u3046\u3067\u3059\u304B\u3001\u3067\u306F\u65E9\u901F\u3002\u6226\u95D8\u54E1\u306E\u7537\u6027\u5668\u306E\u54A5\u3048\u306A\u3055\u3044\u300D"
-      localizationID: Record.CloneTask-14
-      back: {fileID: 21300000, guid: 94319bb29e7d27341be6c87553f8c979, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3063\u3001\u2026\u2026\u2026\u4E86\u89E3\u3057\u307E\u3057\u305F\u300D"
-      localizationID: Record.CloneTask-15
-      back: {fileID: 21300000, guid: 94319bb29e7d27341be6c87553f8c979, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u305D\u3057\u3066072\u53F7\u306F\u76EE\u306E\u524D\u306B\u5DEE\u3057\u51FA\u3055\u308C\u305F\u30C1\u30F3\u30DD\u3092\u54A5\u3048\u308B"
-      localizationID: Record.CloneTask-16
-      back: {fileID: 21300000, guid: 03083b2b606af4a49aab78108d0585ad, type: 3}
+      text: "\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01"
+      localizationID: Record.Kei-15
+      back: {fileID: 21300000, guid: 64603e1bee1e120478588adc1306072d, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u3063\u2665\u3001\u307E\u3001\u307E\u3063\u3066\u304F\u308C\u3063\u2665\u2665\uFF01\uFF01\u300D"
+      localizationID: Record.Kei-16
+      back: {fileID: 21300000, guid: 64603e1bee1e120478588adc1306072d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u3053\u308C\u4EE5\u4E0A\u3055\u308C\u305F\u3089\u3063\u2665\u2665\u3001\u672C\u5F53\u306B\u6B7B\u3093\u3067\u3057\u307E\u3046\u3063\u2665\u2665\u300D"
+      localizationID: Record.Kei-17
+      back: {fileID: 21300000, guid: 64603e1bee1e120478588adc1306072d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u8ABF\u5B50\u306B\u4E57\u3063\u305F\u306E\u306F\u60AA\u304B\u3063\u305F\u304B\u3089\u3063\u2665\u2665\u3001\u3053\u3053\u306F\u4E00\u65E6\u3063\u2026\uFF01\u300D"
+      localizationID: Record.Kei-18
+      back: {fileID: 21300000, guid: 64603e1bee1e120478588adc1306072d, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01"
+      localizationID: Record.Kei-19
+      back: {fileID: 21300000, guid: a4b646318c8da1a44bff0b0416e58cb3, type: 3}
       howBack: 2
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 0.5
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      backFadeSpeed: 0.3
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -629,21 +782,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
-      text: "\u30C1\u30E5\u30DD\u30C3"
-      localizationID: Record.CloneTask-17
-      back: {fileID: 21300000, guid: 03083b2b606af4a49aab78108d0585ad, type: 3}
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\uFF01\uFF1F\u3001\u304A\u309B\u307B\u304A\u3063\uFF5E\uFF5E\uFF5E\uFF5E\u30C3\u30C3\u2665\u2665\u2665\uFF01\uFF1F\u300D"
+      localizationID: Record.Kei-20
+      back: {fileID: 21300000, guid: a4b646318c8da1a44bff0b0416e58cb3, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -667,515 +822,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3093\u3063\u2026\u2026\u3080\u3046\u3063\u2026\u2026\u300D"
-      localizationID: Record.CloneTask-18
-      back: {fileID: 21300000, guid: 03083b2b606af4a49aab78108d0585ad, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "(\u2026\u2026\u2026\u3063\u3001\u54A5\u3048\u308B\u306E\u306F\u521D\u3081\u3066\u3067\u3059\u304C\u2026\u2026\u72EC\u7279\u306A\u611F\u89E6\u3067\u3059\u306D\u2026\u2026)"
-      localizationID: Record.CloneTask-19
-      back: {fileID: 21300000, guid: 03083b2b606af4a49aab78108d0585ad, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Battler
-      text: "\u300C\u306A\u3093\u3060\u3041\uFF1F\u4ECA\u65E5\u306E\u7A74\u306F\u5916\u308C\u304B\uFF1F\u300D"
-      localizationID: Record.CloneTask-20
-      back: {fileID: 21300000, guid: 03083b2b606af4a49aab78108d0585ad, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Clone
-      text: "\u300C072\u53F7\u3001\u54A5\u3048\u3066\u3044\u308B\u3060\u3051\u3067\u306F\u7537\u6027\u5668\u304B\u3089\u306E\u5C04\u7CBE\u306F\u51FA\u6765\u307E\u305B\u3093\u3002\u524D\u5F8C\u904B\u52D5\u306B\u3088\u308A\u523A\u6FC0\u3092\u4E0E\u3048\u306A\u3055\u3044\u300D"
-      localizationID: Record.CloneTask-21
-      back: {fileID: 21300000, guid: 03083b2b606af4a49aab78108d0585ad, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3063\u3001\u3072\u3087\u3046\u306F\u3044\u3072\u307E\u3072\u305F\u3063\u300D"
-      localizationID: Record.CloneTask-22
-      back: {fileID: 21300000, guid: 03083b2b606af4a49aab78108d0585ad, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u305D\u3057\u3066072\u53F7\u306F\u982D\u3092\u524D\u5F8C\u306B\u632F\u308A\u3001\u6226\u95D8\u54E1\u306E\u30C1\u30F3\u30DD\u306B\u523A\u6FC0\u3092\u4E0E\u3048\u59CB\u3081\u308B"
-      localizationID: Record.CloneTask-23
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 1
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u30C1\u30E5\u30D7\u30C3\u3001\u30C1\u30E5\u30D7\u30C3\u3001\u30C1\u30E5\u30D7\u30C3\uFF01"
-      localizationID: Record.CloneTask-24
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3080\u3046\u3063\u2665\u3001\u3093\u3063\u2665\uFF01\u300D"
-      localizationID: Record.CloneTask-25
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "(\u3053\u3046\u2026\u3067\u3057\u3087\u3046\u304B\u2026\u2026\u2665\uFF1F)"
-      localizationID: Record.CloneTask-26
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u30C1\u30E5\u30D7\u30C3\u3001\u30C1\u30E5\u30D7\u30C3\u3001\u30C1\u30E5\u30D7\u30C3"
-      localizationID: Record.CloneTask-27
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Battler
-      text: "\u300C\u304A\u3044\u304A\u3044\u306A\u3093\u3060\u3053\u306E\u7DE9\u3044\u30D5\u30A7\u30E9\u306F\uFF1F\u6559\u80B2\u8DB3\u308A\u3066\u306D\u3048\u3093\u3058\u3083\u306D\u3048\u306E\u304B\uFF1F\u300D"
-      localizationID: Record.CloneTask-28
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3063\u3001\u3080\u3046\u3063\uFF01\uFF1F\u300D"
-      localizationID: Record.CloneTask-29
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Clone
-      text: "\u300C072\u53F7\u3002\u3082\u3063\u3068\u771F\u9762\u76EE\u306B\u3084\u308A\u306A\u3055\u3044\u300D"
-      localizationID: Record.CloneTask-30
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
       Name: 
       text: 
       localizationID: 
-      back: {fileID: 21300000, guid: a5241ed740aee014db34bafb5e631c45, type: 3}
+      back: {fileID: 21300000, guid: a4b646318c8da1a44bff0b0416e58cb3, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1199,8 +862,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     detailOpen: 0
@@ -1210,7 +873,861 @@ MonoBehaviour:
     _index: 1
     _nodePosition:
       serializedVersion: 2
-      x: 164
+      x: 136
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 2
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u3078\u3042\u3063\u2665\u2665\u3001\u304A\u309B\u3063\u2665\u3001\u306B\u3083\u3093\u3067\u3063\u2665\u2665\u2665\u300D"
+      localizationID: Record.Kei-21
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Mutant
+      text: "\u300C\u30AA\u30CA\u30DB\u306F\u30AA\u30CA\u30DB\u3089\u3057\u304F\u72AF\u3055\u308C\u3066\u3044\u308D\u3063\uFF01\u300D"
+      localizationID: Record.Kei-22
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01"
+      localizationID: Record.Kei-23
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u304A\u3063\u2665\u3001\u30A4\u30B0\u30C3\u2665\u2665\u3001\u30C1\u30F3\u30DD\u3067\u30A4\u30AF\u3063\u2665\u2665\uFF01\u300D"
+      localizationID: Record.Kei-24
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u30C3\u3001\u308F\u304B\u308A\u307E\u3057\u305F\u3063\u2665\u2665\u3001\u79C1\u306F\u53EA\u306E\u30AA\u30CA\u30DB\u3067\u3057\u305F\u30C3\u2665\u2665\u3001\u9ED9\u3063\u3066\u72AF\u3055\u308C\u307E\u3059\u3063\u2665\u2665\u300D"
+      localizationID: Record.Kei-25
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u5C11\u3057\u3067\u3082\u304A\u30C1\u30F3\u30DD\u69D8\u306E\u8DB3\u3057\u306B\u306A\u308B\u3088\u3046\u306B\u3063\u2665\u2665\u304A\u30DE\u30F3\u30B3\u7DE0\u3081\u307E\u3059\u306E\u3067\u3063\u2665\u2665\u300D"
+      localizationID: Record.Kei-26
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u30B1\u30A4\u306E\u96D1\u9B5A\u7A74\u5B58\u5206\u306B\u304A\u4F7F\u3044\u304F\u3060\u3055\u3044\u3063\u2665\u300D"
+      localizationID: Record.Kei-27
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01\u30C9\u30C1\u30E5\u30C3\uFF01"
+      localizationID: Record.Kei-28
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Mutant
+      text: "\u300C\u3044\u3044\u5FC3\u304C\u3051\u3060\u306A\u3063\uFF01\u305D\u308D\u305D\u308D\u51FA\u3057\u3066\u3084\u308D\u3046\uFF01\u300D"
+      localizationID: Record.Kei-29
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u3042\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\u2665\u2665\u2665\uFF01\u300D"
+      localizationID: Record.Kei-30
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u4E0D\u7965\u30AA\u30CA\u30DB\u3063\u2665\u2665\u3001\u4E2D\u3060\u3057\u6E96\u5099\u4E07\u7AEF\u3067\u3059\u3063\u2665\u2665\u300D"
+      localizationID: Record.Kei-31
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u30C1\u30F3\u30DD\u69D8\u306E\u6027\u6DB2\u3063\u2665\u2665\u3001\u30AA\u30CA\u30DB\u306B\u6CA2\u5C71\u6D41\u3057\u8FBC\u3093\u3067\u304F\u3060\u3055\u3044\u3063\u2665\u2665\u300D"
+      localizationID: Record.Kei-32
+      back: {fileID: 21300000, guid: 5ccf11d876ede3d41ae781d3013905d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30AF\u30C3\uFF01\uFF01\u30D3\u30E5\u30EB\u30EB\u30EB\u30C3\u30EB\u30C3\u30C3\uFF01\u30D3\u30B7\u30E5\u30C3\u30C3\uFF01"
+      localizationID: Record.Kei-33
+      back: {fileID: 21300000, guid: efb25f1740a79e843ba0f5f2b553bb09, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.5
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u304A\u3063\uFF5E\uFF5E\uFF5E\uFF5E\u30C3\u2665\u2665\u2665\uFF01\uFF1F\u300D"
+      localizationID: Record.Kei-34
+      back: {fileID: 21300000, guid: efb25f1740a79e843ba0f5f2b553bb09, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u4EAC\u306E\u5B50\u5BAE\u5185\u306B\u5927\u91CF\u306E\u6027\u6DB2\u304C\u6D41\u308C\u8FBC\u307F\u3001\u5165\u308A\u304D\u3089\u306A\u304F\u306A\u3063\u305F\u7CBE\u6DB2\u304C\u9006\u6D41\u3059\u308B"
+      localizationID: Record.Kei-35
+      back: {fileID: 21300000, guid: efb25f1740a79e843ba0f5f2b553bb09, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u2665\u3001\u304A\u309B\u304A\u3063\u2665\u3001\u304A\u309B\u30C3\u30C3\u30C3\u30C3\u2665\u2665\uFF01\u300D"
+      localizationID: Record.Kei-36
+      back: {fileID: 21300000, guid: efb25f1740a79e843ba0f5f2b553bb09, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u79C1\u306E\u4E2D\u304C\u3063\u2665\u2665\u3001\u5168\u90E8\u7CBE\u6DB2\u3067\u6E80\u305F\u3055\u308C\u3066\u3063\u2665\u2665\u2665\u300D"
+      localizationID: Record.Kei-37
+      back: {fileID: 21300000, guid: efb25f1740a79e843ba0f5f2b553bb09, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30AF\u30F3\u30C3\uFF01\u30C9\u30AF\u30C3\uFF01"
+      localizationID: Record.Kei-38
+      back: {fileID: 21300000, guid: 953de07a43a669a4b9c65ce9dc9c0a90, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u304A\u3063\u2665\u2026\u2026\u300D"
+      localizationID: Record.Kei-39
+      back: {fileID: 21300000, guid: 953de07a43a669a4b9c65ce9dc9c0a90, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Mutant
+      text: "\u300C\u3075\u3046\u3001\u307E\u3042\u30AA\u30CA\u30DB\u3068\u3057\u3066\u306F\u53CA\u7B2C\u70B9\u3060\u308D\u3046\u300D"
+      localizationID: Record.Kei-40
+      back: {fileID: 21300000, guid: 953de07a43a669a4b9c65ce9dc9c0a90, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 953de07a43a669a4b9c65ce9dc9c0a90, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 274
       y: 0
       width: 64
       height: 97
@@ -1218,16 +1735,18 @@ MonoBehaviour:
     nodeName: 
     _dialogueList:
     - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3063\u3001\u3082\u3046\u3072\u308F\u3051\u3054\u3089\u3044\u307E\u305B\u3093\u3063\uFF01\u300D"
-      localizationID: Record.CloneTask-31
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u306F\u3072\u3063\u2665\u2665\u3001\u5C04\u7CBE\u3057\u3066\u3044\u305F\u3060\u304D\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3072\u305F\u3063\u2665\u2665\u2665\u300D"
+      localizationID: Record.Kei-41
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1251,21 +1770,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
-      text: "\u30B8\u30E5\u30D7\u30C3\uFF01\u30B8\u30E5\u30D7\u30C3\uFF01\u30B8\u30E5\u30D7\u30C3\uFF01"
-      localizationID: Record.CloneTask-32
+      Name: Name.Mutant
+      text: "\u300C\u307E\u3042\u5642\u4EE5\u4E0A\u3067\u306F\u306A\u304B\u3063\u305F\u304C\u306A\u2026\u307E\u305F\u4F7F\u3063\u3066\u3084\u308B\u300D"
+      localizationID: Record.Kei-42
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1289,21 +1810,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
-      text: "072\u53F7\u306F\u66F4\u306B\u53E3\u3092\u3059\u307C\u3081\u6226\u95D8\u54E1\u306E\u30C1\u30F3\u30DD\u3092\u8210\u3063\u3066\u3044\u304F"
-      localizationID: Record.CloneTask-33
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u3069\u3046\u305B\u306A\u3089\u3063\u2665\u2665\u3001\u4ECA\u3082\u3046\u4E00\u56DE\u4F7F\u3063\u3066\u304F\u3060\u3055\u3044\u3063\u2665\u2665\u300D"
+      localizationID: Record.Kei-43
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1327,21 +1850,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3093\u3063\u2665\u3001\u3093\u3063\u2665\u3001\u3093\u3063\u2665\uFF01\u300D"
-      localizationID: Record.CloneTask-34
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u30AA\u30CA\u30DB\u306F\u30CF\u30E1\u3089\u308C\u308B\u306E\u304C\u4ED5\u4E8B\u306A\u306E\u3067\u3063\u2665\u2665\u300D"
+      localizationID: Record.Kei-44
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1365,21 +1890,23 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "(\u3063\u3001\u30AF\u30ED\u30FC\u30F3\u3068\u3057\u3066\u3063\uFF01\u3053\u306E\u304F\u3089\u3044\u306E\u3053\u3068\u306F\u51FA\u6765\u306A\u3051\u308C\u3070\u3063)"
-      localizationID: Record.CloneTask-35
+      Name: Name.Kei_Corrupted
+      text: "\u300C\u2026\u2026\u305D\u308C\u306B\u2026\u2026\u6B21\u306F\u3082\u3063\u3068\u3046\u307E\u304F\u3084\u308A\u307E\u3059\u304B\u3089\u2026\u2665\u300D"
+      localizationID: Record.Kei-45
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1403,350 +1930,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u30B8\u30E5\u30D7\u30C3\uFF01\u30B8\u30E5\u30D7\u30C3\uFF01\u30B8\u30E5\u30D7\u30C3\uFF01"
-      localizationID: Record.CloneTask-36
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Battler
-      text: "\u300C\u304A\uFF1F\u3084\u3063\u3068\u771F\u9762\u76EE\u306B\u3084\u308A\u59CB\u3081\u305F\u304B\uFF1F\u300D"
-      localizationID: Record.CloneTask-37
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3093\u3063\u2665\u3001\u3093\u3063\u2665\u3001\u3093\u3063\u2665\uFF01\u300D"
-      localizationID: Record.CloneTask-38
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Battler
-      text: "\u300C\u307E\u3042\u3044\u3044\u3001\u305D\u306E\u9811\u5F35\u308A\u306B\u514D\u3058\u3066\u51FA\u3057\u3066\u3084\u308B\u3063\u3001\u30AA\u30E9\u30C3\u300D"
-      localizationID: Record.CloneTask-39
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u30C9\u30D4\u30E5\u30C3\uFF01\u30C9\u30D3\u30E5\u30EB\u30EB\u30EB\u30C3\uFF01"
-      localizationID: Record.CloneTask-40
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u30C3\u2665\u2665\uFF01\uFF01\u300D"
-      localizationID: Record.CloneTask-41
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "072\u53F7\u306E\u53E3\u5185\u306B\u52E2\u3044\u3088\u304F\u767D\u6FC1\u6DB2\u304C\u6CE8\u304E\u8FBC\u307E\u308C\u308B"
-      localizationID: Record.CloneTask-42
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "\u300C\u3093\u3080\u3063\u2665\u3001\u3093\u3063\u2665\u300D"
-      localizationID: Record.CloneTask-43
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Rikka_Corrupted
-      text: "(\u3063\u3001)"
-      localizationID: Record.CloneTask-44
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
@@ -1757,9 +1942,11 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 
-      charas: []
-      charaFadeColor: []
+      howCharas: 00000000
+      charas:
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1783,8 +1970,8 @@ MonoBehaviour:
       SEEndFadeTime: 3
       backEffect: 0
       backEffectStrength: 0
-      charaEffects: 
-      charaEffectStrength: 
+      charaEffects: 00000000
+      charaEffectStrength: 00000000
       DialogueEffect: 0
       DialogueEffectStrength: 0
     detailOpen: 0
@@ -1792,6 +1979,7 @@ MonoBehaviour:
     _nextChoiceIndexes: ffffffff
   _choiceList: []
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 188, y: 252, z: 0}
+  graphPosition: {x: 0, y: 117, z: 0}
   havePreLocations: 0
-  newLocations: []
+  newLocations:
+  - {fileID: 3646998453675562630, guid: 9beb73bba67975d4e8bcf7a4964f4c68, type: 3}
