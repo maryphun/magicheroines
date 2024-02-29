@@ -15,11 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: f8b14bbb9f38dcc42bed8e9f8766bbff
   - enabled: 1
-    path: Assets/Scenes/Battle.unity
-    guid: f189fc8a17754ea47acb6cc23dc0cea4
+    path: Assets/Scenes/WorldMap.unity
+    guid: 92090c13e9566e24ebf3fd1dad216ac3
   - enabled: 1
     path: Assets/Scenes/EndGameContent.unity
     guid: 4c2130eb5258626479423acadb694609
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: f189fc8a17754ea47acb6cc23dc0cea4
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 1f083874e844ae74fa13e9af708f33cf

@@ -44,6 +44,7 @@ public class TitleSelectUI : MonoBehaviour
     [SerializeField] private TMP_Text[] selection = new TMP_Text[SelectionCount];
     [SerializeField] private TMP_Text dummyText;
     [SerializeField] private OptionPanel optionPanel;
+    [SerializeField] private MemoryPanel memoryPanel;
     [SerializeField] private SaveLoadPanel saveloadPanel;
     [SerializeField] private CanvasGroup demoOnly;
     [SerializeField] private RectTransform blackbar_top, blackbar_btm;
@@ -54,7 +55,7 @@ public class TitleSelectUI : MonoBehaviour
     [SerializeField] private TitleSelection currentSelection;
     [SerializeField] private bool animationPlaying;
     [SerializeField] private KeyCode keyPrepressed;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -288,6 +289,7 @@ public class TitleSelectUI : MonoBehaviour
     private void Update()
     {
         if (optionPanel.IsOpen()) return;
+        if (memoryPanel.IsOpen) return;
         if (saveloadPanel.IsOpen) return;
         if (demoOnly.blocksRaycasts) return;
 
@@ -355,7 +357,7 @@ public class TitleSelectUI : MonoBehaviour
                     demoOnly.interactable = true;
                 });
 #else
-                Init();
+                memoryPanel.OpenMemoryPanel();
 #endif
                 return string.Empty;
             case TitleSelection.Load:

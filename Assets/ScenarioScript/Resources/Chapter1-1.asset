@@ -2605,7 +2605,7 @@ MonoBehaviour:
       howCharas: 000000000200000000000000
       charas:
       - {fileID: 0}
-      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 21300000, guid: c0fc83a7111a75446947b816b6eac35a, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
@@ -2646,10 +2646,10 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 000000000000000000000000
+      howCharas: 000000000100000000000000
       charas:
       - {fileID: 0}
-      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 21300000, guid: 7a9f5328de8abae4cb0bbcbdc77fac05, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
@@ -2693,7 +2693,7 @@ MonoBehaviour:
       howCharas: 000000000000000000000000
       charas:
       - {fileID: 0}
-      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 21300000, guid: 7a9f5328de8abae4cb0bbcbdc77fac05, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
@@ -2737,7 +2737,7 @@ MonoBehaviour:
       howCharas: 000000000000000000000000
       charas:
       - {fileID: 0}
-      - {fileID: 21300000, guid: 945cd171cc77c254687d45fe151bf521, type: 3}
+      - {fileID: 21300000, guid: 7a9f5328de8abae4cb0bbcbdc77fac05, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}

@@ -581,14 +581,14 @@ public class Battle : MonoBehaviour
 
         attacker.SpawnAttackVFX(target);
 
-        // play SE
-        AudioManager.Instance.PlaySFX(attacker.GetSoundEffects(BattlerSoundEffectType.Attack), 0.8f);
-
         // attack miss?
         bool isMiss = (UnityEngine.Random.Range(0, 100) > CalculateHitChance(attacker.speed - target.speed));
 
         if (!isMiss)
         {
+            // play SE
+            AudioManager.Instance.PlaySFX(attacker.GetSoundEffects(BattlerSoundEffectType.Attack), 0.8f);
+
             // UŒ‚ŒvZ
             int levelAdjustedDamage = CalculateDamage(attacker, target);
             int realDamage = target.DeductHP(attacker, levelAdjustedDamage);

@@ -462,6 +462,8 @@ public class Battler : MonoBehaviour
     /// </summary>
     public void KillBattler()
     {
+        if (!isAlive) return; // Ç∑Ç≈Ç…ÉäÉ^ÉCÉA
+
         isAlive = false;
         graphic.rectTransform.localScale = originalScale;
         PlayAnimation(BattlerAnimationType.retire);
@@ -738,13 +740,13 @@ public class Battler : MonoBehaviour
         switch (type)
         {
             case BattlerSoundEffectType.Attack:
-                if (soundEffects.attack == null) return string.Empty;
+                if (soundEffects.attack == null || soundEffects.attack.Count <= 0) return string.Empty;
                 return soundEffects.attack[UnityEngine.Random.Range(0, soundEffects.attack.Count)].name;
             case BattlerSoundEffectType.Attacked:
-                if (soundEffects.attacked == null) return string.Empty;
+                if (soundEffects.attacked == null || soundEffects.attacked.Count <= 0) return string.Empty;
                 return soundEffects.attacked[UnityEngine.Random.Range(0, soundEffects.attacked.Count)].name;
             case BattlerSoundEffectType.Retire:
-                if (soundEffects.retire == null) return string.Empty;
+                if (soundEffects.retire == null || soundEffects.retire.Count <= 0) return string.Empty;
                 return soundEffects.retire[UnityEngine.Random.Range(0, soundEffects.retire.Count)].name;
             default:
                 return string.Empty;
@@ -755,13 +757,13 @@ public class Battler : MonoBehaviour
         switch (type)
         {
             case BattlerSoundEffectType.Attack:
-                if (characterVoices.attack == null) return string.Empty;
+                if (characterVoices.attack == null || characterVoices.attack.Count <= 0) return string.Empty;
                 return characterVoices.attack[UnityEngine.Random.Range(0, characterVoices.attack.Count)].name;
             case BattlerSoundEffectType.Attacked:
-                if (characterVoices.attacked == null) return string.Empty;
+                if (characterVoices.attacked == null || characterVoices.attacked.Count <= 0) return string.Empty;
                 return characterVoices.attacked[UnityEngine.Random.Range(0, characterVoices.attacked.Count)].name;
             case BattlerSoundEffectType.Retire:
-                if (characterVoices.retire == null) return string.Empty;
+                if (characterVoices.retire == null || characterVoices.retire.Count <= 0) return string.Empty;
                 return characterVoices.retire[UnityEngine.Random.Range(0, characterVoices.retire.Count)].name;
             default:
                 return string.Empty;

@@ -217,7 +217,7 @@ public class StoryManager : MonoBehaviour
                     PlayerCharacterDefine Rikka = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/5.Rikka");
                     ProgressManager.Instance.AddPlayerCharacter(Rikka);
 
-                    // ZH‹L˜^ŠJ•ú
+                    // NH‹L˜^ŠJ•úy”š“û‰öl–¾•ä‚Ìˆúêr‚È“úíz
                     ProgressManager.Instance.AddNewRecord("Record.AkihoPaizuri", "AkihoPaizuri");
                 }
                 break;
@@ -238,6 +238,9 @@ public class StoryManager : MonoBehaviour
 
                     PlayerCharacterDefine Erena = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/6.Erena");
                     ProgressManager.Instance.AddPlayerCharacter(Erena);
+
+                    // NH‹L˜^ŠJ•úyƒNƒ[ƒ“‚Ì’Êí‹Æ–±z
+                    ProgressManager.Instance.AddNewRecord("Record.AkihoPaizuri", "AkihoPaizuri");
                 }
                 break;
             case 10:

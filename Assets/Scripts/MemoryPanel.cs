@@ -17,6 +17,11 @@ public class MemoryPanel : MonoBehaviour
     [SerializeField] private Image verticalScrollbar;
     [SerializeField] private Image verticalScrollbarHandle;
 
+    [Header("Debug")]
+    [SerializeField] private bool isOpen;
+
+    public bool IsOpen { get { return isOpen; } }
+
     public void OpenMemoryPanel()
     {
         // SE çƒê∂
@@ -38,6 +43,8 @@ public class MemoryPanel : MonoBehaviour
         verticalScrollbar.color = CustomColor.invisible();
         verticalScrollbarHandle.color = CustomColor.invisible();
 #endif
+
+        isOpen = true;
     }
 
     public void CloseMemoryPanel()
@@ -48,6 +55,8 @@ public class MemoryPanel : MonoBehaviour
         canvasGrp.DOFade(0.0f, animationTime);
         canvasGrp.interactable = false;
         canvasGrp.blocksRaycasts = false;
+
+        isOpen = false;
     }
 
     /// <summary>
