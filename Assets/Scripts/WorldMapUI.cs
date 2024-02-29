@@ -6,6 +6,9 @@ using DG.Tweening;
 
 public class WorldMapUI : MonoBehaviour
 {
+    [Header("Setting")]
+    [SerializeField] private string BGM = "Specification";
+
     [Header("References")]
     [SerializeField] private StageHandler stagehandler;
     [SerializeField] private TMPro.TMP_Text chapterName;
@@ -13,12 +16,15 @@ public class WorldMapUI : MonoBehaviour
     private void Start()
     {
         // BGMçƒê∂
-        AudioManager.Instance.PlayMusicWithFade("Specification", 6.0f);
+        AudioManager.Instance.PlayMusicWithFade(BGM, 6.0f);
 
         // âÊñ ëJà⁄
         AlphaFadeManager.Instance.FadeIn(1.0f);
 
-        chapterName.text = GetChapterName(ProgressManager.Instance.GetCurrentStageProgress());
+        if (chapterName != null)
+        {
+            chapterName.text = GetChapterName(ProgressManager.Instance.GetCurrentStageProgress());
+        }
     }
 
     public void ToHomeScene()

@@ -10,6 +10,7 @@ public class StageHandler : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private float stageIconSpacing = 350.0f;
     [SerializeField] private float arrowOffsetY = 50.0f;
+    [SerializeField] private int startingStage = 0;
 
     [Header("References")]
     [SerializeField] private RectTransform rect;

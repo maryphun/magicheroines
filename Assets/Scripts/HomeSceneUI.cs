@@ -38,7 +38,9 @@ public class HomeSceneUI : MonoBehaviour
         AudioManager.Instance.PauseMusic();
 
         const float animationTime = 1.0f;
-        StartCoroutine(SceneTransition("WorldMap", animationTime));
+
+        string targetMap = (ProgressManager.Instance.GetCurrentStageProgress() <= 16) ? "WorldMap" : "EndGameContent";
+        StartCoroutine(SceneTransition(targetMap, animationTime));
     }
     public void ToBlackMarketScene()
     {
