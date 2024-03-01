@@ -1337,9 +1337,32 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         const int numOfTarget = 3;
         var targets = new Battler[numOfTarget];
-        targets[0] = targetBattlers[UnityEngine.Random.Range(0, targetBattlers.Count)];
-        targets[1] = targetBattlers[UnityEngine.Random.Range(0, targetBattlers.Count)];
-        targets[2] = targetBattlers[UnityEngine.Random.Range(0, targetBattlers.Count)];
+        targets[0] = GetRandomAliveTarget();
+
+        Battler GetRandomAliveTarget()
+        {
+            Battler battler = targetBattlers[UnityEngine.Random.Range(0, targetBattlers.Count)];
+
+            if (!battler.isAlive)
+            {
+                // 全員リタイアか
+                bool Continue = false;
+                for (int i = 0; i < targetBattlers.Count; i ++)
+                {
+                    if (targetBattlers[i].isAlive)
+                    {
+                        Continue = true;
+                    }
+                }
+
+                if (Continue)
+                {
+                    return GetRandomAliveTarget();
+                }
+            }
+
+            return battler;
+        }
 
         // 元データを記録
         Transform originalParent = self.transform.parent;
@@ -1420,6 +1443,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(ReturnTime)
                 .AppendCallback(() =>
                 {
+                    // 次のターゲットを決める
+                    targets[1] = GetRandomAliveTarget();
+
                     // play SE
                     AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
 
@@ -1467,6 +1493,9 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(ReturnTime)
                 .AppendCallback(() =>
                 {
+                    // 次のターゲットを決める
+                    targets[2] = GetRandomAliveTarget();
+
                     // play SE
                     AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
 

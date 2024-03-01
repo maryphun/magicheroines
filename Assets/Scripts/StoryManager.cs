@@ -240,7 +240,7 @@ public class StoryManager : MonoBehaviour
                     ProgressManager.Instance.AddPlayerCharacter(Erena);
 
                     // NH‹L˜^ŠJ•úyƒNƒ[ƒ“‚Ì’Êí‹Æ–±z
-                    ProgressManager.Instance.AddNewRecord("Record.AkihoPaizuri", "AkihoPaizuri");
+                    ProgressManager.Instance.AddNewRecord("Record.CloneTask", "CloneTask");
                 }
                 break;
             case 10:
