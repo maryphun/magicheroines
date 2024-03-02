@@ -602,10 +602,10 @@ MonoBehaviour:
       BGMSecond: 0
       BGMFadeTime: 0
       BGMEndFadeTime: 0
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 0
+      SE: {fileID: 8300000, guid: 21e842699b920b146bee2335a025fb9c, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
       SESecond: 0
       SEFadeTime: 0
       SEEndFadeTime: 0
@@ -3122,13 +3122,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 8e5b97f7e834ed74784f39832d359059, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -4372,8 +4372,8 @@ MonoBehaviour:
       text: "\u305D\u306E\u5F8C\u3001\u516D\u82B1\u306FVIP\u5BA2\u9054\u306B\u4E00\u6669\u4E2D\u6027\u5949\u4ED5\u3092\u3059\u308B\u306E\u3060\u3063\u305F"
       localizationID: Rikka.Debauchery1-99
       back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
-      howBack: 1
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
       howCharas: 0000000000000000
       charas:
