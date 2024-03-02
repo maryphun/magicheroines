@@ -91,12 +91,12 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 0, g: 0, b: 0, a: 0}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 6a14eccef1bc88a44ac01de3ac3ffa1c, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 0
       BGMSecond: 0
-      BGMFadeTime: 0
+      BGMFadeTime: 6
       BGMEndFadeTime: 0
       SE: {fileID: 0}
       SEStyle: 0
@@ -511,17 +511,17 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 0, g: 0, b: 0, a: 0}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 8ce71f6fd348b5b4e85b590d3a5a3e4a, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 0
       BGMSecond: 0
-      BGMFadeTime: 0
+      BGMFadeTime: 6
       BGMEndFadeTime: 0
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 0
+      SE: {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
       SESecond: 0
       SEFadeTime: 0
       SEEndFadeTime: 0
@@ -602,10 +602,10 @@ MonoBehaviour:
       BGMSecond: 0
       BGMFadeTime: 0
       BGMEndFadeTime: 0
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 0
+      SE: {fileID: 8300000, guid: 03996dd0d2caa2f4fa469e43798c1ef0, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
       SESecond: 0
       SEFadeTime: 0
       SEEndFadeTime: 0
@@ -812,10 +812,10 @@ MonoBehaviour:
       BGMSecond: 0
       BGMFadeTime: 0
       BGMEndFadeTime: 0
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 0
+      SE: {fileID: 8300000, guid: 9f0b891f4fd278d428b0538fcde8705e, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
       SESecond: 0
       SEFadeTime: 0
       SEEndFadeTime: 0
@@ -854,10 +854,10 @@ MonoBehaviour:
       BGMSecond: 0
       BGMFadeTime: 0
       BGMEndFadeTime: 0
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 0
+      SE: {fileID: 8300000, guid: 529edaeac13a5244bb68ebf38f015327, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
       SESecond: 0
       SEFadeTime: 0
       SEEndFadeTime: 0
@@ -994,13 +994,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: c94d9b01b9b34914785cb0ddb2adb454, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1078,13 +1078,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 736693294543a7e46930b88242ce7655, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1204,13 +1204,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 9e9322ef2b0c6874798efc84d3f68f2a, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1288,13 +1288,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 88c0319e0332e164fa2b1d60702784a1, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1330,13 +1330,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: be3aaa04715c15943b56fc03490f54d3, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1372,13 +1372,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: f550cbdab46187948946fafb2040a3f0, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1456,13 +1456,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: b113035799f912f46971ad97ac9025cf, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1498,13 +1498,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: e439e18b4fbd92242bd6eee9b3a1d02b, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1540,13 +1540,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: c94d9b01b9b34914785cb0ddb2adb454, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1582,13 +1582,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: d3501c39cff96944d93cef7ac56cf49d, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1708,13 +1708,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 9f0b891f4fd278d428b0538fcde8705e, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1960,13 +1960,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
+      SE: {fileID: 8300000, guid: aa7c14cfcf332fd43a9a3cb1b9ee29b2, type: 3}
       SEStyle: 0
-      SELoop: 0
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -2002,13 +2002,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: aa7c14cfcf332fd43a9a3cb1b9ee29b2, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000

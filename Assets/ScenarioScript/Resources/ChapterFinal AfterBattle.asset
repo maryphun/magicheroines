@@ -25,8 +25,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: -223
       y: -1
-      width: 64
-      height: 97
+      width: 141
+      height: 121
     _nextParagraphIndex: -1
     nodeName: 
     _dialogueList:
@@ -58,7 +58,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 8ce71f6fd348b5b4e85b590d3a5a3e4a, type: 3}
+      BGM: {fileID: 8300000, guid: 2d88d6275c44d054fbda9a09602f493a, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1

@@ -91,12 +91,12 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 0, g: 0, b: 0, a: 0}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 68930b2d8dc4d614793f0316fbac1bda, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 0
       BGMSecond: 0
-      BGMFadeTime: 0
+      BGMFadeTime: 5
       BGMEndFadeTime: 0
       SE: {fileID: 0}
       SEStyle: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
       back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
-      backFadeSpeed: 1
+      backFadeSpeed: 1.5
       howCharas: 0100000001000000
       charas:
       - {fileID: 0}
@@ -286,7 +286,7 @@ MonoBehaviour:
       back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
-      backFadeSpeed: 0
+      backFadeSpeed: 1.5
       howCharas: 0100000001000000
       charas:
       - {fileID: 21300000, guid: 9e9e2f6ea565a964f8a799d9991d6cb9, type: 3}
@@ -728,10 +728,10 @@ MonoBehaviour:
       BGMSecond: 0
       BGMFadeTime: 0
       BGMEndFadeTime: 0
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 0
+      SE: {fileID: 8300000, guid: 6678b1dd31825d84eb40bdea56865cae, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
       SESecond: 0
       SEFadeTime: 0
       SEEndFadeTime: 0
@@ -918,7 +918,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 164
       y: 0
-      width: 64
+      width: 145
       height: 97
     _nextParagraphIndex: 2
     nodeName: 
@@ -1666,13 +1666,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 8e5b97f7e834ed74784f39832d359059, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1932,13 +1932,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 7d33d28a1cb68a04ba1a13ef8edef6c6, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -2870,13 +2870,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 46765e52ffb78f747b1dda37eae357d3, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -3542,13 +3542,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 0f7f6d445e1ef6a48aa51aaee59312bb, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -3640,13 +3640,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 18ddba7b71ab748489ae6be5607a9028, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -3766,13 +3766,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
+      SE: {fileID: 8300000, guid: 6dfa59efd3705fa44b4ffaeb464b274f, type: 3}
       SEStyle: 0
-      SELoop: 0
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -3808,13 +3808,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 6dfa59efd3705fa44b4ffaeb464b274f, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -4455,8 +4455,8 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 0.7561437, y: 0.7561437, z: 1}
-  graphPosition: {x: 63, y: 256, z: 0}
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: 135, y: 184, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
