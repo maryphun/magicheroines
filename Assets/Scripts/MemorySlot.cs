@@ -43,6 +43,7 @@ public class MemorySlot : MonoBehaviour
 
     public void OnClickButton()
     {
+        btn.interactable = false;
         AudioManager.Instance.PauseMusic();
         AudioManager.Instance.PlaySFX("SystemDecide");
         NovelSingletone.Instance.PlayNovel(data, true, ReturnFromMemory);
@@ -55,6 +56,7 @@ public class MemorySlot : MonoBehaviour
 
     public void ReturnFromMemory()
     {
+        btn.interactable = true;
         AudioManager.Instance.UnpauseMusic();
     }
 }
