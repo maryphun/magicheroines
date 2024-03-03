@@ -3784,7 +3784,7 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 654740c7a1ffb48428e05935cf0262e3, type: 3}
+      SE: {fileID: 8300000, guid: 3d98526f4dcf8424da316c87b9a0b470, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1
@@ -3805,7 +3805,7 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 00000000000000000000000000000000
+      howCharas: 00000000000000000200000002000000
       charas:
       - {fileID: 21300000, guid: 085e83187cd4f6a478a3b9a5b1c2cd58, type: 3}
       - {fileID: 0}
@@ -3814,8 +3814,8 @@ MonoBehaviour:
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 1, g: 0, b: 0, a: 1}
+      - {r: 1, g: 0, b: 0, a: 1}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3830,13 +3830,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: fe20b3e7ca7e574459dc4d990f43e86a, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 04000000000000000100000001000000
@@ -3876,7 +3876,7 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 228e791ecf51bb148bc06113efec117f, type: 3}
+      SE: {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1
@@ -3968,7 +3968,7 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 0
       BGMEndFadeTime: 0
-      SE: {fileID: 8300000, guid: 654740c7a1ffb48428e05935cf0262e3, type: 3}
+      SE: {fileID: 8300000, guid: 6a90008148c83ac4ead70ec6f9993cd4, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1
@@ -4044,8 +4044,8 @@ MonoBehaviour:
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 1}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4060,13 +4060,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: b9ca873c1e32b42449368a826da3cc03, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 04000000000000000100000001000000
@@ -4182,8 +4182,8 @@ MonoBehaviour:
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 1}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -4198,7 +4198,7 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 228e791ecf51bb148bc06113efec117f, type: 3}
+      SE: {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1

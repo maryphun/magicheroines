@@ -221,7 +221,7 @@ public class TrainPanel : MonoBehaviour
         }
         else
         {
-            cost[0] = (characters[currentIndex].hornyEpisode * 50) + 50;
+            cost[0] = (characters[currentIndex].hornyEpisode * 15) + 50;
             hornyActionCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[0];
 
             // ポイント不足
@@ -236,7 +236,7 @@ public class TrainPanel : MonoBehaviour
         }
         else
         {
-            cost[1] = (characters[currentIndex].corruptionEpisode * 50) + 50;
+            cost[1] = (characters[currentIndex].corruptionEpisode * 10) + 50;
             corruptActionCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[1];
 
             // ポイント不足
@@ -251,7 +251,7 @@ public class TrainPanel : MonoBehaviour
         }
         else
         {
-            cost[2] = (characters[currentIndex].holyCoreEpisode * 50) + 50;
+            cost[2] = (characters[currentIndex].holyCoreEpisode * 30) + 50;
             coreCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[2];
 
             // ポイント不足

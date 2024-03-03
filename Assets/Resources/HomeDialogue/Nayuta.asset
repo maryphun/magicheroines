@@ -13,5 +13,20 @@ MonoBehaviour:
   m_Name: Nayuta
   m_EditorClassIdentifier: 
   pathName: Nayuta
-  characterSprite: {fileID: 21300000, guid: 16f3b6d9aa24b3d43aedea082bd3c9bb, type: 3}
-  dialogueList: []
+  characterSprite: {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+  dialogueList:
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.Nayuta_F-1
+    clip: {fileID: 8300000, guid: f75e8de63f56e89408453ef8e729ae7e, type: 3}
+    sprite: {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.Nayuta_F-2
+    clip: {fileID: 8300000, guid: ccd511e1448169941a0ac8c6f3d17abe, type: 3}
+    sprite: {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.Nayuta_F-3
+    clip: {fileID: 8300000, guid: c57f902b88d5f2f449117beca922bcbb, type: 3}
+    sprite: {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
