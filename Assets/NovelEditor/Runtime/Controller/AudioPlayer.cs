@@ -112,6 +112,7 @@ namespace NovelEditor
             _BGM.Stop();
             _SE.Stop();
             _VOICE.Stop();
+            _isLoopingSE = false;
         }
 
         /// <summary>

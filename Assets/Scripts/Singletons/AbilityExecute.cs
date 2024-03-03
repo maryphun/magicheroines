@@ -872,6 +872,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // Audio
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         // ログ ({0}　からの {1} ！)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
@@ -937,6 +938,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // Audio
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         // ログ ({0}　からの {1} ！)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
@@ -1015,6 +1017,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // SE
         AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         // calculate projectile time base on range
         float projectileTime = 1.0f;
@@ -1077,6 +1080,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // SE
         AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         // calculate projectile time base on range
         float projectileTime = 1.0f;
@@ -1146,6 +1150,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         rectTransform.DOMoveX(originalPos.x - 150.0f, 0.75f);
         var sequence = DOTween.Sequence();

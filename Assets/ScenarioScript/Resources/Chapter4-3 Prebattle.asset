@@ -52,7 +52,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 94a67efcdedb7a343bc63b9b723cdea8, type: 3}
+      BGM: {fileID: 8300000, guid: 86cbda811d7f7694994733b2de07ad66, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -175,7 +175,7 @@ MonoBehaviour:
       - {fileID: 21300000, guid: f7a6dda4ff727ae44aec65423067f6eb, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
@@ -649,7 +649,7 @@ MonoBehaviour:
     _nextChoiceIndexes: ffffffff
   _choiceList: []
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: -204, y: 163, z: 0}
+  graphPosition: {x: 172, y: 172, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}

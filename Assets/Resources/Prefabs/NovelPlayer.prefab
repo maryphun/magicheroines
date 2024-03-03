@@ -3123,6 +3123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 1
   text: {fileID: 8931046249804360808}
   button: {fileID: 1911256574039653992}
   eventSystem: {fileID: 0}

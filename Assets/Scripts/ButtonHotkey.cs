@@ -10,6 +10,7 @@ public class ButtonHotkey : MonoBehaviour
 {
     [Header("Setting")]
     [SerializeField] private KeyCode key;
+    [SerializeField] private bool isForDialogueSystem = false;
 
     [Header("References")]
     [SerializeField] private TMPro.TMP_Text text;
@@ -38,6 +39,8 @@ public class ButtonHotkey : MonoBehaviour
         if (!button.IsInteractable()) return;
         if (!button.enabled) return;
         if (!button.gameObject.activeInHierarchy) return;
+        if (!isForDialogueSystem && NovelSingletone.Instance.IsPlaying()) return;
+        if (isForDialogueSystem && !NovelSingletone.Instance.IsPlaying()) return;
 
         if (Input.GetKeyDown(key))
         {

@@ -55,7 +55,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 1b8f10260c84f8b4f83204646a42add1, type: 3}
+      BGM: {fileID: 8300000, guid: ab588321c91c3e9459881f960ecbd6fa, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -837,14 +837,14 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 7f7ee1a1f98cfad42bb4c6d50f0f5bea, type: 3}
+      BGM: {fileID: 8300000, guid: 6a14eccef1bc88a44ac01de3ac3ffa1c, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
       BGMFadeTime: 10
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 85af7e937dd58224eab28e508bcfa274, type: 3}
+      SE: {fileID: 8300000, guid: 17a997b3002ebee42848dddc2e4cdd79, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1

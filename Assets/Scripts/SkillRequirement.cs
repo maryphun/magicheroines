@@ -31,7 +31,6 @@ public class SkillRequirement : MonoBehaviour
         isHovering = false;
         sizeDelta = rect.sizeDelta * mainCanvas.scaleFactor;
         rectPosition = rect.position + new Vector3(sizeDelta.x * 0.5f, -sizeDelta.y * 0.5f, 0.0f);
-        Debug.Log(rectPosition + ", " + transform.position);
     }
 
     private void Update()

@@ -22,9 +22,9 @@ MonoBehaviour:
     _index: 0
     _nodePosition:
       serializedVersion: 2
-      x: -21
+      x: -20
       y: -52
-      width: 64
+      width: 138
       height: 97
     _nextParagraphIndex: 1
     nodeName: 
@@ -55,7 +55,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 3059b3e88bfd8184babff2946dcb8f33, type: 3}
+      BGM: {fileID: 8300000, guid: 87d28158a1db9854c82b473cea588d7e, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -769,7 +769,7 @@ MonoBehaviour:
       Name: 
       text: "\u30AF\u30ED\u30FC\u30F3\u306B\u9023\u308C\u3066\u3044\u304B\u308C\u305F\u30D3\u30EB\u306E\u4E2D\u306E\u4E00\u5BA4\u306B\u3066"
       localizationID: Dialog.Chapter2-2-16.2
-      back: {fileID: 0}
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 0.5
@@ -815,7 +815,7 @@ MonoBehaviour:
       Name: Name.Rikka
       text: "\u300C\u2026\u3063\u306A\u3093\u3067\u5168\u88F8\u306B\u306A\u308B\u5FC5\u8981\u304C\u3042\u308B\u306E\u3063\uFF01\uFF1F\u300D"
       localizationID: Dialog.Chapter2-2-17
-      back: {fileID: 0}
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
       howBack: 0
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
@@ -883,7 +883,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: e31139d61ba449343b42a07e3bcf47df, type: 3}
+      BGM: {fileID: 8300000, guid: 86cbda811d7f7694994733b2de07ad66, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -3501,14 +3501,14 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: a8f591ac78f4c5948aafea16a5c9f762, type: 3}
+      BGM: {fileID: 8300000, guid: ab588321c91c3e9459881f960ecbd6fa, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 6e33556fd4d5d0041ad08c8de46a9854, type: 3}
+      SE: {fileID: 8300000, guid: af9ebf568b9ddaf49bdc08e88fe81d85, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1

@@ -295,7 +295,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: a692403ecd88a8948b52b3fdbc98a74e, type: 3}
     - {fileID: 8300000, guid: 1e4e5e16c0756814192883d2316d1351, type: 3}
     - {fileID: 8300000, guid: 5098365e96062844c80ab68ab612005e, type: 3}
-    retire: []
+    retire:
+    - {fileID: 8300000, guid: a692403ecd88a8948b52b3fdbc98a74e, type: 3}
   attackVFX: {fileID: 1343633729508638609, guid: a6753ca6f258e914b96162459ca96c63, type: 3}
   breathScale: 0.005
   enableNormalAttack: 1
