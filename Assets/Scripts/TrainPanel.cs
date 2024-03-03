@@ -251,7 +251,7 @@ public class TrainPanel : MonoBehaviour
         }
         else
         {
-            cost[2] = (characters[currentIndex].holyCoreEpisode * 30) + 50;
+            cost[2] = (characters[currentIndex].holyCoreEpisode * 60) + 60;
             coreCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[2];
 
             // ポイント不足

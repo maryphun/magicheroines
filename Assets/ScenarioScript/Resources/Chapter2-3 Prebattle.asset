@@ -229,7 +229,7 @@ MonoBehaviour:
       - {fileID: 21300000, guid: c6e6d35c0a08b194fb32b88da961f85f, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 1, g: 0.514151, b: 0.514151, a: 0}
+      - {r: 1, g: 0, b: 0, a: 1}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
@@ -645,7 +645,7 @@ MonoBehaviour:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0.514151, g: 0.9778178, b: 1, a: 0}
+      - {r: 0.514151, g: 0.9778178, b: 1, a: 1}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -660,7 +660,7 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 8300000, guid: 6e33556fd4d5d0041ad08c8de46a9854, type: 3}
+      SE: {fileID: 8300000, guid: af9ebf568b9ddaf49bdc08e88fe81d85, type: 3}
       SEStyle: 1
       SELoop: 1
       SECount: 1

@@ -15217,7 +15217,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 495879952}
         m_TargetAssemblyTypeName: TrainPanel, Assembly-CSharp
-        m_MethodName: CloseNewBattlerPopup
+        m_MethodName: CloseNewCoreEquipmentPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

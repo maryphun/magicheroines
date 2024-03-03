@@ -70,7 +70,6 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.SetBattleBGM("AkihoBattle");
                     BattleSetup.SetReward(450, 50);
                     BattleSetup.AddEquipmentReward("NiceTshirt");
-                    BattleSetup.SetBattleBack(BattleBack.Basement);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -79,6 +78,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Rikka_Enemy");
                     BattleSetup.SetBattleBGM("Loop 37 (RikkaBattle)");
                     BattleSetup.SetReward(1500, 300);
+                    BattleSetup.SetBattleBack(BattleBack.Basement);
                     NovelSingletone.Instance.PlayNovel("Chapter2-3 Prebattle", true, GoToBattle);
                 }
                 break;

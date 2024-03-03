@@ -65,6 +65,9 @@ public class CharacterDataPanel : MonoBehaviour
         {
             var data = ProgressManager.Instance.GetEquipmentData().FirstOrDefault(x => x.equipingCharacterID == mainPanel.CurrentCheckingSlot).data;
 
+            // 明穂の聖核装備特殊処理
+            if (data.pathName == "Equip_Akiho") data.hp = character.current_maxHp / 2;
+
             if (data.hp != 0) hpValue.text = hpValue.text + "<size=75%><color=" + (data.hp > 0 ? "green>(+" : "red>(") + data.hp + ")";
             if (data.sp != 0) mpValue.text = mpValue.text + "<size=75%><color=" + (data.sp > 0 ? "green>(+" : "red>(") + data.sp + ")";
             if (data.atk != 0) attackValue.text = attackValue.text + "<size=75%><color=" + (data.atk > 0 ? "green>(+" : "red>(") + data.atk + ")";

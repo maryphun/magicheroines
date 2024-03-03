@@ -62,6 +62,11 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
 
     public IEnumerator Equip_AkihoStart(Battler battler)
     {
+        //int addValue = battler.max_hp / 2;
+        //Debug.Log("add value: " + addValue.ToString());
+        //battler.max_hp += addValue;
+        //battler.current_hp += addValue;
+
         battler.onTurnBeginEvent.AddListener(EquipmentMethods.AkihoSeikakuExecute);
         yield return null;
     }
