@@ -69,6 +69,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("GoldAndroid 2");
                     BattleSetup.SetBattleBGM("AkihoBattle");
                     BattleSetup.SetReward(450, 50);
+                    BattleSetup.AddEquipmentReward("NiceTshirt");
                     BattleSetup.SetBattleBack(BattleBack.Basement);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
@@ -95,6 +96,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("DarkAndroid");
                     BattleSetup.AddEnemy("GoldDrone");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
+                    BattleSetup.AddEquipmentReward("Glove");
                     BattleSetup.SetReward(550, 75);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
@@ -123,6 +125,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("DarkAndroid 2");
                     BattleSetup.AddEnemy("Drone 4");
                     BattleSetup.SetBattleBGM("Loop (Battle3)");
+                    BattleSetup.AddEquipmentReward("Shoes");
                     BattleSetup.SetReward(600, 100);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }

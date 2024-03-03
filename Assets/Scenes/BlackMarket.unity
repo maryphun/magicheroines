@@ -5057,6 +5057,12 @@ MonoBehaviour:
     requirementProgress: 4
     isUnique: 1
     isEquipment: 1
+  - item: {fileID: 0}
+    equipment: {fileID: 11400000, guid: 1749578d3516e6e42884d1472c91602c, type: 2}
+    cost: 750
+    requirementProgress: 5
+    isUnique: 1
+    isEquipment: 1
   ShopItemList:
   - button: {fileID: 1970510954}
     data:

@@ -16,11 +16,11 @@ MonoBehaviour:
   equipNameID: Equipment.Kei
   descriptionID: Equipment.Kei_Info
   equipmentType: 2
-  effectText: +500 SP
-  battleStartFunctionName: 
+  effectText: +200 SP
+  battleStartFunctionName: Equip_KeiStart
   battleEndFunctionName: 
   hp: 0
-  sp: 500
+  sp: 200
   atk: 0
   def: 0
   spd: 0

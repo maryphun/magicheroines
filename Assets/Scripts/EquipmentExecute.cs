@@ -81,6 +81,16 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
         battler.onAttackedEvent.RemoveListener(EquipmentMethods.RikkaSeikakuExecute);
         yield return null;
     }
+    public IEnumerator Equip_KeiStart(Battler battler)
+    {
+        var teammates = FindObjectOfType<Battle>().GetAllTeammate();
+
+        foreach (var teammate in teammates)
+        {
+            if (teammate != battler) EquipmentMethods.KeiSeikakuStart(teammate);
+        }
+        yield return null;
+    }
 
     public IEnumerator Equip_NayutaStart(Battler battler)
     {
@@ -184,6 +194,13 @@ public static class EquipmentMethods
         {
             battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
         }
+    }
+    public static void KeiSeikakuStart(Battler battler)
+    {
+        if (battleManager == null) return;
+        
+        const int amount = 15;
+        battler.attack += amount;
     }
     public static void NayutaSeikakuExecute()
     {
