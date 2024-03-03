@@ -805,7 +805,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1250
+    width: 1000
     height: 1
 --- !u!222 &418288075
 CanvasRenderer:
@@ -1985,7 +1985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7feca9d95a2d7454e9b387bb76b7e81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LocalizationKey: System.Story
+  LocalizationKey: System.EndGameContent
   Extra: 
 --- !u!222 &915016690
 CanvasRenderer:

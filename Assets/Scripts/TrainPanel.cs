@@ -19,6 +19,7 @@ public class TrainPanel : MonoBehaviour
 
     [Header("Setting")]
     [SerializeField, Range(0.0f, 1.0f)] private float animationTime = 0.5f;
+    [SerializeField] EquipmentDefine[] seikakuEquip = new EquipmentDefine[5];
 
     [Header("References")]
     [SerializeField] private CanvasGroup canvasGroup;
@@ -387,8 +388,8 @@ public class TrainPanel : MonoBehaviour
                 {
                     // êπäjëïîıälìæ
                     EquipmentDefine newEquipment = characters[currentIndex].characterData.coreEquipment;
-                    CallNewCoreEquipmentPopup(newEquipment);
                     ProgressManager.Instance.AddNewEquipment(newEquipment);
+                    CallNewCoreEquipmentPopup(newEquipment);
                 }
                 break;
             default:
@@ -467,6 +468,16 @@ public class TrainPanel : MonoBehaviour
         newCoreEquipmentPopup.DOFade(1.0f, 0.5f);
         newCoreEquipmentPopup.interactable = true;
         newCoreEquipmentPopup.blocksRaycasts = true;
+
+        // Check Record
+        if (   ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[0])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[1])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[2])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[3])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[4]))
+        {
+            ProgressManager.Instance.AddNewRecord("Record.SeikakuEquip", "SeikakuEquip");
+        }
     }
     public void CloseNewCoreEquipmentPopup()
     {

@@ -834,7 +834,7 @@ MonoBehaviour:
       y: 0
       width: 120
       height: 97
-    _nextParagraphIndex: -1
+    _nextParagraphIndex: 2
     nodeName: 
     _dialogueList:
     - open: 0
@@ -2056,8 +2056,3028 @@ MonoBehaviour:
     detailOpen: 0
     _next: 0
     _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 302
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 3
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3042\u30FC\u3001\u3058\u3083\u3042\u660E\u65E5\u306E\u671D\u8FCE\u3048\u306B\u6765\u3066\u3084\u308B\u304B\u3089\u3001\u305D\u308C\u307E\u3067\u9811\u5F35\u3063\u3066\u304F\u308C\u300D"
+      localizationID: Record.Erenayuta-52
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3075\u3063\u2026\u671B\u3080\u3068\u3053\u308D\u3067\u3059\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-53
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3053\u306E\u52DD\u8CA0\u2026\u672C\u6C17\u3067\u30A4\u30AB\u305B\u3066\u3044\u305F\u3060\u304D\u307E\u3059\uFF01\u300D"
+      localizationID: Record.Erenayuta-54
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u30A8\u30EC\u30CA\u3068\u90A3\u7531\u591A\u306F\u4E00\u6669\u4E2D\u643E\u7CBE\u8089\u4FBF\u5668\u52DD\u8CA0\u3078\u3068\u81E8\u3080\u306E\u3067\u3042\u3063\u305F"
+      localizationID: Record.Erenayuta-55
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 1
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u2015\u2015\u2015\u7FCC\u65E5"
+      localizationID: Record.Erenayuta-56
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3053\u306B\u306F\u4F53\u4E2D\u306B\u7121\u6570\u306E\u5351\u7325\u306A\u843D\u66F8\u304D\u3092\u3055\u308C\u3001\u7CBE\u6DB2\u306B\u307E\u307F\u308C\u305F\u4E8C\u4EBA\u306E\u59FF\u304C\u3042\u3063\u305F"
+      localizationID: Record.Erenayuta-57
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u2026\u2026\u304A\u309B\u304A\u3063\u2665\u2026\u2026\u2026\u2026\u300D"
+      localizationID: Record.Erenayuta-58
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3093\u309B\u3042\u3063\u2026\u2665\u3001\u304A\u309B\u3063\u2665\u3001\u304A\u309B\u2026\u2026\u300D"
+      localizationID: Record.Erenayuta-59
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u304A\u306F\u3088\u3046\u4E8C\u4EBA\u3068\u3082\u3001\u304A\u30FC\u304A\u30FC\u3053\u308A\u3083\u3059\u3052\u3048\u306A\uFF57\u300D"
+      localizationID: Record.Erenayuta-60
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u4F53\u4E2D\u306B\u7CBE\u6DB2\u3076\u3063\u304B\u3051\u3089\u308C\u307E\u304F\u3063\u3066\u2026\u30DE\u30B8\u306E\u4FBF\u5668\u3058\u3083\u306D\u3048\u304B\uFF57\u300D"
+      localizationID: Record.Erenayuta-61
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u304A\u309B\u2665\u3001\u2026\u2026\u308F\u305F\u3057\u2665\u3001\u306E\u2665\u3001\u52DD\u3061\u3067\u3059\u3063\u2026\u2665\u300D"
+      localizationID: Record.Erenayuta-62
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3093\u3063\u2665\u3001\u79C1\u3053\u305D\u304C\u3063\u2665\u2026\u6CA2\u5C71\u4F7F\u3063\u3066\u3082\u3089\u3063\u3066\u30C3\u2665\u2665\u300D"
+      localizationID: Record.Erenayuta-63
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u4F55\u3060\u304A\u524D\u3089\uFF1F\u3082\u3046\u9650\u754C\u306A\u306E\u304B\uFF1F\u3082\u3046\u6B21\u306E\u5BA2\u304C\u6765\u3066\u308B\u305E\u300D"
+      localizationID: Record.Erenayuta-64
+      back: {fileID: 21300000, guid: 347c05ea66ce6e34da434a89d6fcd9d6, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3063\u2665\u3001\u308F\u3001\u79C1\u3092\u4F7F\u3063\u3066\u304F\u3060\u3055\u3044\u3063\uFF01\u300D"
+      localizationID: Record.Erenayuta-65
+      back: {fileID: 21300000, guid: cf40564b23221894fbc1a14d0613ba61, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3044\u3048\u3063\u3001\u3053\u3053\u306F\u79C1\u3092\u30C3\u2665\u2665\u300D"
+      localizationID: Record.Erenayuta-66
+      back: {fileID: 21300000, guid: cf40564b23221894fbc1a14d0613ba61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u304A\u30FC\u304A\u30FC\u307E\u3060\u5143\u6C17\u3058\u3083\u306D\u3048\u304B\u3002\u6D41\u77F3\u6700\u5F37\u306E\u8056\u6838\u6226\u59EB\u3060\u306A\u3041\uFF1F\u300D"
+      localizationID: Record.Erenayuta-67
+      back: {fileID: 21300000, guid: cf40564b23221894fbc1a14d0613ba61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u5F53\u305F\u308A\u524D\u3067\u3059\u3063\u2665\u3001\u8089\u4FBF\u5668\u52DD\u8CA0\u3068\u3066\u624B\u306F\u629C\u3051\u307E\u305B\u3093\u3063\uFF01\u300D"
+      localizationID: Record.Erenayuta-68
+      back: {fileID: 21300000, guid: cf40564b23221894fbc1a14d0613ba61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u306F\u3063\u2665\u3001\u6700\u5F37\u306E\u8089\u4FBF\u5668\u304C\u3069\u3093\u306A\u3082\u306E\u304B\u898B\u305B\u3066\u3042\u3052\u307E\u3059\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-69
+      back: {fileID: 21300000, guid: cf40564b23221894fbc1a14d0613ba61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D0\u30C1\u30E5\u30C3\u3001\u30D0\u30C1\u30E5\u30C3\u3001\u30D0\u30C1\u30E5\u30C3\u3001\u30D0\u30C1\u30E5\u30C3\uFF01"
+      localizationID: Record.Erenayuta-70
+      back: {fileID: 21300000, guid: 8dc0835ecccc62747a1509c3a4d53270, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 8dc0835ecccc62747a1509c3a4d53270, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 3
+    _nodePosition:
+      serializedVersion: 2
+      x: 443
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 4
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3093\u3063\u2665\u3001\u3042\u3063\u2665\u3001\u3093\u3093\u3063\u2665\u2665\u300D"
+      localizationID: Record.Erenayuta-71
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3093\u3042\u3063\u2665\u3001\u304A\u309B\u3063\u2665\u3001\u3046\u3093\u3063\u2665\u2665\u300D"
+      localizationID: Record.Erenayuta-72
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30A8\u30EC\u30CA\u3068\u90A3\u7531\u591A\u306F\u65E2\u306B\u4F55\u4EBA\u3082\u306E\u30C1\u30F3\u30DD\u3092\u53D7\u3051\u5165\u308C\u3066\u304A\u308A\u3001\u3082\u306F\u3084\u8089\u4FBF\u5668\u3067\u3042\u308B\u3053\u3068\u306B\u5168\u304F\u62B5\u6297\u306F\u306A\u304B\u3063\u305F"
+      localizationID: Record.Erenayuta-73
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3093\u3063\u2665\u3001\u65E9\u304F\u5C04\u7CBE\u3057\u306A\u3055\u3044\u3063\u2665\u3001\u3053\u306E\u30D6\u30BF\u5973\u306B\u8CA0\u3051\u3066\u3089\u308C\u307E\u305B\u3093\u3063\uFF01\u300D"
+      localizationID: Record.Erenayuta-74
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3063\u2665\u3001\u305D\u3063\u3061\u3053\u305D\u3063\u2665\u3001\u8089\u4ED8\u304D\u304C\u3044\u3044\u3060\u3051\u306E\u30E1\u30B9\u725B\u306E\u304F\u305B\u306B\u3063\u2665\u3001\u751F\u610F\u6C17\u3067\u3059\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-75
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30AF\u30C3\u3001\u30C9\u30D3\u30E5\u30EB\u30EB\u30EB\u30C3\u30C3\uFF01"
+      localizationID: Record.Erenayuta-76
+      back: {fileID: 21300000, guid: 5304a7b681112d9468c0d0272311ab67, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u4F55\u5EA6\u76EE\u304B\u3082\u308F\u304B\u3089\u306A\u3044\u7CBE\u6DB2\u304C\u4E8C\u4EBA\u306B\u653E\u305F\u308C\u308B"
+      localizationID: Record.Erenayuta-77
+      back: {fileID: 21300000, guid: 5304a7b681112d9468c0d0272311ab67, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3093\u3063\u2665\u3001\u304D\u3001\u6765\u307E\u3057\u305F\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-78
+      back: {fileID: 21300000, guid: 5304a7b681112d9468c0d0272311ab67, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3063\u2665\u3001\u3042\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3045\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-79
+      back: {fileID: 21300000, guid: 5304a7b681112d9468c0d0272311ab67, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u305A\u308B\u308A\u3068\u90A3\u7531\u591A\u304B\u3089\u30C1\u30F3\u30DD\u304C\u5F15\u304D\u629C\u304B\u308C\u308B"
+      localizationID: Record.Erenayuta-80
+      back: {fileID: 21300000, guid: 3c1526f24bc87a74ab545cc2ff37c920, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u2026\u4F55\u3057\u3066\u308B\u3093\u3067\u3059\u304B\u3001\u5C04\u7CBE\u304C\u7D42\u308F\u3063\u305F\u306A\u3089\u65E9\u304F\u3069\u3044\u3066\u304F\u3060\u3055\u3044\uFF01\u300D"
+      localizationID: Record.Erenayuta-81
+      back: {fileID: 21300000, guid: 3c1526f24bc87a74ab545cc2ff37c920, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3044\u3084\u30FC\u3001\u5C04\u7CBE\u3057\u305F\u3089\u3082\u3088\u304A\u3057\u3066\u304D\u3061\u3083\u3063\u3066\u306D\u3001\u3053\u306E\u307E\u307E\u3055\u305B\u3066\u3082\u3089\u3046\u3088\u300D"
+      localizationID: Record.Erenayuta-82
+      back: {fileID: 21300000, guid: 3c1526f24bc87a74ab545cc2ff37c920, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3046\u8A00\u3046\u3068\u7537\u306F\u30A8\u30EC\u30CA\u306E\u81A3\u5185\u3067\u653E\u5C3F\u3092\u59CB\u3081\u308B"
+      localizationID: Record.Erenayuta-83
+      back: {fileID: 21300000, guid: 3c1526f24bc87a74ab545cc2ff37c920, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B8\u30E7\u30DC\u30C3\u3001\u30B8\u30E7\u30DC\u30DC\u30DC\u30C3\uFF01"
+      localizationID: Record.Erenayuta-84
+      back: {fileID: 21300000, guid: a77250eafd79b4f49a925b5f125f3b07, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.5
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u306A\u3063\u2665\u3001\u4F55\u3057\u3066\u308B\u3093\u3067\u3059\u304B\u3063\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-85
+      back: {fileID: 21300000, guid: a77250eafd79b4f49a925b5f125f3b07, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: a77250eafd79b4f49a925b5f125f3b07, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 4
+    _nodePosition:
+      serializedVersion: 2
+      x: 604
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 5
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u7121\u69D8\u3067\u3059\u306D\u2026\u2665\u300D"
+      localizationID: Record.Erenayuta-86
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3059\u308B\u306E\u306F\u52DD\u624B\u3067\u3059\u304C\u2026\u3053\u3093\u306A\u30DD\u30A4\u30F3\u30C8\u306B\u306A\u3089\u306A\u3044\u3053\u3068\u3092\u3063\uFF01\u65E9\u304F\u7D42\u308F\u3089\u305B\u3066\u304F\u3060\u3055\u3044\uFF01\u300D"
+      localizationID: Record.Erenayuta-87
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3042\u30FC\u3001\u653E\u5C3F\u30821\u30DD\u30A4\u30F3\u30C8\u3067\u826F\u3044\u3093\u3058\u3083\u306D\u3048\u304B\uFF1F\u8089\u4FBF\u5668\u306A\u3093\u3060\u3057\u300D"
+      localizationID: Record.Erenayuta-88
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u306A\u3063\uFF01\uFF1F\u300D"
+      localizationID: Record.Erenayuta-89
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3075\u3075\u3063\u3001\u3069\u3046\u3084\u3089\u79C1\u306E\u65B9\u304C\u30EC\u30D9\u30EB\u306E\u9AD8\u3044\u8089\u4FBF\u5668\u306E\u3088\u3046\u3067\u3059\u306D\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-90
+      back: {fileID: 21300000, guid: 8acd23315fd15fa4394e7cb8e037c241, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u306A\u3063\u3001\u308F\u3001\u79C1\u306B\u3082\u3063\u2665\u3001\u79C1\u306B\u3082\u304A\u3057\u3063\u3053\u3057\u3066\u304F\u3060\u3055\u3044\u3063\u2665\u3001\u30A8\u30EC\u30CA\u306B\u8CA0\u3051\u308B\u308F\u3051\u306B\u306F\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-91
+      back: {fileID: 21300000, guid: 8acd23315fd15fa4394e7cb8e037c241, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: name.Man
+      text: "\u300C\u3042\uFF1F\u3057\u3087\u3046\u304C\u306D\u30FC\u306A\u30FC\u300D"
+      localizationID: Record.Erenayuta-92
+      back: {fileID: 21300000, guid: 8acd23315fd15fa4394e7cb8e037c241, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B8\u30E7\u30DC\u30C3\u3001\u30B8\u30E7\u30DC\u30DC\u30DC\u30C3\uFF01"
+      localizationID: Record.Erenayuta-93
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3050\u3063\u2665\u3001\u3093\u3093\u3063\u2665\u2665\u300D"
+      localizationID: Record.Erenayuta-94
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u7537\u306F\u90A3\u7531\u591A\u306E\u9854\u3078\u5411\u3051\u3066\u52E2\u3044\u3088\u304F\u653E\u5C3F\u3059\u308B"
+      localizationID: Record.Erenayuta-95
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3054\u307C\u3063\u2665\u3001\u3052\u3076\u3063\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-96
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3075\u3046\u3001\u3059\u3063\u304D\u308A\u3057\u305F\u305C\u300D"
+      localizationID: Record.Erenayuta-97
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u306F\u3042\u3063\u3001\u306F\u3041\u3063\u2665\u3001\u3053\u308C\u3067\u4E92\u89D2\u3067\u3059\u306D\uFF01\u300D"
+      localizationID: Record.Erenayuta-98
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u306A\u3063\u2026\u3042\u306A\u305F\u305D\u3053\u307E\u3067\u2026\uFF01\u300D"
+      localizationID: Record.Erenayuta-99
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u8CA0\u3051\u3066\u3089\u308C\u307E\u305B\u3093\u3063\u3001\u7686\u69D8\u30C3\u2665\u3001\u3082\u3063\u3068\u79C1\u3092\u4F7F\u3063\u3066\u304F\u3060\u3055\u3044\u3063\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-100
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3044\u3048\u3063\u3001\u79C1\u3092\u30C3\u2665\u3001\u30B6\u30FC\u30E1\u30F3\u3067\u3082\u304A\u3057\u3063\u3053\u3067\u3082\u3001\u6CA2\u5C71\u3076\u3063\u304B\u3051\u3066\u304F\u3060\u3055\u3044\u3063\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-101
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\u3001\u5FC5\u6B7B\u3060\u306A\u3002\u307E\u3042\u5F8C3\u65E5\u9593\u3053\u306E\u307E\u307E\u306B\u3057\u3066\u304A\u304F\u304B\u3089\u305B\u3044\u305C\u3044\u9811\u5F35\u3063\u3066\u304F\u308C\u300D"
+      localizationID: Record.Erenayuta-102
+      back: {fileID: 21300000, guid: 053fd1f030adf9042b65430533ad9f61, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u671B\u3080\u3068\u3053\u308D\u3067\u3059\uFF01\u3069\u3063\u3061\u304C\u672C\u7269\u306E\u8089\u4FBF\u5668\u304B\u898B\u305B\u3066\u3042\u3052\u307E\u3059\u3063\uFF01\u300D"
+      localizationID: Record.Erenayuta-103
+      back: {fileID: 21300000, guid: 8dc0835ecccc62747a1509c3a4d53270, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u79C1\u306F\u7D76\u5BFE\u306B\u8CA0\u3051\u307E\u305B\u3093\u3063\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-104
+      back: {fileID: 21300000, guid: 8dc0835ecccc62747a1509c3a4d53270, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u2015\u2015\u20153\u65E5\u5F8C"
+      localizationID: Record.Erenayuta-105
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 1
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 5
+    _nodePosition:
+      serializedVersion: 2
+      x: 750
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3055\u3066\u3068\u3001\u3069\u3046\u306A\u3063\u305F\u304B\u306A\u2026\u3068\u3001\u3046\u304A\u3063\u300D"
+      localizationID: Record.Erenayuta-106
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3053\u306B\u306F\u4F53\u4E2D\u306B\u843D\u66F8\u304D\u3092\u3055\u308C\u3001\u4F53\u4E2D\u304C\u7CBE\u6DB2\u3068\u30B3\u30F3\u30C9\u30FC\u30E0\u306B\u307E\u307F\u308C\u305F\u4E8C\u4EBA\u306E\u59FF\u304C\u3042\u3063\u305F"
+      localizationID: Record.Erenayuta-107
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u304A\u309B\u3063\u2665\u2026\u2026\u2026\u2026\u304A\u309B\u304A\u3063\u2026\u2026\u2026\u2665\u300D"
+      localizationID: Record.Erenayuta-108
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3093\u309B\u3042\u2665\u2026\u2026\u2026\u2026\u2665\u3001\u304A\u309B\u3049\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-109
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3053\u308A\u3083\u3072\u3067\u3048\u306A\u3042\u2026\u30B6\u30FC\u30E1\u30F3\u81ED\u3067\u606F\u304C\u8A70\u307E\u308A\u305D\u3046\u3060\u300D"
+      localizationID: Record.Erenayuta-110
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3053\u308C\u4ECA\u304B\u3089\u6383\u9664\u3057\u3066\u56DE\u53CE\u3059\u308B\u306E\u304D\u3064\u3044\u3063\u3059\u306D\uFF5E\u300D"
+      localizationID: Record.Erenayuta-111
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u304A\u309B\u2665\u3001\u3054\u5229\u7528\u306A\u3089\u2026\u2026\u305C\u3072\u79C1\u3092\u2026\u2026\u2026\u2665\u300D"
+      localizationID: Record.Erenayuta-112
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3093\u309B\u2665\u3042\u2026\u2026\u2026\u3061\u304C\u3001\u3053\u3063\u3061\u306E\u4FBF\u5668\u3092\u2026\u2026\u2026\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-113
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\u3001\u3053\u308A\u3083\u3082\u3046\u672C\u5F53\u306B\u5FC3\u306E\u5E95\u304B\u3089\u4FBF\u5668\u3063\u3066\u611F\u3058\u3060\u306A\uFF57\u300D"
+      localizationID: Record.Erenayuta-114
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3057\u304B\u3057\u52DD\u8CA0\u3068\u304B\u8A00\u3063\u3066\u307E\u3057\u305F\u304C\u2026\u3069\u3063\u3061\u304C\u52DD\u3063\u305F\u3093\u3067\u3059\uFF1F\u300D"
+      localizationID: Record.Erenayuta-115
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3042\uFF1F\u305D\u3093\u306A\u306E\u77E5\u308B\u308F\u3051\u306D\u3048\u3060\u308D\u3001\u3069\u3046\u3067\u3082\u3044\u3044\u8A71\u3060\u300D"
+      localizationID: Record.Erenayuta-116
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3064\u3044\u3067\u3060\u3001\u6700\u5F8C\u306B\u3053\u3044\u3064\u3089\u3067\u7528\u3092\u8DB3\u3057\u3066\u3084\u308D\u3046\u300D"
+      localizationID: Record.Erenayuta-117
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\u3001\u3044\u3044\u3067\u3059\u306D\uFF01\u300D"
+      localizationID: Record.Erenayuta-118
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B8\u30E7\u30DC\u30C3\u3001\u30B8\u30E7\u30DC\u30DC\u30DC\u30C3\uFF01"
+      localizationID: Record.Erenayuta-119
+      back: {fileID: 21300000, guid: 50bba7d956e1ddf4e8de7469da217011, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u3054\u5229\u7528\u3044\u305F\u3060\u304D\u3063\u2665\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\u2665\u300D"
+      localizationID: Record.Erenayuta-120
+      back: {fileID: 21300000, guid: 50bba7d956e1ddf4e8de7469da217011, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u4F7F\u3063\u3066\u3044\u305F\u3060\u304D\u3063\u2665\u3001\u611F\u7121\u91CF\u3067\u3059\u30C3\u2665\u300D"
+      localizationID: Record.Erenayuta-121
+      back: {fileID: 21300000, guid: 50bba7d956e1ddf4e8de7469da217011, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u5C0F\u4FBF\u3092\u304B\u3051\u3089\u308C\u3066\u559C\u3076\u4E8C\u4EBA\u306E\u59FF\u306B\u306F\u65E2\u306B\u6700\u5F37\u306E\u8056\u6838\u6226\u59EB\u3068\u3057\u3066\u306E\u59FF\u306F\u5FAE\u5875\u3082\u898B\u308B\u3053\u3068\u304C\u51FA\u6765\u306A\u304B\u3063\u305F"
+      localizationID: Record.Erenayuta-122
+      back: {fileID: 21300000, guid: 50bba7d956e1ddf4e8de7469da217011, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u3048\u3001\u3048\u3078\u3063\u2665\u3001\u79C1\u306E\u52DD\u3061\u3067\u3059\u30C3\u2665\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-123
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "\u300C\u3044\u3048\u3063\u2665\u3001\u79C1\u306E\u52DD\u3061\u3067\u3057\u305F\u3063\u2665\u3001\u79C1\u306E\u65B9\u304C\u8089\u4FBF\u5668\u3063\u2665\uFF01\u300D"
+      localizationID: Record.Erenayuta-124
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u306E\u5F8C\u4E8C\u4EBA\u306F\u6226\u95D8\u54E1\u306B\u3088\u3063\u3066\u30B4\u30DF\u888B\u306B\u8A70\u3081\u3089\u308C\u3001\u30A2\u30B8\u30C8\u3078\u56DE\u53CE\u3055\u308C\u3066\u3044\u304F\u306E\u3060\u3063\u305F"
+      localizationID: Record.Erenayuta-125
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 91cd9dda61cd7c346a4f9d23fa7a4287, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 62, y: 103, z: 0}
+  graphScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  graphPosition: {x: 94, y: 359, z: 0}
   havePreLocations: 0
   newLocations: []

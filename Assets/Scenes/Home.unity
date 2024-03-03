@@ -8135,6 +8135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 214316556}
   eventSystem: {fileID: 1085128102}
@@ -15165,6 +15166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 13
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 464174651}
   eventSystem: {fileID: 1085128102}
@@ -16400,6 +16402,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationTime: 0.5
+  seikakuEquip:
+  - {fileID: 11400000, guid: d62eeaf82e7e1f84fa9bbc4e7466f924, type: 2}
+  - {fileID: 11400000, guid: c0126f088070454418a3249bf49f3d1c, type: 2}
+  - {fileID: 11400000, guid: f8db96181cdd38942989eab16f979424, type: 2}
+  - {fileID: 11400000, guid: 55e45b4f0b7c6b649b7b89d012d8d62e, type: 2}
+  - {fileID: 11400000, guid: 81f41542571166940b00453d64bd0976, type: 2}
   canvasGroup: {fileID: 495879953}
   characterImg: {fileID: 1562591832}
   characterName: {fileID: 1692144785}
@@ -17211,6 +17219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 526463961}
   eventSystem: {fileID: 1085128102}
@@ -23712,6 +23721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 822210870}
   eventSystem: {fileID: 1085128102}
@@ -30913,6 +30923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 1060172654}
   eventSystem: {fileID: 1085128102}
@@ -34950,6 +34961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 13
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 1211202801}
   eventSystem: {fileID: 1085128102}
@@ -36436,6 +36448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 1245863296}
   eventSystem: {fileID: 1085128102}
@@ -38819,6 +38832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 1343705709}
   eventSystem: {fileID: 1085128102}
@@ -42209,6 +42223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 1480121363}
   eventSystem: {fileID: 1085128102}
@@ -54117,6 +54132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 1857365527}
   eventSystem: {fileID: 1085128102}
@@ -55697,6 +55713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 13
+  isForDialogueSystem: 0
   text: {fileID: 0}
   button: {fileID: 1924684168}
   eventSystem: {fileID: 1085128102}

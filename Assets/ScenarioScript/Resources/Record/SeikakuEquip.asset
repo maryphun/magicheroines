@@ -1,0 +1,985 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
+  m_Name: SeikakuEquip
+  m_EditorClassIdentifier: 
+  _locations: []
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u8A18\u9332\uFF1A\u8056\u6838\u52A0\u5DE5\u5DE5\u5834\u306B\u3066"
+      localizationID: Record.SeikakuEquip-1
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D5\u30A9\u30FC\u30EC\u30F3\u8CA1\u56E3\u306E\u5730\u4E0B\u30A2\u30B8\u30C8\u306E\u4E00\u5BA4\u306B\u3001\u6A5F\u68B0\u97F3\u3068\u6C34\u97F3\u306E\u97FF\u304F\u90E8\u5C4B\u304C\u3042\u3063\u305F"
+      localizationID: Record.SeikakuEquip-2
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 2
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 8300000, guid: 8ce71f6fd348b5b4e85b590d3a5a3e4a, type: 3}
+      BGMStyle: 1
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30AC\u30C1\u30E3\u30F3\uFF01\u30AC\u30C1\u30E3\u30F3\uFF01\u30D7\u30B7\u30E5\u30FC\uFF01"
+      localizationID: Record.SeikakuEquip-3
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 3b270666f358b3247a0ff39fcd64f0c1, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 3
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u6226\u3044\u306B\u6557\u308C\u305F\u8056\u6838\u6226\u59EB\u9054\u306F\u3001\u8056\u6838\u3092\u6392\u51FA\u3055\u308C\u3001\u8056\u6838\u306F\u3053\u306E\u5DE5\u5834\u3067\u30AA\u30CA\u30DB\u72B6\u306B\u52A0\u5DE5\u3055\u308C\u308B"
+      localizationID: Record.SeikakuEquip-4
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "(\u3063\u2026\u2026\u79C1\u3069\u3046\u306A\u3063\u3066\u2026\uFF01\uFF1F)"
+      localizationID: Record.SeikakuEquip-5
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "(\u4F53\u304B\u3089\u629C\u3051\u843D\u3061\u3066\u2026\u2026\u6A5F\u68B0\u3067\u52A0\u5DE5\u3055\u308C\u305F\u2026\uFF01\uFF1F)"
+      localizationID: Record.SeikakuEquip-6
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.SeikakuSenki
+      text: "(\u3084\u3060\u3063\uFF01\u2026\u2026\u5143\u306B\u623B\u3057\u3066\uFF01)"
+      localizationID: Record.SeikakuEquip-7
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u90A3\u7531\u591A\u306F\u8056\u6838\u3092\u6392\u51FA\u3055\u308C\u305F\u5F8C\u3001\u30AA\u30CA\u30DB\u72B6\u306B\u52A0\u5DE5\u3055\u308C\u8907\u6570\u306E\u6226\u95D8\u54E1\u306B\u4F7F\u7528\u3055\u308C\u3066\u3044\u308B"
+      localizationID: Record.SeikakuEquip-8
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3075\u3046\u3001\u51FA\u3057\u305F\u51FA\u3057\u305F\u3002\u30B3\u30A4\u30C4\u305F\u307E\u306B\u30D3\u30EA\u30D3\u30EA\u3059\u308B\u306E\u304C\u30C1\u30F3\u30DD\u306E\u523A\u6FC0\u306B\u306A\u308B\u3093\u3060\u3088\u306A\uFF5E\u300D"
+      localizationID: Record.SeikakuEquip-9
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "(\u3063\u3001\u2026\u2026\u96E2\u3057\u306A\u3055\u3044\u3063\u2026\u2026\uFF01)"
+      localizationID: Record.SeikakuEquip-10
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "(\u4ECA\u306E\u79C1\u306B\u51FA\u6765\u308B\u3053\u3068\u306F\u304B\u308D\u3046\u3058\u3066\u96FB\u6483\u3092\u653E\u51FA\u3059\u308B\u306E\u3067\u7CBE\u4E00\u676F\u2026)"
+      localizationID: Record.SeikakuEquip-11
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "(\u3063\u3001\u7121\u5FF5\u3067\u3059\u2026\u8A00\u8449\u901A\u308A\u624B\u3082\u8DB3\u3082\u51FA\u307E\u305B\u3093\u2026\u2026)"
+      localizationID: Record.SeikakuEquip-12
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "(\u305D\u3057\u3066\u2026\u305D\u308C\u304C\u5F53\u305F\u308A\u524D\u306B\u306A\u3063\u3066\u3044\u308B\u2026\u3063\u3001\u30AA\u30CA\u30DB\u306E\u81EA\u5206\u3092\u53D7\u3051\u5165\u308C\u59CB\u3081\u3066\u3044\u308B\u3063\uFF01\uFF1F)"
+      localizationID: Record.SeikakuEquip-13
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Nayuta
+      text: "(\u5ACC\u3067\u3059\u30C3\u2665\u3001\u30AA\u30CA\u30DB\u306B\u306A\u3093\u304B\u306A\u308A\u305F\u304F\u3042\u308A\u307E\u305B\u3093\u3063\u2665\uFF01)"
+      localizationID: Record.SeikakuEquip-14
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30A8\u30EC\u30CA\u306F\u8EAB\u4F53\u3092\u6EB6\u304B\u3055\u308C\u305F\u5F8C\u52A0\u5DE5\u3055\u308C\u3001\u4EBA\u5F62\u3068\u306A\u3063\u305F\u4EAC\u306B\u30AA\u30CA\u30DB\u3068\u3057\u3066\u4F7F\u7528\u3055\u308C\u3066\u3044\u305F"
+      localizationID: Record.SeikakuEquip-15
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "(\u306A\u3063\u2665\u2026\u2026\u79C1\u4ECA\u3069\u3046\u306A\u3063\u3066\u2026\u2026\uFF01\uFF1F)"
+      localizationID: Record.SeikakuEquip-16
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "(\u305D\u308C\u306B\u2026\u3053\u306E\u611F\u899A\u2026\u307E\u3055\u304B\u2026\u2026\u4EAC\u306A\u306E\u3067\u3059\u304B\u3063\uFF01\uFF1F)"
+      localizationID: Record.SeikakuEquip-17
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "(\u3093\u3042\u3063\u2665\u3001\u3084\u3001\u3084\u3081\u3063\u2665\u3001\u305D\u3093\u306A\u306B\u6FC0\u3057\u304F\u4F7F\u308F\u306A\u3044\u3067\u304F\u3060\u3055\u3044\u3063\u2665\uFF01)"
+      localizationID: Record.SeikakuEquip-18
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\u3001\u30B3\u30A4\u30C4\u306F\u6027\u6B32\u3060\u3051\u306F\u7121\u5C3D\u8535\u3060\u304B\u3089\u306A\u3002\u30AA\u30CA\u30DB\u306E\u691C\u54C1\u306B\u306F\u3082\u3063\u3066\u3053\u3044\u3060\u300D"
+      localizationID: Record.SeikakuEquip-19
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "(\u3093\u3042\u3063\u2665\u3001\u304A\u309B\u2665\u3001\u304A\u309B\u3063\u2665)"
+      localizationID: Record.SeikakuEquip-20
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "(\u4F7F\u308F\u308C\u308B\u3054\u3068\u306B\u3063\u2665\u3001\u79C1\u306E\u5B58\u5728\u304C\u30C3\u2665\u3001\u30AA\u30CA\u30DB\u3078\u540C\u5316\u3057\u3066\u3044\u304F\u3063\uFF01\uFF1F\u2665)"
+      localizationID: Record.SeikakuEquip-21
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "(\u2026\u3063\u2665\u3001\u4EAC\u3063\u3001\u6B63\u6C17\u306B\u623B\u3063\u3066\u304F\u3060\u3055\u3044\u3063\u2665\uFF01)"
+      localizationID: Record.SeikakuEquip-22
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "(\u3067\u306A\u3051\u308C\u3070\u79C1\u9054\u2026\u2026\u3063\u2665)"
+      localizationID: Record.SeikakuEquip-23
+      back: {fileID: 21300000, guid: a812236553ee9fa44a6a3a04ae90dd08, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u306E\u5F8C\u3001\u6355\u3089\u3048\u3089\u308C\u305F\u5168\u3066\u306E\u8056\u6838\u6226\u59EB\u9054\u306F\u30AA\u30CA\u30DB\u3078\u52A0\u5DE5\u3055\u308C\u3001\u6226\u95D8\u54E1\u3084\u602A\u4EBA\u9054\u306E\u611B\u73A9\u5177\u3068\u3057\u3066\u4F7F\u308F\u308C\u7D9A\u3051\u308B\u306E\u3060\u3063\u305F"
+      localizationID: Record.SeikakuEquip-24
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 1
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 
+      charas: []
+      charaFadeColor: []
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 
+      charaEffectStrength: 
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  _choiceList: []
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: 70, y: 243, z: 0}
+  havePreLocations: 0
+  newLocations: []
