@@ -164,7 +164,7 @@ public static class EquipmentMethods
         Battler battler = battleManager.GetCurrentBattler();
 
         // ‰ñ•œ—Ê
-        const float percentage = 0.15f;
+        const float percentage = 0.02f;
         int amountHP = Mathf.FloorToInt((float)battler.max_hp * percentage);
         int amountSP = Mathf.FloorToInt((float)battler.max_mp * percentage);
 

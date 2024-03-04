@@ -100,7 +100,7 @@ public class TrainPanel : MonoBehaviour
         characters = ProgressManager.Instance.GetAllCharacter(false);
 
         // ƒqƒƒCƒ“‚¶‚á‚È‚¢ƒLƒƒƒ‰‚ğ”rœ
-        currentIndex = 0;
+        currentIndex = PlayerPrefs.GetInt("TrainPanelIndex", 0);
         characters.RemoveAll(s => !s.characterData.is_heroin);
 
         if (characters.Count <= 0)
@@ -120,6 +120,8 @@ public class TrainPanel : MonoBehaviour
                 nextCharacterBtn.gameObject.SetActive(false);
             }
         }
+
+        currentIndex = Mathf.Clamp(currentIndex, 0, characters.Count-1);
         UpdateCharacterData();
     }
 
@@ -127,6 +129,9 @@ public class TrainPanel : MonoBehaviour
     {
         // SE Ä¶
         AudioManager.Instance.PlaySFX("SystemCancel");
+
+        // ‰æ–Ê‹L˜^
+        PlayerPrefs.SetInt("TrainPanelIndex", currentIndex);
 
         canvasGroup.DOFade(0.0f, animationTime);
         canvasGroup.interactable = false;

@@ -16,10 +16,10 @@ MonoBehaviour:
   equipNameID: Equipment.Akiho
   descriptionID: Equipment.Akiho_Info
   equipmentType: 2
-  effectText: +200 HP
+  effectText: +50% HP
   battleStartFunctionName: Equip_AkihoStart
   battleEndFunctionName: Equip_AkihoEnd
-  hp: 200
+  hp: 74
   sp: 0
   atk: 0
   def: 0

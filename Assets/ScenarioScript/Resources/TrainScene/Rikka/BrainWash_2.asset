@@ -133,7 +133,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 171faad051062d24fb5a704e413c92ec, type: 3}
+      BGM: {fileID: 8300000, guid: 8ce71f6fd348b5b4e85b590d3a5a3e4a, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -646,11 +646,11 @@ MonoBehaviour:
       BGMEndFadeTime: 3
       SE: {fileID: 8300000, guid: 687a1d06529de2f458d5aff92a31e457, type: 3}
       SEStyle: 1
-      SELoop: 0
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 0000000000000000
@@ -1047,7 +1047,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 0000000000000000
       charaEffectStrength: 0000000000000000
-      DialogueEffect: 1
+      DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
       Name: Name.Rikka
@@ -1089,7 +1089,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 0400000001000000
       charaEffectStrength: 0000000000000000
-      DialogueEffect: 9
+      DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
       Name: Name.Rikka

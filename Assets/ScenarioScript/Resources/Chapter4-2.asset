@@ -718,7 +718,7 @@ MonoBehaviour:
       BGMFadeTime: 3
       BGMEndFadeTime: 3
       SE: {fileID: 8300000, guid: 1e28e7ac53090b4408b8e15307db94f6, type: 3}
-      SEStyle: 1
+      SEStyle: 0
       SELoop: 1
       SECount: 1
       SESecond: 20
@@ -2607,11 +2607,11 @@ MonoBehaviour:
       BGMEndFadeTime: 3
       SE: {fileID: 8300000, guid: af9ebf568b9ddaf49bdc08e88fe81d85, type: 3}
       SEStyle: 1
-      SELoop: 0
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 040000000000000000000000
@@ -2831,7 +2831,7 @@ MonoBehaviour:
     text: "\u2026\u2026\u90E8\u968A\u304C\u52D5\u3044\u305F\u30BF\u30A4\u30DF\u30F3\u30B0\u3067\u5927\u898F\u6A21\u306A\u30B5\u30A4\u30D0\u30FC\u653B\u6483\uFF1F\u3053\u3061\u3089\u306E\u884C\u52D5\u304C\u5168\u3066\u8AAD\u307E\u308C\u3066\u3044\u308B\uFF1F"
     localizeID: Dialog.Chapter4-2-42(1)
   graphScale: {x: 0.57175326, y: 0.57175326, z: 1}
-  graphPosition: {x: -355, y: 367, z: 0}
+  graphPosition: {x: -180, y: 351, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}

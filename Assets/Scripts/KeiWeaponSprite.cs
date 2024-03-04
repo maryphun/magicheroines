@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class KeiWeaponSprite : MonoBehaviour
 {
@@ -57,5 +58,10 @@ public class KeiWeaponSprite : MonoBehaviour
     public void SetAnimationAttack()
     {
         GetComponent<Image>().sprite = attack;
+    }
+
+    public void FadeOut()
+    {
+        GetComponent<Image>().DOFade(0.0f, 1.0f);
     }
 }

@@ -59,11 +59,12 @@ public class RecordPanel : MonoBehaviour
         var records = ProgressManager.Instance.GetRecordsList();
         recordBtn = new List<RecordSlot>();
 
+        Debug.Log(records.Count + " records. ");
         for (int i = 0; i < records.Count; i++)
         {
             var newBtn = Instantiate(recordBtnOrigin.gameObject, recordBtnOrigin.transform.parent).GetComponent<RecordSlot>();
             var rect = newBtn.GetComponent<RectTransform>();
-            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, i * (rect.sizeDelta.y + 5.0f));
+            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, i * (-rect.sizeDelta.y + 5.0f));
             newBtn.Init(records[i]);
             recordBtn.Add(newBtn);
         }

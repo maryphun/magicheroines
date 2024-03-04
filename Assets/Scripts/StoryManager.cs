@@ -143,6 +143,7 @@ public class StoryManager : MonoBehaviour
                     // êÌì¨Ç»Çµ
                     BattleSetup.SetReward(2000, 300);
                     NovelSingletone.Instance.PlayNovel("Chapter5-1", true, GoToRewardScreen);
+                    ProgressManager.Instance.StageProgress();
 
                     PlayerCharacterDefine Kei = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
                     ProgressManager.Instance.AddPlayerCharacter(Kei);
@@ -161,14 +162,14 @@ public class StoryManager : MonoBehaviour
             case 15:
                 {
                     BattleSetup.AddEnemy("Nayuta_Enemy");
-                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)"); // TODO: change bgm
                     BattleSetup.SetBattleBack(BattleBack.CentreTower);
                     NovelSingletone.Instance.PlayNovel("Chapter5-3 Prebattle", true, GoToBattle);
                 }
                 break;
             case 16:
                 {
-                    BattleSetup.AddEnemy("Nayuta_Enemy");
+                    BattleSetup.AddEnemy("Nayuta_Enemy"); // TODO: change enemy
                     BattleSetup.SetBattleBGM("finalbattle");
                     BattleSetup.SetBattleBack(BattleBack.Council);
                     NovelSingletone.Instance.PlayNovel("ChapterFinal Prebattle", true, GoToBattle);
@@ -268,6 +269,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.SetReward(0, 0);
                     BattleSetup.AddTeammate("10.No5(Event)");
                     BattleSetup.AddTeammate("11.No72(Event)");
+                    BattleSetup.SetBattleBack(BattleBack.CentreTower);
                     BattleSetup.AddEnemy("Nayuta_Enemy");
                     BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
                 }

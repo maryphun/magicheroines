@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Battler))]
 public class KeiWeaponController : MonoBehaviour
 {
     [Header("References")]
@@ -29,6 +30,12 @@ public class KeiWeaponController : MonoBehaviour
         rightWeapon.SetEnableMovement(true);
 
         ResetControlledUnit();
+
+        GetComponent<Battler>().onDeathEvent.AddListener(() =>
+        {
+            leftWeapon.FadeOut();
+            rightWeapon.FadeOut();
+        });
     }
 
     public void SetControlledUnit(KeiControlledUnit battler)
