@@ -298,7 +298,7 @@ public class StoryManager : MonoBehaviour
                 }
                 break;
             default:
-                // 未開発地帯
+                // 未開発地帯 WARNING (もうここにこないはず)
                 underdevelopment.SetActive(true);
                 break;
         }

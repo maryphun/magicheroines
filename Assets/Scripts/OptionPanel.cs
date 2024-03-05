@@ -38,9 +38,9 @@ public class OptionPanel : MonoBehaviour
     [SerializeField] private Toggle JPToggle, ENToggle, SCNToggle, TCNToggle;
     [SerializeField] private Button backButton;
 
-    public static float defaultBGMVolume = 0.5f;
-    public static float defaultSEVolume = 0.5f;
-    public static float defaultVoiceVolume = 0.5f;
+    public static float defaultBGMVolume = 0.2f;
+    public static float defaultSEVolume = 0.45f;
+    public static float defaultVoiceVolume = 0.75f;
     public static int defaultTextSpeed = 6;
     public static float defaultAutoSpeed = 1.0f;
     public static bool defaultFullScreenToggle = false;
