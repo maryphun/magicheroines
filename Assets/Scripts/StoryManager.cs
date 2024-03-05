@@ -162,14 +162,17 @@ public class StoryManager : MonoBehaviour
             case 15:
                 {
                     BattleSetup.AddEnemy("Nayuta_Enemy");
-                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)"); // TODO: change bgm
+                    BattleSetup.SetBattleBGM("apoptosis");
                     BattleSetup.SetBattleBack(BattleBack.CentreTower);
                     NovelSingletone.Instance.PlayNovel("Chapter5-3 Prebattle", true, GoToBattle);
                 }
                 break;
             case 16:
                 {
-                    BattleSetup.AddEnemy("Nayuta_Enemy"); // TODO: change enemy
+                    BattleSetup.AddEnemy("SeikakuSenki 1");
+                    BattleSetup.AddEnemy("SeikakuSenki 2");
+                    BattleSetup.AddEnemy("SeikakuSenki 3");
+                    BattleSetup.AddEnemy("SeikakuSenki 4");
                     BattleSetup.SetBattleBGM("finalbattle");
                     BattleSetup.SetBattleBack(BattleBack.Council);
                     NovelSingletone.Instance.PlayNovel("ChapterFinal Prebattle", true, GoToBattle);
@@ -291,7 +294,7 @@ public class StoryManager : MonoBehaviour
                 break;
             case 16:
                 {
-                    NovelSingletone.Instance.PlayNovel("ChapterFinal AfterBattle", true, GoToRewardScreen);
+                    NovelSingletone.Instance.PlayNovel("ChapterFinal AfterBattle", true, GoToEndCredit);
                 }
                 break;
             default:
@@ -315,6 +318,11 @@ public class StoryManager : MonoBehaviour
     public void GoToRewardScreen()
     {
         StartCoroutine(SceneTransition("Reward", 0.5f));
+    }
+
+    public void GoToEndCredit()
+    {
+        StartCoroutine(SceneTransition("EndCredit", 0.5f));
     }
 
     IEnumerator SceneTransition(string sceneName, float animationTime)
