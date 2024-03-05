@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageIconSpacing: 350
   arrowOffsetY: 50
+  startingStage: 0
   rect: {fileID: 14723159}
   stageArrow: {fileID: 1174071698}
   checkedIcon: {fileID: 1548815778}
@@ -1203,6 +1204,7 @@ GameObject:
   - component: {fileID: 436908051}
   - component: {fileID: 436908050}
   - component: {fileID: 436908053}
+  - component: {fileID: 436908054}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1339,6 +1341,24 @@ MonoBehaviour:
   offset: {x: -300, y: 0}
   animationTime: 0.5
   startDelay: 0.25
+--- !u!114 &436908054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436908048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d00d241e52fd6334ab1396c581b1fa75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 27
+  isForDialogueSystem: 0
+  text: {fileID: 0}
+  button: {fileID: 436908050}
+  eventSystem: {fileID: 1752138281}
+  raycaster: {fileID: 1737923944}
 --- !u!1 &444643712
 GameObject:
   m_ObjectHideFlags: 0
@@ -5469,7 +5489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5775,6 +5795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d9ef272d342b95479c8243d6e5e90e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BGM: Specification
   stagehandler: {fileID: 14723160}
   chapterName: {fileID: 1127643734}
 --- !u!1 &1737923943

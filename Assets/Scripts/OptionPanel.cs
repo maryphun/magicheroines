@@ -289,7 +289,7 @@ public class OptionPanel : MonoBehaviour
     {
         if (!isOpen) return;
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
         {
             backButton.onClick.Invoke();
         }

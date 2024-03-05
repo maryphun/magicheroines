@@ -44,7 +44,7 @@ public class CreditRoll : MonoBehaviour
     {
         if (!isShowButton)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return) || Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(1))
             {
                 isShowButton = true;
                 backButton.gameObject.SetActive(true);

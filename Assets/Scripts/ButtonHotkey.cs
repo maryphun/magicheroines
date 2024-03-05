@@ -42,7 +42,8 @@ public class ButtonHotkey : MonoBehaviour
         if (!isForDialogueSystem && NovelSingletone.Instance.IsPlaying()) return;
         if (isForDialogueSystem && !NovelSingletone.Instance.IsPlaying()) return;
 
-        if (Input.GetKeyDown(key))
+        if (Input.GetKeyDown(key) 
+            || (Input.GetMouseButtonDown(1) && key == KeyCode.Escape)) // Esc ÇÕÅ®ÉNÉäÉbÉNÇ‡ëŒâû
         {
             if (CheckIsButtonReachable())
             {
