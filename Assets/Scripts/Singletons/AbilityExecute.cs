@@ -1920,6 +1920,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // SE
         AudioManager.Instance.PlaySFX("Magic2", 1f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         const string ObjName = "ErenaShield";
 
@@ -2033,6 +2034,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                // SE
                AudioManager.Instance.PlaySFX("Throw", 0.75f);
+               AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
                // ‰ñ“]
                self.GetGraphicRectTransform().DORotate(new Vector3(0, 0, 15.0f), 0.25f, RotateMode.Fast);
@@ -2103,6 +2105,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // SE
         AudioManager.Instance.PlaySFX("Magic2", 1f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         const string ObjName = "ErenaShield";
 
@@ -2172,6 +2175,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // SE
         AudioManager.Instance.PlaySFX("Magic2", 1f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         self.PlayAnimation(BattlerAnimationType.magic);
 
@@ -2208,6 +2212,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // SE
         AudioManager.Instance.PlaySFX("Magic2", 1f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         self.PlayAnimation(BattlerAnimationType.magic);
 
@@ -2245,6 +2250,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         // SE
         AudioManager.Instance.PlaySFX("Magic2", 1f);
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
         self.PlayAnimation(BattlerAnimationType.magic);
 
