@@ -1146,11 +1146,15 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var rectTransform = self.GetComponent<RectTransform>();
         var originalPos = rectTransform.position;
         var selfPos = self.GetMiddleGlobalPosition();
-        var startPoint = self.isEnemy ? new Vector2(selfPos.x - self.GetCharacterSize().x * 0.25f, selfPos.y) : new Vector2(selfPos.x + self.GetCharacterSize().x * 0.5f, selfPos.y);
+        var startPoint = self.isEnemy ? new Vector2((selfPos.x - self.GetCharacterSize().x * 0.25f), selfPos.y) : new Vector2((selfPos.x + self.GetCharacterSize().x * 0.5f), selfPos.y);
 
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
         AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
+
+        // 使用不能となる
+        self.SetAbilityActive("Milk", false);
+        self.SetAbilityActive("MilkOverdrive", false);
 
         rectTransform.DOMoveX(originalPos.x - 150.0f, 0.75f);
         var sequence = DOTween.Sequence();
@@ -1163,9 +1167,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                         // SE
                         AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+                        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
                         // calculate projectile time base on range
-                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                        CreateProjectile("Milk Projectile", startPoint + new Vector2(-275.0f, -25.0f), endPoint, projectileTime, true);
+
+                        // shake akiho
+                        self.Shake(0.4f);
                     }
                 })
                 .AppendInterval(projectileTime)
@@ -1203,9 +1211,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                         // SE
                         AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+                        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
                         // calculate projectile time base on range
-                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                        CreateProjectile("Milk Projectile", startPoint + new Vector2(-275.0f, -25.0f), endPoint, projectileTime, true);
+
+                        // shake akiho
+                        self.Shake(0.4f);
                     }
                 })
                 .AppendInterval(projectileTime)
@@ -1243,9 +1255,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                         // SE
                         AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+                        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
                         // calculate projectile time base on range
-                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                        CreateProjectile("Milk Projectile", startPoint + new Vector2(-275.0f, -25.0f), endPoint, projectileTime, true);
+
+                        // shake akiho
+                        self.Shake(0.4f);
                     }
                 })
                 .AppendInterval(projectileTime)
@@ -1283,9 +1299,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                         // SE
                         AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+                        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
                         // calculate projectile time base on range
-                        CreateProjectile("Milk Projectile", startPoint, endPoint, projectileTime, true);
+                        CreateProjectile("Milk Projectile", startPoint + new Vector2(-275.0f, -25.0f), endPoint, projectileTime, true);
+
+                        // shake akiho
+                        self.Shake(0.4f);
                     }
                 })
                 .AppendInterval(projectileTime)

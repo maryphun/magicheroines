@@ -113,6 +113,14 @@ public class WorldMapUI : MonoBehaviour
                 return false;
             }
         }
+        else if (ProgressManager.Instance.GetCurrentStageProgress() == 16) // 6‐1(最終話)←那由多闇堕ち最終段階が必要
+        {
+            if (!ProgressManager.Instance.HasCharacter(6, true) || !ProgressManager.Instance.HasCharacter(7, true))
+            {
+                NovelSingletone.Instance.PlayNovel("Condition Chapter6-1", true);
+                return false;
+            }
+        }
 
         return true;
     }

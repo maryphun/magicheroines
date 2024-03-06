@@ -114,6 +114,7 @@ Check the record now?","行動中基地裡發生了一點事情。
 System.CheckRecordNow,今見る,Yes,現在觀看,现在观看
 System.CheckRecordLater,後にする,Later,等下才看,等下才看
 System.RecordTutorial,画面左側の「{s}」ボタンで記録を確認できます。,You can check records at [{s}] button.,您可以在左側的「{s}」查看記錄。,您可以在左侧的「{s}」查看记录。
+System.EndCredit,終わり,,,
 Memory,回想,Memory,回想,回想
 Memory.Akiho_1,明穂 - 痴漢,Akiho - Chikan,明穂 - 痴漢,明穂 - 痴漢
 Memory.Akiho_2,明穂 - 敗北,Akiho - Defeat,明穂 - 敗北,明穂 - 敗北
@@ -540,6 +541,7 @@ WorldScene,ワールド画面台詞,WorldMap Dialogue,ワールド画面台詞,�
 World.Chapter2-3,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,"「We need ""Sasaya Akiho"" for this mission. Let's hurry up and proceed with the training.」",「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」
 World.Chapter3-3,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「How is Rikka's training going? Just take her down already!」,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「六花の調教は進んでますか？とっとと堕としちゃってください！」
 World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,"「Yakumo Nayuta is a formidable opponent. I hope we can make use of Seidō Erena here...""」",「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
+World.Chapter6-1,「ついに我々が世界を征服する時です。戦力は万全にしておきましょう」,,,
 BattleLog,戦闘ログ,Battlelog,戦闘ログ,戦闘ログ
 BattleLog.Attack,{0}　の攻撃！,{0}'s attack!,{0}　の攻撃！,{0}　の攻撃！
 BattleLog.Damage,{0}　に　{1}　のダメージを与えた！,Deals {1} damage to {0}!,{0}　に　{1}　のダメージを与えた！,{0}　に　{1}　のダメージを与えた！

@@ -451,6 +451,9 @@ public class TrainPanel : MonoBehaviour
     }
     public void CloseNewBattlerPopup()
     {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemButton");
+
         newBattlerPopup.DOKill(false);
         newBattlerPopup.DOFade(0.0f, 0.1f).OnComplete(() =>
         {
@@ -462,7 +465,7 @@ public class TrainPanel : MonoBehaviour
     public void CallNewCoreEquipmentPopup(EquipmentDefine newEquipment)
     {
         // SE
-        AudioManager.Instance.PlaySFX("SystemEquip");
+        AudioManager.Instance.PlaySFX("SystemButton");
 
         // Update Text
         newCoreEquipmentText.text = CoreEquipmentMessage(characters[currentIndex].characterData.characterID, newEquipment);
@@ -486,6 +489,9 @@ public class TrainPanel : MonoBehaviour
     }
     public void CloseNewCoreEquipmentPopup()
     {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemEquip");
+
         newCoreEquipmentPopup.DOKill(false);
         newCoreEquipmentPopup.DOFade(0.0f, 0.1f).OnComplete(() =>
         {

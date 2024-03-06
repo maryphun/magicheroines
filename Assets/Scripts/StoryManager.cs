@@ -155,7 +155,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("DarkAndroid");
                     BattleSetup.AddEnemy("GoldDrone");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
-                    BattleSetup.SetReward(650, 115);
+                    BattleSetup.SetReward(650, 120);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -164,6 +164,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Nayuta_Enemy");
                     BattleSetup.SetBattleBGM("apoptosis");
                     BattleSetup.SetBattleBack(BattleBack.CentreTower);
+                    BattleSetup.SetReward(2000, 400);
                     NovelSingletone.Instance.PlayNovel("Chapter5-3 Prebattle", true, GoToBattle);
                 }
                 break;
@@ -290,6 +291,10 @@ public class StoryManager : MonoBehaviour
             case 15:
                 {
                     NovelSingletone.Instance.PlayNovel("Chapter5-3 AfterBattle", true, GoToRewardScreen);
+
+                    // “ß—R‘½•ßŠl
+                    PlayerCharacterDefine Nayuta = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/8.Nayuta");
+                    ProgressManager.Instance.AddPlayerCharacter(Nayuta);
                 }
                 break;
             case 16:

@@ -90,6 +90,7 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
     {
         var teammates = FindObjectOfType<Battle>().GetAllTeammate();
 
+        Debug.Log("[Equip_KeiStart] teammate count = " + teammates.Count.ToString());
         foreach (var teammate in teammates)
         {
             if (teammate != battler) EquipmentMethods.KeiSeikakuStart(teammate);
@@ -203,8 +204,9 @@ public static class EquipmentMethods
     public static void KeiSeikakuStart(Battler battler)
     {
         if (battleManager == null) return;
-        
+
         const int amount = 15;
+        Debug.Log("[KeiSeikakuStart] " + battler.character_name + " + " + amount.ToString() + "dmg");
         battler.attack += amount;
     }
     public static void NayutaSeikakuExecute()
