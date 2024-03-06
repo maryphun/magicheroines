@@ -7,6 +7,7 @@ using DG.Tweening;
 public class WorldMapUI : MonoBehaviour
 {
     [Header("Setting")]
+    [SerializeField] private bool isEndGameContent = false;
     [SerializeField] private string BGM = "Specification";
 
     [Header("References")]
@@ -110,6 +111,14 @@ public class WorldMapUI : MonoBehaviour
             if (!ProgressManager.Instance.HasCharacter(5, true))
             {
                 NovelSingletone.Instance.PlayNovel("Condition Chapter5-3", true);
+                return false;
+            }
+        }
+        else if (ProgressManager.Instance.GetCurrentStageProgress() == 16) // 6‐1(最終話)←那由多闇堕ち最終段階が必要
+        {
+            if (!ProgressManager.Instance.HasCharacter(6, true) || !ProgressManager.Instance.HasCharacter(7, true))
+            {
+                NovelSingletone.Instance.PlayNovel("Condition Chapter6-1", true);
                 return false;
             }
         }

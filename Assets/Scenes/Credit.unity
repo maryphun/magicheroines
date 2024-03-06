@@ -952,9 +952,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f597b0559d6ed9c478152777dbafb9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEndGameRoll: 0
   rollTime: 5
   backButton: {fileID: 1997681222}
   roll: {fileID: 1099530888}
+  buttonText: {fileID: 0}
   isShowButton: 0
 --- !u!1 &1609116013
 GameObject:
@@ -1243,7 +1245,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1099530889}
         m_TargetAssemblyTypeName: CreditRoll, Assembly-CSharp
-        m_MethodName: BackToTitleScreen
+        m_MethodName: EndScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

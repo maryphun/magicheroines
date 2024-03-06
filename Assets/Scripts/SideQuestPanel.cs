@@ -185,6 +185,10 @@ public class SideQuestPanel : MonoBehaviour
         {
             BattleSetup.AddEquipmentReward("Cushion");
         }
+        if (ProgressManager.Instance.GetCurrentStageProgress() >= 7) // chapter 3
+        {
+            BattleSetup.AddEquipmentReward("Collar");
+        }
     }
 
     private List<SideQuestEnemy> GetEnemyList()

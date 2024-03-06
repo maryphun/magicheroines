@@ -43,7 +43,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 7f3ce7c4c1cb49543958010e0ae16549, type: 3}
+      BGM: {fileID: 8300000, guid: 6a14eccef1bc88a44ac01de3ac3ffa1c, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -259,8 +259,8 @@ MonoBehaviour:
       localizationID: Akiho.Fallen3-7
       back: {fileID: 21300000, guid: cfcb524108aa1fe45af8b7aa905da726, type: 3}
       howBack: 4
-      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
-      backFadeSpeed: 0.2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.4
       howCharas: 
       charas: []
       charaFadeColor: []
@@ -278,13 +278,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 4fd2fd3d05883f64fb6041893d0abbed, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -696,13 +696,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: f4ad4193bf6742548b3a8db0afce7bb7, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -879,9 +879,9 @@ MonoBehaviour:
       Name: 
       text: "\u6226\u95D8\u54E1\u306B\u3088\u308B\u660E\u7A42\u3078\u306E\u643E\u4E73\u304C10\u5206\u307B\u3069\u7D9A\u3044\u305F\u5F8C"
       localizationID: Akiho.Fallen3-22
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
       howCharas: 
       charas: []
@@ -911,7 +911,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 
       charaEffectStrength: 
-      DialogueEffect: 0
+      DialogueEffect: 1
       DialogueEffectStrength: 0
     - open: 0
       Name: Name.Battler
@@ -949,7 +949,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 
       charaEffectStrength: 
-      DialogueEffect: 0
+      DialogueEffect: 9
       DialogueEffectStrength: 0
     - open: 0
       Name: Name.Battler
@@ -1204,13 +1204,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 19d6ac8c934b22a41ba0a1eedb44b6a6, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -1960,7 +1960,7 @@ MonoBehaviour:
       back: {fileID: 21300000, guid: dd215396dc4044b4a96cdae2e9938780, type: 3}
       howBack: 4
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 0.2
+      backFadeSpeed: 0.4
       howCharas: 
       charas: []
       charaFadeColor: []
@@ -1978,13 +1978,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 06af248c45b6f5f40980d12d2b3375b9, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -2490,6 +2490,6 @@ MonoBehaviour:
     _nextChoiceIndexes: ffffffff
   _choiceList: []
   graphScale: {x: 0.8695652, y: 0.8695652, z: 1}
-  graphPosition: {x: 140, y: 217, z: 0}
+  graphPosition: {x: 40, y: 267, z: 0}
   havePreLocations: 0
   newLocations: []

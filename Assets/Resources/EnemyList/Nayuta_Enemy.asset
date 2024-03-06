@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Nayuta_Enemy
   m_EditorClassIdentifier: 
   enemyName: Name.Nayuta
-  maxHP: 150
+  maxHP: 800
   maxMP: 0
   attack: 99999
   defense: 0
-  speed: 5
+  speed: 10
   level: 26
   character_color: {r: 0.86755973, g: 0.5529412, b: 1, a: 1}
   actionPattern:

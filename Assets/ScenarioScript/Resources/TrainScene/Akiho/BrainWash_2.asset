@@ -43,7 +43,7 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 8300000, guid: 7f3ce7c4c1cb49543958010e0ae16549, type: 3}
+      BGM: {fileID: 8300000, guid: 6a14eccef1bc88a44ac01de3ac3ffa1c, type: 3}
       BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
@@ -126,13 +126,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 4fd2fd3d05883f64fb6041893d0abbed, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -278,13 +278,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: fca96bc8a1a9f5a458bf677a424e700b, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -1546,13 +1546,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 19d6ac8c934b22a41ba0a1eedb44b6a6, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -1830,9 +1830,9 @@ MonoBehaviour:
       text: "\u30C9\u30D7\u30C3\u3001\u30C9\u30D3\u30E5\u30EB\u30EB\u30EB\u30EB\u30EB\u30C3\u30C3"
       localizationID: Akiho.Fallen2-48
       back: {fileID: 21300000, guid: 292cb684b67114944b161ae0cc0d3fb9, type: 3}
-      howBack: 1
+      howBack: 2
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
+      backFadeSpeed: 0.4
       howCharas: 
       charas: []
       charaFadeColor: []
@@ -1850,13 +1850,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 9d7b47932649c6c42b7d7f1798c237cc, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -2567,7 +2567,7 @@ MonoBehaviour:
       localizationID: Akiho.Fallen2-66
       back: {fileID: 21300000, guid: ef7029b207782b248b0cf958b3e85a7c, type: 3}
       howBack: 4
-      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 0.25
       howCharas: 
       charas: []
@@ -2586,13 +2586,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 8e5b97f7e834ed74784f39832d359059, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -2624,13 +2624,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 9d7b47932649c6c42b7d7f1798c237cc, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -2638,7 +2638,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Akiho
+      Name: 
       text: "\u3077\u3057\u3085\u3063\u3001\u30D3\u30E5\u30EB\u30EB\u30EB\u30EB\u30EB\u30C3\u3001\u30D6\u30B7\u30E5\u30A6\u30A6\u30A6\u30A6\u30A6\u30C3\u30C3\u2665\u2665\uFF01\uFF01\uFF01\uFF01\uFF01\uFF01\uFF01"
       localizationID: Akiho.Fallen2-68
       back: {fileID: 21300000, guid: ef7029b207782b248b0cf958b3e85a7c, type: 3}
@@ -2662,13 +2662,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 529edaeac13a5244bb68ebf38f015327, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -2756,9 +2756,9 @@ MonoBehaviour:
       text: "\u3074\u3057\u3085\u3063\u3001\u3074\u3057\u3085\u3063\u3001\u30D6\u30B7\u30E5\u30A6\u30A6\u30A6\u30A6\u30A6\u30C3\u2665\u2665\uFF01"
       localizationID: Akiho.Fallen2-71
       back: {fileID: 21300000, guid: ef7029b207782b248b0cf958b3e85a7c, type: 3}
-      howBack: 0
+      howBack: 2
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
+      backFadeSpeed: 0.4
       howCharas: 
       charas: []
       charaFadeColor: []
@@ -2776,13 +2776,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 54c678f9f7d10ba46b16900dacb73bd9, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3098,9 +3098,9 @@ MonoBehaviour:
       text: "\u3077\u3057\u3085\u3063\u3001\u30D3\u30E5\u30EB\u30EB\u30EB\u30EB\u30EB\u30C3\u3001\u30D6\u30B7\u30E5\u30A6\u30A6\u30A6\u30A6\u30A6\u30C3\u30C3\u2665\u2665\uFF01\uFF01\uFF01\uFF01\uFF01\uFF01\uFF01"
       localizationID: Akiho.Fallen2-80
       back: {fileID: 21300000, guid: ef7029b207782b248b0cf958b3e85a7c, type: 3}
-      howBack: 0
+      howBack: 2
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
+      backFadeSpeed: 0.4
       howCharas: 
       charas: []
       charaFadeColor: []
@@ -3118,13 +3118,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 9ed4d1fa06115874597d9e423b10da29, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3453,7 +3453,7 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 0.43232757, y: 0.43232757, z: 1}
-  graphPosition: {x: 264, y: 337, z: 0}
+  graphScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  graphPosition: {x: 125, y: 369, z: 0}
   havePreLocations: 0
   newLocations: []

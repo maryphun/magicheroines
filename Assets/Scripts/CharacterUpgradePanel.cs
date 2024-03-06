@@ -32,6 +32,8 @@ public class CharacterUpgradePanel : MonoBehaviour
     Character currentCharacter;
     Sequence newAbilitySequence;
 
+    const int MaxLevel = 20;
+
     public void ResetAnimation()
     {
         // Reset
@@ -61,6 +63,13 @@ public class CharacterUpgradePanel : MonoBehaviour
 
     private void UpdateLevelUpButton(Character character)
     {
+        if (character.current_level >= MaxLevel)
+        {
+            levelUpButton.interactable = false;
+            levelUpText.text = LocalizationManager.Localize("System.LevelMax");
+            return;
+        }
+
         //　レベルアップコストを計算
         int goldCost = CalculateLevelUpCost(character, character.current_level);
 

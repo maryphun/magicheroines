@@ -139,6 +139,9 @@ public class RewardPanel : MonoBehaviour
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Single);
             asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
             DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { asyncLoad.allowSceneActivation = true; });
+
+            // オートセーブを実行する
+            AutoSave.ExecuteAutoSave();
         }
     }
 

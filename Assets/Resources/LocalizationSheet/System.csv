@@ -40,6 +40,7 @@ System.Equipment,装備,Equipment,装備,装備
 System.CharacterData,資料,Info,資料,資料
 System.CharacterUpgrade,育成,Upgrade,育成,育成
 System.LevelUp,レベルアップ,Level up,升級,レベルアップ
+System.LevelMax,レベル限界,Max,滿級,滿級
 System.Cost,資金コスト,Cost,資金消耗,資金コスト
 System.Locked,未開放,Locked,未開放,未開放
 System.Unlock,解放,Unlock,解放,解放
@@ -113,6 +114,7 @@ Check the record now?","行動中基地裡發生了一點事情。
 System.CheckRecordNow,今見る,Yes,現在觀看,现在观看
 System.CheckRecordLater,後にする,Later,等下才看,等下才看
 System.RecordTutorial,画面左側の「{s}」ボタンで記録を確認できます。,You can check records at [{s}] button.,您可以在左側的「{s}」查看記錄。,您可以在左侧的「{s}」查看记录。
+System.EndCredit,終わり,,,
 Memory,回想,Memory,回想,回想
 Memory.Akiho_1,明穂 - 痴漢,Akiho - Chikan,明穂 - 痴漢,明穂 - 痴漢
 Memory.Akiho_2,明穂 - 敗北,Akiho - Defeat,明穂 - 敗北,明穂 - 敗北
@@ -165,8 +167,10 @@ Memory.Nursery,変身ヒロイン苗床化,Seedbed of Magical Girls,,
 Memory.Final,最後の二人の聖核戦姫,The Last Two Seikaku Princess,,
 Memory.Kei,小悪魔の日常,A Succubus' Day,,
 Memory.Erenayuta,最強の二人,The Strongest Duo,,
+Memory.SeikakuEquip,聖核加工工場,Seikaku Factory,,
 WorldMapScene,ワールドマップ,World Map,ワールドマップ,ワールドマップ
 System.Story,ストーリー進行,Continue story,繼續故事,ストーリーを進む
+System.EndGameContent,エンドゲーム\nコンテンツ,Endgame\nContent,,
 System.SideMission,資源調達クエスト,Resource Gathering,其他任務,資源調達クエスト
 System.QuestList,クエスト一覧,Operation List,任務一覧,クエスト一覧
 System.FoodQuest,[食料調達],[Food Gather],[食料調達],[食料調達]
@@ -537,6 +541,7 @@ WorldScene,ワールド画面台詞,WorldMap Dialogue,ワールド画面台詞,�
 World.Chapter2-3,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,"「We need ""Sasaya Akiho"" for this mission. Let's hurry up and proceed with the training.」",「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」,「今回の作戦には“笹谷 明穂”が必要です。急いで調教のほうを進みましょう。」
 World.Chapter3-3,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「How is Rikka's training going? Just take her down already!」,「六花の調教は進んでますか？とっとと堕としちゃってください！」,「六花の調教は進んでますか？とっとと堕としちゃってください！」
 World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,"「Yakumo Nayuta is a formidable opponent. I hope we can make use of Seidō Erena here...""」",「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
+World.Chapter6-1,「ついに我々が世界を征服する時です。戦力は万全にしておきましょう」,,,
 BattleLog,戦闘ログ,Battlelog,戦闘ログ,戦闘ログ
 BattleLog.Attack,{0}　の攻撃！,{0}'s attack!,{0}　の攻撃！,{0}　の攻撃！
 BattleLog.Damage,{0}　に　{1}　のダメージを与えた！,Deals {1} damage to {0}!,{0}　に　{1}　のダメージを与えた！,{0}　に　{1}　のダメージを与えた！
@@ -569,8 +574,8 @@ BattleLog.AbilityExecuteSelf,{0}　が{1}する。,{0} does {1}.,{0}　が{1}す
 BattleLog.Tentacle,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0} extends its tentacles to {1} <cspace=-0.18em>ーー</cspace>!,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！,{0}　が触手を {1} に伸ばす<cspace=-0.18em>ーー</cspace>！
 BattleLog.NoEffect,効果はなかった。,There was no effect.,効果はなかった。,効果はなかった。
 BattleLog.GiveSP,SP {0} を {1} に分け与えた！,SP {0} was shared with {1}!,SP {0} を {1} に分け与えた！,SP {0} を {1} に分け与えた！
-BattleLog.SPDrain,{0}　のSP {1} 吸収した！ ,{0} of SP {1} was absorbed!,{0}　のSP {1} 吸収した！ ,{0}　のSP {1} 吸収した！ 
-BattleLog.HPDrain,{0}　のHP {1} 吸収した！,{0} of HP {1} was absorbed!,{0}　のHP {1} 吸収した！,{0}　のHP {1} 吸収した！
+BattleLog.SPDrain,{0}　のSP {1} 吸収した！ ,{0}’s SP {1} was absorbed!,{0}　のSP {1} 吸収した！ ,{0}　のSP {1} 吸収した！ 
+BattleLog.HPDrain,{0}　のHP {1} 吸収した！,{0}'s HP {1} was absorbed!,{0}　のHP {1} 吸収した！,{0}　のHP {1} 吸収した！
 BattleLog.Retire,{0}　が再起不能となった。,{0} is defeated.,{0}　が再起不能となった。,{0}　が再起不能となった。
 BattleLog.Defeat,{0}　が再起不能となった。,{0} is defeated.,{0}　が再起不能となった。,{0}　が再起不能となった。
 BattleLog.Hacking,{0}　がハッキングを挑む！成功確率は {1},{0} challenges the hack! Chance of success {1},{0}　がハッキングを挑む！成功確率は {1},{0}　がハッキングを挑む！成功確率は {1}

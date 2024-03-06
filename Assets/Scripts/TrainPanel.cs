@@ -19,6 +19,7 @@ public class TrainPanel : MonoBehaviour
 
     [Header("Setting")]
     [SerializeField, Range(0.0f, 1.0f)] private float animationTime = 0.5f;
+    [SerializeField] EquipmentDefine[] seikakuEquip = new EquipmentDefine[5];
 
     [Header("References")]
     [SerializeField] private CanvasGroup canvasGroup;
@@ -99,7 +100,7 @@ public class TrainPanel : MonoBehaviour
         characters = ProgressManager.Instance.GetAllCharacter(false);
 
         // ヒロインじゃないキャラを排除
-        currentIndex = 0;
+        currentIndex = PlayerPrefs.GetInt("TrainPanelIndex", 0);
         characters.RemoveAll(s => !s.characterData.is_heroin);
 
         if (characters.Count <= 0)
@@ -119,6 +120,8 @@ public class TrainPanel : MonoBehaviour
                 nextCharacterBtn.gameObject.SetActive(false);
             }
         }
+
+        currentIndex = Mathf.Clamp(currentIndex, 0, characters.Count-1);
         UpdateCharacterData();
     }
 
@@ -126,6 +129,9 @@ public class TrainPanel : MonoBehaviour
     {
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemCancel");
+
+        // 画面記録
+        PlayerPrefs.SetInt("TrainPanelIndex", currentIndex);
 
         canvasGroup.DOFade(0.0f, animationTime);
         canvasGroup.interactable = false;
@@ -220,7 +226,7 @@ public class TrainPanel : MonoBehaviour
         }
         else
         {
-            cost[0] = (characters[currentIndex].hornyEpisode * 50) + 50;
+            cost[0] = (characters[currentIndex].hornyEpisode * 15) + 50;
             hornyActionCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[0];
 
             // ポイント不足
@@ -235,7 +241,7 @@ public class TrainPanel : MonoBehaviour
         }
         else
         {
-            cost[1] = (characters[currentIndex].corruptionEpisode * 50) + 50;
+            cost[1] = (characters[currentIndex].corruptionEpisode * 10) + 50;
             corruptActionCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[1];
 
             // ポイント不足
@@ -250,7 +256,7 @@ public class TrainPanel : MonoBehaviour
         }
         else
         {
-            cost[2] = (characters[currentIndex].holyCoreEpisode * 50) + 50;
+            cost[2] = (characters[currentIndex].holyCoreEpisode * 60) + 60;
             coreCost.text = LocalizationManager.Localize("System.ResearchPointCost") + "\n<size=25><color=#ed94ff>" + cost[2];
 
             // ポイント不足
@@ -387,8 +393,8 @@ public class TrainPanel : MonoBehaviour
                 {
                     // 聖核装備獲得
                     EquipmentDefine newEquipment = characters[currentIndex].characterData.coreEquipment;
-                    CallNewCoreEquipmentPopup(newEquipment);
                     ProgressManager.Instance.AddNewEquipment(newEquipment);
+                    CallNewCoreEquipmentPopup(newEquipment);
                 }
                 break;
             default:
@@ -445,6 +451,9 @@ public class TrainPanel : MonoBehaviour
     }
     public void CloseNewBattlerPopup()
     {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemButton");
+
         newBattlerPopup.DOKill(false);
         newBattlerPopup.DOFade(0.0f, 0.1f).OnComplete(() =>
         {
@@ -456,7 +465,7 @@ public class TrainPanel : MonoBehaviour
     public void CallNewCoreEquipmentPopup(EquipmentDefine newEquipment)
     {
         // SE
-        AudioManager.Instance.PlaySFX("SystemEquip");
+        AudioManager.Instance.PlaySFX("SystemButton");
 
         // Update Text
         newCoreEquipmentText.text = CoreEquipmentMessage(characters[currentIndex].characterData.characterID, newEquipment);
@@ -467,9 +476,22 @@ public class TrainPanel : MonoBehaviour
         newCoreEquipmentPopup.DOFade(1.0f, 0.5f);
         newCoreEquipmentPopup.interactable = true;
         newCoreEquipmentPopup.blocksRaycasts = true;
+
+        // Check Record
+        if (   ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[0])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[1])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[2])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[3])
+            && ProgressManager.Instance.PlayerHasEquipment(seikakuEquip[4]))
+        {
+            ProgressManager.Instance.AddNewRecord("Record.SeikakuEquip", "SeikakuEquip");
+        }
     }
     public void CloseNewCoreEquipmentPopup()
     {
+        // SE
+        AudioManager.Instance.PlaySFX("SystemEquip");
+
         newCoreEquipmentPopup.DOKill(false);
         newCoreEquipmentPopup.DOFade(0.0f, 0.1f).OnComplete(() =>
         {

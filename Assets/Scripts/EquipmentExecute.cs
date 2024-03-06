@@ -62,6 +62,11 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
 
     public IEnumerator Equip_AkihoStart(Battler battler)
     {
+        //int addValue = battler.max_hp / 2;
+        //Debug.Log("add value: " + addValue.ToString());
+        //battler.max_hp += addValue;
+        //battler.current_hp += addValue;
+
         battler.onTurnBeginEvent.AddListener(EquipmentMethods.AkihoSeikakuExecute);
         yield return null;
     }
@@ -79,6 +84,17 @@ public class EquipmentExecute : SingletonMonoBehaviour<EquipmentExecute>
     public IEnumerator Equip_RikkaEnd(Battler battler)
     {
         battler.onAttackedEvent.RemoveListener(EquipmentMethods.RikkaSeikakuExecute);
+        yield return null;
+    }
+    public IEnumerator Equip_KeiStart(Battler battler)
+    {
+        var teammates = FindObjectOfType<Battle>().GetAllTeammate();
+
+        Debug.Log("[Equip_KeiStart] teammate count = " + teammates.Count.ToString());
+        foreach (var teammate in teammates)
+        {
+            if (teammate != battler) EquipmentMethods.KeiSeikakuStart(teammate);
+        }
         yield return null;
     }
 
@@ -149,7 +165,7 @@ public static class EquipmentMethods
         Battler battler = battleManager.GetCurrentBattler();
 
         // ‰ñ•œ—Ê
-        const float percentage = 0.15f;
+        const float percentage = 0.02f;
         int amountHP = Mathf.FloorToInt((float)battler.max_hp * percentage);
         int amountSP = Mathf.FloorToInt((float)battler.max_mp * percentage);
 
@@ -184,6 +200,14 @@ public static class EquipmentMethods
         {
             battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
         }
+    }
+    public static void KeiSeikakuStart(Battler battler)
+    {
+        if (battleManager == null) return;
+
+        const int amount = 15;
+        Debug.Log("[KeiSeikakuStart] " + battler.character_name + " + " + amount.ToString() + "dmg");
+        battler.attack += amount;
     }
     public static void NayutaSeikakuExecute()
     {

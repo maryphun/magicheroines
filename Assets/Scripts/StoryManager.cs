@@ -69,7 +69,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("GoldAndroid 2");
                     BattleSetup.SetBattleBGM("AkihoBattle");
                     BattleSetup.SetReward(450, 50);
-                    BattleSetup.SetBattleBack(BattleBack.Basement);
+                    BattleSetup.AddEquipmentReward("NiceTshirt");
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
@@ -78,6 +78,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("Rikka_Enemy");
                     BattleSetup.SetBattleBGM("Loop 37 (RikkaBattle)");
                     BattleSetup.SetReward(1500, 300);
+                    BattleSetup.SetBattleBack(BattleBack.Basement);
                     NovelSingletone.Instance.PlayNovel("Chapter2-3 Prebattle", true, GoToBattle);
                 }
                 break;
@@ -95,6 +96,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("DarkAndroid");
                     BattleSetup.AddEnemy("GoldDrone");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
+                    BattleSetup.AddEquipmentReward("Glove");
                     BattleSetup.SetReward(550, 75);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
@@ -123,6 +125,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("DarkAndroid 2");
                     BattleSetup.AddEnemy("Drone 4");
                     BattleSetup.SetBattleBGM("Loop (Battle3)");
+                    BattleSetup.AddEquipmentReward("Shoes");
                     BattleSetup.SetReward(600, 100);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
@@ -140,6 +143,7 @@ public class StoryManager : MonoBehaviour
                     // 戦闘なし
                     BattleSetup.SetReward(2000, 300);
                     NovelSingletone.Instance.PlayNovel("Chapter5-1", true, GoToRewardScreen);
+                    ProgressManager.Instance.StageProgress();
 
                     PlayerCharacterDefine Kei = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/7.Kei");
                     ProgressManager.Instance.AddPlayerCharacter(Kei);
@@ -151,24 +155,64 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.AddEnemy("DarkAndroid");
                     BattleSetup.AddEnemy("GoldDrone");
                     BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
-                    BattleSetup.SetReward(650, 115);
+                    BattleSetup.SetReward(650, 120);
                     StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
             case 15:
                 {
                     BattleSetup.AddEnemy("Nayuta_Enemy");
-                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    BattleSetup.SetBattleBGM("apoptosis");
                     BattleSetup.SetBattleBack(BattleBack.CentreTower);
+                    BattleSetup.SetReward(2000, 400);
                     NovelSingletone.Instance.PlayNovel("Chapter5-3 Prebattle", true, GoToBattle);
                 }
                 break;
             case 16:
                 {
-                    BattleSetup.AddEnemy("Nayuta_Enemy");
+                    BattleSetup.AddEnemy("SeikakuSenki 1");
+                    BattleSetup.AddEnemy("SeikakuSenki 2");
+                    BattleSetup.AddEnemy("SeikakuSenki 3");
+                    BattleSetup.AddEnemy("SeikakuSenki 4");
                     BattleSetup.SetBattleBGM("finalbattle");
                     BattleSetup.SetBattleBack(BattleBack.Council);
                     NovelSingletone.Instance.PlayNovel("ChapterFinal Prebattle", true, GoToBattle);
+                }
+                break;
+            case 17: // エンドゲームコンテンツ　1
+                {
+                    BattleSetup.AddEnemy("SeikakuSenki 1");
+                    BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
+                    BattleSetup.SetReward(1000, 250);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 18: // エンドゲームコンテンツ　2
+                {
+                    BattleSetup.AddEnemy("Akiho_Enemy");
+                    BattleSetup.AddEnemy("Rikka_Enemy");
+                    BattleSetup.SetBattleBGM("AkihoBattle");
+                    BattleSetup.SetReward(1000, 250);
+                    BattleSetup.SetBattleBack(BattleBack.Basement);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 19: // エンドゲームコンテンツ　3
+                {
+                    BattleSetup.AddEnemy("Kei_Enemy 2");
+                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    BattleSetup.SetBattleBack(BattleBack.CentreTower);
+                    BattleSetup.SetReward(1000, 250);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 20: // エンドゲームコンテンツ　4
+                {
+                    BattleSetup.AddEnemy("Erena_Enemy");
+                    BattleSetup.AddEnemy("Nayuta_Enemy");
+                    BattleSetup.SetBattleBGM("apoptosis");
+                    BattleSetup.SetReward(1000, 250);
+                    StartCoroutine(SceneTransition("Battle", 0));
                 }
                 break;
             default:
@@ -265,6 +309,7 @@ public class StoryManager : MonoBehaviour
                     BattleSetup.SetReward(0, 0);
                     BattleSetup.AddTeammate("10.No5(Event)");
                     BattleSetup.AddTeammate("11.No72(Event)");
+                    BattleSetup.SetBattleBack(BattleBack.CentreTower);
                     BattleSetup.AddEnemy("Nayuta_Enemy");
                     BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
                 }
@@ -282,15 +327,51 @@ public class StoryManager : MonoBehaviour
             case 15:
                 {
                     NovelSingletone.Instance.PlayNovel("Chapter5-3 AfterBattle", true, GoToRewardScreen);
+
+                    // 那由多捕獲
+                    PlayerCharacterDefine Nayuta = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/8.Nayuta");
+                    ProgressManager.Instance.AddPlayerCharacter(Nayuta);
                 }
                 break;
             case 16:
                 {
-                    NovelSingletone.Instance.PlayNovel("ChapterFinal AfterBattle", true, GoToRewardScreen);
+                    NovelSingletone.Instance.PlayNovel("ChapterFinal AfterBattle", true, GoToEndCredit);
+                }
+                break;
+            case 17: // エンドゲームコンテンツ　1
+                {
+                    // 侵食記録開放【苗床へ堕ちる聖核戦姫】
+                    ProgressManager.Instance.AddNewRecord("Record.Nursery", "Nursery");
+
+                    GoToRewardScreen();
+                }
+                break;
+            case 18: // エンドゲームコンテンツ　2
+                {
+                    // 侵食記録開放【最後の二人の聖核戦姫】
+                    ProgressManager.Instance.AddNewRecord("Record.Final", "Final");
+
+                    GoToRewardScreen();
+                }
+                break;
+            case 19: // エンドゲームコンテンツ　3
+                {
+                    // 侵食記録開放【小悪魔の日常】
+                    ProgressManager.Instance.AddNewRecord("Record.Kei", "Kei");
+
+                    GoToRewardScreen();
+                }
+                break;
+            case 20: // エンドゲームコンテンツ　4
+                {
+                    // 侵食記録開放【最強の二人】
+                    ProgressManager.Instance.AddNewRecord("Record.Erenayuta", "Erenayuta");
+
+                    GoToRewardScreen();
                 }
                 break;
             default:
-                // 未開発地帯
+                // 未開発地帯 WARNING (もうここにこないはず)
                 underdevelopment.SetActive(true);
                 break;
         }
@@ -310,6 +391,11 @@ public class StoryManager : MonoBehaviour
     public void GoToRewardScreen()
     {
         StartCoroutine(SceneTransition("Reward", 0.5f));
+    }
+
+    public void GoToEndCredit()
+    {
+        StartCoroutine(SceneTransition("EndCredit", 0.5f));
     }
 
     IEnumerator SceneTransition(string sceneName, float animationTime)

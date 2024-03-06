@@ -5057,6 +5057,12 @@ MonoBehaviour:
     requirementProgress: 4
     isUnique: 1
     isEquipment: 1
+  - item: {fileID: 0}
+    equipment: {fileID: 11400000, guid: 1749578d3516e6e42884d1472c91602c, type: 2}
+    cost: 750
+    requirementProgress: 5
+    isUnique: 1
+    isEquipment: 1
   ShopItemList:
   - button: {fileID: 1970510954}
     data:
@@ -5244,7 +5250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5893,6 +5899,7 @@ GameObject:
   - component: {fileID: 2054666742}
   - component: {fileID: 2054666741}
   - component: {fileID: 2054666744}
+  - component: {fileID: 2054666745}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -6029,6 +6036,24 @@ MonoBehaviour:
   offset: {x: -300, y: 0}
   animationTime: 0.5
   startDelay: 0.25
+--- !u!114 &2054666745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054666739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d00d241e52fd6334ab1396c581b1fa75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 27
+  isForDialogueSystem: 0
+  text: {fileID: 0}
+  button: {fileID: 2054666741}
+  eventSystem: {fileID: 323824718}
+  raycaster: {fileID: 1006266642}
 --- !u!1 &2075673976
 GameObject:
   m_ObjectHideFlags: 0

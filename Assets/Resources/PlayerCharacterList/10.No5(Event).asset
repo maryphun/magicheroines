@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detail:
     characterID: 9
-    icon: {fileID: 499111351, guid: ddfb2c5889060414988df1c56b2521e9, type: 3}
+    icon: {fileID: -1141764776, guid: ddfb2c5889060414988df1c56b2521e9, type: 3}
     sprite: {fileID: 21300000, guid: 6e4933831e4cfd1469077e622cbd41ed, type: 3}
     animations:
       idle: {fileID: 0}
@@ -28,7 +28,7 @@ MonoBehaviour:
     starting_level: 8
     base_hp: 165
     base_mp: 0
-    base_attack: 30
+    base_attack: 15
     base_defense: 8
     base_speed: 10
     hp_growth: 0
@@ -45,6 +45,7 @@ MonoBehaviour:
       character: {fileID: 0}
       requiredCorruptionEpisode: 0
       requiredHornyEpisode: 0
-    corruptedName: Name.Battler
+    corruptedName: Name.No5
+    coreEquipment: {fileID: 0}
     abilities: []
   battler: {fileID: 6784901170540971542, guid: 471f4f6d45afb1e43af475fdb260a439, type: 3}

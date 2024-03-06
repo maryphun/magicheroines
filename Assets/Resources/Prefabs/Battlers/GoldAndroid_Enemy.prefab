@@ -224,7 +224,9 @@ MonoBehaviour:
     attack:
     - {fileID: 8300000, guid: 3d98526f4dcf8424da316c87b9a0b470, type: 3}
     attacked:
-    - {fileID: 8300000, guid: c917f4aa8fc109e42960f4bdcc4480a2, type: 3}
+    - {fileID: 8300000, guid: 2dfa4df15a51f424a9574df183f582ca, type: 3}
+    - {fileID: 8300000, guid: 0301933c5eaf94f45982610e49f333e4, type: 3}
+    - {fileID: 8300000, guid: 28b3d811c10edde46aabda1399b2c9d6, type: 3}
     retire:
     - {fileID: 8300000, guid: 795dc3ec701676246aee0a45c11386b8, type: 3}
   characterVoices:

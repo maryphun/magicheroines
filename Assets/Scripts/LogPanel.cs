@@ -46,16 +46,15 @@ public class LogPanel : MonoBehaviour
         logPanelCanvas.interactable = false;
         logPanelCanvas.blocksRaycasts = false;
 
-        logPanelCanvas.DOFade(0.0f, fadeAnimationTime).OnComplete(() => 
+        logPanelCanvas.DOFade(0.0f, fadeAnimationTime);
+
+        // ƒƒO‚ğÁ‚·
+        for (int i = 0; i < logObjs.Count; i++)
         {
-            // ƒƒO‚ğÁ‚·
-            for (int i = 0; i < logObjs.Count; i++)
-            {
-                Destroy(logObjs[i].gameObject);
-            }
-            logObjs.Clear();
-            logObjs = null;
-        });
+            Destroy(logObjs[i].gameObject, fadeAnimationTime);
+        }
+        logObjs.Clear();
+        logObjs = null;
     }
 
     private void SetupLogPanel()

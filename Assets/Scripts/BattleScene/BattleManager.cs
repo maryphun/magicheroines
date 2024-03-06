@@ -992,6 +992,7 @@ public class Battle : MonoBehaviour
             }
         }
 
+        Debug.Log("current progress: " + ProgressManager.Instance.GetCurrentStageProgress().ToString());
         // 負けイべント?
         bool isEvent = BattleSetup.isEventBattle; 
         if (!isEvent)
@@ -1010,10 +1011,10 @@ public class Battle : MonoBehaviour
             {
                 AudioManager.Instance.StopMusicWithFade();
 
-                // 敗北イベント(那由多戦)
+                // 敗北イベント(エレナ戦)
                 DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter2-3 AfterEvent", true, sceneTransition.EndScene); });
             }
-            else if (ProgressManager.Instance.GetCurrentStageProgress() == 12)
+            else if (ProgressManager.Instance.GetCurrentStageProgress() == 13)
             {
                 AudioManager.Instance.StopMusicWithFade();
 

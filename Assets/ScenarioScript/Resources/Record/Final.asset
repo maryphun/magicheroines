@@ -96,12 +96,12 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 3f19f2780858fac42a54360ce9aea297, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
-      BGMFadeTime: 3
+      BGMFadeTime: 5
       BGMEndFadeTime: 3
       SE: {fileID: 0}
       SEStyle: 0
@@ -625,7 +625,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -668,8 +668,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 6a14eccef1bc88a44ac01de3ac3ffa1c, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -3594,8 +3594,8 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: -577, y: 186, z: 0}
+  graphScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  graphPosition: {x: -119, y: 230, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
