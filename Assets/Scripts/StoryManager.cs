@@ -338,6 +338,38 @@ public class StoryManager : MonoBehaviour
                     NovelSingletone.Instance.PlayNovel("ChapterFinal AfterBattle", true, GoToEndCredit);
                 }
                 break;
+            case 17: // エンドゲームコンテンツ　1
+                {
+                    // 侵食記録開放【苗床へ堕ちる聖核戦姫】
+                    ProgressManager.Instance.AddNewRecord("Record.Nursery", "Nursery");
+
+                    GoToRewardScreen();
+                }
+                break;
+            case 18: // エンドゲームコンテンツ　2
+                {
+                    // 侵食記録開放【最後の二人の聖核戦姫】
+                    ProgressManager.Instance.AddNewRecord("Record.Final", "Final");
+
+                    GoToRewardScreen();
+                }
+                break;
+            case 19: // エンドゲームコンテンツ　3
+                {
+                    // 侵食記録開放【小悪魔の日常】
+                    ProgressManager.Instance.AddNewRecord("Record.Kei", "Kei");
+
+                    GoToRewardScreen();
+                }
+                break;
+            case 20: // エンドゲームコンテンツ　4
+                {
+                    // 侵食記録開放【最強の二人】
+                    ProgressManager.Instance.AddNewRecord("Record.Erenayuta", "Erenayuta");
+
+                    GoToRewardScreen();
+                }
+                break;
             default:
                 // 未開発地帯 WARNING (もうここにこないはず)
                 underdevelopment.SetActive(true);

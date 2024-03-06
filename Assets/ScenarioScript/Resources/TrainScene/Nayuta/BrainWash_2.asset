@@ -43,12 +43,12 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 8ce71f6fd348b5b4e85b590d3a5a3e4a, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
-      BGMFadeTime: 3
+      BGMFadeTime: 5
       BGMEndFadeTime: 3
       SE: {fileID: 0}
       SEStyle: 0
@@ -88,13 +88,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 90a3b07338ee4f94aba9da3fd628fa48, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -203,7 +203,7 @@ MonoBehaviour:
       BGMFadeTime: 3
       BGMEndFadeTime: 3
       SE: {fileID: 0}
-      SEStyle: 0
+      SEStyle: 2
       SELoop: 0
       SECount: 1
       SESecond: 20
@@ -582,13 +582,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 9d7b47932649c6c42b7d7f1798c237cc, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -620,13 +620,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 18ddba7b71ab748489ae6be5607a9028, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -734,13 +734,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: d888f1bc569238249b850f75d7b12f1a, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -1055,8 +1055,8 @@ MonoBehaviour:
       Name: Name.Goblin
       text: "\u300C\u30AE\u30E3\u30C3\u266A\u30AE\u30E3\u30C3\u266A\u30AE\u30E3\u30AE\u30E3\uFF01\u300D"
       localizationID: Nayuta.Fallen2-27
-      back: {fileID: 21300000, guid: cba758c088927e9458b473f711fe6d04, type: 3}
-      howBack: 2
+      back: {fileID: 21300000, guid: 8155e349ec1c39a48ab62cafc8c1fe95, type: 3}
+      howBack: 0
       backFadeColor: {r: 1, g: 0.48584908, b: 0.48584908, a: 1}
       backFadeSpeed: 0.5
       howCharas: 
@@ -1114,13 +1114,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 1cf7fd0fc6209014586f8cc1ad03739d, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -2192,13 +2192,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 0081c5189e57b334b9f313e646420646, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -2928,13 +2928,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 7dc28ec3863592d479ea34e6e687e309, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3043,7 +3043,7 @@ MonoBehaviour:
       BGMFadeTime: 3
       BGMEndFadeTime: 3
       SE: {fileID: 0}
-      SEStyle: 0
+      SEStyle: 2
       SELoop: 0
       SECount: 1
       SESecond: 20
@@ -3194,13 +3194,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 7dc28ec3863592d479ea34e6e687e309, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3233,7 +3233,7 @@ MonoBehaviour:
       BGMFadeTime: 3
       BGMEndFadeTime: 3
       SE: {fileID: 0}
-      SEStyle: 0
+      SEStyle: 2
       SELoop: 0
       SECount: 1
       SESecond: 20
@@ -3346,13 +3346,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 7dc28ec3863592d479ea34e6e687e309, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3385,7 +3385,7 @@ MonoBehaviour:
       BGMFadeTime: 3
       BGMEndFadeTime: 3
       SE: {fileID: 0}
-      SEStyle: 0
+      SEStyle: 2
       SELoop: 0
       SECount: 1
       SESecond: 20
@@ -3498,13 +3498,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 1db09affc1ad3b54db7ecd815df7b06a, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3550,7 +3550,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
+      Name: Name.Goblin
       text: "\u300C\u30AE\u30E3\u30AE\u30E3\u30C3\uFF01\u30A4\u30C3\u30BF\uFF01\u30A4\u30C3\u30BF\uFF01\u30B6\u30B3\uFF01\u30B6\u30B3\uFF01\u300D"
       localizationID: Nayuta.Fallen2-90
       back: {fileID: 21300000, guid: c4b57d171e6b3884da5b17f4bd3a02d0, type: 3}
@@ -3802,13 +3802,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 4fd2fd3d05883f64fb6041893d0abbed, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3896,9 +3896,9 @@ MonoBehaviour:
       text: "\u30C9\u30D3\u30E5\u30EB\u30EB\u30C3\uFF01\u30C9\u30D3\u30E5\u30EB\u30EB\u30C3\uFF01"
       localizationID: Nayuta.Fallen2-99
       back: {fileID: 21300000, guid: c4b57d171e6b3884da5b17f4bd3a02d0, type: 3}
-      howBack: 0
+      howBack: 2
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
+      backFadeSpeed: 0.4
       howCharas: 
       charas: []
       charaFadeColor: []
@@ -3916,13 +3916,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 18ddba7b71ab748489ae6be5607a9028, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -3971,9 +3971,9 @@ MonoBehaviour:
       Name: 
       text: "\u6700\u5F37\u306E\u8056\u6838\u6226\u59EB\u306F\u5B8C\u5168\u306B\u9006\u8EE2\u306E\u82BD\u3092\u5931\u3044\u3001\u90A3\u7531\u591A\u306E\u601D\u8003\u306F\u767D\u6FC1\u6DB2\u3068\u5FEB\u697D\u306E\u4E2D\u306B\u6EB6\u3051\u3066\u3044\u304F\u306E\u3060\u3063\u305F"
       localizationID: Nayuta.Fallen2-101
-      back: {fileID: 21300000, guid: c4b57d171e6b3884da5b17f4bd3a02d0, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
       howCharas: 
       charas: []
@@ -4003,13 +4003,13 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 
       charaEffectStrength: 
-      DialogueEffect: 0
+      DialogueEffect: 1
       DialogueEffectStrength: 0
     - open: 0
       Name: 
       text: 
       localizationID: 
-      back: {fileID: 21300000, guid: c4b57d171e6b3884da5b17f4bd3a02d0, type: 3}
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4047,7 +4047,7 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 0.8695652, y: 0.8695652, z: 1}
-  graphPosition: {x: -127, y: 287, z: 0}
+  graphScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  graphPosition: {x: -12, y: 292, z: 0}
   havePreLocations: 0
   newLocations: []
