@@ -179,6 +179,42 @@ public class StoryManager : MonoBehaviour
                     NovelSingletone.Instance.PlayNovel("ChapterFinal Prebattle", true, GoToBattle);
                 }
                 break;
+            case 17: // エンドゲームコンテンツ　1
+                {
+                    BattleSetup.AddEnemy("SeikakuSenki 1");
+                    BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
+                    BattleSetup.SetReward(1000, 250);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 18: // エンドゲームコンテンツ　2
+                {
+                    BattleSetup.AddEnemy("Akiho_Enemy");
+                    BattleSetup.AddEnemy("Rikka_Enemy");
+                    BattleSetup.SetBattleBGM("AkihoBattle");
+                    BattleSetup.SetReward(1000, 250);
+                    BattleSetup.SetBattleBack(BattleBack.Basement);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 19: // エンドゲームコンテンツ　3
+                {
+                    BattleSetup.AddEnemy("Kei_Enemy 2");
+                    BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+                    BattleSetup.SetBattleBack(BattleBack.CentreTower);
+                    BattleSetup.SetReward(1000, 250);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
+            case 20: // エンドゲームコンテンツ　4
+                {
+                    BattleSetup.AddEnemy("Erena_Enemy");
+                    BattleSetup.AddEnemy("Nayuta_Enemy");
+                    BattleSetup.SetBattleBGM("apoptosis");
+                    BattleSetup.SetReward(1000, 250);
+                    StartCoroutine(SceneTransition("Battle", 0));
+                }
+                break;
             default:
                 // 未開発地帯
                 underdevelopment.SetActive(true);

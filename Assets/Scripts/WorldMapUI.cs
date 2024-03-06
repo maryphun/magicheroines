@@ -7,6 +7,7 @@ using DG.Tweening;
 public class WorldMapUI : MonoBehaviour
 {
     [Header("Setting")]
+    [SerializeField] private bool isEndGameContent = false;
     [SerializeField] private string BGM = "Specification";
 
     [Header("References")]

@@ -25,7 +25,7 @@ public class StageHandler : MonoBehaviour
 
     public void Init()
     {
-        int currentStage = ProgressManager.Instance.GetCurrentStageProgress();
+        int currentStage = ProgressManager.Instance.GetCurrentStageProgress() - startingStage;
 
         rect.anchoredPosition = new Vector3((currentStage-1) * (-stageIconSpacing), rect.anchoredPosition.y, 0.0f);
 

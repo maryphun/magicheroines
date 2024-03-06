@@ -27,17 +27,17 @@ public class ScenarioDebuggerUI : MonoBehaviour
 
     private void Update()
     {
-        if (isPlaying)
-        {
-            // 終了チェック
-            if (NovelSingletone.Instance.IsEnded())
-            {
-                // 終了
-                Debug.Log("End");
-                isPlaying = false;
-                UICanvas.enabled = true;
-            }
-        }
+        //if (isPlaying)
+        //{
+        //    // 終了チェック
+        //    if (NovelSingletone.Instance.IsEnded())
+        //    {
+        //        // 終了
+        //        Debug.Log("End");
+        //        isPlaying = false;
+        //        UICanvas.enabled = true;
+        //    }
+        //}
 
         if (Input.GetKeyDown(KeyCode.F2))
         {
