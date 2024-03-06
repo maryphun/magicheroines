@@ -536,9 +536,13 @@ MonoBehaviour:
     retire:
     - {fileID: 8300000, guid: 795dc3ec701676246aee0a45c11386b8, type: 3}
   characterVoices:
-    attack: []
-    attacked: []
-    retire: []
+    attack:
+    - {fileID: 8300000, guid: c5d943ed36b9e864ba063d86cb5e757e, type: 3}
+    - {fileID: 8300000, guid: e1320b357b47ae74289163efb19f811d, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: fb166bc4b95cabc4d9af1e41eed32bab, type: 3}
+    retire:
+    - {fileID: 8300000, guid: d6b142661614fe0429830368e95a4183, type: 3}
   attackVFX: {fileID: 1343633729508638609, guid: 70f6957b9546fb448a9775b42739d195, type: 3}
   breathScale: 0.005
   enableNormalAttack: 1

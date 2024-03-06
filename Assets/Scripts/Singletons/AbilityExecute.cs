@@ -2521,6 +2521,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
         AudioManager.Instance.PlaySFX("Machine", 0.5f);
+        AudioManager.Instance.PlaySFX("Kei_Attack2");
 
         var targetPos = target.GetComponent<RectTransform>().position;
         targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.15f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.15f, targetPos.y);
@@ -2594,6 +2595,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
         AudioManager.Instance.PlaySFX("Machine", 0.5f);
+        AudioManager.Instance.PlaySFX("Kei_Attack2");
 
         var targetPos = target.GetComponent<RectTransform>().position;
         targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 0.15f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 0.15f, targetPos.y);
