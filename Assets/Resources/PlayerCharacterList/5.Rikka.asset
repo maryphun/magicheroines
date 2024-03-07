@@ -27,12 +27,12 @@ MonoBehaviour:
     nameID: Name.Rikka
     starting_level: 10
     base_hp: 135
-    base_mp: 80
+    base_mp: 45
     base_attack: 30
     base_defense: 10
     base_speed: 20
     hp_growth: 15
-    mp_growth: 15
+    mp_growth: 3
     attack_growth: 6
     defense_growth: 2
     speed_growth: 6

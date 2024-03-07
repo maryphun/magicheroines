@@ -304,6 +304,7 @@ MonoBehaviour:
   isMachine: 0
   attackCallback: 
   isAoENormalAttack: 0
+  cantMissAttack: 1
   character_name: "\u30A8\u30EC\u30CA"
   characterID: 0
   icon: {fileID: 0}

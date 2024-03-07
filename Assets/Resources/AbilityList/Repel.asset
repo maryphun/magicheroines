@@ -16,7 +16,7 @@ MonoBehaviour:
   abilityNameID: Ability.Repel
   descriptionID: Ability.Repel_Info
   functionName: Repel
-  consumeSP: 20
+  consumeSP: 25
   cooldown: 2
   requiredLevel: 8
   requiredHornyness: 0
@@ -24,3 +24,4 @@ MonoBehaviour:
   abilityType: 1
   isAOE: 0
   canTargetSelf: 0
+  disableOnDefault: 0

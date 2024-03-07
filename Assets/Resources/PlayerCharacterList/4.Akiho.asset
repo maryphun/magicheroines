@@ -27,12 +27,12 @@ MonoBehaviour:
     nameID: Name.Akiho
     starting_level: 8
     base_hp: 130
-    base_mp: 110
+    base_mp: 65
     base_attack: 3
     base_defense: 1
     base_speed: 2
     hp_growth: 15
-    mp_growth: 25
+    mp_growth: 4
     attack_growth: 2
     defense_growth: 2
     speed_growth: 2

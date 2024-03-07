@@ -32,7 +32,7 @@ MonoBehaviour:
     base_defense: 0
     base_speed: 15
     hp_growth: 4
-    mp_growth: 5
+    mp_growth: 3
     attack_growth: 2
     defense_growth: 1
     speed_growth: 4
@@ -46,6 +46,7 @@ MonoBehaviour:
       requiredCorruptionEpisode: 0
       requiredHornyEpisode: 0
     corruptedName: Name.Tentacle
+    coreEquipment: {fileID: 0}
     abilities:
     - {fileID: 11400000, guid: 9206ad52942aa334f97b940d60e120a9, type: 2}
     - {fileID: 11400000, guid: d04ceb2ac5723a243a4b1fd7442f446b, type: 2}

@@ -24,6 +24,7 @@ public class Battler : MonoBehaviour
     [SerializeField] private bool isMachine = false; // 機械なのか
     [SerializeField] private string attackCallback; // 特殊攻撃アニメーション
     [SerializeField] private bool isAoENormalAttack = false; // 普通攻撃が範囲攻撃か
+    [SerializeField] private bool cantMissAttack = false; // 普通攻撃がMissできるか
 
     [Header("Debug：デバッグ用なのでここで設定する物は全部無効です。\nEnemyDefineとPlayerCharacterDefineで設定してください")]
     [SerializeField] public string character_name;
@@ -68,6 +69,7 @@ public class Battler : MonoBehaviour
     [HideInInspector] public bool EnableNormalAttack { get { return enableNormalAttack; } set { enableNormalAttack = value; } }
     [HideInInspector] public bool IsMachine { get { return isMachine; } }
     [HideInInspector] public bool IsFemale { get { return isFemale; } }
+    [HideInInspector] public bool CantMissAttack { get { return cantMissAttack; } }
     [HideInInspector] public string CharacterNameColored { get { return CustomColor.AddColor(character_name, character_color); } }
     [HideInInspector] public string AttackCallback { get { return attackCallback; } }
     [HideInInspector] public bool IsAoENormalAttack { get { return isAoENormalAttack; } }
@@ -190,6 +192,7 @@ public class Battler : MonoBehaviour
     public void InitializeCharacterData(Character character)
     {
         character_name = LocalizationManager.Localize(character.characterData.nameID);
+        if (character.is_corrupted) character_name = LocalizationManager.Localize(character.characterData.corruptedName);
         characterID = character.characterData.characterID;
         isEnemy = false;
         character_color = character.characterData.color;

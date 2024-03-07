@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detail:
     characterID: 10
-    icon: {fileID: 21300000, guid: 522094c3a9e053444801dbc151b1e102, type: 3}
+    icon: {fileID: -1141764776, guid: ddfb2c5889060414988df1c56b2521e9, type: 3}
     sprite: {fileID: 21300000, guid: 6e4933831e4cfd1469077e622cbd41ed, type: 3}
     animations:
       idle: {fileID: 0}

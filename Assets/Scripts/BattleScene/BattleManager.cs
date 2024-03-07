@@ -584,6 +584,8 @@ public class Battle : MonoBehaviour
         // attack miss?
         bool isMiss = (UnityEngine.Random.Range(0, 100) > CalculateHitChance(attacker.speed - target.speed));
 
+        if (attacker.CantMissAttack) isMiss = false; // â‘Îƒ~ƒX‚µ‚È‚¢
+
         if (!isMiss)
         {
             // play SE

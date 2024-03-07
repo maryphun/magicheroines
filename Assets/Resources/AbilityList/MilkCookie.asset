@@ -16,7 +16,7 @@ MonoBehaviour:
   abilityNameID: Ability.MilkCookie
   descriptionID: Ability.MilkCookie_Info
   functionName: MilkCookie
-  consumeSP: 15
+  consumeSP: 30
   cooldown: 3
   requiredLevel: 12
   requiredHornyness: 0
@@ -24,3 +24,4 @@ MonoBehaviour:
   abilityType: 1
   isAOE: 0
   canTargetSelf: 0
+  disableOnDefault: 0
