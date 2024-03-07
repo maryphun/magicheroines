@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using System.Linq;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class FormationPanel : MonoBehaviour
@@ -145,13 +146,15 @@ public class FormationPanel : MonoBehaviour
         FormationSelectionPanel.DOFade(1.0f, formationSelectionPanelAnimationTime);
 
         var allCharacters = ProgressManager.Instance.GetAllCharacter();
-        int characterCount = ProgressManager.Instance.GetAllUsableCharacter().Count; // 使用できるキャラクター所持数
-        float totalGap = iconGap * (characterCount-1);
+        var usableCharacters = ProgressManager.Instance.GetAllUsableCharacter(); // 使用できるキャラクター所持数
+
+        float totalGap = iconGap * (usableCharacters.Count-1);
         float firstPosition = -totalGap * 0.5f;
+        float nextposition = 0f;
         for (int i = 0; i < formationSelectIcon.Length; i++)
         {
             // 編入できる条件
-            if (i >= characterCount) continue; // このキャラはまだ持っていない
+            if (!usableCharacters.Any(x => x.characterData.characterID == allCharacters[i].characterData.characterID)) continue; // このキャラはまだ持っていない
             if (allCharacters[i].characterData.is_heroin && !allCharacters[i].is_corrupted) continue; // まだ闇落ちできていない
 
             // 編入できるキャラ
@@ -160,7 +163,8 @@ public class FormationPanel : MonoBehaviour
                 formationSelectIcon[i].gameObject.SetActive(true);
 
                 // ボタン配置
-                float buttonPosition = firstPosition + (iconGap * i);
+                float buttonPosition = firstPosition + nextposition;
+                nextposition += iconGap;
                 formationSelectIcon[i].GetComponent<RectTransform>().localPosition = new Vector3(buttonPosition, 0.0f, 0.0f);
 
                 // すでに配置されているか
