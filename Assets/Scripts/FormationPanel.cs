@@ -154,7 +154,7 @@ public class FormationPanel : MonoBehaviour
         for (int i = 0; i < formationSelectIcon.Length; i++)
         {
             // •Ò“ü‚Å‚«‚éğŒ
-            if (!usableCharacters.Any(x => x.characterData.characterID == allCharacters[i].characterData.characterID)) continue; // ‚±‚ÌƒLƒƒƒ‰‚Í‚Ü‚¾‚Á‚Ä‚¢‚È‚¢
+            if (!usableCharacters.Any(x => x.characterData.characterID == i)) continue; // ‚±‚ÌƒLƒƒƒ‰‚Í‚Ü‚¾‚Á‚Ä‚¢‚È‚¢
             if (allCharacters[i].characterData.is_heroin && !allCharacters[i].is_corrupted) continue; // ‚Ü‚¾ˆÅ—‚¿‚Å‚«‚Ä‚¢‚È‚¢
 
             // •Ò“ü‚Å‚«‚éƒLƒƒƒ‰

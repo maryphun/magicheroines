@@ -128,6 +128,18 @@ public class Battle : MonoBehaviour
             positionY -= positionY_gap;
         }
 
+        // 京聖核
+        if (characterList.Any(x => x.equipment != null && x.equipment.pathName == "Equip_Kei"))
+        {
+            foreach (var battler in characterList)
+            {
+                if (battler.equipment == null || battler.equipment.pathName != "Equip_Kei")
+                {
+                    battler.attack += 15;
+                }
+            }
+        }
+
         // 敵キャラ生成
         positionX = -(enemies.Count * characterSpace) * 0.5f;
         positionY_gap = totalGap / enemies.Count;
@@ -1030,6 +1042,9 @@ public class Battle : MonoBehaviour
     {
         // シーンが終了する前にやるべき処理
         EquipmentMethods.Finalize();
+
+        // マウスカーソルが戻ることを保証する
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
         // シーンロード
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
