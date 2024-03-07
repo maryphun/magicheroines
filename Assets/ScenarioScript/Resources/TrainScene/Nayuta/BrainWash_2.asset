@@ -61,7 +61,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 
       charaEffectStrength: 
-      DialogueEffect: 0
+      DialogueEffect: 9
       DialogueEffectStrength: 0
     - open: 0
       Name: 
@@ -4047,7 +4047,7 @@ MonoBehaviour:
     _next: 2
     _nextChoiceIndexes: ffffffff
   _choiceList: []
-  graphScale: {x: 0.65751624, y: 0.65751624, z: 1}
-  graphPosition: {x: -12, y: 292, z: 0}
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: 361, y: 291, z: 0}
   havePreLocations: 0
   newLocations: []
