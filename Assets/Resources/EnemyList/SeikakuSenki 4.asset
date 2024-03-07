@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SeikakuSenki 4
   m_EditorClassIdentifier: 
   enemyName: Name.SeikakuSenki
-  maxHP: 35
-  maxMP: 40
-  attack: 20
-  defense: 3
-  speed: 5
-  level: 2
+  maxHP: 200
+  maxMP: 100
+  attack: 120
+  defense: 20
+  speed: 8
+  level: 20
   character_color: {r: 0.9885385, g: 1, b: 0.6462264, a: 1}
   actionPattern:
   - actionType: 0

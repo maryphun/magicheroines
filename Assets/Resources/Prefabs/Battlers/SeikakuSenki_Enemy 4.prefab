@@ -499,12 +499,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoInit: 0
   animations:
-    idle: {fileID: 21300000, guid: f0c57c7ce188f944dbb8b8cc726519cc, type: 3}
-    attack: {fileID: 21300000, guid: f0c57c7ce188f944dbb8b8cc726519cc, type: 3}
-    magic: {fileID: 21300000, guid: f0c57c7ce188f944dbb8b8cc726519cc, type: 3}
-    item: {fileID: 21300000, guid: f0c57c7ce188f944dbb8b8cc726519cc, type: 3}
-    attacked: {fileID: 21300000, guid: f0c57c7ce188f944dbb8b8cc726519cc, type: 3}
-    retire: {fileID: 21300000, guid: f0c57c7ce188f944dbb8b8cc726519cc, type: 3}
+    idle: {fileID: 21300000, guid: 9bb686b9e3e44314b934d1e994f8637a, type: 3}
+    attack: {fileID: 21300000, guid: 9bb686b9e3e44314b934d1e994f8637a, type: 3}
+    magic: {fileID: 21300000, guid: 9bb686b9e3e44314b934d1e994f8637a, type: 3}
+    item: {fileID: 21300000, guid: 9bb686b9e3e44314b934d1e994f8637a, type: 3}
+    attacked: {fileID: 21300000, guid: 9bb686b9e3e44314b934d1e994f8637a, type: 3}
+    retire: {fileID: 21300000, guid: 9bb686b9e3e44314b934d1e994f8637a, type: 3}
   soundEffects:
     attack:
     - {fileID: 8300000, guid: fe20b3e7ca7e574459dc4d990f43e86a, type: 3}
@@ -523,6 +523,7 @@ MonoBehaviour:
   isMachine: 1
   attackCallback: 
   isAoENormalAttack: 0
+  cantMissAttack: 0
   character_name: "\u660E\u7A42"
   characterID: 0
   icon: {fileID: 0}
