@@ -321,6 +321,7 @@ public class Battler : MonoBehaviour
 
     public Vector2 GetCharacterSize()
     {
+        if (graphicRect == null) return Vector2.zero;
         return new Vector2(graphicRect.rect.width * Mathf.Abs(graphicRect.localScale.x) * CanvasReferencer.Instance.GetScaleFactor(), graphicRect.rect.height * Mathf.Abs(graphicRect.localScale.y) * CanvasReferencer.Instance.GetScaleFactor());
     }
 

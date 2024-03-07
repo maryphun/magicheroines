@@ -12733,6 +12733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ccf481e8f3874d47929d3f371941601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  operationBtn: {fileID: 381654444}
   isDebug: 0
 --- !u!1 &373248939
 GameObject:

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Kei_Enemy 2
   m_EditorClassIdentifier: 
   enemyName: Name.Kei
-  maxHP: 1500
+  maxHP: 1100
   maxMP: 120
-  attack: 100
+  attack: 120
   defense: 20
   speed: 17
   level: 30

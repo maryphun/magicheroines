@@ -6,6 +6,9 @@ using TMPro;
 
 public class HomeSceneUI : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private GameObject operationBtn;
+
     [Header("Debug")]
     [SerializeField] private bool isDebug = false;
 
@@ -26,6 +29,9 @@ public class HomeSceneUI : MonoBehaviour
             return;
         }
 #endif
+
+        //　ステージがない
+        if (ProgressManager.Instance.GetCurrentStageProgress() >= 21) operationBtn.SetActive(false);
 
         AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 2.0f);
     }
