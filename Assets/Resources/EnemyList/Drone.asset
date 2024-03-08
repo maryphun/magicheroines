@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Drone
   m_EditorClassIdentifier: 
   enemyName: Name.Drone
-  maxHP: 35
+  maxHP: 25
   maxMP: 0
   attack: 15
   defense: 3

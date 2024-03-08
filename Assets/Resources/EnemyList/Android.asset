@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Android
   m_EditorClassIdentifier: 
   enemyName: Name.Android
-  maxHP: 35
+  maxHP: 30
   maxMP: 40
   attack: 20
-  defense: 3
+  defense: 4
   speed: 5
   level: 2
   character_color: {r: 1, g: 1, b: 1, a: 1}
