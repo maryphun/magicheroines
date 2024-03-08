@@ -29,6 +29,7 @@ public class ActionPanel : MonoBehaviour
     [SerializeField] private Button attackBtn;
     [SerializeField] private TMPro.TMP_Text cannotAttackText; // 攻撃できないテキスト
     [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private Button escapeBtn;
 
     [Header("Debug")]
     [SerializeField] private bool isSelectingTarget;
@@ -52,6 +53,8 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.DOFade(boolean ? 1.0f:0.0f, animTime);
         canvasGrp.interactable = boolean;
         canvasGrp.blocksRaycasts = boolean;
+
+        escapeBtn.interactable = boolean;
 
         isSelectingTarget = false;
 
@@ -81,6 +84,8 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.interactable = false;
         canvasGrp.blocksRaycasts = false;
 
+        escapeBtn.interactable = false;
+
         // カーソルを変更
         Cursor.SetCursor(cursorTexture, new Vector2(cursorTexture.width * 0.5f, cursorTexture.height * 0.5f), CursorMode.Auto);
 
@@ -104,6 +109,8 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.interactable = false;
         canvasGrp.blocksRaycasts = false;
 
+        escapeBtn.interactable = false;
+
         // アイテム
         commandType = CommandType.Item;
 
@@ -120,6 +127,8 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.alpha = 1.0f;
         canvasGrp.interactable = true;
         canvasGrp.blocksRaycasts = true;
+
+        escapeBtn.interactable = true;
 
         commandType = CommandType.Waiting;
 
@@ -138,6 +147,8 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.interactable = false;
         canvasGrp.blocksRaycasts = false;
 
+        escapeBtn.interactable = false;
+
         // 特殊技
         commandType = CommandType.Ability;
 
@@ -154,6 +165,8 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.DOFade(1.0f, abilityPanel.GetAnimTime());
         canvasGrp.interactable = true;
         canvasGrp.blocksRaycasts = true;
+
+        escapeBtn.interactable = true;
 
         commandType = CommandType.Waiting;
 
@@ -257,7 +270,9 @@ public class ActionPanel : MonoBehaviour
         canvasGrp.alpha = 1f;
         canvasGrp.interactable = true;
         canvasGrp.blocksRaycasts = true;
-
+        
+        escapeBtn.interactable = true;
+        
         isSelectingTarget = false;
 
         // カーソルを戻す

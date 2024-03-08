@@ -11,6 +11,7 @@ public class ButtonHotkey : MonoBehaviour
     [Header("Setting")]
     [SerializeField] private KeyCode key;
     [SerializeField] private bool isForDialogueSystem = false;
+    [SerializeField] private bool onlyAllowOnce = false;
 
     [Header("References")]
     [SerializeField] private TMPro.TMP_Text text;
@@ -48,6 +49,11 @@ public class ButtonHotkey : MonoBehaviour
             if (CheckIsButtonReachable())
             {
                 button.onClick.Invoke();
+
+                if (onlyAllowOnce)
+                {
+                    this.enabled = false;
+                }
             }
         }
     }

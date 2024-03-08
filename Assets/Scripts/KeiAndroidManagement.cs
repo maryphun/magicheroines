@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 
 [RequireComponent(typeof(Battler))]
 public class KeiAndroidManagement : MonoBehaviour
@@ -135,9 +137,11 @@ public class KeiAndroidManagement : MonoBehaviour
         {
             if (spawnedAndroid[i] != null && !spawnedAndroid[i].isAlive)
             {
-                Destroy(spawnedAndroid[i].gameObject, 1.3f);
-                spawnedAndroid[i] = null;
-                spawnedAndroidCnt--;
+                //Destroy(spawnedAndroid[i].gameObject, 1.3f);
+                    spawnedAndroid[i].GetGraphicRectTransform().localScale = Vector3.zero;
+                    spawnedAndroid[i] = null;
+                    spawnedAndroidCnt--;
+                
             }
         }
     }

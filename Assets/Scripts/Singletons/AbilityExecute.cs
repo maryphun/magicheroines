@@ -1345,6 +1345,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
+                    rectTransform.position = originalPos;
                     battleManager.NextTurn(false);
                 });
     }

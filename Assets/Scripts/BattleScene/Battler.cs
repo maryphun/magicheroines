@@ -246,8 +246,10 @@ public class Battler : MonoBehaviour
                 defense = Mathf.Max(defense + equipment.def, 0);
                 speed = Mathf.Max(speed + equipment.spd, 0);
 
-                current_hp += equipment.hp;
-                current_mp += equipment.sp;
+                if (equipment.hp > 0) current_hp += equipment.hp;
+                current_hp = Mathf.Clamp(current_hp, 1, max_hp);
+                if (equipment.sp > 0) current_mp += equipment.sp;
+                current_mp = Mathf.Clamp(current_mp, 1, max_mp);
             }
             catch (Exception ex)
             {

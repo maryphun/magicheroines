@@ -110,7 +110,8 @@ public class BattleSceneTransition : MonoBehaviour
             else
             {
                 // Ž¸”s
-                StartCoroutine(EndSceneTransition(callback, "WorldMap"));
+                string targetMap = (ProgressManager.Instance.GetCurrentStageProgress() <= 16) ? "WorldMap" : "EndGameContent";
+                StartCoroutine(EndSceneTransition(callback, targetMap));
             }
         }
     }

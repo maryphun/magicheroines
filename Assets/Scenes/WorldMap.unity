@@ -1355,6 +1355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 27
   isForDialogueSystem: 0
+  onlyAllowOnce: 1
   text: {fileID: 0}
   button: {fileID: 436908050}
   eventSystem: {fileID: 1752138281}

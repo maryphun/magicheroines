@@ -135,7 +135,8 @@ public class RewardPanel : MonoBehaviour
 
             // scene transition
             AlphaFadeManager.Instance.FadeOut(1.0f);
-            string nextScene = BattleSetup.isStoryMode ? "Home" : "WorldMap";
+            string targetMap = (ProgressManager.Instance.GetCurrentStageProgress() <= 16) ? "WorldMap" : "EndGameContent";
+            string nextScene = BattleSetup.isStoryMode ? "Home" : targetMap;
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextScene, LoadSceneMode.Single);
             asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
             DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { asyncLoad.allowSceneActivation = true; });

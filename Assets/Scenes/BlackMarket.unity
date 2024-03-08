@@ -6050,6 +6050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 27
   isForDialogueSystem: 0
+  onlyAllowOnce: 1
   text: {fileID: 0}
   button: {fileID: 2054666741}
   eventSystem: {fileID: 323824718}

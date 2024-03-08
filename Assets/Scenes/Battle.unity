@@ -584,6 +584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 120
+  isForDialogueSystem: 0
+  onlyAllowOnce: 0
   text: {fileID: 74133211}
   button: {fileID: 495113496}
   eventSystem: {fileID: 635519577}
@@ -736,6 +738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 99
+  isForDialogueSystem: 0
+  onlyAllowOnce: 0
   text: {fileID: 82305806}
   button: {fileID: 1438463135}
   eventSystem: {fileID: 635519577}
@@ -3187,6 +3191,7 @@ MonoBehaviour:
   attackBtn: {fileID: 955757310}
   cannotAttackText: {fileID: 1069366861}
   eventSystem: {fileID: 635519577}
+  escapeBtn: {fileID: 839053961}
   isSelectingTarget: 0
   isSelectedTarget: 0
   commandType: 0
@@ -5265,6 +5270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 27
+  isForDialogueSystem: 0
+  onlyAllowOnce: 0
   text: {fileID: 0}
   button: {fileID: 1107148064}
   eventSystem: {fileID: 635519577}
@@ -10129,6 +10136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 118
+  isForDialogueSystem: 0
+  onlyAllowOnce: 0
   text: {fileID: 2074821038}
   button: {fileID: 2018373252}
   eventSystem: {fileID: 635519577}
@@ -10522,6 +10531,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 122
+  isForDialogueSystem: 0
+  onlyAllowOnce: 0
   text: {fileID: 2118106224}
   button: {fileID: 955757310}
   eventSystem: {fileID: 635519577}
