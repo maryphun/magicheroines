@@ -56,23 +56,23 @@ public class TrainPanel : MonoBehaviour
     void InitList()
     {
         // 淫乱化シナリオリスト
-        CharacterID_To_HornyNovelNameList.Add(3, new List<string> { "Akiho/Horny_1", "Akiho/Horny_2" });
-        CharacterID_To_HornyNovelNameList.Add(4, new List<string> { "Rikka/Horny_1", "Rikka/Horny_2" });
-        CharacterID_To_HornyNovelNameList.Add(5, new List<string> { "Erena/Horny_1", "Erena/Horny_2" });
-        CharacterID_To_HornyNovelNameList.Add(6, new List<string> { "Kei/Horny_1", "Kei/Horny_2" });
-        CharacterID_To_HornyNovelNameList.Add(7, new List<string> { "Nayuta/Horny_1", "Nayuta/Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(3, new List<string> { "Akiho/A_Horny_1", "Akiho/A_Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(4, new List<string> { "Rikka/R_Horny_1", "Rikka/R_Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(5, new List<string> { "Erena/E_Horny_1", "Erena/E_Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(6, new List<string> { "Kei/K_Horny_1", "Kei/K_Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(7, new List<string> { "Nayuta/N_Horny_1", "Nayuta/N_Horny_2" });
         // 洗脳シナリオリスト
-        CharacterID_To_BrainwashNovelNameList.Add(3, new List<string> { "Akiho/BrainWash_1", "Akiho/BrainWash_2", "Akiho/BrainWash_3" });
-        CharacterID_To_BrainwashNovelNameList.Add(4, new List<string> { "Rikka/BrainWash_1", "Rikka/BrainWash_2", "Rikka/BrainWash_3" });
-        CharacterID_To_BrainwashNovelNameList.Add(5, new List<string> { "Erena/BrainWash_1", "Erena/BrainWash_2", "Erena/BrainWash_3" });
-        CharacterID_To_BrainwashNovelNameList.Add(6, new List<string> { "Kei/BrainWash_1", "Kei/BrainWash_2", "Kei/BrainWash_3" });
-        CharacterID_To_BrainwashNovelNameList.Add(7, new List<string> { "Nayuta/BrainWash_1", "Nayuta/BrainWash_2", "Nayuta/BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(3, new List<string> { "Akiho/A_BrainWash_1", "Akiho/A_BrainWash_2", "Akiho/A_BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(4, new List<string> { "Rikka/R_BrainWash_1", "Rikka/R_BrainWash_2", "Rikka/R_BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(5, new List<string> { "Erena/E_BrainWash_1", "Erena/E_BrainWash_2", "Erena/E_BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(6, new List<string> { "Kei/K_BrainWash_1", "Kei/K_BrainWash_2", "Kei/K_BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(7, new List<string> { "Nayuta/N_BrainWash_1", "Nayuta/N_BrainWash_2", "Nayuta/N_BrainWash_3" });
         // 聖核研究シナリオリスト
-        CharacterID_To_CoreNovelNameList.Add(3, new List<string> { "Akiho/Core_1", "Akiho/Core_2" });
-        CharacterID_To_CoreNovelNameList.Add(4, new List<string> { "Rikka/Core_1", "Rikka/Core_2" });
-        CharacterID_To_CoreNovelNameList.Add(5, new List<string> { "Erena/Core_1", "Erena/Core_2" });
-        CharacterID_To_CoreNovelNameList.Add(6, new List<string> { "Kei/Core_1", "Kei/Core_2" });
-        CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/Core_1", "Nayuta/Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(3, new List<string> { "Akiho/A_Core_1", "Akiho/A_Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(4, new List<string> { "Rikka/R_Core_1", "Rikka/R_Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(5, new List<string> { "Erena/E_Core_1", "Erena/E_Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(6, new List<string> { "Kei/K_Core_1", "Kei/K_Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/N_Core_1", "Nayuta/N_Core_2" });
     }
 
     private void Awake()
