@@ -42,6 +42,7 @@ public class BlackMarketManager : MonoBehaviour
     [SerializeField] private RectTransform itemDescription;
     [SerializeField] private TMP_Text itemNameText;
     [SerializeField] private TMP_Text itemDescriptionText;
+    [SerializeField] private GameObject inventoryBack;
 
     [Header("Debug")]
     [SerializeField] private int sellingItemCnt = 0;
@@ -252,10 +253,12 @@ public class BlackMarketManager : MonoBehaviour
     {
         // インベントリメニューを表示
         Inventory.Instance.obj.OpenInventory(false, OnCloseInventory);
+        inventoryBack.SetActive(true);
     }
 
     public void OnCloseInventory()
     {
         // 何もしない
+        inventoryBack.SetActive(false);
     }
 }
