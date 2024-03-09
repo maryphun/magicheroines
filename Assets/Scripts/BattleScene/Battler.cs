@@ -501,9 +501,9 @@ public class Battler : MonoBehaviour
                     img.DOFade(1.0f, 0.75f);
 
                     // play SE
-                    AudioManager.Instance.PlaySFXDelay("Retired", 1.0f);
+                    AudioManager.Instance.PlaySFX("Retired");
                     AudioManager.Instance.PlaySFX(GetSoundEffects(BattlerSoundEffectType.Retire));
-                    AudioManager.Instance.PlaySFX(GetCharacterVoiceName(BattlerSoundEffectType.Retire));
+                    AudioManager.Instance.PlaySFXDelay(GetCharacterVoiceName(BattlerSoundEffectType.Retire), 1.5f);
                 });
     }
 
