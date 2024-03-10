@@ -715,7 +715,7 @@ MonoBehaviour:
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: 608db96dd6794ea4fb0d8c268d7a30ef, type: 3}
-      - {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
+      - {fileID: 21300000, guid: b4027fb1cfbeb3543b8cb423b904a2e0, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
@@ -763,7 +763,7 @@ MonoBehaviour:
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: 23174077443906345a91bca1546d51b4, type: 3}
-      - {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
+      - {fileID: 21300000, guid: b4027fb1cfbeb3543b8cb423b904a2e0, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
@@ -907,7 +907,7 @@ MonoBehaviour:
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: 608db96dd6794ea4fb0d8c268d7a30ef, type: 3}
-      - {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
+      - {fileID: 21300000, guid: b4027fb1cfbeb3543b8cb423b904a2e0, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
@@ -955,7 +955,7 @@ MonoBehaviour:
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: a115aa10646202d4f853faac78ec8166, type: 3}
       - {fileID: 21300000, guid: 608db96dd6794ea4fb0d8c268d7a30ef, type: 3}
-      - {fileID: 21300000, guid: 31999404066493440b4ee20ec31b460c, type: 3}
+      - {fileID: 21300000, guid: b4027fb1cfbeb3543b8cb423b904a2e0, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
@@ -3279,7 +3279,7 @@ MonoBehaviour:
     _nextChoiceIndexes: ffffffff
   _choiceList: []
   graphScale: {x: 0.65751624, y: 0.65751624, z: 1}
-  graphPosition: {x: -148, y: 339, z: 0}
+  graphPosition: {x: 303, y: 319, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
