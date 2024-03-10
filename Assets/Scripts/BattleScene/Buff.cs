@@ -336,6 +336,9 @@ public static class BuffManager
     {
         int returnDamage = Mathf.FloorToInt(((float)attacked.defense * 1.5f));
         GameObject.FindObjectOfType<Battle>().AddBattleLog(String.Format(LocalizationManager.Localize("BatteLog.Repel"), attacked.CharacterNameColored, CustomColor.AddColor(returnDamage, CustomColor.damage())));
+
+        //@”½Œ‚‚Å‘Šè‚ğ€‚È‚¹‚é‚±‚Æ‚Í‚È‚¢
+        returnDamage = Mathf.Min(attacked.current_hp - 1, returnDamage);
         attacked.DeductHP(attacker, returnDamage, true);
         attacker.DeductHP(attacked, damage, true);
         CreateFloatingText(returnDamage.ToString(), CustomColor.damage(), 32, attacker);

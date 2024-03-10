@@ -1131,6 +1131,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var self = battleManager.GetCurrentBattler();
         targetBattlers = battleManager.GetAllTeammate();
         targetBattlers.Remove(self);
+        targetBattlers.RemoveAll(x => !x.isAlive);
 
         // 技名を表示
         var floatingText = CreateFloatingAbilityText(self.transform);
@@ -1183,49 +1184,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     AudioManager.Instance.PlaySFX("Heal", 0.75f);
                     self.PlayAnimation(BattlerAnimationType.idle);
 
-                    for (int i = 0; i < targetBattlers.Count; i++)
-                    {
-                        targetBattlers[i].PlayAnimation(BattlerAnimationType.idle);
-
-                        // vfx
-                        VFXSpawner.SpawnVFX("Recovery", targetBattlers[i].transform, targetBattlers[i].GetMiddleGlobalPosition());
-
-                        if (targetBattlers[i].current_hp < targetBattlers[i].max_hp)
-                        {
-                            // heal target
-                            int healAmount = Mathf.Min((int)((float)targetBattlers[i].max_hp * 0.25f), targetBattlers[i].max_hp - targetBattlers[i].current_hp);
-                            targetBattlers[i].Heal(healAmount);
-
-                            // text
-                            floatingText = CreateFloatingText(targetBattlers[i].transform);
-                            floatingText.Init(2.0f, targetBattlers[i].GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
-                        }
-                    }
-                })
-                .AppendInterval(0.5f)
-                .AppendCallback(() =>
-                {
-                    for (int i = 0; i < targetBattlers.Count; i++)
-                    {
-                        var endPoint = targetBattlers[i].GetMiddleGlobalPosition();
-
-                        // SE
-                        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
-                        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
-
-                        // calculate projectile time base on range
-                        CreateProjectile("Milk Projectile", startPoint + new Vector2(-275.0f, -25.0f), endPoint, projectileTime, true);
-
-                        // shake akiho
-                        self.Shake(0.4f);
-                    }
-                })
-                .AppendInterval(projectileTime)
-                .AppendCallback(() =>
-                {
-                    // SE
-                    AudioManager.Instance.PlaySFX("Heal", 0.75f);
-                    self.PlayAnimation(BattlerAnimationType.idle);
+                    self.Graphic.rectTransform.localPosition = new Vector3(0.0f, self.Graphic.rectTransform.localPosition.y, 0.0f);
 
                     for (int i = 0; i < targetBattlers.Count; i++)
                     {
@@ -1270,6 +1229,53 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // SE
                     AudioManager.Instance.PlaySFX("Heal", 0.75f);
                     self.PlayAnimation(BattlerAnimationType.idle);
+
+                    self.Graphic.rectTransform.localPosition = new Vector3(0.0f, self.Graphic.rectTransform.localPosition.y, 0.0f);
+
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        targetBattlers[i].PlayAnimation(BattlerAnimationType.idle);
+
+                        // vfx
+                        VFXSpawner.SpawnVFX("Recovery", targetBattlers[i].transform, targetBattlers[i].GetMiddleGlobalPosition());
+
+                        if (targetBattlers[i].current_hp < targetBattlers[i].max_hp)
+                        {
+                            // heal target
+                            int healAmount = Mathf.Min((int)((float)targetBattlers[i].max_hp * 0.25f), targetBattlers[i].max_hp - targetBattlers[i].current_hp);
+                            targetBattlers[i].Heal(healAmount);
+
+                            // text
+                            floatingText = CreateFloatingText(targetBattlers[i].transform);
+                            floatingText.Init(2.0f, targetBattlers[i].GetMiddleGlobalPosition() + new Vector2(0.0f, 50.0f), new Vector2(0.0f, 100.0f), "+" + healAmount.ToString(), 64, CustomColor.heal());
+                        }
+                    }
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    for (int i = 0; i < targetBattlers.Count; i++)
+                    {
+                        var endPoint = targetBattlers[i].GetMiddleGlobalPosition();
+
+                        // SE
+                        AudioManager.Instance.PlaySFX("Sperm9", 0.8f);
+                        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
+
+                        // calculate projectile time base on range
+                        CreateProjectile("Milk Projectile", startPoint + new Vector2(-275.0f, -25.0f), endPoint, projectileTime, true);
+
+                        // shake akiho
+                        self.Shake(0.4f);
+                    }
+                })
+                .AppendInterval(projectileTime)
+                .AppendCallback(() =>
+                {
+                    // SE
+                    AudioManager.Instance.PlaySFX("Heal", 0.75f);
+                    self.PlayAnimation(BattlerAnimationType.idle);
+                    self.Graphic.rectTransform.localPosition = new Vector3(0.0f, self.Graphic.rectTransform.localPosition.y, 0.0f);
 
                     for (int i = 0; i < targetBattlers.Count; i++)
                     {
@@ -1337,6 +1343,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // ログ ({0}　からの {1} ！)
                     battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.TeamHeal"));
 
+                    self.Graphic.rectTransform.localPosition = new Vector3(0.0f, self.Graphic.rectTransform.localPosition.y, 0.0f);
                     rectTransform.DOMove(originalPos, 0.5f);
 
                     // play SE
@@ -1346,6 +1353,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendCallback(() =>
                 {
                     rectTransform.position = originalPos;
+                    
                     battleManager.NextTurn(false);
                 });
     }
