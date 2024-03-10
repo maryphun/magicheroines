@@ -106,6 +106,7 @@ public class KeiAndroidManagement : MonoBehaviour
     /// <returns></returns>
     public int GetCurrentSummonCount()
     {
+        UpdateSummonCount();
         return spawnedAndroidCnt;
     }
 
@@ -115,6 +116,7 @@ public class KeiAndroidManagement : MonoBehaviour
     /// <returns></returns>
     public Battler GetRandomSummon()
     {
+        UpdateSummonCount();
         return spawnedAndroid[Random.Range(0, spawnedAndroid.Length)];
     }
 
@@ -133,6 +135,7 @@ public class KeiAndroidManagement : MonoBehaviour
 
     public void SpawnedAndroidDead()
     {
+        UpdateSummonCount();
         for (int i = 0; i < spawnedAndroid.Length; i++)
         {
             if (spawnedAndroid[i] != null && !spawnedAndroid[i].isAlive)
@@ -142,6 +145,22 @@ public class KeiAndroidManagement : MonoBehaviour
                     spawnedAndroid[i] = null;
                     spawnedAndroidCnt--;
                 
+            }
+        }
+    }
+
+    public void UpdateSummonCount()
+    {
+        for (int i = 0; i < spawnedAndroid.Length; i++)
+        {
+            if (spawnedAndroid[i] != null && spawnedAndroid[i].isAlive)
+            {
+                if (spawnedAndroid[i].GetComponent<KeiControlledUnit>() != null)
+                {
+                    // ˆÅ—Ž‚¿Œã‚Ì‹ž‚É’D‚í‚ê‚½
+                    spawnedAndroid[i] = null;
+                    spawnedAndroidCnt--;
+                }
             }
         }
     }
