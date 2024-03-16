@@ -432,14 +432,11 @@ MonoBehaviour:
     retire: {fileID: 21300000, guid: 993ee530611723c4c8d19c55b7352cba, type: 3}
   soundEffects:
     attack:
-    - {fileID: 8300000, guid: 769025bf264160241ac6f45a91340466, type: 3}
-    - {fileID: 8300000, guid: 10cc5442ae9075e47be632364e987bfa, type: 3}
+    - {fileID: 8300000, guid: 3d98526f4dcf8424da316c87b9a0b470, type: 3}
     attacked:
-    - {fileID: 8300000, guid: 8280e1cc38ae5094798e82f242b7a8a3, type: 3}
-    - {fileID: 8300000, guid: 055760bca75ddbc41b4f5b583cdbab52, type: 3}
+    - {fileID: 8300000, guid: fe20b3e7ca7e574459dc4d990f43e86a, type: 3}
     retire:
-    - {fileID: 8300000, guid: b7e42b60a0e9a3e4986f029a0f784f98, type: 3}
-    - {fileID: 8300000, guid: 742e5be1629dbfa41a466828696f5aef, type: 3}
+    - {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
   characterVoices:
     attack:
     - {fileID: 8300000, guid: 769025bf264160241ac6f45a91340466, type: 3}
@@ -457,6 +454,7 @@ MonoBehaviour:
   isMachine: 0
   attackCallback: 
   isAoENormalAttack: 0
+  cantMissAttack: 0
   character_name: "\u660E\u7A42"
   characterID: 0
   icon: {fileID: 0}
