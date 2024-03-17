@@ -67,7 +67,7 @@ public class TitleSelectUI : MonoBehaviour
         // ƒQ[ƒ€İ’è‚ğƒ[ƒh
         PlayerPrefsManager.LoadPlayerPrefs();
         // FPSİ’è
-        Application.targetFrameRate = 360;
+        Application.targetFrameRate = 60;
     }
 
     private void Init()

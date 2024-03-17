@@ -1,3 +1,5 @@
+// #define DEBUG_INFO
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +7,10 @@ using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using System.Threading;
 using System;
+
+#if DEBUG_INFO
+using System.Diagnostics;
+#endif
 
 namespace NovelEditor
 {
@@ -79,7 +85,7 @@ namespace NovelEditor
             {
                 NovelCanvas.alpha = 1;
                 NovelCanvas.interactable = true;
-                NovelCanvas.blocksRaycasts = true; 
+                NovelCanvas.blocksRaycasts = true;
             }
             else
             {
@@ -129,6 +135,8 @@ namespace NovelEditor
                     NovelCanvas.alpha = finalAlpha;
                     await UniTask.Delay(TimeSpan.FromSeconds(time * alphaSpeed));
                     Mathf.MoveTowards(alpha, finalAlpha, alphaSpeed);
+
+                    UnityEngine.Debug.Log("NovelUIManager : Fade");
                 }
             }
             catch (OperationCanceledException)
@@ -153,24 +161,49 @@ namespace NovelEditor
         /// <param name="token">使用するCancellationToken</param>
         internal async UniTask<bool> FadeOut(float time, CancellationToken token)
         {
-            float alpha = 1;
+#if DEBUG_INFO
+            Stopwatch stopwatch = Stopwatch.StartNew();
+#endif
 
-            float alphaSpeed = 0.01f;
-            if (time < 0.5)
-            {
-                alphaSpeed = 0.1f;
-            }
+            float alpha = 1.0f;
+
             try
             {
-                while (alpha > 0)
+#if DEBUG_INFO
+                UnityEngine.Debug.Log("time = " + time);
+                int count = 0;
+#endif
+
+                while (alpha > 0.0f)
                 {
+#if DEBUG_INFO
+                    Stopwatch stopwatchLoop = Stopwatch.StartNew();
+#endif
+
                     NovelCanvas.alpha = alpha;
-                    await UniTask.Delay(TimeSpan.FromSeconds(time * alphaSpeed), cancellationToken: token);
-                    alpha -= alphaSpeed;
+
+                    // １フレームを待つ
+                    await UniTask.NextFrame(token);
+
+                    // より安定な結果が出せるようにループ内で毎回生成する
+                    var fps = 1.0f / Time.deltaTime;
+
+                    // １フレームの分を減らす (例 : FPS が 60 の時は、alpha を 31.25 回分を減らす必要がる)
+                    alpha -= 1.0f / fps / time;
+
+#if DEBUG_INFO
+                    stopwatchLoop.Stop();
+                    UnityEngine.Debug.Log("Elapsed (seconds) : " + (stopwatchLoop.ElapsedMilliseconds / 1000.0f) + ", count : " + count++ + ", alpha : " + alpha + ", fps : " + fps);
+#endif
                 }
             }
             catch (OperationCanceledException)
             { }
+
+#if DEBUG_INFO
+            stopwatch.Stop();
+            UnityEngine.Debug.Log("Total elapsed time (seconds) : " + (stopwatch.ElapsedMilliseconds / 1000.0f));
+#endif
 
             return true;
         }

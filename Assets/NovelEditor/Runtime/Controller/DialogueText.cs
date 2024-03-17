@@ -106,17 +106,42 @@ namespace NovelEditor
             List<string> words = SplitText(text);
 
             int wordCnt = 0;
+            int msecPerCharacter = 250 / textSpeed;
+
             try
             {
                 while (wordCnt < words.Count)
                 {
                     canFlush = wordCnt > 0;
-                    await UniTask.Delay(250 / textSpeed, cancellationToken: token);
+                    await UniTask.Delay(msecPerCharacter, cancellationToken: token);
 
-                    tmpro.text += words[wordCnt];
-                    tmpro.richText = true;
+                    // msecPerCharacter の後は必ず 1 文字を追加する
+                    int addCount = 1;
+
+                    // 処理落ちが発生した時は追いつける
+                    for (int msecDeltaTime = (int)(Time.deltaTime * 1000.0f) - msecPerCharacter; msecDeltaTime > msecPerCharacter; msecDeltaTime -= msecPerCharacter)
+                    {
+                        addCount++;
+                    }
+
+#if DEBUG_INFO
+                    Debug.Log("Character add count : " + addCount);
+#endif
+
+                    // ダイアログに文字を追加する
+                    for (int i = 0; i < addCount; ++i)
+                    {
+                        if (wordCnt >= words.Count)
+                        {
+                            break;
+                        }
+
+                        tmpro.text += words[wordCnt];
+                        tmpro.richText = true;
+                        wordCnt++;
+                    }
+
                     await UniTask.WaitUntil(() => !IsStop);
-                    wordCnt++;
                 }
             }
             catch (OperationCanceledException)

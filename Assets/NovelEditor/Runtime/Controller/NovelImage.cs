@@ -6,6 +6,10 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Threading;
 
+#if DEBUG_INFO
+using System.Diagnostics;
+#endif
+
 namespace NovelEditor
 {
     /// <summary>
@@ -67,27 +71,52 @@ namespace NovelEditor
         /// <param name="token">使用するCancellationToken</param>
         internal async UniTask<bool> Fade(Color from, Color dest, float fadeTime, CancellationToken token)
         {
+#if DEBUG_INFO
+            Stopwatch stopwatch = Stopwatch.StartNew();
+#endif
+
             float alpha = 0;
             _image.color = from;
 
-            float alphaSpeed = 0.01f;
-            if (fadeTime < 0.5)
-            {
-                alphaSpeed = 0.1f;
-            }
             try
             {
-                while (alpha < 1)
+#if DEBUG_INFO
+                UnityEngine.Debug.Log("fadeTime = " + fadeTime);
+                int count = 0;
+#endif
+
+                while (alpha < 1.0f)
                 {
+#if DEBUG_INFO
+                    Stopwatch stopwatchLoop = Stopwatch.StartNew();
+#endif
+
                     _image.color = Color.Lerp(from, dest, alpha);
-                    await UniTask.Delay(TimeSpan.FromSeconds(fadeTime * alphaSpeed), cancellationToken: token);
-                    alpha += alphaSpeed;
+
+                    // １フレームを待つ
+                    await UniTask.NextFrame(token);
+
+                    // より安定な結果が出せるようにループ内で毎回生成する
+                    var fps = 1.0f / Time.deltaTime;
+
+                    // １フレームの分を足す (例 : FPS が 60 の時は、alpha を 31.25 回分を足す必要がる)
+                    alpha += 1.0f / fps / fadeTime;
+
+#if DEBUG_INFO
+                    stopwatchLoop.Stop();
+                    UnityEngine.Debug.Log("Elapsed (seconds) : " + (stopwatchLoop.ElapsedMilliseconds / 1000.0f) + ", count : " + count++ + ", alpha : " + alpha + ", fps : " + fps);
+#endif
                 }
             }
             catch (OperationCanceledException)
             {
                 //return false;
             }
+
+#if DEBUG_INFO
+            stopwatch.Stop();
+            UnityEngine.Debug.Log("Total elapsed time (seconds) : " + (stopwatch.ElapsedMilliseconds / 1000.0f));
+#endif
 
             _image.color = dest;
             return true;
