@@ -176,7 +176,10 @@ public class InventoryManager : MonoBehaviour
     {
         this.itemsInInventory = new List<Tuple<RectTransform, ItemDefine>>();
         var itemList = ProgressManager.Instance.GetItemList(false);
-        for (int i = 0; i < itemList.Count;i++)
+
+        const int MaxItemSlot = 48;
+        int displayItemCount = Mathf.Min(itemList.Count, MaxItemSlot);
+        for (int i = 0; i < displayItemCount; i++)
         {
             var itemImg = new GameObject().AddComponent<Image>();
             string itemName = LocalizationManager.Localize(itemList[i].itemNameID);

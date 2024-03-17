@@ -350,6 +350,24 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// アイテムが上限に達しているか
+    /// </summary>
+    public bool IsItemFull()
+    {
+        const int MaxItemSlot = 48;
+        return playerData.inventory.Count >= MaxItemSlot;
+    }
+
+    /// <summary>
+    /// インベントリの残りの空欄
+    /// </summary>
+    public int GetInventorySlotLeft()
+    {
+        const int MaxItemSlot = 48;
+        return Mathf.Max(MaxItemSlot - playerData.inventory.Count, 0);
+    }
+
+    /// <summary>
     /// アイテムを持っているかをチェック
     /// </summary>
     public bool PlayerHasItem(ItemDefine item)

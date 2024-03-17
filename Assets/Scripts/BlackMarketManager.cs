@@ -153,7 +153,8 @@ public class BlackMarketManager : MonoBehaviour
     private void OnClickItem(ShopItem item)
     {
         // 資金が足りるか
-        if (ProgressManager.Instance.GetCurrentMoney() >= item.data.cost)
+        if (ProgressManager.Instance.GetCurrentMoney() >= item.data.cost
+            && (!ProgressManager.Instance.IsItemFull() || item.data.isEquipment)) // アイテム数が上限に達したか
         {
             //SE
             AudioManager.Instance.PlaySFX("Purchase");

@@ -49,6 +49,8 @@ public class SideQuestPanel : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGrp;
     [SerializeField] private TMP_Text rewardFood, rewardBank, rewardResearch;
     [SerializeField] private TMP_Text alertLevelFood, alertLevelBank, alertLevelResearch;
+    [SerializeField] private Button foodSideQuestBtn;
+    [SerializeField] private GameObject notEnoughItemSlotText;
 
     public void OpenSideQuestPanel()
     {
@@ -73,6 +75,18 @@ public class SideQuestPanel : MonoBehaviour
         for (int i = 0; i < ProgressManager.Instance.GetSideQuestData().food; i++) alertLevelFood.text = alertLevelFood.text + star;
         for (int i = 0; i < ProgressManager.Instance.GetSideQuestData().bank; i++) alertLevelBank.text = alertLevelBank.text + star;
         for (int i = 0; i < ProgressManager.Instance.GetSideQuestData().research; i++) alertLevelResearch.text = alertLevelResearch.text + star;
+
+        if (ProgressManager.Instance.GetInventorySlotLeft() < ProgressManager.Instance.GetSideQuestData().food)
+        {
+            // ƒCƒ“ƒxƒ“ƒgƒŠ‚Ì‹ó—“‚ª‘«‚è‚È‚¢
+            foodSideQuestBtn.interactable = false;
+            notEnoughItemSlotText.SetActive(true);
+        }
+        else
+        {
+            foodSideQuestBtn.interactable = true;
+            notEnoughItemSlotText.SetActive(false);
+        }
     }
 
     public void CloseSideQuestPanel()
