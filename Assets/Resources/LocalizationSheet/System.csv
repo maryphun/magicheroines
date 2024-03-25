@@ -278,6 +278,8 @@ Battle.CannotAttack,普通攻撃を行えない,Can not attack,不能普通攻�
 Battle.OnCooldown,チャージ中 ({0}ターン),On cooldown ({0}turn),冷卻中 ({0}回合),チャージ中 ({0}ターン)
 Battle.NotEnoughSP,SP不足 ({0}),Not enough SP ({0}),SP不足 ({0}),SP不足 ({0})
 Battle.AbilityDisabled,使用不可,Disabled,不能使用,使用不可
+Battle.AutoBattle,"オートバトル
+ON",AutoBattling,自動戰鬥,自動戰鬥
 Buff,状態,Buff,状態,状態
 Buff.Stun,行動不能,Stunned,行動不能,行動不能
 Buff.Hurt,継続ダメージ,Hurt,継続ダメージ,継続ダメージ

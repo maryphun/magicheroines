@@ -11,8 +11,10 @@ using Assets.SimpleLocalization.Scripts;
 
 public class Battle : MonoBehaviour
 {
+#if DEBUG_MODE
     [Header("Debug")]
     [SerializeField] private bool isDebug = false;
+#endif
 
     [Header("Setting")]
     [SerializeField] private float characterSpace = 150.0f;
@@ -41,8 +43,12 @@ public class Battle : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject escapeButton;
     [SerializeField] private CanvasGroup escapePopup;
+    [SerializeField] private Button autoBattleButton;
+    [SerializeField] private TMP_Text autoBattleText;
+    [SerializeField] private Image autoBattleIcon;
 
     [Header("Debug")]
+    [SerializeField] private bool isAutoBattling;
     [SerializeField] private List<Battler> characterList = new List<Battler>();
     [SerializeField] private List<Battler> enemyList = new List<Battler>();
     [SerializeField] private Battler arrowPointingTarget = null;
@@ -84,6 +90,12 @@ public class Battle : MonoBehaviour
 
         // 撤退ボタン
         escapeButton.SetActive(BattleSetup.isAllowEscape && !BattleSetup.isEventBattle);
+
+        // 自動バトルボタン
+        autoBattleButton.gameObject.SetActive(true);
+        autoBattleText.gameObject.SetActive(false);
+        autoBattleIcon.color = Color.white;
+        isAutoBattling = false;
 
         // Send references
         ItemExecute.Instance.Initialize(this);
@@ -246,6 +258,13 @@ public class Battle : MonoBehaviour
             // AI 行動
             StartCoroutine(EnemyAI());
         }
+        else if (isAutoBattling)
+        {
+            actionPanel.SetEnablePanel(false);
+
+            // オートバトル
+            StartCoroutine(PlayerAI());
+        }
         else
         {
             // 行動出来るまでに遅延させる
@@ -330,7 +349,7 @@ public class Battle : MonoBehaviour
         }
         else
         {
-            // どこ行動を取るかを決める
+            // どの行動を取るかを決める
             var possibleAction = currentCharacter.GetAllPossibleAction();
             if (possibleAction.Count == 0)
             {
@@ -404,6 +423,39 @@ public class Battle : MonoBehaviour
                 }
             }
 
+        }
+    }
+
+    IEnumerator PlayerAI()
+    {
+        yield return new WaitForSeconds(turnEndDelay);
+
+        Battler currentCharacter = turnBaseManager.GetCurrentTurnBattler();
+        characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
+
+        // バフを先にチェック
+        bool isCharacterStunned = IsCharacterInBuff(currentCharacter, BuffType.stun);
+        UpdateBuffForCharacter(GetCurrentBattler());
+
+        // 攻撃目標を選択
+        // is character stunned
+        if (isCharacterStunned || IsCharacterInBuff(currentCharacter, BuffType.stun))
+        {
+            yield return new WaitForSeconds(stunWaitDelay);
+            NextTurn(false);
+        }
+        else
+        {
+            // どの行動を取るかを決める
+            if (!currentCharacter.EnableNormalAttack)
+            {
+                // 取れる行動がない、待機する
+                IdleCommand();
+            }
+            else
+            {
+                StartCoroutine(AttackAnimation(currentCharacter, turnBaseManager.GetRandomEnemyCharacter(true), NextTurn));
+            }
         }
     }
 
@@ -722,6 +774,35 @@ public class Battle : MonoBehaviour
         return turnBaseManager.GetCurrentTurnBattler();
     }
 
+    // オートバトル
+    public void OnClickAutoBattleButton()
+    {
+        isAutoBattling = !isAutoBattling;
+
+        if (isAutoBattling)
+        {
+            autoBattleIcon.DOColor(CustomColor.autobattle(), 0.15f);
+            autoBattleText.gameObject.SetActive(true);
+
+            Time.timeScale = 2.0f;
+
+            if (!GetCurrentBattler().isEnemy)
+            {
+                actionPanel.SetEnablePanel(false);
+
+                // オートバトル
+                StartCoroutine(PlayerAI());
+            }
+        }
+        else
+        {
+            autoBattleIcon.DOColor(Color.white, 0.15f);
+            autoBattleText.gameObject.SetActive(false);
+
+            Time.timeScale = 1.0f;
+        }
+    }
+
     /// <summary>
     /// キャラクターにバフを追加
     /// </summary>
@@ -996,6 +1077,9 @@ public class Battle : MonoBehaviour
         actionTargetArrow.gameObject.SetActive(false);
         characterArrow.gameObject.SetActive(false);
         actionPanel.SetEnablePanel(false);
+        autoBattleButton.gameObject.SetActive(false);
+
+        Time.timeScale = 1.0f;
 
         // キャラの状態をデータに更新
         if (isVictory && !BattleSetup.isEventBattle) // story modeで負けた時はリトライされるかもしれないので、データ更新しない
@@ -1066,7 +1150,7 @@ public class Battle : MonoBehaviour
         turnBaseManager.SetNextCharacter(battler);
     }
 
-    #region Escape
+#region Escape
     public void ShowEscapePopUp()
     {
         escapePopup.DOFade(1.0f, 0.25f);
@@ -1099,5 +1183,5 @@ public class Battle : MonoBehaviour
             AudioManager.Instance.PlaySFX("BattleTransition");
         });
     }
-    #endregion Escape
+#endregion Escape
 }
