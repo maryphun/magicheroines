@@ -138,6 +138,16 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         return playerData.currentStage;
     }
 
+
+    /// <summary>
+    /// 現在のゲーム進行状況を取得
+    /// </summary>
+    public bool IsGameEnded()
+    {
+        const int EndingProgress = 21;
+        return playerData.currentStage >= EndingProgress;
+    }
+
     /// <summary>
     /// ストーリー進行
     /// </summary>

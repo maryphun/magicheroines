@@ -3669,6 +3669,8 @@ MonoBehaviour:
   alertLevelFood: {fileID: 459593898}
   alertLevelBank: {fileID: 1099172134}
   alertLevelResearch: {fileID: 1957383907}
+  foodSideQuestBtn: {fileID: 0}
+  notEnoughItemSlotText: {fileID: 0}
 --- !u!1 &1546695797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,6 +4145,7 @@ MonoBehaviour:
   BGM: GloomySquad
   stagehandler: {fileID: 1635085588}
   chapterName: {fileID: 0}
+  startButton: {fileID: 1189037866}
 --- !u!1 &1737923943
 GameObject:
   m_ObjectHideFlags: 0

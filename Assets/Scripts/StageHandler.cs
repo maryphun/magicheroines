@@ -20,6 +20,7 @@ public class StageHandler : MonoBehaviour
 
     private void Start()
     {
+        if (ProgressManager.Instance.IsGameEnded()) return;
         Init();
     }
 

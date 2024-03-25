@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class WorldMapUI : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class WorldMapUI : MonoBehaviour
     [Header("References")]
     [SerializeField] private StageHandler stagehandler;
     [SerializeField] private TMPro.TMP_Text chapterName;
+    [SerializeField] private Button startButton;
 
     private void Start()
     {
@@ -25,6 +27,13 @@ public class WorldMapUI : MonoBehaviour
         if (chapterName != null)
         {
             chapterName.text = GetChapterName(ProgressManager.Instance.GetCurrentStageProgress());
+        }
+
+        if (isEndGameContent && ProgressManager.Instance.IsGameEnded())
+        {
+            if (stagehandler != null) stagehandler.gameObject.SetActive(false);
+            if (chapterName != null) chapterName.gameObject.SetActive(false);
+            if (startButton != null) startButton.gameObject.SetActive(false);
         }
     }
 
