@@ -6794,7 +6794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55f02fd6c5f76041a7d5e8ada33fed3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDebug: 0
   characterSpace: 150
   turnEndDelay: 1.1
   stunWaitDelay: 0.55
@@ -9445,6 +9444,7 @@ MonoBehaviour:
   skillBtn: {fileID: 495113494}
   itemBtn: {fileID: 1438463133}
   idleBtn: {fileID: 2018373250}
+  autoBattleButton: {fileID: 1249068638}
   step: 0
   lastDisplayingObject: {fileID: 0}
   isPlayingTutorial: 0

@@ -17,6 +17,7 @@ public class BattleSceneTutorial : MonoBehaviour
     [SerializeField] private RectTransform textPanel;
     [SerializeField] private TMP_Text tutorialText;
     [SerializeField] private GameObject turnPanel, actionPanel, attackBtn, skillBtn, itemBtn, idleBtn;
+    [SerializeField] private GameObject autoBattleButton;
 
     [Header("Debug")]
     [SerializeField] private Tween currentTween;
@@ -60,6 +61,8 @@ public class BattleSceneTutorial : MonoBehaviour
         tutorialUI.interactable = true;
         isPlayingTutorial = true;
         step = TutorialStep.Basic;
+
+        autoBattleButton.SetActive(false);
 
         var sequence = DOTween.Sequence();
         sequence.AppendInterval(0.5f)

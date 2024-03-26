@@ -92,11 +92,14 @@ public class Battle : MonoBehaviour
         escapeButton.SetActive(BattleSetup.isAllowEscape && !BattleSetup.isEventBattle);
 
         // 自動バトルボタン
-        autoBattleButton.gameObject.SetActive(true);
-        autoBattleText.gameObject.SetActive(false);
-        autoBattleIcon.color = Color.white;
-        isAutoBattling = false;
-
+        if (ProgressManager.Instance.GetCurrentStageProgress() > 1)
+        {
+            autoBattleButton.gameObject.SetActive(true);
+            autoBattleText.gameObject.SetActive(false);
+            autoBattleIcon.color = Color.white;
+            isAutoBattling = false;
+        }
+            
         // Send references
         ItemExecute.Instance.Initialize(this);
         AbilityExecute.Instance.Initialize(this);
