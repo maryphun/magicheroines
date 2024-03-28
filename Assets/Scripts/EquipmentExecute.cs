@@ -189,7 +189,7 @@ public static class EquipmentMethods
 
         int damage = Battle.CalculateDamage(attacked, attacker, true);
         attacker.DeductHP(attacked, damage, true);
-        CreateFloatingText(damage.ToString(), CustomColor.damage(), 32, attacked);
+        CreateFloatingText(damage.ToString(), CustomColor.damage(), 32, attacker);
     }
     public static void ErenaSeikakuExecute(Battler target)
     {
