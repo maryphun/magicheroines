@@ -53,6 +53,8 @@ public class Battle : MonoBehaviour
     [SerializeField] private List<Battler> enemyList = new List<Battler>();
     [SerializeField] private Battler arrowPointingTarget = null;
     [SerializeField] private List<Buff> buffedCharacters = new List<Buff>();
+    [SerializeField] private Coroutine playerAI;
+    [SerializeField] private bool isPlayerAIRunning = false;
 
     public float CharacterMoveTime { get { return characterMoveTime; } }
     public float AttackAnimPlayTime { get { return attackAnimPlayTime; } }
@@ -266,7 +268,7 @@ public class Battle : MonoBehaviour
             actionPanel.SetEnablePanel(false);
 
             // オートバトル
-            StartCoroutine(PlayerAI());
+            playerAI = StartCoroutine(PlayerAI());
         }
         else
         {
@@ -431,8 +433,9 @@ public class Battle : MonoBehaviour
 
     IEnumerator PlayerAI()
     {
+        isPlayerAIRunning = true;
         yield return new WaitForSeconds(turnEndDelay);
-
+        
         Battler currentCharacter = turnBaseManager.GetCurrentTurnBattler();
         characterArrow.SetCharacter(currentCharacter, currentCharacter.GetCharacterSize().y);
 
@@ -460,6 +463,7 @@ public class Battle : MonoBehaviour
                 StartCoroutine(AttackAnimation(currentCharacter, turnBaseManager.GetRandomEnemyCharacter(true), NextTurn));
             }
         }
+        isPlayerAIRunning = false;
     }
 
     IEnumerator TurnEndDelay()
@@ -788,13 +792,18 @@ public class Battle : MonoBehaviour
             autoBattleText.gameObject.SetActive(true);
 
             Time.timeScale = 2.0f;
-
-            if (!GetCurrentBattler().isEnemy)
+            
+            if (!GetCurrentBattler().isEnemy && actionPanel.IsEnabled)
             {
                 actionPanel.SetEnablePanel(false);
 
                 // オートバトル
-                StartCoroutine(PlayerAI());
+                if (isPlayerAIRunning)
+                {
+                    isPlayerAIRunning = false;
+                    StopCoroutine(playerAI);
+                }
+                playerAI = StartCoroutine(PlayerAI());
             }
         }
         else
@@ -803,6 +812,12 @@ public class Battle : MonoBehaviour
             autoBattleText.gameObject.SetActive(false);
 
             Time.timeScale = 1.0f;
+
+            if (isPlayerAIRunning)
+            {
+                isPlayerAIRunning = false;
+                StopCoroutine(playerAI);
+            }
         }
     }
 

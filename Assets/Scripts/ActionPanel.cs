@@ -37,6 +37,8 @@ public class ActionPanel : MonoBehaviour
     [SerializeField] private CommandType commandType;
     [SerializeField] private bool isCannotAttackTextShowing;
 
+    public bool IsEnabled { get { return canvasGrp.interactable; } }
+
     private void Awake()
     {
         canvasGrp.alpha = 0.0f;
