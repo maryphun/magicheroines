@@ -62,12 +62,15 @@ public class TitleSelectUI : MonoBehaviour
         Init();
     }
 
-    private void Awake()
+    [RuntimeInitializeOnLoadMethod]
+    static void ProgramInitialize()
     {
         // ƒQ[ƒ€İ’è‚ğƒ[ƒh
         PlayerPrefsManager.LoadPlayerPrefs();
         // FPSİ’è
         Application.targetFrameRate = 400;
+
+        Debug.Log("Program Initialized");
     }
 
     private void Init()

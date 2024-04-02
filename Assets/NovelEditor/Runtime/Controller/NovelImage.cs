@@ -151,14 +151,21 @@ namespace NovelEditor
             float alpha = 0;
             _image.color = from;
 
-            float alphaSpeed = 0.01f;
+            float alphaSpeed = 2f;
             try
             {
                 while (alpha < 1)
                 {
                     _image.color = Color.Lerp(from, dest, alpha);
-                    await UniTask.Delay(TimeSpan.FromSeconds(fadeTime * alphaSpeed), cancellationToken: token);
-                    alpha += alphaSpeed;
+
+                    // １フレームを待つ
+                    await UniTask.NextFrame(token);
+
+                    // より安定な結果が出せるようにループ内で毎回生成する
+                    var fps = 1.0f / Time.deltaTime;
+
+                    // １フレームの分を足す (例 : FPS が 60 の時は、alpha を 31.25 回分を足す必要がる)
+                    alpha += alphaSpeed / fps / fadeTime;
                 }
             }
             catch (OperationCanceledException)

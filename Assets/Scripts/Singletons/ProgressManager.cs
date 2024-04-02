@@ -559,6 +559,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     // ‚Ü‚¾’Ê’m‚ª“Í‚¢‚Ä‚¢‚È‚¢NH‹L˜^‚ª‚ ‚é‚©
     public bool HasUnnotifiedRecord()
     {
+        if (playerData.Equals(default(PlayerData))) return false;
+
         return playerData.records.Any(x => x.isNotified == false);
     }
 

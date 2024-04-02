@@ -21,7 +21,7 @@ public class ScenarioDebuggerUI : MonoBehaviour
     public void PlayScript()
     {
         UICanvas.enabled = false;
-        NovelSingletone.Instance.PlayNovel(data, true);
+        NovelSingletone.Instance.PlayNovel(data, true, End);
         isPlaying = true;
     }
 
@@ -46,5 +46,11 @@ public class ScenarioDebuggerUI : MonoBehaviour
             Debug.Log("output " + fileName);
             ScreenCapture.CaptureScreenshot(fileName, 1);
         }
+    }
+
+    private void End()
+    {
+        UICanvas.enabled = true;
+        isPlaying = false;
     }
 }
