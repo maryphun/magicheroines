@@ -29,6 +29,7 @@ public static class PlayerPrefsManager
         AutoSpeed,
         Language,
         LastestProgress,
+        Resolution,
     }
 
     public static void LoadPlayerPrefs()
@@ -36,15 +37,10 @@ public static class PlayerPrefsManager
         int fullScreenMode = PlayerPrefs.GetInt(PlayerPrefsSave.IsFullScreen.ToString(), (int)(OptionPanel.defaultFullScreenToggle ? FullScreenMode.ExclusiveFullScreen : FullScreenMode.Windowed));
         Screen.fullScreenMode = (FullScreenMode)fullScreenMode;
 
-        if ((FullScreenMode)fullScreenMode == FullScreenMode.ExclusiveFullScreen)
-        {
-            Screen.SetResolution(OptionPanel.defaultResolutionSizeFull.x, OptionPanel.defaultResolutionSizeFull.y, Screen.fullScreenMode);
-        }
-        else
-        {
-            Screen.SetResolution(OptionPanel.defaultResolutionSizeWindowed.x, OptionPanel.defaultResolutionSizeWindowed.y, Screen.fullScreenMode);
-        }
-        
+        int resolutionOption = PlayerPrefs.GetInt(PlayerPrefsSave.Resolution.ToString(), OptionPanel.defaultFullScreenToggle ? OptionPanel.defaultResolutionSizeFull : OptionPanel.defaultResolutionSizeWindowed);
+        Vector2Int resolution = OptionPanel.resolutionSizeOption[resolutionOption];
+        Screen.SetResolution(resolution.x, resolution.y, Screen.fullScreenMode);
+
         float musicVolume = PlayerPrefs.GetFloat(PlayerPrefsSave.BGM_Volume.ToString(), OptionPanel.defaultBGMVolume);
         AudioManager.Instance.SetMusicVolume(musicVolume);
 
@@ -108,5 +104,11 @@ public static class PlayerPrefsManager
     public static int GetLatestProgress()
     {
         return PlayerPrefs.GetInt(PlayerPrefsSave.LastestProgress.ToString(), 0);
+    }
+
+    // resolution
+    public static int GetResolutionOption()
+    {
+        return PlayerPrefs.GetInt(PlayerPrefsSave.Resolution.ToString(), OptionPanel.defaultFullScreenToggle ? OptionPanel.defaultResolutionSizeFull : OptionPanel.defaultResolutionSizeWindowed);
     }
 }

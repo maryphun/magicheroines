@@ -36,6 +36,7 @@ public class OptionPanel : MonoBehaviour
     [SerializeField] private Toggle fullScreenToggle;
     [SerializeField] private Toggle windowScreenToggle;
     [SerializeField] private Toggle JPToggle, ENToggle, SCNToggle, TCNToggle;
+    [SerializeField] private TMP_Dropdown resolutionOption;
     [SerializeField] private Button backButton;
 
     public static float defaultBGMVolume = 0.2f;
@@ -45,8 +46,9 @@ public class OptionPanel : MonoBehaviour
     public static float defaultAutoSpeed = 1.0f;
     public static bool defaultFullScreenToggle = false;
     public static bool defaultWindowScreenToggle = true;
-    public static Vector2Int defaultResolutionSizeWindowed = new Vector2Int(1280, 720);
-    public static Vector2Int defaultResolutionSizeFull = new Vector2Int(1920, 1080);
+    public static int defaultResolutionSizeWindowed = 0;
+    public static int defaultResolutionSizeFull = 1;
+    public static Vector2Int[] resolutionSizeOption = { new Vector2Int(1280, 720), new Vector2Int(1920, 1080), new Vector2Int(2560, 1440), new Vector2Int(3840, 2160) };
     public static SystemLanguage defaultLanguage = SystemLanguage.JP;
 
 
@@ -55,6 +57,7 @@ public class OptionPanel : MonoBehaviour
     private float tempVoiceVolume = 0.5f;
     private int tempTextSpeed = 6;
     private float tempAutoSpeed = 1.0f;
+    private int tempResolutionOption;
 
     private bool isChangingLanguge = false;
     private bool isOpen = false;
@@ -78,6 +81,7 @@ public class OptionPanel : MonoBehaviour
         tempVoiceVolume = NovelSingletone.Instance.GetVoiceVolume();
         tempTextSpeed = NovelSingletone.Instance.GetTextSpeed();
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
+        tempResolutionOption = PlayerPrefsManager.GetResolutionOption();
 
         bgmVolumeSlider.value = tempBGMVolume;
         seVolumeSlider.value = tempSEVolume;
@@ -90,6 +94,7 @@ public class OptionPanel : MonoBehaviour
         ENToggle.isOn = LocalizationManager.Language == "English";
         SCNToggle.isOn = LocalizationManager.Language == "Simplified Chinese";
         TCNToggle.isOn = LocalizationManager.Language == "Traditional Chinese";
+        resolutionOption.SetValueWithoutNotify(tempResolutionOption);
 
         // Update value texts
         ChangeBGMVolume();
@@ -115,6 +120,8 @@ public class OptionPanel : MonoBehaviour
         NovelSingletone.Instance.SetVoiceVolume(tempVoiceVolume);
         NovelSingletone.Instance.SetTextSpeed(tempTextSpeed);
         NovelSingletone.Instance.SetAutoSpeed(tempAutoSpeed);
+
+        UpdateScreenResolution(tempResolutionOption);
 
         isOpen = false;
     }
@@ -170,6 +177,7 @@ public class OptionPanel : MonoBehaviour
         autoSpeedSlider.DOValue(defaultAutoSpeed, 0.25f);
         fullScreenToggle.isOn = defaultFullScreenToggle;
         windowScreenToggle.isOn = defaultWindowScreenToggle;
+        resolutionOption.value = defaultFullScreenToggle ? defaultResolutionSizeFull : defaultResolutionSizeWindowed;
 
         // SE çƒê∂
         AudioManager.Instance.PlaySFX("SystemSelect");
@@ -188,13 +196,19 @@ public class OptionPanel : MonoBehaviour
         tempAutoSpeed = NovelSingletone.Instance.GetAutoSpeed();
         PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.AutoSpeed, tempAutoSpeed);
 
+        // apply resolution option
+        tempResolutionOption = resolutionOption.value;
+        PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.Resolution, tempResolutionOption);
+        UpdateScreenResolution(tempResolutionOption);
+        Vector2Int resolution = OptionPanel.resolutionSizeOption[tempResolutionOption];
+
         // apply to change full screen mode
         if (Screen.fullScreenMode == FullScreenMode.ExclusiveFullScreen)
         {
             if (windowScreenToggle.isOn)
             {
                 Screen.fullScreenMode = FullScreenMode.Windowed;
-                Screen.SetResolution(defaultResolutionSizeWindowed.x, defaultResolutionSizeWindowed.y, FullScreenMode.Windowed);
+                Screen.SetResolution(resolution.x, resolution.y, FullScreenMode.Windowed);
                 PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.Windowed);
             }
         }
@@ -203,7 +217,7 @@ public class OptionPanel : MonoBehaviour
             if (fullScreenToggle.isOn)
             {
                 Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-                Screen.SetResolution(defaultResolutionSizeFull.x, defaultResolutionSizeFull.y, FullScreenMode.ExclusiveFullScreen);
+                Screen.SetResolution(resolution.x, resolution.y, FullScreenMode.ExclusiveFullScreen);
                 PlayerPrefsManager.SetPlayerPrefs(PlayerPrefsManager.PlayerPrefsSave.IsFullScreen, (int)FullScreenMode.ExclusiveFullScreen);
             }
         }
@@ -283,6 +297,19 @@ public class OptionPanel : MonoBehaviour
                 break;
         }
         isChangingLanguge = false;
+    }
+
+    public void OnChangeResolution()
+    {
+        AudioManager.Instance.PlaySFX("SystemCursor");
+
+        this.UpdateScreenResolution(resolutionOption.value);
+    }
+
+    public void UpdateScreenResolution(int option)
+    {
+        Vector2Int resolution = OptionPanel.resolutionSizeOption[option];
+        Screen.SetResolution(resolution.x, resolution.y, Screen.fullScreenMode);
     }
 
     private void Update()
