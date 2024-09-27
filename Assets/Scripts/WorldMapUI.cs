@@ -15,6 +15,7 @@ public class WorldMapUI : MonoBehaviour
     [SerializeField] private StageHandler stagehandler;
     [SerializeField] private TMPro.TMP_Text chapterName;
     [SerializeField] private Button startButton;
+    [SerializeField] private Button dlcButton;
 
     private void Start()
     {
@@ -34,6 +35,16 @@ public class WorldMapUI : MonoBehaviour
             if (stagehandler != null) stagehandler.gameObject.SetActive(false);
             if (chapterName != null) chapterName.gameObject.SetActive(false);
             if (startButton != null) startButton.gameObject.SetActive(false);
+        }
+
+        // dlc content
+        if (dlcButton != null)
+        {
+            if (DLCManager.isDLCEnabled)
+            {
+                dlcButton.GetComponentInChildren<TMPro.TMP_Text>().color = Color.white;
+                dlcButton.interactable = true;
+            }
         }
     }
 
