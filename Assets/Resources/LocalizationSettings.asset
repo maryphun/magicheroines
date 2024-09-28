@@ -17,6 +17,18 @@ MonoBehaviour:
   - Name: System
     Id: 0
     TextAsset: {fileID: 4900000, guid: c4b4aa61fe13a37469b4138ff1746dc3, type: 3}
+  - Name: "DLC\u30E1\u30A4\u30F3\u30B9\u30C8\u30FC\u30EA\u30FC"
+    Id: 256685045
+    TextAsset: {fileID: 4900000, guid: 47ff01c6fe774ce46ad0a6b19399c213, type: 3}
+  - Name: Hisui
+    Id: 598910277
+    TextAsset: {fileID: 4900000, guid: 2ad3a959404a28c468684653bc5bc5d1, type: 3}
+  - Name: Daiya
+    Id: 1743721429
+    TextAsset: {fileID: 4900000, guid: 6690f4f2ab92f1b41837ac616c7821ad, type: 3}
+  - Name: Kei(DLC)
+    Id: 2027524737
+    TextAsset: {fileID: 4900000, guid: 58599b8492eaf5b4f8f4795806b3f076, type: 3}
   - Name: Dialog.Tutorial
     Id: 2051931960
     TextAsset: {fileID: 4900000, guid: 8c7fd5aa04bfb0941aecfff6ce27dcc0, type: 3}

@@ -149,6 +149,15 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
+    /// 現在のゲーム進行状況を取得
+    /// </summary>
+    public bool IsDLCEnded()
+    {
+        const int EndingProgress = 21;
+        return playerData.currentStage >= EndingProgress;
+    }
+
+    /// <summary>
     /// ストーリー進行
     /// </summary>
     public void StageProgress(int value = 1)
