@@ -11,6 +11,7 @@ public class StageHandler : MonoBehaviour
     [SerializeField] private float stageIconSpacing = 350.0f;
     [SerializeField] private float arrowOffsetY = 50.0f;
     [SerializeField] private int startingStage = 0;
+    [SerializeField] private bool isDLCWorld = false;
 
     [Header("References")]
     [SerializeField] private RectTransform rect;
@@ -27,6 +28,11 @@ public class StageHandler : MonoBehaviour
     public void Init()
     {
         int currentStage = ProgressManager.Instance.GetCurrentStageProgress() - startingStage;
+
+        if (DLCManager.isDLCEnabled && isDLCWorld)
+        {
+            currentStage = ProgressManager.Instance.GetCurrentDLCStageProgress() - startingStage;
+        }
 
         rect.anchoredPosition = new Vector3((currentStage-1) * (-stageIconSpacing), rect.anchoredPosition.y, 0.0f);
 

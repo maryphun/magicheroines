@@ -128,6 +128,8 @@ public static class SaveDataManager
         data.tutorialData = pd.tutorialData;
         data.recordData = pd.records;
 
+        data.currentDLCStage = pd.currentDLCStage;
+
         // Serialize‚µ‚«‚ê‚È‚¢ƒf[ƒ^
         {
             data.inventory = new List<string>();
@@ -287,6 +289,8 @@ public struct SerializablePlayerData
     public List<SaveLoad.SerializedEquipment> equipment;
     public List<SaveLoad.SerializedCharacter> characters;
     public List<SaveLoad.SerializedHomeDialogue> homeDialogue;
+
+    public int currentDLCStage;
 
     public DateTime date;
 }

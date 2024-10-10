@@ -23,6 +23,11 @@ public struct PlayerData
     public int formationSlotUnlocked;    //< 解放されたスロット
     public TutorialData tutorialData;    //< チュートリアルを見たかを管理
     public List<Record> records;         //< 侵食記録
+
+    /// <summary>
+    /// DLC 用セーブデータ
+    /// </summary>
+    public int currentDLCStage;          //< 現ステージ数
 }
 
 /// <summary>
@@ -65,6 +70,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData = new PlayerData();
 
         playerData.currentStage = 1; // 初期ステージ (チュートリアル)
+        playerData.currentDLCStage = 1;
         playerData.currentMoney = 500;
         playerData.currentResourcesPoint = 0;
         playerData.sideQuestData = new SideQuestData(1, 1, 1);
@@ -138,6 +144,13 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         return playerData.currentStage;
     }
 
+    /// <summary>
+    /// 現在のゲーム進行状況を取得
+    /// </summary>
+    public int GetCurrentDLCStageProgress()
+    {
+        return playerData.currentDLCStage;
+    }
 
     /// <summary>
     /// 現在のゲーム進行状況を取得
@@ -153,8 +166,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// </summary>
     public bool IsDLCEnded()
     {
-        const int EndingProgress = 21;
-        return playerData.currentStage >= EndingProgress;
+        const int EndingProgress = 8;
+        return playerData.currentDLCStage >= EndingProgress;
     }
 
     /// <summary>
@@ -164,6 +177,14 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     {
         playerData.currentStage += value;
         PlayerPrefsManager.UpdateCurrentProgress(playerData.currentStage);
+    }
+
+    /// <summary>
+    /// DLCストーリー進行
+    /// </summary>
+    public void DLCStageProgress(int value = 1)
+    {
+        playerData.currentDLCStage += value;
     }
 
     /// <summary>
