@@ -848,13 +848,13 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 1cf7fd0fc6209014586f8cc1ad03739d, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 
@@ -886,8 +886,8 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
+      SE: {fileID: 8300000, guid: f71f560a93370f54db7d3d7c2540ac38, type: 3}
+      SEStyle: 1
       SELoop: 0
       SECount: 1
       SESecond: 20
@@ -1167,7 +1167,7 @@ MonoBehaviour:
       BGMFadeTime: 3
       BGMEndFadeTime: 3
       SE: {fileID: 0}
-      SEStyle: 0
+      SEStyle: 2
       SELoop: 0
       SECount: 1
       SESecond: 20
@@ -2642,6 +2642,6 @@ MonoBehaviour:
     _nextChoiceIndexes: ffffffff
   _choiceList: []
   graphScale: {x: 0.8695652, y: 0.8695652, z: 1}
-  graphPosition: {x: -156, y: 221, z: 0}
+  graphPosition: {x: 85, y: 235, z: 0}
   havePreLocations: 0
   newLocations: []
