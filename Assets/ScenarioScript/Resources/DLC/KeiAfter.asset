@@ -1,0 +1,6345 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
+  m_Name: KeiAfter
+  m_EditorClassIdentifier: 
+  _locations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
+  - {fileID: 3646998453675562630, guid: 528bfc3d5c504614792715299dcd2329, type: 3}
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    _nextParagraphIndex: 1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u591C\u3001\u753A\u306E\u4E00\u89D2\u306E\u8DEF\u5730\u88CF\u306B\u3066"
+      localizationID: Record.KeiAfter-1
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u6211\u3005\u306F\u3053\u308C\u3088\u308A\u8CA1\u56E3\u652F\u914D\u4E0B\u3067\u767A\u751F\u3057\u305F\u66B4\u52D5\u306E\u93AE\u5727\u4EFB\u52D9\u306B\u3042\u305F\u308A\u307E\u3059\u3002\u300D"
+      localizationID: Record.KeiAfter-2
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 010000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u5927\u5909\u306A\u4EFB\u52D9\u3067\u306F\u3042\u308A\u307E\u305B\u3093\u304C\u3001\u3053\u308C\u306F\u8CA1\u56E3\u306E\u652F\u914D\u3092\u7DAD\u6301\u3059\u308B\u305F\u3081\u306B\u91CD\u8981\u3067\u3042\u308A\u2015\u2015\u2015\u2015\u300D"
+      localizationID: Record.KeiAfter-3
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3050\u3046\u3063\u2026\u30AF\u30BD\u30C3\u2026\uFF01\u4F55\u3067\u79C1\u304C\u3053\u3093\u306A\u3057\u3087\u3046\u3082\u306A\u3044\u4E8B\u3092\u3057\u306A\u3051\u308C\u3070\u306A\u3089\u306A\u3044\u3093\u3060\u2026\u3063\uFF01)"
+      localizationID: Record.KeiAfter-4
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000200000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 030000000100000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3053\u3093\u306A\u30D0\u30AB\u307F\u305F\u3044\u306A\u80F8\u306B\u6539\u9020\u3055\u308C\u3066\u2026\u3053\u3093\u306A\u3082\u306E\u3076\u3089\u4E0B\u3052\u3066\u6226\u3048\u308B\u308F\u3051\u306A\u3044\u3060\u308D\u3063\u2026\uFF01)"
+      localizationID: Record.KeiAfter-5
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Battler
+      text: "\u300C\u2015\u2015\u2015\u2015\u305D\u308C\u3067\u306F\u4EFB\u52D9\u3092\u958B\u59CB\u3057\u307E\u3059\u3002\u7DCF\u54E1\u6301\u3061\u5834\u3078\u79FB\u52D5\u3057\u306A\u3055\u3044\u3002\u300D"
+      localizationID: Record.KeiAfter-6
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 010000000400000004000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Noob_Battler
+      text: "\u300C\u300C\u300C\u300C\u300C\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\uFF01\uFF01\u300D\u300D\u300D\u300D\u300D\u300D"
+      localizationID: Record.KeiAfter-7
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000002000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 040000000100000001000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3063\u3001\u5197\u8AC7\u3058\u3083\u306A\u3044\u2026\u3063\uFF01\u3053\u3093\u306A\u4E8B\u3084\u3063\u3066\u3089\u308C\u308B\u304B\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-8
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 010000000000000001000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 040000000100000004000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u2026\u2026\u2026\u3068\u306F\u8A00\u3048\u30C1\u30E3\u30F3\u30B9\u3060\u2026\uFF01\u3053\u308C\u3060\u3051\u6DF7\u6226\u72B6\u614B\u306A\u3089\u9996\u8F2A\u306E\u6D17\u8133\u304C\u5C4A\u304B\u306A\u3044\u6240\u307E\u3067\u9003\u3052\u308C\u308B\u306F\u305A\u2026\u2026\u3002\u300D"
+      localizationID: Record.KeiAfter-9
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u305D\u3057\u3066\u79C1\u306A\u3089\u3053\u306E\u9996\u8F2A\u7A0B\u5EA6\u306E\u69CB\u9020\u306A\u3089\u7C21\u5358\u306B\u89E3\u9664\u3067\u304D\u308B\u2026\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-10
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u6D17\u8133\u88C5\u7F6E\u3055\u3048\u89E3\u9664\u3059\u308C\u3070\u5F8C\u306F\u306A\u3093\u3066\u3053\u3068\u306A\u3044\u3001\u79C1\u306E\u982D\u8133\u3092\u3082\u3063\u3066\u3059\u308C\u3070\u8CA1\u56E3\u3092\u4E57\u3063\u308B\u3053\u3068\u306A\u3069\u4F59\u88D5\u3060\uFF01\u300D"
+      localizationID: Record.KeiAfter-11
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3075\u3075\u3075\u3063\u2026\u5F85\u3063\u3066\u3044\u308D\u79C1\u3092\u30B3\u30B1\u306B\u3057\u305F\u8CA1\u56E3\u306E\u5E79\u90E8\u5171\u2026\uFF01\u4ECA\u5EA6\u3053\u305D\u79C1\u306E\u624B\u3067\u652F\u914D\u3057\u3066\u3084\u308B\u3063\u2026\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-12
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u88CF\u8DEF\u5730\u306B\u3066\u2015\u2015\u2015\u2015"
+      localizationID: Record.KeiAfter-13
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000100000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u30CF\u30A2\u30C3\u3001\u30CF\u30A2\u30C3\u3001\u3053\u3053\u307E\u3067\u6765\u308C\u3070\u2026\u5F8C\u3061\u3087\u3063\u3068\u3067\u570F\u5916\u306A\u306F\u305A\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-14
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D6\u30EB\u30F3\u30C3\u2665\u3001\u30D6\u30EB\u30F3\u30C3\u2665\uFF01"
+      localizationID: Record.KeiAfter-15
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3063\u3001\u304F\u305D\u3063\u3001\u3053\u306E\u3075\u3056\u3051\u305F\u80F8\u304C\u7121\u3051\u308C\u3070\u3082\u3063\u3068\u65E9\u304F\u8D70\u308C\u308B\u306E\u306B\u2026\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-16
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u306E\u6642\u3001K22\u53F7\u306E\u524D\u306B\u8DEF\u5730\u88CF\u304B\u3089\u4F55\u4EBA\u304B\u306E\u7537\u305F\u3061\u304C\u73FE\u308C\u308B"
+      localizationID: Record.KeiAfter-17
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3046\u304A\u3063\uFF01\uFF1F\u306A\u3093\u3067\u3053\u3093\u306A\u6240\u306B\u6226\u95D8\u54E1\u304C\u3044\u308B\u3093\u3060\uFF1F\uFF01\u300D"
+      localizationID: Record.KeiAfter-18
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 020000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 50b76b79fc1b37441931c240a9d2cb07, type: 3}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 010000000400000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3063\u2026\uFF01\u3053\u3093\u306A\u6642\u306B\u3081\u3093\u3069\u3046\u306A\u30C3\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-19
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 50b76b79fc1b37441931c240a9d2cb07, type: 3}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 040000000100000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u307E\u3042\u3044\u3044\u3063\u2026\u3053\u3044\u3064\u3089\u7A0B\u5EA6\u306A\u3089\u6226\u95D8\u54E1\u306E\u529B\u3067\u3082\u4F55\u3068\u304B\u306A\u308B\u3060\u308D\u3046\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-20
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 50b76b79fc1b37441931c240a9d2cb07, type: 3}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u8CB4\u69D8\u3089\u30C3\uFF01\u305D\u3053\u3092\u3069\u3051\u3063\uFF01\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u300D"
+      localizationID: Record.KeiAfter-21
+      back: {fileID: 21300000, guid: 022b7e925b3e0e54dbf349fb91e8e14b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 21300000, guid: 50b76b79fc1b37441931c240a9d2cb07, type: 3}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3050\u3046\u3046\u3063\u3063\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-22
+      back: {fileID: 21300000, guid: e5e2021d15e12514982db9dfafc38f38, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 010000000100000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u306A\u3093\u3060\u3041\u3001\u3053\u3044\u3064\uFF1F\u6226\u95D8\u54E1\u306E\u304F\u305B\u306B\u30AF\u30BD\u5F31\u3044\u3058\u3083\u306D\u3048\u304B\uFF57\u300D"
+      localizationID: Record.KeiAfter-23
+      back: {fileID: 21300000, guid: e5e2021d15e12514982db9dfafc38f38, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3046\u3063\u2026\u3053\u3093\u306A\u306F\u305A\u3067\u306F\u2026\u30C3\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-24
+      back: {fileID: 21300000, guid: e5e2021d15e12514982db9dfafc38f38, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u307E\u3001\u307E\u305A\u3044\u3001\u4F55\u3068\u304B\u9003\u3052\u306A\u3044\u3068\u2026\u2026\u2026\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-25
+      back: {fileID: 21300000, guid: e5e2021d15e12514982db9dfafc38f38, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: e5e2021d15e12514982db9dfafc38f38, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 161
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 2
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u3057\u304B\u3057K22\u53F7\u306F\u5468\u308A\u3092\u7537\u305F\u3061\u306B\u56F2\u307E\u308C\u3066\u3057\u307E\u3046\u3002"
+      localizationID: Record.KeiAfter-26
+      back: {fileID: 21300000, guid: 03d739f52bb081946b57ce6121303fc5, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3050\u3046\u3063\u2026\u3053\u306E\u5FCC\u3005\u3057\u3044\u80F8\u304C\u7121\u3051\u308C\u3070\u3053\u3093\u306A\u5974\u3089\u306B\u8CA0\u3051\u308B\u306A\u3069\u2026\u2026\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-27
+      back: {fileID: 21300000, guid: 03d739f52bb081946b57ce6121303fc5, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3042\uFF1F\u30B3\u30A4\u30C4\u6226\u95D8\u54E1\u306B\u3057\u3061\u3083\u99AC\u9E7F\u307F\u305F\u3044\u306B\u80F8\u304C\u3067\u3051\u3048\u306A\uFF1F\u300D"
+      localizationID: Record.KeiAfter-28
+      back: {fileID: 21300000, guid: 03d739f52bb081946b57ce6121303fc5, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3063\u3001\u8A00\u3046\u306A\u3063\u2026\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-29
+      back: {fileID: 21300000, guid: 03d739f52bb081946b57ce6121303fc5, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3061\u3087\u3046\u3069\u3044\u3044\u2026\u8CB4\u69D8\u3089\u8CA1\u56E3\u306E\u6226\u95D8\u54E1\u306B\u306F\u8FF7\u60D1\u3057\u3066\u3044\u305F\u3068\u3053\u3060\u3001\u5168\u54E1\u3067\u30B3\u30A4\u30C4\u306B\u5FA9\u8B90\u3057\u3066\u3084\u308B\u305E\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-30
+      back: {fileID: 21300000, guid: 03d739f52bb081946b57ce6121303fc5, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u306A\u3001\u306A\u3042\u3063\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-31
+      back: {fileID: 21300000, guid: 03d739f52bb081946b57ce6121303fc5, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u7537\u305F\u3061\u306F\u30BA\u30DC\u30F3\u3092\u304A\u308D\u3057\u3001K22\u53F7\u306E\u524D\u306B\u30C1\u30F3\u30DD\u3092\u5DEE\u3057\u51FA\u3059\u3002"
+      localizationID: Record.KeiAfter-32
+      back: {fileID: 21300000, guid: 2fc04ae8152796a4ab7e3662de9ffd00, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3088\u3001\u3088\u305B\u3063\uFF01\u8CA1\u56E3\u306B\u55A7\u5629\u3092\u58F2\u308B\u6C17\u304B\u3063\u2026\uFF1F\uFF01\u300D"
+      localizationID: Record.KeiAfter-33
+      back: {fileID: 21300000, guid: 2fc04ae8152796a4ab7e3662de9ffd00, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3042\u3042\uFF1F\u3066\u3081\u3048\u3089\u5973\u6226\u95D8\u54E1\u306F\u6563\u3005\u5584\u826F\u306A\u5E02\u6C11\u3092\u9006\u30EC\u3057\u3066\u304A\u3044\u3066\u4F55\u8A00\u3063\u3066\u3093\u3060\uFF1F\u300D"
+      localizationID: Record.KeiAfter-34
+      back: {fileID: 21300000, guid: 2fc04ae8152796a4ab7e3662de9ffd00, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3053\u308C\u306F\u6B63\u7FA9\u306E\u884C\u3044\u306A\u3093\u3060\u3088\u3063\uFF01\u30AA\u30E9\u30C3\uFF01\u300D"
+      localizationID: Record.KeiAfter-35
+      back: {fileID: 21300000, guid: 2fc04ae8152796a4ab7e3662de9ffd00, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3046\u3076\u30C3\u30C3\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-36
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.75
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u6012\u308A\u306B\u71C3\u3048\u305F\u7537\u305F\u3061\u306E\u30C1\u30F3\u30DD\u304CK22\u53F7\u306E\u53E3\u3068\u5272\u308C\u76EE\u306B\u6253\u3061\u8FBC\u307E\u308C\u308B\u3002"
+      localizationID: Record.KeiAfter-37
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u30B2\u30DD\u30C3\uFF01\uFF1F\u3050\u3046\u3046\u3046\u3063\u2026\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-38
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3078\u3078\u3063\u2026\u3044\u3064\u3082\u3084\u3089\u308C\u3063\u3071\u306A\u3057\u3060\u304B\u3089\u306A\u2026\u305F\u307E\u306B\u306F\u304A\u8FD4\u3057\u3057\u306D\u3048\u3068\u306A\u3042\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-39
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3084\u3079\u3063\u2026\u2026\u307E\u2026\u2026\u2026\u307E\u3078\u3063\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-40
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u3057\u304B\u3057\u8AB0\u3082K22\u53F7\u306E\u3044\u3046\u4E8B\u306A\u3069\u805E\u304F\u306F\u305A\u3082\u306A\u304F\u3001\u7537\u305F\u3061\u306FK22\u53F7\u306E\u4F53\u3092\u30E2\u30CE\u306E\u3088\u3046\u306B\u6271\u3044\u59CB\u3081\u308B\u3002"
+      localizationID: Record.KeiAfter-41
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D0\u30C1\u30E5\u30C3\u3001\u30D0\u30C1\u30E5\u30C3\u3001\u30D0\u30C1\u30E5\u30C3\u3001\u30D0\u30C1\u30E5\u30C4\uFF01\uFF01"
+      localizationID: Record.KeiAfter-42
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u30C3\uFF01\uFF01\uFF01\uFF1F\uFF01\u300D"
+      localizationID: Record.KeiAfter-43
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u307E\u3001\u307E\u305A\u3044\u2026\u2026\u79C1\u304C\u3053\u3093\u306A\u7537\u3069\u3082\u306B\u6355\u307E\u3063\u3066\u3057\u307E\u3046\u306A\u3069\u2026\u2026\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-44
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u305D\u308C\u306B\u3053\u3093\u306A\u6240\u3067\u3082\u305F\u3082\u305F\u3057\u3066\u305F\u3089\u9003\u3052\u3089\u308C\u306A\u304F\u306A\u3063\u3066\u3057\u307E\u3046\u3063\u2026\u2026\uFF01)"
+      localizationID: Record.KeiAfter-45
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3053\u306E\u6226\u95D8\u54E1\u30B9\u30FC\u30C4\u3082\u90AA\u9B54\u3060\u3063\u3001\u3084\u3076\u3044\u3061\u307E\u3048\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-46
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u30AD\u30A3\u30C3\uFF01\u306A\uFF01\uFF1F\u3084\u3001\u3084\u3081\u304A\u3063\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-47
+      back: {fileID: 21300000, guid: 75dcc1c39b2fb8142aa10891e31ca7d3, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D3\u30EA\u30C3\uFF01\u30D3\u30EA\u30D3\u30EA\u30C3\uFF01"
+      localizationID: Record.KeiAfter-48
+      back: {fileID: 21300000, guid: d1bc22459d2f14a4f88264ee71bb0acd, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.75
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "K22\u53F7\u306E\u30B9\u30FC\u30C4\u304C\u7834\u3089\u308C\u3001\u4E2D\u304B\u3089\u30A4\u30C1\u30B4\u306E\u3088\u3046\u306B\u5DE8\u5927\u306A\u4E73\u9996\u304C\u3042\u3089\u308F\u308C\u308B"
+      localizationID: Record.KeiAfter-49
+      back: {fileID: 21300000, guid: d1bc22459d2f14a4f88264ee71bb0acd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u30AD\u30A3\u30C3\uFF01\uFF1F\u2665\u2026\u2026\u3088\u3001\u3088\u304F\u3082\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-50
+      back: {fileID: 21300000, guid: d1bc22459d2f14a4f88264ee71bb0acd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u306F\u306F\u306F\u3063\u3001\u30DE\u30B8\u3067\u3067\u3051\u3048\u4E73\u3060\u306A\uFF1F\u306A\u3093\u3067\u3053\u3093\u306A\u5974\u304C\u6226\u95D8\u54E1\u3084\u3063\u3066\u308B\u3093\u3060\uFF1F\u300D"
+      localizationID: Record.KeiAfter-51
+      back: {fileID: 21300000, guid: d1bc22459d2f14a4f88264ee71bb0acd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3054\u3077\u3063\u3001\u30AD\u30A3\u30C3\uFF01\uFF1F\u3061\u3001\u9055\u3046\u30C3\uFF01\u79C1\u3092\u958B\u653E\u3057\u3066\u304F\u308C\u308C\u3070\u8CA1\u56E3\u306E\u60C5\u5831\u3092\u2015\u2015\u2015\u2015\u300D"
+      localizationID: Record.KeiAfter-52
+      back: {fileID: 21300000, guid: d1bc22459d2f14a4f88264ee71bb0acd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u304A\u524D\u306E\u3044\u3046\u4E8B\u306A\u3093\u3056\u805E\u3044\u3066\u306D\u3048\u3093\u3060\u3088\u3063\uFF01\u30AA\u30E9\u30C3\uFF01\u300D"
+      localizationID: Record.KeiAfter-53
+      back: {fileID: 21300000, guid: d1bc22459d2f14a4f88264ee71bb0acd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: d1bc22459d2f14a4f88264ee71bb0acd, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 302
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 3
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u30D0\u30B3\u30C3\uFF01\u30D0\u30B3\u30C3\uFF01\u30D0\u30B3\u30C3\uFF01"
+      localizationID: Record.KeiAfter-54
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3093\u3093\u30C3\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u30C3\u2665\u2665\uFF01\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-55
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u5468\u308A\u306E\u7537\u305F\u3061\u3082K22\u53F7\u306E\u4F53\u4E2D\u306B\u30C1\u30F3\u30DD\u3092\u3053\u3059\u308A\u3064\u3051\u3001K22\u53F7\u306B\u6012\u308A\u3068\u6027\u6B32\u3092\u3076\u3064\u3051\u3088\u3046\u3068\u3059\u308B"
+      localizationID: Record.KeiAfter-56
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3072\u3083\u3063\u3001\u3084\u3081\u308D\u3063\u2026\u2026\u30C3\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-57
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u306F\u306F\u3063\uFF01\u30B3\u30A4\u30C4\u30DE\u30B8\u3067\u5168\u8EAB\u30AA\u30CA\u30DB\u30DC\u30C7\u30A3\u3058\u3083\u306D\u3048\u304B\uFF57\uFF1F\u300D"
+      localizationID: Record.KeiAfter-58
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u304A\u3089\u3063\uFF01\u3082\u3063\u3068\u30DE\u30F3\u30B3\u7DE0\u3081\u308D\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-59
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.75
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D0\u30C1\u30C3\uFF01\u30D0\u30C1\u30F3\u30C3\uFF01\uFF01"
+      localizationID: Record.KeiAfter-60
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u30C3\u2665\uFF01\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-61
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B8\u30E5\u30EB\u30EB\u30C3\u2665\u30B8\u30E5\u30EB\u30EB\u30C3\u2665"
+      localizationID: Record.KeiAfter-62
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3050\u3046\u3063\u2026\uFF01\u304F\u3001\u304F\u305D\u3063\uFF01)"
+      localizationID: Record.KeiAfter-63
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3053\u306E\u4E73\u306E\u305B\u3044\u3067\u2026\u9003\u3052\u3089\u308C\u306A\u3044\u3063\u2026\u2026\u2665\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-64
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u305D\u3001\u305D\u308C\u306B\u3063\u2026\u2026\u52DD\u624B\u306B\u4F53\u304C\u3053\u3044\u3064\u3089\u306B\u5A9A\u3073\u3066\u3057\u307E\u3046\u3063\u2026\uFF01)"
+      localizationID: Record.KeiAfter-65
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3050\u3046\u3063\u2026\u304F\u305D\u3063\uFF01\u3053\u308C\u3082\u6539\u9020\u3055\u308C\u305F\u305B\u3044\u306A\u306E\u304B\u2026\u2026\u4F53\u304C\u52DD\u624B\u306B\u3054\u5949\u4ED5\u30E2\u30FC\u30C9\u306B\u2026\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-66
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u306F\u306F\u3063\u3001\u3053\u3044\u3064\u30EC\u30A4\u30D7\u3055\u308C\u3066\u308B\u6700\u4E2D\u3060\u3063\u3066\u306E\u306B\u30CE\u30EA\u30CE\u30EA\u3058\u3083\u306D\u3048\u304B\uFF01\u6226\u95D8\u54E1\u3063\u3066\u306E\u306F\u3069\u3044\u3064\u3082\u3053\u3093\u306A\u611F\u3058\u306A\u306E\u304B\uFF1F\u300D"
+      localizationID: Record.KeiAfter-67
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u30B8\u30E5\u30EB\u30EB\u30C3\u2665\uFF01\u3080\u3046\u3063\uFF5E\uFF5E\uFF5E\uFF5E\u2665\uFF01\uFF01\u3093\u3093\u3063\u2665\uFF01\u300D"
+      localizationID: Record.KeiAfter-68
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3046\u3046\u3063\u2026\uFF01\u4F55\u3092\u3057\u3066\u308B\u3093\u3060\u3063\u2026\u2026\uFF01\u9003\u3052\u306A\u3051\u308C\u3070\u3044\u3051\u306A\u3044\u306E\u306B\u3063\u2026\uFF01\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-69
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u304F\u305D\u3063\u2665\uFF01\u6539\u9020\u3055\u308C\u305F\u305B\u3044\u3067\u3063\u2026\u4F53\u304C\u52DD\u624B\u306B\u5A9A\u3073\u3066\u3057\u307E\u3046\u2026\u2026\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-70
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u304A\uFF5E\u3044\u3001\u65E9\u304F\u5909\u308F\u3063\u3066\u304F\u308C\u3001\u5F8C\u304C\u3064\u304B\u3048\u3066\u308B\u3093\u3060\u3002\u300D"
+      localizationID: Record.KeiAfter-71
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u304A\u3063\u3068\u305D\u3046\u3060\u306A\u2026\u30AA\u30E9\u30C3\uFF01\u53E3\u306B\u51FA\u3057\u3066\u3084\u308B\u304B\u3089\u53CD\u7701\u3057\u306A\u304C\u3089\u5949\u4ED5\u3057\u308D\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-72
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u7537\u305F\u3061\u306F\u8170\u306E\u52D5\u304D\u3092\u6FC0\u3057\u304F\u3057\u3001\u5FEB\u697D\u3092\u6E80\u305F\u3059\u305F\u3081\u3060\u3051\u306E\u9053\u5177\u306E\u3088\u3046\u306BK22\u53F7\u306E\u7A74\u3092\u653B\u3081\u7D9A\u3051\u308B\u3002"
+      localizationID: Record.KeiAfter-73
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3050\u3076\u3063\uFF01\uFF1F\u3093\u3063\u2665\u3001\u30B8\u30E5\u30EB\u30C3\u2665\u30B8\u30E5\u30DD\u30C3\u2665\uFF01\u3093\u3093\u3063\uFF5E\uFF5E\uFF5E\uFF01\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-74
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3093\u3063\u2665\u3001\u3093\u3063\u2665\u3001\u30B8\u30E5\u30EB\u30C3\u2665\u3001\u30B4\u30D7\u30C3\u2665\u3001\u3052\u3077\u3063\u2665\u2026\u30B8\u30E5\u30DD\u30C3\u2665\uFF01\u300D"
+      localizationID: Record.KeiAfter-75
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: e171a30d294368c45b12750562fe5fed, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 3
+    _nodePosition:
+      serializedVersion: 2
+      x: 446
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 4
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u304F\u3063\u3001\u304F\u305D\uFF01\u3053\u3044\u3064\u3089\u3063\u2026\uFF01\u3053\u306E\u79C1\u3092\u3053\u3093\u306A\u30AA\u30CA\u30DB\u306E\u3088\u3046\u306B\u2026\u2665\uFF01)"
+      localizationID: Record.KeiAfter-76
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3050\u3046\u3046\u3063\u2026\uFF01\uFF01\u3067\u3082\u3063\u2026\u6539\u9020\u3055\u308C\u305F\u305B\u3044\u3067\u2026\u2665\u4F53\u304C\u30C1\u30F3\u30DD\u306B\u9006\u3089\u3048\u306A\u3044\u3063\u2026\u2665\uFF01)"
+      localizationID: Record.KeiAfter-77
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3053\u3093\u306A\u60C5\u3051\u306A\u3044\u72B6\u6CC1\u306A\u306E\u306B\u2026\u2665\u2026\u2026\u79C1\u306E\u4F53\u304C\u2026\u3053\u306E\u7537\u3069\u3082\u306E\u30C1\u30F3\u30DD\u306B\u5949\u4ED5\u3057\u3066\u3057\u307E\u3046\u2026\u2026\u3063\u2665\uFF01)"
+      localizationID: Record.KeiAfter-78
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B8\u30E5\u30DD\u30C3\u2665\u3001\u30B8\u30E5\u30EB\u30EB\u30C3\u2665\u3001\u30B8\u30E5\u30EB\u30EB\u30C3\u2665\uFF01"
+      localizationID: Record.KeiAfter-79
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3046\u3050\u3063\u2665\u2026\u6539\u9020\u3055\u308C\u3066\u304B\u3089\u611F\u5EA6\u304C\u3042\u304C\u3063\u3066\u2026\u304F\u305D\u3063\u2026\u3053\u3093\u306A\u96D1\u9B5A\u5171\u306B\u2026\u79C1\u304C\u30C3\u2026\u2665\uFF01)"
+      localizationID: Record.KeiAfter-80
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u30AA\u30E9\u30C3\uFF01\u51FA\u3057\u3066\u3084\u308B\u3063\uFF01\u60AA\u306E\u6226\u95D8\u54E1\u3081\u3063\u2026\u53CD\u7701\u3057\u308D\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-81
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30AF\u30C3\u3001\u30D3\u30E5\u30EB\u30EB\u30EB\u30EB\u30C3\uFF01\uFF01\uFF01\uFF01"
+      localizationID: Record.KeiAfter-82
+      back: {fileID: 21300000, guid: f486fc0df90ca2f4782912e2a7e7a65e, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u3063\u2665\u2665\uFF01\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-83
+      back: {fileID: 21300000, guid: f486fc0df90ca2f4782912e2a7e7a65e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "K22\u53F7\u306E\u53E3\u3068\u81A3\u5185\u306B\u7537\u305F\u3061\u306E\u7CBE\u6DB2\u304C\u653E\u51FA\u3055\u308C\u308B"
+      localizationID: Record.KeiAfter-84
+      back: {fileID: 21300000, guid: f486fc0df90ca2f4782912e2a7e7a65e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3046\u3050\u3046\u3063\u2665\u3001\u3046\u3063\u3001\u30B4\u30AD\u30E5\u30C3\u2665\uFF01\u3093\u3093\uFF5E\uFF5E\uFF5E\u3063\u2665\uFF01\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-85
+      back: {fileID: 21300000, guid: f486fc0df90ca2f4782912e2a7e7a65e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\uFF01\uFF01\u3063\u3001\u306A\u3001\u306A\u3093\u3060\u3053\u308C\u3063\u2026\u7CBE\u6DB2\u51FA\u3055\u308C\u305F\u3060\u3051\u3067\u3063\u2026\u2026\u4F53\u304C\u53CD\u5FDC\u3057\u3066\u3063\u2026\u2026\u30A4\u30AF\u30C3\u2665\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-86
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.5
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D6\u30B7\u30E5\u30C3\u2665\u30D7\u30B7\u30B7\u30A4\u30A4\u30C3\u2665"
+      localizationID: Record.KeiAfter-87
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3054\u304D\u3085\u3063\u2665\u2026\u3054\u304D\u3085\u3063\u2665\u2026\u3046\u3046\u3063\u2026\u304A\u3048\u3063\u2026\u2665\u300D"
+      localizationID: Record.KeiAfter-88
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "K22\u53F7\u306F\u81A3\u5185\u3068\u53E3\u8154\u5185\u306B\u7CBE\u6DB2\u3092\u6D41\u3057\u8FBC\u307E\u308C\u308B\u3054\u3068\u306B\u6539\u9020\u3055\u308C\u305F\u4F53\u304C\u8EFD\u304F\u30A4\u30C3\u3066\u3057\u307E\u3046\u3002"
+      localizationID: Record.KeiAfter-89
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3050\u3046\u3063\u2026\u3093\u3093\u3063\u2665\u2026\u2026\u3093\u3093\u309B\u3063\u2026\u2026\uFF01\uFF01\u3093\u3093\u3093\u3063\u2665\uFF01\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-90
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3050\u3046\u3063\u2026\u3046\u3046\u3063\uFF01\u2026\u3053\u306E\u79C1\u304C\u3063\u2026\u2026\uFF01\u3053\u3093\u306A\u96D1\u9B5A\u5171\u306B\u2026\u2026\u96D1\u306B\u4F7F\u308F\u308C\u3066\u2026\u3042\u308D\u3046\u3053\u3068\u304B\u7D76\u9802\u3055\u305B\u3089\u308C\u305F\u2026\u2026\uFF01\uFF1F\uFF01)"
+      localizationID: Record.KeiAfter-91
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u304F\u305D\u3063\u2026\uFF01\u3053\u306E\u2026\u79C1\u304C\u3063\u2026\u2026\uFF01\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-92
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3075\u3046\u2026\u51FA\u3057\u305F\u51FA\u3057\u305F\u3002\u304A\u3046\u3001\u7A7A\u3044\u305F\u304B\u3089\u8AB0\u304B\u4F7F\u3063\u3066\u3044\u3044\u305E\u3002\u300D"
+      localizationID: Record.KeiAfter-93
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u3063\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-94
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u307E\u3001\u5F85\u3066\u3063\u2665\uFF01\uFF01\u307E\u305A\u3044\u3063\u2665\u3001\u3053\u3053\u306B\u3044\u308B\u5168\u54E1\u3092\u76F8\u624B\u3057\u3066\u3044\u308B\u6642\u9593\u306F\u306A\u3044\u3063\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-95
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u65E9\u304F\u9003\u3052\u306A\u3051\u308C\u3070\u2026\uFF01\u6D41\u77F3\u306B\u8CA1\u56E3\u306E\u6226\u95D8\u54E1\u306B\u898B\u3064\u304B\u3063\u3066\u3057\u307E\u3046\u3063\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-96
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u30B1\u30DB\u30C3\u2665\u3001\u307E\u3001\u307E\u3078\u3063\u2665\u3001\u306F\u3001\u306F\u306A\u3057\u3092\u30C3\u2665\uFF01\u300D"
+      localizationID: Record.KeiAfter-97
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3093\u306AK22\u53F7\u306E\u8A00\u8449\u3082\u3080\u306A\u3057\u304F\u3001K22\u53F7\u306B\u6012\u308C\u308B\u5E02\u6C11\u305F\u3061\u306E\u8089\u68D2\u304C\u8972\u3044\u639B\u304B\u308B\u306E\u3060\u3063\u305F"
+      localizationID: Record.KeiAfter-98
+      back: {fileID: 21300000, guid: 9923ce6ff9fd3f144b16c7ed4ec71d4e, type: 3}
+      howBack: 0
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u2015\u2015\u2015\u20151\u6642\u9593\u5F8C"
+      localizationID: Record.KeiAfter-99
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 1
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 4
+    _nodePosition:
+      serializedVersion: 2
+      x: 578
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01"
+      localizationID: Record.KeiAfter-100
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30B8\u30E5\u30EB\u30EB\u30C3\uFF01\u30B8\u30E5\u30DD\u30C3\uFF01\u30B8\u30E5\u30DD\u30C3\uFF01"
+      localizationID: Record.KeiAfter-101
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u304A\u309B\u3063\u2665\u2665\u3001\u304A\u309B\u304A\u304A\u3063\u2665\u300D"
+      localizationID: Record.KeiAfter-102
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "K22\u53F7\u306F\u4F55\u56DE\u306B\u3082\u308F\u305F\u308B\u51CC\u8FB1\u306B\u3088\u308A\u3001\u5168\u8EAB\u304C\u7CBE\u6DB2\u307E\u307F\u308C\u3068\u306A\u3063\u3066\u3044\u305F"
+      localizationID: Record.KeiAfter-103
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3050\u3046\u3046\u3063\u2665\uFF01\u2026\u7D50\u5C40\u3063\u2665\u2665\u2026\u9003\u3052\u3089\u308C\u306A\u304B\u3063\u305F\u3063\u2665\u2665\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-104
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3093\u3042\u3063\u2665\u2026\u3053\u306E\u3075\u3056\u3051\u305F\u4E73\u304C\u7121\u3051\u308C\u3070\u3063\u2665\u2665\uFF01\u304F\u3046\u3046\u3063\u2665\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-105
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3075\u3046\u3063\u2026\u4ECA\u65E5\u306F\u4E00\u6669\u4E2D\u4F7F\u308F\u305B\u3066\u3082\u3089\u3046\u304B\u3089\u306A\u3063\uFF01\u899A\u609F\u3057\u3066\u304A\u3051\uFF01\u300D"
+      localizationID: Record.KeiAfter-106
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3080\u309B\u3046\u3046\u3063\uFF01\uFF1F\u3093\u309B\u3063\u2665\u2665\uFF01\u306A\u3001\u306A\u3093\u3089\u3068\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-107
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u306E\u6642\u3001\u898B\u5F35\u308A\u5F79\u306E\u7537\u3068\u601D\u308F\u308C\u308B\u4EBA\u7269\u304C\u73FE\u308C\u308B"
+      localizationID: Record.KeiAfter-108
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Watchman
+      text: "\u300C\u304A\u3001\u304A\u3044\uFF01\u5411\u3053\u3046\u304B\u3089\u8CA1\u56E3\u306E\u6226\u95D8\u54E1\u3063\u307D\u3044\u5974\u3089\u304C\u3053\u3063\u3061\u306B\u5411\u304B\u3063\u3066\u304D\u3066\u308B\uFF01\u300D"
+      localizationID: Record.KeiAfter-109
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u2026\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-110
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3061\u3063\u2026\u4ECA\u65E5\u306F\u3053\u3053\u307E\u3067\u304B\u2026\u305B\u3063\u304B\u304F\u3053\u3093\u306A\u90FD\u5408\u306E\u3044\u3044\u30AA\u30CA\u30DB\u6226\u95D8\u54E1\u307F\u3064\u3051\u305F\u3063\u3066\u306E\u306B\u2026\u300D"
+      localizationID: Record.KeiAfter-111
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u307E\u3042\u3044\u3044\u3001\u305B\u3063\u304B\u304F\u3060\u304B\u3089\u6700\u5F8C\u306B\u4E00\u767A\u3076\u3063\u304B\u3051\u3066\u304B\u3089\u305A\u3089\u304B\u308B\u305E\uFF01\u300D"
+      localizationID: Record.KeiAfter-112
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3093\u3050\u3063\u2665\uFF01\uFF1F\u306A\u3001\u306A\u306B\u3092\u3063\u2026\u2026\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-113
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u7537\u305F\u3061\u306FK22\u53F7\u306B\u5411\u304B\u3063\u3066\u81EA\u3089\u306E\u30C1\u30F3\u30DD\u3092\u3057\u3054\u304D\u59CB\u3081\u308B"
+      localizationID: Record.KeiAfter-114
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3072\u3046\u3063\u2665\u3001\u306A\u3001\u306A\u306B\u3092\u3063\u2026\u2665\uFF01\u300D"
+      localizationID: Record.KeiAfter-115
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3046\u3042\u3063\u2665\uFF01\u307E\u3001\u307E\u3066\u3063\u2026\uFF01\u3084\u3001\u3084\u3081\u308D\u3063\u2665\uFF01\u300D"
+      localizationID: Record.KeiAfter-116
+      back: {fileID: 21300000, guid: f2fade3a0f6375f46ac67b91ff6e9077, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30D3\u30E5\u30C3\uFF01\u30D3\u30E5\u30EB\u30EB\u30EB\u30C3\u30EB\u30C3\uFF01\uFF01\uFF01"
+      localizationID: Record.KeiAfter-117
+      back: {fileID: 21300000, guid: 4a966044f2ba9ce4aa5eef208af1f25c, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u3063\u2665\uFF01\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-118
+      back: {fileID: 21300000, guid: 4a966044f2ba9ce4aa5eef208af1f25c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "K22\u53F7\u3078\u7537\u305F\u3061\u304B\u3089\u5927\u91CF\u306E\u7CBE\u6DB2\u304C\u304B\u3051\u3089\u308C\u308B"
+      localizationID: Record.KeiAfter-119
+      back: {fileID: 21300000, guid: 4a966044f2ba9ce4aa5eef208af1f25c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3046\u3042\u3063\u2665\u3072\u3063\u2665\u3001\u3072\u3042\u3042\u3042\u3063\u2665\uFF01\uFF1F\u300D"
+      localizationID: Record.KeiAfter-120
+      back: {fileID: 21300000, guid: 4a966044f2ba9ce4aa5eef208af1f25c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Man
+      text: "\u300C\u3059\u3063\u304D\u308A\u3057\u305F\u305C\uFF01\u3088\u3057\u3063\u3001\u305A\u3089\u304B\u308B\u305E\uFF01\u300D"
+      localizationID: Record.KeiAfter-121
+      back: {fileID: 21300000, guid: 4a966044f2ba9ce4aa5eef208af1f25c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3052\u307B\u3063\u2665\u3001\u30B4\u30DB\u30C3\u2665\u3001\u3050\u3046\u3046\u3046\u3045\u3046\u3046\u3046\u3046\uFF01\uFF01\uFF01\u300D"
+      localizationID: Record.KeiAfter-122
+      back: {fileID: 21300000, guid: e4f60654b8e65444caadc37a65f9a3ec, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u3063\u3001\u307E\u3001\u307E\u305A\u3044\u2026\u79C1\u3082\u65E9\u304F\u3053\u3053\u304B\u3089\u7ACB\u3061\u53BB\u3089\u306A\u3051\u308C\u3070\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-123
+      back: {fileID: 21300000, guid: e4f60654b8e65444caadc37a65f9a3ec, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u305D\u3057\u3066K22\u53F7\u304C\u8D77\u304D\u4E0A\u304C\u308D\u3046\u3068\u3057\u305F\u3068\u304D\u3001\u76EE\u306E\u524D\u306B\u30AF\u30ED\u30FC\u30F3\u6226\u95D8\u54E1\u304C\u73FE\u308C\u308B\u3002"
+      localizationID: Record.KeiAfter-124
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u2026\u2026\u2026\u2026\u305D\u3053\u306B\u5012\u308C\u3066\u3044\u308B\u306E\u306F\u2026K22\u53F7\u3067\u3059\u304B\uFF1F\u300D"
+      localizationID: Record.KeiAfter-125
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u2026\u2026\uFF01\u304D\u3001\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01K22\u53F7\u3067\u3059\u3063\uFF01\u300D"
+      localizationID: Record.KeiAfter-126
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3042\u3042\u3042\u3042\u3063\uFF01\u6700\u60AA\u3060\u3063\uFF01\uFF01)"
+      localizationID: Record.KeiAfter-127
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u2026\u72B6\u6CC1\u306E\u8AAC\u660E\u3092\u3002\u300D"
+      localizationID: Record.KeiAfter-128
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u304D\u3001\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u4EFB\u52D9\u306B\u5931\u6557\u3057\u2026\u8DEF\u5730\u88CF\u306B\u6765\u305F\u3068\u3053\u308D\u2026\u2026\u300D"
+      localizationID: Record.KeiAfter-129
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u304A\u3001\u7537\u305F\u3061\u306B\u6557\u5317\u3057\u2026\u2026\u4ECA\u307E\u3067\u308A\u3087\u2026\u51CC\u8FB1\u3055\u308C\u3066\u3044\u307E\u3057\u305F\u2026\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-130
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u2026\u2026\u4EFB\u52D9\u3092\u9042\u884C\u3059\u308B\u3053\u3068\u304C\u51FA\u6765\u305A\u2026\u8AA0\u306B\u7533\u3057\u8A33\u3054\u3056\u3044\u307E\u305B\u3093\u3063\u2026\uFF01\u300D"
+      localizationID: Record.KeiAfter-131
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3084\u308C\u3084\u308C\u2026\u2026\u308F\u304B\u308A\u307E\u3057\u305F\u3002K22\u53F7\u3001\u7F70\u3068\u3057\u3066\u4ECA\u65E5\u306F\u7537\u6027\u6226\u95D8\u54E1\u306E\u5949\u4ED5\u4EFB\u52D9\u3092\u884C\u3046\u3088\u3046\u306B\u3002\u300D"
+      localizationID: Record.KeiAfter-132
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "\u300C\u304D\u3001\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u5BDB\u5927\u306A\u51E6\u9047\u611F\u8B1D\u3044\u305F\u3057\u307E\u3059\uFF01\u300D"
+      localizationID: Record.KeiAfter-133
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3050\u3046\u3063\uFF01\u304F\u3001\u304F\u305D\u3063\u2026\uFF01\uFF01\u3053\u3093\u306A\u30AF\u30ED\u30FC\u30F3\u3054\u3068\u304D\u306B\u3053\u306E\u79C1\u304C\u2026\u2026\uFF01)"
+      localizationID: Record.KeiAfter-134
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Kei_Battler
+      text: "(\u3060\u304C\u3063\u2026\u4ECA\u306B\u898B\u3066\u3044\u308B\u304C\u3044\u3044\u3063\u2026\uFF01\u8AB0\u304C\u771F\u306E\u652F\u914D\u8005\u306B\u3075\u3055\u308F\u3057\u3044\u306E\u304B\u2026\uFF01)"
+      localizationID: Record.KeiAfter-135
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u307E\u3060\u307E\u3060\u4E0B\u7D1A\u6226\u95D8\u54E1\u3068\u306A\u3063\u305FK22\u53F7\u306E\u6226\u95D8\u54E1\u751F\u6D3B\u306F\u7D9A\u304F\u306E\u3060\u3063\u305F\u3002"
+      localizationID: Record.KeiAfter-136
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 08366028a2e0fec46a2c69c5ad03916a, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 000000000000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 000000000000000000000000
+      charaEffectStrength: 000000000000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  _choiceList: []
+  graphScale: {x: 1, y: 1, z: 1}
+  graphPosition: {x: -466, y: 301, z: 0}
+  havePreLocations: 0
+  newLocations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
+  - {fileID: 3646998453675562630, guid: 528bfc3d5c504614792715299dcd2329, type: 3}
