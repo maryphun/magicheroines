@@ -656,6 +656,13 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 
         PlayerCharacterDefine Second = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/2.TentacleMan");
 
+        PlayerCharacterDefine Third = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/12.Hisui");
+
+        PlayerCharacterDefine Forth = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/13.Daiya");
+
+        AddPlayerCharacter(Third).is_corrupted = true;
+        AddPlayerCharacter(Forth).is_corrupted = true;
+
         // フォーメーション編成
         playerData.formationCharacters[0].characterID = First.detail.characterID;
         playerData.formationCharacters[1].characterID = Second.detail.characterID;

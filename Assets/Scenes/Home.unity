@@ -12724,7 +12724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   operationBtn: {fileID: 381654444}
-  isDebug: 0
+  isDebug: 1
 --- !u!1 &373248939
 GameObject:
   m_ObjectHideFlags: 0
@@ -29172,7 +29172,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1683985741}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.7029703
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -34017,6 +34017,8 @@ MonoBehaviour:
   - {fileID: 1545415207}
   - {fileID: 82860123}
   - {fileID: 906244692}
+  - {fileID: 374181260}
+  - {fileID: 1411036929}
   pinkPanel: {fileID: 1216678647}
   tutorial: {fileID: 196795787}
   characterSelectionScrollContent: {fileID: 746979978}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 13.Daiya
   m_EditorClassIdentifier: 
   detail:
-    characterID: 11
+    characterID: 12
     icon: {fileID: -1109058711, guid: ddfb2c5889060414988df1c56b2521e9, type: 3}
     sprite: {fileID: 21300000, guid: b0bd88528c734ad43b03fbe01fc8629e, type: 3}
     animations:
@@ -24,7 +24,7 @@ MonoBehaviour:
       attacked: {fileID: 0}
       retire: {fileID: 0}
     color: {r: 0.4764151, g: 1, b: 0.7852209, a: 1}
-    nameID: Name.Daiya
+    nameID: Name.Diamond
     starting_level: 1
     base_hp: 250
     base_mp: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
       character: {fileID: 21300000, guid: 127f7f864ed5bec4ab23e3cf1d6caf16, type: 3}
       requiredCorruptionEpisode: 3
       requiredHornyEpisode: 0
-    corruptedName: Name.Daiya_Corrupted
+    corruptedName: Name.Diamond_Corrupted
     coreEquipment: {fileID: 11400000, guid: 81f41542571166940b00453d64bd0976, type: 2}
     abilities:
     - {fileID: 11400000, guid: 1c479d706a5651945bd2d20eb2485462, type: 2}

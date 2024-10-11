@@ -185,6 +185,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     public void ChangeCharacterSlot(int characterID)
     {
         int slot = CharacterIDToIndex(characterID);
+        Debug.Log("characterID = " + characterID.ToString() + ", slot = " + slot.ToString());
         if (characters.Count <= slot) return;
 
         if (characters[slot].characterData.is_heroin && !characters[slot].is_corrupted) return; // まだ闇落ちされていないヒロインキャラは確認できない
@@ -206,4 +207,10 @@ public class CharacterBuildingPanel : MonoBehaviour
 
         return index[characterID];
     }
+
+    //public int FindCharacterSlotOfCharacterID(int characterID)
+    //{
+    //    int[] index = {}
+    //}
 }
+
