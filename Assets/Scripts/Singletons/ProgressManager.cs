@@ -134,6 +134,10 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 
         // フラグ更新
         isInitialized = true;
+
+#if DEBUG_MODE
+        DLCManager.isDLCEnabled = true;
+#endif
     }
 
     /// <summary>
@@ -688,6 +692,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
             BattleSetup.AddEnemy("Nayuta_Enemy");
             BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
         }
+
+        DLCManager.isDLCEnabled = true;
     }
 #else
     public void DebugModeInitialize() { }

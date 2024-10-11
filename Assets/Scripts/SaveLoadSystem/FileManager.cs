@@ -205,6 +205,8 @@ public static class SaveDataManager
         playerData.tutorialData = serializableData.tutorialData;
         playerData.records = serializableData.recordData;
 
+        playerData.currentDLCStage = Mathf.Max(1, serializableData.currentDLCStage);
+
         // Serialize‚µ‚«‚ê‚È‚¢ƒf[ƒ^
         {
             playerData.inventory = new List<ItemDefine>();

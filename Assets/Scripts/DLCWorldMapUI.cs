@@ -25,7 +25,7 @@ public class DLCWorldMapUI : MonoBehaviour
 
         if (chapterName != null)
         {
-            chapterName.text = GetChapterName(ProgressManager.Instance.GetCurrentStageProgress());
+            chapterName.text = GetChapterName(ProgressManager.Instance.GetCurrentDLCStageProgress());
         }
 
         if (ProgressManager.Instance.IsDLCEnded())
@@ -66,6 +66,8 @@ public class DLCWorldMapUI : MonoBehaviour
     {
         const float animationTime = 1.0f;
 
+        DLCManager.isEnterDLCStage = true;
+
         // ƒV[ƒ“‘JˆÚ
         AlphaFadeManager.Instance.FadeOut(animationTime);
         DOTween.Sequence()
@@ -82,28 +84,9 @@ public class DLCWorldMapUI : MonoBehaviour
         AutoSave.ExecuteAutoSave();
     }
 
-    private void EnterDLCScene()
-    {
-        if (!DLCManager.isDLCEnabled) return;
-
-        const float animationTime = 0.5f;
-
-        // ƒV[ƒ“‘JˆÚ
-        AlphaFadeManager.Instance.FadeOut(animationTime);
-        DOTween.Sequence()
-            .AppendInterval(animationTime)
-            .AppendCallback(() => { SceneManager.LoadScene("DLCWorldMap", LoadSceneMode.Single); });
-
-        // SE
-        AudioManager.Instance.PlaySFX("QuestStart");
-
-        // Switch BGM
-        AudioManager.Instance.StopMusicWithFade(animationTime);
-    }
-
     // DLC_TODO
     private string GetChapterName(int progress)
     {
-        return "Chapter " + (((progress - 1) / 3) + 1).ToString() + "-" + (((progress - 1) % 3) + 1).ToString();
+        return "DLC Chapter " + (progress.ToString());
     }
 }

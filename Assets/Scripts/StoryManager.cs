@@ -34,6 +34,99 @@ public class StoryManager : MonoBehaviour
     {
         BattleSetup.Reset(true);
         BattleSetup.SetAllowEscape(true);
+
+        if (DLCManager.isEnterDLCStage)
+        {
+            switch (ProgressManager.Instance.GetCurrentDLCStageProgress())
+            {
+                case 1:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                case 2:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                case 3:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                case 4:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                case 5:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                case 6:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                case 7:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                case 8:
+                    {
+                        BattleSetup.AddEnemy("Drone");
+                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetReward(350, 25);
+                        StartCoroutine(SceneTransition("Battle", 0));
+                    }
+                    break;
+
+                default:
+                    // 未開発地帯
+                    underdevelopment.SetActive(true);
+                    break;
+            }
+            return;
+        }
+
         switch (ProgressManager.Instance.GetCurrentStageProgress())
         {
             case 2:
@@ -227,6 +320,59 @@ public class StoryManager : MonoBehaviour
     /// </summary>
     void AfterStory()
     {
+        if (DLCManager.isEnterDLCStage)
+        {
+            switch (ProgressManager.Instance.GetCurrentDLCStageProgress())
+            {
+                case 1:
+                    {
+
+                    }
+                    break;
+                case 2:
+                    {
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 1-1", true, GoToRewardScreen);
+                    }
+                    break;
+                case 3:
+                    {
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 1-2", true, GoToRewardScreen);
+                    }
+                    break;
+                case 4:
+                    {
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 1-3", true, GoToRewardScreen);
+                    }
+                    break;
+                case 5:
+                    {
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-0 AfterBattle", true, GoToRewardScreen);
+                    }
+                    break;
+                case 6:
+                    {
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-1", true, GoToRewardScreen);
+                    }
+                    break;
+                case 7:
+                    {
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-2 AfterBattle", true, GoToRewardScreen);
+                    }
+                    break;
+                case 8:
+                    {
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-3 AfterBattle", true, GoToRewardScreen);
+                    }
+                    break;
+                default:
+                    // 未開発地帯 WARNING (もうここにこないはず)
+                    underdevelopment.SetActive(true);
+                    break;
+            }
+            ProgressManager.Instance.DLCStageProgress();
+            return;
+        }
+
         switch (ProgressManager.Instance.GetCurrentStageProgress())
         {
             case 2:

@@ -108,6 +108,8 @@ public class WorldMapUI : MonoBehaviour
 
         const float animationTime = 0.5f;
 
+        DLCManager.isEnterDLCStage = false;
+
         // ƒV[ƒ“‘JˆÚ
         AlphaFadeManager.Instance.FadeOut(animationTime);
         DOTween.Sequence()

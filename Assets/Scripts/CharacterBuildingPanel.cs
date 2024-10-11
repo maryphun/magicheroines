@@ -20,6 +20,8 @@ public class CharacterBuildingPanel : MonoBehaviour
     [SerializeField] private Image[] characterIconSlots;
     [SerializeField] private RectTransform pinkPanel;
     [SerializeField] private CharacterBuildingPanelTutorial tutorial;
+    [SerializeField] private RectTransform characterSelectionScrollContent;
+    [SerializeField] private GameObject[] DLCcharactersIcon;
 
     [Header("Debug")]
     [SerializeField] List<Character> characters;
@@ -34,6 +36,15 @@ public class CharacterBuildingPanel : MonoBehaviour
     private void Start()
     {
         tabLocalPosY = characterDataButton.GetComponent<RectTransform>().localPosition.y;
+
+        if (DLCManager.isDLCEnabled)
+        {
+            characterSelectionScrollContent.sizeDelta = new Vector2(characterSelectionScrollContent.sizeDelta.x, 1100.0f);
+            foreach (GameObject icon in DLCcharactersIcon)
+            {
+                icon.SetActive(true);
+            }
+        }
     }
 
     public void OpenCharacterBuildingPanel()
@@ -52,7 +63,7 @@ public class CharacterBuildingPanel : MonoBehaviour
         characters = ProgressManager.Instance.GetAllCharacter();
         for (int i = 0; i < characters.Count; i++)
         {
-            int index = characters[i].characterData.characterID;
+            int index = CharacterIDToIndex(characters[i].characterData.characterID);
 
             if (characters[i].is_corrupted || !characters[i].characterData.is_heroin) // ヒロインキャラは闇落ちした後のみ使用御覧できる
             {
@@ -171,8 +182,9 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// <summary>
     /// キャラ変更
     /// </summary>
-    public void ChangeCharacterSlot(int slot)
+    public void ChangeCharacterSlot(int characterID)
     {
+        int slot = CharacterIDToIndex(characterID);
         if (characters.Count <= slot) return;
 
         if (characters[slot].characterData.is_heroin && !characters[slot].is_corrupted) return; // まだ闇落ちされていないヒロインキャラは確認できない
@@ -186,5 +198,12 @@ public class CharacterBuildingPanel : MonoBehaviour
         characterDataPanel.InitializeCharacterData(characters[currentCheckingSlot]);
         characterUpgradePanel.InitializeUpgradePanel(characters[currentCheckingSlot]);
         characterUpgradePanel.ResetAnimation();
+    }
+
+    public int CharacterIDToIndex(int characterID)
+    {
+        int[] index = { 0, 1, 2, 3, 4, 5, 6, 7, -1, -1, -1, 8, 9 };
+
+        return index[characterID];
     }
 }

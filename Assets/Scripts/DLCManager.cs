@@ -7,6 +7,7 @@ using System.Text;
 public class DLCManager : MonoBehaviour
 {
     public static bool isDLCEnabled;
+    public static bool isEnterDLCStage;
 
     private string expectedDecryptedKey = "DLC_ACTIVATE"; // The key
 
