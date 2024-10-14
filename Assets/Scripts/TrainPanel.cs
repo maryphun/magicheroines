@@ -61,18 +61,24 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_HornyNovelNameList.Add(5, new List<string> { "Erena/E_Horny_1", "Erena/E_Horny_2" });
         CharacterID_To_HornyNovelNameList.Add(6, new List<string> { "Kei/K_Horny_1", "Kei/K_Horny_2" });
         CharacterID_To_HornyNovelNameList.Add(7, new List<string> { "Nayuta/N_Horny_1", "Nayuta/N_Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(11, new List<string> { "DLC/H_Horny_1", "DLC/H_Horny_2", "DLC/H_Horny_3" });
+        CharacterID_To_HornyNovelNameList.Add(12, new List<string> { "DLC/D_Horny_1", "DLC/D_Horny_2", "DLC/D_Horny_3" });
         // 洗脳シナリオリスト
         CharacterID_To_BrainwashNovelNameList.Add(3, new List<string> { "Akiho/A_BrainWash_1", "Akiho/A_BrainWash_2", "Akiho/A_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(4, new List<string> { "Rikka/R_BrainWash_1", "Rikka/R_BrainWash_2", "Rikka/R_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(5, new List<string> { "Erena/E_BrainWash_1", "Erena/E_BrainWash_2", "Erena/E_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(6, new List<string> { "Kei/K_BrainWash_1", "Kei/K_BrainWash_2", "Kei/K_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(7, new List<string> { "Nayuta/N_BrainWash_1", "Nayuta/N_BrainWash_2", "Nayuta/N_BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(11, new List<string> { "DLC/H_BrainWash_1", "DLC/H_BrainWash_2", "DLC/H_BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(12, new List<string> { "DLC/D_BrainWash_1", "DLC/D_BrainWash_2", "DLC/D_BrainWash_3" });
         // 聖核研究シナリオリスト
         CharacterID_To_CoreNovelNameList.Add(3, new List<string> { "Akiho/A_Core_1", "Akiho/A_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(4, new List<string> { "Rikka/R_Core_1", "Rikka/R_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(5, new List<string> { "Erena/E_Core_1", "Erena/E_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(6, new List<string> { "Kei/K_Core_1", "Kei/K_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/N_Core_1", "Nayuta/N_Core_2" });
+        CharacterID_To_CoreNovelNameList.Add(11, new List<string> { "DLC/H_Core_1", "DLC/H_Core_2", "DLC/H_Core_3" });
+        CharacterID_To_CoreNovelNameList.Add(12, new List<string> { "DLC/D_Core_1", "DLC/D_Core_2", "DLC/D_Core_3" });
     }
 
     private void Awake()
@@ -97,7 +103,7 @@ public class TrainPanel : MonoBehaviour
         nextCharacterBtnPos = nextCharacterBtn.localPosition;
 
         // データをロード
-        characters = ProgressManager.Instance.GetAllCharacter(false);
+        characters = ProgressManager.Instance.GetAllCharacter(false, true);
 
         // ヒロインじゃないキャラを排除
         currentIndex = PlayerPrefs.GetInt("TrainPanelIndex", 0);
@@ -290,7 +296,14 @@ public class TrainPanel : MonoBehaviour
         DOTween.Sequence().AppendInterval(0.6f).AppendCallback(() => 
         {
             AlphaFadeManager.Instance.FadeIn(0.5f);
-            NovelSingletone.Instance.PlayNovel("TrainScene/" + episodeList[characters[currentIndex].hornyEpisode], true, ReturnFromEpisode);
+
+            string novelpath = episodeList[characters[currentIndex].hornyEpisode];
+            // not dlc characters
+            if (!characters[currentIndex].characterData.isDLCCharacter)
+            {
+                novelpath = "TrainScene/" + novelpath;
+            }
+            NovelSingletone.Instance.PlayNovel(novelpath, true, ReturnFromEpisode);
             characters[currentIndex].hornyEpisode++;
         });
     }
@@ -321,7 +334,14 @@ public class TrainPanel : MonoBehaviour
         DOTween.Sequence().AppendInterval(0.6f).AppendCallback(() =>
         {
             AlphaFadeManager.Instance.FadeIn(0.5f);
-            NovelSingletone.Instance.PlayNovel("TrainScene/" + episodeList[characters[currentIndex].corruptionEpisode], true, ReturnFromEpisode);
+
+            string novelpath = episodeList[characters[currentIndex].corruptionEpisode];
+            // not dlc characters
+            if (!characters[currentIndex].characterData.isDLCCharacter)
+            {
+                novelpath = "TrainScene/" + novelpath;
+            }
+            NovelSingletone.Instance.PlayNovel(novelpath, true, ReturnFromEpisode);
             characters[currentIndex].corruptionEpisode++;
         });
 
@@ -359,7 +379,14 @@ public class TrainPanel : MonoBehaviour
         DOTween.Sequence().AppendInterval(0.6f).AppendCallback(() =>
         {
             AlphaFadeManager.Instance.FadeIn(0.5f);
-            NovelSingletone.Instance.PlayNovel("TrainScene/" + episodeList[characters[currentIndex].holyCoreEpisode], true, ReturnFromEpisode);
+
+            string novelpath = episodeList[characters[currentIndex].holyCoreEpisode];
+            // not dlc characters
+            if (!characters[currentIndex].characterData.isDLCCharacter)
+            {
+                novelpath = "TrainScene/" + novelpath;
+            }
+            NovelSingletone.Instance.PlayNovel(novelpath, true, ReturnFromEpisode);
             characters[currentIndex].holyCoreEpisode++;
         });
     }
@@ -523,6 +550,12 @@ public class TrainPanel : MonoBehaviour
             case PlayerCharacerID.Nayuta: // 那由多
                 s = CustomColor.AddColor(LocalizationManager.Localize("Name.Nayuta"), CustomColor.nayuta());
                 return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
+            case PlayerCharacerID.Hisui: // ヒスイ
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Hisui"), CustomColor.hisui());
+                return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
+            case PlayerCharacerID.Daiya: // ダイヤ
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Diamond"), CustomColor.daiya());
+                return LocalizationManager.Localize("System.NewAbilityTraining").Replace("{s}", s);
             default:
                 return string.Empty;
         }
@@ -551,6 +584,12 @@ public class TrainPanel : MonoBehaviour
             case PlayerCharacerID.Nayuta: // 那由多
                 s = CustomColor.AddColor(LocalizationManager.Localize("Name.Nayuta"), CustomColor.nayuta());
                 return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            case PlayerCharacerID.Hisui: // ヒスイ
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Hisui"), CustomColor.hisui());
+                return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
+            case PlayerCharacerID.Daiya: // ダイヤ
+                s = CustomColor.AddColor(LocalizationManager.Localize("Name.Diamond"), CustomColor.daiya());
+                return LocalizationManager.Localize("System.NewBattler").Replace("{s}", s);
             default:
                 return string.Empty;
         }
@@ -578,6 +617,12 @@ public class TrainPanel : MonoBehaviour
                 return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
             case PlayerCharacerID.Nayuta: // 那由多
                 s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.nayuta());
+                return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
+            case PlayerCharacerID.Hisui: // ヒスイ
+                s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.hisui());
+                return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
+            case PlayerCharacerID.Daiya: // ダイヤ
+                s = CustomColor.AddColor(LocalizationManager.Localize(equipment.equipNameID), CustomColor.daiya());
                 return LocalizationManager.Localize("System.NewCoreEquipment").Replace("{s}", s);
             default:
                 return string.Empty;

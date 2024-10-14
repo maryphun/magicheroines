@@ -85,6 +85,7 @@ public static class SaveDataManager
                 PlayerData pd = ConvertSerializableDataToPlayerData(sd.serializablePlayerData);
 
                 string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + (((pd.currentStage-1) / 3) + 1).ToString() + "-" + (((pd.currentStage-1) % 3) + 1).ToString();
+                if (pd.currentDLCStage > 1) slotInfo = (slotIndex + 1).ToString() + "  DLC Chapter " + pd.currentDLCStage;
                 if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
                 comment = sd.dataComment;
                 slotName = slotInfo;

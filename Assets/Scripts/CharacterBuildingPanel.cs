@@ -60,7 +60,7 @@ public class CharacterBuildingPanel : MonoBehaviour
         currentCheckingSlot = 0;
 
         // キャラクター資料を取得して表示する
-        characters = ProgressManager.Instance.GetAllCharacter();
+        characters = ProgressManager.Instance.GetAllCharacter(false, true);
         for (int i = 0; i < characters.Count; i++)
         {
             int index = CharacterIDToIndex(characters[i].characterData.characterID);

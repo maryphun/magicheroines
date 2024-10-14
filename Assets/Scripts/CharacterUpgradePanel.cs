@@ -118,7 +118,7 @@ public class CharacterUpgradePanel : MonoBehaviour
         ProgressManager.Instance.SetMoney(ProgressManager.Instance.GetCurrentMoney() - CalculateLevelUpCost(currentCharacter, currentCharacter.current_level));
 
         // キャラクターデータ更新
-        var data = ProgressManager.Instance.GetAllCharacter(true);
+        var data = ProgressManager.Instance.GetAllCharacter(true, true);
         int index = currentCharacter.characterData.characterID;
 
         data[index].current_level++;
@@ -151,7 +151,7 @@ public class CharacterUpgradePanel : MonoBehaviour
         }
         
         // 再度データをコピー
-        currentCharacter = ProgressManager.Instance.GetAllCharacter(false)[index];
+        currentCharacter = ProgressManager.Instance.GetAllCharacter(false, true)[index];
 
         // 表示データ更新
         InitializeUpgradePanel(currentCharacter);

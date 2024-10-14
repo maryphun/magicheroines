@@ -202,15 +202,23 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 持っている仲間のリストを取得
     /// </summary>
-    public List<Character> GetAllCharacter(bool originalReference = false)
+    public List<Character> GetAllCharacter(bool originalReference = false, bool includeDLCCharacters = false)
     {
         if (originalReference)
         {
-            return playerData.characters;
+            if (includeDLCCharacters)
+            {
+                return playerData.characters;
+            }
+            else
+            {
+                return playerData.characters.Where(x => !x.characterData.isDLCCharacter).ToList();
+            }
         }
         else
         {
             List<Character> characterListCopy = new List<Character>(playerData.characters);
+            characterListCopy = characterListCopy.Where(x => !x.characterData.isDLCCharacter || includeDLCCharacters).ToList();
             return characterListCopy;
         }
     }
@@ -258,9 +266,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// 使える仲間キャラのリストを取得
     /// </summary>
-    public List<Character> GetAllUsableCharacter()
+    public List<Character> GetAllUsableCharacter(bool includeDLCCharacter)
     {
-        List<Character> usableCharacter = playerData.characters.Where(data => data.is_corrupted || !data.characterData.is_heroin).ToList();
+        List<Character> usableCharacter = playerData.characters.Where(data => (data.is_corrupted || !data.characterData.is_heroin) && (includeDLCCharacter || !data.characterData.isDLCCharacter)).ToList();
 
         return usableCharacter;
     }
@@ -656,12 +664,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
 
         PlayerCharacterDefine Second = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/2.TentacleMan");
 
-        PlayerCharacterDefine Third = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/12.Hisui");
-
-        PlayerCharacterDefine Forth = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/13.Daiya");
-
-        AddPlayerCharacter(Third).is_corrupted = true;
-        AddPlayerCharacter(Forth).is_corrupted = true;
+        AddHisui(true);
+        AddDaiya(true);
 
         // フォーメーション編成
         playerData.formationCharacters[0].characterID = First.detail.characterID;
@@ -700,7 +704,28 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
             BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
         }
 
+        // チュートリアル全開放
+        TutorialData tutorial = new TutorialData();
+        tutorial.characterbuildingPanel = true;
+        tutorial.formationPanel = true;
+        tutorial.trainPanel = true;
+        tutorial.worldscene = true;
+        SetTutorialData(tutorial);
+
+        // DLC
         DLCManager.isDLCEnabled = true;
+    }
+
+    public void AddHisui(bool isCorrupted = false)
+    {
+        PlayerCharacterDefine Hisui = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/12.Hisui");
+        AddPlayerCharacter(Hisui).is_corrupted = isCorrupted;
+    }
+
+    public void AddDaiya(bool isCorrupted = false)
+    {
+        PlayerCharacterDefine Daiya = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/13.Daiya");
+        AddPlayerCharacter(Daiya).is_corrupted = isCorrupted;
     }
 #else
     public void DebugModeInitialize() { }

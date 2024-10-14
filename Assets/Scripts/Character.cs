@@ -33,6 +33,7 @@ public struct PlayerCharacter
     // system
     [Header("ƒVƒXƒeƒ€")]
     public int characterID;
+    public bool isDLCCharacter;
 
     // graphic
     [Header("‰æ‘œ")]
@@ -164,4 +165,8 @@ public enum PlayerCharacerID
     Kei = 6,
     Nayuta = 7,
     BattlerTemp = 8,
+    No5 = 9,
+    No72 = 10,
+    Hisui = 11,
+    Daiya = 12,
 }

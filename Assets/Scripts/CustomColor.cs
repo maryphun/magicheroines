@@ -20,6 +20,8 @@ public class CustomColor
     public static Color erena() { return new Color(0.945f, 0.898f, 0.675f); }
     public static Color kei() { return new Color(0.678f, 0.847f, 0.902f); }
     public static Color nayuta() { return new Color(0.545f, 0f, 0f); }
+    public static Color hisui() { return new Color(0f, 0.5f, 0.5f); }
+    public static Color daiya() { return new Color(0.735f, 0.73f, 0.73f); }
     public static Color autobattle() { return new Color(1f, 0.31f, 0/31f); }
 
 

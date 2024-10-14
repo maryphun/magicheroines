@@ -33,6 +33,22 @@ public class HomeSceneUI : MonoBehaviour
         AudioManager.Instance.PlayMusicWithFade("Loop 32 (HomeScene)", 2.0f);
     }
 
+#if DEBUG_MODE
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F11))
+        {
+            Debug.Log("Add Hisui to the party.");
+            ProgressManager.Instance.AddHisui(true);
+        }
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            Debug.Log("Add Daiya to the party.");
+            ProgressManager.Instance.AddDaiya(true);
+        }
+    }
+#endif
+
     public void ToWorldMapScene()
     {
         // SEçƒê∂

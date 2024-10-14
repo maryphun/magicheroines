@@ -21,6 +21,8 @@ public class FormationPanel : MonoBehaviour
     [SerializeField] private FormationSlot[] slots = new FormationSlot[5];
     [SerializeField] private Button[] formationSelectIcon = new Button[8];
     [SerializeField] private FormationTutorial tutorial;
+    [SerializeField] private GameObject DLC_FormationSelectionPanel; // 追加キャラ
+    [SerializeField] private DLCFormationIcon[] DLC_formationSelectIcon = new DLCFormationIcon[2];
 
     [Header("Debug")]
     [SerializeField] private int formationSelectionPanelIndex = 0;  // 編集中のキャラ位置番号
@@ -145,8 +147,8 @@ public class FormationPanel : MonoBehaviour
         FormationSelectionPanel.blocksRaycasts = true;
         FormationSelectionPanel.DOFade(1.0f, formationSelectionPanelAnimationTime);
 
-        var allCharacters = ProgressManager.Instance.GetAllCharacter();
-        var usableCharacters = ProgressManager.Instance.GetAllUsableCharacter(); // 使用できるキャラクター所持数
+        var allCharacters = ProgressManager.Instance.GetAllCharacter(false, false);
+        var usableCharacters = ProgressManager.Instance.GetAllUsableCharacter(false); // 使用できるキャラクター所持数
 
         float totalGap = iconGap * (usableCharacters.Count-1);
         float firstPosition = -totalGap * 0.5f;
@@ -173,6 +175,50 @@ public class FormationPanel : MonoBehaviour
 
                 // キャラ名を表示
                 formationSelectIcon[i].GetComponentInChildren<TMP_Text>().text = allCharacters[i].localizedName;
+            }
+        }
+
+        // DLC追加キャラ
+        if (DLCManager.isDLCEnabled)
+        {
+            allCharacters = ProgressManager.Instance.GetAllCharacter(false, true);
+            usableCharacters = ProgressManager.Instance.GetAllUsableCharacter(true); // 使用できるキャラクター所持数
+
+            if (usableCharacters.Any(x => x.characterData.isDLCCharacter))
+            {
+                DLC_FormationSelectionPanel.SetActive(true);
+                List<Character> dlc_members = usableCharacters.Where(x => x.characterData.isDLCCharacter).ToList();
+
+                // アイコン位置計算
+                totalGap = iconGap * (dlc_members.Count - 1);
+                firstPosition = -totalGap * 0.5f;
+                nextposition = 0f;
+
+                for (int i = 0; i < DLC_formationSelectIcon.Length; i++)
+                {
+                    int targetCharacterID = DLC_formationSelectIcon[i].characterID;
+                    if (!ProgressManager.Instance.HasCharacter(targetCharacterID)) continue; // 持ってない
+
+                    // 持っている
+                    DLC_formationSelectIcon[i].gameObject.SetActive(true);
+
+                    // すでに配置されているか
+                    var targetCharacter = ProgressManager.Instance.GetCharacterByID(targetCharacterID);
+                    bool isAlreadyInFormation = IsCharacterInFormation(targetCharacter);
+                    DLC_formationSelectIcon[i].button.interactable = !isAlreadyInFormation;
+
+                    // ボタン配置
+                    float buttonPosition = firstPosition + nextposition;
+                    nextposition += iconGap;
+                    DLC_formationSelectIcon[i].GetComponent<RectTransform>().localPosition = new Vector3(buttonPosition, 0.0f, 0.0f);
+
+                    // キャラ名を表示
+                    DLC_formationSelectIcon[i].name.text = targetCharacter.localizedName;
+                }
+            }
+            else
+            {
+                DLC_FormationSelectionPanel.SetActive(false);
             }
         }
 
