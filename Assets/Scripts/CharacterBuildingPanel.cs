@@ -184,20 +184,25 @@ public class CharacterBuildingPanel : MonoBehaviour
     /// </summary>
     public void ChangeCharacterSlot(int characterID)
     {
-        int slot = CharacterIDToIndex(characterID);
-        Debug.Log("characterID = " + characterID.ToString() + ", slot = " + slot.ToString());
-        if (characters.Count <= slot) return;
+        if (!ProgressManager.Instance.HasCharacter(characterID, true))
+        {
+            // このキャラはまだ編入されてない
+            Debug.Log("Character not available. CharacterID : " + characterID.ToString());
+            return;
+        }
 
-        if (characters[slot].characterData.is_heroin && !characters[slot].is_corrupted) return; // まだ闇落ちされていないヒロインキャラは確認できない
+        var character = ProgressManager.Instance.GetCharacterByID(characterID);
+
+        if (character.characterData.is_heroin && !character.is_corrupted) return; // まだ闇落ちされていないヒロインキャラは確認できない
 
         // SE 再生
         AudioManager.Instance.PlaySFX("SystemSelect");
 
         characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().DOFade(0.0f, 0.1f);
-        currentCheckingSlot = slot;
+        currentCheckingSlot = CharacterIDToIndex(characterID);
         characterIconSlots[currentCheckingSlot].transform.Find("Selection Highlight").GetComponent<Image>().DOFade(1.0f, 0.1f);
-        characterDataPanel.InitializeCharacterData(characters[currentCheckingSlot]);
-        characterUpgradePanel.InitializeUpgradePanel(characters[currentCheckingSlot]);
+        characterDataPanel.InitializeCharacterData(character);
+        characterUpgradePanel.InitializeUpgradePanel(character);
         characterUpgradePanel.ResetAnimation();
     }
 
