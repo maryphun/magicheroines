@@ -660,6 +660,16 @@ public class TrainPanel : MonoBehaviour
                 ProgressManager.Instance.AddHomeCharacter(nayuta);
                 homeCharacterScript.SetToLastCharacter();
                 return;
+            case 11: // ヒスイ
+                HomeDialogue hisui = Resources.Load<HomeDialogue>("HomeDialogue/Hisui");
+                ProgressManager.Instance.AddHomeCharacter(hisui);
+                homeCharacterScript.SetToLastCharacter();
+                return;
+            case 12: // ダイヤ
+                HomeDialogue daiya = Resources.Load<HomeDialogue>("HomeDialogue/Daiya");
+                ProgressManager.Instance.AddHomeCharacter(daiya);
+                homeCharacterScript.SetToLastCharacter();
+                return;
             default:
                 return;
         }

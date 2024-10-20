@@ -21,6 +21,7 @@ public class HomeDialogue : ScriptableObject
     [SerializeField] public string pathName;
 
     [Header("ÉfÅ[É^")]
+    [SerializeField] public bool isDLCCharacter;
     [SerializeField] public Sprite characterSprite;
     [SerializeField] public List<HomeSceneDialogue> dialogueList;
 }

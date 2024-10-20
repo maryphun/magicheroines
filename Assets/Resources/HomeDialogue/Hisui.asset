@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
+  m_Name: Hisui
+  m_EditorClassIdentifier: 
+  pathName: Hisui
+  isDLCCharacter: 1
+  characterSprite: {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+  dialogueList:
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No72_3-1
+    clip: {fileID: 8300000, guid: f2c6c79d76df5eb4da7cd0dee5685df7, type: 3}
+    sprite: {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No72_3-2
+    clip: {fileID: 8300000, guid: 640bf3de521f62740a8a1e514286cf78, type: 3}
+    sprite: {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No72_3-3
+    clip: {fileID: 8300000, guid: 8368ead028409db4294da03d70b2719d, type: 3}
+    sprite: {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+  - startStage: 0
+    endStage: 99
+    dialogueID: HomeChar.No72_3-4
+    clip: {fileID: 8300000, guid: 8542961fcadaf7143905f1b55181cd2a, type: 3}
+    sprite: {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
