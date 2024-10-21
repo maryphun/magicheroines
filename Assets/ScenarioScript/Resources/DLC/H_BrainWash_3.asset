@@ -293,7 +293,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u3075\u3075\u3063\u2026\u305D\u308C\u3082\u3061\u3087\u3046\u3069\u3044\u3044\u30E1\u30B9\u304C\u4E8C\u5339\u2026\u2026\u3044\u3044\u5831\u544A\u304C\u51FA\u6765\u305D\u3046\u3067\u3059\uFF01\u300D"
       localizationID: Hisui.Fallen3-7
       back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
@@ -381,7 +381,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u62B5\u6297\u3057\u3066\u3082\u7121\u99C4\u3067\u3059\u3088\uFF1F\u3042\u306A\u305F\u9054\u3082\u6226\u95D8\u54E1\u306B\u306A\u308B\u306E\u3067\u3059\uFF01\u300D"
       localizationID: Hisui.Fallen3-9
       back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
@@ -469,7 +469,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u99C4\u76EE\u3067\u3059\u30C3\uFF01\u4E8C\u4EBA\u3068\u3082\u9023\u308C\u3066\u884C\u304D\u307E\u3059\u30C3\uFF01\u300D"
       localizationID: Hisui.Fallen3-11
       back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
@@ -557,7 +557,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u6B8B\u5FF5\u306A\u304C\u3089\u8056\u6838\u6226\u59EB\u306F\u3082\u3046\u3044\u307E\u305B\u3093\u3063\uFF01\u6211\u3005\u306E\u90AA\u9B54\u3092\u3059\u308B\u8005\u306F\u3044\u306A\u3044\u306E\u3067\u3059\u3063\uFF01\u300D"
       localizationID: Hisui.Fallen3-13
       back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
@@ -601,7 +601,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u5927\u4EBA\u3057\u304F\u6226\u95D8\u54E1\u306B\u306A\u308A\u306A\u3055\u3044\u3063\uFF01\u300D"
       localizationID: Hisui.Fallen3-14
       back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
@@ -821,7 +821,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u6355\u307E\u3048\u307E\u3057\u305F\uFF01\u300D"
       localizationID: Hisui.Fallen3-19
       back: {fileID: 21300000, guid: 2bbc564d9d1537944a3252a533b95b77, type: 3}
@@ -909,7 +909,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30AD\u30C3\u3001\u3042\u306A\u305F\u3082\u30D5\u30A9\u30FC\u30EC\u30F3\u8CA1\u56E3\u306E\u6226\u95D8\u54E1\u306B\u306A\u308B\u306E\u3067\u3059\u30C3\uFF01\u300D"
       localizationID: Hisui.Fallen3-21
       back: {fileID: 21300000, guid: 2bbc564d9d1537944a3252a533b95b77, type: 3}
@@ -997,7 +997,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u805E\u304D\u6368\u3066\u306A\u308A\u307E\u305B\u3093\u306D\u3063\uFF01\u300D"
       localizationID: Hisui.Fallen3-23
       back: {fileID: 21300000, guid: 2bbc564d9d1537944a3252a533b95b77, type: 3}
@@ -1085,7 +1085,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u3075\u3046\u3063\u2665\u3001\u306A\u304B\u306A\u304B\u826F\u3044\u30DA\u30CB\u30B9\u3092\u6301\u3063\u3066\u307E\u3059\u306D\u3063\u2665\u6226\u95D8\u54E1\u306B\u306A\u308B\u8CC7\u683C\u306F\u5341\u5206\u3067\u3059\u3063\uFF01\u300D"
       localizationID: Hisui.Fallen3-25
       back: {fileID: 21300000, guid: 4201bc94f9e75f349a4ef555700eb545, type: 3}
@@ -1173,7 +1173,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u6226\u95D8\u54E1\u306B\u6CE3\u304D\u843D\u3068\u3057\u306F\u901A\u7528\u3057\u307E\u305B\u3093\u3088\u3063\u2026\u2665\u300D"
       localizationID: Hisui.Fallen3-27
       back: {fileID: 21300000, guid: 4201bc94f9e75f349a4ef555700eb545, type: 3}
@@ -1261,7 +1261,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30AD\u30C3\u2665\u3001\u3069\u3046\u3067\u3059\u304B\uFF1F\u6226\u95D8\u54E1\u306B\u306A\u308C\u3070\u65B0\u3057\u3044\u5973\u306E\u5B50\u3068\u3084\u308A\u653E\u984C\u3067\u3059\u3088\uFF1F\u300D"
       localizationID: Hisui.Fallen3-29
       back: {fileID: 21300000, guid: d709d1a140b2e9c4cb9a89a38f54868c, type: 3}
@@ -1407,7 +1407,7 @@ MonoBehaviour:
     nodeName: 
     _dialogueList:
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u5F37\u60C5\u3067\u3059\u306D\u2026\u3063\uFF01\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u300D"
       localizationID: Hisui.Fallen3-31
       back: {fileID: 0}
@@ -1583,7 +1583,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30AD\u30C3\u3001\u6B8B\u5FF5\u3067\u3057\u305F\uFF5E\u2665\u8056\u6838\u6226\u59EB\u306F\u7686\u201C\u79C1\u9054\u306B\u201D\u8CA0\u3051\u3061\u3083\u3063\u305F\u306E\u3067\u3063\u2026\u8AB0\u3082\u52A9\u3051\u306B\u306F\u6765\u307E\u305B\u3093\u3088\uFF1F\u300D"
       localizationID: Hisui.Fallen3-35
       back: {fileID: 0}
@@ -1627,7 +1627,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u8AE6\u3081\u3066\u3001\u3055\u3063\u3055\u3068\u5C04\u7CBE\u3057\u306A\u3055\u3044\u3063\uFF01\u300D"
       localizationID: Hisui.Fallen3-36
       back: {fileID: 0}
@@ -1803,7 +1803,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30C3\uFF01\u51FA\u3057\u3061\u3083\u3044\u307E\u3057\u305F\u306D\u3063\u2665\u3053\u308C\u3067\u3042\u306A\u305F\u3082\u6226\u95D8\u54E1\u306E\u4EF2\u9593\u5165\u308A\u3067\u3059\u3063\u2665\u300D"
       localizationID: Hisui.Fallen3-40
       back: {fileID: 21300000, guid: 9018968cb3334854084b39284b32e240, type: 3}
@@ -1847,7 +1847,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30C3\uFF01\u3042\u306A\u305F\u3082\u8CA1\u56E3\u306E\u70BA\u306B\u8EAB\u3092\u6367\u3052\u308B\u306E\u3067\u3059\u3063\uFF01\u300D"
       localizationID: Hisui.Fallen3-41
       back: {fileID: 21300000, guid: 9018968cb3334854084b39284b32e240, type: 3}
@@ -1979,7 +1979,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30C3\uFF01\u4E86\u89E3\u3057\u307E\u3057\u305F\uFF01\u76F4\u3061\u306B\u6355\u7372\u306B\u5411\u304B\u3044\u307E\u3059\uFF01\u300D"
       localizationID: Hisui.Fallen3-44
       back: {fileID: 21300000, guid: 9018968cb3334854084b39284b32e240, type: 3}
@@ -2155,7 +2155,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u3075\u3046\u3063\u2026\u2026\u4ECA\u65E5\u3082\u6CA2\u5C71\u306E\u5E02\u6C11\u3092\u6355\u7372\u3057\u307E\u3057\u305F\u2026)"
       localizationID: Hisui.Fallen3-48
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2199,7 +2199,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u3057\u304B\u3057\u2026\u2026\u3082\u3063\u3068\u8CA1\u56E3\u306E\u70BA\u306B\u50CD\u304B\u306A\u304F\u3066\u306F\u2026\u8EAB\u3082\u5FC3\u3082\u4E0B\u7D1A\u6226\u95D8\u54E1\u3068\u3057\u3066\u6367\u3052\u306A\u304F\u3066\u306F\u2026)"
       localizationID: Hisui.Fallen3-49
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2243,7 +2243,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u2026\u2026\u2026\u2026\u3042\u308C\uFF1F)"
       localizationID: Hisui.Fallen3-50
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2287,7 +2287,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2015\u2015\u2015\u2015\u201C\u79C1\u201D\u2026\u2026\u2026\u306A\u3093\u3067\u2026\u2026\u2026\uFF1F)"
       localizationID: Hisui.Fallen3-51
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2331,7 +2331,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u2026\u2026\u2026\u4F55\u304B\u2026\u2026\u5927\u4E8B\u306A\u3053\u3068\u3092\u5FD8\u308C\u3066\u3044\u308B\u3088\u306A\u2026\u2026\uFF1F)"
       localizationID: Hisui.Fallen3-52
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2375,7 +2375,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u4EFB\u52D9\u4EE5\u5916\u3067\u2026\u2026\u5927\u4E8B\u306A\u4E8B\u2026\u2026\uFF1F)"
       localizationID: Hisui.Fallen3-53
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2419,7 +2419,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u99C4\u76EE\u3067\u3059\u2026\u2026\u6226\u95D8\u54E1\u306B\u306F\u4F59\u8A08\u306A\u601D\u8003\u306F\u7981\u6B62\u3055\u308C\u3066\u3044\u308B\u306E\u3067\u3059\u304B\u3089\uFF01)"
       localizationID: Hisui.Fallen3-54
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2463,7 +2463,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u3067\u3082\u2026\u2026\u2026\u3084\u3063\u3071\u308A\u4F55\u304B\u304C\u5F15\u3063\u304B\u304B\u308B\u6C17\u304C\u2026\u2026\u2026\u2026)"
       localizationID: Hisui.Fallen3-55
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
@@ -2683,7 +2683,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u307E\u305F\u2026\u2026\u3053\u306E\u6D17\u8133\u88C5\u7F6E\u2026\u2026)"
       localizationID: Hisui.Fallen3-60
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -2727,7 +2727,7 @@ MonoBehaviour:
       DialogueEffect: 9
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u2026\u2026\u524D\u3053\u3053\u306B\u7E4B\u304C\u308C\u305F\u6642\u306F\u2026\u2026\u2026\u79C1\u2026\u2026\u306A\u306B\u3057\u3066\u305F\u3063\u3051\u2026\u2026)"
       localizationID: Hisui.Fallen3-61
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -2771,7 +2771,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u3042\u308C\u2026\u2026\u305D\u306E\u3082\u3063\u3068\u524D\u306F\u2026\u2026\u2026\uFF1F)"
       localizationID: Hisui.Fallen3-62
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -2903,7 +2903,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "\u300C\u30AD\u30A3\u30C3\uFF01\uFF1F\u304A\u309B\u304A\u3063\u2665\u304A\u304A\u304A\u3063\uFF5E\uFF5E\u2665\u2665\uFF01\uFF1F\u300D"
       localizationID: Hisui.Fallen3-65
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -2947,7 +2947,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u3042\u3063\u2665\u2026\u2026\u3053\u308C\u3063\u2026\u2026\u307E\u305F\u2026\u2026\u2665)"
       localizationID: Hisui.Fallen3-66
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -2991,7 +2991,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u982D\u306E\u4E2D\u3063\u2026\u2026\u3075\u308F\u3075\u308F\u3057\u3066\u2026\u2026\u4F55\u3082\u2026\u2026\u8003\u3048\u3089\u308C\u306A\u304F\u306A\u3063\u3066\u2026\u2026\u2665)"
       localizationID: Hisui.Fallen3-67
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3079,7 +3079,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u2026\u2026\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u305D\u308C\u3067\u3044\u3044\u3093\u3067\u3059\u2665\u3001\u305D\u3046\uFF01\u79C1\u306F\u2026\u2026\u6226\u95D8\u54E1\u306A\u306E\u3060\u304B\u3089\uFF01)"
       localizationID: Hisui.Fallen3-69
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3123,7 +3123,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u79C1\u306E\u5F79\u5272\u306F\u2026\u2026\u4E0B\u7D1A\u6226\u95D8\u54E1K46\u53F7\u3068\u3057\u3066\u8CA1\u56E3\u306B\u5C3D\u304F\u3059\u4E8B\u2026\u2026\u2665)"
       localizationID: Hisui.Fallen3-70
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3167,7 +3167,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u8CA1\u56E3\u306B\u6804\u5149\u3092\u30C3\uFF01)"
       localizationID: Hisui.Fallen3-71
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3211,7 +3211,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u79C1\u306F\u2026\u2026\u4E0B\u7D1A\u6226\u95D8\u54E1K46\u53F7\u3063\u2026\u2026\u2665\u300D"
       localizationID: Hisui.Fallen3-72
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3255,7 +3255,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01)"
       localizationID: Hisui.Fallen3-73
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3299,7 +3299,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01)"
       localizationID: Hisui.Fallen3-74
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3343,7 +3343,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01)"
       localizationID: Hisui.Fallen3-75
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}
@@ -3387,7 +3387,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Battler
+      Name: Name.Hisui_Battler2
       text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01)"
       localizationID: Hisui.Fallen3-76
       back: {fileID: 21300000, guid: 0535a8753486648429d58c277ba52980, type: 3}

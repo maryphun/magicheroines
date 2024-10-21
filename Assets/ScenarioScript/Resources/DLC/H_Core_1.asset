@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
-  m_Name: D_Horny_1
+  m_Name: H_Core_1
   m_EditorClassIdentifier: 
   _locations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
@@ -29,8 +29,8 @@ MonoBehaviour:
     _dialogueList:
     - open: 0
       Name: 
-      text: "\u8CA1\u56E3\u30A2\u30B8\u30C8\u306B\u3066"
-      localizationID: Daiya.Debauchery1-1
+      text: "K47\u53F7\u304C\u4E0B\u7D1A\u6226\u95D8\u54E1\u3068\u3057\u3066\u4EFB\u52D9\u306B\u5F93\u4E8B\u3059\u308B\u4E2D\u2015\u2015\u2015\u2015"
+      localizationID: Hisui.Core1-1
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 1
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -70,20 +70,20 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3078\u3063\u2665\u3001\u3078\u3063\u2665\u3001\u304A\u547C\u3073\u3067\u3057\u3087\u3046\u304B\u3063\u2665\u3001\u90A3\u7531\u591A\u3055\u307E\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-2
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u2026\u2026\u3053\u3053\u306B\u3044\u307E\u3057\u305F\u304B\u3001K47\u53F7\u3002\u9023\u7D61\u304C\u3042\u308A\u307E\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-2
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 0200000000000000
       charas:
-      - {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
       - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 1}
-      - {r: 0.16078432, g: 0.20784315, b: 0.24705884, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -112,20 +112,20 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u3044\u3044\u5B50\u3067\u3059\u306D\uFF01\u7121\u69D8\u3067\u54C0\u308C\u306A\u30C0\u30A4\u30E4\u3055\u3093\u2665\u300D"
-      localizationID: Daiya.Debauchery1-3
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u306A\u3093\u3067\u3057\u3087\u3046\u304B\uFF1F\u300D"
+      localizationID: Hisui.Core1-3
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 0000000002000000
       charas:
-      - {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
-      - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0.9529412}
+      - {r: 0, g: 0, b: 0, a: 1}
       changeFont: 0
       font: {fileID: 0}
       fontColor: {r: 1, g: 1, b: 1, a: 1}
@@ -154,17 +154,143 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u8CB4\u5973\u3092\u547C\u3073\u51FA\u3057\u305F\u7406\u7531\u306F\u307B\u304B\u3067\u3082\u3042\u308A\u307E\u305B\u3093\u3001\u4ECA\u65E5\u306F\u79C1\u3068\u4E00\u7DD2\u306B\u3054\u4E3B\u4EBA\u69D8\u306B\u3054\u5949\u4ED5\u3092\u3057\u307E\u3059\u3002\u300D"
-      localizationID: Daiya.Debauchery1-4
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u5148\u65E5\u884C\u3063\u305F\u691C\u67FB\u306E\u7D50\u679C\u3001\u3042\u306A\u305F\u306E\u4F53\u5185\u306B\u7570\u5E38\u304C\u78BA\u8A8D\u3055\u308C\u307E\u3057\u305F\u3002\u300D"
+      localizationID: Hisui.Core1-4
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 0000000000000000
       charas:
-      - {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
-      - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u2015\u2015\u2015\u2015\u3048\u3063\u2026\uFF01\u300D"
+      localizationID: Hisui.Core1-5
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000001000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u305D\u3046\u3044\u3046\u308F\u3051\u3067\u3001K46\u53F7\u3042\u306A\u305F\u306F\u5EC3\u68C4\u51E6\u5206\u2015\u2015\u2015\u2015\u300D"
+      localizationID: Hisui.Core1-6
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u8CA1\u56E3\u306E\u70BA\u3067\u3057\u305F\u3089\u559C\u3093\u3067\uFF01\u300D"
+      localizationID: Hisui.Core1-7
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -196,17 +322,17 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3078\u3063\u2665\u3001\u308F\u3075\u3063\u2665\u3001\u3046\u308C\u3057\u3044\u3067\u3059\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-5
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3044\u3048\u3001\u672C\u6765\u306A\u3089\u5EC3\u68C4\u51E6\u5206\u3067\u3057\u305F\u304C\u3001\u3042\u306A\u305F\u306F\u512A\u79C0\u306A\u4E0B\u7D1A\u6226\u95D8\u54E1\u3067\u3057\u305F\u306E\u3067\u3002\u5EC3\u68C4\u3067\u306F\u306A\u304F\u6CBB\u7642\u304C\u884C\u308F\u308C\u308B\u3053\u3068\u306B\u306A\u308A\u307E\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-8
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 0000000000000000
       charas:
-      - {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
-      - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -238,17 +364,17 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u305D\u3046\u3044\u3046\u8A33\u3067\u3001\u624B\u8DB3\u306F\u8FD4\u3057\u3066\u3042\u3052\u307E\u3059\u3002\u3055\u3042\u3001\u4E00\u7DD2\u306B\u3054\u4E3B\u4EBA\u69D8\u306E\u6240\u3078\u884C\u304D\u307E\u3057\u3087\u3046\u2665\u300D"
-      localizationID: Daiya.Debauchery1-6
+      Name: Name.Hisui_Battler2
+      text: "\u300C\uFF01\u3001\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\u8EAB\u306B\u4F59\u308B\u5149\u6804\u3067\u3042\u308A\u307E\u3059\u3063\uFF01\u300D"
+      localizationID: Hisui.Core1-9
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 0000000000000000
       charas:
-      - {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
-      - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -280,17 +406,17 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u308F\u3046\u3063\u2665\u3001\u3054\u4E3B\u4EBA\u69D8\u3063\u2665\u3001\u3054\u5949\u4ED5\u3057\u307E\u3059\u3046\u3063\u2665\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-7
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3053\u308C\u304B\u3089\u7814\u7A76\u30BB\u30F3\u30BF\u30FC\u3078\u884C\u304D\u307E\u3059\u3002\u3064\u3044\u3066\u304D\u306A\u3055\u3044\u3002\u300D"
+      localizationID: Hisui.Core1-10
       back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 0000000000000000
       charas:
-      - {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
-      - {fileID: 21300000, guid: 96cec752d585acc47938fece02b05121, type: 3}
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -322,9 +448,51 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u300D"
+      localizationID: Hisui.Core1-11
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000001000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
       Name: 
-      text: "\u602A\u4EBA\u306E\u5BDD\u5BA4\u306B\u3066"
-      localizationID: Daiya.Debauchery1-8
+      text: "\u8CA1\u56E3\u7814\u7A76\u65BD\u8A2D\u306B\u3066"
+      localizationID: Hisui.Core1-12
       back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
@@ -365,9 +533,9 @@ MonoBehaviour:
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u30D6\u30BF\u306E\u683C\u597D\u3092\u3057\u305F\u30C0\u30A4\u30E4\u3068\u90A3\u7531\u591A\u304C\u602A\u4EBA\u3078\u3068\u5949\u4ED5\u3092\u3057\u3066\u3044\u305F"
-      localizationID: Daiya.Debauchery1-9
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      text: "K46\u53F7\u306F\u8056\u6838\u6226\u59EB\u306E\u683C\u597D\u3068\u306A\u308A\u3001\u30B7\u30FC\u30C4\u306E\u4E0A\u3067\u80A1\u3092\u5E83\u3052\u3066\u3044\u305F"
+      localizationID: Hisui.Core1-13
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
@@ -406,10 +574,10 @@ MonoBehaviour:
       DialogueEffect: 9
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3093\u3061\u3085\u3063\u2665\u3001\u308C\u308D\u304A\u3063\u2665\u3001\u3093\u3063\u2665\u2026\u2026\u300D"
-      localizationID: Daiya.Debauchery1-10
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u306F\u3042\u3063\u2665\u2026\u2026\u306A\u3001\u306A\u3093\u3067\u3059\u304B\u3063\uFF1F\u3053\u308C\u306F\u3063\uFF01\u300D"
+      localizationID: Hisui.Core1-14
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -448,10 +616,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: name.Nayuta_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u3001\u30B8\u30E5\u30EB\u30C3\u2665\u3001\u308C\u308D\u3063\u2665\u2026\u300D"
-      localizationID: Daiya.Debauchery1-11
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3053\u3093\u306A\u5909\u306A\u6070\u597D\u2026\u2026\u6C17\u6301\u3061\u60AA\u3044\u3063\u2026\u2026\uFF01\u300D"
+      localizationID: Hisui.Core1-15
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -490,10 +658,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u3044\u304B\u304C\u3067\u3059\u304B\u3063\u2026\u2026\u3054\u4E3B\u4EBA\u69D8\u3041\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-12
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u2026\u2026\u305D\u308C\u306F\u8056\u6838\u6226\u59EB\u306E\u8863\u88C5\u3067\u3059\u3002\u8CB4\u65B9\u306E\u4F53\u306E\u4E2D\u306B\u6B8B\u3063\u3066\u3044\u305F\u30A8\u30CD\u30EB\u30AE\u30FC\u3092\u767A\u73FE\u3055\u305B\u307E\u3057\u305F\u3002\u300D"
+      localizationID: Hisui.Core1-16
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -532,10 +700,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u79C1\u9054\u306E\u3063\u2665\u2026\u30E1\u30B9\u30D6\u30BF\u3054\u5949\u4ED5\u3063\u2665\u2026\u3069\u3046\u305E\u3054\u582A\u80FD\u304F\u3060\u3055\u3044\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-13
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u306A\u3063\uFF01\uFF1F\u305B\u3001\u8056\u6838\u6226\u59EB\u3063\uFF01\uFF1F\u308F\u3001\u308F\u305F\u3057\u304C\u3063\uFF01\uFF1F\u300D"
+      localizationID: Hisui.Core1-17
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -574,10 +742,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Mutant
-      text: "\u300C\u30B0\u30D5\u30D5\u30C3\u2026\uFF01\u3044\u3044\u305E\u3063\u30E1\u30B9\u30D6\u30BF\u5171\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-14
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3048\u3048\u3001\u6B8B\u5FF5\u3067\u3059\u304C\u2026\u3002\u8CB4\u65B9\u306F\u6226\u95D8\u54E1\u3068\u3057\u3066\u6D17\u8133\u3055\u308C\u308B\u4EE5\u524D\u306F\u8056\u6838\u6226\u59EB\u3067\u3057\u305F\u3002\u300D"
+      localizationID: Hisui.Core1-18
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -616,10 +784,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u307B\u3089\u30C0\u30A4\u30E4\u2026\u3053\u308C\u304B\u3089\u79C1\u9054\u3092\u30CF\u30E1\u3066\u304F\u3060\u3055\u308B\u304A\u3061\u3093\u307D\u69D8\u4F55\u3067\u3059\u304B\u3089\u3063\u2026\u2665\u3082\u3063\u3068\u5165\u5FF5\u306B\u304D\u308C\u3044\u306B\u3057\u306A\u3044\u3068\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-15
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u304D\u3001\u30AD\u30A3\u30FC\u30FC\u30C3\uFF01\uFF01\u305D\u3001\u305D\u3093\u306A\u3063\uFF01\uFF1F\u3001\u3046\u305D\u3067\u3059\u3063\uFF01\uFF1F\u300D"
+      localizationID: Hisui.Core1-19
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -658,10 +826,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3044\u3063\u2026\u2665\u90A3\u7531\u591A\u69D8\u3063\u2026\u2026\u308C\u308D\u3063\u2665\u3001\u308C\u308D\u3063\u2665\u3001\u3061\u3085\u3046\u3046\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-16
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u308F\u305F\u3057\u304C\u3063\uFF1F\u2026\u2026\u3042\u306E\u5FCC\u3080\u3079\u304D\u6575\u306E\u2026\u8056\u6838\u6226\u59EB\u3060\u3063\u305F\u306A\u3093\u3066\u3063\uFF01\uFF1F\u300D"
+      localizationID: Hisui.Core1-20
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -700,10 +868,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3075\u3063\u2665\u3001\u304A\u3058\u3087\u3046\u305A\u3067\u3059\u3088\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-17
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u3084\u306F\u308A\u79C1\u306F\u8CA1\u56E3\u306E\u70BA\u306B\u51E6\u5206\u3055\u308C\u305F\u307B\u3046\u304C\u2026\uFF01\u300D"
+      localizationID: Hisui.Core1-21
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -742,10 +910,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u305D\u308C\u3068\u2026\u2026\u4ECA\u306F\u79C1\u3082\u8CB4\u5973\u3082\u3054\u4E3B\u4EBA\u69D8\u306E\u30E1\u30B9\u30D6\u30BF\u3067\u3059\u2026\u2665\u69D8\u306A\u3069\u3064\u3051\u306A\u304F\u3066\u3044\u3044\u3067\u3059\u3088\u2665\u300D"
-      localizationID: Daiya.Debauchery1-18
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u5FC3\u914D\u3057\u306A\u3044\u3067\u304F\u3060\u3055\u3044\u3002\u6539\u9020\u306B\u3088\u3063\u3066\u8CB4\u65B9\u306E\u8056\u6838\u30A8\u30CD\u30EB\u30AE\u30FC\u306F\u5B8C\u5168\u306B\u6D88\u53BB\u3059\u308B\u3053\u3068\u304C\u53EF\u80FD\u3067\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-22
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -784,10 +952,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u305D\u3001\u305D\u308C\u306F\u2026\u300D"
-      localizationID: Daiya.Debauchery1-19
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u8CA1\u56E3\u306F\u3042\u306A\u305F\u304C\u904E\u53BB\u306B\u8056\u6838\u6226\u59EB\u3060\u3063\u305F\u3053\u3068\u3082\u53D7\u3051\u5165\u308C\u307E\u3059\u3002\u5FE0\u5B9F\u306A\u4E0B\u7D1A\u6226\u95D8\u54E1\u3067\u3042\u308C\u3070\u3044\u3044\u306E\u3067\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-23
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -826,10 +994,52 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u78BA\u304B\u306B\u79C1\u306E\u65B9\u304C\u8CB4\u5973\u3088\u308A\u5727\u5012\u7684\u306B\u968E\u7D1A\u304C\u4E0A\u3067\u3059\u304C\u2026\u3054\u4E3B\u4EBA\u69D8\u306E\u524D\u3067\u306F\u7B49\u3057\u304F\u305F\u3060\u306E\u6027\u51E6\u7406\u5974\u96B7\u3067\u3059\u304B\u3089\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-20
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u304D\u3001\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u300D"
+      localizationID: Hisui.Core1-24
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3067\u306F\u8056\u6838\u3092\u9664\u53BB\u3059\u308B\u51E6\u7F6E\u3092\u884C\u3044\u307E\u3059\u3002\u3059\u3053\u3057\u8F9B\u3044\u304B\u3082\u3057\u308C\u307E\u305B\u3093\u304C\u8010\u3048\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
+      localizationID: Hisui.Core1-25
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -871,7 +1081,7 @@ MonoBehaviour:
       Name: 
       text: 
       localizationID: 
-      back: {fileID: 21300000, guid: 4c0ec23d229818147a666708218238ce, type: 3}
+      back: {fileID: 21300000, guid: 220c017f05f95c046b573cc1c0397978, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -916,7 +1126,7 @@ MonoBehaviour:
     _index: 1
     _nodePosition:
       serializedVersion: 2
-      x: 129
+      x: 154
       y: 0
       width: 64
       height: 97
@@ -924,177 +1134,9 @@ MonoBehaviour:
     nodeName: 
     _dialogueList:
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3057\u3001\u3057\u304B\u3057\u3063\u2026\u79C1\u306E\u3088\u3046\u306A\u72AC\u304C\u90A3\u7531\u591A\u69D8\u3092\u547C\u3073\u6368\u3066\u306B\u3059\u308B\u306A\u3069\u2026\u300D"
-      localizationID: Daiya.Debauchery1-21
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u305D\u3093\u306A\u4E8B\u5168\u304F\u6C17\u306B\u3057\u306A\u3044\u306E\u3067\u3059\u304C\u2026\u3057\u304B\u3057\u3088\u304F\u8003\u3048\u305F\u3089\u30D6\u30BF\u304C\u4EBA\u9593\u306E\u3088\u3046\u306B\u540D\u524D\u3092\u540D\u4E57\u308B\u306E\u3082\u5931\u793C\u3067\u3059\u306D\u2026\u300D"
-      localizationID: Daiya.Debauchery1-22
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3067\u306F\u3053\u3046\u3057\u307E\u3057\u3087\u3046\uFF01\u79C1\u306F\u30E1\u30B9\u30D6\u30BF1\u53F7\u3067\u3001\u3042\u306A\u305F\u306F\u30E1\u30B9\u30D6\u30BF2\u53F7\u3067\u3059\u2665\u300D"
-      localizationID: Daiya.Debauchery1-23
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3053\u308C\u306F\u547D\u4EE4\u3068\u3044\u3046\u4E8B\u3067\u3063\u2026\u2665\u3055\u3042\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\uFF1F\u3054\u4E3B\u4EBA\u69D8\u306B\u3054\u5949\u4ED5\u3057\u307E\u3059\u3088\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-24
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3076\u3001\u30D6\u30D2\u30C3\u2665\u30E1\u30B9\u30D6\u30BF1\u53F7\u69D8\u3063\u2665\uFF01\u79C1\u3082\u3054\u5949\u4ED5\u3044\u305F\u3057\u307E\u3059\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-25
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u3088\u308D\u3057\u304F\u304A\u9858\u3044\u3044\u305F\u3057\u307E\u3059\uFF01\u300D"
+      localizationID: Hisui.Core1-26
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1135,1020 +1177,978 @@ MonoBehaviour:
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u3061\u3085\u308B\u308B\u308B\u3063\u3001\u30BA\u30EA\u30C3\uFF01\u30BA\u30EA\u30C3\uFF01"
-      localizationID: Daiya.Debauchery1-26
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u3044\u304B\u304C\u3067\u3059\u304B\u3063\u2026\u79C1\u306E\u304A\u3063\u3071\u3044\u3063\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-27
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u53EF\u611B\u3044\u3067\u3059\u306D\u30C3\u2665\u3001\u305A\u3044\u3076\u3093\u3068\u5927\u304D\u304F\u306A\u3063\u305F\u3093\u3058\u3083\u306A\u3044\u3067\u3059\u304B\u2665\uFF1F\u300D"
-      localizationID: Daiya.Debauchery1-28
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3044\u3063\u2026\u2665\u3054\u4E3B\u4EBA\u69D8\u306B\u3054\u5949\u4ED5\u3059\u308B\u4E2D\u3067\u3063\u2665\u3001\u3053\u3093\u306A\u306B\u5927\u304D\u304F\u306A\u3063\u3061\u3083\u3044\u307E\u3057\u305F\u3041\u2665\u300D"
-      localizationID: Daiya.Debauchery1-29
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u5049\u3044\u3067\u3059\u306D\u3063\u2665\u3001\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\uFF1F\u307E\u3042\u79C1\u3082\u3054\u4E3B\u4EBA\u69D8\u306B\u53EF\u611B\u304C\u3089\u308C\u305F\u304A\u304B\u3052\u3067\u3053\u3093\u306A\u3067\u3059\u304C\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-30
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u305D\u308C\u306A\u306E\u306B\u3063\u2665\u3001\u79C1\u9054\u306E\u304A\u3063\u3071\u3044\u304B\u3089\u51FA\u3066\u304D\u3061\u3083\u3046\u3054\u4E3B\u4EBA\u69D8\u306E\u5DE8\u5927\u304A\u3061\u3093\u307D\u3063\u2665\u3001\u304B\u3063\u3053\u3088\u3059\u304E\u307E\u3059\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-31
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u305D\u3046\u3067\u3059\u306D\u3063\u2026\u2665\u304A\u3061\u3093\u307D\u69D8\u306E\u8108\u52D5\u304C\u5FC3\u81D3\u306B\u5C4A\u3044\u3066\u3063\u2665\u3001\u79C1\u3082\u3063\u2665\u3001\u52DD\u624B\u306B\u767A\u60C5\u3057\u3066\u3057\u307E\u3044\u307E\u3059\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-32
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u305D\u3057\u3066\u4E8C\u5339\u306E\u30E1\u30B9\u30D6\u30BF\u306F\u602A\u4EBA\u306E\u30C1\u30F3\u30DD\u3092\u553E\u6DB2\u3067\u307E\u3093\u3079\u3093\u306A\u304F\u6FE1\u3089\u3057\u3066\u3044\u304F"
-      localizationID: Daiya.Debauchery1-33
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u3001\u3061\u3085\u308B\u308B\u308B\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-34
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3061\u3085\u308B\u3063\u2665\u306F\u3042\u3063\u2665\u3001\u3082\u3046\u5341\u5206\u306B\u6FE1\u308C\u3066\u2026\u5927\u304D\u304F\u306A\u3063\u3066\u307E\u3059\u3063\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-35
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u3001\u3054\u4E3B\u4EBA\u69D8\u306E\u2026\u304A\u3061\u3093\u307D\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-36
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Mutant
-      text: "\u300C\u30B0\u30D5\u30D5\u30C3\u2026\u3082\u3046\u3044\u3044\u3060\u308D\u3046\u30E1\u30B9\u30D6\u30BF\u5171\u2026\u3001\u9806\u756A\u306B\u30CF\u30E1\u3066\u3084\u308B\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-37
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3063\u2665\u30D6\u30D2\u30C3\uFF01\u3054\u4E3B\u4EBA\u69D8\u3041\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-38
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u3001\u304A\u9858\u3044\u3044\u305F\u3057\u307E\u3059\u3046\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-39
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u2026\u2026\u30B4\u30AF\u30C3\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-40
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
+      text: "\u30D6\u30FC\u30FC\u30FC\u30FC\u30F3\u30C3\u2026\u2026\u30D3\u30B7\u30E5\u30A6\u30A6\u30A6\u30C3\u30C3\uFF01\uFF01\uFF01"
+      localizationID: Hisui.Core1-27
+      back: {fileID: 21300000, guid: 8f33f4ab10c310340b51136af783eb6b, type: 3}
       howBack: 2
-      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3044\u3064\u3082\u306F\u3054\u4E3B\u4EBA\u69D8\u306B\u4F7F\u308F\u308C\u308B\u3060\u3051\u3067\u3057\u305F\u304C\u3063\u2665\u2026\u4ECA\u65E5\u306F\u79C1\u304C\u3054\u5949\u4ED5\u3057\u307E\u3059\u3046\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-41
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u3001\u305D\u3093\u306A\u306B\u304A\u3061\u3093\u307D\u69D8\u306B\u5FC5\u6B7B\u306B\u306A\u3063\u3066\u2665\u2026\u304B\u308F\u3044\u3044\u3067\u3059\u306D\u2665\u300D"
-      localizationID: Daiya.Debauchery1-42
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u3054\u4E3B\u4EBA\u69D8\u306E\u304A\u3061\u3093\u307D\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u306F\u3042\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-43
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u3082\u6211\u6162\u3067\u304D\u306A\u3044\u3088\u3046\u3067\u3059\u306E\u3067\u2026\u2665\u3055\u3001\u3054\u4E3B\u4EBA\u69D8\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-44
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Mutant
-      text: "\u300C\u30B0\u30D5\u30D5\u30C3\u2026\u3044\u3044\u3060\u308D\u3046\u3002\u633F\u5165\u3092\u8A31\u53EF\u3057\u3066\u3084\u308B\u300D"
-      localizationID: Daiya.Debauchery1-45
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u306F\u3042\u3063\u2665\u30D6\u30D2\u30C3\u2665\uFF01\u3001\u304A\u3061\u3093\u307D\u3063\u2665\u3001\u5165\u308C\u3055\u305B\u3066\u3044\u305F\u3060\u304D\u307E\u3059\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-46
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3042\u3063\u2665\u2026\u2026\u79C1\u306E\u304A\u8179\u306E\u3053\u3093\u306A\u6240\u307E\u3067\u3063\u2026\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-47
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u305D\u3057\u3066\u30C0\u30A4\u30E4\u306F\u8170\u3092\u4E0A\u3052\u3066\u30C1\u30F3\u30DD\u306B\u7167\u6E96\u3092\u5408\u308F\u305B\u308B\u3068\u2015\u2015\u2015\u2015"
-      localizationID: Daiya.Debauchery1-48
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3044\u3001\u30A4\u30AD\u307E\u3059\u3063\u2665\u3001\u3076\u3072\u3063\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-49
-      back: {fileID: 21300000, guid: a68e0dfc22b8dcd4cb7b4433ea4ee5e2, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u30BA\u30C3\u30D7\u30A6\u30A6\u30A6\u30C3\uFF01\uFF01\uFF01\uFF01"
-      localizationID: Daiya.Debauchery1-50
-      back: {fileID: 21300000, guid: e49614ff077132b48be92dc6a6f0776c, type: 3}
-      howBack: 2
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeColor: {r: 1, g: 0.07075471, b: 0.91043204, a: 1}
       backFadeSpeed: 0.5
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3072\u3046\u3063\u3045\uFF01\uFF1F\u3042\u309B\u3042\u3042\u3042\u3042\u3063\u3063\u2665\uFF01\uFF1F\u300D"
+      localizationID: Hisui.Core1-28
+      back: {fileID: 21300000, guid: 8f33f4ab10c310340b51136af783eb6b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3053\u308C\u3063\u3001\u2026\u2665\u30EC\u30FC\u30B6\u30FC\u304C\u3063\u2665\u2026\u2026\u304A\u306A\u304B\u306B\u3063\u2026\u2026\u3072\u3046\u3046\u3046\u3046\u3063\u3063\u2665\uFF01\uFF1F\u300D"
+      localizationID: Hisui.Core1-29
+      back: {fileID: 21300000, guid: 8f33f4ab10c310340b51136af783eb6b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u591A\u5C11\u82E6\u75DB\u3092\u4F34\u3046\u304B\u3082\u3057\u308C\u307E\u305B\u3093\u304C\u2026\u307E\u3042\u3001\u6211\u6162\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u300D"
+      localizationID: Hisui.Core1-30
+      back: {fileID: 21300000, guid: 8f33f4ab10c310340b51136af783eb6b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u304D\u3001\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u306F\u3044\u3063\u2665\uFF01\u8CA1\u56E3\u306E\u70BA\u306B\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Core1-31
+      back: {fileID: 21300000, guid: 8f33f4ab10c310340b51136af783eb6b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u306F\u3042\u3063\u2665\u3001\u305D\u3046\u306F\u8A00\u3044\u307E\u3057\u305F\u3051\u3069\u2026\u3063\u2665\uFF01)"
+      localizationID: Hisui.Core1-32
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u304A\u8179\u304C\u2026\u2026\u71B1\u3044\u3063\u2026\u2026\u3067\u3059\u3063\u2026\u2665)"
+      localizationID: Hisui.Core1-33
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u4F53\u4E2D\u304B\u3089\u4F55\u304B\u304C\u304A\u8179\u306B\u96C6\u307E\u3063\u3066\u304D\u3066\u3044\u308B\u611F\u3058\u2026\u2026\u3063\u2665)"
+      localizationID: Hisui.Core1-34
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30AE\u30E5\u30EB\u30EB\u30EB\u30EB\u30C3\uFF01\uFF01\u30AE\u30E5\u30EB\uFF01"
+      localizationID: Hisui.Core1-35
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u7A81\u7136K46\u53F7\u306E\u304A\u8179\u304C\u97F3\u3092\u7ACB\u3066\u308B"
+      localizationID: Hisui.Core1-36
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3072\u3046\u3063\u2665\uFF01\uFF1F\u3001\u3082\u3001\u7533\u3057\u8A33\u3054\u3056\u3044\u307E\u305B\u3093\u3063\uFF01\u300D"
+      localizationID: Hisui.Core1-37
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3044\u3048\u3001\u9069\u5207\u306A\u53CD\u5FDC\u3067\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-38
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3053\u306E\u6CBB\u7642\u3067\u306F\u8056\u6838\u3092\u51DD\u96C6\u3055\u305B\u3066\u6392\u51FA\u3059\u308B\u306E\u304C\u76EE\u7684\u3067\u3059\u3002\u8EAB\u3092\u4EFB\u305B\u306A\u3055\u3044\u3002\u300D"
+      localizationID: Hisui.Core1-39
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u3001\u304D\u3001\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u300D"
+      localizationID: Hisui.Core1-40
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u3046\u3046\u3045\u2665\u3001\u304A\u306A\u304B\u3063\u2665\u82E6\u3057\u3044\u2026\u2665\uFF01\u3067\u3082\u3063\u2026\u2665\u304C\u307E\u3093\u3057\u306A\u304D\u3083\u3063\u2026\u2665)"
+      localizationID: Hisui.Core1-41
+      back: {fileID: 21300000, guid: f277ce0e45856ac459450fa44a29fde2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30AE\u30E5\u30EB\u30EB\u30EB\u30EB\u30C3\uFF01\uFF01\u30AE\u30E5\u30EB\uFF01\u30D6\u30DD\u30C3\uFF01"
+      localizationID: Hisui.Core1-42
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 0.3066038, b: 0.97118664, a: 1}
+      backFadeSpeed: 0.5
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3072\u3046\u3046\u3046\u3045\u3063\u2665\uFF01\uFF1F\u300D"
+      localizationID: Hisui.Core1-43
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u304A\u309B\u3063\u2665\u2026\u304A\u309B\u304A\u3063\u2665\u2026\u3053\u308C\u3063\u2026\u2665\u3069\u3046\u306A\u3063\u3066\u3047\u2026\u3063\u2665\u300D"
+      localizationID: Hisui.Core1-44
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u304A\u3057\u308A\u3063\u2665\u2026\u2026\u3042\u3064\u3044\u3044\u3044\u3043\u3063\u2665\u2026\u2026\uFF01\uFF01\u300D"
+      localizationID: Hisui.Core1-45
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u56FA\u5F62\u5316\u3057\u305F\u8056\u6838\u304C\u51FA\u3066\u304D\u307E\u3057\u305F\u306D\u2026\u60F3\u5B9A\u901A\u308A\u306E\u53CD\u5FDC\u3067\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-46
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u306F\u3042\u3063\u2665\u2026\u3093\u3045\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Core1-47
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u304A\u5C3B\u304C\u3063\u2026\u2026\u3042\u3064\u304F\u3066\u3063\u2026\u2026\u51FA\u3057\u305F\u3044\u3063\u2026\u2665\uFF01\u6211\u6162\u3067\u304D\u306A\u3044\u30C3\u2665\uFF01\uFF01)"
+      localizationID: Hisui.Core1-48
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300CK46\u53F7\u3001\u8056\u6838\u306E\u6392\u51FA\u3092\u8A31\u53EF\u3057\u307E\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-49
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u304D\u3001\u304D\u3043\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u4E86\u89E3\u2026\u3057\u307E\u3057\u305F\u3063\uFF01\u300D"
+      localizationID: Hisui.Core1-50
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
       howCharas: 0000000000000000
       charas:
       - {fileID: 0}
@@ -2187,7 +2187,7 @@ MonoBehaviour:
       Name: 
       text: 
       localizationID: 
-      back: {fileID: 21300000, guid: e49614ff077132b48be92dc6a6f0776c, type: 3}
+      back: {fileID: 21300000, guid: 012776c4216bba6428ec004ef1a980ac, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -2232,17 +2232,17 @@ MonoBehaviour:
     _index: 2
     _nodePosition:
       serializedVersion: 2
-      x: 267
+      x: 300
       y: 0
       width: 64
       height: 97
-    _nextParagraphIndex: 3
+    _nextParagraphIndex: -1
     nodeName: 
     _dialogueList:
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u304A\u309B\u304A\u304A\u304A\u304A\u304A\u3063\u2665\u2665\uFF01\uFF1F\u300D"
-      localizationID: Daiya.Debauchery1-51
+      Name: Name.Hisui_Battler2
+      text: "(\u3053\u308C\u304C\u51FA\u3066\u884C\u3051\u3070\u3063\u2665\u2026\u79C1\u306F\u3063\u3001\u5B8C\u5168\u306B\u6226\u95D8\u54E1\u306B\u306A\u308C\u308B\u3063\u2665\uFF01)"
+      localizationID: Hisui.Core1-51
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2282,1283 +2282,9 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u307B\u309B\u304A\u3063\u2665\u3001\u30D6\u30D2\u30C3\u3001\u306F\u3001\u5165\u308A\u307E\u3057\u305F\u3041\u30C3\u2665\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-52
-      back: {fileID: 21300000, guid: b82887e4c0bb1aa4597b9e4600203f7e, type: 3}
-      howBack: 1
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u304A\u3063\u2665\uFF01\u307B\u309B\u304A\u3063\u2665\u3001\u304A\u3063\u2665\u2026\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-53
-      back: {fileID: 21300000, guid: b82887e4c0bb1aa4597b9e4600203f7e, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u304A\u3084\u304A\u3084\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u2026\u2665\u307E\u3055\u304B\u5165\u308C\u305F\u3060\u3051\u3067\u30A4\u30C3\u3066\u307E\u305B\u3093\u304B\uFF1F\u300D"
-      localizationID: Daiya.Debauchery1-54
-      back: {fileID: 21300000, guid: b82887e4c0bb1aa4597b9e4600203f7e, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3072\u3046\u3045\u2665\u3001\u30D6\u30D2\u30C3\u2665\u3001\u306F\u3001\u306F\u3044\u3063\u2665\u3001\u3054\u4E3B\u4EBA\u69D8\u306E\u304A\u3061\u3093\u307D\u51C4\u3059\u304E\u3066\u3063\u2665\u2026\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-55
-      back: {fileID: 21300000, guid: b82887e4c0bb1aa4597b9e4600203f7e, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u7533\u3057\u8A33\u3042\u308A\u307E\u305B\u3093\u3063\u2665\u3001\u3054\u4E3B\u4EBA\u69D8\u3042\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-56
-      back: {fileID: 21300000, guid: cc2b0005c30fcb747a9f94221b0c3607, type: 3}
-      howBack: 1
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u5168\u304F\u2026\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u306F\u79C1\u306E\u6B21\u304F\u3089\u3044\u306B\u306F\u5F37\u3044\u306F\u305A\u306A\u3093\u3067\u3059\u304C\u306D\u2026\u2665\u307E\u3042\u3001\u3054\u4E3B\u4EBA\u69D8\u306E\u304A\u3061\u3093\u307D\u306E\u524D\u3067\u306F\u3057\u3087\u3046\u304C\u306A\u3044\u3067\u3059\u306D\u2665\u300D"
-      localizationID: Daiya.Debauchery1-57
-      back: {fileID: 21300000, guid: cc2b0005c30fcb747a9f94221b0c3607, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u307E\u3042\u3044\u3064\u3082\u3054\u4E3B\u4EBA\u69D8\u306B\u62B1\u3063\u3053\u3055\u308C\u3066\u30AA\u30CA\u30DB\u6271\u3044\u3067\u3057\u305F\u304B\u3089\u306D\u2665\u3067\u3082\u8CB4\u5973\u306F\u305D\u3053\u305D\u3053\u5F37\u3044\u3093\u3067\u3059\u304B\u3089\u9811\u5F35\u3089\u306A\u3044\u3068\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-58
-      back: {fileID: 21300000, guid: cc2b0005c30fcb747a9f94221b0c3607, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u306F\u3044\u3063\u2665\u3001\u30E1\u30B9\u30D6\u30BF2\u53F7\u3063\u2665\u3001\u3054\u4E3B\u4EBA\u69D8\u306E\u304A\u3061\u3093\u307D\u3092\u6C17\u6301\u3061\u826F\u304F\u3059\u308B\u305F\u3081\u306B\u3063\u2665\u3001\u9811\u5F35\u308A\u307E\u3059\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-59
-      back: {fileID: 21300000, guid: cc2b0005c30fcb747a9f94221b0c3607, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3046\u3046\u3063\u2665\u3001\u304A\u309B\u3063\u2665\u2026\u304A\u309B\u304A\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-60
-      back: {fileID: 21300000, guid: 117971b6a9f1f4642a91b6d6ec755e52, type: 3}
-      howBack: 1
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u3071\u3061\u3085\u3093\uFF01\u3071\u3061\u3085\u3093\uFF01\u3071\u3061\u3085\u3093\u3063\u2665\uFF01\uFF01"
-      localizationID: Daiya.Debauchery1-61
-      back: {fileID: 21300000, guid: 117971b6a9f1f4642a91b6d6ec755e52, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u307B\u304A\u3063\u2665\uFF01\u304A\u309B\u304A\u3063\u2665\uFF01\u3044\u3001\u3044\u304B\u304C\u3067\u3059\u304B\u3063\u2026\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-62
-      back: {fileID: 21300000, guid: 117971b6a9f1f4642a91b6d6ec755e52, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u30D8\u30B3\u30D8\u30B3\u3059\u308B\u305F\u3073\u306B\u304A\u8179\u304C\u304A\u3061\u3093\u3061\u3093\u306E\u5F62\u306B\u81A8\u3089\u3093\u3067\u307E\u3059\u3088\u3063\u2665\u2665\u300D"
-      localizationID: Daiya.Debauchery1-63
-      back: {fileID: 21300000, guid: 117971b6a9f1f4642a91b6d6ec755e52, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u304A\u309B\u3063\u2665\uFF01\u304A\u309B\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-64
-      back: {fileID: 21300000, guid: 117971b6a9f1f4642a91b6d6ec755e52, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u306F\u304A\u30C1\u30F3\u30DD\u306B\u5FC5\u6B7B\u3067\u3059\u306D\u3063\u2665\u2026\u79C1\u3082\u3063\u2026\u2026\u300D"
-      localizationID: Daiya.Debauchery1-65
-      back: {fileID: 21300000, guid: 117971b6a9f1f4642a91b6d6ec755e52, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u305D\u3046\u8A00\u3046\u3068\u90A3\u7531\u591A\u306F\u602A\u4EBA\u306E\u80F8\u306B\u81EA\u5206\u306E\u80A1\u9593\u3092\u3053\u3059\u308A\u3064\u3051\u59CB\u3081\u308B"
-      localizationID: Daiya.Debauchery1-66
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 1
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u3048\u3078\u3078\u3063\u2665\u2026\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u304C\u9811\u5F35\u3063\u3066\u308B\u306E\u3067\u3063\u2665\u2665\u30E1\u30B9\u30D6\u30BF1\u53F7\u3082\u304A\u3046\u3048\u3093\u3057\u307E\u3059\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-67
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u306C\u308A\u3063\u2665\u306C\u308A\u3085\u3063\u2665\u306C\u308A\u3085\u3063\u2665\uFF01"
-      localizationID: Daiya.Debauchery1-68
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3042\u3042\u3093\u3063\u2665\u3054\u4E3B\u4EBA\u69D8\u306E\u539A\u3044\u80F8\u677F\u3063\u2665\u2665\u3001\u3054\u3064\u3054\u3064\u3057\u3066\u304B\u3063\u3053\u3044\u3044\u3067\u3059\u3046\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-69
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3042\u3093\u3063\u2665\u3001\u30E1\u30B9\u30D6\u30BF1\u53F7\u3082\u3063\u2665\u3001\u65E9\u304F\u304A\u3061\u3093\u3061\u3093\u6B32\u3057\u304F\u306A\u3063\u3066\u304D\u307E\u3057\u305F\u3063\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-70
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u307B\u3089\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u2665\u3001\u79C1\u304C\u5F85\u3063\u3066\u3044\u308B\u3093\u3067\u3059\u304B\u3089\u65E9\u304F\u4EA4\u4EE3\u3057\u3066\u304F\u3060\u3055\u3044\u3063\u2026\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-71
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u307B\u309B\u304A\u3063\u2665\u3001\u304A\u309B\u304A\u3063\u2665\uFF01\u307E\u3001\u307E\u3063\u3066\u3063\u2665\u3001\u305B\u3081\u3066\u3054\u4E3B\u4EBA\u69D8\u3092\u5C04\u7CBE\u3055\u305B\u3066\u304B\u3089\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-72
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u3057\u3087\u3046\u304C\u306A\u3044\u3067\u3059\u306D\u3063\u2665\u3001\u3044\u3044\u3067\u3059\u3088\u3063\u2665\u3001\u3057\u3063\u304B\u308A\u304A\u30DE\u30F3\u30B3\u3067\u3054\u5949\u4ED5\u3057\u3066\u304F\u3060\u3055\u3044\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-73
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u307B\u309B\u304A\u3063\u2665\u3001\u30D6\u30D2\u30C3\u2665\u3001\u306F\u3044\u3063\u2665\u3001\u304A\u309B\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-74
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u3071\u3061\u3085\u3093\uFF01\u3071\u3061\u3085\u3093\uFF01\u30BA\u30EB\u30EB\u30C3\u2665\uFF01\uFF01\uFF01"
-      localizationID: Daiya.Debauchery1-75
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: 
-      localizationID: 
-      back: {fileID: 21300000, guid: 7bdc4808ad0457949bf70374a84a7c9a, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    detailOpen: 0
-    _next: 0
-    _nextChoiceIndexes: ffffffff
-  - _enabled: 1
-    _index: 3
-    _nodePosition:
-      serializedVersion: 2
-      x: 403
-      y: 0
-      width: 64
-      height: 97
-    _nextParagraphIndex: 4
-    nodeName: 
-    _dialogueList:
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u30D6\u30D2\u30C3\u2665\u3001\u304A\u309B\u304A\u304A\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-76
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u307B\u3089\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u3001\u9811\u5F35\u308C\u9811\u5F35\u308C\u2665\u3082\u3063\u3068\u304A\u30C1\u30F3\u30DD\u3054\u3057\u3054\u3057\u3057\u307E\u3057\u3087\u3046\u2665\u300D"
-      localizationID: Daiya.Debauchery1-77
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u304A\u3063\u2665\uFF01\u306F\u3072\u3063\u2665\u304A\u3061\u3093\u307D\u69D8\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-78
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u304A\u3063\u2665\uFF01\uFF1F\u304A\u3063\u3001\u3054\u4E3B\u4EBA\u69D8\u3063\u2665\u3001\u3061\u3087\u3063\u3068\u6211\u6162\u6C41\u51FA\u3066\u307E\u3059\u3046\u3063\u2665\uFF01\uFF1F\u300D"
-      localizationID: Daiya.Debauchery1-79
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u5049\u3044\u3067\u3059\u3088\u3063\u2665\u2665\u3055\u3042\u3001\u6700\u5F8C\u307E\u3067\u9811\u5F35\u3063\u3066\u3054\u5949\u4ED5\u3057\u307E\u3057\u3087\u3046\u3063\u2665\u2665\u300D"
-      localizationID: Daiya.Debauchery1-80
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u304A\u3063\u2665\uFF01\u307B\u309B\u304A\u3063\u2665\u3001\u307B\u309B\u304A\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-81
+      Name: Name.Hisui_Battler2
+      text: "(\u3060\u304B\u3089\u3063\uFF01\u51FA\u3066\u884C\u3063\u3066\u3063\u2026\u79C1\u306E\u4E2D\u306E\u8056\u6838\u6226\u59EB\u3063\u2665\uFF01)"
+      localizationID: Hisui.Core1-52
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3599,92 +2325,8 @@ MonoBehaviour:
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u30BA\u30DC\u30C3\uFF01\u30BA\u30DC\u30C3\uFF01\u30BA\u30DC\u30C3\uFF01"
-      localizationID: Daiya.Debauchery1-82
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u79C1\u306F\u30E1\u30B9\u30D6\u30BF\u306E\u96D1\u9B5A\u3067\u3059\u304C\u3041\u3063\u2665\u2665\u3054\u4E3B\u4EBA\u69D8\u306B\u306F\u3063\u2665\u3001\u5168\u3066\u306E\u529B\u3092\u4F7F\u3063\u3066\u3054\u5949\u4ED5\u3057\u307E\u3059\u3046\u3063\u2665\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-83
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u304A\u304A\u3063\u2665\uFF01\u304A\u309B\u304A\u3063\u2665\uFF01\u304A\u309B\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-84
+      text: "\u305D\u3057\u3066K46\u53F7\u306F\u304A\u5C3B\u306B\u529B\u3092\u8FBC\u3081\u308B\u3068\u2015\u2015\u2015\u2015"
+      localizationID: Hisui.Core1-53
       back: {fileID: 0}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3725,9 +2367,51 @@ MonoBehaviour:
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u30C9\u30AF\u30F3\u30C3\uFF01\uFF01"
-      localizationID: Daiya.Debauchery1-85
-      back: {fileID: 0}
+      text: "\u30E0\u30EA\u30E5\u30C3\uFF01\u30B0\u30EA\u30E5\u30EA\u30E5\u30C3\uFF01"
+      localizationID: Hisui.Core1-54
+      back: {fileID: 21300000, guid: 83dfaa6906e26f148b4e152bae6cd67f, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.5
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u307B\u309B\u304A\u3063\u2665\u3001\u8056\u6838\u3063\u2665\u3001\u51FA\u3066\u307E\u3059\u30C3\uFF01\u308F\u305F\u3057\u306E\u3063\u2665\u300D"
+      localizationID: Hisui.Core1-55
+      back: {fileID: 21300000, guid: 83dfaa6906e26f148b4e152bae6cd67f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3766,10 +2450,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u3063\u2665\uFF01\u4ECA\u3063\u2665\u3061\u3087\u3063\u3068\u51FA\u307E\u3057\u305F\u30C3\u2665\u3054\u4E3B\u4EBA\u69D8\u306E\u304A\u3063\u2665\u2665\u7CBE\u6DB2\u300D"
-      localizationID: Daiya.Debauchery1-86
-      back: {fileID: 0}
+      Name: Name.Hisui_Battler2
+      text: "(\u304A\u309B\u3063\u2665\u3001\u79C1\u306E\u4E2D\u306E\u3063\u2665\u3001\u30A8\u30CD\u30EB\u30AE\u30FC\u3063\u2665\u3001\u3069\u3093\u3069\u3093\u6D88\u3048\u3066\u308B\u306E\u304C\u5206\u304B\u308B\u3063\u2026\u3051\u3069\u3063\u2665)"
+      localizationID: Hisui.Core1-56
+      back: {fileID: 21300000, guid: 83dfaa6906e26f148b4e152bae6cd67f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3808,10 +2492,52 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u51FA\u3057\u3066\u304F\u3089\u3055\u3044\u3063\u2665\u2665\u3054\u4E3B\u4EBA\u69D8\u306E\u7CBE\u6DB2\u30C3\u2665\u3076\u3072\u3044\u3043\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-87
-      back: {fileID: 0}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3067\u3066\u3063\u3066\u3047\u3063\u2665\uFF01\u79C1\u306E\u4E2D\u306E\u3063\u2026\uFF01\u8056\u6838\u6226\u59EB\u306A\u3093\u3066\u3047\u3063\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Core1-57
+      back: {fileID: 21300000, guid: 83dfaa6906e26f148b4e152bae6cd67f, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u79C1\u306F\u8CA1\u56E3\u306B\u5FE0\u8AA0\u3092\u8A93\u3063\u305F\u4E0B\u7D1A\u6226\u95D8\u54E1\u3063\u2665\u3001\u8056\u6838\u30A8\u30CD\u30EB\u30AE\u30FC\u306A\u3093\u3066\u5FC5\u8981\u306A\u3044\u3043\u3063\u2665\uFF01\uFF01\u300D"
+      localizationID: Hisui.Core1-58
+      back: {fileID: 21300000, guid: 83dfaa6906e26f148b4e152bae6cd67f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3851,9 +2577,9 @@ MonoBehaviour:
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u30C9\u30AF\u30C9\u30AF\u30C9\u30AF\u30C3\uFF01\u30D3\u30E5\u30EB\u30EB\u30EB\u30C3\u30EB\u30EB\u30EB\u30EB\u30EB\u30C3\uFF01\uFF01\uFF01"
-      localizationID: Daiya.Debauchery1-88
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      text: "\u30D6\u30D4\u30C3\u2665\u3001\u30D6\u30DD\u30F3\u30C3\uFF01"
+      localizationID: Hisui.Core1-59
+      back: {fileID: 21300000, guid: ad49f79f7e9d8ac44bbb43d7dc486296, type: 3}
       howBack: 2
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3892,10 +2618,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u307B\u309B\u304A\u3063\u2665\u3001\u304A\u309B\u304A\u304A\u3063\uFF5E\uFF5E\uFF5E\uFF01\u2665\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-89
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u307B\u304A\u3063\u2026\u2665\u3001\u304A\u309B\u3063\u2026\u2665\u304A\u309B\u304A\u3063\u2026\u2665\u300D"
+      localizationID: Hisui.Core1-60
+      back: {fileID: 21300000, guid: ad49f79f7e9d8ac44bbb43d7dc486296, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3934,10 +2660,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u3076\u3072\u3044\u3043\u3063\uFF5E\uFF5E\u3063\u2665\u2665\u7CBE\u6DB2\u3063\u2665\u3001\u51FA\u3066\u307E\u3059\u3063\u2665\u2665\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-90
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u8056\u6838\u6B8B\u5B58\u91CF0.2\uFF05\u2026\u307B\u307C\u6392\u51FA\u3057\u304D\u308A\u307E\u3057\u305F\u306D\u3002\u300D"
+      localizationID: Hisui.Core1-61
+      back: {fileID: 21300000, guid: ad49f79f7e9d8ac44bbb43d7dc486296, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3976,10 +2702,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u30A2\u30CF\u30CF\u30C3\u2665\u3001\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u306E\u935B\u3048\u305F\u304A\u8179\u304C\u98A8\u8239\u307F\u305F\u3044\u3067\u3059\u3088\u3063\u2665\u2665\u300D"
-      localizationID: Daiya.Debauchery1-91
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u307B\u309B\u304A\u3063\u2665\u3001\u304D\u3001\u304D\u3043\u2015\u2015\u2015\u2015\u3063\uFF01\u300D"
+      localizationID: Hisui.Core1-62
+      back: {fileID: 21300000, guid: ad49f79f7e9d8ac44bbb43d7dc486296, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4018,94 +2744,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u304A\u3063\u2665\uFF01\u304A\u309B\u304A\u3063\u2665\uFF01\u30A4\u30B0\u30C3\u2665\u3076\u3072\u3044\u3043\u3063\u3063\u2665\u2665\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-92
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u30C9\u30D0\u30C3\uFF01\uFF01\u30D3\u30E5\u30EB\u30EB\u30EB\u30C3\u30EB\u30C3\uFF01"
-      localizationID: Daiya.Debauchery1-93
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u307B\u309B\u304A\u3063\u2665\uFF01\uFF1F\u7CBE\u6DB2\u3063\u2665\u51FA\u904E\u304E\u3063\u2665\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-94
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u304A\u309B\u3063\u2665\u3001\u3042\u3001\u3042\u308C\u3063\u2026\u3053\u308C\u3063\u2026\u2026\u2665\u3001\u3042\u3042\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Core1-63
+      back: {fileID: 21300000, guid: ad49f79f7e9d8ac44bbb43d7dc486296, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4145,9 +2787,51 @@ MonoBehaviour:
       DialogueEffectStrength: 0
     - open: 0
       Name: 
-      text: "\u7D50\u5408\u90E8\u304B\u3089\u5927\u91CF\u306E\u7CBE\u6DB2\u304C\u6EDD\u306E\u3088\u3046\u306B\u9006\u6D41\u3059\u308B"
-      localizationID: Daiya.Debauchery1-95
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      text: "K46\u53F7\u306E\u5909\u8EAB\u8863\u88C5\u304C\u5149\u3068\u5171\u306B\u6D88\u3048\u3001\u6226\u95D8\u54E1\u306E\u670D\u304C\u73FE\u308C\u308B"
+      localizationID: Hisui.Core1-64
+      back: {fileID: 21300000, guid: 60ddf569b1631634aa166419751595cf, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3075\u3080\u3002\u3053\u308C\u3067\u5B8C\u5168\u306B\u3042\u306A\u305F\u306E\u4E2D\u306E\u8056\u6838\u6226\u59EB\u306E\u529B\u306F\u6D88\u3048\u307E\u3057\u305F\u3002\u300D"
+      localizationID: Hisui.Core1-65
+      back: {fileID: 21300000, guid: 60ddf569b1631634aa166419751595cf, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4186,10 +2870,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u305D\u3093\u306A\u306B\u305F\u304F\u3055\u3093\u3063\u2026\u2026\u2665\u3046\u3089\u3084\u307E\u3057\u3044\u3067\u3059\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-96
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3053\u308C\u3067\u6674\u308C\u3066\u3042\u306A\u305F\u306F\u8EAB\u4F53\u306E\u5965\u5E95\u307E\u3067\u4E0B\u7D1A\u6226\u95D8\u54E1\u3067\u3059\u3002\u300D"
+      localizationID: Hisui.Core1-66
+      back: {fileID: 21300000, guid: 60ddf569b1631634aa166419751595cf, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4228,10 +2912,52 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u304A\u309B\u304A\u3063\u2665\uFF01\u304A\u309B\u3063\uFF5E\uFF5E\uFF5E\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-97
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3063\u3001\u308F\u305F\u3057\u3063\u2026\u3053\u308C\u3067\u672C\u5F53\u306B\u4E0B\u7D1A\u6226\u95D8\u54E1\u306B\u2026\u2026\u2665\u300D"
+      localizationID: Hisui.Core1-67
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3057\u305F\uFF01\u300D"
+      localizationID: Hisui.Core1-68
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4270,10 +2996,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30A4\u304D\u307E\u3057\u305F\u3063\u2665\uFF01\u30A4\u30AF\u30C3\uFF01\u2665\u3001\u3054\u3057\u3085\u3058\u3093\u3055\u307E\u3042\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-98
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u6539\u3081\u3066\u3001\u4E0B\u7D1A\u6226\u95D8\u54E1K46\u53F7\u3067\u3059\uFF01\u300D"
+      localizationID: Hisui.Core1-69
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4312,10 +3038,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u307B\u309B\u304A\u3063\u2665\u2026\uFF01\u3076\u3072\u3044\u3043\u3063\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-99
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u8CA1\u56E3\u306B\u5FE0\u8AA0\u3092\uFF01\u4E16\u754C\u306B\u652F\u914D\u3068\u6050\u6016\u3092\uFF01\u300D"
+      localizationID: Hisui.Core1-70
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4354,10 +3080,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u5049\u3044\u3067\u3059\u3063\u2026\u2026\u2665\u30D6\u30D2\u30C3\u2665\u3001\u79C1\u3082\u3063\u2026\u304C\u307E\u3093\u3067\u304D\u306A\u3044\u3067\u3059\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-100
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
+      Name: Name.Rikka_Corrupted
+      text: "\u300C\u3075\u3080\u3001\u3044\u3044\u3067\u3057\u3087\u3046\u3002K46\u53F7\u3053\u308C\u304B\u3089\u3082\u8CA1\u56E3\u306B\u5C3D\u304F\u3057\u306A\u3055\u3044\u3002\u300D"
+      localizationID: Hisui.Core1-71
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4396,66 +3122,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: 
-      text: 
-      localizationID: 
-      back: {fileID: 21300000, guid: d85a7380b59a3db47a8c5487874c2939, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    detailOpen: 0
-    _next: 0
-    _nextChoiceIndexes: ffffffff
-  - _enabled: 1
-    _index: 4
-    _nodePosition:
-      serializedVersion: 2
-      x: 541
-      y: 0
-      width: 64
-      height: 97
-    _nextParagraphIndex: -1
-    nodeName: 
-    _dialogueList:
-    - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u307B\u309B\u304A\u3063\uFF5E\uFF5E\u2665\u304A\u309B\u3063\u2665\u300D"
-      localizationID: Daiya.Debauchery1-101
-      back: {fileID: 0}
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u300D"
+      localizationID: Hisui.Core1-72
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4494,10 +3164,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3075\u3075\u3063\u2665\u2026\u2026\u3055\u3042\u3001\u30E1\u30B9\u30D6\u30BF2\u53F7\u3061\u3083\u3093\u2665\u3054\u5949\u4ED5\u306F\u307E\u3060\u59CB\u307E\u3063\u305F\u3070\u304B\u308A\u3067\u3059\u3088\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-102
-      back: {fileID: 0}
+      Name: Name.Hisui_Battler2
+      text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\u79C1\u306F\u3053\u308C\u3067\u5B8C\u5168\u306BK46\u53F7\uFF01)"
+      localizationID: Hisui.Core1-73
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4536,10 +3206,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3054\u4E3B\u4EBA\u69D8\u304C\u6E80\u8DB3\u3059\u308B\u307E\u3067\u306B\u306F\u307E\u306010\u56DE\u306F\u5C04\u7CBE\u3055\u305B\u306A\u304D\u3083\u3067\u3059\u304B\u3089\u2026\u2665\u300D"
-      localizationID: Daiya.Debauchery1-103
-      back: {fileID: 0}
+      Name: Name.Hisui_Battler2
+      text: "(\u4E0B\u7D1A\u6226\u95D8\u54E1\u3068\u3057\u3066\u3001\u597D\u307F\u306E\u3059\u3079\u3066\u3092\u6367\u3052\u307E\u3059\uFF01\uFF01)"
+      localizationID: Hisui.Core1-74
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4578,10 +3248,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Nayuta_Corrupted
-      text: "\u300C\u3055\u3042\u3063\u2026\u2665\u305D\u306E\u305F\u3081\u306B\u8CB4\u5973\u306B\u306F\u8056\u6838\u6226\u59EB\u306E\u529B\u304C\u6B8B\u3063\u3066\u3044\u308B\u306E\u3067\u3059\u304B\u3089\u2026\u2665\u4E8C\u4EBA\u3067\u6E80\u8DB3\u3055\u305B\u308B\u307E\u3067\u9811\u5F35\u308A\u307E\u3057\u3087\u3046\u2665\u300D"
-      localizationID: Daiya.Debauchery1-104
-      back: {fileID: 0}
+      Name: Name.Hisui_Battler2
+      text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01)"
+      localizationID: Hisui.Core1-75
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4620,10 +3290,10 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30D6\u30D2\u30C3\u2665\u3001\u3076\u3072\u3044\u3043\u3063\u2665\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-105
-      back: {fileID: 0}
+      Name: Name.Hisui_Battler2
+      text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01)"
+      localizationID: Hisui.Core1-76
+      back: {fileID: 21300000, guid: fb73b9cd20d021f4f944b3b7b04c187f, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4662,12 +3332,12 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Diamond_Corrupted
-      text: "\u300C\u30E1\u30B9\u30D6\u30BF2\u53F7\u3063\u2665\u2665\u2026\u3054\u4E3B\u4EBA\u69D8\u306E\u30DA\u30C3\u30C8\u3068\u3057\u3066\u304C\u3093\u3070\u308A\u307E\u3059\u3046\u3063\u2665\uFF01\uFF01\u300D"
-      localizationID: Daiya.Debauchery1-106
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      Name: Name.Hisui_Battler2
+      text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01)"
+      localizationID: Hisui.Core1-77
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
       howCharas: 0000000000000000
       charas:
@@ -4701,139 +3371,13 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 0000000000000000
       charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u2015\u2015\u2015\u2015\u2015\u2015\u2015\u2015"
-      localizationID: Daiya.Debauchery1-107
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u2015\u2015\u2015\u2015"
-      localizationID: Daiya.Debauchery1-108
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
-      DialogueEffectStrength: 0
-    - open: 0
-      Name: 
-      text: "\u30FC"
-      localizationID: Daiya.Debauchery1-109
-      back: {fileID: 0}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
-      backFadeSpeed: 1
-      howCharas: 0000000000000000
-      charas:
-      - {fileID: 0}
-      - {fileID: 0}
-      charaFadeColor:
-      - {r: 0, g: 0, b: 0, a: 0}
-      - {r: 0, g: 0, b: 0, a: 0}
-      changeFont: 0
-      font: {fileID: 0}
-      fontColor: {r: 1, g: 1, b: 1, a: 1}
-      fontSize: 30
-      changeNameFont: 0
-      nameFont: {fileID: 0}
-      nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
-      BGMLoop: 0
-      BGMCount: 1
-      BGMSecond: 20
-      BGMFadeTime: 3
-      BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
-      SECount: 1
-      SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
-      backEffect: 0
-      backEffectStrength: 0
-      charaEffects: 0000000000000000
-      charaEffectStrength: 0000000000000000
-      DialogueEffect: 0
+      DialogueEffect: 1
       DialogueEffectStrength: 0
     - open: 0
       Name: 
       text: 
       localizationID: 
-      back: {fileID: 0}
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4876,7 +3420,7 @@ MonoBehaviour:
     _nextChoiceIndexes: ffffffff
   _choiceList: []
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: -504, y: 320, z: 0}
+  graphPosition: {x: -281, y: 318, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}

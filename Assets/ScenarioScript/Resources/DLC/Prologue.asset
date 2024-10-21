@@ -76,7 +76,7 @@ MonoBehaviour:
       Name: 
       text: "\u6C34\u69FD\u306E\u4E2D\u306B\u3001\u4E00\u4EBA\u306E\u5C11\u5973\u304C\u6A5F\u68B0\u306B\u7E4B\u304C\u308C\u3066\u3044\u305F\u3002"
       localizationID: Dialog.DLC-P-2
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-3
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -164,7 +164,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\u2026\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-4
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -208,7 +208,7 @@ MonoBehaviour:
       Name: Name.CloneBattler
       text: "\u300C\u672C\u65E5\u306E\u7D4C\u904E\u3002\u6D17\u8133\u6DF1\u5EA636\uFF05\u2026\u3042\u307E\u308A\u9032\u884C\u3057\u3066\u3044\u307E\u305B\u3093\u306D\u3002\u300D"
       localizationID: Dialog.DLC-P-5
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-6
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
       Name: Name.CloneBattler
       text: "\u300C\u89E3\u6790\u3067\u306F\u5927\u3057\u3066\u5F37\u3044\u8056\u6838\u30A8\u30CD\u30EB\u30AE\u30FC\u3092\u6301\u3063\u305F\u500B\u4F53\u3067\u306F\u306A\u304B\u3063\u305F\u306E\u3067\u3059\u304C\u2026\u300D"
       localizationID: Dialog.DLC-P-7
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -340,7 +340,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-8
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -384,7 +384,7 @@ MonoBehaviour:
       Name: Name.CloneBattler
       text: "\u300C\u6D17\u8133\u306B\u5BFE\u3059\u308B\u8010\u6027\u304C\u3042\u308B\u306E\u304B\u3082\u2026\uFF1F\u307E\u305F\u6280\u8853\u5E79\u90E8\u306E\u30B1\u30A4\u3055\u3093\u306B\u5831\u544A\u3059\u308B\u5FC5\u8981\u304C\u3042\u308A\u305D\u3046\u3067\u3059\u306D\u3002\u300D"
       localizationID: Dialog.DLC-P-9
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -428,7 +428,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\u2026\u3063\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-10
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -472,7 +472,7 @@ MonoBehaviour:
       Name: Name.CloneBattler
       text: "\u300C\u5F15\u304D\u7D9A\u304D\u7D4C\u904E\u89B3\u5BDF\u2026\u2026\u306A\u306B\u3082\u306A\u3051\u308C\u3070\u8056\u6838\u6392\u6CC4\u306E\u5F8C\u3001\u82D7\u5E8A\u5DE5\u5834\u3078\u8F38\u9001\u3057\u307E\u3057\u3087\u3046\u3002\u300D"
       localizationID: Dialog.DLC-P-11
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-12
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -560,7 +560,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\u2026\u8AB0\u304B\u2026\u2026\u52A9\u3051\u2026\u2026\u2026\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-13
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -604,7 +604,7 @@ MonoBehaviour:
       Name: ???
       text: "\uFF08\u2026\u2026\u2026\u2026\u2026\uFF09"
       localizationID: Dialog.DLC-P-14
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -2216,7 +2216,7 @@ MonoBehaviour:
       Name: ???
       text: "(\u2026\u2026\u2026\u2026\u2026\uFF01)"
       localizationID: Dialog.DLC-P-49
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 3
@@ -2260,7 +2260,7 @@ MonoBehaviour:
       Name: ???
       text: "(\u306A\u3093\u306E\u97F3\u2026\u2026\u2026\u2026\u2026\uFF1F)"
       localizationID: Dialog.DLC-P-50
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -2304,7 +2304,7 @@ MonoBehaviour:
       Name: ???
       text: "(\u4F55\u304B\u975E\u5E38\u4E8B\u614B\u304C\u2015\u2015\u2015\u2015\uFF01\uFF01\uFF01)"
       localizationID: Dialog.DLC-P-51
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -2348,7 +2348,7 @@ MonoBehaviour:
       Name: 
       text: "\u30AC\u30C3\u30B7\u30E3\u30A2\u30A2\u30A2\u30A2\u30F3\u30C3\u30C3\uFF01"
       localizationID: Dialog.DLC-P-52
-      back: {fileID: 21300000, guid: 63bbfe4b776027442821166410ea8a52, type: 3}
+      back: {fileID: 21300000, guid: 00a2aa76eb5e55348a28dfaa9814fb6e, type: 3}
       howBack: 2
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 0.5
@@ -3242,9 +3242,9 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u306F\u3042\u3063\u3001\u306F\u3042\u3063\u3001\u306F\u3042\u3063\u2026\u300D"
       localizationID: Dialog.DLC-P-71
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
-      howBack: 0
-      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
       howCharas: 000000000200000000000000
       charas:
@@ -3286,7 +3286,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u3075\u3046\u3001\u3053\u3053\u307E\u3067\u6765\u308C\u3070\u4E00\u65E6\u9003\u3052\u5207\u3063\u305F\u3060\u308D\u3046\u3002\u300D"
       localizationID: Dialog.DLC-P-72
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3330,7 +3330,7 @@ MonoBehaviour:
       Name: 
       text: "\u4E8C\u4EBA\u306E\u8056\u6838\u6226\u59EB\u306F\u8CA1\u56E3\u306E\u8FFD\u8DE1\u3092\u632F\u308A\u5207\u308A\u3001\u591C\u306E\u95C7\u306B\u7D1B\u308C\u3066\u8DEF\u5730\u88CF\u306B\u8EAB\u3092\u96A0\u3057\u3066\u3044\u305F"
       localizationID: Dialog.DLC-P-73
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3374,7 +3374,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u305F\u3001\u52A9\u3051\u3066\u3044\u305F\u3060\u304D\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3057\u305F\u3002\u3048\u3048\u3068\u2026\u79C1\u306F\u30D2\u30B9\u30A4\u2026\u897F\u5712\u5BFA\u30D2\u30B9\u30A4\u3067\u3059\u3002\u8CB4\u5973\u306F\u2026\uFF1F\u300D"
       localizationID: Dialog.DLC-P-74
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3418,7 +3418,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u2026\u2026\u3002\u300D"
       localizationID: Dialog.DLC-P-75
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3462,7 +3462,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u2026\u79C1\u306F\u3053\u308C\u304B\u3089\u8CA1\u56E3\u306E\u672C\u62E0\u5730\u3092\u5947\u8972\u3057\u3001\u5E79\u90E8\u5171\u3092\u6697\u6BBA\u3059\u308B\u3002\u300D"
       localizationID: Dialog.DLC-P-76
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3506,7 +3506,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u3048\u3063\uFF01\uFF1F\u306A\u3001\u4F55\u3092\uFF1F\u300D"
       localizationID: Dialog.DLC-P-77
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3550,7 +3550,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u4ECA\u8CA1\u56E3\u306F\u6211\u3005\u3092\u63A2\u3059\u305F\u3081\u306B\u591A\u5C11\u672C\u4F53\u306E\u8B66\u5099\u306F\u624B\u8584\u306B\u306A\u3063\u3066\u3044\u308B\u306F\u305A\u3060\u3002\u300D"
       localizationID: Dialog.DLC-P-78
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3594,7 +3594,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u305D\u3093\u306A\u3001\u3044\u304F\u3089\u8CB4\u5973\u3067\u3082\u4ECA\u306F\u2026\uFF01\u300D"
       localizationID: Dialog.DLC-P-79
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3638,9 +3638,9 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u79C1\u306F\u8056\u6838\u6226\u59EB\u306E\u6B63\u7FA9\u3092\u57F7\u884C\u3059\u308B\u3002\u8CB4\u69D8\u306F\u81EA\u5206\u306E\u8EAB\u3092\u96A0\u3059\u4E8B\u306B\u96C6\u4E2D\u3057\u308D\u3002\u300D"
       localizationID: Dialog.DLC-P-80
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 2
-      backFadeColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+      backFadeColor: {r: 0.4481132, g: 0.74914235, b: 1, a: 1}
       backFadeSpeed: 1
       howCharas: 010000000000000000000000
       charas:
@@ -3682,7 +3682,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u305D\u3001\u305D\u308C\u306A\u3089\u79C1\u3082\u8056\u6838\u6226\u59EB\u3067\u3059\uFF01\u4E00\u7DD2\u306B\u6226\u3044\u307E\u3059\u2015\u2015\u2015\u300D"
       localizationID: Dialog.DLC-P-81
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3726,7 +3726,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u5148\u307B\u3069\u8CB4\u69D8\u306E\u6226\u95D8\u3092\u898B\u3066\u3044\u305F\u304C\u3001\u306F\u3063\u304D\u308A\u8A00\u3063\u3066\u529B\u4E0D\u8DB3\u3060\u3002\u300D"
       localizationID: Dialog.DLC-P-82
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3770,7 +3770,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u305B\u3044\u305C\u3044\u30AF\u30ED\u30FC\u30F3\u51712\uFF5E3\u5339\u3092\u76F8\u624B\u306B\u3059\u308B\u306E\u304C\u95A2\u306E\u5C71\u3060\u308D\u3046\u2026\u306F\u3063\u304D\u308A\u8A00\u3063\u3066\u8DB3\u624B\u307E\u3068\u3044\u3060\u3002\u300D"
       localizationID: Dialog.DLC-P-83
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3814,7 +3814,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u3055\u3089\u3070\u3060\u3001\u904B\u304C\u826F\u3051\u308C\u3070\u307E\u305F\u4F1A\u3046\u4E8B\u3082\u3042\u308B\u3060\u308D\u3046\u3002\u5E78\u904B\u3092\u7948\u308B\u3002\u300D"
       localizationID: Dialog.DLC-P-84
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3858,7 +3858,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u2015\u2015\u2015\u2015\u3063\uFF01\u300D"
       localizationID: Dialog.DLC-P-85
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3902,7 +3902,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u2015\u2015\u2015\u2015\u5F85\u3063\u3066\u304F\u3060\u3055\u3044\uFF01\uFF01\uFF01\u300D"
       localizationID: Dialog.DLC-P-86
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3946,7 +3946,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u79C1\u3082\u8056\u6838\u6226\u59EB\u3067\u3059\uFF01\u3053\u306E\u307E\u307E\u6575\u306B\u3084\u3089\u308C\u3063\u3071\u306A\u3057\u3067\u306F\u3044\u3089\u308C\u307E\u305B\u3093\uFF01\u300D"
       localizationID: Dialog.DLC-P-87
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -3990,7 +3990,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u79C1\u306F\u8056\u6708\u751F\u5F92\u4F1A\u3067\u66F8\u8A18\u3092\u3084\u3063\u3066\u3044\u307E\u3057\u305F\u2026\u5974\u3089\u306E\u60C5\u5831\u3082\u6301\u3063\u3066\u3044\u307E\u3059\u3057\u2026\u3082\u3063\u3068\u53EF\u80FD\u6027\u306E\u3042\u308B\u4F5C\u6226\u3082\u7ACB\u3066\u3089\u308C\u307E\u3059\uFF01\u300D"
       localizationID: Dialog.DLC-P-88
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4034,7 +4034,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u305D\u308C\u306B\u2026\u3042\u305D\u3053\u306B\u306F\u30A8\u30EC\u30CA\u5148\u8F29\u304C\u3044\u3066\u2026\u7D76\u5BFE\u53D6\u308A\u623B\u3057\u305F\u3044\u3093\u3067\u3059\uFF01\u300D"
       localizationID: Dialog.DLC-P-89
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4078,7 +4078,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u3067\u3059\u304B\u3089\uFF01\u304A\u9858\u3044\u3067\u3059\u3001\u79C1\u306E\u8A71\u3092\u805E\u3044\u3066\u304F\u3060\u3055\u3044\uFF01\u300D"
       localizationID: Dialog.DLC-P-90
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4122,7 +4122,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u2026\u2026\u2026\u3002\u300D"
       localizationID: Dialog.DLC-P-91
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4166,7 +4166,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u306A\u308B\u307B\u3069\u3002\u300D"
       localizationID: Dialog.DLC-P-92
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4210,7 +4210,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u2026\u2026\u2026\u79C1\u306F\u30A2\u30CA\u30B9\u30BF\u30B7\u30A2\u30FB\u30DA\u30C8\u30ED\u30FB\u30C0\u30A4\u30E4\u30E2\u30F3\u30C9\u3002\u2026\u30C0\u30A4\u30E4\u3067\u3044\u3044\u3002\u300D"
       localizationID: Dialog.DLC-P-93
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4254,7 +4254,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u2026\u2026\uFF01\u6539\u3081\u307E\u3057\u3066\u30D2\u30B9\u30A4\u3067\u3059\uFF01\u300D"
       localizationID: Dialog.DLC-P-94
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4298,7 +4298,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u30D2\u30B9\u30A4\u304B\u3001\u3088\u308D\u3057\u304F\u983C\u3080\u3002\u3075\u3046\u2026\u4ECA\u65E5\u306E\u7A81\u5165\u306F\u7121\u3057\u306B\u3059\u308B\u3002\u300D"
       localizationID: Dialog.DLC-P-95
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4342,7 +4342,7 @@ MonoBehaviour:
       Name: Name.Diamond
       text: "\u300C\u2026\u805E\u304B\u305B\u3066\u304F\u308C\u3001\u304A\u524D\u306B\u3069\u3093\u306A\u4F5C\u6226\u304C\u3042\u308B\u306E\u304B\u2026\u2026\u3063\u2015\u2015\u2015\u2015\u3002\u300D"
       localizationID: Dialog.DLC-P-96
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4386,7 +4386,7 @@ MonoBehaviour:
       Name: 
       text: "\u305D\u306E\u77AC\u9593\u30C0\u30A4\u30E4\u306E\u4F53\u304C\u3075\u3089\u3064\u304D\u5012\u308C\u305D\u3046\u306B\u306A\u308B\u3002"
       localizationID: Dialog.DLC-P-97
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4430,7 +4430,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\uFF01\u3001\u3060\u3001\u99C4\u76EE\u3058\u3083\u306A\u3044\u3067\u3059\u304B\uFF01\uFF1F\u307E\u305A\u306F\u4F11\u307F\u307E\u3057\u3087\u3046\uFF01\u2015\u2015\u2015\u2015\u300D"
       localizationID: Dialog.DLC-P-98
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4474,7 +4474,7 @@ MonoBehaviour:
       Name: 
       text: 
       localizationID: 
-      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      back: {fileID: 21300000, guid: de0d3fb73af999f4b91f895b9745e6bd, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -4531,7 +4531,7 @@ MonoBehaviour:
     text: "\u300C\u2026\u2026\u3067\u306F\u751F\u7523\u5E79\u90E8\u30A2\u30AD\u30DB\u3001\u8CA1\u52D9\u5E79\u90E8\u30A8\u30EC\u30CA\u3001\u8ECD\u4E8B\u5E79\u90E8\u30CA\u30E6\u30BF\u3001\u6280\u8853\u5E79\u90E8\u30B1\u30A4\u3001\u305D\u308C\u305E\u308C\u5831\u544A\u3092\u3002\u300D"
     localizeID: Dialog.DLC-P-18
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: -400, y: 240, z: 0}
+  graphPosition: {x: 102, y: 311, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
