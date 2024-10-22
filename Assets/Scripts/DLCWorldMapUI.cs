@@ -9,7 +9,7 @@ using Assets.SimpleLocalization.Scripts;
 public class DLCWorldMapUI : MonoBehaviour
 {
     [Header("Setting")]
-    [SerializeField] private string BGM = "Specification";
+    [SerializeField] private string BGM = "Town 1";
 
     [Header("References")]
     [SerializeField] private StageHandler stagehandler;
@@ -72,6 +72,8 @@ public class DLCWorldMapUI : MonoBehaviour
 
     public void NextStory()
     {
+        if (!CheckCondition()) return;
+
         const float animationTime = 1.0f;
 
         DLCManager.isEnterDLCStage = true;
@@ -96,5 +98,20 @@ public class DLCWorldMapUI : MonoBehaviour
     private string GetChapterName(int progress)
     {
         return LocalizationManager.Localize("DLCStage-" + progress);
+    }
+
+    private bool CheckCondition()
+    {
+        // 条件が満たされていない?
+        if (ProgressManager.Instance.GetCurrentDLCStageProgress() > 1) // 2キャラまでしかフォーメーション編成できない
+        {
+            if (ProgressManager.Instance.GetCharacterNumberInFormationParty() >= 3)
+            {
+                NovelSingletone.Instance.PlayNovel("DLC/FormationCondition", true);
+                return false;
+            }
+        }
+
+        return true;
     }
 }

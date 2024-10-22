@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
+  m_Name: K46
+  m_EditorClassIdentifier: 
+  pathName: K46
+  isDLCCharacter: 1
+  characterSprite: {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+  dialogueList:
+  - startStage: 0
+    endStage: 8
+    dialogueID: HomeChar.sentouin46_DLC_1-1
+    clip: {fileID: 8300000, guid: 922a4e5b35abe7046bef84c8fcc38f1c, type: 3}
+    sprite: {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+  - startStage: 0
+    endStage: 8
+    dialogueID: HomeChar.sentouin46_DLC_1-2
+    clip: {fileID: 8300000, guid: 3e989411104caa842995c0474f4ad22e, type: 3}
+    sprite: {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}

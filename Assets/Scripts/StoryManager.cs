@@ -52,8 +52,8 @@ public class StoryManager : MonoBehaviour
 
                 case 2:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.AddEnemy("SeikakuSenki 1");
+                        BattleSetup.AddEnemy("SeikakuSenki 2");
                         BattleSetup.SetBattleBGM("BattleTutorial");
                         BattleSetup.SetReward(350, 25);
                         StartCoroutine(SceneTransition("Battle", 0));

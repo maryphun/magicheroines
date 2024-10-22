@@ -198,6 +198,7 @@ MonoBehaviour:
   stageIconSpacing: 350
   arrowOffsetY: 50
   startingStage: 0
+  isDLCWorld: 0
   rect: {fileID: 14723159}
   stageArrow: {fileID: 1174071698}
   checkedIcon: {fileID: 1548815778}
@@ -6336,6 +6337,7 @@ MonoBehaviour:
   stagehandler: {fileID: 14723160}
   chapterName: {fileID: 1127643734}
   startButton: {fileID: 1189037866}
+  dlcButton: {fileID: 0}
 --- !u!1 &1737923943
 GameObject:
   m_ObjectHideFlags: 0

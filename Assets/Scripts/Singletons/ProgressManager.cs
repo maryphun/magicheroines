@@ -378,13 +378,32 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     }
 
     /// <summary>
-    /// 出征パーティー取得
+    /// 出征パーティー設定
     /// </summary>
     public void SetFormationParty(FormationSlotData[] characters)
     {
         playerData.formationCharacters = characters;
     }
-    
+
+
+    /// <summary>
+    /// 出征パーティー取得
+    /// </summary>
+    public int GetCharacterNumberInFormationParty()
+    {
+        int count = 0;
+
+        for (int i = 0; i < playerData.formationCharacters.Length; i++)
+        {
+            if (playerData.formationCharacters[i].isFilled)
+            {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
     /// <summary>
     /// 持っているアイテムのリストを取得
     /// </summary>

@@ -21,7 +21,8 @@ public class StageHandler : MonoBehaviour
 
     private void Start()
     {
-        if (ProgressManager.Instance.IsGameEnded()) return;
+        if (ProgressManager.Instance.IsGameEnded() && !isDLCWorld) return;
+        if (ProgressManager.Instance.IsDLCEnded() && isDLCWorld) return;
         Init();
     }
 
