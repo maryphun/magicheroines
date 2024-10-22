@@ -203,7 +203,7 @@ public class HomeCharacter : MonoBehaviour
     {
         int currentStage = ProgressManager.Instance.GetCurrentStageProgress();
 
-        if (dialogues[currentCharacterIndex].isDLCCharacter) ProgressManager.Instance.GetCurrentDLCStageProgress();
+        if (dialogues[currentCharacterIndex].isDLCCharacter) currentStage = ProgressManager.Instance.GetCurrentDLCStageProgress();
 
         // •\Ž¦‚Å‚«‚éƒZƒŠƒt‚ðŽæ“¾
         int randomIndex;

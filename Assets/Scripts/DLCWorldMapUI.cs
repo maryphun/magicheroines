@@ -43,7 +43,14 @@ public class DLCWorldMapUI : MonoBehaviour
         AudioManager.Instance.PlaySFX("SystemTrainPanel");
 
         const float animationTime = 1.0f;
-        StartCoroutine(SceneTransition("EndGameContent", animationTime));
+
+        string targetMap = "EndGameContent";
+        if (ProgressManager.Instance.GetCurrentStageProgress() == 21)
+        {
+            targetMap = "Home";
+        }
+
+        StartCoroutine(SceneTransition(targetMap, animationTime));
     }
 
     IEnumerator SceneTransition(string sceneName, float animationTime)

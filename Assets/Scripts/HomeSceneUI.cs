@@ -59,6 +59,12 @@ public class HomeSceneUI : MonoBehaviour
         const float animationTime = 1.0f;
 
         string targetMap = (ProgressManager.Instance.GetCurrentStageProgress() <= 16) ? "WorldMap" : "EndGameContent";
+
+        if (DLCManager.isDLCEnabled && ProgressManager.Instance.GetCurrentStageProgress() == 21)
+        {
+            targetMap = "DLCWorldMap";
+        }
+
         StartCoroutine(SceneTransition(targetMap, animationTime));
     }
     public void ToBlackMarketScene()
