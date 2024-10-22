@@ -17,6 +17,7 @@ public class BattleSetup
     static List<EnemyDefine> enemies;
     public static bool isStoryMode = false;
     public static bool isEventBattle = false;
+    public static bool isDLCBattle = false;
     public static BattleBack background = BattleBack.Default;
 
     public static string BattleBGM { get { return battleBGM; } }
@@ -81,6 +82,7 @@ public class BattleSetup
         researchPointReward = 0;
         isAllowEscape = true;
         isEventBattle = false;
+        isDLCBattle = false;
     }
 
     /// <summary>
@@ -190,5 +192,10 @@ public class BattleSetup
     public static void SetEventBattle(bool value)
     {
         isEventBattle = value;
+    }
+
+    public static void SetBattleDLC(bool value)
+    {
+        isDLCBattle = value;
     }
 }

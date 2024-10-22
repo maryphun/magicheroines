@@ -52,7 +52,7 @@ public class HomeCharacter : MonoBehaviour
 
     private void Initialization()
     {
-        var characters = ProgressManager.Instance.GetHomeCharacter();
+        var characters = ProgressManager.Instance.GetHomeCharacter(ProgressManager.Instance.GetCurrentDLCStageProgress() > 1);
         if (characters != null)
         {
             dialogues = characters.ToArray();
@@ -202,6 +202,8 @@ public class HomeCharacter : MonoBehaviour
     private HomeSceneDialogue GetDialogue()
     {
         int currentStage = ProgressManager.Instance.GetCurrentStageProgress();
+
+        if (dialogues[currentCharacterIndex].isDLCCharacter) ProgressManager.Instance.GetCurrentDLCStageProgress();
 
         // •\Ž¦‚Å‚«‚éƒZƒŠƒt‚ðŽæ“¾
         int randomIndex;

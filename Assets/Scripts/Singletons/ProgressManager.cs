@@ -458,8 +458,9 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// <summary>
     /// ホーム台詞キャラクターを取得
     /// </summary>
-    public List<HomeDialogue> GetHomeCharacter() 
+    public List<HomeDialogue> GetHomeCharacter(bool DLC_Character_Only = false) 
     {
+        if (DLC_Character_Only) return playerData.homeDialogue.Where(x => x.isDLCCharacter).ToList();
         return playerData.homeDialogue;
     }
 
@@ -615,6 +616,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     // 侵食記録リストを獲得
     public List<Record> GetRecordsList()
     {
+        if (playerData.records == null) return new List<Record>();
+
         return playerData.records;
     }
 

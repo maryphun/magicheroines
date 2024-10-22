@@ -37,15 +37,16 @@ public class StoryManager : MonoBehaviour
 
         if (DLCManager.isEnterDLCStage)
         {
+            BattleSetup.SetBattleDLC(true);
             switch (ProgressManager.Instance.GetCurrentDLCStageProgress())
             {
                 case 1:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
-                        BattleSetup.SetReward(350, 25);
-                        StartCoroutine(SceneTransition("Battle", 0));
+                        NovelSingletone.Instance.PlayNovel("DLC/Prologue", true, GoToHomeScreen);
+                        ProgressManager.Instance.DLCStageProgress();
+                        HomeDialogue kei_dlc = Resources.Load<HomeDialogue>("HomeDialogue/Kei(DLC)");
+                        ProgressManager.Instance.AddHomeCharacter(kei_dlc);
+                        AutoSave.ExecuteAutoSave();
                     }
                     break;
 

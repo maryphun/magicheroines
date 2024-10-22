@@ -1108,7 +1108,15 @@ public class Battle : MonoBehaviour
             }
         }
 
-        Debug.Log("current progress: " + ProgressManager.Instance.GetCurrentStageProgress().ToString());
+        if (BattleSetup.isDLCBattle)
+        {
+            Debug.Log("current progress (dlc): " + ProgressManager.Instance.GetCurrentDLCStageProgress().ToString());
+        }
+        else
+        {
+            Debug.Log("current progress: " + ProgressManager.Instance.GetCurrentStageProgress().ToString());
+        }
+
         // •‰‚¯ƒC‚×ƒ“ƒg?
         bool isEvent = BattleSetup.isEventBattle; 
         if (!isEvent)

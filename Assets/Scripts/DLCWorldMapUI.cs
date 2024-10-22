@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 using UnityEngine.UI;
+using Assets.SimpleLocalization.Scripts;
 
 public class DLCWorldMapUI : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class DLCWorldMapUI : MonoBehaviour
     private void Start()
     {
         // BGMçƒê∂
-        AudioManager.Instance.PlayMusicWithFade(BGM, 6.0f);
+        AudioManager.Instance.PlayMusicWithCrossFade(BGM, 6.0f);
 
         // âÊñ ëJà⁄
         AlphaFadeManager.Instance.FadeIn(1.0f);
@@ -87,6 +88,6 @@ public class DLCWorldMapUI : MonoBehaviour
     // DLC_TODO
     private string GetChapterName(int progress)
     {
-        return "DLC Chapter " + (progress.ToString());
+        return LocalizationManager.Localize("DLCStage-" + progress);
     }
 }
