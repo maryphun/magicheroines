@@ -86,6 +86,7 @@ public static class SaveDataManager
 
                 string slotInfo = (slotIndex + 1).ToString() + "  Chapter " + (((pd.currentStage-1) / 3) + 1).ToString() + "-" + (((pd.currentStage-1) % 3) + 1).ToString();
                 if (pd.currentDLCStage > 1) slotInfo = (slotIndex + 1).ToString() + "  DLC Chapter " + pd.currentDLCStage;
+                if (pd.currentDLCStage > 8) slotInfo = (slotIndex + 1).ToString() + " The End";
                 if (sd.dataComment != string.Empty) slotInfo += " [" + sd.dataComment + "]";
                 comment = sd.dataComment;
                 slotName = slotInfo;

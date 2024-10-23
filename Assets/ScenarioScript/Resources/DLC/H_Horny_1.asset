@@ -1,0 +1,4757 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64e8a184f7d5594a992515559a4c9e0, type: 3}
+  m_Name: H_Horny_1
+  m_EditorClassIdentifier: 
+  _locations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
+  _paragraphList:
+  - _enabled: 1
+    _index: 0
+    _nodePosition:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    _nextParagraphIndex: 1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u8CA1\u56E3\u30A2\u30B8\u30C8\u306B\u3066\u2015\u2015\u2015\u2015"
+      localizationID: Hisui.Horny1-1
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 8300000, guid: 52e67cedaa4056b49bbbd615c674eb03, type: 3}
+      BGMStyle: 1
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 1
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01K46\u53F7\u3001\u305F\u3060\u3044\u307E\u53C2\u308A\u307E\u3057\u305F\u30C3\uFF01\u300D"
+      localizationID: Hisui.Horny1-2
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000002000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 1}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 427695759707d564c9be1430c341fdb5, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3042\u3001\u6765\u307E\u3057\u305F\u304BK46\u53F7\u3002\u300D"
+      localizationID: Hisui.Horny1-3
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0200000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 1}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u300D"
+      localizationID: Hisui.Horny1-4
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000001000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u4ECA\u56DE\u306F\u30D7\u30ED\u30D0\u30AC\u30F3\u30C0AV\u306E\u64AE\u5F71\u3067\u3059\u3002K46\u53F7\u306F\u5949\u4ED5\u4EFB\u52D9\u306B\u3082\u975E\u5E38\u306B\u8A55\u5224\u304C\u826F\u3044\u3088\u3046\u3067\u3057\u305F\u306E\u3067\u2026\u300D"
+      localizationID: Hisui.Horny1-5
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\uFF01\u5149\u6804\u3067\u3042\u308A\u307E\u3059\u3063\uFF01\u300D"
+      localizationID: Hisui.Horny1-6
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000001000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3088\u308D\u3057\u3044\u3002\u305D\u308C\u3067\u8CB4\u5973\u306B\u4EFB\u305B\u305F\u3044\u5F79\u3067\u3059\u304C\u2026\u300D"
+      localizationID: Hisui.Horny1-7
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u2026\u2026\u3053\u308C\u306F\u3063\uFF1F\u300D"
+      localizationID: Hisui.Horny1-9
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 2
+      howCharas: 0000000001000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 5d1aecd1844b9b24da35b95507963ca3, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 61a4eb40d81cd0a4ab59538e15a573c4, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000001000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena
+      text: "\u300C\u305D\u308C\u306F\u6700\u5F8C\u307E\u3067\u6211\u3005\u30D5\u30A9\u30FC\u30EC\u30F3\u8CA1\u56E3\u306B\u6297\u3063\u305F\u6700\u5F8C\u306E\u8056\u6838\u6226\u59EB\u3001\u897F\u5712\u5BFA\u30D2\u30B9\u30A4\u306E\u201C\u30B3\u30B9\u30D7\u30EC\u8863\u88C5\u201D\u3067\u3059\u3002\u300D"
+      localizationID: Hisui.Horny1-10
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 5d1aecd1844b9b24da35b95507963ca3, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u306A\u3001\u306A\u3093\u3068\u3044\u3046\u304B\u2026\u4E0D\u6C17\u5473\u306A\u670D\u88C5\u3067\u3059\u306D\u2026\u3063\uFF01\u300D"
+      localizationID: Hisui.Horny1-11
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000001000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 558cac19cd6e1ef4f81257eb4ce277f6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000001000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3075\u3075\u3063\u2026\u307E\u3042\u5B89\u3063\u307D\u3044\u30B3\u30B9\u30D7\u30EC\u3067\u3059\u304C\u4F3C\u5408\u3063\u3066\u3044\u307E\u3059\u3088\u3002\u307E\u308B\u3067\u672C\u5F53\u306B\u611A\u304B\u306A\u3042\u306E\u5973\u306E\u3088\u3046\u3067\u3059\u3002\u300D"
+      localizationID: Hisui.Horny1-12
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 558cac19cd6e1ef4f81257eb4ce277f6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\uFF01\u4E0D\u6109\u5FEB\u306A\u6070\u597D\u3067\u3059\u304C\u3001\u5168\u529B\u3067\u6F14\u6280\u3044\u305F\u3057\u307E\u3059\uFF01\u300D"
+      localizationID: Hisui.Horny1-13
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 558cac19cd6e1ef4f81257eb4ce277f6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0400000001000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3048\u3048\u3001\u671F\u5F85\u3057\u3066\u3044\u307E\u3059\u3002\u305D\u308C\u3067\u306F\u64AE\u5F71\u3092\u59CB\u3081\u307E\u3057\u3087\u3046\u304B\u2026\u300D"
+      localizationID: Hisui.Horny1-14
+      back: {fileID: 21300000, guid: 13c684e8a9412634d926aafb871ec75b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 21300000, guid: d707897a4e6141f428889797ae0e6aad, type: 3}
+      - {fileID: 21300000, guid: 558cac19cd6e1ef4f81257eb4ce277f6, type: 3}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0100000004000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "AV\u64AE\u5F71\u90E8\u5C4B\u306B\u3066"
+      localizationID: Hisui.Horny1-16
+      back: {fileID: 21300000, guid: 46210f68995670340a76574adce619fb, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0100000001000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u304F\u3046\u3063\u2026\u2026\u8056\u6838\u6226\u59EB\u3067\u3042\u308B\u3053\u306E\u79C1\u2026\u2026\u6E05\u85E4\u30A8\u30EC\u30CA\u304C\u3053\u3093\u306A\u96D1\u9B5A\u6226\u95D8\u54E1\u306B\u3063\u2026\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-17
+      back: {fileID: 21300000, guid: 8086b9d57ce63d14d825e1f16e6586f4, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 9
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u305D\u3063\u3001\u305D\u3093\u306A\u3041\u2026\u2026\u30A8\u30EC\u30CA\u5148\u8F29\u304C\u8CA0\u3051\u308B\u306A\u3093\u3066\u3063\u2026\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-18
+      back: {fileID: 21300000, guid: 8086b9d57ce63d14d825e1f16e6586f4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u30B0\u30D5\u30D5\u30C3\u3001\u8056\u6838\u6226\u59EB\u3068\u3044\u3048\u3069\u3082\u5927\u3057\u305F\u3053\u3068\u306F\u7121\u304B\u3063\u305F\u306A\u3042\uFF1F\u300D"
+      localizationID: Hisui.Horny1-19
+      back: {fileID: 21300000, guid: 8086b9d57ce63d14d825e1f16e6586f4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3046\u3046\u3045\u2026\u30A8\u30EC\u30CA\u5148\u8F29\u3063\u2026\u2026\u300D"
+      localizationID: Hisui.Horny1-20
+      back: {fileID: 21300000, guid: 8086b9d57ce63d14d825e1f16e6586f4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 8086b9d57ce63d14d825e1f16e6586f4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 1
+    _nodePosition:
+      serializedVersion: 2
+      x: 165
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 2
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u5FC3\u914D\u3057\u306A\u3044\u3067\u2026\u30D2\u30B9\u30A4\uFF01\u79C1\u304C\u3069\u3046\u306A\u3063\u3066\u3082\u8CB4\u5973\u3092\u5B88\u308B\u304B\u3089\u3063\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-21
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3048\u3001\u30A8\u30EC\u30CA\u5148\u8F29\u2026\u2026\uFF01\uFF01\u300D"
+      localizationID: Hisui.Horny1-22
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u304A\u30FC\u304A\u30FC\u6CE3\u304B\u305B\u308B\u306D\u3048\uFF1F\u3053\u308C\u304C\u8056\u6838\u6226\u59EB\u306E\u7D46\u304B\uFF1F\u300D"
+      localizationID: Hisui.Horny1-23
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3060\u304C\u8CA0\u3051\u305F\u8056\u6838\u6226\u59EB\u306F\u3069\u3046\u306A\u308B\u304B\u7406\u89E3\u3057\u3066\u3044\u306A\u3044\u3093\u3058\u3083\u306D\u3048\u304B\uFF1F\u300D"
+      localizationID: Hisui.Horny1-24
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u306A\u3001\u4F55\u3092\u3059\u308B\u3064\u3082\u308A\u3067\u3059\u304B\u2026\u2026\uFF01\uFF1F\u300D"
+      localizationID: Hisui.Horny1-25
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u30B0\u30D5\u30D5\u30C3\u3001\u3053\u3046\u306A\u308B\u3093\u3060\u3088\u3063\u2026\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-26
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u305D\u3057\u3066\u6226\u95D8\u54E1\u306F\u30E9\u30D0\u30FC\u30B9\u30FC\u30C4\u3092\u8131\u3044\u3067\u30C1\u30F3\u30DD\u3092\u30A8\u30EC\u30CA\u3068\u30D2\u30B9\u30A4\u306E\u5C3B\u306B\u62BC\u3057\u5F53\u3066\u308B"
+      localizationID: Hisui.Horny1-27
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 2
+      backFadeColor: {r: 0, g: 0, b: 0, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3042\u3093\u3063\u2665\u3001\u306A\u3093\u3067\u3059\u304B\u3041\u3063\uFF01\uFF1F\u3053\u308C\u3047\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-28
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u304D\u3001\u6C17\u6301\u3061\u60AA\u3044\u3063\u2026\u2665\uFF01\u4F55\u3092\u3059\u308B\u3064\u3082\u308A\u3067\u3059\u304B\u3042\u3063\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-29
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u8A00\u8449\u3068\u306F\u88CF\u8179\u306B\u3001\u4E8C\u4EBA\u306E\u8868\u60C5\u306F\u6DEB\u7325\u306A\u7B11\u307F\u3092\u6D6E\u304B\u3079\u3066\u3044\u308B"
+      localizationID: Hisui.Horny1-30
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3042\u3042\u3063\uFF1F\u4ECA\u304B\u3089\u304A\u524D\u3089\u306E\u30DE\u30F3\u30B3\u306B\u3076\u3061\u8FBC\u3093\u3067\u72AF\u3057\u3066\u3084\u308B\u3093\u3060\u3088\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-31
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3093\u3063\u2665\u2026\u3044\u3084\u3042\u3063\u2665\u2026\u305D\u3093\u306A\u4E8B\u3063\u9177\u3044\u3067\u3059\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-32
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3046\u3046\u3063\u2026\u2665\u306A\u3093\u3066\u5351\u52A3\u306A\u2026\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-33
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3046\u3046\u3063\u2665\u2026\u2026\u30A8\u30EC\u30CA\u5148\u8F29\u3063\u2026\u2026\u3069\u3046\u3059\u308C\u3070\u3063\u2665\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-34
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u6226\u95D8\u54E1\u2026\u2026\u79C1\u304C\u3042\u306A\u305F\u305F\u3061\u4E8C\u4EBA\u306E\u76F8\u624B\u3092\u3059\u308B\u2026\u3060\u304B\u3089\uFF01\u30D2\u30B9\u30A4\u306B\u306F\u624B\u3092\u51FA\u3055\u306A\u3044\u3067\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-35
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3048\u3001\u30A8\u30EC\u30CA\u5148\u8F29\u3063\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-36
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\uFF01\u5F8C\u8F29\u601D\u3044\u306E\u826F\u3044\u5974\u3058\u3083\u306D\u3048\u304B\uFF01\u3044\u3044\u305C\u2026\u304A\u524D\u3092\u5148\u306B\u76F8\u624B\u3057\u3066\u3084\u308B\u2026\u300D"
+      localizationID: Hisui.Horny1-37
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u305F\u3060\u3057\u3001\u6761\u4EF6\u304C\u3042\u308B\u2026\u304A\u524D\u304C\u4FFA\u9054\u3092\u5148\u306B\u30A4\u30AB\u305B\u3089\u308C\u305F\u3089\u3060\u3002\u305D\u3046\u3057\u305F\u3089\u5F8C\u8F29\u3061\u3083\u3093\u306B\u306F\u624B\u3092\u51FA\u3055\u306D\u3048\u3067\u3084\u308B\u3088\u3063\uFF01\u300D"
+      localizationID: Hisui.Horny1-38
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u306E\u3001\u671B\u3080\u3068\u3053\u308D\u3063\u2026\uFF01\u79C1\u304C\u8056\u6838\u6226\u59EB\u306E\u5F37\u3055\u3068\u8A87\u308A\u3092\u8A3C\u660E\u3059\u308B\u3063\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-39
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\u3001\u305D\u306E\u5F37\u60C5\u3055\u304C\u3044\u3064\u307E\u3067\u7D9A\u304F\u304B\u306A\u2026\uFF1F\u30AA\u30E9\u30C3\uFF01\uFF01\u300D"
+      localizationID: Hisui.Horny1-40
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: fc775b9e84297d146a2a21dd99a3c2b4, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 2
+    _nodePosition:
+      serializedVersion: 2
+      x: 310
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 3
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: 
+      text: "\u30BA\u30D6\u30C3\uFF01\uFF01"
+      localizationID: Hisui.Horny1-41
+      back: {fileID: 21300000, guid: 4a8aa7056ef96584597eabbf1fcec559, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.75
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 1095fa6734a8fa443ae478db2037f704, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3072\u3046\u3063\u2665\uFF01\uFF1F\u3001\u304A\u309B\u304A\u304A\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-42
+      back: {fileID: 21300000, guid: 4a8aa7056ef96584597eabbf1fcec559, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\uFF1F\u3042\uFF1F\u5165\u308C\u305F\u3060\u3051\u3067\u30A4\u30C3\u3063\u3066\u3093\u3058\u3083\u306D\u3048\u304B\uFF1F\u300D"
+      localizationID: Hisui.Horny1-43
+      back: {fileID: 21300000, guid: 4a8aa7056ef96584597eabbf1fcec559, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u305D\u3093\u306A\u3041\u3063\u2665\u2665\u30A8\u30EC\u30CA\u5148\u8F29\u3046\u3089\u3084\u307E\u2026\u3058\u3083\u306A\u304F\u3066\u2665\u9811\u5F35\u3063\u3066\u304F\u3060\u3055\u3044\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-44
+      back: {fileID: 21300000, guid: 4a8aa7056ef96584597eabbf1fcec559, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3044\u3001\u30A4\u30C3\u3063\u3066\u306A\u3044\u3063\u3001\u79C1\u306F\u8056\u6838\u6226\u59EB\u2026\u3063\u3053\u3093\u306A\u4E8B\u3067\u3048\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-45
+      back: {fileID: 21300000, guid: 3ee90bdb3ec14d14584b05c038995969, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u305D\u3046\u304B\u3088\u3063\u3001\u3058\u3083\u3042\u884C\u304F\u307E\u3067\u30D6\u30C1\u72AF\u3057\u3066\u3084\u308B\u3063\uFF01\u300D"
+      localizationID: Hisui.Horny1-46
+      back: {fileID: 21300000, guid: 3ee90bdb3ec14d14584b05c038995969, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01"
+      localizationID: Hisui.Horny1-47
+      back: {fileID: 21300000, guid: 3ee90bdb3ec14d14584b05c038995969, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3093\u3063\u2665\u3001\u3042\u3042\u3063\u2665\u3001\u3084\u3093\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-48
+      back: {fileID: 21300000, guid: 3ee90bdb3ec14d14584b05c038995969, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u30AA\u30E9\u30C3\u3001\u3069\u3046\u3060\uFF1F\u4FFA\u69D8\u306E\u6539\u9020\u6226\u95D8\u54E1\u30C1\u30F3\u30DD\u306F\u3063\uFF01\u300D"
+      localizationID: Hisui.Horny1-49
+      back: {fileID: 21300000, guid: 3ee90bdb3ec14d14584b05c038995969, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3075\u3075\u3075\u3063\u2665\u3001\u3054\u4E3B\u4EBA\u69D8\u307B\u3069\u3067\u306F\u306A\u3044\u3067\u3059\u304C\u3063\u2665\u3001\u306A\u304B\u306A\u304B\u826F\u3044\u3093\u3058\u3083\u306A\u3044\u3067\u3059\u304B\u3063\u2665\uFF1F\u300D"
+      localizationID: Hisui.Horny1-50
+      back: {fileID: 21300000, guid: 3ee90bdb3ec14d14584b05c038995969, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u304A\u3063\u3001\u3042\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u2026\u3058\u3083\u306D\u3048\u3063\uFF01\u30AA\u30E9\u30C3\uFF01\u300D"
+      localizationID: Hisui.Horny1-51
+      back: {fileID: 21300000, guid: 3ee90bdb3ec14d14584b05c038995969, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01"
+      localizationID: Hisui.Horny1-52
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 1
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3084\u3042\u3063\u2665\u3001\u3042\u3042\u3093\u3063\u2665\u3001\u79C1\u30C3\u3001\u8056\u6838\u6226\u59EB\u306A\u306E\u306B\u2026\u5F8C\u8F29\u306E\u524D\u3067\u3053\u3093\u306A\u75F4\u614B\u3092\u3063\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-53
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3048\u3001\u30A8\u30EC\u30CA\u5148\u8F29\u3063\uFF01\u8CA0\u3051\u306A\u3044\u3067\u304F\u3060\u3055\u3044\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-54
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3063\u2665\u3001\u3042\u3093\u3063\u2665\u3001\u6226\u95D8\u54E1\u306E\u304A\u30C1\u30F3\u30DD\u304C\u30C3\u2665\u3001\u5B50\u5BAE\u3092\u30CE\u30C3\u30AF\u3057\u3066\u307E\u3059\u30C3\u2665\u300D"
+      localizationID: Hisui.Horny1-55
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u6226\u95D8\u54E1\u306E\u30C1\u30F3\u30DD\u3063\u2665\u2026\u6211\u6162\u2026\u3067\u304D\u306A\u3044\u3043\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-56
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u305D\u3093\u306A\u3041\u2665\u3001\u30A8\u30EC\u30CA\u5148\u8F29\u3063\u2026\u8CA0\u3051\u306A\u3044\u3067\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-57
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3063\u2665\u3001\u3054\u3081\u3093\u306A\u3055\u3044\u3063\u2665\u2026\u79C1\u3063\u2026\u2665\u6226\u95D8\u54E1\u306E\u30C1\u30F3\u30DD\u306B\u2026\u8CA0\u3051\u305D\u3046\u3067\u3059\u30C3\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-58
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01"
+      localizationID: Hisui.Horny1-59
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.5
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u3042\u3042\u3063\u2665\u3001\u3042\u306E\u656C\u611B\u3059\u308B\u5E79\u90E8\u306E\u30A8\u30EC\u30CA\u69D8\u304C\u72AF\u3055\u308C\u3066\u3044\u308B\u3068\u3053\u308D\u304C\u3053\u3093\u306A\u306B\u8FD1\u304F\u3067\u898B\u308C\u308B\u306A\u3093\u3066\u2026\u2665)"
+      localizationID: Hisui.Horny1-60
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u30A8\u30EC\u30CA\u69D8\u306F\u2026\u305D\u3046\u2665\u2026\u8CA1\u56E3\u3067\u521D\u3081\u3066\u898B\u305F\u6642\u304B\u3089\u79C1\u306E\u61A7\u308C\u3067\u3057\u305F\u3063\u2026\u2665)"
+      localizationID: Hisui.Horny1-61
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u307E\u308B\u3067\u305A\u3063\u3068\u6614\u304B\u3089\u79C1\u306E\u61A7\u308C\u306E\u65B9\u3060\u3063\u305F\u3088\u3046\u306B\u2026\u2665)"
+      localizationID: Hisui.Horny1-62
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u3054\u3081\u3093\u306A\u3055\u3044\u3063\u2665\u3001\u30D2\u30B9\u30A4\u3063\u2665\u3001\u6226\u95D8\u54E1\u306E\u30C1\u30F3\u30DD\u30C3\u2665\u3001\u5F37\u3059\u304E\u307E\u3059\u3046\u3045\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-63
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u304A\u3044\u304A\u3044\u3044\u3044\u306E\u304B\uFF1F\u53EF\u611B\u3044\u5F8C\u8F29\u3061\u3083\u3093\u304C\u72AF\u3055\u308C\u3061\u307E\u3046\u305E\uFF1F\u300D"
+      localizationID: Hisui.Horny1-64
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: 7c595dbc6e626364bac752e3e2d4b41b, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 3
+    _nodePosition:
+      serializedVersion: 2
+      x: 430
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: 4
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3093\u3063\u2665\u305D\u3001\u305D\u308C\u306F\u2026\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-65
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u305D\u308C\u3068\u3082\u2026\u4FFA\u306E\u30C1\u30F3\u30DD\u304C\u3082\u3063\u3068\u6B32\u3057\u304F\u306A\u3063\u3061\u307E\u3063\u305F\u304B\u3042\uFF1F\u300D"
+      localizationID: Hisui.Horny1-66
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u307B\u3001\u307B\u3057\u3044\u3067\u3059\u3063\u2665\u3001\u52DD\u3066\u306A\u3044\u30C3\u2665\u3001\u6E05\u85E4\u30A8\u30EC\u30CA\u30C3\u2665\u3001\u6226\u95D8\u54E1\u306E\u304A\u30C1\u30F3\u30DD\u306B\u8CA0\u3051\u307E\u3057\u305F\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-67
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u79C1\u306E\u304A\u30DE\u30F3\u30B3\u306B\u3063\u2665\u2026\u6226\u95D8\u54E1\u69D8\u306E\u305B\u30FC\u3048\u304D\u2026\u2665\u6CA2\u5C71\u6CE8\u3044\u3067\u304F\u3060\u3055\u3044\u3063\u2026\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-68
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3044\u3044\u305C\u3063\uFF01\u6557\u5317\u306E\u5370\u3068\u3057\u3066\u2026\u304F\u3089\u3048\u3063\uFF01\u300D"
+      localizationID: Hisui.Horny1-69
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30AF\u30C3\u3001\u30C9\u30AF\u30C9\u30AF\u30C9\u30AF\u30C3\uFF01\uFF01"
+      localizationID: Hisui.Horny1-70
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.75
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 6dfa59efd3705fa44b4ffaeb464b274f, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3063\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\uFF5E\u2665\uFF01\uFF01\uFF01\u300D"
+      localizationID: Hisui.Horny1-71
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 6dfa59efd3705fa44b4ffaeb464b274f, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3072\u3063\u2665\u3001\u3044\u3001\u30A4\u30AD\u307E\u3057\u305F\u3041\u3063\u2665\uFF01\u4E2D\u3060\u3057\u3067\u3063\u2026\u7D76\u9802\u6557\u5317\u3067\u3059\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-72
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u305D\u3093\u306A\u2026\u30A8\u30EC\u30CA\u5148\u8F29\u3063\u2026\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-73
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3072\u3069\u3044\u3067\u3059\u3063\u2665\u3001\u305D\u308C\u3058\u3083\u3042\u2026\u79C1\u3082\u72AF\u3055\u308C\u3061\u3083\u3044\u307E\u3059\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-74
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3075\u3075\u3063\u2665\u305D\u3046\u3067\u3059\u3088\u2026\u8CB4\u5973\u3082\u6226\u95D8\u54E1\u69D8\u306B\u72AF\u3057\u3066\u3082\u3089\u3044\u307E\u3057\u3087\u3046\u2026\uFF1F\u300D"
+      localizationID: Hisui.Horny1-75
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u305D\u3046\u3063\u2665\u2026\u305D\u308C\u304C\u79C1\u9054\u8056\u6838\u6226\u59EB\u306E\u672A\u6765\u306A\u306E\u3067\u3059\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-76
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u305D\u3063\u3001\u305D\u3093\u306A\u3042\u3063\u2665\u2026\u300D"
+      localizationID: Hisui.Horny1-77
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u3042\uFF5E\u3042\u3001\u53EF\u54C0\u305D\u3046\u306B\u306A\u3042\uFF1F\u898B\u6368\u3066\u3089\u308C\u3061\u307E\u3063\u305F\u306A\u300D"
+      localizationID: Hisui.Horny1-78
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3046\u3063\u2665\u3046\u3046\u3063\u2665\u2026\u30A8\u30EC\u30CA\u5148\u8F29\u3063\u2026\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-79
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3053\u3001\u3053\u306E\u307E\u307E\u3058\u3083\u79C1\u3082\u2026\u6226\u95D8\u54E1\u69D8\u306B\u30CF\u30E1\u3089\u308C\u3061\u3083\u3044\u307E\u3059\u3063\u2026\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-80
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: e6da212438a8c3e4e98875c37c23b81c, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 0
+    _nextChoiceIndexes: ffffffff
+  - _enabled: 1
+    _index: 4
+    _nodePosition:
+      serializedVersion: 2
+      x: 572
+      y: 0
+      width: 64
+      height: 97
+    _nextParagraphIndex: -1
+    nodeName: 
+    _dialogueList:
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\u3001\u6B8B\u5FF5\u3060\u3063\u305F\u306A\u3063\uFF01\u3058\u3083\u3042\u4FFA\u3082\u4F7F\u308F\u305B\u3066\u3082\u3089\u3046\u305C\u2026\u30AA\u30E9\u30C3\uFF01\u300D"
+      localizationID: Hisui.Horny1-81
+      back: {fileID: 0}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30BA\u30D7\u30A6\u30C3\uFF01\uFF01"
+      localizationID: Hisui.Horny1-82
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 40594088e0b09f24e8f4ce6ad27f2d84, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3072\u3046\u3063\u2665\uFF01\uFF1F\u3042\u3042\u3093\u3063\u2665\uFF01\uFF01\u300D"
+      localizationID: Hisui.Horny1-83
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01"
+      localizationID: Hisui.Horny1-84
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u79C1\u3063\u2026\u2026\u8056\u6838\u6226\u59EB\u306A\u306E\u306B\u3063\u2026\u2026\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-85
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3067\u3001\u3067\u3082\u3063\u2665\u3001\u30A8\u30EC\u30CA\u5148\u8F29\u3068\u4E00\u7DD2\u306B\u72AF\u3057\u3066\u3082\u3089\u3048\u308B\u306A\u3089\u2026\u2665\u2026\u60AA\u304F\u306A\u3044\u304B\u3082\u3057\u308C\u307E\u305B\u3093\u2026\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-86
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3075\u3075\u3063\u2665\u3001\u305D\u3046\u3067\u3059\u2026\u2665\uFF01\u8CB4\u5973\u3082\u79C1\u3068\u4E00\u7DD2\u306B\u2026\u2665\u6226\u95D8\u54E1\u69D8\u306B\u3054\u5949\u4ED5\u3057\u3057\u307E\u3057\u3087\u3046\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-87
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3042\u3063\u2665\u3001\u306F\u3044\u3063\u2665\u2026\u30A8\u30EC\u30CA\u5148\u8F29\u304C\u305D\u3046\u8A00\u3046\u306A\u3089\u3063\u2026\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-88
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u79C1\u3082\u3063\u2665\u2026\u6226\u95D8\u54E1\u69D8\u306B\u3054\u5949\u4ED5\u3057\u307E\u3059\u3046\u3063\u2026\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-89
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3042\u3093\u3063\u2665\u3001\u305D\u3046\u3067\u3059\u30C3\u2665\u2026\u79C1\u9054\u8056\u6838\u6226\u59EB\u306F\u8CA1\u56E3\u306B\u8CA0\u3051\u305F\u3093\u3067\u3059\u304B\u3089\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-90
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u5F37\u8005\u3067\u3042\u308B\u6226\u95D8\u54E1\u69D8\u306B\u5A9A\u3073\u3066\u3054\u5949\u4ED5\u3059\u308B\u306E\u304C\u5B9A\u3081\u2026\u2665\u300D"
+      localizationID: Hisui.Horny1-91
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u306F\u3044\u3063\u2665\u2026\u2026\u4E00\u7DD2\u306B\u5927\u4EBA\u3057\u304F\u72AF\u3055\u308C\u307E\u3059\u3046\u3063\u2026\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-92
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01\u30D1\u30F3\u30C3\uFF01"
+      localizationID: Hisui.Horny1-93
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3063\u2665\u3001\u6226\u95D8\u54E1\u69D8\u306E\u304A\u30C1\u30F3\u30DD\u3063\u2665\u3001\u30C9\u30AF\u30C9\u30AF\u30C3\u8A00\u3063\u3066\u307E\u3059\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-94
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u306F\u3042\u3063\u2665\u3001\u304A\u51FA\u3057\u304F\u3060\u3055\u3044\u3063\u2665\u3001\u6557\u5317\u3057\u305F\u8056\u6838\u6226\u59EB\u306E\u96D1\u9B5A\u30DE\u30F3\u30B3\u306B\u30C3\u2665\u300D"
+      localizationID: Hisui.Horny1-95
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u6226\u95D8\u54E1\u69D8\u306E\u5F37\u8005\u306E\u7CBE\u6DB2\u3063\u2665\u3001\u6557\u5317\u306E\u5370\u3092\u523B\u307F\u8FBC\u3093\u3067\u304F\u3060\u3055\u3044\u3063\u2665\u300D"
+      localizationID: Hisui.Horny1-96
+      back: {fileID: 21300000, guid: 07a867d564e62984bb0497edb2d93f49, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: "\u30C9\u30AF\u30C3\u3001\u30C9\u30AF\u30C9\u30AF\u30C9\u30AF\u30C3\uFF01\uFF01"
+      localizationID: Hisui.Horny1-97
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 2
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 0.5
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 8300000, guid: 6dfa59efd3705fa44b4ffaeb464b274f, type: 3}
+      SEStyle: 1
+      SELoop: 1
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 0
+      SEEndFadeTime: 0
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3063\u2665\u3001\u3042\u3063\u2665\u3001\u6226\u95D8\u54E1\u69D8\u306E\u304A\u3061\u3093\u307D\u3063\u2665\u3001\u7CBE\u6DB2\u51FA\u3066\u307E\u3059\u3046\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-98
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u79C1\u3063\u3001\u8056\u6838\u6226\u59EB\u306A\u306E\u306B\u3063\u2665\u2026\u3053\u3093\u306A\u306E\u306B\u6C17\u6301\u3061\u3088\u304F\u306A\u3063\u3061\u3083\u3044\u3051\u306A\u3044\u306E\u306B\u3063\u2026\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-99
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3082\u3046\u52DD\u3066\u306A\u3044\u3063\u2026\u2665\u3001\u5B8C\u5168\u306B\u8CA0\u3051\u307E\u3057\u305F\u3042\u3063\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-100
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u3042\u3042\u3063\u2665\u3001\u30A8\u30EC\u30CA\u69D8\u3092\u898B\u306A\u304C\u3089\u6226\u95D8\u54E1\u69D8\u306B\u3082\u72AF\u3057\u3066\u3044\u305F\u3060\u3051\u308B\u306A\u3093\u3066\u3063\u2026\u2665)"
+      localizationID: Hisui.Horny1-101
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u4E0B\u7D1A\u6226\u95D8\u54E1\u306E\u79C1\u306B\u3068\u3063\u3066\u306F\u3053\u308C\u4EE5\u4E0A\u306A\u3044\u5149\u6804\u3067\u3059\u3063\u2026\u2665)"
+      localizationID: Hisui.Horny1-102
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "(\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u3063\u3066\u8A00\u3044\u305F\u304F\u306A\u308B\u3051\u3069\u2026\u6211\u6162\u3063\u2665\u4ECA\u306FAV\u306E\u64AE\u5F71\u4E2D\u306A\u3093\u3067\u3059\u304B\u3089\u2026\u2665)"
+      localizationID: Hisui.Horny1-103
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3093\u3063\u2665\u3001\u6226\u95D8\u54E1\u69D8\u306E\u304A\u3061\u3093\u307D\u3063\u2665\u51C4\u3059\u304E\u3063\u2665\u3001\u3053\u3093\u306A\u306E\u3063\u2665\u3001\u8CA1\u56E3\u306E\u70BA\u306B\u5FE0\u8AA0\u3092\u6367\u3052\u305F\u304F\u306A\u3063\u3061\u3083\u3044\u307E\u3059\u2665\uFF01\u300D"
+      localizationID: Hisui.Horny1-104
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Erena_Corrupted
+      text: "\u300C\u3048\u3048\u3063\u2665\u3001\u3082\u3046\u8056\u6838\u6226\u59EB\u306A\u3093\u3066\u7D42\u308F\u308A\u3067\u3059\u3063\u2665\u3001\u4E00\u7DD2\u306B\u8CA1\u56E3\u306B\u5FE0\u8AA0\u3092\u6367\u3052\u307E\u3057\u3087\u3046\u2665\u300D"
+      localizationID: Hisui.Horny1-105
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Battler
+      text: "\u300C\u306F\u306F\u3063\uFF01\u5B8C\u5168\u306B\u5815\u3061\u3084\u304C\u3063\u305F\u2026\u3044\u3044\u305C\u3063\u8CB4\u69D8\u3089\u3092\u8CA1\u56E3\u306B\u8FCE\u3048\u3066\u3084\u308B\u2026\uFF01\u300D"
+      localizationID: Hisui.Horny1-106
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u3042\u3001\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\u3063\u2665\u3001\u8056\u6838\u6226\u59EB\u3084\u3081\u3066\u2026\u8CA1\u56E3\u306B\u5FE0\u8AA0\u3092\u6367\u3052\u307E\u3059\u3063\uFF01\uFF01\u300D"
+      localizationID: Hisui.Horny1-107
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: Name.Hisui_Battler2
+      text: "\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\u300D"
+      localizationID: Hisui.Horny1-108
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    - open: 0
+      Name: 
+      text: 
+      localizationID: 
+      back: {fileID: 21300000, guid: d88259baf3a7e6b42b9fe92da1ba5ef2, type: 3}
+      howBack: 0
+      backFadeColor: {r: 1, g: 1, b: 1, a: 1}
+      backFadeSpeed: 1
+      howCharas: 0000000000000000
+      charas:
+      - {fileID: 0}
+      - {fileID: 0}
+      charaFadeColor:
+      - {r: 0, g: 0, b: 0, a: 0}
+      - {r: 0, g: 0, b: 0, a: 0}
+      changeFont: 0
+      font: {fileID: 0}
+      fontColor: {r: 1, g: 1, b: 1, a: 1}
+      fontSize: 30
+      changeNameFont: 0
+      nameFont: {fileID: 0}
+      nameColor: {r: 1, g: 1, b: 1, a: 1}
+      BGM: {fileID: 0}
+      BGMStyle: 0
+      BGMLoop: 0
+      BGMCount: 1
+      BGMSecond: 20
+      BGMFadeTime: 3
+      BGMEndFadeTime: 3
+      SE: {fileID: 0}
+      SEStyle: 0
+      SELoop: 0
+      SECount: 1
+      SESecond: 20
+      SEFadeTime: 3
+      SEEndFadeTime: 3
+      backEffect: 0
+      backEffectStrength: 0
+      charaEffects: 0000000000000000
+      charaEffectStrength: 0000000000000000
+      DialogueEffect: 0
+      DialogueEffectStrength: 0
+    detailOpen: 0
+    _next: 2
+    _nextChoiceIndexes: ffffffff
+  _choiceList: []
+  graphScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  graphPosition: {x: 458, y: 343, z: 0}
+  havePreLocations: 0
+  newLocations:
+  - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
+  - {fileID: 3646998453675562630, guid: eae0a4245bff4ef43b2937dd297994b7, type: 3}
