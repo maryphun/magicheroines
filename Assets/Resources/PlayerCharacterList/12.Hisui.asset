@@ -59,7 +59,6 @@ MonoBehaviour:
     corruptedName: Name.Hisui_Battler2
     coreEquipment: {fileID: 11400000, guid: c44aed55e1d3809468bdc6836601dbca, type: 2}
     abilities:
-    - {fileID: 11400000, guid: 1c479d706a5651945bd2d20eb2485462, type: 2}
-    - {fileID: 11400000, guid: a174c17565aee0544b9e622410f1c6a3, type: 2}
-    - {fileID: 11400000, guid: 1d8edfbfd0993aa4f94f7b15a14d682b, type: 2}
+    - {fileID: 11400000, guid: 147cb9e0ddc722c469860bed7137f7a9, type: 2}
+    - {fileID: 11400000, guid: 8b5037b12ab91384aa1eb5dc050aac86, type: 2}
   battler: {fileID: 6784901170540971542, guid: 8e95abd4671fc5d4f810da027cf392b9, type: 3}

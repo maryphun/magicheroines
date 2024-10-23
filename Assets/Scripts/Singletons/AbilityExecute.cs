@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -116,22 +116,22 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
     #region abilities
     /// <summary>
-    /// ‹Ù‹}‰ñ•œ (í“¬ˆõ)
+    /// ç·Šæ€¥å›å¾© (æˆ¦é—˜å“¡)
     /// </summary>
     public void DeepBreath()
     {
         var target = battleManager.GetCurrentBattler();
 
-        // c‚èHP‚ª­‚È‚¢‚Ù‚Ç‰ñ•œ—Ê‚ª‘½‚­‚È‚é
+        // æ®‹ã‚ŠHPãŒå°‘ãªã„ã»ã©å›å¾©é‡ãŒå¤šããªã‚‹
         float percentage = (1.0f - ((float)target.current_hp / (float)target.max_hp));
         int healAmount = (int)(((float)target.max_hp * 0.40f) * percentage);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.DeepBreath");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
-        // ƒƒO ({0}@‚ª{1}‚·‚é)
+        // ãƒ­ã‚° ({0}ã€€ãŒ{1}ã™ã‚‹)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecuteSelf"), target.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.DeepBreath"), CustomColor.abilityName())));
 
@@ -155,7 +155,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     vfx.GetComponent<Image>().DOFade(1.0f, 0.2f);
                     vfx.GetComponent<Image>().DOFade(0.0f, 0.2f).SetDelay(0.5f);
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.5f)
@@ -165,7 +165,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 });
     }
     /// <summary>
-    /// ƒpƒƒtƒ‹ƒpƒ“ƒ` (í“¬ˆõ)
+    /// ãƒ‘ãƒ¯ãƒ•ãƒ«ãƒ‘ãƒ³ãƒ (æˆ¦é—˜å“¡)
     /// </summary>
     public void PowerfulPunch()
     {
@@ -174,16 +174,16 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         int dmg = Mathf.FloorToInt((float)self.attack * 2.5f);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.PowerfulPunch");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.PowerfulPunch"), CustomColor.abilityName())));
 
-        // ƒLƒƒƒ‰ˆÚ“®‚Ì€”õ
+        // ã‚­ãƒ£ãƒ©ç§»å‹•ã®æº–å‚™
         Transform originalParent = self.transform.parent;
         int originalChildIndex = self.transform.GetSiblingIndex();
 
@@ -235,7 +235,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.DOComplete(true);
                     self.GetComponent<RectTransform>().DOMove(position, strikeTime).SetEase(Ease.Linear);
 
-                    // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+                    // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
                     FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
                     fadeEffect.Initialize(strikeTime, 0.05f, self.GetGraphicRectTransform().GetComponent<Image>());
                 })
@@ -255,7 +255,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDmg.ToString(), 64, CustomColor.damage());
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDmg, CustomColor.damage())));
                 })
                 .AppendInterval(attackStayTime)
@@ -283,23 +283,23 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ‹¤“|‚ê (í“¬ˆõ)
+    /// å…±å€’ã‚Œ (æˆ¦é—˜å“¡)
     /// </summary>
     public void Tackle()
     {
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Tackle");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Tackle"), CustomColor.abilityName())));
 
-        // ƒLƒƒƒ‰ˆÚ“®‚Ì€”õ
+        // ã‚­ãƒ£ãƒ©ç§»å‹•ã®æº–å‚™
         Transform originalParent = self.transform.parent;
         int originalChildIndex = self.transform.GetSiblingIndex();
 
@@ -352,7 +352,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     self.GetComponent<RectTransform>().DOMove(position, strikeTime).SetEase(Ease.Linear);
                     self.GetGraphicRectTransform().DORotate(new Vector3(0, 0, -40.0f), animationTime, RotateMode.Fast);
 
-                    // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+                    // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
                     FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
                     fadeEffect.Initialize(strikeTime, 0.05f, self.GetGraphicRectTransform().GetComponent<Image>());
                 })
@@ -400,7 +400,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ‹zûGè (Gè‰öl)
+    /// å¸åè§¦æ‰‹ (è§¦æ‰‹æ€ªäºº)
     /// </summary>
     public void SuckingTentacle()
     {
@@ -409,15 +409,15 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         int suckAmount = (int)((float)target.current_mp * 0.50f);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.SuckingTentacle");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚ªGè‚ğ {1} ‚ÉL‚Î‚·[[I)
+        // ãƒ­ã‚° ({0}ã€€ãŒè§¦æ‰‹ã‚’ {1} ã«ä¼¸ã°ã™ãƒ¼ãƒ¼ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Tentacle"), self.CharacterNameColored, target.CharacterNameColored));
 
-        // ƒLƒƒƒ‰ˆÚ“®‚Ì€”õ
+        // ã‚­ãƒ£ãƒ©ç§»å‹•ã®æº–å‚™
         Transform originalParent = self.transform.parent;
         int originalChildIndex = self.transform.GetSiblingIndex();
 
@@ -466,7 +466,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(target.transform);
                     floatingText.Init(2.0f, self.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + suckAmount.ToString(), 64, CustomColor.SP());
 
-                    // ƒƒO ({1}@‚ÌSP {0} ‹zû‚µ‚½I )
+                    // ãƒ­ã‚° ({1}ã€€ã®SP {0} å¸åã—ãŸï¼ )
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.SPDrain"), target.CharacterNameColored, CustomColor.AddColor(suckAmount, CustomColor.SP())));
                 })
                 .AppendInterval(animationTime * 0.5f)
@@ -484,7 +484,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         self.Heal(hpSuckAmount);
                         target.DeductHP(self, hpSuckAmount);
 
-                        // ƒƒO ({1}@‚ÌHP {0} ‹zû‚µ‚½I )
+                        // ãƒ­ã‚° ({1}ã€€ã®HP {0} å¸åã—ãŸï¼ )
                         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.HPDrain"), target.CharacterNameColored, CustomColor.AddColor(suckAmount, CustomColor.heal())));
 
                         // SE
@@ -516,7 +516,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// GèƒT[ƒrƒX (Gè‰öl)
+    /// è§¦æ‰‹ã‚µãƒ¼ãƒ“ã‚¹ (è§¦æ‰‹æ€ªäºº)
     /// </summary>
     public void TentacleService()
     {
@@ -528,10 +528,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int siblingIndex = self.RectTransform.GetSiblingIndex();
         Vector3 originalPosition = self.RectTransform.position;
 
-        // ƒƒO ({0}@‚ªGè‚ğ {1} ‚ÉL‚Î‚·[[I)
+        // ãƒ­ã‚° ({0}ã€€ãŒè§¦æ‰‹ã‚’ {1} ã«ä¼¸ã°ã™ãƒ¼ãƒ¼ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Tentacle"), self.CharacterNameColored, target.CharacterNameColored));
         
-        // ƒLƒƒƒ‰ˆÚ“®
+        // ã‚­ãƒ£ãƒ©ç§»å‹•
         self.RectTransform.DOLocalMoveX(self.RectTransform.localPosition.x + 200.0f, 0.15f);
 
         // play SE
@@ -551,7 +551,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             .AppendInterval(0.2f)
             .AppendCallback(()=> 
             {
-                // PŒ‚
+                // è¥²æ’ƒ
                 self.ReverseFacing();
                 self.RectTransform.DOLocalMoveX(target.GetCharacterSize().x * 0.25f, 0.15f);
 
@@ -577,12 +577,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     audio = AudioManager.Instance.PlaySFX("Tentacle");
                     AudioManager.Instance.PlaySFX("TentacleDrain");
 
-                    // ƒƒO (SP {0} ‚ğ {1} ‚É•ª‚¯—^‚¦‚½I)
+                    // ãƒ­ã‚° (SP {0} ã‚’ {1} ã«åˆ†ã‘ä¸ãˆãŸï¼)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.GiveSP"), CustomColor.AddColor(spAmount, CustomColor.SP()), target.CharacterNameColored));
                 }
                 else
                 {
-                    // ƒƒO (Œø‰Ê‚Í‚È‚©‚Á‚½B)
+                    // ãƒ­ã‚° (åŠ¹æœã¯ãªã‹ã£ãŸã€‚)
                     battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.NoEffect"));
                 }
             })
@@ -597,7 +597,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     if (audio) audio.Stop();
                 }
 
-                // –ß‚é
+                // æˆ»ã‚‹
                 self.RectTransform.DOLocalMoveX(self.RectTransform.localPosition.x + 200.0f, 0.15f);
 
                 // play SE
@@ -631,7 +631,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ›Z–òƒKƒX (Gè‰öl)
+    /// åªšè–¬ã‚¬ã‚¹ (è§¦æ‰‹æ€ªäºº)
     /// </summary>
     public void Capture()
     {
@@ -641,15 +641,15 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int attackDownAmount = (int)((float)target.attack * 0.25f);
         int speedDownAmount = (int)((float)target.speed * 0.25f);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Capture");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚ªGè‚ğ {1} ‚ÉL‚Î‚·[[I)
+        // ãƒ­ã‚° ({0}ã€€ãŒè§¦æ‰‹ã‚’ {1} ã«ä¼¸ã°ã™ãƒ¼ãƒ¼ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Tentacle"), self.CharacterNameColored, target.CharacterNameColored));
 
-        // ƒLƒƒƒ‰ˆÚ“®‚Ì€”õ
+        // ã‚­ãƒ£ãƒ©ç§»å‹•ã®æº–å‚™
         Transform originalParent = self.transform.parent;
         int originalChildIndex = self.transform.GetSiblingIndex();
 
@@ -717,19 +717,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ©ŒÈC•œ
+    /// è‡ªå·±ä¿®å¾©
     /// </summary>
     public void SelfRepair()
     {
         var target = battleManager.GetCurrentBattler();
         int healAmount = (int)((float)target.max_hp * 0.35f);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.SelfRepair");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
-        // ƒƒO ({0}@‚ª{1}‚·‚é)
+        // ãƒ­ã‚° ({0}ã€€ãŒ{1}ã™ã‚‹)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecuteSelf"), target.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.SelfRepair"), CustomColor.abilityName())));
 
@@ -750,7 +750,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // VFX
                     VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(healAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.5f)
@@ -761,7 +761,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ©ŒÈ‹­‰»
+    /// è‡ªå·±å¼·åŒ–
     /// </summary>
     public void SelfEnchant()
     {
@@ -774,15 +774,15 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         possibleBuff.Add(new Tuple<BuffType, int>(BuffType.shield_up, (int)UnityEngine.Random.Range(3, 10)));
         possibleBuff.Add(new Tuple<BuffType, int>(BuffType.speed_up, (int)UnityEngine.Random.Range(4, 20)));
 
-        // ƒoƒt‚ğ‘I‘ğ
+        // ãƒãƒ•ã‚’é¸æŠ
         Tuple<BuffType, int> buff = possibleBuff[UnityEngine.Random.Range(0, possibleBuff.Count)];
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.SelfEnchant");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
-        // ƒƒO ({0}@‚ª{1}‚·‚é)
+        // ãƒ­ã‚° ({0}ã€€ãŒ{1}ã™ã‚‹)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecuteSelf"), target.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.SelfEnchant"), CustomColor.abilityName())));
 
@@ -808,19 +808,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ƒu[ƒXƒg
+    /// ãƒ–ãƒ¼ã‚¹ãƒˆ
     /// </summary>
     public void Booster()
     {
         var target = battleManager.GetCurrentBattler();
         int attackAddAmount = (int)((float)target.attack * 0.15f);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(target.transform);
         string abilityName = LocalizationManager.Localize("Ability.Booster");
         floatingText.Init(2.0f, target.GetMiddleGlobalPosition() + new Vector2(0.0f, target.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
-        // ƒƒO ({0}@‚ª{1}‚·‚é)
+        // ãƒ­ã‚° ({0}ã€€ãŒ{1}ã™ã‚‹)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), target.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Booster"), CustomColor.abilityName())));
 
@@ -837,7 +837,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // VFX
                     VFXSpawner.SpawnVFX("SelfRepair", target.transform, target.GetGraphicRectTransform().position);
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.AttackUpStart"), target.CharacterNameColored, CustomColor.AddColor(attackAddAmount, CustomColor.damage())));
                 })
                 .AppendInterval(0.5f)
@@ -848,7 +848,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// –¾•äí“Áê‹Z
+    /// æ˜ç©‚æˆ¦ç‰¹æ®ŠæŠ€
     /// </summary>
     public void HealAttack()
     {
@@ -857,14 +857,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.HealAttack");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, target.character_color);
 
-        // ƒGƒtƒFƒNƒg (Holy)
+        // ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ (Holy)
         var vfx = VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position);
-        vfx.transform.SetSiblingIndex(0); // ƒLƒƒƒ‰‚ÌŒã‚ë‚É‰ñ‚·
+        vfx.transform.SetSiblingIndex(0); // ã‚­ãƒ£ãƒ©ã®å¾Œã‚ã«å›ã™
         self.PlayAnimation(BattlerAnimationType.magic);
 
         float originalLocalPosY = self.GetGraphicRectTransform().localPosition.y;
@@ -874,7 +874,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
         AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.HealAttack"), CustomColor.abilityName())));
 
@@ -882,7 +882,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         sequence.AppendInterval(0.5f)
                 .AppendCallback(() =>
                 {
-                    // ƒGƒtƒFƒNƒg (Light)
+                    // ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ (Light)
                     VFXSpawner.SpawnVFX("DarkBolt", target.transform, target.GetGraphicRectTransform().position);
                     
                     // text
@@ -892,7 +892,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // effect
                     target.DeductHP(self, damage);
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(damage, CustomColor.damage())));
 
                     // animation
@@ -913,7 +913,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// –¾•äí“Áê‹Z
+    /// æ˜ç©‚æˆ¦ç‰¹æ®ŠæŠ€
     /// </summary>
     public void GreatRegen()
     {
@@ -924,12 +924,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         int hpHealAmount = Mathf.RoundToInt((float)target.max_hp * percentage);
         int spHealAmount = Mathf.RoundToInt((float)target.max_mp * 0.8f);
         
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.GreatRegen");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒGƒtƒFƒNƒg (Holy)
+        // ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ (Holy)
         VFXSpawner.SpawnVFX("Holy", self.transform, self.GetGraphicRectTransform().position);
         self.PlayAnimation(BattlerAnimationType.magic);
 
@@ -940,7 +940,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         AudioManager.Instance.PlaySFX("MagicCharge", 0.5f);
         AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.GreatRegen"), CustomColor.abilityName())));
 
@@ -951,7 +951,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // animation
                     self.PlayAnimation(BattlerAnimationType.idle);
 
-                    // ƒGƒtƒFƒNƒg (Light)
+                    // ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ (Light)
                     for (int i = 0; i < 5; i ++)
                     {
                         Vector2 move = Vector2.zero;
@@ -969,7 +969,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     // Audio
                     AudioManager.Instance.PlaySFX("Heal");
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(hpHealAmount, CustomColor.heal())));
                 })
                 .AppendInterval(0.25f)
@@ -990,7 +990,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ƒ~ƒ‹ƒN•â‹‹
+    /// ãƒŸãƒ«ã‚¯è£œçµ¦
     /// </summary>
     public void Milk()
     {
@@ -998,12 +998,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
         int hpHealAmount = UnityEngine.Random.Range(20, 31);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Milk");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Milk"), CustomColor.abilityName())));
 
@@ -1043,7 +1043,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                // SE
                AudioManager.Instance.PlaySFX("Heal", 0.75f);
 
-               // í“¬ƒƒO
+               // æˆ¦é—˜ãƒ­ã‚°
                battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(hpHealAmount, CustomColor.heal())));
            })
            .AppendInterval(0.5f)
@@ -1054,19 +1054,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// “Á”Zƒ~ƒ‹ƒN
+    /// ç‰¹æ¿ƒãƒŸãƒ«ã‚¯
     /// </summary>
     public void MilkCookie()
     {
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.MilkCookie");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.MilkCookie"), CustomColor.abilityName())));
 
@@ -1106,7 +1106,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                battleManager.RemoveBuffForCharacter(target, BuffType.shield_down) ||
                battleManager.RemoveBuffForCharacter(target, BuffType.speed_down);
 
-               // í“¬ƒƒO
+               // æˆ¦é—˜ãƒ­ã‚°
                if (isSuccess)
                {
 
@@ -1124,7 +1124,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ƒ~ƒ‹ƒN•â‹‹ƒI[ƒo[ƒhƒ‰ƒCƒu
+    /// ãƒŸãƒ«ã‚¯è£œçµ¦ã‚ªãƒ¼ãƒãƒ¼ãƒ‰ãƒ©ã‚¤ãƒ–
     /// </summary>
     public void MilkOverdrive()
     {
@@ -1133,12 +1133,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         targetBattlers.Remove(self);
         targetBattlers.RemoveAll(x => !x.isAlive);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.MilkOverdrive");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.MilkOverdrive"), CustomColor.abilityName())));
 
@@ -1153,7 +1153,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         AudioManager.Instance.PlaySFX("CharacterMove", 0.5f);
         AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
-        // g—p•s”\‚Æ‚È‚é
+        // ä½¿ç”¨ä¸èƒ½ã¨ãªã‚‹
         self.SetAbilityActive("Milk", false);
         self.SetAbilityActive("MilkOverdrive", false);
 
@@ -1340,7 +1340,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         }
                     }
 
-                    // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+                    // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
                     battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.TeamHeal"));
 
                     self.Graphic.rectTransform.localPosition = new Vector3(0.0f, self.Graphic.rectTransform.localPosition.y, 0.0f);
@@ -1359,13 +1359,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// —§‰Ôí“Áê‹Z  / 005† / 072†
+    /// ç«‹èŠ±æˆ¦ç‰¹æ®ŠæŠ€  / 005å· / 072å·
     /// </summary>
     public void QuickAttack()
     {
-        const float StrikeTime = 0.2f; // ^‚ñ’†‚©‚ç“G‚ğUŒ‚‚·‚éˆÚ“®ŠÔ
-        const float AttackStopTime = 0.25f; // UŒ‚‚·‚é‚Ì’â~ŠÔ
-        const float ReturnTime = 0.2f; // UŒ‚‚©‚ç–ß‚éŠÔ
+        const float StrikeTime = 0.2f; // çœŸã‚“ä¸­ã‹ã‚‰æ•µã‚’æ”»æ’ƒã™ã‚‹ç§»å‹•æ™‚é–“
+        const float AttackStopTime = 0.25f; // æ”»æ’ƒã™ã‚‹æ™‚ã®åœæ­¢æ™‚é–“
+        const float ReturnTime = 0.2f; // æ”»æ’ƒã‹ã‚‰æˆ»ã‚‹æ™‚é–“
 
         var self = battleManager.GetCurrentBattler();
 
@@ -1379,7 +1379,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
             if (!battler.isAlive)
             {
-                // ‘SˆõƒŠƒ^ƒCƒA‚©
+                // å…¨å“¡ãƒªã‚¿ã‚¤ã‚¢ã‹
                 bool Continue = false;
                 for (int i = 0; i < targetBattlers.Count; i ++)
                 {
@@ -1398,12 +1398,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             return battler;
         }
 
-        // Œ³ƒf[ƒ^‚ğ‹L˜^
+        // å…ƒãƒ‡ãƒ¼ã‚¿ã‚’è¨˜éŒ²
         Transform originalParent = self.transform.parent;
         int originalChildIndex = self.transform.GetSiblingIndex();
         var originalPos = self.GetComponent<RectTransform>().position;
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.QuickAttack");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
@@ -1411,15 +1411,15 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // play SE
         AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
 
-        // ƒLƒƒƒ‰‚ğ^‚ñ’†‚ÉˆÚ“®‚·‚é
+        // ã‚­ãƒ£ãƒ©ã‚’çœŸã‚“ä¸­ã«ç§»å‹•ã™ã‚‹
         Vector3 middle = new Vector3(CanvasReferencer.Instance.GetResolution().x * 0.5f, CanvasReferencer.Instance.GetResolution().y * 0.5f, 0.0f);
         self.GetComponent<RectTransform>().DOMove(middle + new Vector3(0.0f, -140.0f, 0.0f), 0.25f);
 
-        // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+        // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
         FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(4.0f, 0.05f, self.GetGraphicRectTransform().GetComponent<Image>());
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.QuickAttack"), CustomColor.abilityName())));
 
@@ -1451,7 +1451,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(targets[0].transform);
                     floatingText.Init(2.0f, targets[0].GetMiddleGlobalPosition(), (targets[0].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), targets[0].CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
                     
                     // play SE
@@ -1477,7 +1477,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(ReturnTime)
                 .AppendCallback(() =>
                 {
-                    // Ÿ‚Ìƒ^[ƒQƒbƒg‚ğŒˆ‚ß‚é
+                    // æ¬¡ã®ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã‚’æ±ºã‚ã‚‹
                     targets[1] = GetRandomAliveTarget();
 
                     // play SE
@@ -1501,7 +1501,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(targets[1].transform);
                     floatingText.Init(2.0f, targets[1].GetMiddleGlobalPosition(), (targets[1].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), targets[1].CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                     // play SE
@@ -1527,7 +1527,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 .AppendInterval(ReturnTime)
                 .AppendCallback(() =>
                 {
-                    // Ÿ‚Ìƒ^[ƒQƒbƒg‚ğŒˆ‚ß‚é
+                    // æ¬¡ã®ã‚¿ãƒ¼ã‚²ãƒƒãƒˆã‚’æ±ºã‚ã‚‹
                     targets[2] = GetRandomAliveTarget();
 
                     // play SE
@@ -1551,7 +1551,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(targets[2].transform);
                     floatingText.Init(2.0f, targets[2].GetMiddleGlobalPosition(), (targets[2].GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-                    // í“¬ƒƒO
+                    // æˆ¦é—˜ãƒ­ã‚°
                     battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), targets[2].CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                     // play SE
@@ -1591,7 +1591,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ƒI[ƒo[ƒhƒ‰ƒCƒu   / 005† / 072†
+    /// ã‚ªãƒ¼ãƒãƒ¼ãƒ‰ãƒ©ã‚¤ãƒ–   / 005å· / 072å·
     /// </summary>
     public void Overdrive()
     {
@@ -1600,12 +1600,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         const int ComboTurn = 3;
         const int StunTurn = 3;
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Overdrive");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}I {1} ‚ª‚±‚ê‚©‚ç{2}‰ñ˜A‘±s“®‚·‚éB)
+        // ãƒ­ã‚° ({0}ï¼ {1} ãŒã“ã‚Œã‹ã‚‰{2}å›é€£ç¶šè¡Œå‹•ã™ã‚‹ã€‚)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Overdrive"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Overdrive"), CustomColor.abilityName()), self.CharacterNameColored, ComboTurn));
 
@@ -1616,7 +1616,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // play SE
         AudioManager.Instance.PlaySFX("Heartbeat", 1.5f);
 
-        // c‘œ‚ğì¬
+        // æ®‹åƒã‚’ä½œæˆ
         Image img = new GameObject("FadingImage[" + gameObject.name + "]").AddComponent<Image>();
         img.transform.SetParent(self.transform);
         img.transform.SetSiblingIndex(self.Graphic.transform.GetSiblingIndex()+1);
@@ -1640,25 +1640,25 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 {
                     battleManager.SetDisplayActionPanel(true);
 
-                    // ƒƒO (‚Ü‚½{0}‚Ìƒ^[ƒ“I)
+                    // ãƒ­ã‚° (ã¾ãŸ{0}ã®ã‚¿ãƒ¼ãƒ³ï¼)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.ContinueTurn"), self.CharacterNameColored));
                 });
     }
 
     /// <summary>
-    /// ³Œ“Ë‚«   / 005† / 072†
+    /// æ­£æ‹³çªã   / 005å· / 072å·
     /// </summary>
     public void Fist()
     {
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Fist");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Fist"), CustomColor.abilityName())));
 
@@ -1686,7 +1686,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     self.SpawnAttackVFX(target);
 
-                    // UŒ‚ŒvZ
+                    // æ”»æ’ƒè¨ˆç®—
                     int levelAdjustedDamage = Battle.CalculateDamage(self, target);
                     int realDamage = target.DeductHP(self, levelAdjustedDamage);
 
@@ -1702,7 +1702,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     floatingText = CreateFloatingText(self.transform);
                     floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-                    // ƒƒO ({0}@‚É@{1}@‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                    // ãƒ­ã‚° ({0}ã€€ã«ã€€{1}ã€€ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
                 })
                 .AppendInterval(battleManager.AttackAnimPlayTime)
@@ -1725,13 +1725,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 {
                     battleManager.SetDisplayActionPanel(true);
 
-                    // ƒƒO (‚Ü‚½{0}‚Ìƒ^[ƒ“I)
+                    // ãƒ­ã‚° (ã¾ãŸ{0}ã®ã‚¿ãƒ¼ãƒ³ï¼)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.ContinueTurn"), self.CharacterNameColored));
                 });
     }
 
     /// <summary>
-    /// ƒVƒ‡ƒbƒNƒEƒF[ƒuEƒpƒ‹ƒT[ ‘•”õ‚·‚é‚±‚Æ‚ÅŠl“¾‚·‚é“Áê‹Z
+    /// ã‚·ãƒ§ãƒƒã‚¯ã‚¦ã‚§ãƒ¼ãƒ–ãƒ»ãƒ‘ãƒ«ã‚µãƒ¼ è£…å‚™ã™ã‚‹ã“ã¨ã§ç²å¾—ã™ã‚‹ç‰¹æ®ŠæŠ€
     /// </summary>
     public void Stungun()
     {
@@ -1748,7 +1748,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         // SE
         AudioManager.Instance.PlaySFX("GunShoot");
 
-        // ƒƒO ({0}@‚©‚ç {1} ‚ğ•ú‚ÂI)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ {1} ã‚’æ”¾ã¤ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Stungun"), self.CharacterNameColored, 
                                                  CustomColor.AddColor(LocalizationManager.Localize("Equipment.Stungun"), CustomColor.itemName())));
         
@@ -1772,7 +1772,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             });
     }
 
-    /// ƒ^ƒ“ƒN‚ÌƒfƒtƒHƒ‹ƒgUŒ‚
+    /// ã‚¿ãƒ³ã‚¯ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆæ”»æ’ƒ
     public void TankAttack()
     {
         var self = battleManager.GetCurrentBattler();
@@ -1783,7 +1783,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         self.Shake(ChargeTime);
         AudioManager.Instance.PlaySFX("TankStandby");
 
-        // ƒƒO (xxx@‚Ìƒr[ƒ€UŒ‚I)
+        // ãƒ­ã‚° (xxxã€€ã®ãƒ“ãƒ¼ãƒ æ”»æ’ƒï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.TankAttack"), self.CharacterNameColored));
 
         var originalPosition = selfRect.localPosition.x;
@@ -1816,7 +1816,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 target.Shake(0.75f);
                 target.PlayAnimation(BattlerAnimationType.attacked);
 
-                // ƒƒO ({0}@‚É@{1}@‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                // ãƒ­ã‚° ({0}ã€€ã«ã€€{1}ã€€ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                 // VFX
@@ -1835,7 +1835,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             });
     }
 
-    /// ŒR—p•àsŒ^ƒ^ƒ“ƒN‚ÌƒfƒtƒHƒ‹ƒgUŒ‚
+    /// è»ç”¨æ­©è¡Œå‹ã‚¿ãƒ³ã‚¯ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆæ”»æ’ƒ
     public void DarkTankAttack()
     {
         var self = battleManager.GetCurrentBattler();
@@ -1846,7 +1846,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         self.Shake(ChargeTime);
         AudioManager.Instance.PlaySFX("TankStandby");
 
-        // ƒƒO (xxx@‚Ìƒr[ƒ€UŒ‚I)
+        // ãƒ­ã‚° (xxxã€€ã®ãƒ“ãƒ¼ãƒ æ”»æ’ƒï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.TankAttack"), self.CharacterNameColored));
 
         var originalPosition = selfRect.localPosition.x;
@@ -1864,7 +1864,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             .AppendInterval(0.075f)
             .AppendCallback(() =>
             {
-                // ‘S‘ÌUŒ‚
+                // å…¨ä½“æ”»æ’ƒ
                 for (int i = 0; i < targets.Count; i++)
                 {
                     var target = targets[i];
@@ -1884,7 +1884,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     target.Shake(0.75f);
                     target.PlayAnimation(BattlerAnimationType.attacked);
 
-                    // ƒƒO ({0}@‚É@{1}@‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                    // ãƒ­ã‚° ({0}ã€€ã«ã€€{1}ã€€ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                     // VFX
@@ -1909,22 +1909,22 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ¹‚È‚é‚@ƒGƒŒƒiƒ{ƒXí
+    /// è–ãªã‚‹ç›¾ã€€ã‚¨ãƒ¬ãƒŠãƒœã‚¹æˆ¦
     /// </summary>
     public void DivineShield()
     {
         var self = battleManager.GetCurrentBattler();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.DivineShield");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚Ì@{1}I)
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.DivineShield"), CustomColor.abilityName())));
 
-        // ƒAƒjƒƒVƒ‡ƒ“
+        // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
         self.PlayAnimation(BattlerAnimationType.magic);
 
         // SE
@@ -1936,14 +1936,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         try
         {
-            // ‘O‚ÌƒV[ƒ‹ƒh‚ª‘¶İ‚µ‚Ä‚¢‚½‚ç’u‚«Š·‚¦
+            // å‰ã®ã‚·ãƒ¼ãƒ«ãƒ‰ãŒå­˜åœ¨ã—ã¦ã„ãŸã‚‰ç½®ãæ›ãˆ
             var obj = self.transform.Find(ObjName);
             if (obj != null)
             {
                 obj.GetComponent<ErenaShield>().Destroy();
             }
 
-            // ‚Æ‚à‚Éƒ`ƒƒ[ƒW‚³‚¹‚é
+            // ã¨ã‚‚ã«ãƒãƒ£ãƒ¼ã‚¸ã•ã›ã‚‹
             Ability stunshield = self.GetAbility("StunShield");
             if (stunshield != null)
             {
@@ -1970,10 +1970,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                // SE
                AudioManager.Instance.PlaySFX("NewAbility", 0.5f); // shield
 
-               // ƒƒO (Ÿ‚ÌUŒ‚‚ğŠ®‘S–hŒäI)
+               // ãƒ­ã‚° (æ¬¡ã®æ”»æ’ƒã‚’å®Œå…¨é˜²å¾¡ï¼)
                battleManager.AddBattleLog(LocalizationManager.Localize("BattleLog.DivineShield"));
 
-               // ƒAƒjƒƒVƒ‡ƒ“
+               // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
                self.PlayAnimation(BattlerAnimationType.idle);
 
                battleManager.NextTurn(false);
@@ -1982,26 +1982,26 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ¹‚È‚éŒ•@ƒGƒŒƒiƒ{ƒXí
+    /// è–ãªã‚‹å‰£ã€€ã‚¨ãƒ¬ãƒŠãƒœã‚¹æˆ¦
     /// </summary>
     public void DivineRapier()
     {
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.DivineRapier");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚Ì@{1}I)
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.DivineRapier"), CustomColor.abilityName())));
 
-        // ƒAƒjƒƒVƒ‡ƒ“
+        // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
         self.PlayAnimation(BattlerAnimationType.magic);
 
-        // c‘œ‚ğì¬
+        // æ®‹åƒã‚’ä½œæˆ
         Image img = new GameObject("FadingImage[" + gameObject.name + "]").AddComponent<Image>();
         img.transform.SetParent(self.transform);
         img.transform.SetSiblingIndex(self.Graphic.transform.GetSiblingIndex() + 1);
@@ -2037,7 +2037,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
            {
                var projectile = CreateProjectile("Erena Projectile", startPoint, endPoint, projectileTime, true);
 
-               // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+               // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
                FadeEffect fadeEffect = projectile.gameObject.AddComponent<FadeEffect>();
                fadeEffect.Initialize(projectileTime, 0.05f, projectile.GetComponent<Image>());
 
@@ -2045,7 +2045,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                AudioManager.Instance.PlaySFX("Throw", 0.75f);
                AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
 
-               // ‰ñ“]
+               // å›è»¢
                self.GetGraphicRectTransform().DORotate(new Vector3(0, 0, 15.0f), 0.25f, RotateMode.Fast);
            })
            .AppendInterval(projectileTime - 0.1f)
@@ -2066,13 +2066,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                battleManager.AddBuffToBattler(target, BuffType.shield_down, 4, defAmt);
                battleManager.AddBuffToBattler(target, BuffType.disarm, 2, 0);
 
-               // ƒƒO i{0}@‚Ì–hŒä—Í‚ª {1} “_‰º‚°‚½Bj
+               // ãƒ­ã‚° ï¼ˆ{0}ã€€ã®é˜²å¾¡åŠ›ãŒ {1} ç‚¹ä¸‹ã’ãŸã€‚ï¼‰
                battleManager.AddBattleLog(string.Format(LocalizationManager.Localize("BattleLog.ShieldDownValue"), target.CharacterNameColored, CustomColor.AddColor(defAmt, CustomColor.SP())));
 
                // deal damage
                int realDamage = target.DeductHP(self, Battle.CalculateDamage(self, target) * 2);
 
-               // í“¬ƒƒO
+               // æˆ¦é—˜ãƒ­ã‚°
                battleManager.AddBattleLog(System.String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                // text
@@ -2082,7 +2082,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                // play SE
                AudioManager.Instance.PlaySFX("Holy", 0.7f);
 
-               // ‰ñ“]
+               // å›è»¢
                self.GetGraphicRectTransform().DORotate(Vector3.zero, 0.25f, RotateMode.Fast);
            })
            .AppendInterval(0.5f)
@@ -2094,22 +2094,22 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ƒXƒ^ƒ“ƒV[ƒ‹ƒh@ƒGƒŒƒiƒ{ƒXí
+    /// ã‚¹ã‚¿ãƒ³ã‚·ãƒ¼ãƒ«ãƒ‰ã€€ã‚¨ãƒ¬ãƒŠãƒœã‚¹æˆ¦
     /// </summary>
     public void StunShield()
     {
         var self = battleManager.GetCurrentBattler();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.StunShield");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚Ì@{1}I)
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.StunShield"), CustomColor.abilityName())));
 
-        // ƒAƒjƒƒVƒ‡ƒ“
+        // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
         self.PlayAnimation(BattlerAnimationType.magic);
 
         // SE
@@ -2121,14 +2121,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         try
         {
-            // ‘O‚ÌƒV[ƒ‹ƒh‚ª‘¶İ‚µ‚Ä‚¢‚½‚ç’u‚«Š·‚¦
+            // å‰ã®ã‚·ãƒ¼ãƒ«ãƒ‰ãŒå­˜åœ¨ã—ã¦ã„ãŸã‚‰ç½®ãæ›ãˆ
             var obj = self.transform.Find(ObjName);
             if (obj != null)
             {
                 obj.GetComponent<ErenaShield>().Destroy();
             }
 
-            // ‚Æ‚à‚Éƒ`ƒƒ[ƒW‚³‚¹‚é
+            // ã¨ã‚‚ã«ãƒãƒ£ãƒ¼ã‚¸ã•ã›ã‚‹
             Ability divineshield = self.GetAbility("DivineShield");
             if (divineshield != null)
             {
@@ -2155,10 +2155,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                // SE
                AudioManager.Instance.PlaySFX("NewAbility", 0.5f); // shield
 
-               // ƒƒO (Ÿ‚ÌUŒ‚‚ğŠ®‘S–hŒäI)
+               // ãƒ­ã‚° (æ¬¡ã®æ”»æ’ƒã‚’å®Œå…¨é˜²å¾¡ï¼)
                battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.StunShield"), self.CharacterNameColored));
 
-               // ƒAƒjƒƒVƒ‡ƒ“
+               // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
                self.PlayAnimation(BattlerAnimationType.idle);
 
                battleManager.NextTurn(false);
@@ -2167,18 +2167,18 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ”½Œ‚‚ÌˆÓv@ƒGƒŒƒi‹Z
+    /// åæ’ƒã®æ„æ€ã€€ã‚¨ãƒ¬ãƒŠæŠ€
     /// </summary>
     public void Repel()
     {
         var self = battleManager.GetCurrentBattler();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Repel");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚Ì@{1}I)
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Repel"), CustomColor.abilityName())));
 
@@ -2204,18 +2204,18 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// •s“®‚ÌƒI[ƒ‰@ƒGƒŒƒi‹Z
+    /// ä¸å‹•ã®ã‚ªãƒ¼ãƒ©ã€€ã‚¨ãƒ¬ãƒŠæŠ€
     /// </summary>
     public void GuardUp()
     {
         var self = battleManager.GetCurrentBattler();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.GuardUp");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚Ì@{1}I)
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.GuardUp"), CustomColor.abilityName())));
 
@@ -2241,19 +2241,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// •s–Å‚Ì‰ÁŒì@ƒGƒŒƒi‹Z
+    /// ä¸æ»…ã®åŠ è­·ã€€ã‚¨ãƒ¬ãƒŠæŠ€
     /// </summary>
     public void GuardianAngel()
     {
         var self = battleManager.GetCurrentBattler();
         var targets = battleManager.GetAllTeammate();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.GuardianAngel");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚Ì@{1}I)
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.GuardianAngel"), CustomColor.abilityName())));
 
@@ -2268,7 +2268,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         {
             try
             {
-                // ‘O‚ÌƒV[ƒ‹ƒh‚ª‘¶İ‚µ‚Ä‚¢‚½‚ç’u‚«Š·‚¦
+                // å‰ã®ã‚·ãƒ¼ãƒ«ãƒ‰ãŒå­˜åœ¨ã—ã¦ã„ãŸã‚‰ç½®ãæ›ãˆ
                 var obj = targets[i].transform.Find(ObjName);
                 if (obj != null)
                 {
@@ -2306,49 +2306,49 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ˆÅ—‚¿‹‚ÌƒnƒbƒLƒ“ƒO“Áê‹Z
+    /// é—‡è½ã¡äº¬ã®ãƒãƒƒã‚­ãƒ³ã‚°ç‰¹æ®ŠæŠ€
     /// </summary>
     public void Hacking()
     {
-        // ‹‚Ì•Ší‚ğæ“¾
+        // äº¬ã®æ­¦å™¨ã‚’å–å¾—
         var kei = battleManager.GetCurrentBattler();
         var weapons = kei.GetComponent<KeiWeaponController>();
 
-        // ‘Šè‚Ì‘—¿‚ğæ“¾
+        // ç›¸æ‰‹ã®è³‡æ–™ã‚’å–å¾—
         var target = targetBattlers[0];
 
-        // ¬Œ÷—¦‚ğŒvZ
+        // æˆåŠŸç‡ã‚’è¨ˆç®—
         float successRate = target.currentLevel >= kei.currentLevel ? 0.0f : 0.40f + (0.064f * (kei.currentLevel - target.currentLevel));
 
-        if (!target.IsMachine) successRate = 0.0f; // ‹@ŠB—ŞˆÈŠO‚Í¬Œ÷—¦@0%@
-        if (target.character_name == LocalizationManager.Localize("Name.Tank")) successRate = 0.01f; // “Á’è‚Ì“G‚Í¬Œ÷‚µ‚È‚¢
+        if (!target.IsMachine) successRate = 0.0f; // æ©Ÿæ¢°é¡ä»¥å¤–ã¯æˆåŠŸç‡ã€€0%ã€€
+        if (target.character_name == LocalizationManager.Localize("Name.Tank")) successRate = 0.01f; // ç‰¹å®šã®æ•µã¯æˆåŠŸã—ãªã„
 
         successRate = UnityEngine.Mathf.Clamp(successRate, 0.0f, 1.0f);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(kei.transform);
         string abilityName = LocalizationManager.Localize("Ability.Hacking");
         floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
 
-        // ƒƒO ({0}@‚ªƒnƒbƒLƒ“ƒO‚ğ’§‚ŞI¬Œ÷Šm—¦‚Í {1})
+        // ãƒ­ã‚° ({0}ã€€ãŒãƒãƒƒã‚­ãƒ³ã‚°ã‚’æŒ‘ã‚€ï¼æˆåŠŸç¢ºç‡ã¯ {1})
         var successRatePercentage = String.Format("{0:0.##\\%}", (successRate * 100.0f)); 
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Hacking"), kei.CharacterNameColored, CustomColor.AddColor(successRatePercentage, Color.cyan)));
 
-        // ¬Œ÷‚©
+        // æˆåŠŸã‹
         bool isSuccess = UnityEngine.Random.Range(0.0f, 1.0f) < successRate;
 
-        // •Ší‚Ì“®‚«‚ğˆê’U~‚ß‚é
+        // æ­¦å™¨ã®å‹•ãã‚’ä¸€æ—¦æ­¢ã‚ã‚‹
         weapons.leftWeapon.SetEnableMovement(false);
         weapons.rightWeapon.SetEnableMovement(false);
 
         weapons.leftWeapon.Rect.DOMove(target.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
         weapons.rightWeapon.Rect.DOMove(target.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
 
-        // ƒAƒjƒƒVƒ‡ƒ“
+        // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
         const float animtionTime = 1.0f;
         kei.PlayAnimation(BattlerAnimationType.magic);
 
-        // c‘œ
+        // æ®‹åƒ
         FadeEffect fadeEffect = weapons.leftWeapon.Rect.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(animtionTime, 0.05f, weapons.leftWeapon.GetComponent<Image>());
         fadeEffect = weapons.rightWeapon.Rect.gameObject.AddComponent<FadeEffect>();
@@ -2359,13 +2359,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
         if (isSuccess)
         {
-            // ‚±‚Ì“Áê‹Z‚ğíœ
+            // ã“ã®ç‰¹æ®ŠæŠ€ã‚’å‰Šé™¤
             kei.SetAbilityActive("Hacking", false);
             kei.SetAbilityActive("SuicideAttack", true);
             kei.SetAbilityActive("Reprogram", true);
             kei.SetAbilityActive("EffeciencyBoost", true);
 
-            // ©”š‹@”\’Ç‰Á
+            // è‡ªçˆ†æ©Ÿèƒ½è¿½åŠ 
             var ability = Resources.Load<Ability>("AbilityList/Suicide");
             target.AddAbilityToCharacter(ability);
 
@@ -2388,7 +2388,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         // SE
                         AudioManager.Instance.PlaySFX("Machine", 0.5f);
 
-                        // ƒAƒjƒƒVƒ‡ƒ“
+                        // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
                         kei.PlayAnimation(BattlerAnimationType.idle);
                     })
                     .AppendInterval((animtionTime * 0.5f) + 0.25f)
@@ -2402,13 +2402,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         weapons.SetControlledUnit(puppet);
                         puppet.StartControl(kei, 0);
                     })
-                    .AppendInterval(animtionTime * 0.5f) // “G‚ğˆÚ“®’†
+                    .AppendInterval(animtionTime * 0.5f) // æ•µã‚’ç§»å‹•ä¸­
                     .AppendCallback(() =>
                     {
                         // SE
                         AudioManager.Instance.PlaySFX("Machine", 0.5f);
 
-                        // Œ³‚ÌŠ‚É–ß‚·
+                        // å…ƒã®æ‰€ã«æˆ»ã™
                         weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), animtionTime * 0.25f).SetEase(Ease.Linear);
                         weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), animtionTime * 0.25f).SetEase(Ease.Linear);
                     })
@@ -2456,7 +2456,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         // SE
                         AudioManager.Instance.PlaySFX("Machine", 0.5f);
 
-                        // ƒAƒjƒƒVƒ‡ƒ“
+                        // ã‚¢ãƒ‹ãƒ¡ã‚·ãƒ§ãƒ³
                         kei.PlayAnimation(BattlerAnimationType.idle);
                     })
                     .AppendInterval((animtionTime * 0.5f) + 0.25f)
@@ -2468,7 +2468,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                         AudioManager.Instance.PlaySFX("Machine", 0.5f);
                         AudioManager.Instance.PlaySFX("Miss");
 
-                        // Œ³‚ÌŠ‚É–ß‚·
+                        // å…ƒã®æ‰€ã«æˆ»ã™
                         weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
                         weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
                     })
@@ -2498,32 +2498,32 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ©”šw¦ ƒPƒC
+    /// è‡ªçˆ†æŒ‡ç¤º ã‚±ã‚¤
     /// </summary>
     public void SuicideAttack()
     {
         var kei = battleManager.GetCurrentBattler();
         var weapons = kei.GetComponent<KeiWeaponController>();
         var target = targetBattlers[0];
-        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // ˜ø™S‚ğæ“¾
+        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // å‚€å„¡ã‚’å–å¾—
 
-        // ‚±‚Ì“Áê‹Z‚ğíœ
+        // ã“ã®ç‰¹æ®ŠæŠ€ã‚’å‰Šé™¤
         kei.SetAbilityActive("SuicideAttack", false);
         kei.SetAbilityActive("Reprogram", false);
         kei.SetAbilityActive("EffeciencyBoost", false);
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(kei.transform);
         string abilityName = LocalizationManager.Localize("Ability.SuicideAttack");
         floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), kei.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.SuicideAttack"), CustomColor.abilityName())));
 
         const float chargeTime = 0.5f;
 
-        // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+        // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
         FadeEffect fadeEffect = puppet.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(chargeTime, 0.05f, puppet.Graphic);
 
@@ -2565,10 +2565,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 floatingText = CreateFloatingText(target.transform);
                 floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - puppet.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-                // ƒƒO ({0}@‚ª©”š‚·‚éI{1} ‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                // ãƒ­ã‚° ({0}ã€€ãŒè‡ªçˆ†ã™ã‚‹ï¼{1} ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Suicide"), puppet.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
-                // ‘¦€
+                // å³æ­»
                 puppet.DeductHP(puppet, 99999, true);
             })
             .AppendInterval(1.2f)
@@ -2579,25 +2579,25 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ƒnƒbƒLƒ“ƒO‚µ‚½ƒLƒƒƒ‰‚ª”­“®‚Å‚«‚é‹Z
+    /// ãƒãƒƒã‚­ãƒ³ã‚°ã—ãŸã‚­ãƒ£ãƒ©ãŒç™ºå‹•ã§ãã‚‹æŠ€
     /// </summary>
     public void Suicide()
     {
         var self = battleManager.GetCurrentBattler();
         var target = targetBattlers[0];
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(self.transform);
         string abilityName = LocalizationManager.Localize("Ability.Suicide");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Suicide"), CustomColor.abilityName())));
 
         const float chargeTime = 0.5f;
 
-        // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+        // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
         FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(chargeTime, 0.05f, self.Graphic);
 
@@ -2636,10 +2636,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 floatingText = CreateFloatingText(target.transform);
                 floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-                // ƒƒO ({0}@‚ª©”š‚·‚éI{1} ‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                // ãƒ­ã‚° ({0}ã€€ãŒè‡ªçˆ†ã™ã‚‹ï¼{1} ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Suicide"), self.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
-                // ‘¦€
+                // å³æ­»
                 self.DeductHP(self, 99999, true);
             })
             .AppendInterval(1.2f)
@@ -2650,20 +2650,20 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ‹ ƒŠƒtƒ@ƒNƒ^ƒŠƒ“ƒO
+    /// äº¬ ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°
     /// </summary>
     public void Reprogram()
     {
         var kei = battleManager.GetCurrentBattler();
         var weapons = kei.GetComponent<KeiWeaponController>();
-        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // ˜ø™S‚ğæ“¾
+        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // å‚€å„¡ã‚’å–å¾—
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(kei.transform);
         string abilityName = LocalizationManager.Localize("Ability.Reprogram");
         floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), kei.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Reprogram"), CustomColor.abilityName())));
 
@@ -2690,7 +2690,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 int defenseAmt = Mathf.FloorToInt((float)puppet.defense * 0.33f);
                 puppet.defense += defenseAmt;
 
-                // ƒƒO ({0}@‚ÌUŒ‚—Í‚ª{1}“_‘‰ÁB–hŒä—Í{2}“_‘‰ÁB)
+                // ãƒ­ã‚° ({0}ã€€ã®æ”»æ’ƒåŠ›ãŒ{1}ç‚¹å¢—åŠ ã€‚é˜²å¾¡åŠ›{2}ç‚¹å¢—åŠ ã€‚)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Reprogram"), puppet.CharacterNameColored, 
                     CustomColor.AddColor(attackAmt, CustomColor.damage()), CustomColor.AddColor(defenseAmt, CustomColor.SP())));
 
@@ -2699,21 +2699,21 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ‹ ƒVƒXƒeƒ€C•œ
+    /// äº¬ ã‚·ã‚¹ãƒ†ãƒ ä¿®å¾©
     /// </summary>
     public void EffeciencyBoost()
     {
 
         var kei = battleManager.GetCurrentBattler();
         var weapons = kei.GetComponent<KeiWeaponController>();
-        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // ˜ø™S‚ğæ“¾
+        var puppet = weapons.ControlledUnit.GetComponent<Battler>(); // å‚€å„¡ã‚’å–å¾—
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(kei.transform);
         string abilityName = LocalizationManager.Localize("Ability.EffeciencyBoost");
         floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), kei.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.EffeciencyBoost"), CustomColor.abilityName())));
 
@@ -2740,7 +2740,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                 battleManager.ChangeBattlerTurnOrder(puppet);
 
-                // ƒƒO ({0}@‚Ì HP‚ª {1} ‰ñ•œ‚µ‚½I)
+                // ãƒ­ã‚° ({0}ã€€ã® HPãŒ {1} å›å¾©ã—ãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.HealHP"), puppet.CharacterNameColored, CustomColor.AddColor(healAmt, CustomColor.heal())));
 
 
@@ -2749,7 +2749,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             });
     }
 
-    /// ‹‚ÌƒfƒtƒHƒ‹ƒgUŒ‚
+    /// äº¬ã®ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆæ”»æ’ƒ
     public void KeiAttack()
     {
         var self = battleManager.GetCurrentBattler();
@@ -2772,10 +2772,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         Battler puppet = null; 
         if (weapons.ControlledUnit != null)
         {
-            puppet = weapons.ControlledUnit.GetComponent<Battler>(); // ˜ø™S‚ğæ“¾
+            puppet = weapons.ControlledUnit.GetComponent<Battler>(); // å‚€å„¡ã‚’å–å¾—
         }
 
-        // •Ší‚Ì“®‚«‚ğˆê’U~‚ß‚é
+        // æ­¦å™¨ã®å‹•ãã‚’ä¸€æ—¦æ­¢ã‚ã‚‹
         if (left)
         {
             weapons.leftWeapon.SetEnableMovement(false);
@@ -2793,17 +2793,17 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         const float StayTime = 0.25f;
         const float ReturnTime = 0.5f;
 
-        // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+        // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
         FadeEffect fadeEffect = weapon.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(ChargeTime, 0.02f, weapon.GetComponent<Image>());
 
-        // ˜ø™S‚ğ”ñ•\¦
+        // å‚€å„¡ã‚’éè¡¨ç¤º
         if (puppet != null)
         {
             puppet.SetTransparent(0.1f, ChargeTime * 0.5f);
         }
 
-        // ƒƒO (xxx@‚ÌUŒ‚I)
+        // ãƒ­ã‚° (xxxã€€ã®æ”»æ’ƒï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Attack"), self.CharacterNameColored));
         
         DOTween.Sequence().AppendInterval(ChargeTime)
@@ -2836,7 +2836,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 target.Shake(0.75f);
                 target.PlayAnimation(BattlerAnimationType.attacked);
 
-                // ƒƒO ({0}@‚É@{1}@‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                // ãƒ­ã‚° ({0}ã€€ã«ã€€{1}ã€€ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                 // VFX
@@ -2895,13 +2895,13 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ‹@•’ÊUŒ‚‚˜‚Q
+    /// äº¬ã€€æ™®é€šæ”»æ’ƒï½˜ï¼’
     /// </summary>
     public void KeiDoubleAttack(bool isLeftWeapon, Battler lastTarget)
     {
         var self = battleManager.GetCurrentBattler();
 
-        // “G‚Ì‹‚Ì‚İ—LŒø
+        // æ•µã®äº¬ã®ã¿æœ‰åŠ¹
         if (!self.isEnemy) return;
 
         var weapons = self.GetComponent<KeiWeaponController>();
@@ -2914,10 +2914,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         Battler puppet = null;
         if (weapons.ControlledUnit != null)
         {
-            puppet = weapons.ControlledUnit.GetComponent<Battler>(); // ˜ø™S‚ğæ“¾
+            puppet = weapons.ControlledUnit.GetComponent<Battler>(); // å‚€å„¡ã‚’å–å¾—
         }
 
-        // •Ší‚Ì“®‚«‚ğˆê’U~‚ß‚é
+        // æ­¦å™¨ã®å‹•ãã‚’ä¸€æ—¦æ­¢ã‚ã‚‹
         if (left)
         {
             weapons.leftWeapon.SetEnableMovement(false);
@@ -2935,17 +2935,17 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         const float StayTime = 0.25f;
         const float ReturnTime = 0.5f;
 
-        // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+        // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
         FadeEffect fadeEffect = weapon.gameObject.AddComponent<FadeEffect>();
         fadeEffect.Initialize(ChargeTime, 0.02f, weapon.GetComponent<Image>());
 
-        // ˜ø™S‚ğ”ñ•\¦
+        // å‚€å„¡ã‚’éè¡¨ç¤º
         if (puppet != null)
         {
             puppet.SetTransparent(0.1f, ChargeTime * 0.5f);
         }
 
-        // ƒƒO (xxx@‚ÌUŒ‚I)
+        // ãƒ­ã‚° (xxxã€€ã®æ”»æ’ƒï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Attack"), self.CharacterNameColored));
 
         DOTween.Sequence().AppendInterval(ChargeTime)
@@ -2978,7 +2978,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 target.Shake(0.75f);
                 target.PlayAnimation(BattlerAnimationType.attacked);
 
-                // ƒƒO ({0}@‚É@{1}@‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                // ãƒ­ã‚° ({0}ã€€ã«ã€€{1}ã€€ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
                 // VFX
@@ -3029,14 +3029,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// ‹AƒAƒ“ƒhƒƒCƒh‚ğ¢Š«‚·‚é‚©AƒAƒ“ƒhƒƒCƒh‚ğ‹­‰»
+    /// äº¬ã€ã‚¢ãƒ³ãƒ‰ãƒ­ã‚¤ãƒ‰ã‚’å¬å–šã™ã‚‹ã‹ã€ã‚¢ãƒ³ãƒ‰ãƒ­ã‚¤ãƒ‰ã‚’å¼·åŒ–
     /// </summary>
     public void KeiDroneSupport()
     {
         var self = battleManager.GetCurrentBattler();
         KeiAndroidManagement androidManagement = self.GetComponent<KeiAndroidManagement>();
 
-        // •K{‚ÌƒRƒ“ƒ|ƒlƒ“ƒg‚ª–³‚¯‚ê‚Îì‚é
+        // å¿…é ˆã®ã‚³ãƒ³ãƒãƒãƒ³ãƒˆãŒç„¡ã‘ã‚Œã°ä½œã‚‹
         if (androidManagement == null)
         {
             androidManagement = self.gameObject.AddComponent<KeiAndroidManagement>();
@@ -3045,21 +3045,21 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         FloatingText floatingText;
         string abilityName;
 
-        // ãŒÀ”‚É‚½‚µ‚½
+        // ä¸Šé™æ•°ã«ãŸã—ãŸ
         if (androidManagement.GetCurrentSummonCount() >= 2)
         {
-            // ©”šUŒ‚‚ğs‚¤
+            // è‡ªçˆ†æ”»æ’ƒã‚’è¡Œã†
             var target = targetBattlers[0];
             var puppet = androidManagement.GetRandomSummon();
 
-            // ‹Z–¼‚ğ•\¦
+            // æŠ€åã‚’è¡¨ç¤º
             floatingText = CreateFloatingAbilityText(self.transform);
             abilityName = LocalizationManager.Localize("Ability.SuicideAttack");
             floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
 
             const float chargeTime = 0.5f;
 
-            // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+            // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
             FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
             fadeEffect.Initialize(chargeTime, 0.05f, self.Graphic);
 
@@ -3100,10 +3100,10 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 floatingText = CreateFloatingText(target.transform);
                 floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - puppet.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), realDamage.ToString(), 64, CustomColor.damage());
 
-                // ƒƒO ({0}@‚ª©”š‚·‚éI{1} ‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                // ãƒ­ã‚° ({0}ã€€ãŒè‡ªçˆ†ã™ã‚‹ï¼{1} ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Suicide"), puppet.CharacterNameColored, CustomColor.AddColor(realDamage, CustomColor.damage())));
 
-                // ‘¦€
+                // å³æ­»
                 puppet.DeductHP(puppet, 99999, true);
             })
             .AppendInterval(1.2f)
@@ -3114,7 +3114,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             return;
         }
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         floatingText = CreateFloatingAbilityText(self.transform);
         abilityName = LocalizationManager.Localize("Ability.DroneSupport");
         floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
@@ -3148,14 +3148,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// “ß—R‘½@—‹_‚Ì‘Š
+    /// é‚£ç”±å¤šã€€é›·ç¥ã®ç›¸
     /// </summary>
     public void PowerMode()
     {
         var nayuta = battleManager.GetCurrentBattler();
         var powermodeScript = nayuta.GetComponent<Nayuta_Powermode>();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(nayuta.transform);
         string abilityName = LocalizationManager.Localize("Ability.PowerMode");
         floatingText.Init(2.0f, nayuta.GetMiddleGlobalPosition() + new Vector2(0.0f, nayuta.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, nayuta.character_color);
@@ -3181,19 +3181,19 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 int extraDamage = powermodeScript.ExtraDamage;
                 powermodeScript.SetActive(!powermodeScript.IsActive);
 
-                // ‹Z‚ğØ‚è‘Ö‚¦
+                // æŠ€ã‚’åˆ‡ã‚Šæ›¿ãˆ
                 var ability = nayuta.GetAbility("PowerMode");
 
                 if (powermodeScript.IsActive)
                 {
-                    // ƒƒO ({0}@‚ÌUŒ‚—Í‚ª {1} ã‚ª‚Á‚½I)
+                    // ãƒ­ã‚° ({0}ã€€ã®æ”»æ’ƒåŠ›ãŒ {1} ä¸ŠãŒã£ãŸï¼)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AttackUpStart"), nayuta.CharacterNameColored, CustomColor.AddColor(powermodeScript.ExtraDamage, CustomColor.damage())));
 
                     ability.abilityNameID = LocalizationManager.Localize("Ability.PowerMode_Off");
                 }
                 else
                 {
-                    // ƒƒO ({0}@‚ÌUŒ‚—Í‚ª {1} ‰º‚ª‚Á‚½I)
+                    // ãƒ­ã‚° ({0}ã€€ã®æ”»æ’ƒåŠ›ãŒ {1} ä¸‹ãŒã£ãŸï¼)
                     battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AttackDownStart"), nayuta.CharacterNameColored, CustomColor.AddColor(extraDamage, CustomColor.damage())));
 
                     ability.abilityNameID = LocalizationManager.Localize("Ability.PowerMode_On");
@@ -3204,14 +3204,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// “ß—R‘½@–¾‹¾~…
+    /// é‚£ç”±å¤šã€€æ˜é¡æ­¢æ°´
     /// </summary>
     public void ChargeAttack()
     {
         var nayuta = battleManager.GetCurrentBattler();
         var powermodeScript = nayuta.GetComponent<Nayuta_Powermode>();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(nayuta.transform);
         string abilityName = LocalizationManager.Localize("Ability.ChargeAttack");
         floatingText.Init(2.0f, nayuta.GetMiddleGlobalPosition() + new Vector2(0.0f, nayuta.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, nayuta.character_color);
@@ -3244,7 +3244,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// “ß—R‘½@â–½”ja
+    /// é‚£ç”±å¤šã€€çµ¶å‘½ç ´æ–¬
     /// </summary>
     public void Ultimate()
     {
@@ -3252,12 +3252,12 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         var target = targetBattlers[0];
         var powermodeScript = nayuta.GetComponent<Nayuta_Powermode>();
 
-        // ‹Z–¼‚ğ•\¦
+        // æŠ€åã‚’è¡¨ç¤º
         var floatingText = CreateFloatingAbilityText(nayuta.transform);
         string abilityName = LocalizationManager.Localize("Ability.Ultimate");
         floatingText.Init(2.0f, nayuta.GetMiddleGlobalPosition() + new Vector2(0.0f, nayuta.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, nayuta.character_color);
 
-        // ƒƒO ({0}@‚©‚ç‚Ì {1} I)
+        // ãƒ­ã‚° ({0}ã€€ã‹ã‚‰ã® {1} ï¼)
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), nayuta.CharacterNameColored,
                                                  CustomColor.AddColor(LocalizationManager.Localize("Ability.Ultimate"), CustomColor.abilityName())));
 
@@ -3272,7 +3272,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         nayuta.ColorTint(Color.magenta, 1.0f);
         nayuta.Shake(0.5f);
 
-        // ƒLƒƒƒ‰ˆÚ“®‚Ì€”õ
+        // ã‚­ãƒ£ãƒ©ç§»å‹•ã®æº–å‚™
         Transform originalParent = nayuta.transform.parent;
         int originalChildIndex = nayuta.transform.GetSiblingIndex();
         var originalPos = nayuta.RectTransform.position;
@@ -3297,7 +3297,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 nayuta.SetTransparent(1.0f, 0.01f);
                 nayuta.RectTransform.position = new Vector3(target.RectTransform.position.x + 1000.0f, target.RectTransform.position.y, target.RectTransform.position.z);
 
-                // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+                // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
                 FadeEffect fadeEffect = nayuta.gameObject.AddComponent<FadeEffect>();
                 fadeEffect.Initialize(1.0f, 0.05f, nayuta.Graphic);
 
@@ -3333,7 +3333,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 floatingText = AbilityExecute.CreateFloatingText(target.transform);
                 floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), target.GetMiddleGlobalPosition() + new Vector2(0.0f, 100.0f), damage.ToString(), 64, CustomColor.damage());
 
-                // ƒƒO ({0}@‚É@{1}@‚Ìƒ_ƒ[ƒW‚ğ—^‚¦‚½I)
+                // ãƒ­ã‚° ({0}ã€€ã«ã€€{1}ã€€ã®ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚’ä¸ãˆãŸï¼)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Damage"), target.CharacterNameColored, CustomColor.AddColor(damage, CustomColor.damage())));
             })
             .AppendInterval(chargeTime * 0.5f)
@@ -3346,14 +3346,14 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     }
 
     /// <summary>
-    /// “ß—R‘½@(“G)UŒ‚
+    /// é‚£ç”±å¤šã€€(æ•µ)æ”»æ’ƒ
     /// </summary>
     public void NayutaAttack()
     {
         var nayuta = battleManager.GetCurrentBattler();
         NayutaEnemyScript nayutaScript = nayuta.GetComponent<NayutaEnemyScript>();
 
-        // •K{‚ÌƒRƒ“ƒ|ƒlƒ“ƒg‚ª–³‚¯‚ê‚Îì‚é
+        // å¿…é ˆã®ã‚³ãƒ³ãƒãƒãƒ³ãƒˆãŒç„¡ã‘ã‚Œã°ä½œã‚‹
         if (nayutaScript == null)
         {
             nayutaScript = nayuta.gameObject.AddComponent<NayutaEnemyScript>();
@@ -3374,7 +3374,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
             .AppendInterval(0.5f)
             .AppendCallback(() =>
             {
-                // ƒƒO ({0} ‚ªŸ‚Ì•W“I‚Æ‚³‚ê‚Ä‚¢‚éB)
+                // ãƒ­ã‚° ({0} ãŒæ¬¡ã®æ¨™çš„ã¨ã•ã‚Œã¦ã„ã‚‹ã€‚)
                 battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.NayutaLockOn"), nayutaScript.target.CharacterNameColored));
                 battleManager.NextTurn(false);
             });
@@ -3382,14 +3382,184 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
         else
         {
             // attack
-            // c‘œ¶¬ƒRƒ“ƒ|ƒlƒ“ƒg
+            // æ®‹åƒç”Ÿæˆã‚³ãƒ³ãƒãƒãƒ³ãƒˆ
             FadeEffect fadeEffect = nayuta.gameObject.AddComponent<FadeEffect>();
             fadeEffect.Initialize(0.4f, 0.01f, nayuta.GetGraphicRectTransform().GetComponent<Image>());
             battleManager.Attack(nayuta, nayutaScript.target);
 
-            // ƒŠƒZƒbƒg
+            // ãƒªã‚»ãƒƒãƒˆ
             nayutaScript.target = null;
         }
+    }
+
+    /// <summary>
+    /// ãŠåº§ã‚Š
+    /// </summary>
+    public void SitDown()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // ãƒ­ã‚° ãƒ€ã‚¤ãƒ¤ã€€ãŠåº§ã‚Šï¼ã€€ãˆã‚‰ã„ï¼ï¼
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.SitDown"), self.CharacterNameColored));
+
+        // æŠ€åã‚’è¡¨ç¤º
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.SitDown");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // SE
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(1.0f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// åš™ã¿ã¤ã
+    /// </summary>
+    public void Bite()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        // æŠ€åã‚’è¡¨ç¤º
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Bite");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ãƒ­ã‚° ({0}ã€€ã® æ”»æ’ƒ ï¼)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Attack"), self.CharacterNameColored));
+
+        // ã‚­ãƒ£ãƒ©ç§»å‹•ã®æº–å‚™
+        Transform originalParent = self.transform.parent;
+        int originalChildIndex = self.transform.GetSiblingIndex();
+
+        var targetPos = target.GetComponent<RectTransform>().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 1.5f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 1.5f, targetPos.y);
+        var originalPos = self.GetComponent<RectTransform>().position;
+        const float characterMoveTime = 0.35f;
+        const float animationTime = 0.8f;
+        const float strikeTime = 0.1f;
+        const float attackStayTime = 0.35f;
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+                    // move
+                    self.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // change character hirachy temporary
+                    self.transform.SetParent(target.transform);
+                })
+                .AppendInterval(animationTime)
+                .AppendCallback(() =>
+                {
+                    var position = target.GetComponent<RectTransform>().position;
+                    position = target.isEnemy ? new Vector2(position.x - target.GetCharacterSize().x * 0.5f, position.y) : new Vector2(position.x + target.GetCharacterSize().x * 0.5f, position.y);
+                    self.DOComplete(true);
+                    self.GetComponent<RectTransform>().DOMove(position, strikeTime).SetEase(Ease.Linear);
+
+                    // SE
+                    AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
+                })
+                .AppendInterval(strikeTime)
+                .AppendCallback(() =>
+                {
+                    // attack
+                    self.PlayAnimation(BattlerAnimationType.attacked);
+                    self.SpawnAttackVFX(target);
+                    AudioManager.Instance.PlaySFX("Attacked", 1f);
+                    target.Shake(0.75f);
+                })
+                .AppendInterval(attackStayTime)
+                .AppendCallback(() =>
+                {
+                    self.GetComponent<RectTransform>().DOMove(originalPos, characterMoveTime);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // return to original parent
+                    self.transform.SetParent(originalParent);
+                    self.transform.SetSiblingIndex(originalChildIndex);
+
+                    target.PlayAnimation(BattlerAnimationType.idle);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+
+                    // stun for 1 turn
+                    battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
+                });
+    }
+
+    /// <summary>
+    /// æ€è€ƒåœæ­¢
+    /// </summary>
+    public void StopThinking()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.StopThinking"), CustomColor.abilityName())));
+
+        // æŠ€åã‚’è¡¨ç¤º
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.StopThinking");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Sleep");
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(1.0f)
+                .AppendCallback(() =>
+                {
+                    battleManager.AddBuffToBattler(self, BuffType.attack_up, UnityEngine.Random.Range(2, 6), UnityEngine.Random.Range(20, 40));
+                    battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// ç™ºæƒ…
+    /// </summary>
+    public void Horny()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // ãƒ­ã‚° ({0}ã€€ã®ã€€{1}ï¼)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Horny"), CustomColor.abilityName())));
+
+        // æŠ€åã‚’è¡¨ç¤º
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Horny");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Sleep");
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(1.0f)
+                .AppendCallback(() =>
+                {
+                    battleManager.AddBuffToBattler(self, BuffType.horny, 3, 0);
+                    battleManager.NextTurn(false);
+                });
     }
     #endregion abilities
 }

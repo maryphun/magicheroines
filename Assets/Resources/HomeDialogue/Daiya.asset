@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f3a5ff1615580840a975018bfffbf21, type: 3}
+  m_Name: Daiya
+  m_EditorClassIdentifier: 
+  pathName: Daiya
+  isDLCCharacter: 1
+  characterSprite: {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
+  dialogueList:
+  - startStage: 0
+    endStage: 10
+    dialogueID: HomeChar.Daiya_DLC_1-1
+    clip: {fileID: 8300000, guid: e1d5a66884c6f8b4aaac185b61ffdf09, type: 3}
+    sprite: {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
+  - startStage: 0
+    endStage: 10
+    dialogueID: HomeChar.Daiya_DLC_1-2
+    clip: {fileID: 8300000, guid: e5276c43b457e7347b407ae9a50fd41e, type: 3}
+    sprite: {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
+  - startStage: 0
+    endStage: 10
+    dialogueID: HomeChar.Daiya_DLC_1-3
+    clip: {fileID: 8300000, guid: 8809d700ee9cf9542b892cdd53d618ca, type: 3}
+    sprite: {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}
+  - startStage: 0
+    endStage: 10
+    dialogueID: HomeChar.Daiya_DLC_1-4
+    clip: {fileID: 8300000, guid: 39fdf14084214b44caa4e4d1f4258eae, type: 3}
+    sprite: {fileID: 21300000, guid: 5791c03ff57eae54d9ad9ff690397b90, type: 3}

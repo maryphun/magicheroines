@@ -105,6 +105,12 @@ public class CharacterDataPanel : MonoBehaviour
             skillAvailable = skillAvailable.Select(_ => false).ToArray();
         }
 
+        // 残りのアイコンはいらない
+        for (int i = abilities.Count; i < skillAvailable.Length; i++)
+        {
+            skillAvailable[i] = false;
+        }
+
         // ボタンを初期化
         for (int i = 0; i < skillButtonList.Length; i++)
         {

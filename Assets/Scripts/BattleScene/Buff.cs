@@ -36,6 +36,7 @@ public enum BuffType
     continuous_action,
     repel,
     disarm,
+    horny,
 
     max,
 }
@@ -233,6 +234,20 @@ public static class BuffManager
             data.battleLogEnd = string.Empty;
             BuffList.Add(BuffType.disarm, data);
         }
+        // horny
+        {
+            BuffData data = new BuffData();
+            data.icon = BuffManager.LoadSubSprite("Icon/CuteRPG_Icons_Red", "CuteRPG_Icons_Red_10");
+            data.name = LocalizationManager.Localize("Buff.Horny");
+            data.start = HornyStart;
+            data.end = HornyUpdate;
+            data.update = HornyEnd;
+            data.isBad = true;
+            data.battleLogStart = LocalizationManager.Localize("BattleLog.Horny");
+            data.battleLogUpdate = string.Empty;
+            data.battleLogEnd = string.Empty;
+            BuffList.Add(BuffType.horny, data);
+        }
 
         floatingTextOrigin = Resources.Load<GameObject>("Prefabs/FloatingNumber");
         isInitialized = true;
@@ -347,4 +362,8 @@ public static class BuffManager
     public static void DisarmStart(Battler target, int value) { target.EnableNormalAttack = false; }
     public static void DisarmUpdate(Battler target, int value) { }
     public static void DisarmEnd(Battler target, int value) { target.EnableNormalAttack = true; }
+
+    public static void HornyStart(Battler target, int value) {  }
+    public static void HornyUpdate(Battler target, int value) { }
+    public static void HornyEnd(Battler target, int value) {  }
 }

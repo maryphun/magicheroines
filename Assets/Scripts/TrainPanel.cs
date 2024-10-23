@@ -268,6 +268,23 @@ public class TrainPanel : MonoBehaviour
             // ポイント不足
             if (ProgressManager.Instance.GetCurrentResearchPoint() < cost[2]) coreBtn.interactable = false;
         }
+
+        // DLC特殊処理
+        if (DLCManager.isDLCEnabled)
+        {
+            if (characters[currentIndex].characterData.characterID == 12) // ダイヤ
+            {
+                if (corruptActionBtn.interactable)
+                {
+                    // 闇落ちシナリオまだ終わってない
+                    hornyActionBtn.interactable = false;
+                    coreBtn.interactable = false;
+
+                    hornyActionCost.text = LocalizationManager.Localize("System.ResearchConditionDaiya");
+                    coreCost.text = LocalizationManager.Localize("System.ResearchConditionDaiya");
+                }
+            }
+        }
     }
 
     /// <summary>
