@@ -96,8 +96,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -1359,7 +1359,7 @@ MonoBehaviour:
     text: "\u300C\u305D\u3046\u3060\u306A\u2026\u3057\u304B\u3057\u4ECA\u306E\u6642\u9593\u3067\u6570\u4EBA\u306E\u6226\u95D8\u54E1\u306E\u30B3\u30F3\u30C8\u30ED\u30FC\u30EB\u6A29\u9650\u306F\u53D6\u308A\u623B\u3057\u305F\u3002\u300D"
     localizeID: Dialog.DLC2-3-17(1)
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 74, y: 357, z: 0}
+  graphPosition: {x: 302, y: 335, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
