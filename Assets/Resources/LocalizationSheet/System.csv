@@ -26,6 +26,7 @@ System.BrainwashTraining,洗脳調教,Brainwash,洗腦調教,洗脳調教
 System.HolyCoreTraining,聖核研究,Seikaku Research,聖核研究,聖核研究
 System.ResearchPointCost,研究ポイント消耗：,Research Pts Cost:,消耗研究點數：,研究ポイント消耗：
 System.ResearchComplete,調教完了,Training Complete,調教結束,調教完了
+System.ResearchConditionDaiya,洗脳調教の終わりに解放,,,
 System.Back,戻る,Back,退後,戻る
 System.Confirm,確定,Confirm,確定,確定
 System.OptionPanel,設定,Option,設定,設定
@@ -365,7 +366,7 @@ Equipment.Kei_Info,装備者以外のパーティーメンバーが全員15点�
 Equipment.Nayuta,那由多の聖核,那由多の聖核,那由多的聖核,那由多の聖核
 Equipment.Nayuta_Info,装備者は毎ターン攻撃力を5~15点増加する。,装備者は毎ターン攻撃力を5~15点増加する。,装備者的攻撃力在每回合增加5~15点。,装備者は毎ターン攻撃力を5~15点増加する。
 Equipment.Diamond,ダイヤモンドの聖核,,,
-Equipment.Diamond_Info,行動不能になる時20%のHPで一回復活する。,,,
+Equipment.Diamond_Info,行動不能になる時35%のHPで一回復活する。,,,
 Items,アイテム名とその説明文,アイテム名とその説明文,アイテム名とその説明文,アイテム名とその説明文
 Item.Croissant,クロワッサン,クロワッサン,可頌,クロワッサン
 Item.Croissant_Info,エレガントな味覚を楽しむための特別な軽食。,エレガントな味覚を楽しむための特別な軽食。,能夠隨時體驗優雅的味道的方便輕食。,エレガントな味覚を楽しむための特別な軽食。
@@ -539,6 +540,10 @@ Ability.DivineRapier,ディバインキャリバー,ディバインキャリバ�
 Ability.DivineRapier_Info,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。,對一名敵人造成傷害，並同時將對方的防御力降低至一個極端。,敵単体を攻撃し、防御力を極端まで低下させてそして無力化する。
 Ability.StunShield,トラップシールド,トラップシールド,陷阱盾,トラップシールド
 Ability.StunShield_Info,次にエレナを攻撃するものは一時行動不能になる。,次にエレナを攻撃するものは一時行動不能になる。,下一個攻擊艾蓮娜的敵人將會暫時陷入行動不能狀態。,次にエレナを攻撃するものは一時行動不能になる。
+Ability.SitDown,お座り,,,
+Ability.SitDown_Info,ダイヤちゃんは犬としてよく躾されている。ご主人様のコマンドに応じて座ることができる。,,,
+Ability.Bite,噛みつく,,,
+Ability.Bite_Info,敵単体を噛んで1ターン行動不能にする。,,,
 HomeCharacter,ホーム台詞,ホーム台詞,ホーム台詞,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」,"「Hello, how can I help you?」",「您好，找我有什麼事嗎？」,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」,"「Docter, we look forward to seeing you in action.」",「博士，我很期待你的活躍。」,「ドクター、貴方の活躍を期待しています。」
@@ -642,6 +647,7 @@ BattleLog.NayutaEquip,[{0}] {1}　の攻撃力が {2} 上がった！,[{0}] {1}'
 BattleLog.KeiSpawn,{0} が {1} に呼び出された。,{0} is summoned by {1}.,{1}把{0}給召喚過來了。,{1}把{0}給召喚過來了。
 BattleLog.NayutaLockOn,{0} が次の標的とされている。,{0} is the next target.,{0} 被鎖定爲目標了。,{0} 被鎖定爲目標了。
 BattleLog.DaiyaRevive,ダイヤモンドの聖核装備の特殊効果が発動した。　{0} はまだ戦える！,,,
+BattleLog.SitDown,{0}　お座り！　ちゃんとできてえらい！！,,,
 Demo,体験版,Trial,体験版,体験版
 Demo.Start,"本ソフトウェアは体験版になります。
 一部機能が制限されており、キャラクターボイスがまだ全部実装されておりません。

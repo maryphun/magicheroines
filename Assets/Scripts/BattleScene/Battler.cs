@@ -551,7 +551,8 @@ public class Battler : MonoBehaviour
                     name_UI.DOFade(1.0f, 1.0f);
 
                     // VFX
-                    VFXSpawner.SpawnVFX("Holy", graphic.transform, GetMiddleGlobalPosition());
+                    var vfx = VFXSpawner.SpawnVFX("Holy", graphic.transform, GetMiddleGlobalPosition());
+                    vfx.transform.localScale = new Vector3(3, 3, 3);
 
                     // delete icon
                     Destroy(graphicRect.Find("DeadIcon").gameObject);
