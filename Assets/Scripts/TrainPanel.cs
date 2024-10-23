@@ -61,8 +61,8 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_HornyNovelNameList.Add(5, new List<string> { "Erena/E_Horny_1", "Erena/E_Horny_2" });
         CharacterID_To_HornyNovelNameList.Add(6, new List<string> { "Kei/K_Horny_1", "Kei/K_Horny_2" });
         CharacterID_To_HornyNovelNameList.Add(7, new List<string> { "Nayuta/N_Horny_1", "Nayuta/N_Horny_2" });
-        CharacterID_To_HornyNovelNameList.Add(11, new List<string> { "DLC/H_Horny_1", "DLC/H_Horny_2", "DLC/H_Horny_3" });
-        CharacterID_To_HornyNovelNameList.Add(12, new List<string> { "DLC/D_Horny_1", "DLC/D_Horny_2", "DLC/D_Horny_3" });
+        CharacterID_To_HornyNovelNameList.Add(11, new List<string> { "DLC/H_Horny_1", "DLC/H_Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(12, new List<string> { "DLC/D_Horny_1", "DLC/D_Horny_2" });
         // 洗脳シナリオリスト
         CharacterID_To_BrainwashNovelNameList.Add(3, new List<string> { "Akiho/A_BrainWash_1", "Akiho/A_BrainWash_2", "Akiho/A_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(4, new List<string> { "Rikka/R_BrainWash_1", "Rikka/R_BrainWash_2", "Rikka/R_BrainWash_3" });
@@ -77,8 +77,8 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_CoreNovelNameList.Add(5, new List<string> { "Erena/E_Core_1", "Erena/E_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(6, new List<string> { "Kei/K_Core_1", "Kei/K_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/N_Core_1", "Nayuta/N_Core_2" });
-        CharacterID_To_CoreNovelNameList.Add(11, new List<string> { "DLC/H_Core_1", "DLC/H_Core_2", "DLC/H_Core_3" });
-        CharacterID_To_CoreNovelNameList.Add(12, new List<string> { "DLC/D_Core_1", "DLC/D_Core_2", "DLC/D_Core_3" });
+        CharacterID_To_CoreNovelNameList.Add(11, new List<string> { "DLC/H_Core_1" });
+        CharacterID_To_CoreNovelNameList.Add(12, new List<string> { "DLC/D_Core_1" });
     }
 
     private void Awake()

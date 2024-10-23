@@ -26,3 +26,23 @@ MonoBehaviour:
     dialogueID: HomeChar.Kei_DLC_1-2
     clip: {fileID: 0}
     sprite: {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+  - startStage: 5
+    endStage: 6
+    dialogueID: HomeChar.Kei_DLC_1-3
+    clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+  - startStage: 5
+    endStage: 6
+    dialogueID: HomeChar.Kei_DLC_1-4
+    clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+  - startStage: 6
+    endStage: 8
+    dialogueID: HomeChar.Kei_DLC_1-5
+    clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}
+  - startStage: 6
+    endStage: 8
+    dialogueID: HomeChar.Kei_DLC_1-6
+    clip: {fileID: 0}
+    sprite: {fileID: 21300000, guid: afc3371661d5d754888d7f9ac70b576c, type: 3}

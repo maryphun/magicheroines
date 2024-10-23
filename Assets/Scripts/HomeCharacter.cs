@@ -220,10 +220,10 @@ public class HomeCharacter : MonoBehaviour
         } while ((randomIndex == lastDialogueIndex
         || dialogues[currentCharacterIndex].dialogueList[randomIndex].startStage > currentStage
         || dialogues[currentCharacterIndex].dialogueList[randomIndex].endStage <= currentStage)
-        && attempts < 10); // 10回試してできなかったらホームキャラ出さない
+        && attempts < 50); // 10回試してできなかったらホームキャラ出さない
 
         // 無限ループ回避
-        if (attempts == 10)
+        if (attempts == 50)
         {
             randomIndex = 0;
             Debug.Log("<color=red>出せるセリフがない</color>");

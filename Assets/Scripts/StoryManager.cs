@@ -82,11 +82,11 @@ public class StoryManager : MonoBehaviour
 
                 case 5:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.AddEnemy("Daiya_Enemy");
                         BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetBattleBack(BattleBack.Basement);
                         BattleSetup.SetReward(350, 25);
-                        StartCoroutine(SceneTransition("Battle", 0));
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-0 PreBattle", true, GoToBattle);
                     }
                     break;
 
@@ -115,7 +115,7 @@ public class StoryManager : MonoBehaviour
                         BattleSetup.AddEnemy("Drone");
                         BattleSetup.AddEnemy("Android");
                         BattleSetup.SetBattleBGM("BattleTutorial");
-                        BattleSetup.SetReward(350, 25);
+                        BattleSetup.SetReward(0, 10000);
                         StartCoroutine(SceneTransition("Battle", 0));
                     }
                     break;
@@ -342,17 +342,27 @@ public class StoryManager : MonoBehaviour
                         // ホーム画面にヒスイを登場させる
                         HomeDialogue hisui = Resources.Load<HomeDialogue>("HomeDialogue/Hisui");
                         ProgressManager.Instance.AddHomeCharacter(hisui);
+                        ProgressManager.Instance.RemoveHomeCharacter("Kei(DLC)");
+
                         AutoSave.ExecuteAutoSave();
                     }
                     break;
                 case 4:
                     {
                         NovelSingletone.Instance.PlayNovel("DLC/DLC 1-3", true, GoToRewardScreen);
+
+                        // ホーム画面にヒスイを登場させる
+                        HomeDialogue kei_dlc = Resources.Load<HomeDialogue>("HomeDialogue/Kei(DLC)");
+                        ProgressManager.Instance.AddHomeCharacter(kei_dlc);
+                        ProgressManager.Instance.RemoveHomeCharacter("Hisui");
                     }
                     break;
                 case 5:
                     {
                         NovelSingletone.Instance.PlayNovel("DLC/DLC 2-0 AfterBattle", true, GoToRewardScreen);
+
+                        PlayerCharacterDefine Daiya = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/13.Daiya");
+                        ProgressManager.Instance.AddPlayerCharacter(Daiya);
                     }
                     break;
                 case 6:

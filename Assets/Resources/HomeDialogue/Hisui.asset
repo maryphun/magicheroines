@@ -16,13 +16,13 @@ MonoBehaviour:
   isDLCCharacter: 1
   characterSprite: {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
   dialogueList:
-  - startStage: 5
-    endStage: 9
+  - startStage: 4
+    endStage: 5
     dialogueID: HomeChar.Hisui_DLC_1-1
     clip: {fileID: 8300000, guid: 8572f2ffda188ee448b1e3faa6bad5ce, type: 3}
     sprite: {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
-  - startStage: 5
-    endStage: 9
+  - startStage: 4
+    endStage: 5
     dialogueID: HomeChar.Hisui_DLC_1-2
     clip: {fileID: 8300000, guid: 57b067df2b747984cbf990f708f283a6, type: 3}
     sprite: {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}

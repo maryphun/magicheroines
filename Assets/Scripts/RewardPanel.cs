@@ -152,6 +152,7 @@ public class RewardPanel : MonoBehaviour
     private bool IsNewHeroinGet()
     {
         if (!BattleSetup.isStoryMode) return false; // 資源調達クエストでヒロインを捉えることはない
+        if (BattleSetup.isDLCBattle) return IsNewDLCHeroinGet();
         if (isHeroinDisplayed)
         {
             // UIを非表示にする
@@ -186,6 +187,37 @@ public class RewardPanel : MonoBehaviour
             case 15: // 那由多
                 newHeroin.sprite = heroinSprite[4];
                 s = "<color=#8b0000>" + LocalizationManager.Localize("Name.Nayuta") + "</color>";
+                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    /// <summary>
+    /// 新しく聖核戦姫を捕獲できたか(D_LC用)
+    /// </summary>
+    private bool IsNewDLCHeroinGet()
+    {
+        if (isHeroinDisplayed)
+        {
+            // UIを非表示にする
+            heroinPanel.DOFade(0.0f, 1.0f);
+            return false;
+        }
+
+        int stage = (ProgressManager.Instance.GetCurrentDLCStageProgress() - 1); // ステージ番号はすでに更新されているので-1で見る
+        string s = string.Empty;
+        switch (stage)
+        {
+            case 5: // ダイヤ
+                newHeroin.sprite = heroinSprite[5];
+                s = "<color=#D4BEE4>" + LocalizationManager.Localize("Name.Diamond") + "</color>";
+                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                return true;
+            case 8: // ヒスイ
+                newHeroin.sprite = heroinSprite[6];
+                s = "<color=#C9E9D2>" + LocalizationManager.Localize("Name.Hisui") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
             default:
