@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b1c0590c3a05a449be16b7a076744a, type: 3}
+  m_Name: 14.K22
+  m_EditorClassIdentifier: 
+  detail:
+    characterID: 13
+    isDLCCharacter: 1
+    icon: {fileID: -1898223942, guid: c38bf17788cd53346a2c51a8e3dad95d, type: 3}
+    sprite: {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+    animations:
+      idle: {fileID: 0}
+      attack: {fileID: 0}
+      magic: {fileID: 0}
+      item: {fileID: 0}
+      attacked: {fileID: 0}
+      retire: {fileID: 0}
+    color: {r: 0.6839622, g: 0.9062994, b: 1, a: 1}
+    nameID: Name.Kei_Battler
+    starting_level: 1
+    base_hp: 250
+    base_mp: 0
+    base_attack: 3
+    base_defense: 0
+    base_speed: 1
+    hp_growth: 16
+    mp_growth: 0
+    attack_growth: 2
+    defense_growth: 0
+    speed_growth: 2
+    levelUp_base_cost: 0
+    levelUp_cost_increment: 0
+    is_heroin: 1
+    characterStatus:
+    - moodNameID: Mood.Despair
+      textColor: {r: 1, g: 0.4292453, b: 0.53728944, a: 1}
+      character: {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
+      requiredCorruptionEpisode: 1
+      requiredHornyEpisode: 0
+    - moodNameID: Mood.Resist
+      textColor: {r: 0.6117647, g: 0.14509805, b: 0.6666667, a: 1}
+      character: {fileID: 21300000, guid: 8a2ffb2d746131b4bb436316c13115e7, type: 3}
+      requiredCorruptionEpisode: 2
+      requiredHornyEpisode: 0
+    corruptedName: Name.Kei_Battler
+    coreEquipment: {fileID: 0}
+    abilities: []
+  battler: {fileID: 0}

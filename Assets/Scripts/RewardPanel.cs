@@ -36,6 +36,8 @@ public class RewardPanel : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool isFirst = true;
     [SerializeField] private bool isHeroinDisplayed = false;
+    [SerializeField] private bool isGetHisui = false;
+    [SerializeField] private bool isGetKei = false;
 
     private void Start()
     {
@@ -44,9 +46,9 @@ public class RewardPanel : MonoBehaviour
         {
             ProgressManager.Instance.InitializeProgress();
             BattleSetup.Reset(true);
-            BattleSetup.SetReward(Random.Range(100, 300), Random.Range(200, 2000));
-            BattleSetup.AddItemReward("ã~ã}î†");
-            ProgressManager.Instance.StageProgress(3);
+            BattleSetup.SetBattleDLC(true);
+            BattleSetup.SetReward(0, 10000);
+            ProgressManager.Instance.DLCStageProgress(8);
         }
 #endif
 
@@ -111,7 +113,17 @@ public class RewardPanel : MonoBehaviour
         else if (IsNewHeroinGet())
         {
             heroinPanel.DOFade(1.0f, 1.0f);
+            
             isHeroinDisplayed = true;
+
+            // DLCì¡éÍèàóù
+            if (true || DLCManager.isDLCEnabled)
+            {
+                if (isGetHisui && !isGetKei)
+                {
+                    isHeroinDisplayed = false;
+                }
+            }
 
             panelCanvas.DOKill(false);
             panelCanvas.alpha = 0.0f;
@@ -215,10 +227,24 @@ public class RewardPanel : MonoBehaviour
                 s = "<color=#D4BEE4>" + LocalizationManager.Localize("Name.Diamond") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
-            case 8: // ÉqÉXÉC
-                newHeroin.sprite = heroinSprite[6];
-                s = "<color=#C9E9D2>" + LocalizationManager.Localize("Name.Hisui") + "</color>";
-                newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+            case 8: // ÉqÉXÉCÇ∆ãû
+                if (!isGetHisui)
+                {
+                    newHeroin.sprite = heroinSprite[6];
+                    s = "<color=#C9E9D2>" + LocalizationManager.Localize("Name.Hisui") + "</color>";
+                    newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
+                    isGetHisui = true;
+                    isHeroinDisplayed = false;
+                }
+                else
+                {
+                    newHeroin.sprite = heroinSprite[7];
+                    s = "<color=#C9E9D2>" + LocalizationManager.Localize("Name.Kei_Battler") + "</color>";
+                    newHeroinText.text = System.String.Format(LocalizationManager.Localize("System.KeiDowngrade"), LocalizationManager.Localize("Name.Kei_Corrupted"), s);
+                    newHeroinText.rectTransform.localPosition = new Vector3(newHeroinText.rectTransform.localPosition.x, newHeroinText.rectTransform.localPosition.y + 20.0f, newHeroinText.rectTransform.localPosition.z);
+                    isGetKei = true;
+                    isGetHisui = true;
+                }
                 return true;
             default:
                 return false;

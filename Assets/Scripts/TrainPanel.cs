@@ -39,6 +39,7 @@ public class TrainPanel : MonoBehaviour
     [SerializeField] private Image newCoreEquipmentIcon;
     [SerializeField] private CanvasGroup researchPointPanel;
     [SerializeField] private HomeCharacter homeCharacterScript;
+    [SerializeField] private GameObject corruptionGauge, coreResearchGauge;
 
     [Header("Debug")]
     [SerializeField] private Vector2 previousCharacterBtnPos, nextCharacterBtnPos;
@@ -63,6 +64,7 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_HornyNovelNameList.Add(7, new List<string> { "Nayuta/N_Horny_1", "Nayuta/N_Horny_2" });
         CharacterID_To_HornyNovelNameList.Add(11, new List<string> { "DLC/H_Horny_1", "DLC/H_Horny_2" });
         CharacterID_To_HornyNovelNameList.Add(12, new List<string> { "DLC/D_Horny_1", "DLC/D_Horny_2" });
+        CharacterID_To_HornyNovelNameList.Add(13, new List<string> { });
         // 洗脳シナリオリスト
         CharacterID_To_BrainwashNovelNameList.Add(3, new List<string> { "Akiho/A_BrainWash_1", "Akiho/A_BrainWash_2", "Akiho/A_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(4, new List<string> { "Rikka/R_BrainWash_1", "Rikka/R_BrainWash_2", "Rikka/R_BrainWash_3" });
@@ -71,6 +73,7 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_BrainwashNovelNameList.Add(7, new List<string> { "Nayuta/N_BrainWash_1", "Nayuta/N_BrainWash_2", "Nayuta/N_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(11, new List<string> { "DLC/H_BrainWash_1", "DLC/H_BrainWash_2", "DLC/H_BrainWash_3" });
         CharacterID_To_BrainwashNovelNameList.Add(12, new List<string> { "DLC/D_BrainWash_1", "DLC/D_BrainWash_2", "DLC/D_BrainWash_3" });
+        CharacterID_To_BrainwashNovelNameList.Add(13, new List<string> { "DLC/Kei_DLC_BrainWash_1", "DLC/Kei_DLC_BrainWash_2" });
         // 聖核研究シナリオリスト
         CharacterID_To_CoreNovelNameList.Add(3, new List<string> { "Akiho/A_Core_1", "Akiho/A_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(4, new List<string> { "Rikka/R_Core_1", "Rikka/R_Core_2" });
@@ -79,6 +82,7 @@ public class TrainPanel : MonoBehaviour
         CharacterID_To_CoreNovelNameList.Add(7, new List<string> { "Nayuta/N_Core_1", "Nayuta/N_Core_2" });
         CharacterID_To_CoreNovelNameList.Add(11, new List<string> { "DLC/H_Core_1" });
         CharacterID_To_CoreNovelNameList.Add(12, new List<string> { "DLC/D_Core_1" });
+        CharacterID_To_CoreNovelNameList.Add(13, new List<string> { });
     }
 
     private void Awake()
@@ -283,6 +287,24 @@ public class TrainPanel : MonoBehaviour
                     hornyActionCost.text = LocalizationManager.Localize("System.ResearchConditionDaiya");
                     coreCost.text = LocalizationManager.Localize("System.ResearchConditionDaiya");
                 }
+            }
+            
+            if (characters[currentIndex].characterData.characterID == 13) // K22
+            {
+                // K22の場合だけUIが変わる
+                hornyActionBtn.gameObject.SetActive(false);
+                coreBtn.gameObject.SetActive(false);
+
+                corruptionGauge.gameObject.SetActive(false);
+                coreResearchGauge.gameObject.SetActive(false);
+            }
+            else
+            {
+                hornyActionBtn.gameObject.SetActive(true);
+                coreBtn.gameObject.SetActive(true);
+
+                corruptionGauge.gameObject.SetActive(true);
+                coreResearchGauge.gameObject.SetActive(true);
             }
         }
     }

@@ -1294,7 +1294,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Hisui_Corrupted
+      Name: Name.Hisui
       text: "\u300C\u2026\u2026\uFF01\u305D\u3093\u306A\u2026\u3063\uFF01\uFF1F\u2026\u306A\u3093\u3067\uFF01\uFF1F\u300D"
       localizationID: Dialog.DLC2-2-47
       back: {fileID: 21300000, guid: f0540501f844429498f374d16fe392a4, type: 3}
@@ -1484,7 +1484,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name._Kei_Corrupted
+      Name: Name.Kei_Corrupted
       text: "\u300C\u8056\u6838\u6226\u59EB\u3068\u3057\u3066\u306E\u81EA\u610F\u8B58\u3092\u6301\u305F\u305B\u306A\u304C\u3089\u4E2D\u9014\u534A\u7AEF\u306B\u5815\u3068\u3057\u3066\u6226\u95D8\u54E1\u306B\u3059\u308B\u306E\u306F\u306A\u304B\u306A\u304B\u5927\u5909\u3060\u3063\u305F\u3088\u3002\u300D"
       localizationID: Dialog.DLC2-2-52
       back: {fileID: 21300000, guid: f0540501f844429498f374d16fe392a4, type: 3}

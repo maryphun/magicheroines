@@ -17190,6 +17190,8 @@ MonoBehaviour:
   newCoreEquipmentIcon: {fileID: 1631287216}
   researchPointPanel: {fileID: 256656853}
   homeCharacterScript: {fileID: 281226100}
+  corruptionGauge: {fileID: 1237465802}
+  coreResearchGauge: {fileID: 1722567708}
   previousCharacterBtnPos: {x: 0, y: 0}
   nextCharacterBtnPos: {x: 0, y: 0}
   characters: []

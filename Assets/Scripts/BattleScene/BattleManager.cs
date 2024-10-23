@@ -1153,6 +1153,9 @@ public class Battle : MonoBehaviour
             {
                 // 敗北イベント(ストーリー引き続き)
                 DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("DLC/DLC 2-2 AfterBattle", true, sceneTransition.EndScene); });
+
+                // BGM切り替え
+                AudioManager.Instance.StopMusicWithFade(2.0f);
             }
         }
     }

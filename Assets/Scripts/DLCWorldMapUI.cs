@@ -111,6 +111,21 @@ public class DLCWorldMapUI : MonoBehaviour
                 return false;
             }
         }
+        
+        if (ProgressManager.Instance.GetCurrentDLCStageProgress() >= 8) // Finalステージ
+        {
+            if (!ProgressManager.Instance.HasCharacter(12, true)) // ダイヤ闇落ち
+            {
+                NovelSingletone.Instance.PlayNovel("DLC/Condition Final", true);
+                return false;
+            }
+
+            if (ProgressManager.Instance.IsCharacterInFormationParty(6)) // 京編入禁止
+            {
+                NovelSingletone.Instance.PlayNovel("DLC/Condition Final 2", true);
+                return false;
+            }
+        }
 
         return true;
     }

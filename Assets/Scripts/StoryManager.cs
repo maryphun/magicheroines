@@ -112,11 +112,12 @@ public class StoryManager : MonoBehaviour
 
                 case 8:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
+                        BattleSetup.AddEnemy("Hisui_Enemy_Final");
+                        BattleSetup.AddEnemy("Kei_Enemy_Final");
                         BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetBattleBack(BattleBack.CentreTower);
                         BattleSetup.SetReward(0, 10000);
-                        StartCoroutine(SceneTransition("Battle", 0));
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-3 PreBattle", true, GoToBattle);
                     }
                     break;
 
@@ -376,6 +377,7 @@ public class StoryManager : MonoBehaviour
 
                         // setup event battle
                         BattleSetup.Reset(false);
+                        BattleSetup.SetBattleDLC(true);
                         BattleSetup.SetAllowEscape(false);
                         BattleSetup.SetEventBattle(true);
                         BattleSetup.SetReward(0, 0);
@@ -388,6 +390,15 @@ public class StoryManager : MonoBehaviour
                 case 8:
                     {
                         NovelSingletone.Instance.PlayNovel("DLC/DLC 2-3 AfterBattle", true, GoToRewardScreen);
+
+                        // 京のホームキャラはこれで終了
+                        ProgressManager.Instance.RemoveHomeCharacter("Kei(DLC)");
+
+                        // キャラ追加
+                        PlayerCharacterDefine Hisui = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/12.Hisui");
+                        ProgressManager.Instance.AddPlayerCharacter(Hisui);
+                        PlayerCharacterDefine K22 = Resources.Load<PlayerCharacterDefine>("PlayerCharacterList/14.K22");
+                        ProgressManager.Instance.AddPlayerCharacter(K22);
                     }
                     break;
                 default:

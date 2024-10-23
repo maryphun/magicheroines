@@ -1182,6 +1182,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b0bd88528c734ad43b03fbe01fc8629e, type: 3}
   - {fileID: 21300000, guid: 04e351ae46b46d84093cdaf04ea76f77, type: 3}
   - {fileID: 21300000, guid: 1710c3a8618b9be448c537fb5e789777, type: 3}
+  - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
   panel: {fileID: 1321126039}
   panelCanvas: {fileID: 1321126043}
   itemName: {fileID: 608954666}
@@ -1195,6 +1196,8 @@ MonoBehaviour:
   newHeroinText: {fileID: 919697963}
   isFirst: 1
   isHeroinDisplayed: 0
+  isGetHisui: 0
+  isGetKei: 0
 --- !u!1 &898277048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1394,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 30, y: 0, z: 0, w: 0}
+  m_margin: {x: 30, y: 0, z: 30, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1512,7 +1515,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

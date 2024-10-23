@@ -170,7 +170,7 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
     /// </summary>
     public bool IsDLCEnded()
     {
-        const int EndingProgress = 8;
+        const int EndingProgress = 9;
         return playerData.currentDLCStage >= EndingProgress;
     }
 
@@ -375,6 +375,18 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
             FormationSlotData[] partyListCopy = (FormationSlotData[])playerData.formationCharacters.Clone();
             return partyListCopy;
         }
+    }
+
+    /// <summary>
+    /// 特定のキャラがフォーメーション編成されているかどうか
+    /// </summary>
+    /// <param name="characterID"></param>
+    /// <returns></returns>
+    public bool IsCharacterInFormationParty(int characterID)
+    {
+        var rtn = playerData.formationCharacters.FirstOrDefault(c => c.characterID == characterID);
+
+        return rtn != null;
     }
 
     /// <summary>

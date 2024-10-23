@@ -92,6 +92,7 @@ System.Reward,成果報酬,Reward,報酬,成果報酬
 System.Receive,受取,Accept,受取,受取
 System.Heroin,聖核戦姫,Seikaku-princess,聖核戦姫,聖核戦姫
 System.Trapped,{s}を捕獲完了！,{s} captured!,成功捕獲{s}！,{s}を捕獲完了！
+System.KeiDowngrade,「{0}」が下級戦闘員「{1}」に降格されました。,,,
 System.TrainPanelUpdate,調教画面がアップデートされました,Training panel have been updated.,調教画面的內容更新了。,調教画面がアップデートされました
 System.NovelLog,ログ,Log,記錄,ログ
 System.NovelAuto,オート開始・停止,Auto (ON/OFF),自動播放 (ON/OFF),オート開始・停止
@@ -598,6 +599,8 @@ World.Chapter3-3,「六花の調教は進んでますか？とっとと堕とし
 World.Chapter5-3,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,"「Yakumo Nayuta is a formidable opponent. I hope we can make use of Seidō Erena here...""」",「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」,「八雲那由多は強敵です。“清藤エレナ”を戦力に出来ればいいのですが…」
 World.Chapter6-1,「ついに我々が世界を征服する時です。戦力は万全にしておきましょう」,,,
 World.DLC-2,「脱走者の捜索に人手を割けません。出動人数は2人が限界です。」,,,
+World.DLC-8,「先にダイヤモンドの調教を済ませて」,,,
+World.DLC-8-2,このステージでは「猫宮 京」を出動させることができません。,,,
 BattleLog,戦闘ログ,Battlelog,戦闘ログ,戦闘ログ
 BattleLog.Attack,{0}　の攻撃！,{0}'s attack!,{0}　的攻擊！,{0}　の攻撃！
 BattleLog.Damage,{0}　に　{1}　のダメージを与えた！,Deals {1} damage to {0}!,向　{0}　造成　{1}　點傷害！,{0}　に　{1}　のダメージを与えた！
