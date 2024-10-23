@@ -48,7 +48,7 @@ public class StoryManager : MonoBehaviour
                         ProgressManager.Instance.AddHomeCharacter(kei_dlc);
 
                         // NH‹L˜^ŠJ•úy–¾•ä•ƒNƒ[ƒ“í“¬ˆõz
-                        ProgressManager.Instance.AddNewRecord("Record.AkihoDLC", "Nursery");
+                        ProgressManager.Instance.AddNewRecord("Record.AkihoDLC", "AkihoDLC");
 
                         AutoSave.ExecuteAutoSave();
                     }
@@ -101,6 +101,9 @@ public class StoryManager : MonoBehaviour
                         BattleSetup.SetBattleBGM("BattleTutorial");
                         BattleSetup.SetReward(350, 25);
                         StartCoroutine(SceneTransition("Battle", 0));
+
+                        // NH‹L˜^ŠJ•úy–¾•ä•ƒNƒ[ƒ“í“¬ˆõz
+                        ProgressManager.Instance.AddNewRecord("Record.ErenaDLC", "ErenaDLC");
                     }
                     break;
 
