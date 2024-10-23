@@ -21,7 +21,7 @@ MonoBehaviour:
     _index: 0
     _nodePosition:
       serializedVersion: 2
-      x: -140
+      x: -155
       y: -9
       width: 151
       height: 97
@@ -96,8 +96,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 2d88d6275c44d054fbda9a09602f493a, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -800,8 +800,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 86cbda811d7f7694994733b2de07ad66, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -1651,7 +1651,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -1694,8 +1694,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: ab588321c91c3e9459881f960ecbd6fa, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -3187,9 +3187,9 @@ MonoBehaviour:
     _index: 3
     _nodePosition:
       serializedVersion: 2
-      x: 542
+      x: 541
       y: -9
-      width: 64
+      width: 163
       height: 97
     _nextParagraphIndex: -1
     nodeName: 
@@ -3219,7 +3219,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -3262,8 +3262,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 68930b2d8dc4d614793f0316fbac1bda, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -4522,16 +4522,16 @@ MonoBehaviour:
     _index: 0
     _nodePosition:
       serializedVersion: 2
-      x: 33
+      x: 30
       y: -9
-      width: 120
+      width: 121
       height: 77
     _nextParagraphIndex: 1
     nodeName: 
     text: "\u300C\u2026\u2026\u3067\u306F\u751F\u7523\u5E79\u90E8\u30A2\u30AD\u30DB\u3001\u8CA1\u52D9\u5E79\u90E8\u30A8\u30EC\u30CA\u3001\u8ECD\u4E8B\u5E79\u90E8\u30CA\u30E6\u30BF\u3001\u6280\u8853\u5E79\u90E8\u30B1\u30A4\u3001\u305D\u308C\u305E\u308C\u5831\u544A\u3092\u3002\u300D"
     localizeID: Dialog.DLC-P-18
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: 102, y: 311, z: 0}
+  graphPosition: {x: 375, y: 250, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}

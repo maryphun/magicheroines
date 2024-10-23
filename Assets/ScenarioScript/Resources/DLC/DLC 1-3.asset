@@ -96,8 +96,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 86cbda811d7f7694994733b2de07ad66, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -361,7 +361,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -404,8 +404,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -476,9 +476,9 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 000000000000000000000000
+      howCharas: 010000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -522,7 +522,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -566,7 +566,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -610,7 +610,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -654,7 +654,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -698,7 +698,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -800,7 +800,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 010000000200000002000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -844,7 +844,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -888,7 +888,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -932,7 +932,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -946,8 +946,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 86cbda811d7f7694994733b2de07ad66, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -976,7 +976,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -1020,7 +1020,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -1064,7 +1064,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -1108,7 +1108,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -1152,7 +1152,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -1196,7 +1196,7 @@ MonoBehaviour:
       backFadeSpeed: 1
       howCharas: 000000000000000000000000
       charas:
-      - {fileID: 21300000, guid: dfb41203c157ec3418543252c4780458, type: 3}
+      - {fileID: 21300000, guid: 00b00f6c0646a544b99f9d224fe67b46, type: 3}
       - {fileID: 0}
       - {fileID: 21300000, guid: fa110c203fc9fff4297f9ea7cbf1321b, type: 3}
       charaFadeColor:
@@ -1234,7 +1234,7 @@ MonoBehaviour:
       Name: 
       text: "\u8CA1\u56E3\u64AE\u5F71\u5BA4"
       localizationID: Dialog.DLC1-3-27
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
@@ -1255,7 +1255,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -1278,7 +1278,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u2026\u2026\u3068\u3046\u3068\u3046\u64AE\u5F71\u65E5\u3067\u3059\u306D\u2026\u4E88\u5B9A\u901A\u308A\u306A\u3089\u4ECA\u65E5\u3053\u3053\u306B\u30A8\u30EC\u30CA\u5148\u8F29\u304C\u2026\u2026\uFF01)"
       localizationID: Dialog.DLC1-3-28
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1298,8 +1298,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -1322,7 +1322,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u5FF5\u306E\u305F\u3081\u30C0\u30A4\u30E4\u3055\u3093\u306B\u3082\u9023\u7D61\u3057\u3066\u304A\u304D\u307E\u3057\u305F\u304C\u2026)"
       localizationID: Dialog.DLC1-3-29
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1366,7 +1366,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u2026\u2026\u4ECA\u65E5\u304C\u6B63\u5FF5\u5834\u3067\u3059\u3063\u2026\u7D76\u5BFE\u306B\u30A8\u30EC\u30CA\u5148\u8F29\u306B\u4F1A\u308F\u306A\u3044\u3068\uFF01)"
       localizationID: Dialog.DLC1-3-30
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1410,7 +1410,7 @@ MonoBehaviour:
       Name: 
       text: "\u305D\u306E\u6642\u5927\u52E2\u306E\u6226\u95D8\u54E1\u306B\u56F2\u307E\u308C\u3066\u4E00\u4EBA\u306E\u5973\u6027\u304C\u64AE\u5F71\u5BA4\u306B\u5165\u3063\u3066\u304F\u308B"
       localizationID: Dialog.DLC1-3-31
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1454,7 +1454,7 @@ MonoBehaviour:
       Name: Name.Erena_Corrupted
       text: "\u300C\u3055\u3066\u2026\u2026\u4ECA\u65E5\u306F\u30D7\u30ED\u30D1\u30AC\u30F3\u30C0AV\u306E\u64AE\u5F71\u3067\u3059\u306D\u3002\u300D"
       localizationID: Dialog.DLC1-3-32
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1498,7 +1498,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "\u300C\u2026\u2026\u2026\u2026\u2026\u2026\uFF01\uFF01\uFF01\u300D"
       localizationID: Dialog.DLC1-3-33
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1542,7 +1542,7 @@ MonoBehaviour:
       Name: Name.Erena_Corrupted
       text: "\u300C\u3067\u306F\u64AE\u5F71\u306B\u5165\u308A\u307E\u3057\u3087\u3046\u304B\u3002\u4E0B\u7D1A\u6226\u95D8\u54E1\u3001\u3053\u308C\u3082\u8CA1\u56E3\u306E\u5927\u4E8B\u306A\u4EFB\u52D9\u3067\u3059\u306E\u3067\u6C17\u3092\u629C\u304B\u306A\u3044\u3088\u3046\u306B\u3002\u300D"
       localizationID: Dialog.DLC1-3-34
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1586,7 +1586,7 @@ MonoBehaviour:
       Name: Name.Noob_Battler
       text: "\u300C\u300C\u300C\u30AD\u30A3\u30FC\u30FC\u30FC\u30FC\u30FC\u30FC\u30C3\uFF01\uFF01\uFF01\u300D\u300D\u300D"
       localizationID: Dialog.DLC1-3-35
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1630,7 +1630,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u2026\u2026\u2026\u3084\u3063\u3071\u308A\uFF01\u30A8\u30EC\u30CA\u5148\u8F29\u3063\uFF01)"
       localizationID: Dialog.DLC1-3-36
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1674,7 +1674,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u305D\u308C\u306B\u3042\u306E\u683C\u597D\u2026\u2026\u8056\u6838\u6226\u59EB\u306B\u5909\u8EAB\u3057\u3066\u308B\u2026\uFF01\uFF1F)"
       localizationID: Dialog.DLC1-3-37
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1718,7 +1718,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u3063\u2026\u2026\u4E8B\u60C5\u306F\u5206\u304B\u308A\u307E\u305B\u3093\u304C\u2026\u2026\u2026\u30A8\u30EC\u30CA\u5148\u8F29\u306F\u307E\u3060\u3063\u2026\u2026)"
       localizationID: Dialog.DLC1-3-38
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1762,7 +1762,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u2026\u2026\u2026\u5F8C\u306F\u9699\u3092\u898B\u3066\u8FD1\u3065\u3051\u3055\u3048\u3059\u308C\u3070\u2026\u3063\uFF01)"
       localizationID: Dialog.DLC1-3-39
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1806,7 +1806,7 @@ MonoBehaviour:
       Name: Name.Erena_Corrupted
       text: "\u300C\u2026\u2026\u3067\u306F\u64AE\u5F71\u3092\u59CB\u3081\u307E\u3057\u3087\u3046\u304B\u3002\u307E\u305A\u306F\u8857\u3067\u4E00\u822C\u5E02\u6C11\u3092\u8972\u3046\u4E0B\u7D1A\u6226\u95D8\u54E1\u9054\u306E\u30B7\u30FC\u30F3\u3067\u3059\u306D\u3002\u300D"
       localizationID: Dialog.DLC1-3-40
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -1850,7 +1850,7 @@ MonoBehaviour:
       Name: 
       text: 
       localizationID: 
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -2017,7 +2017,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -2060,8 +2060,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -5470,7 +5470,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\u3046\u3045\uFF5E\uFF5E\uFF5E\uFF5E\u3063\u3001\u6F14\u6280\u2026\u3068\u306F\u3044\u3048\u2026\u3042\u3093\u306A\u4E8B\u3092\u2026\u3063\u2665)"
       localizationID: Dialog.DLC1-3-118
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 2
       backFadeColor: {r: 0, g: 0, b: 0, a: 1}
       backFadeSpeed: 1
@@ -5491,7 +5491,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -5514,7 +5514,7 @@ MonoBehaviour:
       Name: Name.Battler
       text: "\u300C46\u53F7\u3061\u3083\u3093\u3044\u3044\u306D\u3048\uFF1F\u521D\u3081\u3066\u306EAV\u64AE\u5F71\u3068\u306F\u601D\u3048\u306A\u3044\u6F14\u6280\u3060\u3063\u305F\u3088\u3002\u300D"
       localizationID: Dialog.DLC1-3-119
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -5534,8 +5534,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -5558,7 +5558,7 @@ MonoBehaviour:
       Name: Name.Hisui_Battler
       text: "\u300C\u304D\u3001\u304D\u3043\u30FC\u30FC\u30FC\u30FC\u30FC\u3063\uFF01\u304A\u8912\u3081\u9802\u304D\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\uFF01\u300D"
       localizationID: Dialog.DLC1-3-120
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -5602,7 +5602,7 @@ MonoBehaviour:
       Name: Name.Battler
       text: "\u300C\u3069\u3046\uFF1F\u3053\u306E\u5F8C\u30B9\u30FC\u30C4\u8131\u3044\u3067\u751F\u30CF\u30E1\u30BB\u30C3\u30AF\u30B9\u3067\u3082\u2015\u2015\u2015\u2015\u300D"
       localizationID: Dialog.DLC1-3-121
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -5646,7 +5646,7 @@ MonoBehaviour:
       Name: Name.Hisui
       text: "(\uFF01\u3001\u30A8\u30EC\u30CA\u5148\u8F29\u304C\u3042\u305D\u3053\u306B\u2026\u4ECA\u306A\u3089\u2026\uFF01)"
       localizationID: Dialog.DLC1-3-122
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -5690,7 +5690,7 @@ MonoBehaviour:
       Name: Name.Hisui_Battler
       text: "\u300C\u30AD\u30A3\u2015\u2015\u2015\u2015\u30C3\uFF01\u7533\u3057\u8A33\u3042\u308A\u307E\u305B\u3093\uFF01\u751F\u30CF\u30E1\u30BB\u30C3\u30AF\u30B9\u3092\u3057\u305F\u3044\u306E\u306F\u3084\u307E\u3084\u307E\u3067\u3059\u304C\u3001\u3053\u308C\u3088\u308A\u5225\u306E\u4EFB\u52D9\u304C\u3042\u308B\u306E\u3067\u2026\uFF01\u300D"
       localizationID: Dialog.DLC1-3-123
-      back: {fileID: 21300000, guid: 7f311308d92d77240aea7df3aa9abf77, type: 3}
+      back: {fileID: 21300000, guid: 950bc7c2d5b9175438d8de6448d81091, type: 3}
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
@@ -6503,7 +6503,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -6546,8 +6546,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 61839e03ca4edc14d863d143498a0790, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -6943,7 +6943,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -6986,8 +6986,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 93af743b4f672224ba522beccdf2931a, type: 3}
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -7074,8 +7074,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 93af743b4f672224ba522beccdf2931a, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
