@@ -62,6 +62,7 @@ public class HomeCharacter : MonoBehaviour
     public void SetupCharacter()
     {
         int randomIndex;
+        if (dialogues.Length == 0) return;
         if (dialogues.Length <= 1) currentCharacterIndex = -1;
         do
         {
@@ -78,6 +79,7 @@ public class HomeCharacter : MonoBehaviour
     public void SwapCharacter()
     {
         int randomIndex;
+        if (dialogues.Length == 0) return;
         if (dialogues.Length <= 1) currentCharacterIndex = -1;
         do
         {
@@ -142,6 +144,7 @@ public class HomeCharacter : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        if (dialogues.Length == 0) return;
         if (ProgressManager.Instance.HasUnnotifiedRecord()) return; // 侵食記録通知が出るのでキャラは喋らない
 
         // Display Dialogue
@@ -208,12 +211,23 @@ public class HomeCharacter : MonoBehaviour
         // 表示できるセリフを取得
         int randomIndex;
         if (dialogues[currentCharacterIndex].dialogueList.Count <= 1) lastDialogueIndex = -1;
+
+        int attempts = 0;
         do
         {
             randomIndex = Random.Range(0, dialogues[currentCharacterIndex].dialogueList.Count);
-        } while (randomIndex == lastDialogueIndex
+            attempts++;
+        } while ((randomIndex == lastDialogueIndex
         || dialogues[currentCharacterIndex].dialogueList[randomIndex].startStage > currentStage
-        || dialogues[currentCharacterIndex].dialogueList[randomIndex].endStage <= currentStage);
+        || dialogues[currentCharacterIndex].dialogueList[randomIndex].endStage <= currentStage)
+        && attempts < 10); // 10回試してできなかったらホームキャラ出さない
+
+        // 無限ループ回避
+        if (attempts == 10)
+        {
+            randomIndex = 0;
+            Debug.Log("<color=red>出せるセリフがない</color>");
+        }
 
         lastDialogueIndex = randomIndex;
         return dialogues[currentCharacterIndex].dialogueList[randomIndex];

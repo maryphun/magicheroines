@@ -338,6 +338,11 @@ public class StoryManager : MonoBehaviour
                 case 3:
                     {
                         NovelSingletone.Instance.PlayNovel("DLC/DLC 1-2", true, GoToRewardScreen);
+
+                        // ホーム画面にヒスイを登場させる
+                        HomeDialogue hisui = Resources.Load<HomeDialogue>("HomeDialogue/Hisui");
+                        ProgressManager.Instance.AddHomeCharacter(hisui);
+                        AutoSave.ExecuteAutoSave();
                     }
                     break;
                 case 4:
