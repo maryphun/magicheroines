@@ -363,7 +363,7 @@ public static class BuffManager
     public static void DisarmUpdate(Battler target, int value) { }
     public static void DisarmEnd(Battler target, int value) { target.EnableNormalAttack = true; }
 
-    public static void HoneyStart(Battler target, int value) {  }
-    public static void HoneyUpdate(Battler target, int value) { }
-    public static void HoneyEnd(Battler target, int value) {  }
+    public static void HornyStart(Battler target, int value) {  }
+    public static void HornyUpdate(Battler target, int value) { }
+    public static void HornyEnd(Battler target, int value) {  }
 }
