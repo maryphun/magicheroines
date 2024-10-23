@@ -3399,7 +3399,7 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
     {
         var self = battleManager.GetCurrentBattler();
 
-        // ログ ダイヤちゃん　お座り！　えらい！！
+        // ログ ダイヤ　お座り！　えらい！！
         battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.SitDown"), self.CharacterNameColored));
 
         // 技名を表示
@@ -3503,6 +3503,62 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
 
                     // stun for 1 turn
                     battleManager.AddBuffToBattler(target, BuffType.stun, 1, 0);
+                });
+    }
+
+    /// <summary>
+    /// 思考停止
+    /// </summary>
+    public void StopThinking()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.StopThinking"), CustomColor.abilityName())));
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.StopThinking");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Sleep");
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(1.0f)
+                .AppendCallback(() =>
+                {
+                    battleManager.AddBuffToBattler(self, BuffType.attack_up, UnityEngine.Random.Range(2, 6), UnityEngine.Random.Range(20, 40));
+                    battleManager.NextTurn(false);
+                });
+    }
+
+    /// <summary>
+    /// 発情
+    /// </summary>
+    public void Horny()
+    {
+        var self = battleManager.GetCurrentBattler();
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.Horny"), CustomColor.abilityName())));
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.Horny");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // SE
+        AudioManager.Instance.PlaySFX("Sleep");
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(1.0f)
+                .AppendCallback(() =>
+                {
+                    battleManager.AddBuffToBattler(self, BuffType.horny, 3, 0);
+                    battleManager.NextTurn(false);
                 });
     }
     #endregion abilities
