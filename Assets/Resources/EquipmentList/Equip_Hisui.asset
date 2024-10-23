@@ -16,9 +16,9 @@ MonoBehaviour:
   equipNameID: Equipment.Hisui
   descriptionID: Equipment.Hisui_Info
   equipmentType: 2
-  effectText: +50 ATK
-  battleStartFunctionName: Equip_HisuiStart
-  battleEndFunctionName: Equip_HisuiEnd
+  effectText: 
+  battleStartFunctionName: 
+  battleEndFunctionName: 
   hp: 0
   sp: 0
   atk: 0

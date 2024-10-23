@@ -64,6 +64,19 @@ public class TurnBase : MonoBehaviour
             }
         });
 
+        // DLC 特殊処理
+        if (DLCManager.isDLCEnabled)
+        {
+            // ヒスイの聖核装備をそうびしてる者がいたら無理やり先端に持っていく
+            var conditionCharacter = characterInOrder.FirstOrDefault(c => c.Item1.equipment != null && c.Item1.equipment.pathName == "Equip_Hisui");
+            if (conditionCharacter != null)
+            {
+                // 条件を満たしたキャラクターをリストから削除して、先頭に追加
+                characterInOrder.Remove(conditionCharacter);
+                characterInOrder.Insert(0, conditionCharacter);
+            }
+        }
+
         // アイコンを並ぶ
         IconArrangeInstant();
     }

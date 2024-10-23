@@ -367,6 +367,8 @@ Equipment.Nayuta,那由多の聖核,那由多の聖核,那由多的聖核,那由
 Equipment.Nayuta_Info,装備者は毎ターン攻撃力を5~15点増加する。,装備者は毎ターン攻撃力を5~15点増加する。,装備者的攻撃力在每回合增加5~15点。,装備者は毎ターン攻撃力を5~15点増加する。
 Equipment.Diamond,ダイヤモンドの聖核,,,
 Equipment.Diamond_Info,行動不能になる時35%のHPで一回復活する。,,,
+Equipment.Hisui,ヒスイの聖核,,,
+Equipment.Hisui_Info,装備者が必ずバトルの最初に行動する。,,,
 Items,アイテム名とその説明文,アイテム名とその説明文,アイテム名とその説明文,アイテム名とその説明文
 Item.Croissant,クロワッサン,クロワッサン,可頌,クロワッサン
 Item.Croissant_Info,エレガントな味覚を楽しむための特別な軽食。,エレガントな味覚を楽しむための特別な軽食。,能夠隨時體驗優雅的味道的方便輕食。,エレガントな味覚を楽しむための特別な軽食。
@@ -544,6 +546,10 @@ Ability.SitDown,お座り,,,
 Ability.SitDown_Info,ダイヤちゃんは犬としてよく躾されている。ご主人様のコマンドに応じて座ることができる。,,,
 Ability.Bite,噛みつく,,,
 Ability.Bite_Info,敵単体を噛んで1ターン行動不能にする。,,,
+Ability.StopThinking,思考停止,,,
+Ability.StopThinking_Info,下級戦闘員には余計な思考は不要。集中力を上げてしばらく攻撃力アップ。,,,
+Ability.Horny,発情,,,
+Ability.Horny_Info,下級戦闘員の調教を最後まで受けたものはいつでも発情できる。発動者が3ターン発情状態になる。,,,
 HomeCharacter,ホーム台詞,ホーム台詞,ホーム台詞,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」,"「Hello, how can I help you?」",「您好，找我有什麼事嗎？」,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」,"「Docter, we look forward to seeing you in action.」",「博士，我很期待你的活躍。」,「ドクター、貴方の活躍を期待しています。」
