@@ -49,8 +49,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -1596,7 +1596,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Daiya.Core1-37
+      Name: Name.Battler
       text: "\u300C\u7D50\u69CB\u5F37\u3044\u8056\u6838\u6226\u59EB\u3089\u3057\u3044\u3057\u3001\u30AA\u30CA\u30DB\u3082\u3064\u3048\u3048\u306E\u304B\uFF1F\u300D"
       localizationID: Daiya.Core1-37
       back: {fileID: 21300000, guid: 79600f640a7445f4f8a1a8f0f3330113, type: 3}
@@ -4610,7 +4610,7 @@ MonoBehaviour:
     _nextChoiceIndexes: ffffffff
   _choiceList: []
   graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: -324, y: 338, z: 0}
+  graphPosition: {x: 91, y: 255, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
