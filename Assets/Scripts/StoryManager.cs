@@ -372,7 +372,17 @@ public class StoryManager : MonoBehaviour
                     break;
                 case 7:
                     {
-                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-2 AfterBattle", true, GoToRewardScreen);
+                        NovelSingletone.Instance.PlayNovel("DLC/DLC 2-2 PreBattle", true, GoToBattle);
+
+                        // setup event battle
+                        BattleSetup.Reset(false);
+                        BattleSetup.SetAllowEscape(false);
+                        BattleSetup.SetEventBattle(true);
+                        BattleSetup.SetReward(0, 0);
+                        BattleSetup.AddTeammate("8.Nayuta");
+                        BattleSetup.SetBattleBack(BattleBack.Default);
+                        BattleSetup.AddEnemy("Hisui_Enemy");
+                        BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
                     }
                     break;
                 case 8:
