@@ -46,6 +46,10 @@ public class StoryManager : MonoBehaviour
                         ProgressManager.Instance.DLCStageProgress();
                         HomeDialogue kei_dlc = Resources.Load<HomeDialogue>("HomeDialogue/Kei(DLC)");
                         ProgressManager.Instance.AddHomeCharacter(kei_dlc);
+
+                        // NH‹L˜^ŠJ•úy–¾•ä•ƒNƒ[ƒ“í“¬ˆõz
+                        ProgressManager.Instance.AddNewRecord("Record.AkihoDLC", "Nursery");
+
                         AutoSave.ExecuteAutoSave();
                     }
                     break;
