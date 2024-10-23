@@ -112,3 +112,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOut: 1
   fadeIn: 0
+  delaySeconds: 0
+  extraFrameBeforeDestruction: 0

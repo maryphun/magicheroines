@@ -453,6 +453,26 @@ public class Battler : MonoBehaviour
             if (CheckDead())
             {
                 KillBattler();
+
+                // ‘•”õ“ÁŽêˆ— (ƒ_ƒCƒ„ƒ‚ƒ“ƒh‚Ì¹Šj‘•”õ)
+                if (equipment != null && equipment.pathName == "Equip_Daiya")
+                {
+                    // ‘•”õ‚ðÁ‚·
+                    equipment = null;
+
+                    // •œŠˆ
+                    ReviveBattler(0.35f, 1.5f);
+
+                    DOTween.Sequence()
+                    .AppendInterval(1.5f)
+                    .AppendCallback(() =>
+                    {
+                        FindObjectOfType<Battle>().AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.DaiyaRevive"), CharacterNameColored));
+                        AudioManager.Instance.PlaySFX("Holy");
+                    });
+
+                    return realDamage;
+                }
             }
 
             FindObjectOfType<Battle>().UpdateTurnBaseManager(false);
@@ -504,6 +524,37 @@ public class Battler : MonoBehaviour
                     AudioManager.Instance.PlaySFX("Retired");
                     AudioManager.Instance.PlaySFX(GetSoundEffects(BattlerSoundEffectType.Retire));
                     AudioManager.Instance.PlaySFXDelay(GetCharacterVoiceName(BattlerSoundEffectType.Retire), 1.5f);
+                });
+    }
+
+    /// <summary>
+    /// •œŠˆ
+    /// </summary>
+    public void ReviveBattler(float hpPercentage, float delay)
+    {
+        if (isAlive) return;
+
+        isAlive = true;
+        graphic.rectTransform.localScale = originalScale;
+        PlayAnimation(BattlerAnimationType.idle);
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(delay)
+                .AppendCallback(() =>
+                {
+                    // hp ‰ñ•œ
+                    Heal((int)((float)max_hp * hpPercentage));
+
+                    UnhideBars();
+                    graphic.DOFade(1.0f, 1.0f);
+                    shadow.DOFade(1.0f, 1.0f);
+                    name_UI.DOFade(1.0f, 1.0f);
+
+                    // VFX
+                    VFXSpawner.SpawnVFX("Holy", graphic.transform, GetMiddleGlobalPosition());
+
+                    // delete icon
+                    Destroy(graphicRect.Find("DeadIcon").gameObject);
                 });
     }
 
@@ -701,6 +752,15 @@ public class Battler : MonoBehaviour
         if (mpBarFill)
         {
             mpBarFill.transform.parent.gameObject.SetActive(false);
+        }
+    }
+
+    public void UnhideBars()
+    {
+        hpBarFill.transform.parent.gameObject.SetActive(true);
+        if (mpBarFill)
+        {
+            mpBarFill.transform.parent.gameObject.SetActive(true);
         }
     }
 
