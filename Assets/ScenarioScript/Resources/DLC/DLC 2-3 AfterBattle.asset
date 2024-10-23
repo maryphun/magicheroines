@@ -52,8 +52,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -301,7 +301,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -402,8 +402,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 86cbda811d7f7694994733b2de07ad66, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -593,7 +593,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -636,8 +636,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 64eb6fb06df8b5b4ebb82cc9fde3c531, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -4029,7 +4029,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Kei_Coruppted
+      Name: Name.Kei_Corruppted
       text: "\u300C\u304A\u309B\u304A\u304A\u3063\u2665\u3001\u304A\u309B\u307B\u3063\u2665\uFF01\uFF1F\u300D"
       localizationID: Dialog.DLC2-3-102
       back: {fileID: 21300000, guid: 70294a4d77abf0f4eb16aa27f061f812, type: 3}
@@ -4551,7 +4551,7 @@ MonoBehaviour:
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
       BGM: {fileID: 0}
-      BGMStyle: 0
+      BGMStyle: 2
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -4594,8 +4594,8 @@ MonoBehaviour:
       changeNameFont: 0
       nameFont: {fileID: 0}
       nameColor: {r: 1, g: 1, b: 1, a: 1}
-      BGM: {fileID: 0}
-      BGMStyle: 0
+      BGM: {fileID: 8300000, guid: 86cbda811d7f7694994733b2de07ad66, type: 3}
+      BGMStyle: 1
       BGMLoop: 0
       BGMCount: 1
       BGMSecond: 20
@@ -5354,11 +5354,11 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 000000000000000000000000
+      howCharas: 000000000000000001000000
       charas:
       - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
       - {fileID: 0}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5402,7 +5402,7 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
       - {fileID: 0}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5446,7 +5446,7 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
       - {fileID: 0}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5704,11 +5704,11 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 000000000000000000000000
+      howCharas: 000000000000000001000000
       charas:
       - {fileID: 0}
       - {fileID: 0}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5752,7 +5752,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 0}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: 3906377d71b4ab34aaa3bcb1f76e4e8a, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5843,7 +5843,7 @@ MonoBehaviour:
       DialogueEffect: 0
       DialogueEffectStrength: 0
     - open: 0
-      Name: Name.Rikke_Corrupted
+      Name: Name.Rikka_Corrupted
       text: "\u300CK22\u53F7\u3001\u6328\u62F6\u3092\u3002\u300D"
       localizationID: Dialog.DLC2-3-134
       back: {fileID: 0}
@@ -5894,11 +5894,11 @@ MonoBehaviour:
       howBack: 0
       backFadeColor: {r: 1, g: 1, b: 1, a: 1}
       backFadeSpeed: 1
-      howCharas: 000000000000000000000000
+      howCharas: 000000000000000001000000
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5942,7 +5942,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5986,7 +5986,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -6030,7 +6030,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -6074,7 +6074,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -6118,7 +6118,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 0}
+      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -6886,8 +6886,8 @@ MonoBehaviour:
     nodeName: 
     text: "\u300C\u2026\u2026\u3075\u3046\u3001\u3053\u308C\u3067\u4E8B\u4EF6\u3082\u3072\u3068\u6BB5\u843D\u3060\u306A\u3002\u300D"
     localizeID: Dialog.DLC2-3-146(1)
-  graphScale: {x: 1, y: 1, z: 1}
-  graphPosition: {x: -2588, y: 377, z: 0}
+  graphScale: {x: 0.8695652, y: 0.8695652, z: 1}
+  graphPosition: {x: -939, y: 205, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
