@@ -1123,7 +1123,7 @@ public class Battle : MonoBehaviour
         {
             sceneTransition.EndScene(isVictory, ChangeScene);
         }
-        else
+        else if (!BattleSetup.isDLCBattle)
         {
             // チュートリアル終了
             if (ProgressManager.Instance.GetCurrentStageProgress() == 1)
@@ -1144,6 +1144,15 @@ public class Battle : MonoBehaviour
 
                 // 敗北イベント(那由多登場)
                 DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("Chapter4-3 AfterEvent", true, sceneTransition.EndScene); });
+            }
+        }
+        else if (BattleSetup.isDLCBattle)
+        {
+            // チュートリアル終了
+            if (ProgressManager.Instance.GetCurrentDLCStageProgress() == 8)
+            {
+                // 敗北イベント(ストーリー引き続き)
+                DOTween.Sequence().AppendInterval(0.5f).AppendCallback(() => { NovelSingletone.Instance.PlayNovel("DLC/DLC 2-2 AfterBattle", true, sceneTransition.EndScene); });
             }
         }
     }

@@ -21,10 +21,10 @@ MonoBehaviour:
     _index: 0
     _nodePosition:
       serializedVersion: 2
-      x: 0
+      x: 1
       y: 0
-      width: 0
-      height: 0
+      width: 167
+      height: 97
     _nextParagraphIndex: 1
     nodeName: 
     _dialogueList:
@@ -70,7 +70,7 @@ MonoBehaviour:
       backEffectStrength: 0
       charaEffects: 000000000000000000000000
       charaEffectStrength: 000000000000000000000000
-      DialogueEffect: 0
+      DialogueEffect: 1
       DialogueEffectStrength: 0
     - open: 0
       Name: Name.Hisui

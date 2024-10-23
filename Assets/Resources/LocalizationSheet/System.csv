@@ -314,6 +314,7 @@ Buff.Speed_down,素早さ下降,SPD DOWN,素早さ下降,素早さ下降
 Buff.ContinuousAction,連続行動,Continuous Action,連続行動,連続行動
 Buff.Repel,反撃,Return damage,反撃,反撃
 Buff.Disarm,無力化,Disarm,無力化,無力化
+Buff.Horny,発情,,,
 Equipment,アイテム名とその説明文,Items,アイテム名とその説明文,アイテム名とその説明文
 Equipment.NiceT-Shirt,気持ち良いTシャツ,気持ち良いTシャツ,穿起來很舒服的T衫,気持ち良いTシャツ
 Equipment.NiceT-Shirt_Info,気持ちよすぎるTシャツ、すごく動きやすい。,気持ちよすぎるTシャツ、すごく動きやすい。,舒服過頭了，很方便行動。,気持ちよすぎるTシャツ、すごく動きやすい。
@@ -623,6 +624,7 @@ BattleLog.AttackDownStart,{0}　の攻撃力が {1} 下がった！,{0}'s attack
 BattleLog.SpeedUpStart,{0}　の動きが {1} 速くなった。,{0} moved {1} faster.,{0}　的速度加快了 {1} 點。,{0}　の動きが {1} 速くなった。
 BattleLog.SpeedDownStart,{0}　の動きが {1} 鈍くなった。,{0} movement {1} slowed down.,{0}　的速度變慢了 {1} 點。,{0}　の動きが {1} 鈍くなった。
 BattleLog.Disarm,{0}　は攻撃できなくなった,{0} can no longer attack,{0}　變得不能攻擊了,{0}　は攻撃できなくなった
+BattleLog.Horny,{0}　が急に発情し始めた...,,,
 BattleLog.Stungun,{0}　から {1} を放つ！,{0} to {1}!,{0}　射出 {1}！,{0}　から {1} を放つ！
 BattleLog.AbilityExecute,{0}　からの {1}！,{1} from {0},{0}　的 {1}！,{0}　からの {1}！
 BattleLog.AbilityExecuteSelf,{0}　が{1}する。,{0} does {1}.,{0}　進行{1}。,{0}　が{1}する。
