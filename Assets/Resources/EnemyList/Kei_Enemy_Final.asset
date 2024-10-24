@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Name.Kei
   maxHP: 400
-  maxMP: 120
+  maxMP: 45
   attack: 120
   defense: 20
   speed: 17
@@ -23,9 +23,21 @@ MonoBehaviour:
   actionPattern:
   - actionType: 0
     ability: {fileID: 11400000, guid: e35916a94f0c98d4badfc8964a9a72fd, type: 2}
+    chance: 0.1
+    hasThresholdCondition: 0
+    HpThreshold: 0
+    SpThreshold: 0
+  - actionType: 1
+    ability: {fileID: 11400000, guid: 25e2fff5b0b65c445afc4ad8c38d4ebd, type: 2}
     chance: 1
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0
+  - actionType: 2
+    ability: {fileID: 11400000, guid: 6ff2cb7809195134ea88ceeb6dc56bc3, type: 2}
+    chance: 0.706
+    hasThresholdCondition: 1
+    HpThreshold: 0
+    SpThreshold: 0.4
   icon: {fileID: 1971669276, guid: 0f4c4dbea7e7a1c4da0c02f12798160b, type: 3}
   battler: {fileID: 6784901170540971542, guid: 2f921742b8c64cf458986e162ea3ba59, type: 3}
