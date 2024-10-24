@@ -863,9 +863,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 06fe511c6b10ae44199aa2ba9e476d80, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -995,9 +995,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 06fe511c6b10ae44199aa2ba9e476d80, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -1303,9 +1303,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: fca96bc8a1a9f5a458bf677a424e700b, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -1479,9 +1479,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: fca96bc8a1a9f5a458bf677a424e700b, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -2021,9 +2021,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 06fe511c6b10ae44199aa2ba9e476d80, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -2197,9 +2197,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 624593fc9fc75924b842b635eece22d2, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -2505,9 +2505,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 624593fc9fc75924b842b635eece22d2, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -2725,8 +2725,8 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
+      SE: {fileID: 8300000, guid: d485dc37d12963a488c7e264485fd431, type: 3}
+      SEStyle: 1
       SELoop: 0
       SECount: 1
       SESecond: 20
@@ -3575,9 +3575,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 06fe511c6b10ae44199aa2ba9e476d80, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -3707,9 +3707,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 06fe511c6b10ae44199aa2ba9e476d80, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -3839,9 +3839,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 624593fc9fc75924b842b635eece22d2, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -3971,9 +3971,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 624593fc9fc75924b842b635eece22d2, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -4191,9 +4191,9 @@ MonoBehaviour:
       BGMSecond: 20
       BGMFadeTime: 3
       BGMEndFadeTime: 3
-      SE: {fileID: 0}
-      SEStyle: 0
-      SELoop: 0
+      SE: {fileID: 8300000, guid: 624593fc9fc75924b842b635eece22d2, type: 3}
+      SEStyle: 1
+      SELoop: 1
       SECount: 1
       SESecond: 20
       SEFadeTime: 3
@@ -5270,7 +5270,7 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
       - {fileID: 0}
-      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
+      - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5314,7 +5314,7 @@ MonoBehaviour:
       charas:
       - {fileID: 21300000, guid: b58f5d34db9fa414284a2425b08ffb76, type: 3}
       - {fileID: 0}
-      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
+      - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5810,7 +5810,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
+      - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5854,7 +5854,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
+      - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5898,7 +5898,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
+      - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5942,7 +5942,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
+      - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -5986,7 +5986,7 @@ MonoBehaviour:
       charas:
       - {fileID: 0}
       - {fileID: 21300000, guid: f178348a89a69c049a8c0f2ace16f472, type: 3}
-      - {fileID: 21300000, guid: c37fb2e8fc115dc4c88c842085539b61, type: 3}
+      - {fileID: 0}
       charaFadeColor:
       - {r: 0, g: 0, b: 0, a: 0}
       - {r: 0, g: 0, b: 0, a: 0}
@@ -6623,7 +6623,7 @@ MonoBehaviour:
     text: "\u300C\u2026\u2026\u3075\u3046\u3001\u3053\u308C\u3067\u4E8B\u4EF6\u3082\u3072\u3068\u6BB5\u843D\u3060\u306A\u3002\u300D"
     localizeID: Dialog.DLC2-3-146(1)
   graphScale: {x: 0.7561437, y: 0.7561437, z: 1}
-  graphPosition: {x: -2519, y: 273, z: 0}
+  graphPosition: {x: -2145, y: 352, z: 0}
   havePreLocations: 0
   newLocations:
   - {fileID: 3646998453675562630, guid: 691d55b6c6e8a694a85b3471f6598051, type: 3}
