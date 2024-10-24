@@ -3679,5 +3679,130 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                 });
     }
 
+    /// <summary>
+    /// 京(LAST BOSS)
+    /// </summary>
+    public void RepairFriend()
+    {
+        // 京の武器を取得
+        var kei = battleManager.GetCurrentBattler();
+        var weapons = kei.GetComponent<KeiWeaponController>();
+
+        // 相手の資料を取得
+        // get all enemy
+        var enemies = FindAnyObjectByType<Battle>().GetAllEnemy().Where(c => c.isAlive).ToList();
+        if (enemies.Count == 1)
+        {
+            // 自分が最後の敵
+            var playerscharacter = FindAnyObjectByType<Battle>().GetAllTeammate();
+            targetBattlers[0] = playerscharacter.FirstOrDefault(c => c.isAlive);
+            KeiAttack();
+            return;
+        }
+        else
+        {
+            // 他人を優先する
+            targetBattlers[0] = enemies.FirstOrDefault(c => c.character_name != kei.character_name);
+        }
+        var target = targetBattlers[0];
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(kei.transform);
+        string abilityName = LocalizationManager.Localize("Ability.RepairFriend");
+        floatingText.Init(2.0f, kei.GetMiddleGlobalPosition() + new Vector2(0.0f, kei.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, kei.character_color);
+
+        // ログ ({0}　の　{1}！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.Usage"), kei.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.RepairFriend"), CustomColor.abilityName())));
+
+        // 武器の動きを一旦止める
+        weapons.leftWeapon.SetEnableMovement(false);
+        weapons.rightWeapon.SetEnableMovement(false);
+
+        weapons.leftWeapon.Rect.DOMove(target.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
+        weapons.rightWeapon.Rect.DOMove(target.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
+
+        // アニメション
+        const float animtionTime = 1.0f;
+        kei.PlayAnimation(BattlerAnimationType.magic);
+
+        // 残像
+        FadeEffect fadeEffect = weapons.leftWeapon.Rect.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(animtionTime, 0.05f, weapons.leftWeapon.GetComponent<Image>());
+        fadeEffect = weapons.rightWeapon.Rect.gameObject.AddComponent<FadeEffect>();
+        fadeEffect.Initialize(animtionTime, 0.05f, weapons.rightWeapon.GetComponent<Image>());
+
+        // SE
+        AudioManager.Instance.PlaySFX("Machine");
+
+        
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(animtionTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    weapons.leftWeapon.Rect.DOKill(false);
+                    weapons.rightWeapon.Rect.DOKill(false);
+
+                    var targetSprite = target.GetGraphicRectTransform();
+                    weapons.leftWeapon.transform.SetParent(targetSprite.parent);
+                    weapons.leftWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex());
+                    weapons.rightWeapon.transform.SetParent(targetSprite.parent);
+                    weapons.rightWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex() + 1);
+
+                    weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                    weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+
+                    // SE
+                    AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
+                    // アニメション
+                    kei.PlayAnimation(BattlerAnimationType.idle);
+                })
+                .AppendInterval((animtionTime * 0.5f) + 0.25f)
+                .AppendCallback(() =>
+                {
+                    // heal
+                    int amount = Mathf.FloorToInt((float)target.max_hp * 0.15f);
+                    target.Heal(amount);
+
+                    // ログ ({0}　の HPが {1} 回復した！)
+                    battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.HealHP"), target.CharacterNameColored, CustomColor.AddColor(amount, CustomColor.heal())));
+
+                    // SP
+                    floatingText = CreateFloatingText(target.transform);
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), new Vector2(0.0f, 100.0f), "+" + amount.ToString(), 64, CustomColor.heal());
+
+                    // Audio
+                    AudioManager.Instance.PlaySFX("Heal");
+                    AudioManager.Instance.PlaySFX("Machine", 0.5f);
+
+                    // 元の所に戻す
+                    weapons.leftWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
+                    weapons.rightWeapon.Rect.DOMove(kei.GetMiddleGlobalPosition(), 1f).SetEase(Ease.Linear);
+                })
+                .AppendInterval(animtionTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    weapons.leftWeapon.Rect.DOKill(false);
+                    weapons.rightWeapon.Rect.DOKill(false);
+
+                    var targetSprite = kei.GetGraphicRectTransform();
+                    weapons.leftWeapon.transform.SetParent(targetSprite.parent);
+                    weapons.leftWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex());
+                    weapons.rightWeapon.transform.SetParent(targetSprite.parent);
+                    weapons.rightWeapon.transform.SetSiblingIndex(targetSprite.GetSiblingIndex() + 1);
+
+                    weapons.leftWeapon.Rect.DOLocalMove(weapons.LeftWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                    weapons.rightWeapon.Rect.DOLocalMove(weapons.RightWeaponLocalPosition, animtionTime * 0.5f).SetEase(Ease.Linear);
+                })
+                .AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    weapons.leftWeapon.SetEnableMovement(true);
+                    weapons.rightWeapon.SetEnableMovement(true);
+                    battleManager.NextTurn(false);
+                });
+    }
+
     #endregion abilities
 }
