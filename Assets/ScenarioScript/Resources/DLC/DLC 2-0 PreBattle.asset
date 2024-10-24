@@ -105,11 +105,11 @@ MonoBehaviour:
       BGMEndFadeTime: 3
       SE: {fileID: 8300000, guid: 155f8ae63fd788c4385a9376d75dfdaa, type: 3}
       SEStyle: 1
-      SELoop: 0
+      SELoop: 1
       SECount: 1
       SESecond: 20
-      SEFadeTime: 3
-      SEEndFadeTime: 3
+      SEFadeTime: 0
+      SEEndFadeTime: 0
       backEffect: 0
       backEffectStrength: 0
       charaEffects: 000000000000000004000000

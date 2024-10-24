@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PrivateDrone
   m_EditorClassIdentifier: 
   enemyName: Name.PrivateDrone
-  maxHP: 150
+  maxHP: 250
   maxMP: 10
-  attack: 66
-  defense: 12
+  attack: 76
+  defense: 15
   speed: 8
   level: 17
   character_color: {r: 1, g: 0.95887905, b: 0.8160377, a: 1}

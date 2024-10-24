@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: SeikakuSenki 6
   m_EditorClassIdentifier: 
   enemyName: Name.SeikakuSenki
-  maxHP: 650
+  maxHP: 450
   maxMP: 100
-  attack: 75
+  attack: 90
   defense: 16
-  speed: 30
+  speed: 40
   level: 25
   character_color: {r: 1, g: 0.5613208, b: 0.5613208, a: 1}
   actionPattern:
@@ -29,7 +29,7 @@ MonoBehaviour:
     SpThreshold: 0
   - actionType: 1
     ability: {fileID: 11400000, guid: ee4d8ea016329fe47ae5841828f8b0f2, type: 2}
-    chance: 0.5
+    chance: 0.2
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RogueTank
   m_EditorClassIdentifier: 
   enemyName: Name.RogueTank
-  maxHP: 450
+  maxHP: 650
   maxMP: 150
-  attack: 135
+  attack: 145
   defense: 20
   speed: 15
   level: 25

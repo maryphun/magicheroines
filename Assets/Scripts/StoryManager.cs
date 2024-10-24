@@ -76,7 +76,9 @@ public class StoryManager : MonoBehaviour
                 case 4:
                     {
                         BattleSetup.AddEnemy("PrivateDrone");
+                        BattleSetup.AddEnemy("PrivateDrone");
                         BattleSetup.AddEnemy("PrivateAndroid");
+                        BattleSetup.AddEnemy("PrivateDrone");
                         BattleSetup.AddEnemy("PrivateDrone");
                         BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
                         BattleSetup.SetReward(1400, 200);

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PrivateAndroid
   m_EditorClassIdentifier: 
   enemyName: Name.PrivateAndroid
-  maxHP: 250
+  maxHP: 350
   maxMP: 20
-  attack: 88
-  defense: 18
+  attack: 99
+  defense: 22
   speed: 6
   level: 18
   character_color: {r: 0.98472905, g: 1, b: 0.7688679, a: 1}
