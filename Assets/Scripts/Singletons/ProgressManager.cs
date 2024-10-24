@@ -740,8 +740,10 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         if (addEnemy)
         {
             BattleSetup.Reset(false);
-            BattleSetup.AddEnemy("Erena_Enemy");
-            BattleSetup.SetBattleBGM("Loop 3 (Tutorial)");
+            BattleSetup.AddEnemy("Hisui_Enemy_Final");
+            BattleSetup.AddEnemy("Kei_Enemy_Final");
+            BattleSetup.SetBattleBGM("apoptosis");
+            BattleSetup.SetBattleBack(BattleBack.CentreTower);
         }
 
         // チュートリアル全開放
