@@ -56,30 +56,30 @@ public class StoryManager : MonoBehaviour
 
                 case 2:
                     {
-                        BattleSetup.AddEnemy("SeikakuSenki 1");
-                        BattleSetup.AddEnemy("SeikakuSenki 2");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
-                        BattleSetup.SetReward(350, 25);
+                        BattleSetup.AddEnemy("SeikakuSenki 5");
+                        BattleSetup.AddEnemy("SeikakuSenki 6");
+                        BattleSetup.SetBattleBGM("Loop 3 (Tutorial)");
+                        BattleSetup.SetReward(1000, 200);
                         StartCoroutine(SceneTransition("Battle", 0));
                     }
                     break;
 
                 case 3:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
-                        BattleSetup.SetReward(350, 25);
+                        BattleSetup.AddEnemy("RogueTank");
+                        BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
+                        BattleSetup.SetReward(1200, 200);
                         StartCoroutine(SceneTransition("Battle", 0));
                     }
                     break;
 
                 case 4:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
-                        BattleSetup.SetReward(350, 25);
+                        BattleSetup.AddEnemy("PrivateDrone");
+                        BattleSetup.AddEnemy("PrivateAndroid");
+                        BattleSetup.AddEnemy("PrivateDrone");
+                        BattleSetup.SetBattleBGM("Loop 12 (Battle2)");
+                        BattleSetup.SetReward(1400, 200);
                         StartCoroutine(SceneTransition("Battle", 0));
                     }
                     break;
@@ -87,19 +87,19 @@ public class StoryManager : MonoBehaviour
                 case 5:
                     {
                         BattleSetup.AddEnemy("Daiya_Enemy");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
                         BattleSetup.SetBattleBack(BattleBack.Basement);
-                        BattleSetup.SetReward(350, 25);
+                        BattleSetup.SetReward(3000, 500);
                         NovelSingletone.Instance.PlayNovel("DLC/DLC 2-0 PreBattle", true, GoToBattle);
                     }
                     break;
 
                 case 6:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
-                        BattleSetup.SetReward(350, 25);
+                        BattleSetup.AddEnemy("SeikakuSenki 7");
+                        BattleSetup.AddEnemy("SeikakuSenki 8");
+                        BattleSetup.SetBattleBGM("Loop (Battle3)");
+                        BattleSetup.SetReward(1600, 200);
                         StartCoroutine(SceneTransition("Battle", 0));
 
                         // êNêHãLò^äJï˙Åyñæï‰ÅïÉNÉçÅ[ÉìêÌì¨àıÅz
@@ -109,10 +109,11 @@ public class StoryManager : MonoBehaviour
 
                 case 7:
                     {
-                        BattleSetup.AddEnemy("Drone");
-                        BattleSetup.AddEnemy("Android");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
-                        BattleSetup.SetReward(350, 25);
+                        BattleSetup.AddEnemy("PrivateAndroid");
+                        BattleSetup.AddEnemy("RogueTank");
+                        BattleSetup.AddEnemy("PrivateAndroid");
+                        BattleSetup.SetBattleBGM("Loop (Battle3)");
+                        BattleSetup.SetReward(1800, 400);
                         StartCoroutine(SceneTransition("Battle", 0));
                     }
                     break;
@@ -121,7 +122,7 @@ public class StoryManager : MonoBehaviour
                     {
                         BattleSetup.AddEnemy("Hisui_Enemy_Final");
                         BattleSetup.AddEnemy("Kei_Enemy_Final");
-                        BattleSetup.SetBattleBGM("BattleTutorial");
+                        BattleSetup.SetBattleBGM("apoptosis");
                         BattleSetup.SetBattleBack(BattleBack.CentreTower);
                         BattleSetup.SetReward(0, 10000);
                         NovelSingletone.Instance.PlayNovel("DLC/DLC 2-3 PreBattle", true, GoToBattle);

@@ -440,9 +440,13 @@ MonoBehaviour:
     retire:
     - {fileID: 8300000, guid: 55311bd66bf26d442bc84135f29372f4, type: 3}
   characterVoices:
-    attack: []
-    attacked: []
-    retire: []
+    attack:
+    - {fileID: 8300000, guid: bc6ac93eff2755b42a589819b13781c6, type: 3}
+    - {fileID: 8300000, guid: 75d68c4f491eef141a3957c4f0c95e2a, type: 3}
+    attacked:
+    - {fileID: 8300000, guid: b04891f98b9644847ad40ad395d2f62a, type: 3}
+    retire:
+    - {fileID: 8300000, guid: ff48d479018c4764ebfcfe65694625b1, type: 3}
   attackVFX: {fileID: 1343633729508638609, guid: bb1e9db21d29bb5418d04a379950481f, type: 3}
   breathScale: 0.002
   enableNormalAttack: 1

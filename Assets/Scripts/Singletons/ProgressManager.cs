@@ -705,6 +705,12 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         playerData.formationCharacters[0].characterID = First.detail.characterID;
         playerData.formationCharacters[1].characterID = Second.detail.characterID;
 
+        // 即死しないようにちょっと強くする
+        playerData.characters[0].current_maxHp += 1000;
+        playerData.characters[0].current_hp += 1000;
+        playerData.characters[1].current_maxHp += 1000;
+        playerData.characters[1].current_hp += 1000;
+
         // アイテムをいくつかついかする
         ItemDefine bread = Resources.Load<ItemDefine>("ItemList/食パン");
         for (int i = 0; i < Random.Range(2, 5); i++) playerData.inventory.Add(bread);
@@ -734,8 +740,8 @@ public class ProgressManager : SingletonMonoBehaviour<ProgressManager>
         if (addEnemy)
         {
             BattleSetup.Reset(false);
-            BattleSetup.AddEnemy("Nayuta_Enemy");
-            BattleSetup.SetBattleBGM("Mystic Edge (KeiBattle)");
+            BattleSetup.AddEnemy("Erena_Enemy");
+            BattleSetup.SetBattleBGM("Loop 3 (Tutorial)");
         }
 
         // チュートリアル全開放

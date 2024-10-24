@@ -232,6 +232,9 @@ Name.GoldAndroid,進化型ドロイド,Improved Android,進化型機器人,進�
 Name.DarkAndroid,攻撃特化型ドロイド,Attacker Android,攻撃特化型機器人,攻撃特化型ドロイド
 Name.Tank,四脚タンク,Quad Leg Tank,四脚坦克,四脚タンク
 Name.DarkTank,軍用歩行型タンク,Military Tank,軍用歩行型坦克,軍用歩行型タンク
+Name.PrivateDrone,私兵ドローン,,,
+Name.PrivateAndroid,私兵ドロイド,,,
+Name.RogueTank,コーポ仕様タンク,,,
 Name.Battler+Tentacle,触手怪人、戦闘員,"Battler, TentacleMan",触手怪人、戦闘員,触手怪人、戦闘員
 Name.Man,男,Man,男,男
 Name.Chairman,理事長,Chairman,理事長,理事長
@@ -576,6 +579,8 @@ Ability.StopThinking,思考停止,,,
 Ability.StopThinking_Info,下級戦闘員には余計な思考は不要。集中力を上げてしばらく攻撃力アップ。,,,
 Ability.Horny,発情,,,
 Ability.Horny_Info,下級戦闘員の調教を最後まで受けたものはいつでも発情できる。発動者が3ターン発情状態になる。,,,
+Ability.DiamondSlash,袈裟上げ,,,
+Ability.DiamondSlash_Info,Daiya ability. stun single enemy 2 rounds,,,
 HomeCharacter,ホーム台詞,ホーム台詞,ホーム台詞,ホーム台詞
 HomeChar.No5_1-1,「こんにちは、何かご用はありますか？」,"「Hello, how can I help you?」",「您好，找我有什麼事嗎？」,「こんにちは、何かご用はありますか？」
 HomeChar.No5_1-2,「ドクター、貴方の活躍を期待しています。」,"「Docter, we look forward to seeing you in action.」",「博士，我很期待你的活躍。」,「ドクター、貴方の活躍を期待しています。」

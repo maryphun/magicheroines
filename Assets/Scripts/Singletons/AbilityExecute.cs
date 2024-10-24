@@ -3561,5 +3561,123 @@ public class AbilityExecute : SingletonMonoBehaviour<AbilityExecute>
                     battleManager.NextTurn(false);
                 });
     }
+
+    /// <summary>
+    /// 共倒れ (ダイヤモンド)
+    /// </summary>
+    public void DiamondSlash()
+    {
+        var self = battleManager.GetCurrentBattler();
+        var target = targetBattlers[0];
+
+        // 技名を表示
+        var floatingText = CreateFloatingAbilityText(self.transform);
+        string abilityName = LocalizationManager.Localize("Ability.DiamondSlash");
+        floatingText.Init(2.0f, self.GetMiddleGlobalPosition() + new Vector2(0.0f, self.GetCharacterSize().y * 0.25f), new Vector2(0.0f, 100.0f), abilityName, 40, self.character_color);
+
+        // ログ ({0}　からの {1} ！)
+        battleManager.AddBattleLog(String.Format(LocalizationManager.Localize("BattleLog.AbilityExecute"), self.CharacterNameColored,
+                                                 CustomColor.AddColor(LocalizationManager.Localize("Ability.DiamondSlash"), CustomColor.abilityName())));
+
+        // キャラ移動の準備
+        Transform originalParent = self.transform.parent;
+        int originalChildIndex = self.transform.GetSiblingIndex();
+
+        var targetPos = target.GetComponent<RectTransform>().position;
+        targetPos = target.isEnemy ? new Vector2(targetPos.x - target.GetCharacterSize().x * 1.5f, targetPos.y) : new Vector2(targetPos.x + target.GetCharacterSize().x * 1.5f, targetPos.y);
+        var originalPos = self.GetComponent<RectTransform>().position;
+        const float characterMoveTime = 0.35f;
+        const float animationTime = 0.8f;
+        const float strikeTime = 0.1f;
+        const float attackStayTime = 0.35f;
+
+        // SE
+        AudioManager.Instance.PlaySFX(self.GetCharacterVoiceName(BattlerSoundEffectType.Attack));
+
+        // Shake
+        Coroutine shake = null;
+        Vector2 positionPreShake = Vector2.zero;
+
+        var sequence = DOTween.Sequence();
+        sequence.AppendInterval(0.5f)
+                .AppendCallback(() =>
+                {
+                    // play SE
+                    AudioManager.Instance.PlaySFX("CharacterMove", 0.1f);
+
+                    // move
+                    self.GetComponent<RectTransform>().DOMove(targetPos, characterMoveTime);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // change character hirachy temporary
+                    self.transform.SetParent(target.transform);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // charge
+                    self.PlayAnimation(BattlerAnimationType.attack);
+                    AudioManager.Instance.PlaySFX("Charge");
+                    positionPreShake = self.GetComponent<RectTransform>().position;
+                    shake = ShakeManager.Instance.ShakeObject(self.GetComponent<RectTransform>(), animationTime, 5.0f);
+                    self.ColorTint(Color.blue, animationTime);
+                })
+                .AppendInterval(animationTime)
+                .AppendCallback(() =>
+                {
+                    ShakeManager.Instance.StopObjectShake(shake);
+                    self.GetComponent<RectTransform>().position = positionPreShake;
+                    var position = target.GetComponent<RectTransform>().position;
+                    position = target.isEnemy ? new Vector2(position.x - target.GetCharacterSize().x * 0.5f, position.y) : new Vector2(position.x + target.GetCharacterSize().x * 0.5f, position.y);
+                    self.DOComplete(true);
+                    self.GetComponent<RectTransform>().DOMove(position, strikeTime).SetEase(Ease.Linear);
+                    self.GetGraphicRectTransform().DORotate(new Vector3(0, 0, -40.0f), animationTime, RotateMode.Fast);
+
+                    // 残像生成コンポネント
+                    FadeEffect fadeEffect = self.gameObject.AddComponent<FadeEffect>();
+                    fadeEffect.Initialize(strikeTime, 0.05f, self.GetGraphicRectTransform().GetComponent<Image>());
+                })
+                .AppendInterval(strikeTime)
+                .AppendCallback(() =>
+                {
+                    // attack
+                    self.PlayAnimation(BattlerAnimationType.attacked);
+                    self.SpawnAttackVFX(target);
+                    AudioManager.Instance.PlaySFX("PowerfulPunch", 1f);
+                    target.Shake(0.75f);
+
+                    // stun for 1 turn
+                    battleManager.AddBuffToBattler(target, BuffType.stun, 2, 0);
+
+                    // text
+                    floatingText = CreateFloatingText(target.transform);
+                    string stunString = LocalizationManager.Localize("Buff.Stun");
+                    floatingText.Init(2.0f, target.GetMiddleGlobalPosition(), (target.GetMiddleGlobalPosition() - self.GetMiddleGlobalPosition()) + new Vector2(0.0f, 100.0f), stunString, 64, CustomColor.stun());
+                })
+                .AppendInterval(attackStayTime)
+                .AppendCallback(() =>
+                {
+                    self.GetComponent<RectTransform>().DOMove(originalPos, characterMoveTime);
+                    // rotate
+                    self.GetGraphicRectTransform().DORotate(Vector3.zero, animationTime, RotateMode.Fast);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    // return to original parent
+                    self.transform.SetParent(originalParent);
+                    self.transform.SetSiblingIndex(originalChildIndex);
+
+                    target.PlayAnimation(BattlerAnimationType.idle);
+                })
+                .AppendInterval(characterMoveTime * 0.5f)
+                .AppendCallback(() =>
+                {
+                    battleManager.NextTurn(false);
+                });
+    }
+
     #endregion abilities
 }

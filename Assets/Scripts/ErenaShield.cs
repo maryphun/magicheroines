@@ -41,7 +41,11 @@ public class ErenaShield : MonoBehaviour
     {
         battler.onAttackedEvent.RemoveListener(OnAttackDivineShield);
         AudioManager.Instance.PlaySFX("NewAbility"); // shield break
-        AudioManager.Instance.PlaySFXDelay("Erena_Attacked" + Random.Range(2, 4), 0.5f);
+
+        if (battler.name == "Erena_Enemy(Clone)")
+        {
+            AudioManager.Instance.PlaySFXDelay("Erena_Attacked" + Random.Range(2, 4), 0.5f);
+        }
 
         const float animTime = 0.5f;
         rect.DOScale(3.0f, animTime);
@@ -53,7 +57,11 @@ public class ErenaShield : MonoBehaviour
     {
         battler.onAttackedEvent.RemoveListener(OnAttackStunShield);
         AudioManager.Instance.PlaySFX("NewAbility"); // shield break
-        AudioManager.Instance.PlaySFXDelay("Erena_Attacked" + Random.Range(2, 4), 0.5f);
+
+        if (battler.name == "Erena_Enemy(Clone)")
+        {
+            AudioManager.Instance.PlaySFXDelay("Erena_Attacked" + Random.Range(2, 4), 0.5f);
+        }
 
         if (battleManager != null)
         {

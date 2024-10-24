@@ -27,5 +27,11 @@ MonoBehaviour:
     hasThresholdCondition: 0
     HpThreshold: 0
     SpThreshold: 0
+  - actionType: 1
+    ability: {fileID: 11400000, guid: 332e57e442b181c42a4f25529c9dc879, type: 2}
+    chance: 0.4
+    hasThresholdCondition: 0
+    HpThreshold: 0.9
+    SpThreshold: 0
   icon: {fileID: 297675206, guid: f13148b7ae16785478a96d07d1fe9dba, type: 3}
   battler: {fileID: 7739895556670267509, guid: a7d242fed7de0464286a357847df941d, type: 3}
