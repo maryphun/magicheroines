@@ -169,11 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UICanvas: {fileID: 1712548515}
   player: {fileID: 0}
-<<<<<<< Updated upstream
-  data: {fileID: 11400000, guid: cdc8854437548b74a8a6777b69ad1511, type: 2}
-=======
-  data: {fileID: 11400000, guid: dbb0b2ab134a36441b08c5a4fea0d743, type: 2}
->>>>>>> Stashed changes
+  data: {fileID: 11400000, guid: bfcedf37c0b3c724d992d038b15f1aac, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
