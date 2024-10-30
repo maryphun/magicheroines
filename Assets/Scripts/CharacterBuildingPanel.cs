@@ -31,7 +31,7 @@ public class CharacterBuildingPanel : MonoBehaviour
     private Color _darkenedTabColor = new Color(0.75f, 0.75f, 0.75f, 1.0f);
     const float _pinkPanelShakeTime = 0.1f;
     const float _pinkPanelShakeMagnitude = 2.5f;
-    public int CurrentCheckingSlot { get { return currentCheckingSlot; } }
+    public int CurrentCheckingSlot { get { return IndexToCharacterID(currentCheckingSlot); } }
 
     private void Start()
     {
@@ -208,14 +208,15 @@ public class CharacterBuildingPanel : MonoBehaviour
 
     public int CharacterIDToIndex(int characterID)
     {
-        int[] index = { 0, 1, 2, 3, 4, 5, 6, 7, -1, -1, -1, 8, 9 };
+        int[] index = { 0, 1, 2, 3, 4, 5, 6, 7, -1, -1, -1, 9, 8, -1 };
 
         return index[characterID];
     }
+    public int IndexToCharacterID(int index)
+    {
+        int[] characterID = { 0, 1, 2, 3, 4, 5, 6, 7, 12, 11 };
 
-    //public int FindCharacterSlotOfCharacterID(int characterID)
-    //{
-    //    int[] index = {}
-    //}
+        return characterID[index];
+    }
 }
 

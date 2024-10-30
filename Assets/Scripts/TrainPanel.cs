@@ -389,6 +389,15 @@ public class TrainPanel : MonoBehaviour
         {
             // ˆÅ—Ž‚¿
             characters[currentIndex].is_corrupted = true;
+
+            // DLCŽd—l
+            if (DLCManager.isDLCEnabled)
+            {
+                if ( characters[currentIndex].characterData.characterID == 13 )// K22
+                {
+                    characters[currentIndex].is_corrupted = false;
+                }
+            }
         }
     }
 

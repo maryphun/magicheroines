@@ -119,7 +119,7 @@ public class CharacterUpgradePanel : MonoBehaviour
 
         // キャラクターデータ更新
         var data = ProgressManager.Instance.GetAllCharacter(true, true);
-        int index = currentCharacter.characterData.characterID;
+        int index = CharacterIDToIndex(currentCharacter.characterData.characterID);
 
         data[index].current_level++;
         data[index].current_maxHp += data[index].characterData.hp_growth;
@@ -160,5 +160,12 @@ public class CharacterUpgradePanel : MonoBehaviour
         // エフェクト
         characterSprite.DOGradientColor(upgradeGradient, upgradeAnimationTime);
         ShakeManager.Instance.ShakeObject(characterSprite.GetComponent<RectTransform>(), upgradeAnimationTime, 2);
+    }
+
+    public int CharacterIDToIndex(int characterID)
+    {
+        int[] index = { 0, 1, 2, 3, 4, 5, 6, 7, -1, -1, -1, 9, 8, -1 };
+
+        return index[characterID];
     }
 }
