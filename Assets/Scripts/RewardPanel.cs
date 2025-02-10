@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -55,7 +55,7 @@ public class RewardPanel : MonoBehaviour
         DisplayMoneyAndResearchPointReward();
         AlphaFadeManager.Instance.FadeIn(0.5f);
 
-        // Œx‰ú“x‚ğXV
+        // è­¦æˆ’åº¦ã‚’æ›´æ–°
         ProgressManager.Instance.SetSideQuestData(ProgressManager.Instance.GetSideQuestData().food + BattleSetup.sideQuestIncrement.food,
                                                   ProgressManager.Instance.GetSideQuestData().bank + BattleSetup.sideQuestIncrement.bank,
                                                   ProgressManager.Instance.GetSideQuestData().research + BattleSetup.sideQuestIncrement.research);
@@ -65,7 +65,7 @@ public class RewardPanel : MonoBehaviour
     {
         panel.DOComplete();
         panelCanvas.DOComplete();
-        
+
         if (isFirst)
         {
             HidePanel(moneyRewardPanel.GetComponent<CanvasGroup>(), moneyRewardPanel);
@@ -113,10 +113,10 @@ public class RewardPanel : MonoBehaviour
         else if (IsNewHeroinGet())
         {
             heroinPanel.DOFade(1.0f, 1.0f);
-            
+
             isHeroinDisplayed = true;
 
-            // DLC“Áêˆ—
+            // DLCç‰¹æ®Šå‡¦ç†
             if (true || DLCManager.isDLCEnabled)
             {
                 if (isGetHisui && !isGetKei)
@@ -135,7 +135,7 @@ public class RewardPanel : MonoBehaviour
         {
 
         }
-        else@// reward end
+        elseã€€// reward end
         {
             panelCanvas.DOKill(false);
             panelCanvas.alpha = 0.0f;
@@ -153,50 +153,50 @@ public class RewardPanel : MonoBehaviour
             asyncLoad.allowSceneActivation = false; //Don't let the Scene activate until you allow it to
             DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => { asyncLoad.allowSceneActivation = true; });
 
-            // ƒI[ƒgƒZ[ƒu‚ğÀs‚·‚é
+            // ã‚ªãƒ¼ãƒˆã‚»ãƒ¼ãƒ–ã‚’å®Ÿè¡Œã™ã‚‹
             AutoSave.ExecuteAutoSave();
         }
     }
 
     /// <summary>
-    /// V‚µ‚­¹Šjí•P‚ğ•ßŠl‚Å‚«‚½‚©
+    /// æ–°ã—ãè–æ ¸æˆ¦å§«ã‚’æ•ç²ã§ããŸã‹
     /// </summary>
     private bool IsNewHeroinGet()
     {
-        if (!BattleSetup.isStoryMode) return false; // ‘Œ¹’²’BƒNƒGƒXƒg‚ÅƒqƒƒCƒ“‚ğ‘¨‚¦‚é‚±‚Æ‚Í‚È‚¢
+        if (!BattleSetup.isStoryMode) return false; // è³‡æºèª¿é”ã‚¯ã‚¨ã‚¹ãƒˆã§ãƒ’ãƒ­ã‚¤ãƒ³ã‚’æ‰ãˆã‚‹ã“ã¨ã¯ãªã„
         if (BattleSetup.isDLCBattle) return IsNewDLCHeroinGet();
         if (isHeroinDisplayed)
         {
-            // UI‚ğ”ñ•\¦‚É‚·‚é
+            // UIã‚’éè¡¨ç¤ºã«ã™ã‚‹
             heroinPanel.DOFade(0.0f, 1.0f);
             return false;
         }
 
-        int stage = (ProgressManager.Instance.GetCurrentStageProgress() - 1); // ƒXƒe[ƒW”Ô†‚Í‚·‚Å‚ÉXV‚³‚ê‚Ä‚¢‚é‚Ì‚Å-1‚ÅŒ©‚é
+        int stage = (ProgressManager.Instance.GetCurrentStageProgress() - 1); // ã‚¹ãƒ†ãƒ¼ã‚¸ç•ªå·ã¯ã™ã§ã«æ›´æ–°ã•ã‚Œã¦ã„ã‚‹ã®ã§-1ã§è¦‹ã‚‹
         string s = string.Empty;
         switch (stage)
         {
-            case 3: // –¾•ä
+            case 3: // æ˜ç©‚
                 newHeroin.sprite = heroinSprite[0];
                 s = "<color=#FFC0CB>" + LocalizationManager.Localize("Name.Akiho") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
-            case 6: // —§‰Ô
+            case 6: // ç«‹èŠ±
                 newHeroin.sprite = heroinSprite[1];
                 s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Rikka") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
-            case 9: // ƒGƒŒƒi
+            case 9: // ã‚¨ãƒ¬ãƒŠ
                 newHeroin.sprite = heroinSprite[2];
                 s = "<color=#F1E5AC>" + LocalizationManager.Localize("Name.Erena") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
-            case 13: // ‹ (‹‚Ì•ßŠl‚Í5-1)
+            case 13: // äº¬ (äº¬ã®æ•ç²ã¯5-1)
                 newHeroin.sprite = heroinSprite[3];
                 s = "<color=#ADD8E6>" + LocalizationManager.Localize("Name.Kei") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
-            case 15: // “ß—R‘½
+            case 15: // é‚£ç”±å¤š
                 newHeroin.sprite = heroinSprite[4];
                 s = "<color=#8b0000>" + LocalizationManager.Localize("Name.Nayuta") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
@@ -207,27 +207,27 @@ public class RewardPanel : MonoBehaviour
     }
 
     /// <summary>
-    /// V‚µ‚­¹Šjí•P‚ğ•ßŠl‚Å‚«‚½‚©(D_LC—p)
+    /// æ–°ã—ãè–æ ¸æˆ¦å§«ã‚’æ•ç²ã§ããŸã‹(D_LCç”¨)
     /// </summary>
     private bool IsNewDLCHeroinGet()
     {
         if (isHeroinDisplayed)
         {
-            // UI‚ğ”ñ•\¦‚É‚·‚é
+            // UIã‚’éè¡¨ç¤ºã«ã™ã‚‹
             heroinPanel.DOFade(0.0f, 1.0f);
             return false;
         }
 
-        int stage = (ProgressManager.Instance.GetCurrentDLCStageProgress() - 1); // ƒXƒe[ƒW”Ô†‚Í‚·‚Å‚ÉXV‚³‚ê‚Ä‚¢‚é‚Ì‚Å-1‚ÅŒ©‚é
+        int stage = (ProgressManager.Instance.GetCurrentDLCStageProgress() - 1); // ã‚¹ãƒ†ãƒ¼ã‚¸ç•ªå·ã¯ã™ã§ã«æ›´æ–°ã•ã‚Œã¦ã„ã‚‹ã®ã§-1ã§è¦‹ã‚‹
         string s = string.Empty;
         switch (stage)
         {
-            case 5: // ƒ_ƒCƒ„
+            case 5: // ãƒ€ã‚¤ãƒ¤
                 newHeroin.sprite = heroinSprite[5];
                 s = "<color=#D4BEE4>" + LocalizationManager.Localize("Name.Diamond") + "</color>";
                 newHeroinText.text = LocalizationManager.Localize("System.Trapped").Replace("{s}", s);
                 return true;
-            case 8: // ƒqƒXƒC‚Æ‹
+            case 8: // ãƒ’ã‚¹ã‚¤ã¨äº¬
                 if (!isGetHisui)
                 {
                     newHeroin.sprite = heroinSprite[6];
@@ -283,10 +283,10 @@ public class RewardPanel : MonoBehaviour
         fade.DOFade(0.0f, removeAnimTime);
     }
 
-    // “ÁêƒCƒxƒ“ƒg”­¶
+    // ç‰¹æ®Šã‚¤ãƒ™ãƒ³ãƒˆç™ºç”Ÿ
     private bool IsSpecialEvent()
     {
-        int stage = (ProgressManager.Instance.GetCurrentStageProgress() - 1); // ƒXƒe[ƒW”Ô†‚Í‚·‚Å‚ÉXV‚³‚ê‚Ä‚¢‚é‚Ì‚Å-1‚ÅŒ©‚é
+        int stage = (ProgressManager.Instance.GetCurrentStageProgress() - 1); // ã‚¹ãƒ†ãƒ¼ã‚¸ç•ªå·ã¯ã™ã§ã«æ›´æ–°ã•ã‚Œã¦ã„ã‚‹ã®ã§-1ã§è¦‹ã‚‹
         if (BattleSetup.isStoryMode && stage == 6)
         {
             panelCanvas.DOKill(false);
@@ -312,8 +312,8 @@ public class RewardPanel : MonoBehaviour
             BattleSetup.SetBattleBGM("zensen he totugekiseyo (ErenaBattle)");
 
             DOTween.Sequence().AppendInterval(1.0f).AppendCallback(() => {
-                AlphaFadeManager.Instance.FadeIn(0.25f); 
-                NovelSingletone.Instance.PlayNovel("Chapter2-3 PreEvent", true, StartEventBattle); 
+                AlphaFadeManager.Instance.FadeIn(0.25f);
+                NovelSingletone.Instance.PlayNovel("Chapter2-3 PreEvent", true, StartEventBattle);
             });
             return true;
         }

@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -65,7 +65,7 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
     {
         if (isDialogueStarted)
         {
-            Debug.Log("ƒ_ƒCƒAƒƒO‚ÍŠù‚É•\¦’†‚Å‚·B");
+            Debug.Log("ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã¯æ—¢ã«è¡¨ç¤ºä¸­ã§ã™ã€‚");
             return;
         }
 
@@ -84,7 +84,7 @@ public class UIManager : SingletonMonoBehaviour<UIManager>
     {
         if (!isDialogueStarted || !isDialogueBoxSpawned)
         {
-            Debug.Log("ƒ_ƒCƒAƒƒO‚Í‘¶İ‚µ‚Ä‚¢‚Ü‚¹‚ñB");
+            Debug.Log("ãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã¯å­˜åœ¨ã—ã¦ã„ã¾ã›ã‚“ã€‚");
             return;
         }
 
